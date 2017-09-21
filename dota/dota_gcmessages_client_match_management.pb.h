@@ -1006,6 +1006,13 @@ class CMsgStartFindingMatch : public ::google::protobuf::Message /* @@protoc_ins
   bool solo_queue() const;
   void set_solo_queue(bool value);
 
+  // optional uint32 bot_script_index = 15;
+  bool has_bot_script_index() const;
+  void clear_bot_script_index();
+  static const int kBotScriptIndexFieldNumber = 15;
+  ::google::protobuf::uint32 bot_script_index() const;
+  void set_bot_script_index(::google::protobuf::uint32 value);
+
   // optional uint32 matchgroups = 2 [default = 4294967295];
   bool has_matchgroups() const;
   void clear_matchgroups();
@@ -1064,6 +1071,8 @@ class CMsgStartFindingMatch : public ::google::protobuf::Message /* @@protoc_ins
   void clear_has_region_select_flags();
   void set_has_solo_queue();
   void clear_has_solo_queue();
+  void set_has_bot_script_index();
+  void clear_has_bot_script_index();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -1078,6 +1087,7 @@ class CMsgStartFindingMatch : public ::google::protobuf::Message /* @@protoc_ins
   int game_language_enum_;
   ::google::protobuf::uint32 region_select_flags_;
   bool solo_queue_;
+  ::google::protobuf::uint32 bot_script_index_;
   ::google::protobuf::uint32 matchgroups_;
   ::google::protobuf::uint32 game_modes_;
   int bot_difficulty_;
@@ -2119,26 +2129,12 @@ class CMsgPracticeLobbySetDetails : public ::google::protobuf::Message /* @@prot
   ::google::protobuf::uint64 previous_match_override() const;
   void set_previous_match_override(::google::protobuf::uint64 value);
 
-  // optional uint32 league_selection_priority_team = 39;
-  bool has_league_selection_priority_team() const;
-  void clear_league_selection_priority_team();
-  static const int kLeagueSelectionPriorityTeamFieldNumber = 39;
-  ::google::protobuf::uint32 league_selection_priority_team() const;
-  void set_league_selection_priority_team(::google::protobuf::uint32 value);
-
-  // optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 40 [default = UNDEFINED];
-  bool has_league_selection_priority_choice() const;
-  void clear_league_selection_priority_choice();
-  static const int kLeagueSelectionPriorityChoiceFieldNumber = 40;
-  ::proto::dota::SelectionPriorityType league_selection_priority_choice() const;
-  void set_league_selection_priority_choice(::proto::dota::SelectionPriorityType value);
-
-  // optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 41 [default = UNDEFINED];
-  bool has_league_non_selection_priority_choice() const;
-  void clear_league_non_selection_priority_choice();
-  static const int kLeagueNonSelectionPriorityChoiceFieldNumber = 41;
-  ::proto::dota::SelectionPriorityType league_non_selection_priority_choice() const;
-  void set_league_non_selection_priority_choice(::proto::dota::SelectionPriorityType value);
+  // optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 46 [default = k_DOTASelectionPriorityRules_Manual];
+  bool has_selection_priority_rules() const;
+  void clear_selection_priority_rules();
+  static const int kSelectionPriorityRulesFieldNumber = 46;
+  ::proto::dota::DOTASelectionPriorityRules selection_priority_rules() const;
+  void set_selection_priority_rules(::proto::dota::DOTASelectionPriorityRules value);
 
   // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
   bool has_pause_setting() const;
@@ -2147,19 +2143,19 @@ class CMsgPracticeLobbySetDetails : public ::google::protobuf::Message /* @@prot
   ::proto::dota::LobbyDotaPauseSetting pause_setting() const;
   void set_pause_setting(::proto::dota::LobbyDotaPauseSetting value);
 
-  // optional uint64 bot_radiant = 44;
-  bool has_bot_radiant() const;
-  void clear_bot_radiant();
-  static const int kBotRadiantFieldNumber = 44;
-  ::google::protobuf::uint64 bot_radiant() const;
-  void set_bot_radiant(::google::protobuf::uint64 value);
-
   // optional .proto.dota.DOTABotDifficulty bot_difficulty_dire = 43 [default = BOT_DIFFICULTY_PASSIVE];
   bool has_bot_difficulty_dire() const;
   void clear_bot_difficulty_dire();
   static const int kBotDifficultyDireFieldNumber = 43;
   ::proto::dota::DOTABotDifficulty bot_difficulty_dire() const;
   void set_bot_difficulty_dire(::proto::dota::DOTABotDifficulty value);
+
+  // optional uint64 bot_radiant = 44;
+  bool has_bot_radiant() const;
+  void clear_bot_radiant();
+  static const int kBotRadiantFieldNumber = 44;
+  ::google::protobuf::uint64 bot_radiant() const;
+  void set_bot_radiant(::google::protobuf::uint64 value);
 
   // optional uint64 bot_dire = 45;
   bool has_bot_dire() const;
@@ -2247,12 +2243,6 @@ class CMsgPracticeLobbySetDetails : public ::google::protobuf::Message /* @@prot
   void clear_has_custom_game_timestamp();
   void set_has_previous_match_override();
   void clear_has_previous_match_override();
-  void set_has_league_selection_priority_team();
-  void clear_has_league_selection_priority_team();
-  void set_has_league_selection_priority_choice();
-  void clear_has_league_selection_priority_choice();
-  void set_has_league_non_selection_priority_choice();
-  void clear_has_league_non_selection_priority_choice();
   void set_has_pause_setting();
   void clear_has_pause_setting();
   void set_has_bot_difficulty_dire();
@@ -2261,6 +2251,8 @@ class CMsgPracticeLobbySetDetails : public ::google::protobuf::Message /* @@prot
   void clear_has_bot_radiant();
   void set_has_bot_dire();
   void clear_has_bot_dire();
+  void set_has_selection_priority_rules();
+  void clear_has_selection_priority_rules();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<2> _has_bits_;
@@ -2299,12 +2291,10 @@ class CMsgPracticeLobbySetDetails : public ::google::protobuf::Message /* @@prot
   ::google::protobuf::uint32 league_game_id_;
   ::google::protobuf::uint32 custom_game_timestamp_;
   ::google::protobuf::uint64 previous_match_override_;
-  ::google::protobuf::uint32 league_selection_priority_team_;
-  int league_selection_priority_choice_;
-  int league_non_selection_priority_choice_;
+  int selection_priority_rules_;
   int pause_setting_;
-  ::google::protobuf::uint64 bot_radiant_;
   int bot_difficulty_dire_;
+  ::google::protobuf::uint64 bot_radiant_;
   ::google::protobuf::uint64 bot_dire_;
   int dota_tv_delay_;
   mutable int _cached_size_;
@@ -8707,13 +8697,13 @@ inline void CMsgStartFindingMatch::set_allocated_key(::std::string* key) {
 
 // optional uint32 matchgroups = 2 [default = 4294967295];
 inline bool CMsgStartFindingMatch::has_matchgroups() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void CMsgStartFindingMatch::set_has_matchgroups() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void CMsgStartFindingMatch::clear_has_matchgroups() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void CMsgStartFindingMatch::clear_matchgroups() {
   matchgroups_ = 4294967295u;
@@ -8755,13 +8745,13 @@ inline void CMsgStartFindingMatch::set_client_version(::google::protobuf::uint32
 
 // optional uint32 game_modes = 4 [default = 4294967295];
 inline bool CMsgStartFindingMatch::has_game_modes() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void CMsgStartFindingMatch::set_has_game_modes() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void CMsgStartFindingMatch::clear_has_game_modes() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void CMsgStartFindingMatch::clear_game_modes() {
   game_modes_ = 4294967295u;
@@ -8779,13 +8769,13 @@ inline void CMsgStartFindingMatch::set_game_modes(::google::protobuf::uint32 val
 
 // optional .proto.dota.DOTABotDifficulty bot_difficulty = 5 [default = BOT_DIFFICULTY_HARD];
 inline bool CMsgStartFindingMatch::has_bot_difficulty() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 inline void CMsgStartFindingMatch::set_has_bot_difficulty() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 inline void CMsgStartFindingMatch::clear_has_bot_difficulty() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline void CMsgStartFindingMatch::clear_bot_difficulty() {
   bot_difficulty_ = 3;
@@ -8829,13 +8819,13 @@ inline void CMsgStartFindingMatch::set_match_type(::proto::dota::MatchType value
 
 // optional uint32 matchlanguages = 7 [default = 4294967295];
 inline bool CMsgStartFindingMatch::has_matchlanguages() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 inline void CMsgStartFindingMatch::set_has_matchlanguages() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
 }
 inline void CMsgStartFindingMatch::clear_has_matchlanguages() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline void CMsgStartFindingMatch::clear_matchlanguages() {
   matchlanguages_ = 4294967295u;
@@ -9078,6 +9068,30 @@ inline void CMsgStartFindingMatch::set_solo_queue(bool value) {
   set_has_solo_queue();
   solo_queue_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgStartFindingMatch.solo_queue)
+}
+
+// optional uint32 bot_script_index = 15;
+inline bool CMsgStartFindingMatch::has_bot_script_index() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void CMsgStartFindingMatch::set_has_bot_script_index() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void CMsgStartFindingMatch::clear_has_bot_script_index() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void CMsgStartFindingMatch::clear_bot_script_index() {
+  bot_script_index_ = 0u;
+  clear_has_bot_script_index();
+}
+inline ::google::protobuf::uint32 CMsgStartFindingMatch::bot_script_index() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgStartFindingMatch.bot_script_index)
+  return bot_script_index_;
+}
+inline void CMsgStartFindingMatch::set_bot_script_index(::google::protobuf::uint32 value) {
+  set_has_bot_script_index();
+  bot_script_index_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgStartFindingMatch.bot_script_index)
 }
 
 // -------------------------------------------------------------------
@@ -10206,13 +10220,13 @@ inline void CMsgPracticeLobbySetDetails::set_allchat(bool value) {
 
 // optional .proto.dota.LobbyDotaTVDelay dota_tv_delay = 24 [default = LobbyDotaTV_120];
 inline bool CMsgPracticeLobbySetDetails::has_dota_tv_delay() const {
-  return (_has_bits_[1] & 0x00000200u) != 0;
+  return (_has_bits_[1] & 0x00000080u) != 0;
 }
 inline void CMsgPracticeLobbySetDetails::set_has_dota_tv_delay() {
-  _has_bits_[1] |= 0x00000200u;
+  _has_bits_[1] |= 0x00000080u;
 }
 inline void CMsgPracticeLobbySetDetails::clear_has_dota_tv_delay() {
-  _has_bits_[1] &= ~0x00000200u;
+  _has_bits_[1] &= ~0x00000080u;
 }
 inline void CMsgPracticeLobbySetDetails::clear_dota_tv_delay() {
   dota_tv_delay_ = 1;
@@ -10644,89 +10658,15 @@ inline void CMsgPracticeLobbySetDetails::set_previous_match_override(::google::p
   // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.previous_match_override)
 }
 
-// optional uint32 league_selection_priority_team = 39;
-inline bool CMsgPracticeLobbySetDetails::has_league_selection_priority_team() const {
-  return (_has_bits_[1] & 0x00000004u) != 0;
-}
-inline void CMsgPracticeLobbySetDetails::set_has_league_selection_priority_team() {
-  _has_bits_[1] |= 0x00000004u;
-}
-inline void CMsgPracticeLobbySetDetails::clear_has_league_selection_priority_team() {
-  _has_bits_[1] &= ~0x00000004u;
-}
-inline void CMsgPracticeLobbySetDetails::clear_league_selection_priority_team() {
-  league_selection_priority_team_ = 0u;
-  clear_has_league_selection_priority_team();
-}
-inline ::google::protobuf::uint32 CMsgPracticeLobbySetDetails::league_selection_priority_team() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgPracticeLobbySetDetails.league_selection_priority_team)
-  return league_selection_priority_team_;
-}
-inline void CMsgPracticeLobbySetDetails::set_league_selection_priority_team(::google::protobuf::uint32 value) {
-  set_has_league_selection_priority_team();
-  league_selection_priority_team_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.league_selection_priority_team)
-}
-
-// optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 40 [default = UNDEFINED];
-inline bool CMsgPracticeLobbySetDetails::has_league_selection_priority_choice() const {
-  return (_has_bits_[1] & 0x00000008u) != 0;
-}
-inline void CMsgPracticeLobbySetDetails::set_has_league_selection_priority_choice() {
-  _has_bits_[1] |= 0x00000008u;
-}
-inline void CMsgPracticeLobbySetDetails::clear_has_league_selection_priority_choice() {
-  _has_bits_[1] &= ~0x00000008u;
-}
-inline void CMsgPracticeLobbySetDetails::clear_league_selection_priority_choice() {
-  league_selection_priority_choice_ = 0;
-  clear_has_league_selection_priority_choice();
-}
-inline ::proto::dota::SelectionPriorityType CMsgPracticeLobbySetDetails::league_selection_priority_choice() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgPracticeLobbySetDetails.league_selection_priority_choice)
-  return static_cast< ::proto::dota::SelectionPriorityType >(league_selection_priority_choice_);
-}
-inline void CMsgPracticeLobbySetDetails::set_league_selection_priority_choice(::proto::dota::SelectionPriorityType value) {
-  assert(::proto::dota::SelectionPriorityType_IsValid(value));
-  set_has_league_selection_priority_choice();
-  league_selection_priority_choice_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.league_selection_priority_choice)
-}
-
-// optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 41 [default = UNDEFINED];
-inline bool CMsgPracticeLobbySetDetails::has_league_non_selection_priority_choice() const {
-  return (_has_bits_[1] & 0x00000010u) != 0;
-}
-inline void CMsgPracticeLobbySetDetails::set_has_league_non_selection_priority_choice() {
-  _has_bits_[1] |= 0x00000010u;
-}
-inline void CMsgPracticeLobbySetDetails::clear_has_league_non_selection_priority_choice() {
-  _has_bits_[1] &= ~0x00000010u;
-}
-inline void CMsgPracticeLobbySetDetails::clear_league_non_selection_priority_choice() {
-  league_non_selection_priority_choice_ = 0;
-  clear_has_league_non_selection_priority_choice();
-}
-inline ::proto::dota::SelectionPriorityType CMsgPracticeLobbySetDetails::league_non_selection_priority_choice() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgPracticeLobbySetDetails.league_non_selection_priority_choice)
-  return static_cast< ::proto::dota::SelectionPriorityType >(league_non_selection_priority_choice_);
-}
-inline void CMsgPracticeLobbySetDetails::set_league_non_selection_priority_choice(::proto::dota::SelectionPriorityType value) {
-  assert(::proto::dota::SelectionPriorityType_IsValid(value));
-  set_has_league_non_selection_priority_choice();
-  league_non_selection_priority_choice_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.league_non_selection_priority_choice)
-}
-
 // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
 inline bool CMsgPracticeLobbySetDetails::has_pause_setting() const {
-  return (_has_bits_[1] & 0x00000020u) != 0;
+  return (_has_bits_[1] & 0x00000008u) != 0;
 }
 inline void CMsgPracticeLobbySetDetails::set_has_pause_setting() {
-  _has_bits_[1] |= 0x00000020u;
+  _has_bits_[1] |= 0x00000008u;
 }
 inline void CMsgPracticeLobbySetDetails::clear_has_pause_setting() {
-  _has_bits_[1] &= ~0x00000020u;
+  _has_bits_[1] &= ~0x00000008u;
 }
 inline void CMsgPracticeLobbySetDetails::clear_pause_setting() {
   pause_setting_ = 0;
@@ -10745,13 +10685,13 @@ inline void CMsgPracticeLobbySetDetails::set_pause_setting(::proto::dota::LobbyD
 
 // optional .proto.dota.DOTABotDifficulty bot_difficulty_dire = 43 [default = BOT_DIFFICULTY_PASSIVE];
 inline bool CMsgPracticeLobbySetDetails::has_bot_difficulty_dire() const {
-  return (_has_bits_[1] & 0x00000080u) != 0;
+  return (_has_bits_[1] & 0x00000010u) != 0;
 }
 inline void CMsgPracticeLobbySetDetails::set_has_bot_difficulty_dire() {
-  _has_bits_[1] |= 0x00000080u;
+  _has_bits_[1] |= 0x00000010u;
 }
 inline void CMsgPracticeLobbySetDetails::clear_has_bot_difficulty_dire() {
-  _has_bits_[1] &= ~0x00000080u;
+  _has_bits_[1] &= ~0x00000010u;
 }
 inline void CMsgPracticeLobbySetDetails::clear_bot_difficulty_dire() {
   bot_difficulty_dire_ = 0;
@@ -10770,13 +10710,13 @@ inline void CMsgPracticeLobbySetDetails::set_bot_difficulty_dire(::proto::dota::
 
 // optional uint64 bot_radiant = 44;
 inline bool CMsgPracticeLobbySetDetails::has_bot_radiant() const {
-  return (_has_bits_[1] & 0x00000040u) != 0;
+  return (_has_bits_[1] & 0x00000020u) != 0;
 }
 inline void CMsgPracticeLobbySetDetails::set_has_bot_radiant() {
-  _has_bits_[1] |= 0x00000040u;
+  _has_bits_[1] |= 0x00000020u;
 }
 inline void CMsgPracticeLobbySetDetails::clear_has_bot_radiant() {
-  _has_bits_[1] &= ~0x00000040u;
+  _has_bits_[1] &= ~0x00000020u;
 }
 inline void CMsgPracticeLobbySetDetails::clear_bot_radiant() {
   bot_radiant_ = GOOGLE_ULONGLONG(0);
@@ -10794,13 +10734,13 @@ inline void CMsgPracticeLobbySetDetails::set_bot_radiant(::google::protobuf::uin
 
 // optional uint64 bot_dire = 45;
 inline bool CMsgPracticeLobbySetDetails::has_bot_dire() const {
-  return (_has_bits_[1] & 0x00000100u) != 0;
+  return (_has_bits_[1] & 0x00000040u) != 0;
 }
 inline void CMsgPracticeLobbySetDetails::set_has_bot_dire() {
-  _has_bits_[1] |= 0x00000100u;
+  _has_bits_[1] |= 0x00000040u;
 }
 inline void CMsgPracticeLobbySetDetails::clear_has_bot_dire() {
-  _has_bits_[1] &= ~0x00000100u;
+  _has_bits_[1] &= ~0x00000040u;
 }
 inline void CMsgPracticeLobbySetDetails::clear_bot_dire() {
   bot_dire_ = GOOGLE_ULONGLONG(0);
@@ -10814,6 +10754,31 @@ inline void CMsgPracticeLobbySetDetails::set_bot_dire(::google::protobuf::uint64
   set_has_bot_dire();
   bot_dire_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.bot_dire)
+}
+
+// optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 46 [default = k_DOTASelectionPriorityRules_Manual];
+inline bool CMsgPracticeLobbySetDetails::has_selection_priority_rules() const {
+  return (_has_bits_[1] & 0x00000004u) != 0;
+}
+inline void CMsgPracticeLobbySetDetails::set_has_selection_priority_rules() {
+  _has_bits_[1] |= 0x00000004u;
+}
+inline void CMsgPracticeLobbySetDetails::clear_has_selection_priority_rules() {
+  _has_bits_[1] &= ~0x00000004u;
+}
+inline void CMsgPracticeLobbySetDetails::clear_selection_priority_rules() {
+  selection_priority_rules_ = 0;
+  clear_has_selection_priority_rules();
+}
+inline ::proto::dota::DOTASelectionPriorityRules CMsgPracticeLobbySetDetails::selection_priority_rules() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgPracticeLobbySetDetails.selection_priority_rules)
+  return static_cast< ::proto::dota::DOTASelectionPriorityRules >(selection_priority_rules_);
+}
+inline void CMsgPracticeLobbySetDetails::set_selection_priority_rules(::proto::dota::DOTASelectionPriorityRules value) {
+  assert(::proto::dota::DOTASelectionPriorityRules_IsValid(value));
+  set_has_selection_priority_rules();
+  selection_priority_rules_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.selection_priority_rules)
 }
 
 // -------------------------------------------------------------------

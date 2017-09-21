@@ -611,6 +611,15 @@ extern CMsgDOTAClaimEventActionResponse_MysteryItemRewardDataDefaultTypeInternal
 class CMsgDOTAClearNotifySuccessfulReport;
 class CMsgDOTAClearNotifySuccessfulReportDefaultTypeInternal;
 extern CMsgDOTAClearNotifySuccessfulReportDefaultTypeInternal _CMsgDOTAClearNotifySuccessfulReport_default_instance_;
+class CMsgDOTAClientToGCQuickStatsRequest;
+class CMsgDOTAClientToGCQuickStatsRequestDefaultTypeInternal;
+extern CMsgDOTAClientToGCQuickStatsRequestDefaultTypeInternal _CMsgDOTAClientToGCQuickStatsRequest_default_instance_;
+class CMsgDOTAClientToGCQuickStatsResponse;
+class CMsgDOTAClientToGCQuickStatsResponseDefaultTypeInternal;
+extern CMsgDOTAClientToGCQuickStatsResponseDefaultTypeInternal _CMsgDOTAClientToGCQuickStatsResponse_default_instance_;
+class CMsgDOTAClientToGCQuickStatsResponse_SimpleStats;
+class CMsgDOTAClientToGCQuickStatsResponse_SimpleStatsDefaultTypeInternal;
+extern CMsgDOTAClientToGCQuickStatsResponse_SimpleStatsDefaultTypeInternal _CMsgDOTAClientToGCQuickStatsResponse_SimpleStats_default_instance_;
 class CMsgDOTACombatLogEntry;
 class CMsgDOTACombatLogEntryDefaultTypeInternal;
 extern CMsgDOTACombatLogEntryDefaultTypeInternal _CMsgDOTACombatLogEntry_default_instance_;
@@ -671,6 +680,12 @@ extern CMsgDOTAFriendRecruitsResponseDefaultTypeInternal _CMsgDOTAFriendRecruits
 class CMsgDOTAFriendRecruitsResponse_FriendRecruitStatus;
 class CMsgDOTAFriendRecruitsResponse_FriendRecruitStatusDefaultTypeInternal;
 extern CMsgDOTAFriendRecruitsResponse_FriendRecruitStatusDefaultTypeInternal _CMsgDOTAFriendRecruitsResponse_FriendRecruitStatus_default_instance_;
+class CMsgDOTAGameAutographReward;
+class CMsgDOTAGameAutographRewardDefaultTypeInternal;
+extern CMsgDOTAGameAutographRewardDefaultTypeInternal _CMsgDOTAGameAutographReward_default_instance_;
+class CMsgDOTAGameAutographRewardResponse;
+class CMsgDOTAGameAutographRewardResponseDefaultTypeInternal;
+extern CMsgDOTAGameAutographRewardResponseDefaultTypeInternal _CMsgDOTAGameAutographRewardResponse_default_instance_;
 class CMsgDOTAGetEventPoints;
 class CMsgDOTAGetEventPointsDefaultTypeInternal;
 extern CMsgDOTAGetEventPointsDefaultTypeInternal _CMsgDOTAGetEventPoints_default_instance_;
@@ -1025,6 +1040,12 @@ extern CMsgDOTASeasonRewardsDefaultTypeInternal _CMsgDOTASeasonRewards_default_i
 class CMsgDOTASeasonRewards_Reward;
 class CMsgDOTASeasonRewards_RewardDefaultTypeInternal;
 extern CMsgDOTASeasonRewards_RewardDefaultTypeInternal _CMsgDOTASeasonRewards_Reward_default_instance_;
+class CMsgDOTASelectionPriorityChoiceRequest;
+class CMsgDOTASelectionPriorityChoiceRequestDefaultTypeInternal;
+extern CMsgDOTASelectionPriorityChoiceRequestDefaultTypeInternal _CMsgDOTASelectionPriorityChoiceRequest_default_instance_;
+class CMsgDOTASelectionPriorityChoiceResponse;
+class CMsgDOTASelectionPriorityChoiceResponseDefaultTypeInternal;
+extern CMsgDOTASelectionPriorityChoiceResponseDefaultTypeInternal _CMsgDOTASelectionPriorityChoiceResponse_default_instance_;
 class CMsgDOTASendFriendRecruits;
 class CMsgDOTASendFriendRecruitsDefaultTypeInternal;
 extern CMsgDOTASendFriendRecruitsDefaultTypeInternal _CMsgDOTASendFriendRecruits_default_instance_;
@@ -1337,6 +1358,18 @@ extern CMsgGCSteamProfileRequestDefaultTypeInternal _CMsgGCSteamProfileRequest_d
 class CMsgGCSteamProfileRequestResponse;
 class CMsgGCSteamProfileRequestResponseDefaultTypeInternal;
 extern CMsgGCSteamProfileRequestResponseDefaultTypeInternal _CMsgGCSteamProfileRequestResponse_default_instance_;
+class CMsgGCToClientAllStarVotesReply;
+class CMsgGCToClientAllStarVotesReplyDefaultTypeInternal;
+extern CMsgGCToClientAllStarVotesReplyDefaultTypeInternal _CMsgGCToClientAllStarVotesReply_default_instance_;
+class CMsgGCToClientAllStarVotesRequest;
+class CMsgGCToClientAllStarVotesRequestDefaultTypeInternal;
+extern CMsgGCToClientAllStarVotesRequestDefaultTypeInternal _CMsgGCToClientAllStarVotesRequest_default_instance_;
+class CMsgGCToClientAllStarVotesSubmit;
+class CMsgGCToClientAllStarVotesSubmitDefaultTypeInternal;
+extern CMsgGCToClientAllStarVotesSubmitDefaultTypeInternal _CMsgGCToClientAllStarVotesSubmit_default_instance_;
+class CMsgGCToClientAllStarVotesSubmitReply;
+class CMsgGCToClientAllStarVotesSubmitReplyDefaultTypeInternal;
+extern CMsgGCToClientAllStarVotesSubmitReplyDefaultTypeInternal _CMsgGCToClientAllStarVotesSubmitReply_default_instance_;
 class CMsgGCToClientArcanaVotesUpdate;
 class CMsgGCToClientArcanaVotesUpdateDefaultTypeInternal;
 extern CMsgGCToClientArcanaVotesUpdateDefaultTypeInternal _CMsgGCToClientArcanaVotesUpdate_default_instance_;
@@ -1406,6 +1439,33 @@ extern CMsgGCToClientBattlePassRollup_International2016_QuestlinesDefaultTypeInt
 class CMsgGCToClientBattlePassRollup_International2016_Wagering;
 class CMsgGCToClientBattlePassRollup_International2016_WageringDefaultTypeInternal;
 extern CMsgGCToClientBattlePassRollup_International2016_WageringDefaultTypeInternal _CMsgGCToClientBattlePassRollup_International2016_Wagering_default_instance_;
+class CMsgGCToClientBattlePassRollup_Winter2017;
+class CMsgGCToClientBattlePassRollup_Winter2017DefaultTypeInternal;
+extern CMsgGCToClientBattlePassRollup_Winter2017DefaultTypeInternal _CMsgGCToClientBattlePassRollup_Winter2017_default_instance_;
+class CMsgGCToClientBattlePassRollup_Winter2017_Achievements;
+class CMsgGCToClientBattlePassRollup_Winter2017_AchievementsDefaultTypeInternal;
+extern CMsgGCToClientBattlePassRollup_Winter2017_AchievementsDefaultTypeInternal _CMsgGCToClientBattlePassRollup_Winter2017_Achievements_default_instance_;
+class CMsgGCToClientBattlePassRollup_Winter2017_BattleCup;
+class CMsgGCToClientBattlePassRollup_Winter2017_BattleCupDefaultTypeInternal;
+extern CMsgGCToClientBattlePassRollup_Winter2017_BattleCupDefaultTypeInternal _CMsgGCToClientBattlePassRollup_Winter2017_BattleCup_default_instance_;
+class CMsgGCToClientBattlePassRollup_Winter2017_Bracket;
+class CMsgGCToClientBattlePassRollup_Winter2017_BracketDefaultTypeInternal;
+extern CMsgGCToClientBattlePassRollup_Winter2017_BracketDefaultTypeInternal _CMsgGCToClientBattlePassRollup_Winter2017_Bracket_default_instance_;
+class CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge;
+class CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallengeDefaultTypeInternal;
+extern CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallengeDefaultTypeInternal _CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge_default_instance_;
+class CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard;
+class CMsgGCToClientBattlePassRollup_Winter2017_PlayerCardDefaultTypeInternal;
+extern CMsgGCToClientBattlePassRollup_Winter2017_PlayerCardDefaultTypeInternal _CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard_default_instance_;
+class CMsgGCToClientBattlePassRollup_Winter2017_Predictions;
+class CMsgGCToClientBattlePassRollup_Winter2017_PredictionsDefaultTypeInternal;
+extern CMsgGCToClientBattlePassRollup_Winter2017_PredictionsDefaultTypeInternal _CMsgGCToClientBattlePassRollup_Winter2017_Predictions_default_instance_;
+class CMsgGCToClientBattlePassRollup_Winter2017_Questlines;
+class CMsgGCToClientBattlePassRollup_Winter2017_QuestlinesDefaultTypeInternal;
+extern CMsgGCToClientBattlePassRollup_Winter2017_QuestlinesDefaultTypeInternal _CMsgGCToClientBattlePassRollup_Winter2017_Questlines_default_instance_;
+class CMsgGCToClientBattlePassRollup_Winter2017_Wagering;
+class CMsgGCToClientBattlePassRollup_Winter2017_WageringDefaultTypeInternal;
+extern CMsgGCToClientBattlePassRollup_Winter2017_WageringDefaultTypeInternal _CMsgGCToClientBattlePassRollup_Winter2017_Wagering_default_instance_;
 class CMsgGCToClientCustomGamePlayerCountResponse;
 class CMsgGCToClientCustomGamePlayerCountResponseDefaultTypeInternal;
 extern CMsgGCToClientCustomGamePlayerCountResponseDefaultTypeInternal _CMsgGCToClientCustomGamePlayerCountResponse_default_instance_;
@@ -1694,6 +1754,9 @@ extern CMsgResetMapLocationsResponseDefaultTypeInternal _CMsgResetMapLocationsRe
 class CMsgResponseLeagueInfo;
 class CMsgResponseLeagueInfoDefaultTypeInternal;
 extern CMsgResponseLeagueInfoDefaultTypeInternal _CMsgResponseLeagueInfo_default_instance_;
+class CMsgResponseLeagueStaticData;
+class CMsgResponseLeagueStaticDataDefaultTypeInternal;
+extern CMsgResponseLeagueStaticDataDefaultTypeInternal _CMsgResponseLeagueStaticData_default_instance_;
 class CMsgRetrieveMatchVote;
 class CMsgRetrieveMatchVoteDefaultTypeInternal;
 extern CMsgRetrieveMatchVoteDefaultTypeInternal _CMsgRetrieveMatchVote_default_instance_;
@@ -2286,6 +2349,66 @@ inline bool CMsgDOTAUnanchorPhoneNumberResponse_Result_Parse(
     const ::std::string& name, CMsgDOTAUnanchorPhoneNumberResponse_Result* value) {
   return ::google::protobuf::internal::ParseNamedEnum<CMsgDOTAUnanchorPhoneNumberResponse_Result>(
     CMsgDOTAUnanchorPhoneNumberResponse_Result_descriptor(), name, value);
+}
+enum CMsgGCToClientAllStarVotesSubmitReply_Result {
+  CMsgGCToClientAllStarVotesSubmitReply_Result_SUCCESS = 1,
+  CMsgGCToClientAllStarVotesSubmitReply_Result_ERROR_INTERNAL = 2,
+  CMsgGCToClientAllStarVotesSubmitReply_Result_ERROR_INVALID_EVENT_ID = 3,
+  CMsgGCToClientAllStarVotesSubmitReply_Result_ERROR_INVALID_ACCOUNT_ID = 4,
+  CMsgGCToClientAllStarVotesSubmitReply_Result_ERROR_SELECTIONS_LOCKED = 5
+};
+bool CMsgGCToClientAllStarVotesSubmitReply_Result_IsValid(int value);
+const CMsgGCToClientAllStarVotesSubmitReply_Result CMsgGCToClientAllStarVotesSubmitReply_Result_Result_MIN = CMsgGCToClientAllStarVotesSubmitReply_Result_SUCCESS;
+const CMsgGCToClientAllStarVotesSubmitReply_Result CMsgGCToClientAllStarVotesSubmitReply_Result_Result_MAX = CMsgGCToClientAllStarVotesSubmitReply_Result_ERROR_SELECTIONS_LOCKED;
+const int CMsgGCToClientAllStarVotesSubmitReply_Result_Result_ARRAYSIZE = CMsgGCToClientAllStarVotesSubmitReply_Result_Result_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* CMsgGCToClientAllStarVotesSubmitReply_Result_descriptor();
+inline const ::std::string& CMsgGCToClientAllStarVotesSubmitReply_Result_Name(CMsgGCToClientAllStarVotesSubmitReply_Result value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    CMsgGCToClientAllStarVotesSubmitReply_Result_descriptor(), value);
+}
+inline bool CMsgGCToClientAllStarVotesSubmitReply_Result_Parse(
+    const ::std::string& name, CMsgGCToClientAllStarVotesSubmitReply_Result* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<CMsgGCToClientAllStarVotesSubmitReply_Result>(
+    CMsgGCToClientAllStarVotesSubmitReply_Result_descriptor(), name, value);
+}
+enum CMsgDOTASelectionPriorityChoiceResponse_Result {
+  CMsgDOTASelectionPriorityChoiceResponse_Result_SUCCESS = 0,
+  CMsgDOTASelectionPriorityChoiceResponse_Result_ERROR_UNKNOWN = 1
+};
+bool CMsgDOTASelectionPriorityChoiceResponse_Result_IsValid(int value);
+const CMsgDOTASelectionPriorityChoiceResponse_Result CMsgDOTASelectionPriorityChoiceResponse_Result_Result_MIN = CMsgDOTASelectionPriorityChoiceResponse_Result_SUCCESS;
+const CMsgDOTASelectionPriorityChoiceResponse_Result CMsgDOTASelectionPriorityChoiceResponse_Result_Result_MAX = CMsgDOTASelectionPriorityChoiceResponse_Result_ERROR_UNKNOWN;
+const int CMsgDOTASelectionPriorityChoiceResponse_Result_Result_ARRAYSIZE = CMsgDOTASelectionPriorityChoiceResponse_Result_Result_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* CMsgDOTASelectionPriorityChoiceResponse_Result_descriptor();
+inline const ::std::string& CMsgDOTASelectionPriorityChoiceResponse_Result_Name(CMsgDOTASelectionPriorityChoiceResponse_Result value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    CMsgDOTASelectionPriorityChoiceResponse_Result_descriptor(), value);
+}
+inline bool CMsgDOTASelectionPriorityChoiceResponse_Result_Parse(
+    const ::std::string& name, CMsgDOTASelectionPriorityChoiceResponse_Result* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<CMsgDOTASelectionPriorityChoiceResponse_Result>(
+    CMsgDOTASelectionPriorityChoiceResponse_Result_descriptor(), name, value);
+}
+enum CMsgDOTAGameAutographRewardResponse_Result {
+  CMsgDOTAGameAutographRewardResponse_Result_SUCCESS = 0,
+  CMsgDOTAGameAutographRewardResponse_Result_ERROR_UNKNOWN = 1
+};
+bool CMsgDOTAGameAutographRewardResponse_Result_IsValid(int value);
+const CMsgDOTAGameAutographRewardResponse_Result CMsgDOTAGameAutographRewardResponse_Result_Result_MIN = CMsgDOTAGameAutographRewardResponse_Result_SUCCESS;
+const CMsgDOTAGameAutographRewardResponse_Result CMsgDOTAGameAutographRewardResponse_Result_Result_MAX = CMsgDOTAGameAutographRewardResponse_Result_ERROR_UNKNOWN;
+const int CMsgDOTAGameAutographRewardResponse_Result_Result_ARRAYSIZE = CMsgDOTAGameAutographRewardResponse_Result_Result_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* CMsgDOTAGameAutographRewardResponse_Result_descriptor();
+inline const ::std::string& CMsgDOTAGameAutographRewardResponse_Result_Name(CMsgDOTAGameAutographRewardResponse_Result value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    CMsgDOTAGameAutographRewardResponse_Result_descriptor(), value);
+}
+inline bool CMsgDOTAGameAutographRewardResponse_Result_Parse(
+    const ::std::string& name, CMsgDOTAGameAutographRewardResponse_Result* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<CMsgDOTAGameAutographRewardResponse_Result>(
+    CMsgDOTAGameAutographRewardResponse_Result_descriptor(), name, value);
 }
 enum DOTA_WatchReplayType {
   DOTA_WATCH_REPLAY_NORMAL = 0,
@@ -8882,6 +9005,21 @@ class CStaticLeagueData : public ::google::protobuf::Message /* @@protoc_inserti
   ::std::string* release_square_image();
   void set_allocated_square_image(::std::string* square_image);
 
+  // optional string base_prize_pool_string = 22;
+  bool has_base_prize_pool_string() const;
+  void clear_base_prize_pool_string();
+  static const int kBasePrizePoolStringFieldNumber = 22;
+  const ::std::string& base_prize_pool_string() const;
+  void set_base_prize_pool_string(const ::std::string& value);
+  #if LANG_CXX11
+  void set_base_prize_pool_string(::std::string&& value);
+  #endif
+  void set_base_prize_pool_string(const char* value);
+  void set_base_prize_pool_string(const char* value, size_t size);
+  ::std::string* mutable_base_prize_pool_string();
+  ::std::string* release_base_prize_pool_string();
+  void set_allocated_base_prize_pool_string(::std::string* base_prize_pool_string);
+
   // optional uint32 league_id = 1;
   bool has_league_id() const;
   void clear_league_id();
@@ -8909,13 +9047,6 @@ class CStaticLeagueData : public ::google::protobuf::Message /* @@protoc_inserti
   static const int kBasePrizePoolFieldNumber = 10;
   ::google::protobuf::uint32 base_prize_pool() const;
   void set_base_prize_pool(::google::protobuf::uint32 value);
-
-  // optional uint32 sort_order = 12;
-  bool has_sort_order() const;
-  void clear_sort_order();
-  static const int kSortOrderFieldNumber = 12;
-  ::google::protobuf::uint32 sort_order() const;
-  void set_sort_order(::google::protobuf::uint32 value);
 
   // optional uint32 tier = 13;
   bool has_tier() const;
@@ -8983,8 +9114,6 @@ class CStaticLeagueData : public ::google::protobuf::Message /* @@protoc_inserti
   void clear_has_base_prize_pool();
   void set_has_is_major();
   void clear_has_is_major();
-  void set_has_sort_order();
-  void clear_has_sort_order();
   void set_has_tier();
   void clear_has_tier();
   void set_has_amateur_region();
@@ -9003,6 +9132,8 @@ class CStaticLeagueData : public ::google::protobuf::Message /* @@protoc_inserti
   void clear_has_square_image();
   void set_has_battle_pass_rollup();
   void clear_has_battle_pass_rollup();
+  void set_has_base_prize_pool_string();
+  void clear_has_base_prize_pool_string();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -9017,11 +9148,11 @@ class CStaticLeagueData : public ::google::protobuf::Message /* @@protoc_inserti
   ::google::protobuf::internal::ArenaStringPtr location_;
   ::google::protobuf::internal::ArenaStringPtr inventory_image_;
   ::google::protobuf::internal::ArenaStringPtr square_image_;
+  ::google::protobuf::internal::ArenaStringPtr base_prize_pool_string_;
   ::google::protobuf::uint32 league_id_;
   ::google::protobuf::uint32 item_def_index_;
   ::google::protobuf::uint32 hud_skin_item_def_index_;
   ::google::protobuf::uint32 base_prize_pool_;
-  ::google::protobuf::uint32 sort_order_;
   ::google::protobuf::uint32 tier_;
   ::google::protobuf::uint32 amateur_region_;
   ::google::protobuf::uint32 start_date_;
@@ -9148,6 +9279,101 @@ class CLeagueData : public ::google::protobuf::Message /* @@protoc_insertion_poi
 };
 // -------------------------------------------------------------------
 
+class CMsgResponseLeagueStaticData : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgResponseLeagueStaticData) */ {
+ public:
+  CMsgResponseLeagueStaticData();
+  virtual ~CMsgResponseLeagueStaticData();
+
+  CMsgResponseLeagueStaticData(const CMsgResponseLeagueStaticData& from);
+
+  inline CMsgResponseLeagueStaticData& operator=(const CMsgResponseLeagueStaticData& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgResponseLeagueStaticData& default_instance();
+
+  static inline const CMsgResponseLeagueStaticData* internal_default_instance() {
+    return reinterpret_cast<const CMsgResponseLeagueStaticData*>(
+               &_CMsgResponseLeagueStaticData_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    54;
+
+  void Swap(CMsgResponseLeagueStaticData* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgResponseLeagueStaticData* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgResponseLeagueStaticData* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgResponseLeagueStaticData& from);
+  void MergeFrom(const CMsgResponseLeagueStaticData& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgResponseLeagueStaticData* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .proto.dota.CStaticLeagueData leagues = 1;
+  int leagues_size() const;
+  void clear_leagues();
+  static const int kLeaguesFieldNumber = 1;
+  const ::proto::dota::CStaticLeagueData& leagues(int index) const;
+  ::proto::dota::CStaticLeagueData* mutable_leagues(int index);
+  ::proto::dota::CStaticLeagueData* add_leagues();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CStaticLeagueData >*
+      mutable_leagues();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CStaticLeagueData >&
+      leagues() const;
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgResponseLeagueStaticData)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CStaticLeagueData > leagues_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class CMsgResponseLeagueInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgResponseLeagueInfo) */ {
  public:
   CMsgResponseLeagueInfo();
@@ -9176,7 +9402,7 @@ class CMsgResponseLeagueInfo : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgResponseLeagueInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    54;
+    55;
 
   void Swap(CMsgResponseLeagueInfo* other);
 
@@ -9271,7 +9497,7 @@ class CMsgDOTAMatchVotes_PlayerVote : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTAMatchVotes_PlayerVote_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    55;
+    56;
 
   void Swap(CMsgDOTAMatchVotes_PlayerVote* other);
 
@@ -9373,7 +9599,7 @@ class CMsgDOTAMatchVotes : public ::google::protobuf::Message /* @@protoc_insert
                &_CMsgDOTAMatchVotes_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    56;
+    57;
 
   void Swap(CMsgDOTAMatchVotes* other);
 
@@ -9480,7 +9706,7 @@ class CMsgCastMatchVote : public ::google::protobuf::Message /* @@protoc_inserti
                &_CMsgCastMatchVote_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    57;
+    58;
 
   void Swap(CMsgCastMatchVote* other);
 
@@ -9582,7 +9808,7 @@ class CMsgRetrieveMatchVote : public ::google::protobuf::Message /* @@protoc_ins
                &_CMsgRetrieveMatchVote_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    58;
+    59;
 
   void Swap(CMsgRetrieveMatchVote* other);
 
@@ -9684,7 +9910,7 @@ class CMsgMatchVoteResponse : public ::google::protobuf::Message /* @@protoc_ins
                &_CMsgMatchVoteResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    59;
+    60;
 
   void Swap(CMsgMatchVoteResponse* other);
 
@@ -9806,7 +10032,7 @@ class CMsgDOTAHallOfFame_FeaturedPlayer : public ::google::protobuf::Message /* 
                &_CMsgDOTAHallOfFame_FeaturedPlayer_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    60;
+    61;
 
   void Swap(CMsgDOTAHallOfFame_FeaturedPlayer* other);
 
@@ -9928,7 +10154,7 @@ class CMsgDOTAHallOfFame_FeaturedFarmer : public ::google::protobuf::Message /* 
                &_CMsgDOTAHallOfFame_FeaturedFarmer_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    61;
+    62;
 
   void Swap(CMsgDOTAHallOfFame_FeaturedFarmer* other);
 
@@ -10050,7 +10276,7 @@ class CMsgDOTAHallOfFame : public ::google::protobuf::Message /* @@protoc_insert
                &_CMsgDOTAHallOfFame_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    62;
+    63;
 
   void Swap(CMsgDOTAHallOfFame* other);
 
@@ -10170,7 +10396,7 @@ class CMsgDOTAHallOfFameRequest : public ::google::protobuf::Message /* @@protoc
                &_CMsgDOTAHallOfFameRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    63;
+    64;
 
   void Swap(CMsgDOTAHallOfFameRequest* other);
 
@@ -10262,7 +10488,7 @@ class CMsgDOTAHallOfFameResponse : public ::google::protobuf::Message /* @@proto
                &_CMsgDOTAHallOfFameResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    64;
+    65;
 
   void Swap(CMsgDOTAHallOfFameResponse* other);
 
@@ -10366,7 +10592,7 @@ class CMsgDOTAHalloweenHighScoreRequest : public ::google::protobuf::Message /* 
                &_CMsgDOTAHalloweenHighScoreRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    65;
+    66;
 
   void Swap(CMsgDOTAHalloweenHighScoreRequest* other);
 
@@ -10458,7 +10684,7 @@ class CMsgDOTAHalloweenHighScoreResponse : public ::google::protobuf::Message /*
                &_CMsgDOTAHalloweenHighScoreResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    66;
+    67;
 
   void Swap(CMsgDOTAHalloweenHighScoreResponse* other);
 
@@ -10582,7 +10808,7 @@ class CMsgDOTAStorePromoPagesRequest : public ::google::protobuf::Message /* @@p
                &_CMsgDOTAStorePromoPagesRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    67;
+    68;
 
   void Swap(CMsgDOTAStorePromoPagesRequest* other);
 
@@ -10674,7 +10900,7 @@ class CMsgDOTAStorePromoPagesResponse_PromoPage : public ::google::protobuf::Mes
                &_CMsgDOTAStorePromoPagesResponse_PromoPage_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    68;
+    69;
 
   void Swap(CMsgDOTAStorePromoPagesResponse_PromoPage* other);
 
@@ -10802,7 +11028,7 @@ class CMsgDOTAStorePromoPagesResponse : public ::google::protobuf::Message /* @@
                &_CMsgDOTAStorePromoPagesResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    69;
+    70;
 
   void Swap(CMsgDOTAStorePromoPagesResponse* other);
 
@@ -10899,7 +11125,7 @@ class CMsgLeagueScheduleBlockTeamInfo : public ::google::protobuf::Message /* @@
                &_CMsgLeagueScheduleBlockTeamInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    70;
+    71;
 
   void Swap(CMsgLeagueScheduleBlockTeamInfo* other);
 
@@ -11019,7 +11245,7 @@ class CMsgLeagueScheduleBlock : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgLeagueScheduleBlock_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    71;
+    72;
 
   void Swap(CMsgLeagueScheduleBlock* other);
 
@@ -11162,7 +11388,7 @@ class CMsgDOTALeague : public ::google::protobuf::Message /* @@protoc_insertion_
                &_CMsgDOTALeague_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    72;
+    73;
 
   void Swap(CMsgDOTALeague* other);
 
@@ -11267,7 +11493,7 @@ class CMsgDOTALeagueScheduleRequest : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTALeagueScheduleRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    73;
+    74;
 
   void Swap(CMsgDOTALeagueScheduleRequest* other);
 
@@ -11359,7 +11585,7 @@ class CMsgDOTALeagueScheduleResponse : public ::google::protobuf::Message /* @@p
                &_CMsgDOTALeagueScheduleResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    74;
+    75;
 
   void Swap(CMsgDOTALeagueScheduleResponse* other);
 
@@ -11463,7 +11689,7 @@ class CMsgDOTALeagueScheduleEdit : public ::google::protobuf::Message /* @@proto
                &_CMsgDOTALeagueScheduleEdit_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    75;
+    76;
 
   void Swap(CMsgDOTALeagueScheduleEdit* other);
 
@@ -11577,7 +11803,7 @@ class CMsgDOTALeagueScheduleEditResponse : public ::google::protobuf::Message /*
                &_CMsgDOTALeagueScheduleEditResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    76;
+    77;
 
   void Swap(CMsgDOTALeagueScheduleEditResponse* other);
 
@@ -11681,7 +11907,7 @@ class CMsgDOTALeaguesInMonthRequest : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTALeaguesInMonthRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    77;
+    78;
 
   void Swap(CMsgDOTALeaguesInMonthRequest* other);
 
@@ -11793,7 +12019,7 @@ class CMsgDOTALeaguesInMonthResponse : public ::google::protobuf::Message /* @@p
                &_CMsgDOTALeaguesInMonthResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    78;
+    79;
 
   void Swap(CMsgDOTALeaguesInMonthResponse* other);
 
@@ -11918,7 +12144,7 @@ class CMsgMatchmakingMatchGroupInfo : public ::google::protobuf::Message /* @@pr
                &_CMsgMatchmakingMatchGroupInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    79;
+    80;
 
   void Swap(CMsgMatchmakingMatchGroupInfo* other);
 
@@ -12030,7 +12256,7 @@ class CMsgDOTAMatchmakingStatsRequest : public ::google::protobuf::Message /* @@
                &_CMsgDOTAMatchmakingStatsRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    80;
+    81;
 
   void Swap(CMsgDOTAMatchmakingStatsRequest* other);
 
@@ -12112,7 +12338,7 @@ class CMsgDOTAMatchmakingStatsResponse : public ::google::protobuf::Message /* @
                &_CMsgDOTAMatchmakingStatsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    81;
+    82;
 
   void Swap(CMsgDOTAMatchmakingStatsResponse* other);
 
@@ -12230,7 +12456,7 @@ class CMsgDOTAUpdateMatchmakingStats : public ::google::protobuf::Message /* @@p
                &_CMsgDOTAUpdateMatchmakingStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    82;
+    83;
 
   void Swap(CMsgDOTAUpdateMatchmakingStats* other);
 
@@ -12324,7 +12550,7 @@ class CMsgDOTAUpdateMatchManagementStats : public ::google::protobuf::Message /*
                &_CMsgDOTAUpdateMatchManagementStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    83;
+    84;
 
   void Swap(CMsgDOTAUpdateMatchManagementStats* other);
 
@@ -12418,7 +12644,7 @@ class CMsgDOTASetMatchHistoryAccess : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTASetMatchHistoryAccess_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    84;
+    85;
 
   void Swap(CMsgDOTASetMatchHistoryAccess* other);
 
@@ -12510,7 +12736,7 @@ class CMsgDOTASetMatchHistoryAccessResponse : public ::google::protobuf::Message
                &_CMsgDOTASetMatchHistoryAccessResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    85;
+    86;
 
   void Swap(CMsgDOTASetMatchHistoryAccessResponse* other);
 
@@ -12602,7 +12828,7 @@ class CMsgDOTANotifyAccountFlagsChange : public ::google::protobuf::Message /* @
                &_CMsgDOTANotifyAccountFlagsChange_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    86;
+    87;
 
   void Swap(CMsgDOTANotifyAccountFlagsChange* other);
 
@@ -12704,7 +12930,7 @@ class CMsgDOTASetProfilePrivacy : public ::google::protobuf::Message /* @@protoc
                &_CMsgDOTASetProfilePrivacy_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    87;
+    88;
 
   void Swap(CMsgDOTASetProfilePrivacy* other);
 
@@ -12796,7 +13022,7 @@ class CMsgDOTASetProfilePrivacyResponse : public ::google::protobuf::Message /* 
                &_CMsgDOTASetProfilePrivacyResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    88;
+    89;
 
   void Swap(CMsgDOTASetProfilePrivacyResponse* other);
 
@@ -12888,7 +13114,7 @@ class CMsgUpgradeLeagueItem : public ::google::protobuf::Message /* @@protoc_ins
                &_CMsgUpgradeLeagueItem_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    89;
+    90;
 
   void Swap(CMsgUpgradeLeagueItem* other);
 
@@ -12990,7 +13216,7 @@ class CMsgUpgradeLeagueItemResponse : public ::google::protobuf::Message /* @@pr
                &_CMsgUpgradeLeagueItemResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    90;
+    91;
 
   void Swap(CMsgUpgradeLeagueItemResponse* other);
 
@@ -13072,7 +13298,7 @@ class CMsgGCWatchDownloadedReplay : public ::google::protobuf::Message /* @@prot
                &_CMsgGCWatchDownloadedReplay_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    91;
+    92;
 
   void Swap(CMsgGCWatchDownloadedReplay* other);
 
@@ -13174,7 +13400,7 @@ class CMsgSetMapLocationState : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgSetMapLocationState_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    92;
+    93;
 
   void Swap(CMsgSetMapLocationState* other);
 
@@ -13276,7 +13502,7 @@ class CMsgSetMapLocationStateResponse : public ::google::protobuf::Message /* @@
                &_CMsgSetMapLocationStateResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    93;
+    94;
 
   void Swap(CMsgSetMapLocationStateResponse* other);
 
@@ -13368,7 +13594,7 @@ class CMsgResetMapLocations : public ::google::protobuf::Message /* @@protoc_ins
                &_CMsgResetMapLocations_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    94;
+    95;
 
   void Swap(CMsgResetMapLocations* other);
 
@@ -13450,7 +13676,7 @@ class CMsgResetMapLocationsResponse : public ::google::protobuf::Message /* @@pr
                &_CMsgResetMapLocationsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    95;
+    96;
 
   void Swap(CMsgResetMapLocationsResponse* other);
 
@@ -13542,7 +13768,7 @@ class CMsgRefreshPartnerAccountLink : public ::google::protobuf::Message /* @@pr
                &_CMsgRefreshPartnerAccountLink_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    96;
+    97;
 
   void Swap(CMsgRefreshPartnerAccountLink* other);
 
@@ -13634,7 +13860,7 @@ class CMsgClientsRejoinChatChannels : public ::google::protobuf::Message /* @@pr
                &_CMsgClientsRejoinChatChannels_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    97;
+    98;
 
   void Swap(CMsgClientsRejoinChatChannels* other);
 
@@ -13716,7 +13942,7 @@ class CMsgDOTASendFriendRecruits : public ::google::protobuf::Message /* @@proto
                &_CMsgDOTASendFriendRecruits_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    98;
+    99;
 
   void Swap(CMsgDOTASendFriendRecruits* other);
 
@@ -13811,7 +14037,7 @@ class CMsgDOTAFriendRecruitsRequest : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTAFriendRecruitsRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    99;
+    100;
 
   void Swap(CMsgDOTAFriendRecruitsRequest* other);
 
@@ -13906,7 +14132,7 @@ class CMsgDOTAFriendRecruitsResponse_FriendRecruitStatus : public ::google::prot
                &_CMsgDOTAFriendRecruitsResponse_FriendRecruitStatus_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    100;
+    101;
 
   void Swap(CMsgDOTAFriendRecruitsResponse_FriendRecruitStatus* other);
 
@@ -14028,7 +14254,7 @@ class CMsgDOTAFriendRecruitsResponse : public ::google::protobuf::Message /* @@p
                &_CMsgDOTAFriendRecruitsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    101;
+    102;
 
   void Swap(CMsgDOTAFriendRecruitsResponse* other);
 
@@ -14174,7 +14400,7 @@ class CMsgDOTAFriendRecruitInviteAcceptDecline : public ::google::protobuf::Mess
                &_CMsgDOTAFriendRecruitInviteAcceptDecline_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    102;
+    103;
 
   void Swap(CMsgDOTAFriendRecruitInviteAcceptDecline* other);
 
@@ -14276,7 +14502,7 @@ class CMsgRequestLeaguePrizePool : public ::google::protobuf::Message /* @@proto
                &_CMsgRequestLeaguePrizePool_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    103;
+    104;
 
   void Swap(CMsgRequestLeaguePrizePool* other);
 
@@ -14368,7 +14594,7 @@ class CMsgRequestLeaguePrizePoolResponse : public ::google::protobuf::Message /*
                &_CMsgRequestLeaguePrizePoolResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    104;
+    105;
 
   void Swap(CMsgRequestLeaguePrizePoolResponse* other);
 
@@ -14470,7 +14696,7 @@ class CMsgGCGetHeroStandings : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgGCGetHeroStandings_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    105;
+    106;
 
   void Swap(CMsgGCGetHeroStandings* other);
 
@@ -14552,7 +14778,7 @@ class CMsgGCGetHeroStandingsResponse_Hero : public ::google::protobuf::Message /
                &_CMsgGCGetHeroStandingsResponse_Hero_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    106;
+    107;
 
   void Swap(CMsgGCGetHeroStandingsResponse_Hero* other);
 
@@ -14784,7 +15010,7 @@ class CMsgGCGetHeroStandingsResponse : public ::google::protobuf::Message /* @@p
                &_CMsgGCGetHeroStandingsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    107;
+    108;
 
   void Swap(CMsgGCGetHeroStandingsResponse* other);
 
@@ -14881,7 +15107,7 @@ class CMsgGCItemEditorReservationsRequest : public ::google::protobuf::Message /
                &_CMsgGCItemEditorReservationsRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    108;
+    109;
 
   void Swap(CMsgGCItemEditorReservationsRequest* other);
 
@@ -14963,7 +15189,7 @@ class CMsgGCItemEditorReservation : public ::google::protobuf::Message /* @@prot
                &_CMsgGCItemEditorReservation_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    109;
+    110;
 
   void Swap(CMsgGCItemEditorReservation* other);
 
@@ -15073,7 +15299,7 @@ class CMsgGCItemEditorReservationsResponse : public ::google::protobuf::Message 
                &_CMsgGCItemEditorReservationsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    110;
+    111;
 
   void Swap(CMsgGCItemEditorReservationsResponse* other);
 
@@ -15168,7 +15394,7 @@ class CMsgGCItemEditorReserveItemDef : public ::google::protobuf::Message /* @@p
                &_CMsgGCItemEditorReserveItemDef_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    111;
+    112;
 
   void Swap(CMsgGCItemEditorReserveItemDef* other);
 
@@ -15278,7 +15504,7 @@ class CMsgGCItemEditorReserveItemDefResponse : public ::google::protobuf::Messag
                &_CMsgGCItemEditorReserveItemDefResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    112;
+    113;
 
   void Swap(CMsgGCItemEditorReserveItemDefResponse* other);
 
@@ -15398,7 +15624,7 @@ class CMsgGCItemEditorReleaseReservation : public ::google::protobuf::Message /*
                &_CMsgGCItemEditorReleaseReservation_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    113;
+    114;
 
   void Swap(CMsgGCItemEditorReleaseReservation* other);
 
@@ -15508,7 +15734,7 @@ class CMsgGCItemEditorReleaseReservationResponse : public ::google::protobuf::Me
                &_CMsgGCItemEditorReleaseReservationResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    114;
+    115;
 
   void Swap(CMsgGCItemEditorReleaseReservationResponse* other);
 
@@ -15610,7 +15836,7 @@ class CMsgGCItemEditorRequestLeagueInfo : public ::google::protobuf::Message /* 
                &_CMsgGCItemEditorRequestLeagueInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    115;
+    116;
 
   void Swap(CMsgGCItemEditorRequestLeagueInfo* other);
 
@@ -15702,7 +15928,7 @@ class CMsgGCItemEditorLeagueInfoResponse : public ::google::protobuf::Message /*
                &_CMsgGCItemEditorLeagueInfoResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    116;
+    117;
 
   void Swap(CMsgGCItemEditorLeagueInfoResponse* other);
 
@@ -15896,7 +16122,7 @@ class CMsgDOTARewardTutorialPrizes : public ::google::protobuf::Message /* @@pro
                &_CMsgDOTARewardTutorialPrizes_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    117;
+    118;
 
   void Swap(CMsgDOTARewardTutorialPrizes* other);
 
@@ -15998,7 +16224,7 @@ class CMsgDOTALastHitChallengeHighScorePost : public ::google::protobuf::Message
                &_CMsgDOTALastHitChallengeHighScorePost_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    118;
+    119;
 
   void Swap(CMsgDOTALastHitChallengeHighScorePost* other);
 
@@ -16100,7 +16326,7 @@ class CMsgDOTALastHitChallengeHighScoreRequest : public ::google::protobuf::Mess
                &_CMsgDOTALastHitChallengeHighScoreRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    119;
+    120;
 
   void Swap(CMsgDOTALastHitChallengeHighScoreRequest* other);
 
@@ -16192,7 +16418,7 @@ class CMsgDOTALastHitChallengeHighScoreResponse : public ::google::protobuf::Mes
                &_CMsgDOTALastHitChallengeHighScoreResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    120;
+    121;
 
   void Swap(CMsgDOTALastHitChallengeHighScoreResponse* other);
 
@@ -16294,7 +16520,7 @@ class CMsgFlipLobbyTeams : public ::google::protobuf::Message /* @@protoc_insert
                &_CMsgFlipLobbyTeams_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    121;
+    122;
 
   void Swap(CMsgFlipLobbyTeams* other);
 
@@ -16376,7 +16602,7 @@ class CMsgPresentedClientTerminateDlg : public ::google::protobuf::Message /* @@
                &_CMsgPresentedClientTerminateDlg_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    122;
+    123;
 
   void Swap(CMsgPresentedClientTerminateDlg* other);
 
@@ -16458,7 +16684,7 @@ class CMsgGCLobbyUpdateBroadcastChannelInfo : public ::google::protobuf::Message
                &_CMsgGCLobbyUpdateBroadcastChannelInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    123;
+    124;
 
   void Swap(CMsgGCLobbyUpdateBroadcastChannelInfo* other);
 
@@ -16604,7 +16830,7 @@ class CMsgDOTAClaimEventAction : public ::google::protobuf::Message /* @@protoc_
                &_CMsgDOTAClaimEventAction_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    124;
+    125;
 
   void Swap(CMsgDOTAClaimEventAction* other);
 
@@ -16716,7 +16942,7 @@ class CMsgDOTAClaimEventActionResponse_MysteryItemRewardData : public ::google::
                &_CMsgDOTAClaimEventActionResponse_MysteryItemRewardData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    125;
+    126;
 
   void Swap(CMsgDOTAClaimEventActionResponse_MysteryItemRewardData* other);
 
@@ -16818,7 +17044,7 @@ class CMsgDOTAClaimEventActionResponse_LootListRewardData : public ::google::pro
                &_CMsgDOTAClaimEventActionResponse_LootListRewardData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    126;
+    127;
 
   void Swap(CMsgDOTAClaimEventActionResponse_LootListRewardData* other);
 
@@ -16913,7 +17139,7 @@ class CMsgDOTAClaimEventActionResponse_GrantedRewardData : public ::google::prot
                &_CMsgDOTAClaimEventActionResponse_GrantedRewardData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    127;
+    128;
 
   void Swap(CMsgDOTAClaimEventActionResponse_GrantedRewardData* other);
 
@@ -17043,7 +17269,7 @@ class CMsgDOTAClaimEventActionResponse : public ::google::protobuf::Message /* @
                &_CMsgDOTAClaimEventActionResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    128;
+    129;
 
   void Swap(CMsgDOTAClaimEventActionResponse* other);
 
@@ -17198,7 +17424,7 @@ class CMsgDOTAGetEventPoints : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgDOTAGetEventPoints_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    129;
+    130;
 
   void Swap(CMsgDOTAGetEventPoints* other);
 
@@ -17300,7 +17526,7 @@ class CMsgDOTAGetEventPointsResponse_Action : public ::google::protobuf::Message
                &_CMsgDOTAGetEventPointsResponse_Action_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    130;
+    131;
 
   void Swap(CMsgDOTAGetEventPointsResponse_Action* other);
 
@@ -17402,7 +17628,7 @@ class CMsgDOTAGetEventPointsResponse : public ::google::protobuf::Message /* @@p
                &_CMsgDOTAGetEventPointsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    131;
+    132;
 
   void Swap(CMsgDOTAGetEventPointsResponse* other);
 
@@ -17579,7 +17805,7 @@ class CMsgDOTAGetPeriodicResource : public ::google::protobuf::Message /* @@prot
                &_CMsgDOTAGetPeriodicResource_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    132;
+    133;
 
   void Swap(CMsgDOTAGetPeriodicResource* other);
 
@@ -17691,7 +17917,7 @@ class CMsgDOTAGetPeriodicResourceResponse : public ::google::protobuf::Message /
                &_CMsgDOTAGetPeriodicResourceResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    133;
+    134;
 
   void Swap(CMsgDOTAGetPeriodicResourceResponse* other);
 
@@ -17793,7 +18019,7 @@ class CMsgDOTAPeriodicResourceUpdated : public ::google::protobuf::Message /* @@
                &_CMsgDOTAPeriodicResourceUpdated_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    134;
+    135;
 
   void Swap(CMsgDOTAPeriodicResourceUpdated* other);
 
@@ -17899,7 +18125,7 @@ class CMsgDOTALiveLeagueGameUpdate : public ::google::protobuf::Message /* @@pro
                &_CMsgDOTALiveLeagueGameUpdate_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    135;
+    136;
 
   void Swap(CMsgDOTALiveLeagueGameUpdate* other);
 
@@ -17991,7 +18217,7 @@ class CMsgDOTACompendiumSelection : public ::google::protobuf::Message /* @@prot
                &_CMsgDOTACompendiumSelection_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    136;
+    137;
 
   void Swap(CMsgDOTACompendiumSelection* other);
 
@@ -18103,7 +18329,7 @@ class CMsgDOTACompendiumSelectionResponse : public ::google::protobuf::Message /
                &_CMsgDOTACompendiumSelectionResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    137;
+    138;
 
   void Swap(CMsgDOTACompendiumSelectionResponse* other);
 
@@ -18208,7 +18434,7 @@ class CMsgDOTACompendiumData : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgDOTACompendiumData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    138;
+    139;
 
   void Swap(CMsgDOTACompendiumData* other);
 
@@ -18303,7 +18529,7 @@ class CMsgDOTACompendiumDataRequest : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTACompendiumDataRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    139;
+    140;
 
   void Swap(CMsgDOTACompendiumDataRequest* other);
 
@@ -18405,7 +18631,7 @@ class CMsgDOTACompendiumDataResponse : public ::google::protobuf::Message /* @@p
                &_CMsgDOTACompendiumDataResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    140;
+    141;
 
   void Swap(CMsgDOTACompendiumDataResponse* other);
 
@@ -18529,7 +18755,7 @@ class CMsgDOTAGetPlayerMatchHistory : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTAGetPlayerMatchHistory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    141;
+    142;
 
   void Swap(CMsgDOTAGetPlayerMatchHistory* other);
 
@@ -18691,7 +18917,7 @@ class CMsgDOTAGetPlayerMatchHistoryResponse_Match : public ::google::protobuf::M
                &_CMsgDOTAGetPlayerMatchHistoryResponse_Match_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    142;
+    143;
 
   void Swap(CMsgDOTAGetPlayerMatchHistoryResponse_Match* other);
 
@@ -18991,7 +19217,7 @@ class CMsgDOTAGetPlayerMatchHistoryResponse : public ::google::protobuf::Message
                &_CMsgDOTAGetPlayerMatchHistoryResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    143;
+    144;
 
   void Swap(CMsgDOTAGetPlayerMatchHistoryResponse* other);
 
@@ -19098,7 +19324,7 @@ class CMsgDOTAStartDailyHeroChallenge : public ::google::protobuf::Message /* @@
                &_CMsgDOTAStartDailyHeroChallenge_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    144;
+    145;
 
   void Swap(CMsgDOTAStartDailyHeroChallenge* other);
 
@@ -19180,7 +19406,7 @@ class CMsgGCNotificationsRequest : public ::google::protobuf::Message /* @@proto
                &_CMsgGCNotificationsRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    145;
+    146;
 
   void Swap(CMsgGCNotificationsRequest* other);
 
@@ -19262,7 +19488,7 @@ class CMsgGCNotificationsResponse_Notification : public ::google::protobuf::Mess
                &_CMsgGCNotificationsResponse_Notification_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    146;
+    147;
 
   void Swap(CMsgGCNotificationsResponse_Notification* other);
 
@@ -19432,7 +19658,7 @@ class CMsgGCNotificationsResponse : public ::google::protobuf::Message /* @@prot
                &_CMsgGCNotificationsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    147;
+    148;
 
   void Swap(CMsgGCNotificationsResponse* other);
 
@@ -19565,7 +19791,7 @@ class CMsgGCNotificationsMarkReadRequest : public ::google::protobuf::Message /*
                &_CMsgGCNotificationsMarkReadRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    148;
+    149;
 
   void Swap(CMsgGCNotificationsMarkReadRequest* other);
 
@@ -19647,7 +19873,7 @@ class CMsgClientToGCMarkNotificationListRead : public ::google::protobuf::Messag
                &_CMsgClientToGCMarkNotificationListRead_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    149;
+    150;
 
   void Swap(CMsgClientToGCMarkNotificationListRead* other);
 
@@ -19742,7 +19968,7 @@ class CMsgGCLeagueAdminState_PrivateLeagueKeys : public ::google::protobuf::Mess
                &_CMsgGCLeagueAdminState_PrivateLeagueKeys_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    150;
+    151;
 
   void Swap(CMsgGCLeagueAdminState_PrivateLeagueKeys* other);
 
@@ -19844,7 +20070,7 @@ class CMsgGCLeagueAdminState : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgGCLeagueAdminState_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    151;
+    152;
 
   void Swap(CMsgGCLeagueAdminState* other);
 
@@ -19954,7 +20180,7 @@ class CMsgGCPlayerInfoRequest_PlayerInfo : public ::google::protobuf::Message /*
                &_CMsgGCPlayerInfoRequest_PlayerInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    152;
+    153;
 
   void Swap(CMsgGCPlayerInfoRequest_PlayerInfo* other);
 
@@ -20056,7 +20282,7 @@ class CMsgGCPlayerInfoRequest : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgGCPlayerInfoRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    153;
+    154;
 
   void Swap(CMsgGCPlayerInfoRequest* other);
 
@@ -20153,7 +20379,7 @@ class CMsgGCPlayerInfoSubmit : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgGCPlayerInfoSubmit_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    154;
+    155;
 
   void Swap(CMsgGCPlayerInfoSubmit* other);
 
@@ -20309,7 +20535,7 @@ class CMsgGCPlayerInfoSubmitResponse : public ::google::protobuf::Message /* @@p
                &_CMsgGCPlayerInfoSubmitResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    155;
+    156;
 
   void Swap(CMsgGCPlayerInfoSubmitResponse* other);
 
@@ -20429,7 +20655,7 @@ class CMsgClientProvideSurveyResult_Response : public ::google::protobuf::Messag
                &_CMsgClientProvideSurveyResult_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    156;
+    157;
 
   void Swap(CMsgClientProvideSurveyResult_Response* other);
 
@@ -20531,7 +20757,7 @@ class CMsgClientProvideSurveyResult : public ::google::protobuf::Message /* @@pr
                &_CMsgClientProvideSurveyResult_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    157;
+    158;
 
   void Swap(CMsgClientProvideSurveyResult* other);
 
@@ -20638,7 +20864,7 @@ class CMsgDOTAEmoticonAccessSDO : public ::google::protobuf::Message /* @@protoc
                &_CMsgDOTAEmoticonAccessSDO_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    158;
+    159;
 
   void Swap(CMsgDOTAEmoticonAccessSDO* other);
 
@@ -20748,7 +20974,7 @@ class CMsgClientToGCEmoticonDataRequest : public ::google::protobuf::Message /* 
                &_CMsgClientToGCEmoticonDataRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    159;
+    160;
 
   void Swap(CMsgClientToGCEmoticonDataRequest* other);
 
@@ -20830,7 +21056,7 @@ class CMsgGCToClientEmoticonData : public ::google::protobuf::Message /* @@proto
                &_CMsgGCToClientEmoticonData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    160;
+    161;
 
   void Swap(CMsgGCToClientEmoticonData* other);
 
@@ -20924,7 +21150,7 @@ class CMsgClientToGCTrackDialogResult : public ::google::protobuf::Message /* @@
                &_CMsgClientToGCTrackDialogResult_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    161;
+    162;
 
   void Swap(CMsgClientToGCTrackDialogResult* other);
 
@@ -21026,7 +21252,7 @@ class CMsgGCToClientTournamentItemDrop : public ::google::protobuf::Message /* @
                &_CMsgGCToClientTournamentItemDrop_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    162;
+    163;
 
   void Swap(CMsgGCToClientTournamentItemDrop* other);
 
@@ -21128,7 +21354,7 @@ class CMsgClientToGCSetAdditionalEquips : public ::google::protobuf::Message /* 
                &_CMsgClientToGCSetAdditionalEquips_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    163;
+    164;
 
   void Swap(CMsgClientToGCSetAdditionalEquips* other);
 
@@ -21223,7 +21449,7 @@ class CMsgClientToGCSetAdditionalEquipsResponse : public ::google::protobuf::Mes
                &_CMsgClientToGCSetAdditionalEquipsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    164;
+    165;
 
   void Swap(CMsgClientToGCSetAdditionalEquipsResponse* other);
 
@@ -21305,7 +21531,7 @@ class CMsgClientToGCGetAdditionalEquips : public ::google::protobuf::Message /* 
                &_CMsgClientToGCGetAdditionalEquips_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    165;
+    166;
 
   void Swap(CMsgClientToGCGetAdditionalEquips* other);
 
@@ -21387,7 +21613,7 @@ class CMsgClientToGCGetAdditionalEquipsResponse : public ::google::protobuf::Mes
                &_CMsgClientToGCGetAdditionalEquipsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    166;
+    167;
 
   void Swap(CMsgClientToGCGetAdditionalEquipsResponse* other);
 
@@ -21482,7 +21708,7 @@ class CMsgClientToGCGetAllHeroOrder : public ::google::protobuf::Message /* @@pr
                &_CMsgClientToGCGetAllHeroOrder_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    167;
+    168;
 
   void Swap(CMsgClientToGCGetAllHeroOrder* other);
 
@@ -21564,7 +21790,7 @@ class CMsgClientToGCGetAllHeroOrderResponse : public ::google::protobuf::Message
                &_CMsgClientToGCGetAllHeroOrderResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    168;
+    169;
 
   void Swap(CMsgClientToGCGetAllHeroOrderResponse* other);
 
@@ -21659,7 +21885,7 @@ class CMsgClientToGCGetAllHeroProgress : public ::google::protobuf::Message /* @
                &_CMsgClientToGCGetAllHeroProgress_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    169;
+    170;
 
   void Swap(CMsgClientToGCGetAllHeroProgress* other);
 
@@ -21751,7 +21977,7 @@ class CMsgClientToGCGetAllHeroProgressResponse : public ::google::protobuf::Mess
                &_CMsgClientToGCGetAllHeroProgressResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    170;
+    171;
 
   void Swap(CMsgClientToGCGetAllHeroProgressResponse* other);
 
@@ -22041,7 +22267,7 @@ class CMsgClientToGCGetTrophyList : public ::google::protobuf::Message /* @@prot
                &_CMsgClientToGCGetTrophyList_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    171;
+    172;
 
   void Swap(CMsgClientToGCGetTrophyList* other);
 
@@ -22133,7 +22359,7 @@ class CMsgClientToGCGetTrophyListResponse_Trophy : public ::google::protobuf::Me
                &_CMsgClientToGCGetTrophyListResponse_Trophy_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    172;
+    173;
 
   void Swap(CMsgClientToGCGetTrophyListResponse_Trophy* other);
 
@@ -22245,7 +22471,7 @@ class CMsgClientToGCGetTrophyListResponse : public ::google::protobuf::Message /
                &_CMsgClientToGCGetTrophyListResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    173;
+    174;
 
   void Swap(CMsgClientToGCGetTrophyListResponse* other);
 
@@ -22370,7 +22596,7 @@ class CMsgGCToClientTrophyAwarded : public ::google::protobuf::Message /* @@prot
                &_CMsgGCToClientTrophyAwarded_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    174;
+    175;
 
   void Swap(CMsgGCToClientTrophyAwarded* other);
 
@@ -22492,7 +22718,7 @@ class CMsgClientToGCGetProfileCard : public ::google::protobuf::Message /* @@pro
                &_CMsgClientToGCGetProfileCard_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    175;
+    176;
 
   void Swap(CMsgClientToGCGetProfileCard* other);
 
@@ -22584,7 +22810,7 @@ class CMsgClientToGCSetProfileCardSlots_CardSlot : public ::google::protobuf::Me
                &_CMsgClientToGCSetProfileCardSlots_CardSlot_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    176;
+    177;
 
   void Swap(CMsgClientToGCSetProfileCardSlots_CardSlot* other);
 
@@ -22696,7 +22922,7 @@ class CMsgClientToGCSetProfileCardSlots : public ::google::protobuf::Message /* 
                &_CMsgClientToGCSetProfileCardSlots_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    177;
+    178;
 
   void Swap(CMsgClientToGCSetProfileCardSlots* other);
 
@@ -22793,7 +23019,7 @@ class CMsgClientToGCGetProfileCardStats : public ::google::protobuf::Message /* 
                &_CMsgClientToGCGetProfileCardStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    178;
+    179;
 
   void Swap(CMsgClientToGCGetProfileCardStats* other);
 
@@ -22875,7 +23101,7 @@ class CMsgClientToGCCreateHeroStatue : public ::google::protobuf::Message /* @@p
                &_CMsgClientToGCCreateHeroStatue_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    179;
+    180;
 
   void Swap(CMsgClientToGCCreateHeroStatue* other);
 
@@ -23069,7 +23295,7 @@ class CMsgGCToClientHeroStatueCreateResult : public ::google::protobuf::Message 
                &_CMsgGCToClientHeroStatueCreateResult_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    180;
+    181;
 
   void Swap(CMsgGCToClientHeroStatueCreateResult* other);
 
@@ -23161,7 +23387,7 @@ class CMsgClientToGCRecordCompendiumStats : public ::google::protobuf::Message /
                &_CMsgClientToGCRecordCompendiumStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    181;
+    182;
 
   void Swap(CMsgClientToGCRecordCompendiumStats* other);
 
@@ -23293,7 +23519,7 @@ class CMsgGCToClientEventStatusChanged : public ::google::protobuf::Message /* @
                &_CMsgGCToClientEventStatusChanged_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    182;
+    183;
 
   void Swap(CMsgGCToClientEventStatusChanged* other);
 
@@ -23385,7 +23611,7 @@ class CMsgClientToGCPlayerStatsRequest : public ::google::protobuf::Message /* @
                &_CMsgClientToGCPlayerStatsRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    183;
+    184;
 
   void Swap(CMsgClientToGCPlayerStatsRequest* other);
 
@@ -23477,7 +23703,7 @@ class CMsgGCToClientPlayerStatsResponse : public ::google::protobuf::Message /* 
                &_CMsgGCToClientPlayerStatsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    184;
+    185;
 
   void Swap(CMsgGCToClientPlayerStatsResponse* other);
 
@@ -23752,7 +23978,7 @@ class CMsgClientToGCCustomGamePlayerCountRequest : public ::google::protobuf::Me
                &_CMsgClientToGCCustomGamePlayerCountRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    185;
+    186;
 
   void Swap(CMsgClientToGCCustomGamePlayerCountRequest* other);
 
@@ -23844,7 +24070,7 @@ class CMsgGCToClientCustomGamePlayerCountResponse : public ::google::protobuf::M
                &_CMsgGCToClientCustomGamePlayerCountResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    186;
+    187;
 
   void Swap(CMsgGCToClientCustomGamePlayerCountResponse* other);
 
@@ -23956,7 +24182,7 @@ class CMsgClientToGCCustomGamesFriendsPlayedRequest : public ::google::protobuf:
                &_CMsgClientToGCCustomGamesFriendsPlayedRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    187;
+    188;
 
   void Swap(CMsgClientToGCCustomGamesFriendsPlayedRequest* other);
 
@@ -24038,7 +24264,7 @@ class CMsgGCToClientCustomGamesFriendsPlayedResponse_CustomGame : public ::googl
                &_CMsgGCToClientCustomGamesFriendsPlayedResponse_CustomGame_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    188;
+    189;
 
   void Swap(CMsgGCToClientCustomGamesFriendsPlayedResponse_CustomGame* other);
 
@@ -24143,7 +24369,7 @@ class CMsgGCToClientCustomGamesFriendsPlayedResponse : public ::google::protobuf
                &_CMsgGCToClientCustomGamesFriendsPlayedResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    189;
+    190;
 
   void Swap(CMsgGCToClientCustomGamesFriendsPlayedResponse* other);
 
@@ -24250,7 +24476,7 @@ class CMsgClientToGCSocialFeedPostCommentRequest : public ::google::protobuf::Me
                &_CMsgClientToGCSocialFeedPostCommentRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    190;
+    191;
 
   void Swap(CMsgClientToGCSocialFeedPostCommentRequest* other);
 
@@ -24360,7 +24586,7 @@ class CMsgGCToClientSocialFeedPostCommentResponse : public ::google::protobuf::M
                &_CMsgGCToClientSocialFeedPostCommentResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    191;
+    192;
 
   void Swap(CMsgGCToClientSocialFeedPostCommentResponse* other);
 
@@ -24452,7 +24678,7 @@ class CMsgClientToGCSocialFeedPostMessageRequest : public ::google::protobuf::Me
                &_CMsgClientToGCSocialFeedPostMessageRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    192;
+    193;
 
   void Swap(CMsgClientToGCSocialFeedPostMessageRequest* other);
 
@@ -24572,7 +24798,7 @@ class CMsgGCToClientSocialFeedPostMessageResponse : public ::google::protobuf::M
                &_CMsgGCToClientSocialFeedPostMessageResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    193;
+    194;
 
   void Swap(CMsgGCToClientSocialFeedPostMessageResponse* other);
 
@@ -24664,7 +24890,7 @@ class CMsgClientToGCFriendsPlayedCustomGameRequest : public ::google::protobuf::
                &_CMsgClientToGCFriendsPlayedCustomGameRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    194;
+    195;
 
   void Swap(CMsgClientToGCFriendsPlayedCustomGameRequest* other);
 
@@ -24756,7 +24982,7 @@ class CMsgGCToClientFriendsPlayedCustomGameResponse : public ::google::protobuf:
                &_CMsgGCToClientFriendsPlayedCustomGameResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    195;
+    196;
 
   void Swap(CMsgGCToClientFriendsPlayedCustomGameResponse* other);
 
@@ -24861,7 +25087,7 @@ class CMsgClientToGCFeaturedHeroesRequest : public ::google::protobuf::Message /
                &_CMsgClientToGCFeaturedHeroesRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    196;
+    197;
 
   void Swap(CMsgClientToGCFeaturedHeroesRequest* other);
 
@@ -24943,7 +25169,7 @@ class CMsgGCToClientFeaturedHeroesResponse_DataField : public ::google::protobuf
                &_CMsgGCToClientFeaturedHeroesResponse_DataField_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    197;
+    198;
 
   void Swap(CMsgGCToClientFeaturedHeroesResponse_DataField* other);
 
@@ -25083,7 +25309,7 @@ class CMsgGCToClientFeaturedHeroesResponse_FeaturedHero : public ::google::proto
                &_CMsgGCToClientFeaturedHeroesResponse_FeaturedHero_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    198;
+    199;
 
   void Swap(CMsgGCToClientFeaturedHeroesResponse_FeaturedHero* other);
 
@@ -25178,7 +25404,7 @@ class CMsgGCToClientFeaturedHeroesResponse_Category : public ::google::protobuf:
                &_CMsgGCToClientFeaturedHeroesResponse_Category_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    199;
+    200;
 
   void Swap(CMsgGCToClientFeaturedHeroesResponse_Category* other);
 
@@ -25294,7 +25520,7 @@ class CMsgGCToClientFeaturedHeroesResponse : public ::google::protobuf::Message 
                &_CMsgGCToClientFeaturedHeroesResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    200;
+    201;
 
   void Swap(CMsgGCToClientFeaturedHeroesResponse* other);
 
@@ -25393,7 +25619,7 @@ class CMsgClientToGCSocialMatchPostCommentRequest : public ::google::protobuf::M
                &_CMsgClientToGCSocialMatchPostCommentRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    201;
+    202;
 
   void Swap(CMsgClientToGCSocialMatchPostCommentRequest* other);
 
@@ -25503,7 +25729,7 @@ class CMsgGCToClientSocialMatchPostCommentResponse : public ::google::protobuf::
                &_CMsgGCToClientSocialMatchPostCommentResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    202;
+    203;
 
   void Swap(CMsgGCToClientSocialMatchPostCommentResponse* other);
 
@@ -25595,7 +25821,7 @@ class CMsgClientToGCSocialMatchDetailsRequest : public ::google::protobuf::Messa
                &_CMsgClientToGCSocialMatchDetailsRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    203;
+    204;
 
   void Swap(CMsgClientToGCSocialMatchDetailsRequest* other);
 
@@ -25697,7 +25923,7 @@ class CMsgGCToClientSocialMatchDetailsResponse_Comment : public ::google::protob
                &_CMsgGCToClientSocialMatchDetailsResponse_Comment_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    204;
+    205;
 
   void Swap(CMsgGCToClientSocialMatchDetailsResponse_Comment* other);
 
@@ -25835,7 +26061,7 @@ class CMsgGCToClientSocialMatchDetailsResponse : public ::google::protobuf::Mess
                &_CMsgGCToClientSocialMatchDetailsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    205;
+    206;
 
   void Swap(CMsgGCToClientSocialMatchDetailsResponse* other);
 
@@ -25942,7 +26168,7 @@ class CMsgDOTAPartyRichPresence_Member : public ::google::protobuf::Message /* @
                &_CMsgDOTAPartyRichPresence_Member_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    206;
+    207;
 
   void Swap(CMsgDOTAPartyRichPresence_Member* other);
 
@@ -26044,7 +26270,7 @@ class CMsgDOTAPartyRichPresence_WeekendTourney : public ::google::protobuf::Mess
                &_CMsgDOTAPartyRichPresence_WeekendTourney_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    207;
+    208;
 
   void Swap(CMsgDOTAPartyRichPresence_WeekendTourney* other);
 
@@ -26196,7 +26422,7 @@ class CMsgDOTAPartyRichPresence : public ::google::protobuf::Message /* @@protoc
                &_CMsgDOTAPartyRichPresence_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    208;
+    209;
 
   void Swap(CMsgDOTAPartyRichPresence* other);
 
@@ -26384,7 +26610,7 @@ class CMsgDOTALobbyRichPresence : public ::google::protobuf::Message /* @@protoc
                &_CMsgDOTALobbyRichPresence_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    209;
+    210;
 
   void Swap(CMsgDOTALobbyRichPresence* other);
 
@@ -26564,7 +26790,7 @@ class CMsgDOTACustomGameListenServerStartedLoading : public ::google::protobuf::
                &_CMsgDOTACustomGameListenServerStartedLoading_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    210;
+    211;
 
   void Swap(CMsgDOTACustomGameListenServerStartedLoading* other);
 
@@ -26689,7 +26915,7 @@ class CMsgDOTACustomGameClientFinishedLoading : public ::google::protobuf::Messa
                &_CMsgDOTACustomGameClientFinishedLoading_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    211;
+    212;
 
   void Swap(CMsgDOTACustomGameClientFinishedLoading* other);
 
@@ -26847,7 +27073,7 @@ class CMsgClientToGCGetLeagueSeries : public ::google::protobuf::Message /* @@pr
                &_CMsgClientToGCGetLeagueSeries_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    212;
+    213;
 
   void Swap(CMsgClientToGCGetLeagueSeries* other);
 
@@ -26939,7 +27165,7 @@ class CMsgClientToGCGetLeagueSeriesResponse_Series_Team : public ::google::proto
                &_CMsgClientToGCGetLeagueSeriesResponse_Series_Team_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    213;
+    214;
 
   void Swap(CMsgClientToGCGetLeagueSeriesResponse_Series_Team* other);
 
@@ -27087,7 +27313,7 @@ class CMsgClientToGCGetLeagueSeriesResponse_Series : public ::google::protobuf::
                &_CMsgClientToGCGetLeagueSeriesResponse_Series_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    214;
+    215;
 
   void Swap(CMsgClientToGCGetLeagueSeriesResponse_Series* other);
 
@@ -27270,7 +27496,7 @@ class CMsgClientToGCGetLeagueSeriesResponse : public ::google::protobuf::Message
                &_CMsgClientToGCGetLeagueSeriesResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    215;
+    216;
 
   void Swap(CMsgClientToGCGetLeagueSeriesResponse* other);
 
@@ -27367,7 +27593,7 @@ class CMsgClientToGCApplyGemCombiner : public ::google::protobuf::Message /* @@p
                &_CMsgClientToGCApplyGemCombiner_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    216;
+    217;
 
   void Swap(CMsgClientToGCApplyGemCombiner* other);
 
@@ -27469,7 +27695,7 @@ class CMsgClientToGCH264Unsupported : public ::google::protobuf::Message /* @@pr
                &_CMsgClientToGCH264Unsupported_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    217;
+    218;
 
   void Swap(CMsgClientToGCH264Unsupported* other);
 
@@ -27551,7 +27777,7 @@ class CMsgClientToGCRequestH264Support : public ::google::protobuf::Message /* @
                &_CMsgClientToGCRequestH264Support_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    218;
+    219;
 
   void Swap(CMsgClientToGCRequestH264Support* other);
 
@@ -27633,7 +27859,7 @@ class CMsgClientToGCGetQuestProgress : public ::google::protobuf::Message /* @@p
                &_CMsgClientToGCGetQuestProgress_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    219;
+    220;
 
   void Swap(CMsgClientToGCGetQuestProgress* other);
 
@@ -27728,7 +27954,7 @@ class CMsgClientToGCGetQuestProgressResponse_Challenge : public ::google::protob
                &_CMsgClientToGCGetQuestProgressResponse_Challenge_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    220;
+    221;
 
   void Swap(CMsgClientToGCGetQuestProgressResponse_Challenge* other);
 
@@ -27870,7 +28096,7 @@ class CMsgClientToGCGetQuestProgressResponse_Quest : public ::google::protobuf::
                &_CMsgClientToGCGetQuestProgressResponse_Quest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    221;
+    222;
 
   void Swap(CMsgClientToGCGetQuestProgressResponse_Quest* other);
 
@@ -27975,7 +28201,7 @@ class CMsgClientToGCGetQuestProgressResponse : public ::google::protobuf::Messag
                &_CMsgClientToGCGetQuestProgressResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    222;
+    223;
 
   void Swap(CMsgClientToGCGetQuestProgressResponse* other);
 
@@ -28083,7 +28309,7 @@ class CMsgGCToClientMatchSignedOut : public ::google::protobuf::Message /* @@pro
                &_CMsgGCToClientMatchSignedOut_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    223;
+    224;
 
   void Swap(CMsgGCToClientMatchSignedOut* other);
 
@@ -28175,7 +28401,7 @@ class CMsgGCGetHeroStatsHistory : public ::google::protobuf::Message /* @@protoc
                &_CMsgGCGetHeroStatsHistory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    224;
+    225;
 
   void Swap(CMsgGCGetHeroStatsHistory* other);
 
@@ -28267,7 +28493,7 @@ class CMsgGCGetHeroStatsHistoryResponse : public ::google::protobuf::Message /* 
                &_CMsgGCGetHeroStatsHistoryResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    225;
+    226;
 
   void Swap(CMsgGCGetHeroStatsHistoryResponse* other);
 
@@ -28372,7 +28598,7 @@ class CMsgPlayerConductScorecardRequest : public ::google::protobuf::Message /* 
                &_CMsgPlayerConductScorecardRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    226;
+    227;
 
   void Swap(CMsgPlayerConductScorecardRequest* other);
 
@@ -28454,7 +28680,7 @@ class CMsgPlayerConductScorecard : public ::google::protobuf::Message /* @@proto
                &_CMsgPlayerConductScorecard_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    227;
+    228;
 
   void Swap(CMsgPlayerConductScorecard* other);
 
@@ -28666,7 +28892,7 @@ class CMsgClientToGCWageringRequest : public ::google::protobuf::Message /* @@pr
                &_CMsgClientToGCWageringRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    228;
+    229;
 
   void Swap(CMsgClientToGCWageringRequest* other);
 
@@ -28758,7 +28984,7 @@ class CMsgGCToClientWageringResponse : public ::google::protobuf::Message /* @@p
                &_CMsgGCToClientWageringResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    229;
+    230;
 
   void Swap(CMsgGCToClientWageringResponse* other);
 
@@ -28930,7 +29156,7 @@ class CMsgGCToClientWageringUpdate : public ::google::protobuf::Message /* @@pro
                &_CMsgGCToClientWageringUpdate_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    230;
+    231;
 
   void Swap(CMsgGCToClientWageringUpdate* other);
 
@@ -29034,7 +29260,7 @@ class CMsgGCToClientArcanaVotesUpdate : public ::google::protobuf::Message /* @@
                &_CMsgGCToClientArcanaVotesUpdate_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    231;
+    232;
 
   void Swap(CMsgGCToClientArcanaVotesUpdate* other);
 
@@ -29138,7 +29364,7 @@ class CMsgClientToGCGetEventGoals : public ::google::protobuf::Message /* @@prot
                &_CMsgClientToGCGetEventGoals_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    232;
+    233;
 
   void Swap(CMsgClientToGCGetEventGoals* other);
 
@@ -29231,7 +29457,7 @@ class CMsgEventGoals_EventGoal : public ::google::protobuf::Message /* @@protoc_
                &_CMsgEventGoals_EventGoal_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    233;
+    234;
 
   void Swap(CMsgEventGoals_EventGoal* other);
 
@@ -29343,7 +29569,7 @@ class CMsgEventGoals : public ::google::protobuf::Message /* @@protoc_insertion_
                &_CMsgEventGoals_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    234;
+    235;
 
   void Swap(CMsgEventGoals* other);
 
@@ -29440,7 +29666,7 @@ class CMsgGCToGCLeaguePredictions : public ::google::protobuf::Message /* @@prot
                &_CMsgGCToGCLeaguePredictions_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    235;
+    236;
 
   void Swap(CMsgGCToGCLeaguePredictions* other);
 
@@ -29532,7 +29758,7 @@ class CMsgPredictionRankings_PredictionLine : public ::google::protobuf::Message
                &_CMsgPredictionRankings_PredictionLine_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    236;
+    237;
 
   void Swap(CMsgPredictionRankings_PredictionLine* other);
 
@@ -29662,7 +29888,7 @@ class CMsgPredictionRankings_Prediction : public ::google::protobuf::Message /* 
                &_CMsgPredictionRankings_Prediction_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    237;
+    238;
 
   void Swap(CMsgPredictionRankings_Prediction* other);
 
@@ -29767,7 +29993,7 @@ class CMsgPredictionRankings : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgPredictionRankings_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    238;
+    239;
 
   void Swap(CMsgPredictionRankings* other);
 
@@ -29865,7 +30091,7 @@ class CMsgPredictionResults_ResultBreakdown : public ::google::protobuf::Message
                &_CMsgPredictionResults_ResultBreakdown_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    239;
+    240;
 
   void Swap(CMsgPredictionResults_ResultBreakdown* other);
 
@@ -29967,7 +30193,7 @@ class CMsgPredictionResults_Result : public ::google::protobuf::Message /* @@pro
                &_CMsgPredictionResults_Result_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    240;
+    241;
 
   void Swap(CMsgPredictionResults_Result* other);
 
@@ -30072,7 +30298,7 @@ class CMsgPredictionResults : public ::google::protobuf::Message /* @@protoc_ins
                &_CMsgPredictionResults_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    241;
+    242;
 
   void Swap(CMsgPredictionResults* other);
 
@@ -30170,7 +30396,7 @@ class CMsgClientToGCSuspiciousActivity : public ::google::protobuf::Message /* @
                &_CMsgClientToGCSuspiciousActivity_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    242;
+    243;
 
   void Swap(CMsgClientToGCSuspiciousActivity* other);
 
@@ -30262,7 +30488,7 @@ class CMsgClientToGCHasPlayerVotedForMVP : public ::google::protobuf::Message /*
                &_CMsgClientToGCHasPlayerVotedForMVP_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    243;
+    244;
 
   void Swap(CMsgClientToGCHasPlayerVotedForMVP* other);
 
@@ -30354,7 +30580,7 @@ class CMsgClientToGCHasPlayerVotedForMVPResponse : public ::google::protobuf::Me
                &_CMsgClientToGCHasPlayerVotedForMVPResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    244;
+    245;
 
   void Swap(CMsgClientToGCHasPlayerVotedForMVPResponse* other);
 
@@ -30446,7 +30672,7 @@ class CMsgClientToGCVoteForMVP : public ::google::protobuf::Message /* @@protoc_
                &_CMsgClientToGCVoteForMVP_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    245;
+    246;
 
   void Swap(CMsgClientToGCVoteForMVP* other);
 
@@ -30548,7 +30774,7 @@ class CMsgClientToGCVoteForMVPResponse : public ::google::protobuf::Message /* @
                &_CMsgClientToGCVoteForMVPResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    246;
+    247;
 
   void Swap(CMsgClientToGCVoteForMVPResponse* other);
 
@@ -30640,7 +30866,7 @@ class CMsgMVPVotesForMatch_Player : public ::google::protobuf::Message /* @@prot
                &_CMsgMVPVotesForMatch_Player_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    247;
+    248;
 
   void Swap(CMsgMVPVotesForMatch_Player* other);
 
@@ -30742,7 +30968,7 @@ class CMsgMVPVotesForMatch : public ::google::protobuf::Message /* @@protoc_inse
                &_CMsgMVPVotesForMatch_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    248;
+    249;
 
   void Swap(CMsgMVPVotesForMatch* other);
 
@@ -30839,7 +31065,7 @@ class CMsgLeaguePrizePool : public ::google::protobuf::Message /* @@protoc_inser
                &_CMsgLeaguePrizePool_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    249;
+    250;
 
   void Swap(CMsgLeaguePrizePool* other);
 
@@ -30941,7 +31167,7 @@ class CMsgClientToGCTeammateStatsRequest : public ::google::protobuf::Message /*
                &_CMsgClientToGCTeammateStatsRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    250;
+    251;
 
   void Swap(CMsgClientToGCTeammateStatsRequest* other);
 
@@ -31023,7 +31249,7 @@ class CMsgClientToGCTeammateStatsResponse_TeammateStat : public ::google::protob
                &_CMsgClientToGCTeammateStatsResponse_TeammateStat_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    251;
+    252;
 
   void Swap(CMsgClientToGCTeammateStatsResponse_TeammateStat* other);
 
@@ -31165,7 +31391,7 @@ class CMsgClientToGCTeammateStatsResponse : public ::google::protobuf::Message /
                &_CMsgClientToGCTeammateStatsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    252;
+    253;
 
   void Swap(CMsgClientToGCTeammateStatsResponse* other);
 
@@ -31272,7 +31498,7 @@ class CMsgClientToGCVoteForArcana_MatchVote : public ::google::protobuf::Message
                &_CMsgClientToGCVoteForArcana_MatchVote_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    253;
+    254;
 
   void Swap(CMsgClientToGCVoteForArcana_MatchVote* other);
 
@@ -31384,7 +31610,7 @@ class CMsgClientToGCVoteForArcana : public ::google::protobuf::Message /* @@prot
                &_CMsgClientToGCVoteForArcana_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    254;
+    255;
 
   void Swap(CMsgClientToGCVoteForArcana* other);
 
@@ -31481,7 +31707,7 @@ class CMsgClientToGCVoteForArcanaResponse : public ::google::protobuf::Message /
                &_CMsgClientToGCVoteForArcanaResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    255;
+    256;
 
   void Swap(CMsgClientToGCVoteForArcanaResponse* other);
 
@@ -31601,7 +31827,7 @@ class CMsgArcanaVotes_Match : public ::google::protobuf::Message /* @@protoc_ins
                &_CMsgArcanaVotes_Match_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    256;
+    257;
 
   void Swap(CMsgArcanaVotes_Match* other);
 
@@ -31793,7 +32019,7 @@ class CMsgArcanaVotes : public ::google::protobuf::Message /* @@protoc_insertion
                &_CMsgArcanaVotes_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    257;
+    258;
 
   void Swap(CMsgArcanaVotes* other);
 
@@ -31978,7 +32204,7 @@ class CMsgClientToGCRequestArcanaVotesRemaining : public ::google::protobuf::Mes
                &_CMsgClientToGCRequestArcanaVotesRemaining_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    258;
+    259;
 
   void Swap(CMsgClientToGCRequestArcanaVotesRemaining* other);
 
@@ -32060,7 +32286,7 @@ class CMsgClientToGCRequestArcanaVotesRemainingResponse_MatchVote : public ::goo
                &_CMsgClientToGCRequestArcanaVotesRemainingResponse_MatchVote_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    259;
+    260;
 
   void Swap(CMsgClientToGCRequestArcanaVotesRemainingResponse_MatchVote* other);
 
@@ -32172,7 +32398,7 @@ class CMsgClientToGCRequestArcanaVotesRemainingResponse : public ::google::proto
                &_CMsgClientToGCRequestArcanaVotesRemainingResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    260;
+    261;
 
   void Swap(CMsgClientToGCRequestArcanaVotesRemainingResponse* other);
 
@@ -32299,7 +32525,7 @@ class CMsgClientToGCRequestEventPointLog : public ::google::protobuf::Message /*
                &_CMsgClientToGCRequestEventPointLog_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    261;
+    262;
 
   void Swap(CMsgClientToGCRequestEventPointLog* other);
 
@@ -32391,7 +32617,7 @@ class CMsgClientToGCRequestEventPointLogResponse_QuestChallengeEvent : public ::
                &_CMsgClientToGCRequestEventPointLogResponse_QuestChallengeEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    262;
+    263;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_QuestChallengeEvent* other);
 
@@ -32503,7 +32729,7 @@ class CMsgClientToGCRequestEventPointLogResponse_WagerWonEvent : public ::google
                &_CMsgClientToGCRequestEventPointLogResponse_WagerWonEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    263;
+    264;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_WagerWonEvent* other);
 
@@ -32595,7 +32821,7 @@ class CMsgClientToGCRequestEventPointLogResponse_TipGivenEvent : public ::google
                &_CMsgClientToGCRequestEventPointLogResponse_TipGivenEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    264;
+    265;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_TipGivenEvent* other);
 
@@ -32705,7 +32931,7 @@ class CMsgClientToGCRequestEventPointLogResponse_TipReceivedEvent : public ::goo
                &_CMsgClientToGCRequestEventPointLogResponse_TipReceivedEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    265;
+    266;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_TipReceivedEvent* other);
 
@@ -32815,7 +33041,7 @@ class CMsgClientToGCRequestEventPointLogResponse_RecycledItemEvent : public ::go
                &_CMsgClientToGCRequestEventPointLogResponse_RecycledItemEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    266;
+    267;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_RecycledItemEvent* other);
 
@@ -32907,7 +33133,7 @@ class CMsgClientToGCRequestEventPointLogResponse_ActionRewardEvent : public ::go
                &_CMsgClientToGCRequestEventPointLogResponse_ActionRewardEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    267;
+    268;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_ActionRewardEvent* other);
 
@@ -33009,7 +33235,7 @@ class CMsgClientToGCRequestEventPointLogResponse_MysteryItemReceivedEvent : publ
                &_CMsgClientToGCRequestEventPointLogResponse_MysteryItemReceivedEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    268;
+    269;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_MysteryItemReceivedEvent* other);
 
@@ -33101,7 +33327,7 @@ class CMsgClientToGCRequestEventPointLogResponse_CorrectPredictionEvent : public
                &_CMsgClientToGCRequestEventPointLogResponse_CorrectPredictionEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    269;
+    270;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_CorrectPredictionEvent* other);
 
@@ -33193,7 +33419,7 @@ class CMsgClientToGCRequestEventPointLogResponse_InGamePredictionCorrectEvent : 
                &_CMsgClientToGCRequestEventPointLogResponse_InGamePredictionCorrectEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    270;
+    271;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_InGamePredictionCorrectEvent* other);
 
@@ -33285,7 +33511,7 @@ class CMsgClientToGCRequestEventPointLogResponse_WeekendTourneyPayoutEvent : pub
                &_CMsgClientToGCRequestEventPointLogResponse_WeekendTourneyPayoutEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    271;
+    272;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_WeekendTourneyPayoutEvent* other);
 
@@ -33377,7 +33603,7 @@ class CMsgClientToGCRequestEventPointLogResponse_FantasyRewardEvent : public ::g
                &_CMsgClientToGCRequestEventPointLogResponse_FantasyRewardEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    272;
+    273;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_FantasyRewardEvent* other);
 
@@ -33469,7 +33695,7 @@ class CMsgClientToGCRequestEventPointLogResponse_BracketRewardEvent : public ::g
                &_CMsgClientToGCRequestEventPointLogResponse_BracketRewardEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    273;
+    274;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_BracketRewardEvent* other);
 
@@ -33561,7 +33787,7 @@ class CMsgClientToGCRequestEventPointLogResponse_WeeklyGameEvent : public ::goog
                &_CMsgClientToGCRequestEventPointLogResponse_WeeklyGameEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    274;
+    275;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_WeeklyGameEvent* other);
 
@@ -33653,7 +33879,7 @@ class CMsgClientToGCRequestEventPointLogResponse_ExploitCorrectionEvent : public
                &_CMsgClientToGCRequestEventPointLogResponse_ExploitCorrectionEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    275;
+    276;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_ExploitCorrectionEvent* other);
 
@@ -33745,7 +33971,7 @@ class CMsgClientToGCRequestEventPointLogResponse_EventPointTransaction : public 
                &_CMsgClientToGCRequestEventPointLogResponse_EventPointTransaction_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    276;
+    277;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse_EventPointTransaction* other);
 
@@ -34023,7 +34249,7 @@ class CMsgClientToGCRequestEventPointLogResponse : public ::google::protobuf::Me
                &_CMsgClientToGCRequestEventPointLogResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    277;
+    278;
 
   void Swap(CMsgClientToGCRequestEventPointLogResponse* other);
 
@@ -34154,7 +34380,7 @@ class CMsgClientToGCPublishUserStat : public ::google::protobuf::Message /* @@pr
                &_CMsgClientToGCPublishUserStat_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    278;
+    279;
 
   void Swap(CMsgClientToGCPublishUserStat* other);
 
@@ -34256,7 +34482,7 @@ class CMsgClientToGCAddTI6TreeProgress : public ::google::protobuf::Message /* @
                &_CMsgClientToGCAddTI6TreeProgress_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    279;
+    280;
 
   void Swap(CMsgClientToGCAddTI6TreeProgress* other);
 
@@ -34348,7 +34574,7 @@ class CMsgClientToGCRequestLinaPlaysRemaining : public ::google::protobuf::Messa
                &_CMsgClientToGCRequestLinaPlaysRemaining_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    280;
+    281;
 
   void Swap(CMsgClientToGCRequestLinaPlaysRemaining* other);
 
@@ -34440,7 +34666,7 @@ class CMsgClientToGCRequestLinaPlaysRemainingResponse : public ::google::protobu
                &_CMsgClientToGCRequestLinaPlaysRemainingResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    281;
+    282;
 
   void Swap(CMsgClientToGCRequestLinaPlaysRemainingResponse* other);
 
@@ -34542,7 +34768,7 @@ class CMsgClientToGCRequestLinaGameResult : public ::google::protobuf::Message /
                &_CMsgClientToGCRequestLinaGameResult_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    282;
+    283;
 
   void Swap(CMsgClientToGCRequestLinaGameResult* other);
 
@@ -34644,7 +34870,7 @@ class CMsgClientToGCRequestLinaGameResultResponse : public ::google::protobuf::M
                &_CMsgClientToGCRequestLinaGameResultResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    283;
+    284;
 
   void Swap(CMsgClientToGCRequestLinaGameResultResponse* other);
 
@@ -34736,7 +34962,7 @@ class CMsgClientToGCRequestSlarkGameResult : public ::google::protobuf::Message 
                &_CMsgClientToGCRequestSlarkGameResult_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    284;
+    285;
 
   void Swap(CMsgClientToGCRequestSlarkGameResult* other);
 
@@ -34848,7 +35074,7 @@ class CMsgClientToGCRequestSlarkGameResultResponse : public ::google::protobuf::
                &_CMsgClientToGCRequestSlarkGameResultResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    285;
+    286;
 
   void Swap(CMsgClientToGCRequestSlarkGameResultResponse* other);
 
@@ -34950,7 +35176,7 @@ class CMsgGCToClientQuestProgressUpdated_Challenge : public ::google::protobuf::
                &_CMsgGCToClientQuestProgressUpdated_Challenge_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    286;
+    287;
 
   void Swap(CMsgGCToClientQuestProgressUpdated_Challenge* other);
 
@@ -35092,7 +35318,7 @@ class CMsgGCToClientQuestProgressUpdated : public ::google::protobuf::Message /*
                &_CMsgGCToClientQuestProgressUpdated_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    287;
+    288;
 
   void Swap(CMsgGCToClientQuestProgressUpdated* other);
 
@@ -35199,7 +35425,7 @@ class CMsgDOTARedeemItem : public ::google::protobuf::Message /* @@protoc_insert
                &_CMsgDOTARedeemItem_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    288;
+    289;
 
   void Swap(CMsgDOTARedeemItem* other);
 
@@ -35301,7 +35527,7 @@ class CMsgDOTARedeemItemResponse : public ::google::protobuf::Message /* @@proto
                &_CMsgDOTARedeemItemResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    289;
+    290;
 
   void Swap(CMsgDOTARedeemItemResponse* other);
 
@@ -35419,7 +35645,7 @@ class CMsgPerfectWorldUserLookupRequest : public ::google::protobuf::Message /* 
                &_CMsgPerfectWorldUserLookupRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    290;
+    291;
 
   void Swap(CMsgPerfectWorldUserLookupRequest* other);
 
@@ -35519,7 +35745,7 @@ class CMsgPerfectWorldUserLookupResponse : public ::google::protobuf::Message /*
                &_CMsgPerfectWorldUserLookupResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    291;
+    292;
 
   void Swap(CMsgPerfectWorldUserLookupResponse* other);
 
@@ -35653,7 +35879,7 @@ class CMsgNexonPartnerUpdate : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgNexonPartnerUpdate_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    292;
+    293;
 
   void Swap(CMsgNexonPartnerUpdate* other);
 
@@ -35765,7 +35991,7 @@ class CMsgMakeOffering : public ::google::protobuf::Message /* @@protoc_insertio
                &_CMsgMakeOffering_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    293;
+    294;
 
   void Swap(CMsgMakeOffering* other);
 
@@ -35857,7 +36083,7 @@ class CMsgRequestOfferings : public ::google::protobuf::Message /* @@protoc_inse
                &_CMsgRequestOfferings_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    294;
+    295;
 
   void Swap(CMsgRequestOfferings* other);
 
@@ -35939,7 +36165,7 @@ class CMsgRequestOfferingsResponse_NewYearsOffering : public ::google::protobuf:
                &_CMsgRequestOfferingsResponse_NewYearsOffering_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    295;
+    296;
 
   void Swap(CMsgRequestOfferingsResponse_NewYearsOffering* other);
 
@@ -36041,7 +36267,7 @@ class CMsgRequestOfferingsResponse : public ::google::protobuf::Message /* @@pro
                &_CMsgRequestOfferingsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    296;
+    297;
 
   void Swap(CMsgRequestOfferingsResponse* other);
 
@@ -36148,7 +36374,7 @@ class CMsgDOTAPCBangTimedReward : public ::google::protobuf::Message /* @@protoc
                &_CMsgDOTAPCBangTimedReward_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    297;
+    298;
 
   void Swap(CMsgDOTAPCBangTimedReward* other);
 
@@ -36276,7 +36502,7 @@ class CMsgDOTACompendiumInGamePredictionResults_PredictionResult : public ::goog
                &_CMsgDOTACompendiumInGamePredictionResults_PredictionResult_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    298;
+    299;
 
   void Swap(CMsgDOTACompendiumInGamePredictionResults_PredictionResult* other);
 
@@ -36378,7 +36604,7 @@ class CMsgDOTACompendiumInGamePredictionResults : public ::google::protobuf::Mes
                &_CMsgDOTACompendiumInGamePredictionResults_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    299;
+    300;
 
   void Swap(CMsgDOTACompendiumInGamePredictionResults* other);
 
@@ -36495,7 +36721,7 @@ class CMsgClientToGCSelectCompendiumInGamePrediction_Prediction : public ::googl
                &_CMsgClientToGCSelectCompendiumInGamePrediction_Prediction_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    300;
+    301;
 
   void Swap(CMsgClientToGCSelectCompendiumInGamePrediction_Prediction* other);
 
@@ -36597,7 +36823,7 @@ class CMsgClientToGCSelectCompendiumInGamePrediction : public ::google::protobuf
                &_CMsgClientToGCSelectCompendiumInGamePrediction_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    301;
+    302;
 
   void Swap(CMsgClientToGCSelectCompendiumInGamePrediction* other);
 
@@ -36704,7 +36930,7 @@ class CMsgClientToGCSelectCompendiumInGamePredictionResponse : public ::google::
                &_CMsgClientToGCSelectCompendiumInGamePredictionResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    302;
+    303;
 
   void Swap(CMsgClientToGCSelectCompendiumInGamePredictionResponse* other);
 
@@ -36826,7 +37052,7 @@ class CMsgClientToGCOpenPlayerCardPack : public ::google::protobuf::Message /* @
                &_CMsgClientToGCOpenPlayerCardPack_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    303;
+    304;
 
   void Swap(CMsgClientToGCOpenPlayerCardPack* other);
 
@@ -36918,7 +37144,7 @@ class CMsgClientToGCOpenPlayerCardPackResponse : public ::google::protobuf::Mess
                &_CMsgClientToGCOpenPlayerCardPackResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    304;
+    305;
 
   void Swap(CMsgClientToGCOpenPlayerCardPackResponse* other);
 
@@ -37055,7 +37281,7 @@ class CMsgClientToGCRecyclePlayerCard : public ::google::protobuf::Message /* @@
                &_CMsgClientToGCRecyclePlayerCard_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    305;
+    306;
 
   void Swap(CMsgClientToGCRecyclePlayerCard* other);
 
@@ -37099,12 +37325,17 @@ class CMsgClientToGCRecyclePlayerCard : public ::google::protobuf::Message /* @@
 
   // accessors -------------------------------------------------------
 
-  // optional uint64 player_card_item_id = 1;
-  bool has_player_card_item_id() const;
-  void clear_player_card_item_id();
-  static const int kPlayerCardItemIdFieldNumber = 1;
-  ::google::protobuf::uint64 player_card_item_id() const;
-  void set_player_card_item_id(::google::protobuf::uint64 value);
+  // repeated uint64 player_card_item_ids = 3;
+  int player_card_item_ids_size() const;
+  void clear_player_card_item_ids();
+  static const int kPlayerCardItemIdsFieldNumber = 3;
+  ::google::protobuf::uint64 player_card_item_ids(int index) const;
+  void set_player_card_item_ids(int index, ::google::protobuf::uint64 value);
+  void add_player_card_item_ids(::google::protobuf::uint64 value);
+  const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
+      player_card_item_ids() const;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+      mutable_player_card_item_ids();
 
   // optional uint32 event_id = 2;
   bool has_event_id() const;
@@ -37115,15 +37346,13 @@ class CMsgClientToGCRecyclePlayerCard : public ::google::protobuf::Message /* @@
 
   // @@protoc_insertion_point(class_scope:proto.dota.CMsgClientToGCRecyclePlayerCard)
  private:
-  void set_has_player_card_item_id();
-  void clear_has_player_card_item_id();
   void set_has_event_id();
   void clear_has_event_id();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::uint64 player_card_item_id_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint64 > player_card_item_ids_;
   ::google::protobuf::uint32 event_id_;
   friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
 };
@@ -37157,7 +37386,7 @@ class CMsgClientToGCRecyclePlayerCardResponse : public ::google::protobuf::Messa
                &_CMsgClientToGCRecyclePlayerCardResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    306;
+    307;
 
   void Swap(CMsgClientToGCRecyclePlayerCardResponse* other);
 
@@ -37293,7 +37522,7 @@ class CMsgClientToGCCreatePlayerCardPack : public ::google::protobuf::Message /*
                &_CMsgClientToGCCreatePlayerCardPack_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    307;
+    308;
 
   void Swap(CMsgClientToGCCreatePlayerCardPack* other);
 
@@ -37351,18 +37580,28 @@ class CMsgClientToGCCreatePlayerCardPack : public ::google::protobuf::Message /*
   ::google::protobuf::uint32 event_id() const;
   void set_event_id(::google::protobuf::uint32 value);
 
+  // optional bool premium_pack = 3;
+  bool has_premium_pack() const;
+  void clear_premium_pack();
+  static const int kPremiumPackFieldNumber = 3;
+  bool premium_pack() const;
+  void set_premium_pack(bool value);
+
   // @@protoc_insertion_point(class_scope:proto.dota.CMsgClientToGCCreatePlayerCardPack)
  private:
   void set_has_card_dust_item_id();
   void clear_has_card_dust_item_id();
   void set_has_event_id();
   void clear_has_event_id();
+  void set_has_premium_pack();
+  void clear_has_premium_pack();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::uint64 card_dust_item_id_;
   ::google::protobuf::uint32 event_id_;
+  bool premium_pack_;
   friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -37395,7 +37634,7 @@ class CMsgClientToGCCreatePlayerCardPackResponse : public ::google::protobuf::Me
                &_CMsgClientToGCCreatePlayerCardPackResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    308;
+    309;
 
   void Swap(CMsgClientToGCCreatePlayerCardPackResponse* other);
 
@@ -37519,7 +37758,7 @@ class CMsgGCToClientBattlePassRollup_International2016_Questlines : public ::goo
                &_CMsgGCToClientBattlePassRollup_International2016_Questlines_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    309;
+    310;
 
   void Swap(CMsgGCToClientBattlePassRollup_International2016_Questlines* other);
 
@@ -37659,7 +37898,7 @@ class CMsgGCToClientBattlePassRollup_International2016_Wagering : public ::googl
                &_CMsgGCToClientBattlePassRollup_International2016_Wagering_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    310;
+    311;
 
   void Swap(CMsgGCToClientBattlePassRollup_International2016_Wagering* other);
 
@@ -37791,7 +38030,7 @@ class CMsgGCToClientBattlePassRollup_International2016_Achievements : public ::g
                &_CMsgGCToClientBattlePassRollup_International2016_Achievements_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    311;
+    312;
 
   void Swap(CMsgGCToClientBattlePassRollup_International2016_Achievements* other);
 
@@ -37903,7 +38142,7 @@ class CMsgGCToClientBattlePassRollup_International2016_BattleCup : public ::goog
                &_CMsgGCToClientBattlePassRollup_International2016_BattleCup_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    312;
+    313;
 
   void Swap(CMsgGCToClientBattlePassRollup_International2016_BattleCup* other);
 
@@ -38005,7 +38244,7 @@ class CMsgGCToClientBattlePassRollup_International2016_Predictions : public ::go
                &_CMsgGCToClientBattlePassRollup_International2016_Predictions_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    313;
+    314;
 
   void Swap(CMsgGCToClientBattlePassRollup_International2016_Predictions* other);
 
@@ -38117,7 +38356,7 @@ class CMsgGCToClientBattlePassRollup_International2016_Bracket : public ::google
                &_CMsgGCToClientBattlePassRollup_International2016_Bracket_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    314;
+    315;
 
   void Swap(CMsgGCToClientBattlePassRollup_International2016_Bracket* other);
 
@@ -38219,7 +38458,7 @@ class CMsgGCToClientBattlePassRollup_International2016_PlayerCard : public ::goo
                &_CMsgGCToClientBattlePassRollup_International2016_PlayerCard_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    315;
+    316;
 
   void Swap(CMsgGCToClientBattlePassRollup_International2016_PlayerCard* other);
 
@@ -38321,7 +38560,7 @@ class CMsgGCToClientBattlePassRollup_International2016_FantasyChallenge : public
                &_CMsgGCToClientBattlePassRollup_International2016_FantasyChallenge_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    316;
+    317;
 
   void Swap(CMsgGCToClientBattlePassRollup_International2016_FantasyChallenge* other);
 
@@ -38423,7 +38662,7 @@ class CMsgGCToClientBattlePassRollup_International2016 : public ::google::protob
                &_CMsgGCToClientBattlePassRollup_International2016_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    317;
+    318;
 
   void Swap(CMsgGCToClientBattlePassRollup_International2016* other);
 
@@ -38622,7 +38861,7 @@ class CMsgGCToClientBattlePassRollup_Fall2016_Questlines : public ::google::prot
                &_CMsgGCToClientBattlePassRollup_Fall2016_Questlines_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    318;
+    319;
 
   void Swap(CMsgGCToClientBattlePassRollup_Fall2016_Questlines* other);
 
@@ -38762,7 +39001,7 @@ class CMsgGCToClientBattlePassRollup_Fall2016_Wagering : public ::google::protob
                &_CMsgGCToClientBattlePassRollup_Fall2016_Wagering_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    319;
+    320;
 
   void Swap(CMsgGCToClientBattlePassRollup_Fall2016_Wagering* other);
 
@@ -38894,7 +39133,7 @@ class CMsgGCToClientBattlePassRollup_Fall2016_Achievements : public ::google::pr
                &_CMsgGCToClientBattlePassRollup_Fall2016_Achievements_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    320;
+    321;
 
   void Swap(CMsgGCToClientBattlePassRollup_Fall2016_Achievements* other);
 
@@ -39006,7 +39245,7 @@ class CMsgGCToClientBattlePassRollup_Fall2016_BattleCup : public ::google::proto
                &_CMsgGCToClientBattlePassRollup_Fall2016_BattleCup_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    321;
+    322;
 
   void Swap(CMsgGCToClientBattlePassRollup_Fall2016_BattleCup* other);
 
@@ -39108,7 +39347,7 @@ class CMsgGCToClientBattlePassRollup_Fall2016_Predictions : public ::google::pro
                &_CMsgGCToClientBattlePassRollup_Fall2016_Predictions_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    322;
+    323;
 
   void Swap(CMsgGCToClientBattlePassRollup_Fall2016_Predictions* other);
 
@@ -39220,7 +39459,7 @@ class CMsgGCToClientBattlePassRollup_Fall2016_Bracket : public ::google::protobu
                &_CMsgGCToClientBattlePassRollup_Fall2016_Bracket_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    323;
+    324;
 
   void Swap(CMsgGCToClientBattlePassRollup_Fall2016_Bracket* other);
 
@@ -39322,7 +39561,7 @@ class CMsgGCToClientBattlePassRollup_Fall2016_PlayerCard : public ::google::prot
                &_CMsgGCToClientBattlePassRollup_Fall2016_PlayerCard_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    324;
+    325;
 
   void Swap(CMsgGCToClientBattlePassRollup_Fall2016_PlayerCard* other);
 
@@ -39424,7 +39663,7 @@ class CMsgGCToClientBattlePassRollup_Fall2016_FantasyChallenge : public ::google
                &_CMsgGCToClientBattlePassRollup_Fall2016_FantasyChallenge_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    325;
+    326;
 
   void Swap(CMsgGCToClientBattlePassRollup_Fall2016_FantasyChallenge* other);
 
@@ -39526,7 +39765,7 @@ class CMsgGCToClientBattlePassRollup_Fall2016 : public ::google::protobuf::Messa
                &_CMsgGCToClientBattlePassRollup_Fall2016_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    326;
+    327;
 
   void Swap(CMsgGCToClientBattlePassRollup_Fall2016* other);
 
@@ -39697,6 +39936,1109 @@ class CMsgGCToClientBattlePassRollup_Fall2016 : public ::google::protobuf::Messa
 };
 // -------------------------------------------------------------------
 
+class CMsgGCToClientBattlePassRollup_Winter2017_Questlines : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines) */ {
+ public:
+  CMsgGCToClientBattlePassRollup_Winter2017_Questlines();
+  virtual ~CMsgGCToClientBattlePassRollup_Winter2017_Questlines();
+
+  CMsgGCToClientBattlePassRollup_Winter2017_Questlines(const CMsgGCToClientBattlePassRollup_Winter2017_Questlines& from);
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_Questlines& operator=(const CMsgGCToClientBattlePassRollup_Winter2017_Questlines& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientBattlePassRollup_Winter2017_Questlines& default_instance();
+
+  static inline const CMsgGCToClientBattlePassRollup_Winter2017_Questlines* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientBattlePassRollup_Winter2017_Questlines*>(
+               &_CMsgGCToClientBattlePassRollup_Winter2017_Questlines_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    328;
+
+  void Swap(CMsgGCToClientBattlePassRollup_Winter2017_Questlines* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_Questlines* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientBattlePassRollup_Winter2017_Questlines* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientBattlePassRollup_Winter2017_Questlines& from);
+  void MergeFrom(const CMsgGCToClientBattlePassRollup_Winter2017_Questlines& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientBattlePassRollup_Winter2017_Questlines* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string name = 1;
+  bool has_name() const;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // optional uint32 onestar = 2;
+  bool has_onestar() const;
+  void clear_onestar();
+  static const int kOnestarFieldNumber = 2;
+  ::google::protobuf::uint32 onestar() const;
+  void set_onestar(::google::protobuf::uint32 value);
+
+  // optional uint32 twostar = 3;
+  bool has_twostar() const;
+  void clear_twostar();
+  static const int kTwostarFieldNumber = 3;
+  ::google::protobuf::uint32 twostar() const;
+  void set_twostar(::google::protobuf::uint32 value);
+
+  // optional uint32 threestar = 4;
+  bool has_threestar() const;
+  void clear_threestar();
+  static const int kThreestarFieldNumber = 4;
+  ::google::protobuf::uint32 threestar() const;
+  void set_threestar(::google::protobuf::uint32 value);
+
+  // optional uint32 total = 5;
+  bool has_total() const;
+  void clear_total();
+  static const int kTotalFieldNumber = 5;
+  ::google::protobuf::uint32 total() const;
+  void set_total(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines)
+ private:
+  void set_has_name();
+  void clear_has_name();
+  void set_has_onestar();
+  void clear_has_onestar();
+  void set_has_twostar();
+  void clear_has_twostar();
+  void set_has_threestar();
+  void clear_has_threestar();
+  void set_has_total();
+  void clear_has_total();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::uint32 onestar_;
+  ::google::protobuf::uint32 twostar_;
+  ::google::protobuf::uint32 threestar_;
+  ::google::protobuf::uint32 total_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientBattlePassRollup_Winter2017_Wagering : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering) */ {
+ public:
+  CMsgGCToClientBattlePassRollup_Winter2017_Wagering();
+  virtual ~CMsgGCToClientBattlePassRollup_Winter2017_Wagering();
+
+  CMsgGCToClientBattlePassRollup_Winter2017_Wagering(const CMsgGCToClientBattlePassRollup_Winter2017_Wagering& from);
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_Wagering& operator=(const CMsgGCToClientBattlePassRollup_Winter2017_Wagering& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientBattlePassRollup_Winter2017_Wagering& default_instance();
+
+  static inline const CMsgGCToClientBattlePassRollup_Winter2017_Wagering* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientBattlePassRollup_Winter2017_Wagering*>(
+               &_CMsgGCToClientBattlePassRollup_Winter2017_Wagering_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    329;
+
+  void Swap(CMsgGCToClientBattlePassRollup_Winter2017_Wagering* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_Wagering* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientBattlePassRollup_Winter2017_Wagering* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientBattlePassRollup_Winter2017_Wagering& from);
+  void MergeFrom(const CMsgGCToClientBattlePassRollup_Winter2017_Wagering& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientBattlePassRollup_Winter2017_Wagering* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 total_wagered = 1;
+  bool has_total_wagered() const;
+  void clear_total_wagered();
+  static const int kTotalWageredFieldNumber = 1;
+  ::google::protobuf::uint32 total_wagered() const;
+  void set_total_wagered(::google::protobuf::uint32 value);
+
+  // optional uint32 total_won = 2;
+  bool has_total_won() const;
+  void clear_total_won();
+  static const int kTotalWonFieldNumber = 2;
+  ::google::protobuf::uint32 total_won() const;
+  void set_total_won(::google::protobuf::uint32 value);
+
+  // optional uint32 average_won = 3;
+  bool has_average_won() const;
+  void clear_average_won();
+  static const int kAverageWonFieldNumber = 3;
+  ::google::protobuf::uint32 average_won() const;
+  void set_average_won(::google::protobuf::uint32 value);
+
+  // optional uint32 success_rate = 4;
+  bool has_success_rate() const;
+  void clear_success_rate();
+  static const int kSuccessRateFieldNumber = 4;
+  ::google::protobuf::uint32 success_rate() const;
+  void set_success_rate(::google::protobuf::uint32 value);
+
+  // optional uint32 total_tips = 5;
+  bool has_total_tips() const;
+  void clear_total_tips();
+  static const int kTotalTipsFieldNumber = 5;
+  ::google::protobuf::uint32 total_tips() const;
+  void set_total_tips(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering)
+ private:
+  void set_has_total_wagered();
+  void clear_has_total_wagered();
+  void set_has_total_won();
+  void clear_has_total_won();
+  void set_has_average_won();
+  void clear_has_average_won();
+  void set_has_success_rate();
+  void clear_has_success_rate();
+  void set_has_total_tips();
+  void clear_has_total_tips();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 total_wagered_;
+  ::google::protobuf::uint32 total_won_;
+  ::google::protobuf::uint32 average_won_;
+  ::google::protobuf::uint32 success_rate_;
+  ::google::protobuf::uint32 total_tips_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientBattlePassRollup_Winter2017_Achievements : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements) */ {
+ public:
+  CMsgGCToClientBattlePassRollup_Winter2017_Achievements();
+  virtual ~CMsgGCToClientBattlePassRollup_Winter2017_Achievements();
+
+  CMsgGCToClientBattlePassRollup_Winter2017_Achievements(const CMsgGCToClientBattlePassRollup_Winter2017_Achievements& from);
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_Achievements& operator=(const CMsgGCToClientBattlePassRollup_Winter2017_Achievements& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientBattlePassRollup_Winter2017_Achievements& default_instance();
+
+  static inline const CMsgGCToClientBattlePassRollup_Winter2017_Achievements* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientBattlePassRollup_Winter2017_Achievements*>(
+               &_CMsgGCToClientBattlePassRollup_Winter2017_Achievements_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    330;
+
+  void Swap(CMsgGCToClientBattlePassRollup_Winter2017_Achievements* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_Achievements* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientBattlePassRollup_Winter2017_Achievements* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientBattlePassRollup_Winter2017_Achievements& from);
+  void MergeFrom(const CMsgGCToClientBattlePassRollup_Winter2017_Achievements& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientBattlePassRollup_Winter2017_Achievements* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 completed = 1;
+  bool has_completed() const;
+  void clear_completed();
+  static const int kCompletedFieldNumber = 1;
+  ::google::protobuf::uint32 completed() const;
+  void set_completed(::google::protobuf::uint32 value);
+
+  // optional uint32 total = 2;
+  bool has_total() const;
+  void clear_total();
+  static const int kTotalFieldNumber = 2;
+  ::google::protobuf::uint32 total() const;
+  void set_total(::google::protobuf::uint32 value);
+
+  // optional uint32 points = 3;
+  bool has_points() const;
+  void clear_points();
+  static const int kPointsFieldNumber = 3;
+  ::google::protobuf::uint32 points() const;
+  void set_points(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements)
+ private:
+  void set_has_completed();
+  void clear_has_completed();
+  void set_has_total();
+  void clear_has_total();
+  void set_has_points();
+  void clear_has_points();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 completed_;
+  ::google::protobuf::uint32 total_;
+  ::google::protobuf::uint32 points_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientBattlePassRollup_Winter2017_BattleCup : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup) */ {
+ public:
+  CMsgGCToClientBattlePassRollup_Winter2017_BattleCup();
+  virtual ~CMsgGCToClientBattlePassRollup_Winter2017_BattleCup();
+
+  CMsgGCToClientBattlePassRollup_Winter2017_BattleCup(const CMsgGCToClientBattlePassRollup_Winter2017_BattleCup& from);
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_BattleCup& operator=(const CMsgGCToClientBattlePassRollup_Winter2017_BattleCup& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientBattlePassRollup_Winter2017_BattleCup& default_instance();
+
+  static inline const CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientBattlePassRollup_Winter2017_BattleCup*>(
+               &_CMsgGCToClientBattlePassRollup_Winter2017_BattleCup_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    331;
+
+  void Swap(CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientBattlePassRollup_Winter2017_BattleCup& from);
+  void MergeFrom(const CMsgGCToClientBattlePassRollup_Winter2017_BattleCup& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 wins = 1;
+  bool has_wins() const;
+  void clear_wins();
+  static const int kWinsFieldNumber = 1;
+  ::google::protobuf::uint32 wins() const;
+  void set_wins(::google::protobuf::uint32 value);
+
+  // optional uint32 score = 2;
+  bool has_score() const;
+  void clear_score();
+  static const int kScoreFieldNumber = 2;
+  ::google::protobuf::uint32 score() const;
+  void set_score(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup)
+ private:
+  void set_has_wins();
+  void clear_has_wins();
+  void set_has_score();
+  void clear_has_score();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 wins_;
+  ::google::protobuf::uint32 score_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientBattlePassRollup_Winter2017_Predictions : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions) */ {
+ public:
+  CMsgGCToClientBattlePassRollup_Winter2017_Predictions();
+  virtual ~CMsgGCToClientBattlePassRollup_Winter2017_Predictions();
+
+  CMsgGCToClientBattlePassRollup_Winter2017_Predictions(const CMsgGCToClientBattlePassRollup_Winter2017_Predictions& from);
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_Predictions& operator=(const CMsgGCToClientBattlePassRollup_Winter2017_Predictions& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientBattlePassRollup_Winter2017_Predictions& default_instance();
+
+  static inline const CMsgGCToClientBattlePassRollup_Winter2017_Predictions* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientBattlePassRollup_Winter2017_Predictions*>(
+               &_CMsgGCToClientBattlePassRollup_Winter2017_Predictions_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    332;
+
+  void Swap(CMsgGCToClientBattlePassRollup_Winter2017_Predictions* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_Predictions* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientBattlePassRollup_Winter2017_Predictions* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientBattlePassRollup_Winter2017_Predictions& from);
+  void MergeFrom(const CMsgGCToClientBattlePassRollup_Winter2017_Predictions& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientBattlePassRollup_Winter2017_Predictions* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 correct = 1;
+  bool has_correct() const;
+  void clear_correct();
+  static const int kCorrectFieldNumber = 1;
+  ::google::protobuf::uint32 correct() const;
+  void set_correct(::google::protobuf::uint32 value);
+
+  // optional uint32 total = 2;
+  bool has_total() const;
+  void clear_total();
+  static const int kTotalFieldNumber = 2;
+  ::google::protobuf::uint32 total() const;
+  void set_total(::google::protobuf::uint32 value);
+
+  // optional uint32 points = 3;
+  bool has_points() const;
+  void clear_points();
+  static const int kPointsFieldNumber = 3;
+  ::google::protobuf::uint32 points() const;
+  void set_points(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions)
+ private:
+  void set_has_correct();
+  void clear_has_correct();
+  void set_has_total();
+  void clear_has_total();
+  void set_has_points();
+  void clear_has_points();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 correct_;
+  ::google::protobuf::uint32 total_;
+  ::google::protobuf::uint32 points_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientBattlePassRollup_Winter2017_Bracket : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket) */ {
+ public:
+  CMsgGCToClientBattlePassRollup_Winter2017_Bracket();
+  virtual ~CMsgGCToClientBattlePassRollup_Winter2017_Bracket();
+
+  CMsgGCToClientBattlePassRollup_Winter2017_Bracket(const CMsgGCToClientBattlePassRollup_Winter2017_Bracket& from);
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_Bracket& operator=(const CMsgGCToClientBattlePassRollup_Winter2017_Bracket& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientBattlePassRollup_Winter2017_Bracket& default_instance();
+
+  static inline const CMsgGCToClientBattlePassRollup_Winter2017_Bracket* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientBattlePassRollup_Winter2017_Bracket*>(
+               &_CMsgGCToClientBattlePassRollup_Winter2017_Bracket_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    333;
+
+  void Swap(CMsgGCToClientBattlePassRollup_Winter2017_Bracket* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_Bracket* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientBattlePassRollup_Winter2017_Bracket* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientBattlePassRollup_Winter2017_Bracket& from);
+  void MergeFrom(const CMsgGCToClientBattlePassRollup_Winter2017_Bracket& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientBattlePassRollup_Winter2017_Bracket* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 correct = 1;
+  bool has_correct() const;
+  void clear_correct();
+  static const int kCorrectFieldNumber = 1;
+  ::google::protobuf::uint32 correct() const;
+  void set_correct(::google::protobuf::uint32 value);
+
+  // optional uint32 points = 2;
+  bool has_points() const;
+  void clear_points();
+  static const int kPointsFieldNumber = 2;
+  ::google::protobuf::uint32 points() const;
+  void set_points(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket)
+ private:
+  void set_has_correct();
+  void clear_has_correct();
+  void set_has_points();
+  void clear_has_points();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 correct_;
+  ::google::protobuf::uint32 points_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard) */ {
+ public:
+  CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard();
+  virtual ~CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard();
+
+  CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard(const CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard& from);
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard& operator=(const CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard& default_instance();
+
+  static inline const CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard*>(
+               &_CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    334;
+
+  void Swap(CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard& from);
+  void MergeFrom(const CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 account_id = 1;
+  bool has_account_id() const;
+  void clear_account_id();
+  static const int kAccountIdFieldNumber = 1;
+  ::google::protobuf::uint32 account_id() const;
+  void set_account_id(::google::protobuf::uint32 value);
+
+  // optional uint32 quality = 2;
+  bool has_quality() const;
+  void clear_quality();
+  static const int kQualityFieldNumber = 2;
+  ::google::protobuf::uint32 quality() const;
+  void set_quality(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard)
+ private:
+  void set_has_account_id();
+  void clear_has_account_id();
+  void set_has_quality();
+  void clear_has_quality();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 account_id_;
+  ::google::protobuf::uint32 quality_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge) */ {
+ public:
+  CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge();
+  virtual ~CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge();
+
+  CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge(const CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge& from);
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge& operator=(const CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge& default_instance();
+
+  static inline const CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge*>(
+               &_CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    335;
+
+  void Swap(CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge& from);
+  void MergeFrom(const CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional float total_score = 1;
+  bool has_total_score() const;
+  void clear_total_score();
+  static const int kTotalScoreFieldNumber = 1;
+  float total_score() const;
+  void set_total_score(float value);
+
+  // optional float percentile = 2;
+  bool has_percentile() const;
+  void clear_percentile();
+  static const int kPercentileFieldNumber = 2;
+  float percentile() const;
+  void set_percentile(float value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge)
+ private:
+  void set_has_total_score();
+  void clear_has_total_score();
+  void set_has_percentile();
+  void clear_has_percentile();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  float total_score_;
+  float percentile_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientBattlePassRollup_Winter2017 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017) */ {
+ public:
+  CMsgGCToClientBattlePassRollup_Winter2017();
+  virtual ~CMsgGCToClientBattlePassRollup_Winter2017();
+
+  CMsgGCToClientBattlePassRollup_Winter2017(const CMsgGCToClientBattlePassRollup_Winter2017& from);
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017& operator=(const CMsgGCToClientBattlePassRollup_Winter2017& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientBattlePassRollup_Winter2017& default_instance();
+
+  static inline const CMsgGCToClientBattlePassRollup_Winter2017* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientBattlePassRollup_Winter2017*>(
+               &_CMsgGCToClientBattlePassRollup_Winter2017_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    336;
+
+  void Swap(CMsgGCToClientBattlePassRollup_Winter2017* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientBattlePassRollup_Winter2017* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientBattlePassRollup_Winter2017* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientBattlePassRollup_Winter2017& from);
+  void MergeFrom(const CMsgGCToClientBattlePassRollup_Winter2017& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientBattlePassRollup_Winter2017* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef CMsgGCToClientBattlePassRollup_Winter2017_Questlines Questlines;
+  typedef CMsgGCToClientBattlePassRollup_Winter2017_Wagering Wagering;
+  typedef CMsgGCToClientBattlePassRollup_Winter2017_Achievements Achievements;
+  typedef CMsgGCToClientBattlePassRollup_Winter2017_BattleCup BattleCup;
+  typedef CMsgGCToClientBattlePassRollup_Winter2017_Predictions Predictions;
+  typedef CMsgGCToClientBattlePassRollup_Winter2017_Bracket Bracket;
+  typedef CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard PlayerCard;
+  typedef CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge FantasyChallenge;
+
+  // accessors -------------------------------------------------------
+
+  // repeated .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines questlines = 2;
+  int questlines_size() const;
+  void clear_questlines();
+  static const int kQuestlinesFieldNumber = 2;
+  const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines& questlines(int index) const;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines* mutable_questlines(int index);
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines* add_questlines();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines >*
+      mutable_questlines();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines >&
+      questlines() const;
+
+  // repeated .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard player_cards = 8;
+  int player_cards_size() const;
+  void clear_player_cards();
+  static const int kPlayerCardsFieldNumber = 8;
+  const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard& player_cards(int index) const;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard* mutable_player_cards(int index);
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard* add_player_cards();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard >*
+      mutable_player_cards();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard >&
+      player_cards() const;
+
+  // optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering wagering = 3;
+  bool has_wagering() const;
+  void clear_wagering();
+  static const int kWageringFieldNumber = 3;
+  const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering& wagering() const;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering* mutable_wagering();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering* release_wagering();
+  void set_allocated_wagering(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering* wagering);
+
+  // optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements achievements = 4;
+  bool has_achievements() const;
+  void clear_achievements();
+  static const int kAchievementsFieldNumber = 4;
+  const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements& achievements() const;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements* mutable_achievements();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements* release_achievements();
+  void set_allocated_achievements(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements* achievements);
+
+  // optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup battle_cup = 5;
+  bool has_battle_cup() const;
+  void clear_battle_cup();
+  static const int kBattleCupFieldNumber = 5;
+  const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup& battle_cup() const;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* mutable_battle_cup();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* release_battle_cup();
+  void set_allocated_battle_cup(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* battle_cup);
+
+  // optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions predictions = 6;
+  bool has_predictions() const;
+  void clear_predictions();
+  static const int kPredictionsFieldNumber = 6;
+  const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions& predictions() const;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions* mutable_predictions();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions* release_predictions();
+  void set_allocated_predictions(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions* predictions);
+
+  // optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket bracket = 7;
+  bool has_bracket() const;
+  void clear_bracket();
+  static const int kBracketFieldNumber = 7;
+  const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket& bracket() const;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket* mutable_bracket();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket* release_bracket();
+  void set_allocated_bracket(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket* bracket);
+
+  // optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge fantasy_challenge = 9;
+  bool has_fantasy_challenge() const;
+  void clear_fantasy_challenge();
+  static const int kFantasyChallengeFieldNumber = 9;
+  const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge& fantasy_challenge() const;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* mutable_fantasy_challenge();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* release_fantasy_challenge();
+  void set_allocated_fantasy_challenge(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* fantasy_challenge);
+
+  // optional uint32 battle_pass_level = 1;
+  bool has_battle_pass_level() const;
+  void clear_battle_pass_level();
+  static const int kBattlePassLevelFieldNumber = 1;
+  ::google::protobuf::uint32 battle_pass_level() const;
+  void set_battle_pass_level(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017)
+ private:
+  void set_has_battle_pass_level();
+  void clear_has_battle_pass_level();
+  void set_has_wagering();
+  void clear_has_wagering();
+  void set_has_achievements();
+  void clear_has_achievements();
+  void set_has_battle_cup();
+  void clear_has_battle_cup();
+  void set_has_predictions();
+  void clear_has_predictions();
+  void set_has_bracket();
+  void clear_has_bracket();
+  void set_has_fantasy_challenge();
+  void clear_has_fantasy_challenge();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines > questlines_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard > player_cards_;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering* wagering_;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements* achievements_;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* battle_cup_;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions* predictions_;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket* bracket_;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* fantasy_challenge_;
+  ::google::protobuf::uint32 battle_pass_level_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class CMsgGCToClientBattlePassRollupRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientBattlePassRollupRequest) */ {
  public:
   CMsgGCToClientBattlePassRollupRequest();
@@ -39725,7 +41067,7 @@ class CMsgGCToClientBattlePassRollupRequest : public ::google::protobuf::Message
                &_CMsgGCToClientBattlePassRollupRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    327;
+    337;
 
   void Swap(CMsgGCToClientBattlePassRollupRequest* other);
 
@@ -39827,7 +41169,7 @@ class CMsgGCToClientBattlePassRollupResponse : public ::google::protobuf::Messag
                &_CMsgGCToClientBattlePassRollupResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    328;
+    338;
 
   void Swap(CMsgGCToClientBattlePassRollupResponse* other);
 
@@ -39889,18 +41231,30 @@ class CMsgGCToClientBattlePassRollupResponse : public ::google::protobuf::Messag
   ::proto::dota::CMsgGCToClientBattlePassRollup_Fall2016* release_event_fall2016();
   void set_allocated_event_fall2016(::proto::dota::CMsgGCToClientBattlePassRollup_Fall2016* event_fall2016);
 
+  // optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017 event_winter2017 = 3;
+  bool has_event_winter2017() const;
+  void clear_event_winter2017();
+  static const int kEventWinter2017FieldNumber = 3;
+  const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017& event_winter2017() const;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017* mutable_event_winter2017();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017* release_event_winter2017();
+  void set_allocated_event_winter2017(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017* event_winter2017);
+
   // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientBattlePassRollupResponse)
  private:
   void set_has_event_ti6();
   void clear_has_event_ti6();
   void set_has_event_fall2016();
   void clear_has_event_fall2016();
+  void set_has_event_winter2017();
+  void clear_has_event_winter2017();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::proto::dota::CMsgGCToClientBattlePassRollup_International2016* event_ti6_;
   ::proto::dota::CMsgGCToClientBattlePassRollup_Fall2016* event_fall2016_;
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017* event_winter2017_;
   friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -39933,7 +41287,7 @@ class CMsgGCToClientBattlePassRollupListRequest : public ::google::protobuf::Mes
                &_CMsgGCToClientBattlePassRollupListRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    329;
+    339;
 
   void Swap(CMsgGCToClientBattlePassRollupListRequest* other);
 
@@ -40025,7 +41379,7 @@ class CMsgGCToClientBattlePassRollupListResponse : public ::google::protobuf::Me
                &_CMsgGCToClientBattlePassRollupListResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    330;
+    340;
 
   void Swap(CMsgGCToClientBattlePassRollupListResponse* other);
 
@@ -40120,7 +41474,7 @@ class CMsgClientToGCTransferSeasonalMMRRequest : public ::google::protobuf::Mess
                &_CMsgClientToGCTransferSeasonalMMRRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    331;
+    341;
 
   void Swap(CMsgClientToGCTransferSeasonalMMRRequest* other);
 
@@ -40212,7 +41566,7 @@ class CMsgClientToGCTransferSeasonalMMRResponse : public ::google::protobuf::Mes
                &_CMsgClientToGCTransferSeasonalMMRResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    332;
+    342;
 
   void Swap(CMsgClientToGCTransferSeasonalMMRResponse* other);
 
@@ -40304,7 +41658,7 @@ class CMsgGCToClientPlaytestStatus : public ::google::protobuf::Message /* @@pro
                &_CMsgGCToClientPlaytestStatus_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    333;
+    343;
 
   void Swap(CMsgGCToClientPlaytestStatus* other);
 
@@ -40396,7 +41750,7 @@ class CMsgClientToGCJoinPlaytest : public ::google::protobuf::Message /* @@proto
                &_CMsgClientToGCJoinPlaytest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    334;
+    344;
 
   void Swap(CMsgClientToGCJoinPlaytest* other);
 
@@ -40488,7 +41842,7 @@ class CMsgClientToGCJoinPlaytestResponse : public ::google::protobuf::Message /*
                &_CMsgClientToGCJoinPlaytestResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    335;
+    345;
 
   void Swap(CMsgClientToGCJoinPlaytestResponse* other);
 
@@ -40588,7 +41942,7 @@ class CMsgDOTAEventInvite_Team : public ::google::protobuf::Message /* @@protoc_
                &_CMsgDOTAEventInvite_Team_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    336;
+    346;
 
   void Swap(CMsgDOTAEventInvite_Team* other);
 
@@ -40738,7 +42092,7 @@ class CMsgDOTAEventInvite : public ::google::protobuf::Message /* @@protoc_inser
                &_CMsgDOTAEventInvite_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    337;
+    347;
 
   void Swap(CMsgDOTAEventInvite* other);
 
@@ -40835,7 +42189,7 @@ class CMsgDOTASetFavoriteTeam : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgDOTASetFavoriteTeam_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    338;
+    348;
 
   void Swap(CMsgDOTASetFavoriteTeam* other);
 
@@ -40937,7 +42291,7 @@ class CMsgDOTATriviaQuestion : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgDOTATriviaQuestion_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    339;
+    349;
 
   void Swap(CMsgDOTATriviaQuestion* other);
 
@@ -41100,7 +42454,7 @@ class CMsgDOTATriviaCurrentQuestions : public ::google::protobuf::Message /* @@p
                &_CMsgDOTATriviaCurrentQuestions_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    340;
+    350;
 
   void Swap(CMsgDOTATriviaCurrentQuestions* other);
 
@@ -41205,7 +42559,7 @@ class CMsgDOTATriviaQuestionAnswersSummary : public ::google::protobuf::Message 
                &_CMsgDOTATriviaQuestionAnswersSummary_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    341;
+    351;
 
   void Swap(CMsgDOTATriviaQuestionAnswersSummary* other);
 
@@ -41310,7 +42664,7 @@ class CMsgDOTASubmitTriviaQuestionAnswer : public ::google::protobuf::Message /*
                &_CMsgDOTASubmitTriviaQuestionAnswer_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    342;
+    352;
 
   void Swap(CMsgDOTASubmitTriviaQuestionAnswer* other);
 
@@ -41412,7 +42766,7 @@ class CMsgDOTASubmitTriviaQuestionAnswerResponse : public ::google::protobuf::Me
                &_CMsgDOTASubmitTriviaQuestionAnswerResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    343;
+    353;
 
   void Swap(CMsgDOTASubmitTriviaQuestionAnswerResponse* other);
 
@@ -41504,7 +42858,7 @@ class CMsgDOTAStartTriviaSession : public ::google::protobuf::Message /* @@proto
                &_CMsgDOTAStartTriviaSession_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    344;
+    354;
 
   void Swap(CMsgDOTAStartTriviaSession* other);
 
@@ -41586,7 +42940,7 @@ class CMsgDOTAStartTriviaSessionResponse : public ::google::protobuf::Message /*
                &_CMsgDOTAStartTriviaSessionResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    345;
+    355;
 
   void Swap(CMsgDOTAStartTriviaSessionResponse* other);
 
@@ -41688,7 +43042,7 @@ class CMsgClientToGCGiveTip : public ::google::protobuf::Message /* @@protoc_ins
                &_CMsgClientToGCGiveTip_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    346;
+    356;
 
   void Swap(CMsgClientToGCGiveTip* other);
 
@@ -41800,7 +43154,7 @@ class CMsgClientToGCGiveTipResponse : public ::google::protobuf::Message /* @@pr
                &_CMsgClientToGCGiveTipResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    347;
+    357;
 
   void Swap(CMsgClientToGCGiveTipResponse* other);
 
@@ -41932,7 +43286,7 @@ class CMsgDOTAAnchorPhoneNumberRequest : public ::google::protobuf::Message /* @
                &_CMsgDOTAAnchorPhoneNumberRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    348;
+    358;
 
   void Swap(CMsgDOTAAnchorPhoneNumberRequest* other);
 
@@ -42014,7 +43368,7 @@ class CMsgDOTAAnchorPhoneNumberResponse : public ::google::protobuf::Message /* 
                &_CMsgDOTAAnchorPhoneNumberResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    349;
+    359;
 
   void Swap(CMsgDOTAAnchorPhoneNumberResponse* other);
 
@@ -42138,7 +43492,7 @@ class CMsgDOTAUnanchorPhoneNumberRequest : public ::google::protobuf::Message /*
                &_CMsgDOTAUnanchorPhoneNumberRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    350;
+    360;
 
   void Swap(CMsgDOTAUnanchorPhoneNumberRequest* other);
 
@@ -42220,7 +43574,7 @@ class CMsgDOTAUnanchorPhoneNumberResponse : public ::google::protobuf::Message /
                &_CMsgDOTAUnanchorPhoneNumberResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    351;
+    361;
 
   void Swap(CMsgDOTAUnanchorPhoneNumberResponse* other);
 
@@ -42338,7 +43692,7 @@ class CMsgGCToClientTipNotification : public ::google::protobuf::Message /* @@pr
                &_CMsgGCToClientTipNotification_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    352;
+    362;
 
   void Swap(CMsgGCToClientTipNotification* other);
 
@@ -42454,6 +43808,1262 @@ class CMsgGCToClientTipNotification : public ::google::protobuf::Message /* @@pr
   ::google::protobuf::uint32 tipper_account_id_;
   ::google::protobuf::uint32 recipient_account_id_;
   ::google::protobuf::uint32 event_id_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientAllStarVotesRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientAllStarVotesRequest) */ {
+ public:
+  CMsgGCToClientAllStarVotesRequest();
+  virtual ~CMsgGCToClientAllStarVotesRequest();
+
+  CMsgGCToClientAllStarVotesRequest(const CMsgGCToClientAllStarVotesRequest& from);
+
+  inline CMsgGCToClientAllStarVotesRequest& operator=(const CMsgGCToClientAllStarVotesRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientAllStarVotesRequest& default_instance();
+
+  static inline const CMsgGCToClientAllStarVotesRequest* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientAllStarVotesRequest*>(
+               &_CMsgGCToClientAllStarVotesRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    363;
+
+  void Swap(CMsgGCToClientAllStarVotesRequest* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientAllStarVotesRequest* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientAllStarVotesRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientAllStarVotesRequest& from);
+  void MergeFrom(const CMsgGCToClientAllStarVotesRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientAllStarVotesRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 event_id = 1;
+  bool has_event_id() const;
+  void clear_event_id();
+  static const int kEventIdFieldNumber = 1;
+  ::google::protobuf::uint32 event_id() const;
+  void set_event_id(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientAllStarVotesRequest)
+ private:
+  void set_has_event_id();
+  void clear_has_event_id();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 event_id_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientAllStarVotesReply : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientAllStarVotesReply) */ {
+ public:
+  CMsgGCToClientAllStarVotesReply();
+  virtual ~CMsgGCToClientAllStarVotesReply();
+
+  CMsgGCToClientAllStarVotesReply(const CMsgGCToClientAllStarVotesReply& from);
+
+  inline CMsgGCToClientAllStarVotesReply& operator=(const CMsgGCToClientAllStarVotesReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientAllStarVotesReply& default_instance();
+
+  static inline const CMsgGCToClientAllStarVotesReply* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientAllStarVotesReply*>(
+               &_CMsgGCToClientAllStarVotesReply_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    364;
+
+  void Swap(CMsgGCToClientAllStarVotesReply* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientAllStarVotesReply* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientAllStarVotesReply* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientAllStarVotesReply& from);
+  void MergeFrom(const CMsgGCToClientAllStarVotesReply& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientAllStarVotesReply* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated uint32 player_account_ids = 1;
+  int player_account_ids_size() const;
+  void clear_player_account_ids();
+  static const int kPlayerAccountIdsFieldNumber = 1;
+  ::google::protobuf::uint32 player_account_ids(int index) const;
+  void set_player_account_ids(int index, ::google::protobuf::uint32 value);
+  void add_player_account_ids(::google::protobuf::uint32 value);
+  const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+      player_account_ids() const;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+      mutable_player_account_ids();
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientAllStarVotesReply)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > player_account_ids_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientAllStarVotesSubmit : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientAllStarVotesSubmit) */ {
+ public:
+  CMsgGCToClientAllStarVotesSubmit();
+  virtual ~CMsgGCToClientAllStarVotesSubmit();
+
+  CMsgGCToClientAllStarVotesSubmit(const CMsgGCToClientAllStarVotesSubmit& from);
+
+  inline CMsgGCToClientAllStarVotesSubmit& operator=(const CMsgGCToClientAllStarVotesSubmit& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientAllStarVotesSubmit& default_instance();
+
+  static inline const CMsgGCToClientAllStarVotesSubmit* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientAllStarVotesSubmit*>(
+               &_CMsgGCToClientAllStarVotesSubmit_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    365;
+
+  void Swap(CMsgGCToClientAllStarVotesSubmit* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientAllStarVotesSubmit* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientAllStarVotesSubmit* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientAllStarVotesSubmit& from);
+  void MergeFrom(const CMsgGCToClientAllStarVotesSubmit& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientAllStarVotesSubmit* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated uint32 player_account_ids = 2;
+  int player_account_ids_size() const;
+  void clear_player_account_ids();
+  static const int kPlayerAccountIdsFieldNumber = 2;
+  ::google::protobuf::uint32 player_account_ids(int index) const;
+  void set_player_account_ids(int index, ::google::protobuf::uint32 value);
+  void add_player_account_ids(::google::protobuf::uint32 value);
+  const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+      player_account_ids() const;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+      mutable_player_account_ids();
+
+  // optional uint32 event_id = 1;
+  bool has_event_id() const;
+  void clear_event_id();
+  static const int kEventIdFieldNumber = 1;
+  ::google::protobuf::uint32 event_id() const;
+  void set_event_id(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientAllStarVotesSubmit)
+ private:
+  void set_has_event_id();
+  void clear_has_event_id();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > player_account_ids_;
+  ::google::protobuf::uint32 event_id_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCToClientAllStarVotesSubmitReply : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToClientAllStarVotesSubmitReply) */ {
+ public:
+  CMsgGCToClientAllStarVotesSubmitReply();
+  virtual ~CMsgGCToClientAllStarVotesSubmitReply();
+
+  CMsgGCToClientAllStarVotesSubmitReply(const CMsgGCToClientAllStarVotesSubmitReply& from);
+
+  inline CMsgGCToClientAllStarVotesSubmitReply& operator=(const CMsgGCToClientAllStarVotesSubmitReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToClientAllStarVotesSubmitReply& default_instance();
+
+  static inline const CMsgGCToClientAllStarVotesSubmitReply* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToClientAllStarVotesSubmitReply*>(
+               &_CMsgGCToClientAllStarVotesSubmitReply_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    366;
+
+  void Swap(CMsgGCToClientAllStarVotesSubmitReply* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToClientAllStarVotesSubmitReply* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToClientAllStarVotesSubmitReply* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToClientAllStarVotesSubmitReply& from);
+  void MergeFrom(const CMsgGCToClientAllStarVotesSubmitReply& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToClientAllStarVotesSubmitReply* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef CMsgGCToClientAllStarVotesSubmitReply_Result Result;
+  static const Result SUCCESS =
+    CMsgGCToClientAllStarVotesSubmitReply_Result_SUCCESS;
+  static const Result ERROR_INTERNAL =
+    CMsgGCToClientAllStarVotesSubmitReply_Result_ERROR_INTERNAL;
+  static const Result ERROR_INVALID_EVENT_ID =
+    CMsgGCToClientAllStarVotesSubmitReply_Result_ERROR_INVALID_EVENT_ID;
+  static const Result ERROR_INVALID_ACCOUNT_ID =
+    CMsgGCToClientAllStarVotesSubmitReply_Result_ERROR_INVALID_ACCOUNT_ID;
+  static const Result ERROR_SELECTIONS_LOCKED =
+    CMsgGCToClientAllStarVotesSubmitReply_Result_ERROR_SELECTIONS_LOCKED;
+  static inline bool Result_IsValid(int value) {
+    return CMsgGCToClientAllStarVotesSubmitReply_Result_IsValid(value);
+  }
+  static const Result Result_MIN =
+    CMsgGCToClientAllStarVotesSubmitReply_Result_Result_MIN;
+  static const Result Result_MAX =
+    CMsgGCToClientAllStarVotesSubmitReply_Result_Result_MAX;
+  static const int Result_ARRAYSIZE =
+    CMsgGCToClientAllStarVotesSubmitReply_Result_Result_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  Result_descriptor() {
+    return CMsgGCToClientAllStarVotesSubmitReply_Result_descriptor();
+  }
+  static inline const ::std::string& Result_Name(Result value) {
+    return CMsgGCToClientAllStarVotesSubmitReply_Result_Name(value);
+  }
+  static inline bool Result_Parse(const ::std::string& name,
+      Result* value) {
+    return CMsgGCToClientAllStarVotesSubmitReply_Result_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // optional .proto.dota.CMsgGCToClientAllStarVotesSubmitReply.Result result = 1 [default = SUCCESS];
+  bool has_result() const;
+  void clear_result();
+  static const int kResultFieldNumber = 1;
+  ::proto::dota::CMsgGCToClientAllStarVotesSubmitReply_Result result() const;
+  void set_result(::proto::dota::CMsgGCToClientAllStarVotesSubmitReply_Result value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToClientAllStarVotesSubmitReply)
+ private:
+  void set_has_result();
+  void clear_has_result();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  int result_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTAClientToGCQuickStatsRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTAClientToGCQuickStatsRequest) */ {
+ public:
+  CMsgDOTAClientToGCQuickStatsRequest();
+  virtual ~CMsgDOTAClientToGCQuickStatsRequest();
+
+  CMsgDOTAClientToGCQuickStatsRequest(const CMsgDOTAClientToGCQuickStatsRequest& from);
+
+  inline CMsgDOTAClientToGCQuickStatsRequest& operator=(const CMsgDOTAClientToGCQuickStatsRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTAClientToGCQuickStatsRequest& default_instance();
+
+  static inline const CMsgDOTAClientToGCQuickStatsRequest* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTAClientToGCQuickStatsRequest*>(
+               &_CMsgDOTAClientToGCQuickStatsRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    367;
+
+  void Swap(CMsgDOTAClientToGCQuickStatsRequest* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTAClientToGCQuickStatsRequest* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTAClientToGCQuickStatsRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTAClientToGCQuickStatsRequest& from);
+  void MergeFrom(const CMsgDOTAClientToGCQuickStatsRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTAClientToGCQuickStatsRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 player_account_id = 1;
+  bool has_player_account_id() const;
+  void clear_player_account_id();
+  static const int kPlayerAccountIdFieldNumber = 1;
+  ::google::protobuf::uint32 player_account_id() const;
+  void set_player_account_id(::google::protobuf::uint32 value);
+
+  // optional uint32 hero_id = 2;
+  bool has_hero_id() const;
+  void clear_hero_id();
+  static const int kHeroIdFieldNumber = 2;
+  ::google::protobuf::uint32 hero_id() const;
+  void set_hero_id(::google::protobuf::uint32 value);
+
+  // optional uint32 item_id = 3;
+  bool has_item_id() const;
+  void clear_item_id();
+  static const int kItemIdFieldNumber = 3;
+  ::google::protobuf::uint32 item_id() const;
+  void set_item_id(::google::protobuf::uint32 value);
+
+  // optional uint32 league_id = 4;
+  bool has_league_id() const;
+  void clear_league_id();
+  static const int kLeagueIdFieldNumber = 4;
+  ::google::protobuf::uint32 league_id() const;
+  void set_league_id(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTAClientToGCQuickStatsRequest)
+ private:
+  void set_has_player_account_id();
+  void clear_has_player_account_id();
+  void set_has_hero_id();
+  void clear_has_hero_id();
+  void set_has_item_id();
+  void clear_has_item_id();
+  void set_has_league_id();
+  void clear_has_league_id();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 player_account_id_;
+  ::google::protobuf::uint32 hero_id_;
+  ::google::protobuf::uint32 item_id_;
+  ::google::protobuf::uint32 league_id_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTAClientToGCQuickStatsResponse_SimpleStats : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats) */ {
+ public:
+  CMsgDOTAClientToGCQuickStatsResponse_SimpleStats();
+  virtual ~CMsgDOTAClientToGCQuickStatsResponse_SimpleStats();
+
+  CMsgDOTAClientToGCQuickStatsResponse_SimpleStats(const CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& from);
+
+  inline CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& operator=(const CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& default_instance();
+
+  static inline const CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTAClientToGCQuickStatsResponse_SimpleStats*>(
+               &_CMsgDOTAClientToGCQuickStatsResponse_SimpleStats_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    368;
+
+  void Swap(CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& from);
+  void MergeFrom(const CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional float win_percent = 1;
+  bool has_win_percent() const;
+  void clear_win_percent();
+  static const int kWinPercentFieldNumber = 1;
+  float win_percent() const;
+  void set_win_percent(float value);
+
+  // optional float pick_percent = 2;
+  bool has_pick_percent() const;
+  void clear_pick_percent();
+  static const int kPickPercentFieldNumber = 2;
+  float pick_percent() const;
+  void set_pick_percent(float value);
+
+  // optional uint32 win_count = 3;
+  bool has_win_count() const;
+  void clear_win_count();
+  static const int kWinCountFieldNumber = 3;
+  ::google::protobuf::uint32 win_count() const;
+  void set_win_count(::google::protobuf::uint32 value);
+
+  // optional uint32 pick_count = 4;
+  bool has_pick_count() const;
+  void clear_pick_count();
+  static const int kPickCountFieldNumber = 4;
+  ::google::protobuf::uint32 pick_count() const;
+  void set_pick_count(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats)
+ private:
+  void set_has_win_percent();
+  void clear_has_win_percent();
+  void set_has_pick_percent();
+  void clear_has_pick_percent();
+  void set_has_win_count();
+  void clear_has_win_count();
+  void set_has_pick_count();
+  void clear_has_pick_count();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  float win_percent_;
+  float pick_percent_;
+  ::google::protobuf::uint32 win_count_;
+  ::google::protobuf::uint32 pick_count_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTAClientToGCQuickStatsResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTAClientToGCQuickStatsResponse) */ {
+ public:
+  CMsgDOTAClientToGCQuickStatsResponse();
+  virtual ~CMsgDOTAClientToGCQuickStatsResponse();
+
+  CMsgDOTAClientToGCQuickStatsResponse(const CMsgDOTAClientToGCQuickStatsResponse& from);
+
+  inline CMsgDOTAClientToGCQuickStatsResponse& operator=(const CMsgDOTAClientToGCQuickStatsResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTAClientToGCQuickStatsResponse& default_instance();
+
+  static inline const CMsgDOTAClientToGCQuickStatsResponse* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTAClientToGCQuickStatsResponse*>(
+               &_CMsgDOTAClientToGCQuickStatsResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    369;
+
+  void Swap(CMsgDOTAClientToGCQuickStatsResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTAClientToGCQuickStatsResponse* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTAClientToGCQuickStatsResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTAClientToGCQuickStatsResponse& from);
+  void MergeFrom(const CMsgDOTAClientToGCQuickStatsResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTAClientToGCQuickStatsResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef CMsgDOTAClientToGCQuickStatsResponse_SimpleStats SimpleStats;
+
+  // accessors -------------------------------------------------------
+
+  // optional .proto.dota.CMsgDOTAClientToGCQuickStatsRequest original_request = 1;
+  bool has_original_request() const;
+  void clear_original_request();
+  static const int kOriginalRequestFieldNumber = 1;
+  const ::proto::dota::CMsgDOTAClientToGCQuickStatsRequest& original_request() const;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsRequest* mutable_original_request();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsRequest* release_original_request();
+  void set_allocated_original_request(::proto::dota::CMsgDOTAClientToGCQuickStatsRequest* original_request);
+
+  // optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats hero_stats = 2;
+  bool has_hero_stats() const;
+  void clear_hero_stats();
+  static const int kHeroStatsFieldNumber = 2;
+  const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& hero_stats() const;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* mutable_hero_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* release_hero_stats();
+  void set_allocated_hero_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* hero_stats);
+
+  // optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats item_stats = 3;
+  bool has_item_stats() const;
+  void clear_item_stats();
+  static const int kItemStatsFieldNumber = 3;
+  const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& item_stats() const;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* mutable_item_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* release_item_stats();
+  void set_allocated_item_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* item_stats);
+
+  // optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats item_hero_stats = 4;
+  bool has_item_hero_stats() const;
+  void clear_item_hero_stats();
+  static const int kItemHeroStatsFieldNumber = 4;
+  const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& item_hero_stats() const;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* mutable_item_hero_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* release_item_hero_stats();
+  void set_allocated_item_hero_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* item_hero_stats);
+
+  // optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats item_player_stats = 5;
+  bool has_item_player_stats() const;
+  void clear_item_player_stats();
+  static const int kItemPlayerStatsFieldNumber = 5;
+  const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& item_player_stats() const;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* mutable_item_player_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* release_item_player_stats();
+  void set_allocated_item_player_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* item_player_stats);
+
+  // optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats hero_player_stats = 6;
+  bool has_hero_player_stats() const;
+  void clear_hero_player_stats();
+  static const int kHeroPlayerStatsFieldNumber = 6;
+  const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& hero_player_stats() const;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* mutable_hero_player_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* release_hero_player_stats();
+  void set_allocated_hero_player_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* hero_player_stats);
+
+  // optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats full_set_stats = 7;
+  bool has_full_set_stats() const;
+  void clear_full_set_stats();
+  static const int kFullSetStatsFieldNumber = 7;
+  const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& full_set_stats() const;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* mutable_full_set_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* release_full_set_stats();
+  void set_allocated_full_set_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* full_set_stats);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTAClientToGCQuickStatsResponse)
+ private:
+  void set_has_original_request();
+  void clear_has_original_request();
+  void set_has_hero_stats();
+  void clear_has_hero_stats();
+  void set_has_item_stats();
+  void clear_has_item_stats();
+  void set_has_item_hero_stats();
+  void clear_has_item_hero_stats();
+  void set_has_item_player_stats();
+  void clear_has_item_player_stats();
+  void set_has_hero_player_stats();
+  void clear_has_hero_player_stats();
+  void set_has_full_set_stats();
+  void clear_has_full_set_stats();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsRequest* original_request_;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* hero_stats_;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* item_stats_;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* item_hero_stats_;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* item_player_stats_;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* hero_player_stats_;
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* full_set_stats_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTASelectionPriorityChoiceRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTASelectionPriorityChoiceRequest) */ {
+ public:
+  CMsgDOTASelectionPriorityChoiceRequest();
+  virtual ~CMsgDOTASelectionPriorityChoiceRequest();
+
+  CMsgDOTASelectionPriorityChoiceRequest(const CMsgDOTASelectionPriorityChoiceRequest& from);
+
+  inline CMsgDOTASelectionPriorityChoiceRequest& operator=(const CMsgDOTASelectionPriorityChoiceRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTASelectionPriorityChoiceRequest& default_instance();
+
+  static inline const CMsgDOTASelectionPriorityChoiceRequest* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTASelectionPriorityChoiceRequest*>(
+               &_CMsgDOTASelectionPriorityChoiceRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    370;
+
+  void Swap(CMsgDOTASelectionPriorityChoiceRequest* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTASelectionPriorityChoiceRequest* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTASelectionPriorityChoiceRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTASelectionPriorityChoiceRequest& from);
+  void MergeFrom(const CMsgDOTASelectionPriorityChoiceRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTASelectionPriorityChoiceRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .proto.dota.DOTASelectionPriorityChoice choice = 1 [default = k_DOTASelectionPriorityChoice_Invalid];
+  bool has_choice() const;
+  void clear_choice();
+  static const int kChoiceFieldNumber = 1;
+  ::proto::dota::DOTASelectionPriorityChoice choice() const;
+  void set_choice(::proto::dota::DOTASelectionPriorityChoice value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTASelectionPriorityChoiceRequest)
+ private:
+  void set_has_choice();
+  void clear_has_choice();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  int choice_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTASelectionPriorityChoiceResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTASelectionPriorityChoiceResponse) */ {
+ public:
+  CMsgDOTASelectionPriorityChoiceResponse();
+  virtual ~CMsgDOTASelectionPriorityChoiceResponse();
+
+  CMsgDOTASelectionPriorityChoiceResponse(const CMsgDOTASelectionPriorityChoiceResponse& from);
+
+  inline CMsgDOTASelectionPriorityChoiceResponse& operator=(const CMsgDOTASelectionPriorityChoiceResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTASelectionPriorityChoiceResponse& default_instance();
+
+  static inline const CMsgDOTASelectionPriorityChoiceResponse* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTASelectionPriorityChoiceResponse*>(
+               &_CMsgDOTASelectionPriorityChoiceResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    371;
+
+  void Swap(CMsgDOTASelectionPriorityChoiceResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTASelectionPriorityChoiceResponse* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTASelectionPriorityChoiceResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTASelectionPriorityChoiceResponse& from);
+  void MergeFrom(const CMsgDOTASelectionPriorityChoiceResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTASelectionPriorityChoiceResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef CMsgDOTASelectionPriorityChoiceResponse_Result Result;
+  static const Result SUCCESS =
+    CMsgDOTASelectionPriorityChoiceResponse_Result_SUCCESS;
+  static const Result ERROR_UNKNOWN =
+    CMsgDOTASelectionPriorityChoiceResponse_Result_ERROR_UNKNOWN;
+  static inline bool Result_IsValid(int value) {
+    return CMsgDOTASelectionPriorityChoiceResponse_Result_IsValid(value);
+  }
+  static const Result Result_MIN =
+    CMsgDOTASelectionPriorityChoiceResponse_Result_Result_MIN;
+  static const Result Result_MAX =
+    CMsgDOTASelectionPriorityChoiceResponse_Result_Result_MAX;
+  static const int Result_ARRAYSIZE =
+    CMsgDOTASelectionPriorityChoiceResponse_Result_Result_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  Result_descriptor() {
+    return CMsgDOTASelectionPriorityChoiceResponse_Result_descriptor();
+  }
+  static inline const ::std::string& Result_Name(Result value) {
+    return CMsgDOTASelectionPriorityChoiceResponse_Result_Name(value);
+  }
+  static inline bool Result_Parse(const ::std::string& name,
+      Result* value) {
+    return CMsgDOTASelectionPriorityChoiceResponse_Result_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // optional .proto.dota.CMsgDOTASelectionPriorityChoiceResponse.Result result = 1 [default = SUCCESS];
+  bool has_result() const;
+  void clear_result();
+  static const int kResultFieldNumber = 1;
+  ::proto::dota::CMsgDOTASelectionPriorityChoiceResponse_Result result() const;
+  void set_result(::proto::dota::CMsgDOTASelectionPriorityChoiceResponse_Result value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTASelectionPriorityChoiceResponse)
+ private:
+  void set_has_result();
+  void clear_has_result();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  int result_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTAGameAutographReward : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTAGameAutographReward) */ {
+ public:
+  CMsgDOTAGameAutographReward();
+  virtual ~CMsgDOTAGameAutographReward();
+
+  CMsgDOTAGameAutographReward(const CMsgDOTAGameAutographReward& from);
+
+  inline CMsgDOTAGameAutographReward& operator=(const CMsgDOTAGameAutographReward& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTAGameAutographReward& default_instance();
+
+  static inline const CMsgDOTAGameAutographReward* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTAGameAutographReward*>(
+               &_CMsgDOTAGameAutographReward_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    372;
+
+  void Swap(CMsgDOTAGameAutographReward* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTAGameAutographReward* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTAGameAutographReward* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTAGameAutographReward& from);
+  void MergeFrom(const CMsgDOTAGameAutographReward& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTAGameAutographReward* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string badge_id = 1;
+  bool has_badge_id() const;
+  void clear_badge_id();
+  static const int kBadgeIdFieldNumber = 1;
+  const ::std::string& badge_id() const;
+  void set_badge_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_badge_id(::std::string&& value);
+  #endif
+  void set_badge_id(const char* value);
+  void set_badge_id(const char* value, size_t size);
+  ::std::string* mutable_badge_id();
+  ::std::string* release_badge_id();
+  void set_allocated_badge_id(::std::string* badge_id);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTAGameAutographReward)
+ private:
+  void set_has_badge_id();
+  void clear_has_badge_id();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr badge_id_;
+  friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTAGameAutographRewardResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTAGameAutographRewardResponse) */ {
+ public:
+  CMsgDOTAGameAutographRewardResponse();
+  virtual ~CMsgDOTAGameAutographRewardResponse();
+
+  CMsgDOTAGameAutographRewardResponse(const CMsgDOTAGameAutographRewardResponse& from);
+
+  inline CMsgDOTAGameAutographRewardResponse& operator=(const CMsgDOTAGameAutographRewardResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTAGameAutographRewardResponse& default_instance();
+
+  static inline const CMsgDOTAGameAutographRewardResponse* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTAGameAutographRewardResponse*>(
+               &_CMsgDOTAGameAutographRewardResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    373;
+
+  void Swap(CMsgDOTAGameAutographRewardResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTAGameAutographRewardResponse* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTAGameAutographRewardResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTAGameAutographRewardResponse& from);
+  void MergeFrom(const CMsgDOTAGameAutographRewardResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTAGameAutographRewardResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef CMsgDOTAGameAutographRewardResponse_Result Result;
+  static const Result SUCCESS =
+    CMsgDOTAGameAutographRewardResponse_Result_SUCCESS;
+  static const Result ERROR_UNKNOWN =
+    CMsgDOTAGameAutographRewardResponse_Result_ERROR_UNKNOWN;
+  static inline bool Result_IsValid(int value) {
+    return CMsgDOTAGameAutographRewardResponse_Result_IsValid(value);
+  }
+  static const Result Result_MIN =
+    CMsgDOTAGameAutographRewardResponse_Result_Result_MIN;
+  static const Result Result_MAX =
+    CMsgDOTAGameAutographRewardResponse_Result_Result_MAX;
+  static const int Result_ARRAYSIZE =
+    CMsgDOTAGameAutographRewardResponse_Result_Result_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  Result_descriptor() {
+    return CMsgDOTAGameAutographRewardResponse_Result_descriptor();
+  }
+  static inline const ::std::string& Result_Name(Result value) {
+    return CMsgDOTAGameAutographRewardResponse_Result_Name(value);
+  }
+  static inline bool Result_Parse(const ::std::string& name,
+      Result* value) {
+    return CMsgDOTAGameAutographRewardResponse_Result_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // optional .proto.dota.CMsgDOTAGameAutographRewardResponse.Result result = 1 [default = SUCCESS];
+  bool has_result() const;
+  void clear_result();
+  static const int kResultFieldNumber = 1;
+  ::proto::dota::CMsgDOTAGameAutographRewardResponse_Result result() const;
+  void set_result(::proto::dota::CMsgDOTAGameAutographRewardResponse_Result value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTAGameAutographRewardResponse)
+ private:
+  void set_has_result();
+  void clear_has_result();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  int result_;
   friend struct protobuf_dota_5fgcmessages_5fclient_2eproto::TableStruct;
 };
 // ===================================================================
@@ -47210,13 +49820,13 @@ inline void CDynamicLeagueData::set_compendium_content_version(::google::protobu
 
 // optional uint32 league_id = 1;
 inline bool CStaticLeagueData::has_league_id() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void CStaticLeagueData::set_has_league_id() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void CStaticLeagueData::clear_has_league_id() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void CStaticLeagueData::clear_league_id() {
   league_id_ = 0u;
@@ -47549,13 +50159,13 @@ inline void CStaticLeagueData::set_allocated_url(::std::string* url) {
 
 // optional uint32 item_def_index = 7;
 inline bool CStaticLeagueData::has_item_def_index() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void CStaticLeagueData::set_has_item_def_index() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void CStaticLeagueData::clear_has_item_def_index() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void CStaticLeagueData::clear_item_def_index() {
   item_def_index_ = 0u;
@@ -47573,13 +50183,13 @@ inline void CStaticLeagueData::set_item_def_index(::google::protobuf::uint32 val
 
 // optional uint32 hud_skin_item_def_index = 8;
 inline bool CStaticLeagueData::has_hud_skin_item_def_index() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 inline void CStaticLeagueData::set_has_hud_skin_item_def_index() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 inline void CStaticLeagueData::clear_has_hud_skin_item_def_index() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline void CStaticLeagueData::clear_hud_skin_item_def_index() {
   hud_skin_item_def_index_ = 0u;
@@ -47660,13 +50270,13 @@ inline void CStaticLeagueData::set_allocated_loading_screen_name(::std::string* 
 
 // optional uint32 base_prize_pool = 10;
 inline bool CStaticLeagueData::has_base_prize_pool() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 inline void CStaticLeagueData::set_has_base_prize_pool() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
 }
 inline void CStaticLeagueData::clear_has_base_prize_pool() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline void CStaticLeagueData::clear_base_prize_pool() {
   base_prize_pool_ = 0u;
@@ -47704,30 +50314,6 @@ inline void CStaticLeagueData::set_is_major(bool value) {
   set_has_is_major();
   is_major_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CStaticLeagueData.is_major)
-}
-
-// optional uint32 sort_order = 12;
-inline bool CStaticLeagueData::has_sort_order() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
-}
-inline void CStaticLeagueData::set_has_sort_order() {
-  _has_bits_[0] |= 0x00004000u;
-}
-inline void CStaticLeagueData::clear_has_sort_order() {
-  _has_bits_[0] &= ~0x00004000u;
-}
-inline void CStaticLeagueData::clear_sort_order() {
-  sort_order_ = 0u;
-  clear_has_sort_order();
-}
-inline ::google::protobuf::uint32 CStaticLeagueData::sort_order() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CStaticLeagueData.sort_order)
-  return sort_order_;
-}
-inline void CStaticLeagueData::set_sort_order(::google::protobuf::uint32 value) {
-  set_has_sort_order();
-  sort_order_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CStaticLeagueData.sort_order)
 }
 
 // optional uint32 tier = 13;
@@ -48102,6 +50688,69 @@ inline void CStaticLeagueData::set_battle_pass_rollup(bool value) {
   // @@protoc_insertion_point(field_set:proto.dota.CStaticLeagueData.battle_pass_rollup)
 }
 
+// optional string base_prize_pool_string = 22;
+inline bool CStaticLeagueData::has_base_prize_pool_string() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void CStaticLeagueData::set_has_base_prize_pool_string() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void CStaticLeagueData::clear_has_base_prize_pool_string() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void CStaticLeagueData::clear_base_prize_pool_string() {
+  base_prize_pool_string_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_base_prize_pool_string();
+}
+inline const ::std::string& CStaticLeagueData::base_prize_pool_string() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CStaticLeagueData.base_prize_pool_string)
+  return base_prize_pool_string_.GetNoArena();
+}
+inline void CStaticLeagueData::set_base_prize_pool_string(const ::std::string& value) {
+  set_has_base_prize_pool_string();
+  base_prize_pool_string_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.dota.CStaticLeagueData.base_prize_pool_string)
+}
+#if LANG_CXX11
+inline void CStaticLeagueData::set_base_prize_pool_string(::std::string&& value) {
+  set_has_base_prize_pool_string();
+  base_prize_pool_string_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.dota.CStaticLeagueData.base_prize_pool_string)
+}
+#endif
+inline void CStaticLeagueData::set_base_prize_pool_string(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_base_prize_pool_string();
+  base_prize_pool_string_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.dota.CStaticLeagueData.base_prize_pool_string)
+}
+inline void CStaticLeagueData::set_base_prize_pool_string(const char* value, size_t size) {
+  set_has_base_prize_pool_string();
+  base_prize_pool_string_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.dota.CStaticLeagueData.base_prize_pool_string)
+}
+inline ::std::string* CStaticLeagueData::mutable_base_prize_pool_string() {
+  set_has_base_prize_pool_string();
+  // @@protoc_insertion_point(field_mutable:proto.dota.CStaticLeagueData.base_prize_pool_string)
+  return base_prize_pool_string_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CStaticLeagueData::release_base_prize_pool_string() {
+  // @@protoc_insertion_point(field_release:proto.dota.CStaticLeagueData.base_prize_pool_string)
+  clear_has_base_prize_pool_string();
+  return base_prize_pool_string_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CStaticLeagueData::set_allocated_base_prize_pool_string(::std::string* base_prize_pool_string) {
+  if (base_prize_pool_string != NULL) {
+    set_has_base_prize_pool_string();
+  } else {
+    clear_has_base_prize_pool_string();
+  }
+  base_prize_pool_string_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), base_prize_pool_string);
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CStaticLeagueData.base_prize_pool_string)
+}
+
 // -------------------------------------------------------------------
 
 // CLeagueData
@@ -48218,6 +50867,40 @@ inline void CLeagueData::set_is_owned(bool value) {
   set_has_is_owned();
   is_owned_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CLeagueData.is_owned)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgResponseLeagueStaticData
+
+// repeated .proto.dota.CStaticLeagueData leagues = 1;
+inline int CMsgResponseLeagueStaticData::leagues_size() const {
+  return leagues_.size();
+}
+inline void CMsgResponseLeagueStaticData::clear_leagues() {
+  leagues_.Clear();
+}
+inline const ::proto::dota::CStaticLeagueData& CMsgResponseLeagueStaticData::leagues(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgResponseLeagueStaticData.leagues)
+  return leagues_.Get(index);
+}
+inline ::proto::dota::CStaticLeagueData* CMsgResponseLeagueStaticData::mutable_leagues(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgResponseLeagueStaticData.leagues)
+  return leagues_.Mutable(index);
+}
+inline ::proto::dota::CStaticLeagueData* CMsgResponseLeagueStaticData::add_leagues() {
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgResponseLeagueStaticData.leagues)
+  return leagues_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CStaticLeagueData >*
+CMsgResponseLeagueStaticData::mutable_leagues() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgResponseLeagueStaticData.leagues)
+  return &leagues_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CStaticLeagueData >&
+CMsgResponseLeagueStaticData::leagues() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgResponseLeagueStaticData.leagues)
+  return leagues_;
 }
 
 // -------------------------------------------------------------------
@@ -67118,39 +69801,45 @@ CMsgClientToGCOpenPlayerCardPackResponse::mutable_player_card_item_ids() {
 
 // CMsgClientToGCRecyclePlayerCard
 
-// optional uint64 player_card_item_id = 1;
-inline bool CMsgClientToGCRecyclePlayerCard::has_player_card_item_id() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
+// repeated uint64 player_card_item_ids = 3;
+inline int CMsgClientToGCRecyclePlayerCard::player_card_item_ids_size() const {
+  return player_card_item_ids_.size();
 }
-inline void CMsgClientToGCRecyclePlayerCard::set_has_player_card_item_id() {
-  _has_bits_[0] |= 0x00000001u;
+inline void CMsgClientToGCRecyclePlayerCard::clear_player_card_item_ids() {
+  player_card_item_ids_.Clear();
 }
-inline void CMsgClientToGCRecyclePlayerCard::clear_has_player_card_item_id() {
-  _has_bits_[0] &= ~0x00000001u;
+inline ::google::protobuf::uint64 CMsgClientToGCRecyclePlayerCard::player_card_item_ids(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgClientToGCRecyclePlayerCard.player_card_item_ids)
+  return player_card_item_ids_.Get(index);
 }
-inline void CMsgClientToGCRecyclePlayerCard::clear_player_card_item_id() {
-  player_card_item_id_ = GOOGLE_ULONGLONG(0);
-  clear_has_player_card_item_id();
+inline void CMsgClientToGCRecyclePlayerCard::set_player_card_item_ids(int index, ::google::protobuf::uint64 value) {
+  player_card_item_ids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgClientToGCRecyclePlayerCard.player_card_item_ids)
 }
-inline ::google::protobuf::uint64 CMsgClientToGCRecyclePlayerCard::player_card_item_id() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgClientToGCRecyclePlayerCard.player_card_item_id)
-  return player_card_item_id_;
+inline void CMsgClientToGCRecyclePlayerCard::add_player_card_item_ids(::google::protobuf::uint64 value) {
+  player_card_item_ids_.Add(value);
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgClientToGCRecyclePlayerCard.player_card_item_ids)
 }
-inline void CMsgClientToGCRecyclePlayerCard::set_player_card_item_id(::google::protobuf::uint64 value) {
-  set_has_player_card_item_id();
-  player_card_item_id_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgClientToGCRecyclePlayerCard.player_card_item_id)
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
+CMsgClientToGCRecyclePlayerCard::player_card_item_ids() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgClientToGCRecyclePlayerCard.player_card_item_ids)
+  return player_card_item_ids_;
+}
+inline ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+CMsgClientToGCRecyclePlayerCard::mutable_player_card_item_ids() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgClientToGCRecyclePlayerCard.player_card_item_ids)
+  return &player_card_item_ids_;
 }
 
 // optional uint32 event_id = 2;
 inline bool CMsgClientToGCRecyclePlayerCard::has_event_id() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
 inline void CMsgClientToGCRecyclePlayerCard::set_has_event_id() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000001u;
 }
 inline void CMsgClientToGCRecyclePlayerCard::clear_has_event_id() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000001u;
 }
 inline void CMsgClientToGCRecyclePlayerCard::clear_event_id() {
   event_id_ = 0u;
@@ -67269,6 +69958,30 @@ inline void CMsgClientToGCCreatePlayerCardPack::set_event_id(::google::protobuf:
   set_has_event_id();
   event_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgClientToGCCreatePlayerCardPack.event_id)
+}
+
+// optional bool premium_pack = 3;
+inline bool CMsgClientToGCCreatePlayerCardPack::has_premium_pack() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgClientToGCCreatePlayerCardPack::set_has_premium_pack() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgClientToGCCreatePlayerCardPack::clear_has_premium_pack() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgClientToGCCreatePlayerCardPack::clear_premium_pack() {
+  premium_pack_ = false;
+  clear_has_premium_pack();
+}
+inline bool CMsgClientToGCCreatePlayerCardPack::premium_pack() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgClientToGCCreatePlayerCardPack.premium_pack)
+  return premium_pack_;
+}
+inline void CMsgClientToGCCreatePlayerCardPack::set_premium_pack(bool value) {
+  set_has_premium_pack();
+  premium_pack_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgClientToGCCreatePlayerCardPack.premium_pack)
 }
 
 // -------------------------------------------------------------------
@@ -69312,6 +72025,1011 @@ inline void CMsgGCToClientBattlePassRollup_Fall2016::set_allocated_fantasy_chall
 
 // -------------------------------------------------------------------
 
+// CMsgGCToClientBattlePassRollup_Winter2017_Questlines
+
+// optional string name = 1;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Questlines::has_name() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_has_name() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::clear_has_name() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_name();
+}
+inline const ::std::string& CMsgGCToClientBattlePassRollup_Winter2017_Questlines::name() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.name)
+  return name_.GetNoArena();
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_name(const ::std::string& value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.name)
+}
+#if LANG_CXX11
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_name(::std::string&& value) {
+  set_has_name();
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.name)
+}
+#endif
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.name)
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_name(const char* value, size_t size) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.name)
+}
+inline ::std::string* CMsgGCToClientBattlePassRollup_Winter2017_Questlines::mutable_name() {
+  set_has_name();
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CMsgGCToClientBattlePassRollup_Winter2017_Questlines::release_name() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.name)
+  clear_has_name();
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    set_has_name();
+  } else {
+    clear_has_name();
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.name)
+}
+
+// optional uint32 onestar = 2;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Questlines::has_onestar() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_has_onestar() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::clear_has_onestar() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::clear_onestar() {
+  onestar_ = 0u;
+  clear_has_onestar();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Questlines::onestar() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.onestar)
+  return onestar_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_onestar(::google::protobuf::uint32 value) {
+  set_has_onestar();
+  onestar_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.onestar)
+}
+
+// optional uint32 twostar = 3;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Questlines::has_twostar() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_has_twostar() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::clear_has_twostar() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::clear_twostar() {
+  twostar_ = 0u;
+  clear_has_twostar();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Questlines::twostar() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.twostar)
+  return twostar_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_twostar(::google::protobuf::uint32 value) {
+  set_has_twostar();
+  twostar_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.twostar)
+}
+
+// optional uint32 threestar = 4;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Questlines::has_threestar() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_has_threestar() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::clear_has_threestar() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::clear_threestar() {
+  threestar_ = 0u;
+  clear_has_threestar();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Questlines::threestar() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.threestar)
+  return threestar_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_threestar(::google::protobuf::uint32 value) {
+  set_has_threestar();
+  threestar_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.threestar)
+}
+
+// optional uint32 total = 5;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Questlines::has_total() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_has_total() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::clear_has_total() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::clear_total() {
+  total_ = 0u;
+  clear_has_total();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Questlines::total() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.total)
+  return total_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Questlines::set_total(::google::protobuf::uint32 value) {
+  set_has_total();
+  total_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines.total)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientBattlePassRollup_Winter2017_Wagering
+
+// optional uint32 total_wagered = 1;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Wagering::has_total_wagered() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::set_has_total_wagered() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::clear_has_total_wagered() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::clear_total_wagered() {
+  total_wagered_ = 0u;
+  clear_has_total_wagered();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Wagering::total_wagered() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering.total_wagered)
+  return total_wagered_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::set_total_wagered(::google::protobuf::uint32 value) {
+  set_has_total_wagered();
+  total_wagered_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering.total_wagered)
+}
+
+// optional uint32 total_won = 2;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Wagering::has_total_won() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::set_has_total_won() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::clear_has_total_won() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::clear_total_won() {
+  total_won_ = 0u;
+  clear_has_total_won();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Wagering::total_won() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering.total_won)
+  return total_won_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::set_total_won(::google::protobuf::uint32 value) {
+  set_has_total_won();
+  total_won_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering.total_won)
+}
+
+// optional uint32 average_won = 3;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Wagering::has_average_won() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::set_has_average_won() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::clear_has_average_won() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::clear_average_won() {
+  average_won_ = 0u;
+  clear_has_average_won();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Wagering::average_won() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering.average_won)
+  return average_won_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::set_average_won(::google::protobuf::uint32 value) {
+  set_has_average_won();
+  average_won_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering.average_won)
+}
+
+// optional uint32 success_rate = 4;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Wagering::has_success_rate() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::set_has_success_rate() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::clear_has_success_rate() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::clear_success_rate() {
+  success_rate_ = 0u;
+  clear_has_success_rate();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Wagering::success_rate() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering.success_rate)
+  return success_rate_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::set_success_rate(::google::protobuf::uint32 value) {
+  set_has_success_rate();
+  success_rate_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering.success_rate)
+}
+
+// optional uint32 total_tips = 5;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Wagering::has_total_tips() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::set_has_total_tips() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::clear_has_total_tips() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::clear_total_tips() {
+  total_tips_ = 0u;
+  clear_has_total_tips();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Wagering::total_tips() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering.total_tips)
+  return total_tips_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Wagering::set_total_tips(::google::protobuf::uint32 value) {
+  set_has_total_tips();
+  total_tips_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering.total_tips)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientBattlePassRollup_Winter2017_Achievements
+
+// optional uint32 completed = 1;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Achievements::has_completed() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::set_has_completed() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::clear_has_completed() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::clear_completed() {
+  completed_ = 0u;
+  clear_has_completed();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Achievements::completed() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements.completed)
+  return completed_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::set_completed(::google::protobuf::uint32 value) {
+  set_has_completed();
+  completed_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements.completed)
+}
+
+// optional uint32 total = 2;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Achievements::has_total() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::set_has_total() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::clear_has_total() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::clear_total() {
+  total_ = 0u;
+  clear_has_total();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Achievements::total() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements.total)
+  return total_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::set_total(::google::protobuf::uint32 value) {
+  set_has_total();
+  total_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements.total)
+}
+
+// optional uint32 points = 3;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Achievements::has_points() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::set_has_points() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::clear_has_points() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::clear_points() {
+  points_ = 0u;
+  clear_has_points();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Achievements::points() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements.points)
+  return points_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Achievements::set_points(::google::protobuf::uint32 value) {
+  set_has_points();
+  points_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements.points)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientBattlePassRollup_Winter2017_BattleCup
+
+// optional uint32 wins = 1;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::has_wins() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::set_has_wins() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::clear_has_wins() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::clear_wins() {
+  wins_ = 0u;
+  clear_has_wins();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::wins() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup.wins)
+  return wins_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::set_wins(::google::protobuf::uint32 value) {
+  set_has_wins();
+  wins_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup.wins)
+}
+
+// optional uint32 score = 2;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::has_score() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::set_has_score() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::clear_has_score() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::clear_score() {
+  score_ = 0u;
+  clear_has_score();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::score() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup.score)
+  return score_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::set_score(::google::protobuf::uint32 value) {
+  set_has_score();
+  score_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup.score)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientBattlePassRollup_Winter2017_Predictions
+
+// optional uint32 correct = 1;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Predictions::has_correct() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::set_has_correct() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::clear_has_correct() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::clear_correct() {
+  correct_ = 0u;
+  clear_has_correct();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Predictions::correct() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions.correct)
+  return correct_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::set_correct(::google::protobuf::uint32 value) {
+  set_has_correct();
+  correct_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions.correct)
+}
+
+// optional uint32 total = 2;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Predictions::has_total() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::set_has_total() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::clear_has_total() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::clear_total() {
+  total_ = 0u;
+  clear_has_total();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Predictions::total() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions.total)
+  return total_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::set_total(::google::protobuf::uint32 value) {
+  set_has_total();
+  total_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions.total)
+}
+
+// optional uint32 points = 3;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Predictions::has_points() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::set_has_points() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::clear_has_points() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::clear_points() {
+  points_ = 0u;
+  clear_has_points();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Predictions::points() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions.points)
+  return points_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Predictions::set_points(::google::protobuf::uint32 value) {
+  set_has_points();
+  points_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions.points)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientBattlePassRollup_Winter2017_Bracket
+
+// optional uint32 correct = 1;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Bracket::has_correct() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Bracket::set_has_correct() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Bracket::clear_has_correct() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Bracket::clear_correct() {
+  correct_ = 0u;
+  clear_has_correct();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Bracket::correct() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket.correct)
+  return correct_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Bracket::set_correct(::google::protobuf::uint32 value) {
+  set_has_correct();
+  correct_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket.correct)
+}
+
+// optional uint32 points = 2;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_Bracket::has_points() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Bracket::set_has_points() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Bracket::clear_has_points() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Bracket::clear_points() {
+  points_ = 0u;
+  clear_has_points();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_Bracket::points() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket.points)
+  return points_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_Bracket::set_points(::google::protobuf::uint32 value) {
+  set_has_points();
+  points_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket.points)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard
+
+// optional uint32 account_id = 1;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::has_account_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::set_has_account_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::clear_has_account_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::clear_account_id() {
+  account_id_ = 0u;
+  clear_has_account_id();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::account_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard.account_id)
+  return account_id_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::set_account_id(::google::protobuf::uint32 value) {
+  set_has_account_id();
+  account_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard.account_id)
+}
+
+// optional uint32 quality = 2;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::has_quality() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::set_has_quality() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::clear_has_quality() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::clear_quality() {
+  quality_ = 0u;
+  clear_has_quality();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::quality() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard.quality)
+  return quality_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard::set_quality(::google::protobuf::uint32 value) {
+  set_has_quality();
+  quality_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard.quality)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge
+
+// optional float total_score = 1;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::has_total_score() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::set_has_total_score() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::clear_has_total_score() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::clear_total_score() {
+  total_score_ = 0;
+  clear_has_total_score();
+}
+inline float CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::total_score() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge.total_score)
+  return total_score_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::set_total_score(float value) {
+  set_has_total_score();
+  total_score_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge.total_score)
+}
+
+// optional float percentile = 2;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::has_percentile() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::set_has_percentile() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::clear_has_percentile() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::clear_percentile() {
+  percentile_ = 0;
+  clear_has_percentile();
+}
+inline float CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::percentile() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge.percentile)
+  return percentile_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::set_percentile(float value) {
+  set_has_percentile();
+  percentile_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge.percentile)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientBattlePassRollup_Winter2017
+
+// optional uint32 battle_pass_level = 1;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017::has_battle_pass_level() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_has_battle_pass_level() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_has_battle_pass_level() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_battle_pass_level() {
+  battle_pass_level_ = 0u;
+  clear_has_battle_pass_level();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientBattlePassRollup_Winter2017::battle_pass_level() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.battle_pass_level)
+  return battle_pass_level_;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_battle_pass_level(::google::protobuf::uint32 value) {
+  set_has_battle_pass_level();
+  battle_pass_level_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.battle_pass_level)
+}
+
+// repeated .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines questlines = 2;
+inline int CMsgGCToClientBattlePassRollup_Winter2017::questlines_size() const {
+  return questlines_.size();
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_questlines() {
+  questlines_.Clear();
+}
+inline const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines& CMsgGCToClientBattlePassRollup_Winter2017::questlines(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.questlines)
+  return questlines_.Get(index);
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines* CMsgGCToClientBattlePassRollup_Winter2017::mutable_questlines(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.questlines)
+  return questlines_.Mutable(index);
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines* CMsgGCToClientBattlePassRollup_Winter2017::add_questlines() {
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.questlines)
+  return questlines_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines >*
+CMsgGCToClientBattlePassRollup_Winter2017::mutable_questlines() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.questlines)
+  return &questlines_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Questlines >&
+CMsgGCToClientBattlePassRollup_Winter2017::questlines() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.questlines)
+  return questlines_;
+}
+
+// optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering wagering = 3;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017::has_wagering() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_has_wagering() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_has_wagering() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_wagering() {
+  if (wagering_ != NULL) wagering_->::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering::Clear();
+  clear_has_wagering();
+}
+inline const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering& CMsgGCToClientBattlePassRollup_Winter2017::wagering() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.wagering)
+  return wagering_ != NULL ? *wagering_
+                         : *::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering::internal_default_instance();
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering* CMsgGCToClientBattlePassRollup_Winter2017::mutable_wagering() {
+  set_has_wagering();
+  if (wagering_ == NULL) {
+    wagering_ = new ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.wagering)
+  return wagering_;
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering* CMsgGCToClientBattlePassRollup_Winter2017::release_wagering() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.wagering)
+  clear_has_wagering();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering* temp = wagering_;
+  wagering_ = NULL;
+  return temp;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_allocated_wagering(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Wagering* wagering) {
+  delete wagering_;
+  wagering_ = wagering;
+  if (wagering) {
+    set_has_wagering();
+  } else {
+    clear_has_wagering();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.wagering)
+}
+
+// optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements achievements = 4;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017::has_achievements() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_has_achievements() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_has_achievements() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_achievements() {
+  if (achievements_ != NULL) achievements_->::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements::Clear();
+  clear_has_achievements();
+}
+inline const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements& CMsgGCToClientBattlePassRollup_Winter2017::achievements() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.achievements)
+  return achievements_ != NULL ? *achievements_
+                         : *::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements::internal_default_instance();
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements* CMsgGCToClientBattlePassRollup_Winter2017::mutable_achievements() {
+  set_has_achievements();
+  if (achievements_ == NULL) {
+    achievements_ = new ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.achievements)
+  return achievements_;
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements* CMsgGCToClientBattlePassRollup_Winter2017::release_achievements() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.achievements)
+  clear_has_achievements();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements* temp = achievements_;
+  achievements_ = NULL;
+  return temp;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_allocated_achievements(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Achievements* achievements) {
+  delete achievements_;
+  achievements_ = achievements;
+  if (achievements) {
+    set_has_achievements();
+  } else {
+    clear_has_achievements();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.achievements)
+}
+
+// optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup battle_cup = 5;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017::has_battle_cup() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_has_battle_cup() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_has_battle_cup() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_battle_cup() {
+  if (battle_cup_ != NULL) battle_cup_->::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::Clear();
+  clear_has_battle_cup();
+}
+inline const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup& CMsgGCToClientBattlePassRollup_Winter2017::battle_cup() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.battle_cup)
+  return battle_cup_ != NULL ? *battle_cup_
+                         : *::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup::internal_default_instance();
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* CMsgGCToClientBattlePassRollup_Winter2017::mutable_battle_cup() {
+  set_has_battle_cup();
+  if (battle_cup_ == NULL) {
+    battle_cup_ = new ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.battle_cup)
+  return battle_cup_;
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* CMsgGCToClientBattlePassRollup_Winter2017::release_battle_cup() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.battle_cup)
+  clear_has_battle_cup();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* temp = battle_cup_;
+  battle_cup_ = NULL;
+  return temp;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_allocated_battle_cup(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_BattleCup* battle_cup) {
+  delete battle_cup_;
+  battle_cup_ = battle_cup;
+  if (battle_cup) {
+    set_has_battle_cup();
+  } else {
+    clear_has_battle_cup();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.battle_cup)
+}
+
+// optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions predictions = 6;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017::has_predictions() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_has_predictions() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_has_predictions() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_predictions() {
+  if (predictions_ != NULL) predictions_->::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions::Clear();
+  clear_has_predictions();
+}
+inline const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions& CMsgGCToClientBattlePassRollup_Winter2017::predictions() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.predictions)
+  return predictions_ != NULL ? *predictions_
+                         : *::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions::internal_default_instance();
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions* CMsgGCToClientBattlePassRollup_Winter2017::mutable_predictions() {
+  set_has_predictions();
+  if (predictions_ == NULL) {
+    predictions_ = new ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.predictions)
+  return predictions_;
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions* CMsgGCToClientBattlePassRollup_Winter2017::release_predictions() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.predictions)
+  clear_has_predictions();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions* temp = predictions_;
+  predictions_ = NULL;
+  return temp;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_allocated_predictions(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Predictions* predictions) {
+  delete predictions_;
+  predictions_ = predictions;
+  if (predictions) {
+    set_has_predictions();
+  } else {
+    clear_has_predictions();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.predictions)
+}
+
+// optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket bracket = 7;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017::has_bracket() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_has_bracket() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_has_bracket() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_bracket() {
+  if (bracket_ != NULL) bracket_->::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket::Clear();
+  clear_has_bracket();
+}
+inline const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket& CMsgGCToClientBattlePassRollup_Winter2017::bracket() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.bracket)
+  return bracket_ != NULL ? *bracket_
+                         : *::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket::internal_default_instance();
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket* CMsgGCToClientBattlePassRollup_Winter2017::mutable_bracket() {
+  set_has_bracket();
+  if (bracket_ == NULL) {
+    bracket_ = new ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.bracket)
+  return bracket_;
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket* CMsgGCToClientBattlePassRollup_Winter2017::release_bracket() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.bracket)
+  clear_has_bracket();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket* temp = bracket_;
+  bracket_ = NULL;
+  return temp;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_allocated_bracket(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_Bracket* bracket) {
+  delete bracket_;
+  bracket_ = bracket;
+  if (bracket) {
+    set_has_bracket();
+  } else {
+    clear_has_bracket();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.bracket)
+}
+
+// repeated .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard player_cards = 8;
+inline int CMsgGCToClientBattlePassRollup_Winter2017::player_cards_size() const {
+  return player_cards_.size();
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_player_cards() {
+  player_cards_.Clear();
+}
+inline const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard& CMsgGCToClientBattlePassRollup_Winter2017::player_cards(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.player_cards)
+  return player_cards_.Get(index);
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard* CMsgGCToClientBattlePassRollup_Winter2017::mutable_player_cards(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.player_cards)
+  return player_cards_.Mutable(index);
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard* CMsgGCToClientBattlePassRollup_Winter2017::add_player_cards() {
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.player_cards)
+  return player_cards_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard >*
+CMsgGCToClientBattlePassRollup_Winter2017::mutable_player_cards() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.player_cards)
+  return &player_cards_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_PlayerCard >&
+CMsgGCToClientBattlePassRollup_Winter2017::player_cards() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.player_cards)
+  return player_cards_;
+}
+
+// optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge fantasy_challenge = 9;
+inline bool CMsgGCToClientBattlePassRollup_Winter2017::has_fantasy_challenge() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_has_fantasy_challenge() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_has_fantasy_challenge() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::clear_fantasy_challenge() {
+  if (fantasy_challenge_ != NULL) fantasy_challenge_->::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::Clear();
+  clear_has_fantasy_challenge();
+}
+inline const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge& CMsgGCToClientBattlePassRollup_Winter2017::fantasy_challenge() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.fantasy_challenge)
+  return fantasy_challenge_ != NULL ? *fantasy_challenge_
+                         : *::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge::internal_default_instance();
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* CMsgGCToClientBattlePassRollup_Winter2017::mutable_fantasy_challenge() {
+  set_has_fantasy_challenge();
+  if (fantasy_challenge_ == NULL) {
+    fantasy_challenge_ = new ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.fantasy_challenge)
+  return fantasy_challenge_;
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* CMsgGCToClientBattlePassRollup_Winter2017::release_fantasy_challenge() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.fantasy_challenge)
+  clear_has_fantasy_challenge();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* temp = fantasy_challenge_;
+  fantasy_challenge_ = NULL;
+  return temp;
+}
+inline void CMsgGCToClientBattlePassRollup_Winter2017::set_allocated_fantasy_challenge(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017_FantasyChallenge* fantasy_challenge) {
+  delete fantasy_challenge_;
+  fantasy_challenge_ = fantasy_challenge;
+  if (fantasy_challenge) {
+    set_has_fantasy_challenge();
+  } else {
+    clear_has_fantasy_challenge();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientBattlePassRollup_Winter2017.fantasy_challenge)
+}
+
+// -------------------------------------------------------------------
+
 // CMsgGCToClientBattlePassRollupRequest
 
 // optional uint32 event_id = 1;
@@ -69454,6 +73172,51 @@ inline void CMsgGCToClientBattlePassRollupResponse::set_allocated_event_fall2016
     clear_has_event_fall2016();
   }
   // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientBattlePassRollupResponse.event_fall2016)
+}
+
+// optional .proto.dota.CMsgGCToClientBattlePassRollup_Winter2017 event_winter2017 = 3;
+inline bool CMsgGCToClientBattlePassRollupResponse::has_event_winter2017() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgGCToClientBattlePassRollupResponse::set_has_event_winter2017() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollupResponse::clear_has_event_winter2017() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgGCToClientBattlePassRollupResponse::clear_event_winter2017() {
+  if (event_winter2017_ != NULL) event_winter2017_->::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017::Clear();
+  clear_has_event_winter2017();
+}
+inline const ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017& CMsgGCToClientBattlePassRollupResponse::event_winter2017() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientBattlePassRollupResponse.event_winter2017)
+  return event_winter2017_ != NULL ? *event_winter2017_
+                         : *::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017::internal_default_instance();
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017* CMsgGCToClientBattlePassRollupResponse::mutable_event_winter2017() {
+  set_has_event_winter2017();
+  if (event_winter2017_ == NULL) {
+    event_winter2017_ = new ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientBattlePassRollupResponse.event_winter2017)
+  return event_winter2017_;
+}
+inline ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017* CMsgGCToClientBattlePassRollupResponse::release_event_winter2017() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToClientBattlePassRollupResponse.event_winter2017)
+  clear_has_event_winter2017();
+  ::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017* temp = event_winter2017_;
+  event_winter2017_ = NULL;
+  return temp;
+}
+inline void CMsgGCToClientBattlePassRollupResponse::set_allocated_event_winter2017(::proto::dota::CMsgGCToClientBattlePassRollup_Winter2017* event_winter2017) {
+  delete event_winter2017_;
+  event_winter2017_ = event_winter2017;
+  if (event_winter2017) {
+    set_has_event_winter2017();
+  } else {
+    clear_has_event_winter2017();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientBattlePassRollupResponse.event_winter2017)
 }
 
 // -------------------------------------------------------------------
@@ -70830,7 +74593,871 @@ inline void CMsgGCToClientTipNotification::set_event_id(::google::protobuf::uint
   // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientTipNotification.event_id)
 }
 
+// -------------------------------------------------------------------
+
+// CMsgGCToClientAllStarVotesRequest
+
+// optional uint32 event_id = 1;
+inline bool CMsgGCToClientAllStarVotesRequest::has_event_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientAllStarVotesRequest::set_has_event_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientAllStarVotesRequest::clear_has_event_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientAllStarVotesRequest::clear_event_id() {
+  event_id_ = 0u;
+  clear_has_event_id();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientAllStarVotesRequest::event_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientAllStarVotesRequest.event_id)
+  return event_id_;
+}
+inline void CMsgGCToClientAllStarVotesRequest::set_event_id(::google::protobuf::uint32 value) {
+  set_has_event_id();
+  event_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientAllStarVotesRequest.event_id)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientAllStarVotesReply
+
+// repeated uint32 player_account_ids = 1;
+inline int CMsgGCToClientAllStarVotesReply::player_account_ids_size() const {
+  return player_account_ids_.size();
+}
+inline void CMsgGCToClientAllStarVotesReply::clear_player_account_ids() {
+  player_account_ids_.Clear();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientAllStarVotesReply::player_account_ids(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientAllStarVotesReply.player_account_ids)
+  return player_account_ids_.Get(index);
+}
+inline void CMsgGCToClientAllStarVotesReply::set_player_account_ids(int index, ::google::protobuf::uint32 value) {
+  player_account_ids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientAllStarVotesReply.player_account_ids)
+}
+inline void CMsgGCToClientAllStarVotesReply::add_player_account_ids(::google::protobuf::uint32 value) {
+  player_account_ids_.Add(value);
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgGCToClientAllStarVotesReply.player_account_ids)
+}
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+CMsgGCToClientAllStarVotesReply::player_account_ids() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgGCToClientAllStarVotesReply.player_account_ids)
+  return player_account_ids_;
+}
+inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+CMsgGCToClientAllStarVotesReply::mutable_player_account_ids() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgGCToClientAllStarVotesReply.player_account_ids)
+  return &player_account_ids_;
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientAllStarVotesSubmit
+
+// optional uint32 event_id = 1;
+inline bool CMsgGCToClientAllStarVotesSubmit::has_event_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientAllStarVotesSubmit::set_has_event_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientAllStarVotesSubmit::clear_has_event_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientAllStarVotesSubmit::clear_event_id() {
+  event_id_ = 0u;
+  clear_has_event_id();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientAllStarVotesSubmit::event_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientAllStarVotesSubmit.event_id)
+  return event_id_;
+}
+inline void CMsgGCToClientAllStarVotesSubmit::set_event_id(::google::protobuf::uint32 value) {
+  set_has_event_id();
+  event_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientAllStarVotesSubmit.event_id)
+}
+
+// repeated uint32 player_account_ids = 2;
+inline int CMsgGCToClientAllStarVotesSubmit::player_account_ids_size() const {
+  return player_account_ids_.size();
+}
+inline void CMsgGCToClientAllStarVotesSubmit::clear_player_account_ids() {
+  player_account_ids_.Clear();
+}
+inline ::google::protobuf::uint32 CMsgGCToClientAllStarVotesSubmit::player_account_ids(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientAllStarVotesSubmit.player_account_ids)
+  return player_account_ids_.Get(index);
+}
+inline void CMsgGCToClientAllStarVotesSubmit::set_player_account_ids(int index, ::google::protobuf::uint32 value) {
+  player_account_ids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientAllStarVotesSubmit.player_account_ids)
+}
+inline void CMsgGCToClientAllStarVotesSubmit::add_player_account_ids(::google::protobuf::uint32 value) {
+  player_account_ids_.Add(value);
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgGCToClientAllStarVotesSubmit.player_account_ids)
+}
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+CMsgGCToClientAllStarVotesSubmit::player_account_ids() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgGCToClientAllStarVotesSubmit.player_account_ids)
+  return player_account_ids_;
+}
+inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+CMsgGCToClientAllStarVotesSubmit::mutable_player_account_ids() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgGCToClientAllStarVotesSubmit.player_account_ids)
+  return &player_account_ids_;
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToClientAllStarVotesSubmitReply
+
+// optional .proto.dota.CMsgGCToClientAllStarVotesSubmitReply.Result result = 1 [default = SUCCESS];
+inline bool CMsgGCToClientAllStarVotesSubmitReply::has_result() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToClientAllStarVotesSubmitReply::set_has_result() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToClientAllStarVotesSubmitReply::clear_has_result() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToClientAllStarVotesSubmitReply::clear_result() {
+  result_ = 1;
+  clear_has_result();
+}
+inline ::proto::dota::CMsgGCToClientAllStarVotesSubmitReply_Result CMsgGCToClientAllStarVotesSubmitReply::result() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientAllStarVotesSubmitReply.result)
+  return static_cast< ::proto::dota::CMsgGCToClientAllStarVotesSubmitReply_Result >(result_);
+}
+inline void CMsgGCToClientAllStarVotesSubmitReply::set_result(::proto::dota::CMsgGCToClientAllStarVotesSubmitReply_Result value) {
+  assert(::proto::dota::CMsgGCToClientAllStarVotesSubmitReply_Result_IsValid(value));
+  set_has_result();
+  result_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientAllStarVotesSubmitReply.result)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgDOTAClientToGCQuickStatsRequest
+
+// optional uint32 player_account_id = 1;
+inline bool CMsgDOTAClientToGCQuickStatsRequest::has_player_account_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::set_has_player_account_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::clear_has_player_account_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::clear_player_account_id() {
+  player_account_id_ = 0u;
+  clear_has_player_account_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTAClientToGCQuickStatsRequest::player_account_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsRequest.player_account_id)
+  return player_account_id_;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::set_player_account_id(::google::protobuf::uint32 value) {
+  set_has_player_account_id();
+  player_account_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAClientToGCQuickStatsRequest.player_account_id)
+}
+
+// optional uint32 hero_id = 2;
+inline bool CMsgDOTAClientToGCQuickStatsRequest::has_hero_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::set_has_hero_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::clear_has_hero_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::clear_hero_id() {
+  hero_id_ = 0u;
+  clear_has_hero_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTAClientToGCQuickStatsRequest::hero_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsRequest.hero_id)
+  return hero_id_;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::set_hero_id(::google::protobuf::uint32 value) {
+  set_has_hero_id();
+  hero_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAClientToGCQuickStatsRequest.hero_id)
+}
+
+// optional uint32 item_id = 3;
+inline bool CMsgDOTAClientToGCQuickStatsRequest::has_item_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::set_has_item_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::clear_has_item_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::clear_item_id() {
+  item_id_ = 0u;
+  clear_has_item_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTAClientToGCQuickStatsRequest::item_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsRequest.item_id)
+  return item_id_;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::set_item_id(::google::protobuf::uint32 value) {
+  set_has_item_id();
+  item_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAClientToGCQuickStatsRequest.item_id)
+}
+
+// optional uint32 league_id = 4;
+inline bool CMsgDOTAClientToGCQuickStatsRequest::has_league_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::set_has_league_id() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::clear_has_league_id() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::clear_league_id() {
+  league_id_ = 0u;
+  clear_has_league_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTAClientToGCQuickStatsRequest::league_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsRequest.league_id)
+  return league_id_;
+}
+inline void CMsgDOTAClientToGCQuickStatsRequest::set_league_id(::google::protobuf::uint32 value) {
+  set_has_league_id();
+  league_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAClientToGCQuickStatsRequest.league_id)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgDOTAClientToGCQuickStatsResponse_SimpleStats
+
+// optional float win_percent = 1;
+inline bool CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::has_win_percent() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::set_has_win_percent() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::clear_has_win_percent() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::clear_win_percent() {
+  win_percent_ = 0;
+  clear_has_win_percent();
+}
+inline float CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::win_percent() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats.win_percent)
+  return win_percent_;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::set_win_percent(float value) {
+  set_has_win_percent();
+  win_percent_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats.win_percent)
+}
+
+// optional float pick_percent = 2;
+inline bool CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::has_pick_percent() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::set_has_pick_percent() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::clear_has_pick_percent() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::clear_pick_percent() {
+  pick_percent_ = 0;
+  clear_has_pick_percent();
+}
+inline float CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::pick_percent() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats.pick_percent)
+  return pick_percent_;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::set_pick_percent(float value) {
+  set_has_pick_percent();
+  pick_percent_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats.pick_percent)
+}
+
+// optional uint32 win_count = 3;
+inline bool CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::has_win_count() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::set_has_win_count() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::clear_has_win_count() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::clear_win_count() {
+  win_count_ = 0u;
+  clear_has_win_count();
+}
+inline ::google::protobuf::uint32 CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::win_count() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats.win_count)
+  return win_count_;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::set_win_count(::google::protobuf::uint32 value) {
+  set_has_win_count();
+  win_count_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats.win_count)
+}
+
+// optional uint32 pick_count = 4;
+inline bool CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::has_pick_count() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::set_has_pick_count() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::clear_has_pick_count() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::clear_pick_count() {
+  pick_count_ = 0u;
+  clear_has_pick_count();
+}
+inline ::google::protobuf::uint32 CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::pick_count() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats.pick_count)
+  return pick_count_;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::set_pick_count(::google::protobuf::uint32 value) {
+  set_has_pick_count();
+  pick_count_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats.pick_count)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgDOTAClientToGCQuickStatsResponse
+
+// optional .proto.dota.CMsgDOTAClientToGCQuickStatsRequest original_request = 1;
+inline bool CMsgDOTAClientToGCQuickStatsResponse::has_original_request() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_has_original_request() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_has_original_request() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_original_request() {
+  if (original_request_ != NULL) original_request_->::proto::dota::CMsgDOTAClientToGCQuickStatsRequest::Clear();
+  clear_has_original_request();
+}
+inline const ::proto::dota::CMsgDOTAClientToGCQuickStatsRequest& CMsgDOTAClientToGCQuickStatsResponse::original_request() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.original_request)
+  return original_request_ != NULL ? *original_request_
+                         : *::proto::dota::CMsgDOTAClientToGCQuickStatsRequest::internal_default_instance();
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsRequest* CMsgDOTAClientToGCQuickStatsResponse::mutable_original_request() {
+  set_has_original_request();
+  if (original_request_ == NULL) {
+    original_request_ = new ::proto::dota::CMsgDOTAClientToGCQuickStatsRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.original_request)
+  return original_request_;
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsRequest* CMsgDOTAClientToGCQuickStatsResponse::release_original_request() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.original_request)
+  clear_has_original_request();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsRequest* temp = original_request_;
+  original_request_ = NULL;
+  return temp;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_allocated_original_request(::proto::dota::CMsgDOTAClientToGCQuickStatsRequest* original_request) {
+  delete original_request_;
+  original_request_ = original_request;
+  if (original_request) {
+    set_has_original_request();
+  } else {
+    clear_has_original_request();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.original_request)
+}
+
+// optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats hero_stats = 2;
+inline bool CMsgDOTAClientToGCQuickStatsResponse::has_hero_stats() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_has_hero_stats() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_has_hero_stats() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_hero_stats() {
+  if (hero_stats_ != NULL) hero_stats_->::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::Clear();
+  clear_has_hero_stats();
+}
+inline const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& CMsgDOTAClientToGCQuickStatsResponse::hero_stats() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.hero_stats)
+  return hero_stats_ != NULL ? *hero_stats_
+                         : *::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::internal_default_instance();
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::mutable_hero_stats() {
+  set_has_hero_stats();
+  if (hero_stats_ == NULL) {
+    hero_stats_ = new ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.hero_stats)
+  return hero_stats_;
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::release_hero_stats() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.hero_stats)
+  clear_has_hero_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* temp = hero_stats_;
+  hero_stats_ = NULL;
+  return temp;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_allocated_hero_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* hero_stats) {
+  delete hero_stats_;
+  hero_stats_ = hero_stats;
+  if (hero_stats) {
+    set_has_hero_stats();
+  } else {
+    clear_has_hero_stats();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.hero_stats)
+}
+
+// optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats item_stats = 3;
+inline bool CMsgDOTAClientToGCQuickStatsResponse::has_item_stats() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_has_item_stats() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_has_item_stats() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_item_stats() {
+  if (item_stats_ != NULL) item_stats_->::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::Clear();
+  clear_has_item_stats();
+}
+inline const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& CMsgDOTAClientToGCQuickStatsResponse::item_stats() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_stats)
+  return item_stats_ != NULL ? *item_stats_
+                         : *::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::internal_default_instance();
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::mutable_item_stats() {
+  set_has_item_stats();
+  if (item_stats_ == NULL) {
+    item_stats_ = new ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_stats)
+  return item_stats_;
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::release_item_stats() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_stats)
+  clear_has_item_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* temp = item_stats_;
+  item_stats_ = NULL;
+  return temp;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_allocated_item_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* item_stats) {
+  delete item_stats_;
+  item_stats_ = item_stats;
+  if (item_stats) {
+    set_has_item_stats();
+  } else {
+    clear_has_item_stats();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_stats)
+}
+
+// optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats item_hero_stats = 4;
+inline bool CMsgDOTAClientToGCQuickStatsResponse::has_item_hero_stats() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_has_item_hero_stats() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_has_item_hero_stats() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_item_hero_stats() {
+  if (item_hero_stats_ != NULL) item_hero_stats_->::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::Clear();
+  clear_has_item_hero_stats();
+}
+inline const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& CMsgDOTAClientToGCQuickStatsResponse::item_hero_stats() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_hero_stats)
+  return item_hero_stats_ != NULL ? *item_hero_stats_
+                         : *::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::internal_default_instance();
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::mutable_item_hero_stats() {
+  set_has_item_hero_stats();
+  if (item_hero_stats_ == NULL) {
+    item_hero_stats_ = new ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_hero_stats)
+  return item_hero_stats_;
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::release_item_hero_stats() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_hero_stats)
+  clear_has_item_hero_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* temp = item_hero_stats_;
+  item_hero_stats_ = NULL;
+  return temp;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_allocated_item_hero_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* item_hero_stats) {
+  delete item_hero_stats_;
+  item_hero_stats_ = item_hero_stats;
+  if (item_hero_stats) {
+    set_has_item_hero_stats();
+  } else {
+    clear_has_item_hero_stats();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_hero_stats)
+}
+
+// optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats item_player_stats = 5;
+inline bool CMsgDOTAClientToGCQuickStatsResponse::has_item_player_stats() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_has_item_player_stats() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_has_item_player_stats() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_item_player_stats() {
+  if (item_player_stats_ != NULL) item_player_stats_->::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::Clear();
+  clear_has_item_player_stats();
+}
+inline const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& CMsgDOTAClientToGCQuickStatsResponse::item_player_stats() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_player_stats)
+  return item_player_stats_ != NULL ? *item_player_stats_
+                         : *::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::internal_default_instance();
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::mutable_item_player_stats() {
+  set_has_item_player_stats();
+  if (item_player_stats_ == NULL) {
+    item_player_stats_ = new ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_player_stats)
+  return item_player_stats_;
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::release_item_player_stats() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_player_stats)
+  clear_has_item_player_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* temp = item_player_stats_;
+  item_player_stats_ = NULL;
+  return temp;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_allocated_item_player_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* item_player_stats) {
+  delete item_player_stats_;
+  item_player_stats_ = item_player_stats;
+  if (item_player_stats) {
+    set_has_item_player_stats();
+  } else {
+    clear_has_item_player_stats();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.item_player_stats)
+}
+
+// optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats hero_player_stats = 6;
+inline bool CMsgDOTAClientToGCQuickStatsResponse::has_hero_player_stats() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_has_hero_player_stats() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_has_hero_player_stats() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_hero_player_stats() {
+  if (hero_player_stats_ != NULL) hero_player_stats_->::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::Clear();
+  clear_has_hero_player_stats();
+}
+inline const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& CMsgDOTAClientToGCQuickStatsResponse::hero_player_stats() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.hero_player_stats)
+  return hero_player_stats_ != NULL ? *hero_player_stats_
+                         : *::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::internal_default_instance();
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::mutable_hero_player_stats() {
+  set_has_hero_player_stats();
+  if (hero_player_stats_ == NULL) {
+    hero_player_stats_ = new ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.hero_player_stats)
+  return hero_player_stats_;
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::release_hero_player_stats() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.hero_player_stats)
+  clear_has_hero_player_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* temp = hero_player_stats_;
+  hero_player_stats_ = NULL;
+  return temp;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_allocated_hero_player_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* hero_player_stats) {
+  delete hero_player_stats_;
+  hero_player_stats_ = hero_player_stats;
+  if (hero_player_stats) {
+    set_has_hero_player_stats();
+  } else {
+    clear_has_hero_player_stats();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.hero_player_stats)
+}
+
+// optional .proto.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats full_set_stats = 7;
+inline bool CMsgDOTAClientToGCQuickStatsResponse::has_full_set_stats() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_has_full_set_stats() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_has_full_set_stats() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::clear_full_set_stats() {
+  if (full_set_stats_ != NULL) full_set_stats_->::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::Clear();
+  clear_has_full_set_stats();
+}
+inline const ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats& CMsgDOTAClientToGCQuickStatsResponse::full_set_stats() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.full_set_stats)
+  return full_set_stats_ != NULL ? *full_set_stats_
+                         : *::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats::internal_default_instance();
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::mutable_full_set_stats() {
+  set_has_full_set_stats();
+  if (full_set_stats_ == NULL) {
+    full_set_stats_ = new ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.full_set_stats)
+  return full_set_stats_;
+}
+inline ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* CMsgDOTAClientToGCQuickStatsResponse::release_full_set_stats() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.full_set_stats)
+  clear_has_full_set_stats();
+  ::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* temp = full_set_stats_;
+  full_set_stats_ = NULL;
+  return temp;
+}
+inline void CMsgDOTAClientToGCQuickStatsResponse::set_allocated_full_set_stats(::proto::dota::CMsgDOTAClientToGCQuickStatsResponse_SimpleStats* full_set_stats) {
+  delete full_set_stats_;
+  full_set_stats_ = full_set_stats;
+  if (full_set_stats) {
+    set_has_full_set_stats();
+  } else {
+    clear_has_full_set_stats();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTAClientToGCQuickStatsResponse.full_set_stats)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgDOTASelectionPriorityChoiceRequest
+
+// optional .proto.dota.DOTASelectionPriorityChoice choice = 1 [default = k_DOTASelectionPriorityChoice_Invalid];
+inline bool CMsgDOTASelectionPriorityChoiceRequest::has_choice() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTASelectionPriorityChoiceRequest::set_has_choice() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTASelectionPriorityChoiceRequest::clear_has_choice() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTASelectionPriorityChoiceRequest::clear_choice() {
+  choice_ = 0;
+  clear_has_choice();
+}
+inline ::proto::dota::DOTASelectionPriorityChoice CMsgDOTASelectionPriorityChoiceRequest::choice() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTASelectionPriorityChoiceRequest.choice)
+  return static_cast< ::proto::dota::DOTASelectionPriorityChoice >(choice_);
+}
+inline void CMsgDOTASelectionPriorityChoiceRequest::set_choice(::proto::dota::DOTASelectionPriorityChoice value) {
+  assert(::proto::dota::DOTASelectionPriorityChoice_IsValid(value));
+  set_has_choice();
+  choice_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTASelectionPriorityChoiceRequest.choice)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgDOTASelectionPriorityChoiceResponse
+
+// optional .proto.dota.CMsgDOTASelectionPriorityChoiceResponse.Result result = 1 [default = SUCCESS];
+inline bool CMsgDOTASelectionPriorityChoiceResponse::has_result() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTASelectionPriorityChoiceResponse::set_has_result() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTASelectionPriorityChoiceResponse::clear_has_result() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTASelectionPriorityChoiceResponse::clear_result() {
+  result_ = 0;
+  clear_has_result();
+}
+inline ::proto::dota::CMsgDOTASelectionPriorityChoiceResponse_Result CMsgDOTASelectionPriorityChoiceResponse::result() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTASelectionPriorityChoiceResponse.result)
+  return static_cast< ::proto::dota::CMsgDOTASelectionPriorityChoiceResponse_Result >(result_);
+}
+inline void CMsgDOTASelectionPriorityChoiceResponse::set_result(::proto::dota::CMsgDOTASelectionPriorityChoiceResponse_Result value) {
+  assert(::proto::dota::CMsgDOTASelectionPriorityChoiceResponse_Result_IsValid(value));
+  set_has_result();
+  result_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTASelectionPriorityChoiceResponse.result)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgDOTAGameAutographReward
+
+// optional string badge_id = 1;
+inline bool CMsgDOTAGameAutographReward::has_badge_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTAGameAutographReward::set_has_badge_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTAGameAutographReward::clear_has_badge_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTAGameAutographReward::clear_badge_id() {
+  badge_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_badge_id();
+}
+inline const ::std::string& CMsgDOTAGameAutographReward::badge_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAGameAutographReward.badge_id)
+  return badge_id_.GetNoArena();
+}
+inline void CMsgDOTAGameAutographReward::set_badge_id(const ::std::string& value) {
+  set_has_badge_id();
+  badge_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAGameAutographReward.badge_id)
+}
+#if LANG_CXX11
+inline void CMsgDOTAGameAutographReward::set_badge_id(::std::string&& value) {
+  set_has_badge_id();
+  badge_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.dota.CMsgDOTAGameAutographReward.badge_id)
+}
+#endif
+inline void CMsgDOTAGameAutographReward::set_badge_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_badge_id();
+  badge_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.dota.CMsgDOTAGameAutographReward.badge_id)
+}
+inline void CMsgDOTAGameAutographReward::set_badge_id(const char* value, size_t size) {
+  set_has_badge_id();
+  badge_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.dota.CMsgDOTAGameAutographReward.badge_id)
+}
+inline ::std::string* CMsgDOTAGameAutographReward::mutable_badge_id() {
+  set_has_badge_id();
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTAGameAutographReward.badge_id)
+  return badge_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CMsgDOTAGameAutographReward::release_badge_id() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgDOTAGameAutographReward.badge_id)
+  clear_has_badge_id();
+  return badge_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CMsgDOTAGameAutographReward::set_allocated_badge_id(::std::string* badge_id) {
+  if (badge_id != NULL) {
+    set_has_badge_id();
+  } else {
+    clear_has_badge_id();
+  }
+  badge_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), badge_id);
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTAGameAutographReward.badge_id)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgDOTAGameAutographRewardResponse
+
+// optional .proto.dota.CMsgDOTAGameAutographRewardResponse.Result result = 1 [default = SUCCESS];
+inline bool CMsgDOTAGameAutographRewardResponse::has_result() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTAGameAutographRewardResponse::set_has_result() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTAGameAutographRewardResponse::clear_has_result() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTAGameAutographRewardResponse::clear_result() {
+  result_ = 0;
+  clear_has_result();
+}
+inline ::proto::dota::CMsgDOTAGameAutographRewardResponse_Result CMsgDOTAGameAutographRewardResponse::result() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAGameAutographRewardResponse.result)
+  return static_cast< ::proto::dota::CMsgDOTAGameAutographRewardResponse_Result >(result_);
+}
+inline void CMsgDOTAGameAutographRewardResponse::set_result(::proto::dota::CMsgDOTAGameAutographRewardResponse_Result value) {
+  assert(::proto::dota::CMsgDOTAGameAutographRewardResponse_Result_IsValid(value));
+  set_has_result();
+  result_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAGameAutographRewardResponse.result)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -71630,6 +76257,21 @@ template <> struct is_proto_enum< ::proto::dota::CMsgDOTAUnanchorPhoneNumberResp
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::CMsgDOTAUnanchorPhoneNumberResponse_Result>() {
   return ::proto::dota::CMsgDOTAUnanchorPhoneNumberResponse_Result_descriptor();
+}
+template <> struct is_proto_enum< ::proto::dota::CMsgGCToClientAllStarVotesSubmitReply_Result> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::CMsgGCToClientAllStarVotesSubmitReply_Result>() {
+  return ::proto::dota::CMsgGCToClientAllStarVotesSubmitReply_Result_descriptor();
+}
+template <> struct is_proto_enum< ::proto::dota::CMsgDOTASelectionPriorityChoiceResponse_Result> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::CMsgDOTASelectionPriorityChoiceResponse_Result>() {
+  return ::proto::dota::CMsgDOTASelectionPriorityChoiceResponse_Result_descriptor();
+}
+template <> struct is_proto_enum< ::proto::dota::CMsgDOTAGameAutographRewardResponse_Result> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::CMsgDOTAGameAutographRewardResponse_Result>() {
+  return ::proto::dota::CMsgDOTAGameAutographRewardResponse_Result_descriptor();
 }
 template <> struct is_proto_enum< ::proto::dota::DOTA_WatchReplayType> : ::google::protobuf::internal::true_type {};
 template <>

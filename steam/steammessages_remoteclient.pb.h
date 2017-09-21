@@ -774,18 +774,28 @@ class CMsgRemoteClientAuth : public ::google::protobuf::Message /* @@protoc_inse
   ::google::protobuf::uint64 client_id() const;
   void set_client_id(::google::protobuf::uint64 value);
 
+  // optional uint64 instance_id = 3;
+  bool has_instance_id() const;
+  void clear_instance_id();
+  static const int kInstanceIdFieldNumber = 3;
+  ::google::protobuf::uint64 instance_id() const;
+  void set_instance_id(::google::protobuf::uint64 value);
+
   // @@protoc_insertion_point(class_scope:proto.steam.CMsgRemoteClientAuth)
  private:
   void set_has_client_id();
   void clear_has_client_id();
   void set_has_status();
   void clear_has_status();
+  void set_has_instance_id();
+  void clear_has_instance_id();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::proto::steam::CMsgRemoteClientBroadcastStatus* status_;
   ::google::protobuf::uint64 client_id_;
+  ::google::protobuf::uint64 instance_id_;
   friend struct protobuf_steammessages_5fremoteclient_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -2519,6 +2529,30 @@ inline void CMsgRemoteClientAuth::set_allocated_status(::proto::steam::CMsgRemot
     clear_has_status();
   }
   // @@protoc_insertion_point(field_set_allocated:proto.steam.CMsgRemoteClientAuth.status)
+}
+
+// optional uint64 instance_id = 3;
+inline bool CMsgRemoteClientAuth::has_instance_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgRemoteClientAuth::set_has_instance_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgRemoteClientAuth::clear_has_instance_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgRemoteClientAuth::clear_instance_id() {
+  instance_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_instance_id();
+}
+inline ::google::protobuf::uint64 CMsgRemoteClientAuth::instance_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgRemoteClientAuth.instance_id)
+  return instance_id_;
+}
+inline void CMsgRemoteClientAuth::set_instance_id(::google::protobuf::uint64 value) {
+  set_has_instance_id();
+  instance_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgRemoteClientAuth.instance_id)
 }
 
 // -------------------------------------------------------------------

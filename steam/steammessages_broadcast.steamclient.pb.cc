@@ -85,13 +85,15 @@ class CBroadcast_ViewerBroadcastInvite_NotificationDefaultTypeInternal : public 
 } _CBroadcast_ViewerBroadcastInvite_Notification_default_instance_;
 class CBroadcast_BroadcastStatus_NotificationDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CBroadcast_BroadcastStatus_Notification> {
 } _CBroadcast_BroadcastStatus_Notification_default_instance_;
+class CBroadcast_SendThumbnailToRelay_NotificationDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CBroadcast_SendThumbnailToRelay_Notification> {
+} _CBroadcast_SendThumbnailToRelay_Notification_default_instance_;
 
 namespace protobuf_steammessages_5fbroadcast_2esteamclient_2eproto {
 
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[33];
+::google::protobuf::Metadata file_level_metadata[34];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 const ::google::protobuf::ServiceDescriptor* file_level_service_descriptors[2];
 
@@ -108,6 +110,7 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
     TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
@@ -167,7 +170,15 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_BeginBroadcastSession_Response, broadcast_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_BeginBroadcastSession_Response, thumbnail_upload_address_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_BeginBroadcastSession_Response, thumbnail_upload_token_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_BeginBroadcastSession_Response, thumbnail_interval_seconds_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_BeginBroadcastSession_Response, thumbnail_broadcast_relay_id_),
+  2,
   0,
+  1,
+  4,
+  3,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_EndBroadcastSession_Request, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_EndBroadcastSession_Request, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -477,42 +488,58 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_BroadcastStatus_Notification, num_viewers_),
   0,
   1,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_SendThumbnailToRelay_Notification, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_SendThumbnailToRelay_Notification, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_SendThumbnailToRelay_Notification, thumbnail_upload_token_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_SendThumbnailToRelay_Notification, thumbnail_broadcast_relay_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_SendThumbnailToRelay_Notification, thumbnail_data_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_SendThumbnailToRelay_Notification, thumbnail_width_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CBroadcast_SendThumbnailToRelay_Notification, thumbnail_height_),
+  0,
+  2,
+  1,
+  3,
+  4,
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, 11, sizeof(CBroadcast_BeginBroadcastSession_Request)},
-  { 17, 23, sizeof(CBroadcast_BeginBroadcastSession_Response)},
-  { 24, 30, sizeof(CBroadcast_EndBroadcastSession_Request)},
-  { 31, 36, sizeof(CBroadcast_EndBroadcastSession_Response)},
-  { 36, 45, sizeof(CBroadcast_StartBroadcastUpload_Request)},
-  { 49, 57, sizeof(CBroadcast_StartBroadcastUpload_Response)},
-  { 60, 67, sizeof(CBroadcast_NotifyBroadcastUploadStop_Notification)},
-  { 69, 79, sizeof(CBroadcast_WatchBroadcast_Request)},
-  { 84, 100, sizeof(CBroadcast_WatchBroadcast_Response)},
-  { 111, 118, sizeof(CBroadcast_GetBroadcastStatus_Request)},
-  { 120, 132, sizeof(CBroadcast_GetBroadcastStatus_Response)},
-  { 139, 146, sizeof(CBroadcast_InviteToBroadcast_Request)},
-  { 148, 154, sizeof(CBroadcast_InviteToBroadcast_Response)},
-  { 155, 164, sizeof(CBroadcast_SendBroadcastStateToServer_Request)},
-  { 168, 173, sizeof(CBroadcast_SendBroadcastStateToServer_Response)},
-  { 173, 179, sizeof(CBroadcast_NotifyBroadcastSessionHeartbeat_Notification)},
-  { 180, 189, sizeof(CBroadcast_GetBroadcastChatInfo_Request)},
-  { 193, 201, sizeof(CBroadcast_GetBroadcastChatInfo_Response)},
-  { 204, 212, sizeof(CBroadcast_PostChatMessage_Request)},
-  { 215, 223, sizeof(CBroadcast_PostChatMessage_Response)},
-  { 226, 234, sizeof(CBroadcast_MuteBroadcastChatUser_Request)},
-  { 237, 242, sizeof(CBroadcast_MuteBroadcastChatUser_Response)},
-  { 242, 249, sizeof(CBroadcast_RemoveUserChatText_Request)},
-  { 251, 256, sizeof(CBroadcast_RemoveUserChatText_Response)},
-  { 256, 263, sizeof(CBroadcast_GetBroadcastChatUserNames_Request)},
-  { 265, 272, sizeof(CBroadcast_GetBroadcastChatUserNames_Response_PersonaName)},
-  { 274, 280, sizeof(CBroadcast_GetBroadcastChatUserNames_Response)},
-  { 281, 288, sizeof(CBroadcast_BroadcastViewerState_Notification)},
-  { 290, 296, sizeof(CBroadcast_WaitingBroadcastViewer_Notification)},
-  { 297, 306, sizeof(CBroadcast_StopBroadcastUpload_Notification)},
-  { 310, 316, sizeof(CBroadcast_SessionClosed_Notification)},
-  { 317, 323, sizeof(CBroadcast_ViewerBroadcastInvite_Notification)},
-  { 324, 331, sizeof(CBroadcast_BroadcastStatus_Notification)},
+  { 17, 27, sizeof(CBroadcast_BeginBroadcastSession_Response)},
+  { 32, 38, sizeof(CBroadcast_EndBroadcastSession_Request)},
+  { 39, 44, sizeof(CBroadcast_EndBroadcastSession_Response)},
+  { 44, 53, sizeof(CBroadcast_StartBroadcastUpload_Request)},
+  { 57, 65, sizeof(CBroadcast_StartBroadcastUpload_Response)},
+  { 68, 75, sizeof(CBroadcast_NotifyBroadcastUploadStop_Notification)},
+  { 77, 87, sizeof(CBroadcast_WatchBroadcast_Request)},
+  { 92, 108, sizeof(CBroadcast_WatchBroadcast_Response)},
+  { 119, 126, sizeof(CBroadcast_GetBroadcastStatus_Request)},
+  { 128, 140, sizeof(CBroadcast_GetBroadcastStatus_Response)},
+  { 147, 154, sizeof(CBroadcast_InviteToBroadcast_Request)},
+  { 156, 162, sizeof(CBroadcast_InviteToBroadcast_Response)},
+  { 163, 172, sizeof(CBroadcast_SendBroadcastStateToServer_Request)},
+  { 176, 181, sizeof(CBroadcast_SendBroadcastStateToServer_Response)},
+  { 181, 187, sizeof(CBroadcast_NotifyBroadcastSessionHeartbeat_Notification)},
+  { 188, 197, sizeof(CBroadcast_GetBroadcastChatInfo_Request)},
+  { 201, 209, sizeof(CBroadcast_GetBroadcastChatInfo_Response)},
+  { 212, 220, sizeof(CBroadcast_PostChatMessage_Request)},
+  { 223, 231, sizeof(CBroadcast_PostChatMessage_Response)},
+  { 234, 242, sizeof(CBroadcast_MuteBroadcastChatUser_Request)},
+  { 245, 250, sizeof(CBroadcast_MuteBroadcastChatUser_Response)},
+  { 250, 257, sizeof(CBroadcast_RemoveUserChatText_Request)},
+  { 259, 264, sizeof(CBroadcast_RemoveUserChatText_Response)},
+  { 264, 271, sizeof(CBroadcast_GetBroadcastChatUserNames_Request)},
+  { 273, 280, sizeof(CBroadcast_GetBroadcastChatUserNames_Response_PersonaName)},
+  { 282, 288, sizeof(CBroadcast_GetBroadcastChatUserNames_Response)},
+  { 289, 296, sizeof(CBroadcast_BroadcastViewerState_Notification)},
+  { 298, 304, sizeof(CBroadcast_WaitingBroadcastViewer_Notification)},
+  { 305, 314, sizeof(CBroadcast_StopBroadcastUpload_Notification)},
+  { 318, 324, sizeof(CBroadcast_SessionClosed_Notification)},
+  { 325, 331, sizeof(CBroadcast_ViewerBroadcastInvite_Notification)},
+  { 332, 339, sizeof(CBroadcast_BroadcastStatus_Notification)},
+  { 341, 351, sizeof(CBroadcast_SendThumbnailToRelay_Notification)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -549,6 +576,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CBroadcast_SessionClosed_Notification_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CBroadcast_ViewerBroadcastInvite_Notification_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CBroadcast_BroadcastStatus_Notification_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CBroadcast_SendThumbnailToRelay_Notification_default_instance_),
 };
 
 namespace {
@@ -569,7 +597,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 33);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 34);
 }
 
 }  // namespace
@@ -641,6 +669,8 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[31].reflection;
   _CBroadcast_BroadcastStatus_Notification_default_instance_.Shutdown();
   delete file_level_metadata[32].reflection;
+  _CBroadcast_SendThumbnailToRelay_Notification_default_instance_.Shutdown();
+  delete file_level_metadata[33].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -681,6 +711,7 @@ void TableStruct::InitDefaultsImpl() {
   _CBroadcast_SessionClosed_Notification_default_instance_.DefaultConstruct();
   _CBroadcast_ViewerBroadcastInvite_Notification_default_instance_.DefaultConstruct();
   _CBroadcast_BroadcastStatus_Notification_default_instance_.DefaultConstruct();
+  _CBroadcast_SendThumbnailToRelay_Notification_default_instance_.DefaultConstruct();
 }
 
 void InitDefaults() {
@@ -696,210 +727,227 @@ void AddDescriptorsImpl() {
       "ginBroadcastSession_Request\022\022\n\npermissio"
       "n\030\001 \001(\005\022\016\n\006gameid\030\002 \001(\004\022\032\n\022client_instan"
       "ce_id\030\003 \001(\004\022\r\n\005title\030\004 \001(\t\022\016\n\006cellid\030\005 \001"
-      "(\r\022\022\n\nrtmp_token\030\006 \001(\004\"A\n)CBroadcast_Beg"
-      "inBroadcastSession_Response\022\024\n\014broadcast"
-      "_id\030\001 \001(\006\">\n&CBroadcast_EndBroadcastSess"
-      "ion_Request\022\024\n\014broadcast_id\030\001 \001(\006\")\n\'CBr"
-      "oadcast_EndBroadcastSession_Response\"w\n\'"
-      "CBroadcast_StartBroadcastUpload_Request\022"
-      "\024\n\014broadcast_id\030\001 \001(\006\022\016\n\006cellid\030\002 \001(\r\022\017\n"
-      "\007as_rtmp\030\003 \001(\010\022\025\n\rdelay_seconds\030\004 \001(\r\"q\n"
-      "(CBroadcast_StartBroadcastUpload_Respons"
-      "e\022\024\n\014upload_token\030\001 \001(\t\022\026\n\016upload_addres"
-      "s\030\002 \001(\t\022\027\n\017upload_relay_id\030\003 \001(\006\"f\n1CBro"
-      "adcast_NotifyBroadcastUploadStop_Notific"
-      "ation\022\032\n\022broadcast_relay_id\030\001 \001(\006\022\025\n\rupl"
-      "oad_result\030\002 \001(\r\"\264\002\n!CBroadcast_WatchBro"
-      "adcast_Request\022)\n\007steamid\030\001 \001(\006B\030\202\265\030\024bro"
-      "adcaster steamID.\022X\n\025existing_broadcast_"
-      "id\030\002 \001(\006B9\202\265\0305broadcast session ID (opti"
-      "onal, rejoin if specified).\022b\n\014viewer_to"
-      "ken\030\003 \001(\006BL\202\265\030Hviewer token received fro"
-      "m last WatchRequest call, from browser s"
-      "torage.\022\021\n\tclient_ip\030\004 \001(\r\022\023\n\013client_cel"
-      "l\030\005 \001(\r\"\251\006\n\"CBroadcast_WatchBroadcast_Re"
-      "sponse\022g\n\010response\030\001 \001(\0162>.proto.steam.C"
-      "Broadcast_WatchBroadcast_Response.EWatch"
-      "Response:\025k_EWatchResponseReady\022\017\n\007mpd_u"
-      "rl\030\002 \001(\t\022\024\n\014broadcast_id\030\003 \001(\006\022\016\n\006gameid"
-      "\030\004 \001(\004\022\r\n\005title\030\005 \001(\t\022\023\n\013num_viewers\030\006 \001"
-      "(\r\022\022\n\npermission\030\007 \001(\005\022\017\n\007is_rtmp\030\010 \001(\010\022"
-      "\025\n\rseconds_delay\030\t \001(\005\022\024\n\014viewer_token\030\n"
-      " \001(\006\022\033\n\023hls_m3u8_master_url\030\013 \001(\t\"\317\003\n\016EW"
-      "atchResponse\022\031\n\025k_EWatchResponseReady\020\001\022"
-      " \n\034k_EWatchResponseNotAvailable\020\002\022&\n\"k_E"
-      "WatchResponseWaitingForApproval\020\003\022#\n\037k_E"
-      "WatchResponseWaitingForStart\020\004\022\"\n\036k_EWat"
-      "chResponseInvalidSession\020\005\022%\n!k_EWatchRe"
-      "sponseTooManyBroadcasts\020\006\022\'\n#k_EWatchRes"
-      "ponseWaitingForReconnect\020\007\022&\n\"k_EWatchRe"
-      "sponseSystemNotSupported\020\010\022\"\n\036k_EWatchRe"
-      "sponseUserRestricted\020\t\022#\n\037k_EWatchRespon"
-      "seClientOutOfDate\020\n\022%\n!k_EWatchResponseP"
-      "oorUploadQuality\020\013\022\'\n#k_EWatchResponseMi"
-      "ssingSubscription\020\014\"N\n%CBroadcast_GetBro"
-      "adcastStatus_Request\022\017\n\007steamid\030\001 \001(\006\022\024\n"
-      "\014broadcast_id\030\002 \001(\006\"\256\001\n&CBroadcast_GetBr"
-      "oadcastStatus_Response\022\016\n\006gameid\030\001 \001(\004\022\r"
-      "\n\005title\030\002 \001(\t\022\023\n\013num_viewers\030\003 \001(\r\022\022\n\npe"
-      "rmission\030\004 \001(\005\022\017\n\007is_rtmp\030\005 \001(\010\022\025\n\rsecon"
-      "ds_delay\030\006 \001(\005\022\024\n\014is_publisher\030\007 \001(\010\"R\n$"
-      "CBroadcast_InviteToBroadcast_Request\022\017\n\007"
-      "steamid\030\001 \001(\006\022\031\n\021approval_response\030\002 \001(\010"
-      "\"8\n%CBroadcast_InviteToBroadcast_Respons"
-      "e\022\017\n\007success\030\001 \001(\010\"|\n-CBroadcast_SendBro"
-      "adcastStateToServer_Request\022\022\n\npermissio"
-      "n\030\001 \001(\005\022\016\n\006gameid\030\002 \001(\004\022\r\n\005title\030\003 \001(\t\022\030"
-      "\n\020game_data_config\030\004 \001(\t\"0\n.CBroadcast_S"
-      "endBroadcastStateToServer_Response\"O\n7CB"
-      "roadcast_NotifyBroadcastSessionHeartbeat"
-      "_Notification\022\024\n\014broadcast_id\030\001 \001(\006\"x\n\'C"
-      "Broadcast_GetBroadcastChatInfo_Request\022\017"
-      "\n\007steamid\030\001 \001(\006\022\024\n\014broadcast_id\030\002 \001(\006\022\021\n"
-      "\tclient_ip\030\003 \001(\r\022\023\n\013client_cell\030\004 \001(\r\"h\n"
-      "(CBroadcast_GetBroadcastChatInfo_Respons"
-      "e\022\017\n\007chat_id\030\001 \001(\006\022\020\n\010view_url\030\002 \001(\t\022\031\n\021"
-      "view_url_template\030\003 \001(\t\"[\n\"CBroadcast_Po"
-      "stChatMessage_Request\022\017\n\007chat_id\030\001 \001(\006\022\017"
-      "\n\007message\030\002 \001(\t\022\023\n\013instance_id\030\003 \001(\r\"\\\n#"
-      "CBroadcast_PostChatMessage_Response\022\024\n\014p"
-      "ersona_name\030\001 \001(\t\022\017\n\007in_game\030\002 \001(\010\022\016\n\006re"
-      "sult\030\003 \001(\005\"`\n(CBroadcast_MuteBroadcastCh"
-      "atUser_Request\022\017\n\007chat_id\030\001 \001(\006\022\024\n\014user_"
-      "steamid\030\002 \001(\006\022\r\n\005muted\030\003 \001(\010\"+\n)CBroadca"
-      "st_MuteBroadcastChatUser_Response\"N\n%CBr"
-      "oadcast_RemoveUserChatText_Request\022\017\n\007ch"
-      "at_id\030\001 \001(\006\022\024\n\014user_steamid\030\002 \001(\006\"(\n&CBr"
-      "oadcast_RemoveUserChatText_Response\"U\n,C"
-      "Broadcast_GetBroadcastChatUserNames_Requ"
-      "est\022\017\n\007chat_id\030\001 \001(\006\022\024\n\014user_steamid\030\002 \003"
-      "(\006\"\300\001\n-CBroadcast_GetBroadcastChatUserNa"
-      "mes_Response\022]\n\rpersona_names\030\001 \003(\0132F.pr"
-      "oto.steam.CBroadcast_GetBroadcastChatUse"
-      "rNames_Response.PersonaName\0320\n\013PersonaNa"
-      "me\022\020\n\010steam_id\030\001 \001(\006\022\017\n\007persona\030\002 \001(\t\"\204\002"
-      "\n,CBroadcast_BroadcastViewerState_Notifi"
-      "cation\022\017\n\007steamid\030\001 \001(\006\022m\n\005state\030\002 \001(\0162F"
-      ".proto.steam.CBroadcast_BroadcastViewerS"
-      "tate_Notification.EViewerState:\026k_EViewe"
-      "rNeedsApproval\"T\n\014EViewerState\022\032\n\026k_EVie"
-      "werNeedsApproval\020\001\022\025\n\021k_EViewerWatching\020"
-      "\002\022\021\n\rk_EViewerLeft\020\003\"F\n.CBroadcast_Waiti"
-      "ngBroadcastViewer_Notification\022\024\n\014broadc"
-      "ast_id\030\001 \001(\006\"\225\001\n+CBroadcast_StopBroadcas"
-      "tUpload_Notification\022\024\n\014broadcast_id\030\001 \001"
-      "(\006\022\032\n\022broadcast_relay_id\030\002 \001(\006\022\025\n\rupload"
-      "_result\030\003 \001(\r\022\035\n\025too_many_poor_uploads\030\004"
-      " \001(\010\"=\n%CBroadcast_SessionClosed_Notific"
-      "ation\022\024\n\014broadcast_id\030\001 \001(\006\"L\n-CBroadcas"
-      "t_ViewerBroadcastInvite_Notification\022\033\n\023"
-      "broadcaster_steamid\030\001 \001(\006\"T\n\'CBroadcast_"
-      "BroadcastStatus_Notification\022\024\n\014broadcas"
-      "t_id\030\001 \001(\006\022\023\n\013num_viewers\030\002 \001(\0052\261\025\n\tBroa"
-      "dcast\022\205\002\n\025BeginBroadcastSession\0225.proto."
-      "steam.CBroadcast_BeginBroadcastSession_R"
-      "equest\0326.proto.steam.CBroadcast_BeginBro"
-      "adcastSession_Response\"}\202\265\030yRequest from"
-      " client to directory to begin a broadcas"
-      "t session. No data being sent to relay; "
-      "just available for broadcast.\022\322\001\n\023EndBro"
-      "adcastSession\0223.proto.steam.CBroadcast_E"
-      "ndBroadcastSession_Request\0324.proto.steam"
-      ".CBroadcast_EndBroadcastSession_Response"
-      "\"P\202\265\030LRequest from client to stop a broa"
-      "dcast session. Any uploads will terminat"
-      "e.\022\304\001\n\024StartBroadcastUpload\0224.proto.stea"
-      "m.CBroadcast_StartBroadcastUpload_Reques"
-      "t\0325.proto.steam.CBroadcast_StartBroadcas"
-      "tUpload_Response\"\?\202\265\030;Request from clien"
-      "t to begin sending video for a broadcast"
-      ".\022\261\001\n\031NotifyBroadcastUploadStop\022>.proto."
-      "steam.CBroadcast_NotifyBroadcastUploadSt"
-      "op_Notification\032\027.proto.steam.NoResponse"
-      "\";\202\265\0307Tells directory that client stoppe"
-      "d uploading broadcast\022\237\001\n\016WatchBroadcast"
-      "\022..proto.steam.CBroadcast_WatchBroadcast"
-      "_Request\032/.proto.steam.CBroadcast_WatchB"
-      "roadcast_Response\",\202\265\030(Request from view"
-      "er to watch a broadcast\022\256\001\n\022GetBroadcast"
-      "Status\0222.proto.steam.CBroadcast_GetBroad"
-      "castStatus_Request\0323.proto.steam.CBroadc"
-      "ast_GetBroadcastStatus_Response\"/\202\265\030+Req"
-      "uest from viewer about broadcast details"
-      "\022\272\001\n\021InviteToBroadcast\0221.proto.steam.CBr"
-      "oadcast_InviteToBroadcast_Request\0322.prot"
-      "o.steam.CBroadcast_InviteToBroadcast_Res"
-      "ponse\">\202\265\030:Invites another steam user to"
-      " watch the caller\'s broadcast\022\340\001\n\032SendBr"
-      "oadcastStateToServer\022:.proto.steam.CBroa"
-      "dcast_SendBroadcastStateToServer_Request"
-      "\032;.proto.steam.CBroadcast_SendBroadcastS"
-      "tateToServer_Response\"I\202\265\030ESends users c"
-      "urrent broadcast state (permissions, gam"
-      "e) to the server\022\272\001\n\037NotifyBroadcastSess"
-      "ionHeartbeat\022D.proto.steam.CBroadcast_No"
-      "tifyBroadcastSessionHeartbeat_Notificati"
-      "on\032\027.proto.steam.NoResponse\"8\202\265\0304Tells d"
-      "irectory broadcast session is still avai"
-      "lable\022\254\001\n\024GetBroadcastChatInfo\0224.proto.s"
-      "team.CBroadcast_GetBroadcastChatInfo_Req"
-      "uest\0325.proto.steam.CBroadcast_GetBroadca"
-      "stChatInfo_Response\"\'\202\265\030#Gets chat room "
-      "info for a broadcast\022\242\001\n\017PostChatMessage"
-      "\022/.proto.steam.CBroadcast_PostChatMessag"
-      "e_Request\0320.proto.steam.CBroadcast_PostC"
-      "hatMessage_Response\",\202\265\030(Post chat messa"
-      "ge to specified chat room\022\256\001\n\025MuteBroadc"
-      "astChatUser\0225.proto.steam.CBroadcast_Mut"
-      "eBroadcastChatUser_Request\0326.proto.steam"
-      ".CBroadcast_MuteBroadcastChatUser_Respon"
-      "se\"&\202\265\030\"Mute a user in your broadcast ch"
-      "at\022\254\001\n\022RemoveUserChatText\0222.proto.steam."
-      "CBroadcast_RemoveUserChatText_Request\0323."
-      "proto.steam.CBroadcast_RemoveUserChatTex"
-      "t_Response\"-\202\265\030)Tell all viewers to remo"
-      "ve user chat text\022\273\001\n\031GetBroadcastChatUs"
-      "erNames\0229.proto.steam.CBroadcast_GetBroa"
-      "dcastChatUserNames_Request\032:.proto.steam"
-      ".CBroadcast_GetBroadcastChatUserNames_Re"
-      "sponse\"\'\202\265\030#Get names for list of users "
-      "in chat\032*\202\265\030&Methods for Steam broadcast"
-      " operations2\372\t\n\017BroadcastClient\022\271\001\n\032Noti"
-      "fyBroadcastViewerState\0229.proto.steam.CBr"
-      "oadcast_BroadcastViewerState_Notificatio"
-      "n\032\027.proto.steam.NoResponse\"G\202\265\030CNotifica"
-      "tion from server to client that a viewer"
-      "s state has changed\022\325\001\n\034NotifyWaitingBro"
-      "adcastViewer\022;.proto.steam.CBroadcast_Wa"
-      "itingBroadcastViewer_Notification\032\027.prot"
-      "o.steam.NoResponse\"_\202\265\030[Notification fro"
-      "m server to client one or more users is "
-      "waiting for user to start broadcast\022\356\001\n\031"
-      "NotifyStopBroadcastUpload\0228.proto.steam."
-      "CBroadcast_StopBroadcastUpload_Notificat"
-      "ion\032\027.proto.steam.NoResponse\"~\202\265\030zNotifi"
-      "cation from server to client telling it "
-      "to stop uploading when the last viewer h"
-      "as disconnected from their broadcast\022\315\001\n"
-      "\023NotifySessionClosed\0222.proto.steam.CBroa"
-      "dcast_SessionClosed_Notification\032\027.proto"
-      ".steam.NoResponse\"i\202\265\030eNotification from"
-      " server to client telling it a session h"
-      "as been closed unexpectedly by the direc"
-      "tory\022\333\001\n\033NotifyViewerBroadcastInvite\022:.p"
-      "roto.steam.CBroadcast_ViewerBroadcastInv"
-      "ite_Notification\032\027.proto.steam.NoRespons"
-      "e\"g\202\265\030cNotification from server to clien"
-      "t that a broadcaster is inviting a viewe"
-      "r to watch their broadcast\022\255\001\n\025NotifyBro"
-      "adcastStatus\0224.proto.steam.CBroadcast_Br"
-      "oadcastStatus_Notification\032\027.proto.steam"
-      ".NoResponse\"E\202\265\030ANotification from serve"
-      "r to client about current broadcast stat"
-      "us\032\004\300\265\030\002B\003\200\001\001"
+      "(\r\022\022\n\nrtmp_token\030\006 \001(\004\"\233\003\n)CBroadcast_Be"
+      "ginBroadcastSession_Response\022\024\n\014broadcas"
+      "t_id\030\001 \001(\006\022P\n\030thumbnail_upload_address\030\002"
+      " \001(\tB.\202\265\030*Http address to upload the thu"
+      "mbnail data.\022e\n\026thumbnail_upload_token\030\003"
+      " \001(\tBE\202\265\030Atoken to authorize as broadcas"
+      "ter to upload content to the relay.\022K\n\032t"
+      "humbnail_interval_seconds\030\004 \001(\rB\'\202\265\030#how"
+      " many seconds between thumbnails\022R\n\034thum"
+      "bnail_broadcast_relay_id\030\005 \001(\006B,\202\265\030(uniq"
+      "ue identifier on the broadcast relay\">\n&"
+      "CBroadcast_EndBroadcastSession_Request\022\024"
+      "\n\014broadcast_id\030\001 \001(\006\")\n\'CBroadcast_EndBr"
+      "oadcastSession_Response\"w\n\'CBroadcast_St"
+      "artBroadcastUpload_Request\022\024\n\014broadcast_"
+      "id\030\001 \001(\006\022\016\n\006cellid\030\002 \001(\r\022\017\n\007as_rtmp\030\003 \001("
+      "\010\022\025\n\rdelay_seconds\030\004 \001(\r\"q\n(CBroadcast_S"
+      "tartBroadcastUpload_Response\022\024\n\014upload_t"
+      "oken\030\001 \001(\t\022\026\n\016upload_address\030\002 \001(\t\022\027\n\017up"
+      "load_relay_id\030\003 \001(\006\"f\n1CBroadcast_Notify"
+      "BroadcastUploadStop_Notification\022\032\n\022broa"
+      "dcast_relay_id\030\001 \001(\006\022\025\n\rupload_result\030\002 "
+      "\001(\r\"\264\002\n!CBroadcast_WatchBroadcast_Reques"
+      "t\022)\n\007steamid\030\001 \001(\006B\030\202\265\030\024broadcaster stea"
+      "mID.\022X\n\025existing_broadcast_id\030\002 \001(\006B9\202\265\030"
+      "5broadcast session ID (optional, rejoin "
+      "if specified).\022b\n\014viewer_token\030\003 \001(\006BL\202\265"
+      "\030Hviewer token received from last WatchR"
+      "equest call, from browser storage.\022\021\n\tcl"
+      "ient_ip\030\004 \001(\r\022\023\n\013client_cell\030\005 \001(\r\"\251\006\n\"C"
+      "Broadcast_WatchBroadcast_Response\022g\n\010res"
+      "ponse\030\001 \001(\0162>.proto.steam.CBroadcast_Wat"
+      "chBroadcast_Response.EWatchResponse:\025k_E"
+      "WatchResponseReady\022\017\n\007mpd_url\030\002 \001(\t\022\024\n\014b"
+      "roadcast_id\030\003 \001(\006\022\016\n\006gameid\030\004 \001(\004\022\r\n\005tit"
+      "le\030\005 \001(\t\022\023\n\013num_viewers\030\006 \001(\r\022\022\n\npermiss"
+      "ion\030\007 \001(\005\022\017\n\007is_rtmp\030\010 \001(\010\022\025\n\rseconds_de"
+      "lay\030\t \001(\005\022\024\n\014viewer_token\030\n \001(\006\022\033\n\023hls_m"
+      "3u8_master_url\030\013 \001(\t\"\317\003\n\016EWatchResponse\022"
+      "\031\n\025k_EWatchResponseReady\020\001\022 \n\034k_EWatchRe"
+      "sponseNotAvailable\020\002\022&\n\"k_EWatchResponse"
+      "WaitingForApproval\020\003\022#\n\037k_EWatchResponse"
+      "WaitingForStart\020\004\022\"\n\036k_EWatchResponseInv"
+      "alidSession\020\005\022%\n!k_EWatchResponseTooMany"
+      "Broadcasts\020\006\022\'\n#k_EWatchResponseWaitingF"
+      "orReconnect\020\007\022&\n\"k_EWatchResponseSystemN"
+      "otSupported\020\010\022\"\n\036k_EWatchResponseUserRes"
+      "tricted\020\t\022#\n\037k_EWatchResponseClientOutOf"
+      "Date\020\n\022%\n!k_EWatchResponsePoorUploadQual"
+      "ity\020\013\022\'\n#k_EWatchResponseMissingSubscrip"
+      "tion\020\014\"N\n%CBroadcast_GetBroadcastStatus_"
+      "Request\022\017\n\007steamid\030\001 \001(\006\022\024\n\014broadcast_id"
+      "\030\002 \001(\006\"\256\001\n&CBroadcast_GetBroadcastStatus"
+      "_Response\022\016\n\006gameid\030\001 \001(\004\022\r\n\005title\030\002 \001(\t"
+      "\022\023\n\013num_viewers\030\003 \001(\r\022\022\n\npermission\030\004 \001("
+      "\005\022\017\n\007is_rtmp\030\005 \001(\010\022\025\n\rseconds_delay\030\006 \001("
+      "\005\022\024\n\014is_publisher\030\007 \001(\010\"R\n$CBroadcast_In"
+      "viteToBroadcast_Request\022\017\n\007steamid\030\001 \001(\006"
+      "\022\031\n\021approval_response\030\002 \001(\010\"8\n%CBroadcas"
+      "t_InviteToBroadcast_Response\022\017\n\007success\030"
+      "\001 \001(\010\"|\n-CBroadcast_SendBroadcastStateTo"
+      "Server_Request\022\022\n\npermission\030\001 \001(\005\022\016\n\006ga"
+      "meid\030\002 \001(\004\022\r\n\005title\030\003 \001(\t\022\030\n\020game_data_c"
+      "onfig\030\004 \001(\t\"0\n.CBroadcast_SendBroadcastS"
+      "tateToServer_Response\"O\n7CBroadcast_Noti"
+      "fyBroadcastSessionHeartbeat_Notification"
+      "\022\024\n\014broadcast_id\030\001 \001(\006\"x\n\'CBroadcast_Get"
+      "BroadcastChatInfo_Request\022\017\n\007steamid\030\001 \001"
+      "(\006\022\024\n\014broadcast_id\030\002 \001(\006\022\021\n\tclient_ip\030\003 "
+      "\001(\r\022\023\n\013client_cell\030\004 \001(\r\"h\n(CBroadcast_G"
+      "etBroadcastChatInfo_Response\022\017\n\007chat_id\030"
+      "\001 \001(\006\022\020\n\010view_url\030\002 \001(\t\022\031\n\021view_url_temp"
+      "late\030\003 \001(\t\"[\n\"CBroadcast_PostChatMessage"
+      "_Request\022\017\n\007chat_id\030\001 \001(\006\022\017\n\007message\030\002 \001"
+      "(\t\022\023\n\013instance_id\030\003 \001(\r\"\\\n#CBroadcast_Po"
+      "stChatMessage_Response\022\024\n\014persona_name\030\001"
+      " \001(\t\022\017\n\007in_game\030\002 \001(\010\022\016\n\006result\030\003 \001(\005\"`\n"
+      "(CBroadcast_MuteBroadcastChatUser_Reques"
+      "t\022\017\n\007chat_id\030\001 \001(\006\022\024\n\014user_steamid\030\002 \001(\006"
+      "\022\r\n\005muted\030\003 \001(\010\"+\n)CBroadcast_MuteBroadc"
+      "astChatUser_Response\"N\n%CBroadcast_Remov"
+      "eUserChatText_Request\022\017\n\007chat_id\030\001 \001(\006\022\024"
+      "\n\014user_steamid\030\002 \001(\006\"(\n&CBroadcast_Remov"
+      "eUserChatText_Response\"U\n,CBroadcast_Get"
+      "BroadcastChatUserNames_Request\022\017\n\007chat_i"
+      "d\030\001 \001(\006\022\024\n\014user_steamid\030\002 \003(\006\"\300\001\n-CBroad"
+      "cast_GetBroadcastChatUserNames_Response\022"
+      "]\n\rpersona_names\030\001 \003(\0132F.proto.steam.CBr"
+      "oadcast_GetBroadcastChatUserNames_Respon"
+      "se.PersonaName\0320\n\013PersonaName\022\020\n\010steam_i"
+      "d\030\001 \001(\006\022\017\n\007persona\030\002 \001(\t\"\204\002\n,CBroadcast_"
+      "BroadcastViewerState_Notification\022\017\n\007ste"
+      "amid\030\001 \001(\006\022m\n\005state\030\002 \001(\0162F.proto.steam."
+      "CBroadcast_BroadcastViewerState_Notifica"
+      "tion.EViewerState:\026k_EViewerNeedsApprova"
+      "l\"T\n\014EViewerState\022\032\n\026k_EViewerNeedsAppro"
+      "val\020\001\022\025\n\021k_EViewerWatching\020\002\022\021\n\rk_EViewe"
+      "rLeft\020\003\"F\n.CBroadcast_WaitingBroadcastVi"
+      "ewer_Notification\022\024\n\014broadcast_id\030\001 \001(\006\""
+      "\225\001\n+CBroadcast_StopBroadcastUpload_Notif"
+      "ication\022\024\n\014broadcast_id\030\001 \001(\006\022\032\n\022broadca"
+      "st_relay_id\030\002 \001(\006\022\025\n\rupload_result\030\003 \001(\r"
+      "\022\035\n\025too_many_poor_uploads\030\004 \001(\010\"=\n%CBroa"
+      "dcast_SessionClosed_Notification\022\024\n\014broa"
+      "dcast_id\030\001 \001(\006\"L\n-CBroadcast_ViewerBroad"
+      "castInvite_Notification\022\033\n\023broadcaster_s"
+      "teamid\030\001 \001(\006\"T\n\'CBroadcast_BroadcastStat"
+      "us_Notification\022\024\n\014broadcast_id\030\001 \001(\006\022\023\n"
+      "\013num_viewers\030\002 \001(\005\"\277\001\n,CBroadcast_SendTh"
+      "umbnailToRelay_Notification\022\036\n\026thumbnail"
+      "_upload_token\030\001 \001(\t\022$\n\034thumbnail_broadca"
+      "st_relay_id\030\002 \001(\006\022\026\n\016thumbnail_data\030\003 \001("
+      "\014\022\027\n\017thumbnail_width\030\004 \001(\r\022\030\n\020thumbnail_"
+      "height\030\005 \001(\r2\261\025\n\tBroadcast\022\205\002\n\025BeginBroa"
+      "dcastSession\0225.proto.steam.CBroadcast_Be"
+      "ginBroadcastSession_Request\0326.proto.stea"
+      "m.CBroadcast_BeginBroadcastSession_Respo"
+      "nse\"}\202\265\030yRequest from client to director"
+      "y to begin a broadcast session. No data "
+      "being sent to relay; just available for "
+      "broadcast.\022\322\001\n\023EndBroadcastSession\0223.pro"
+      "to.steam.CBroadcast_EndBroadcastSession_"
+      "Request\0324.proto.steam.CBroadcast_EndBroa"
+      "dcastSession_Response\"P\202\265\030LRequest from "
+      "client to stop a broadcast session. Any "
+      "uploads will terminate.\022\304\001\n\024StartBroadca"
+      "stUpload\0224.proto.steam.CBroadcast_StartB"
+      "roadcastUpload_Request\0325.proto.steam.CBr"
+      "oadcast_StartBroadcastUpload_Response\"\?\202"
+      "\265\030;Request from client to begin sending "
+      "video for a broadcast.\022\261\001\n\031NotifyBroadca"
+      "stUploadStop\022>.proto.steam.CBroadcast_No"
+      "tifyBroadcastUploadStop_Notification\032\027.p"
+      "roto.steam.NoResponse\";\202\265\0307Tells directo"
+      "ry that client stopped uploading broadca"
+      "st\022\237\001\n\016WatchBroadcast\022..proto.steam.CBro"
+      "adcast_WatchBroadcast_Request\032/.proto.st"
+      "eam.CBroadcast_WatchBroadcast_Response\","
+      "\202\265\030(Request from viewer to watch a broad"
+      "cast\022\256\001\n\022GetBroadcastStatus\0222.proto.stea"
+      "m.CBroadcast_GetBroadcastStatus_Request\032"
+      "3.proto.steam.CBroadcast_GetBroadcastSta"
+      "tus_Response\"/\202\265\030+Request from viewer ab"
+      "out broadcast details\022\272\001\n\021InviteToBroadc"
+      "ast\0221.proto.steam.CBroadcast_InviteToBro"
+      "adcast_Request\0322.proto.steam.CBroadcast_"
+      "InviteToBroadcast_Response\">\202\265\030:Invites "
+      "another steam user to watch the caller\'s"
+      " broadcast\022\340\001\n\032SendBroadcastStateToServe"
+      "r\022:.proto.steam.CBroadcast_SendBroadcast"
+      "StateToServer_Request\032;.proto.steam.CBro"
+      "adcast_SendBroadcastStateToServer_Respon"
+      "se\"I\202\265\030ESends users current broadcast st"
+      "ate (permissions, game) to the server\022\272\001"
+      "\n\037NotifyBroadcastSessionHeartbeat\022D.prot"
+      "o.steam.CBroadcast_NotifyBroadcastSessio"
+      "nHeartbeat_Notification\032\027.proto.steam.No"
+      "Response\"8\202\265\0304Tells directory broadcast "
+      "session is still available\022\254\001\n\024GetBroadc"
+      "astChatInfo\0224.proto.steam.CBroadcast_Get"
+      "BroadcastChatInfo_Request\0325.proto.steam."
+      "CBroadcast_GetBroadcastChatInfo_Response"
+      "\"\'\202\265\030#Gets chat room info for a broadcas"
+      "t\022\242\001\n\017PostChatMessage\022/.proto.steam.CBro"
+      "adcast_PostChatMessage_Request\0320.proto.s"
+      "team.CBroadcast_PostChatMessage_Response"
+      "\",\202\265\030(Post chat message to specified cha"
+      "t room\022\256\001\n\025MuteBroadcastChatUser\0225.proto"
+      ".steam.CBroadcast_MuteBroadcastChatUser_"
+      "Request\0326.proto.steam.CBroadcast_MuteBro"
+      "adcastChatUser_Response\"&\202\265\030\"Mute a user"
+      " in your broadcast chat\022\254\001\n\022RemoveUserCh"
+      "atText\0222.proto.steam.CBroadcast_RemoveUs"
+      "erChatText_Request\0323.proto.steam.CBroadc"
+      "ast_RemoveUserChatText_Response\"-\202\265\030)Tel"
+      "l all viewers to remove user chat text\022\273"
+      "\001\n\031GetBroadcastChatUserNames\0229.proto.ste"
+      "am.CBroadcast_GetBroadcastChatUserNames_"
+      "Request\032:.proto.steam.CBroadcast_GetBroa"
+      "dcastChatUserNames_Response\"\'\202\265\030#Get nam"
+      "es for list of users in chat\032*\202\265\030&Method"
+      "s for Steam broadcast operations2\205\013\n\017Bro"
+      "adcastClient\022\271\001\n\032NotifyBroadcastViewerSt"
+      "ate\0229.proto.steam.CBroadcast_BroadcastVi"
+      "ewerState_Notification\032\027.proto.steam.NoR"
+      "esponse\"G\202\265\030CNotification from server to"
+      " client that a viewers state has changed"
+      "\022\325\001\n\034NotifyWaitingBroadcastViewer\022;.prot"
+      "o.steam.CBroadcast_WaitingBroadcastViewe"
+      "r_Notification\032\027.proto.steam.NoResponse\""
+      "_\202\265\030[Notification from server to client "
+      "one or more users is waiting for user to"
+      " start broadcast\022\356\001\n\031NotifyStopBroadcast"
+      "Upload\0228.proto.steam.CBroadcast_StopBroa"
+      "dcastUpload_Notification\032\027.proto.steam.N"
+      "oResponse\"~\202\265\030zNotification from server "
+      "to client telling it to stop uploading w"
+      "hen the last viewer has disconnected fro"
+      "m their broadcast\022\315\001\n\023NotifySessionClose"
+      "d\0222.proto.steam.CBroadcast_SessionClosed"
+      "_Notification\032\027.proto.steam.NoResponse\"i"
+      "\202\265\030eNotification from server to client t"
+      "elling it a session has been closed unex"
+      "pectedly by the directory\022\333\001\n\033NotifyView"
+      "erBroadcastInvite\022:.proto.steam.CBroadca"
+      "st_ViewerBroadcastInvite_Notification\032\027."
+      "proto.steam.NoResponse\"g\202\265\030cNotification"
+      " from server to client that a broadcaste"
+      "r is inviting a viewer to watch their br"
+      "oadcast\022\255\001\n\025NotifyBroadcastStatus\0224.prot"
+      "o.steam.CBroadcast_BroadcastStatus_Notif"
+      "ication\032\027.proto.steam.NoResponse\"E\202\265\030ANo"
+      "tification from server to client about c"
+      "urrent broadcast status\022\210\001\n\024SendThumbnai"
+      "lToRelay\0229.proto.steam.CBroadcast_SendTh"
+      "umbnailToRelay_Notification\032\027.proto.stea"
+      "m.NoResponse\"\034\202\265\030\030Send thumbnails to rel"
+      "ay\032\004\300\265\030\002B\003\200\001\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 8253);
+      descriptor, 8933);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "steammessages_broadcast.steamclient.proto", &protobuf_RegisterTypes);
   ::proto::steam::protobuf_steammessages_5funified_5fbase_2esteamclient_2eproto::AddDescriptors();
@@ -1628,6 +1676,10 @@ void CBroadcast_BeginBroadcastSession_Request::set_rtmp_token(::google::protobuf
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CBroadcast_BeginBroadcastSession_Response::kBroadcastIdFieldNumber;
+const int CBroadcast_BeginBroadcastSession_Response::kThumbnailUploadAddressFieldNumber;
+const int CBroadcast_BeginBroadcastSession_Response::kThumbnailUploadTokenFieldNumber;
+const int CBroadcast_BeginBroadcastSession_Response::kThumbnailIntervalSecondsFieldNumber;
+const int CBroadcast_BeginBroadcastSession_Response::kThumbnailBroadcastRelayIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CBroadcast_BeginBroadcastSession_Response::CBroadcast_BeginBroadcastSession_Response()
@@ -1644,13 +1696,26 @@ CBroadcast_BeginBroadcastSession_Response::CBroadcast_BeginBroadcastSession_Resp
       _has_bits_(from._has_bits_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  broadcast_id_ = from.broadcast_id_;
+  thumbnail_upload_address_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_thumbnail_upload_address()) {
+    thumbnail_upload_address_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.thumbnail_upload_address_);
+  }
+  thumbnail_upload_token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_thumbnail_upload_token()) {
+    thumbnail_upload_token_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.thumbnail_upload_token_);
+  }
+  ::memcpy(&broadcast_id_, &from.broadcast_id_,
+    reinterpret_cast<char*>(&thumbnail_interval_seconds_) -
+    reinterpret_cast<char*>(&broadcast_id_) + sizeof(thumbnail_interval_seconds_));
   // @@protoc_insertion_point(copy_constructor:proto.steam.CBroadcast_BeginBroadcastSession_Response)
 }
 
 void CBroadcast_BeginBroadcastSession_Response::SharedCtor() {
   _cached_size_ = 0;
-  broadcast_id_ = GOOGLE_ULONGLONG(0);
+  thumbnail_upload_address_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  thumbnail_upload_token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&broadcast_id_, 0, reinterpret_cast<char*>(&thumbnail_interval_seconds_) -
+    reinterpret_cast<char*>(&broadcast_id_) + sizeof(thumbnail_interval_seconds_));
 }
 
 CBroadcast_BeginBroadcastSession_Response::~CBroadcast_BeginBroadcastSession_Response() {
@@ -1659,6 +1724,8 @@ CBroadcast_BeginBroadcastSession_Response::~CBroadcast_BeginBroadcastSession_Res
 }
 
 void CBroadcast_BeginBroadcastSession_Response::SharedDtor() {
+  thumbnail_upload_address_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  thumbnail_upload_token_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void CBroadcast_BeginBroadcastSession_Response::SetCachedSize(int size) const {
@@ -1686,7 +1753,20 @@ CBroadcast_BeginBroadcastSession_Response* CBroadcast_BeginBroadcastSession_Resp
 
 void CBroadcast_BeginBroadcastSession_Response::Clear() {
 // @@protoc_insertion_point(message_clear_start:proto.steam.CBroadcast_BeginBroadcastSession_Response)
-  broadcast_id_ = GOOGLE_ULONGLONG(0);
+  if (_has_bits_[0 / 32] & 3u) {
+    if (has_thumbnail_upload_address()) {
+      GOOGLE_DCHECK(!thumbnail_upload_address_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*thumbnail_upload_address_.UnsafeRawStringPointer())->clear();
+    }
+    if (has_thumbnail_upload_token()) {
+      GOOGLE_DCHECK(!thumbnail_upload_token_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*thumbnail_upload_token_.UnsafeRawStringPointer())->clear();
+    }
+  }
+  if (_has_bits_[0 / 32] & 28u) {
+    ::memset(&broadcast_id_, 0, reinterpret_cast<char*>(&thumbnail_interval_seconds_) -
+      reinterpret_cast<char*>(&broadcast_id_) + sizeof(thumbnail_interval_seconds_));
+  }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -1709,6 +1789,66 @@ bool CBroadcast_BeginBroadcastSession_Response::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
                  input, &broadcast_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional string thumbnail_upload_address = 2 [(.proto.steam.description) = "Http address to upload the thumbnail data."];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_thumbnail_upload_address()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->thumbnail_upload_address().data(), this->thumbnail_upload_address().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional string thumbnail_upload_token = 3 [(.proto.steam.description) = "token to authorize as broadcaster to upload content to the relay."];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_thumbnail_upload_token()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->thumbnail_upload_token().data(), this->thumbnail_upload_token().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 thumbnail_interval_seconds = 4 [(.proto.steam.description) = "how many seconds between thumbnails"];
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
+          set_has_thumbnail_interval_seconds();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &thumbnail_interval_seconds_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional fixed64 thumbnail_broadcast_relay_id = 5 [(.proto.steam.description) = "unique identifier on the broadcast relay"];
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(41u)) {
+          set_has_thumbnail_broadcast_relay_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
+                 input, &thumbnail_broadcast_relay_id_)));
         } else {
           goto handle_unusual;
         }
@@ -1745,8 +1885,38 @@ void CBroadcast_BeginBroadcastSession_Response::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // optional fixed64 broadcast_id = 1;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteFixed64(1, this->broadcast_id(), output);
+  }
+
+  // optional string thumbnail_upload_address = 2 [(.proto.steam.description) = "Http address to upload the thumbnail data."];
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->thumbnail_upload_address().data(), this->thumbnail_upload_address().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->thumbnail_upload_address(), output);
+  }
+
+  // optional string thumbnail_upload_token = 3 [(.proto.steam.description) = "token to authorize as broadcaster to upload content to the relay."];
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->thumbnail_upload_token().data(), this->thumbnail_upload_token().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->thumbnail_upload_token(), output);
+  }
+
+  // optional uint32 thumbnail_interval_seconds = 4 [(.proto.steam.description) = "how many seconds between thumbnails"];
+  if (cached_has_bits & 0x00000010u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->thumbnail_interval_seconds(), output);
+  }
+
+  // optional fixed64 thumbnail_broadcast_relay_id = 5 [(.proto.steam.description) = "unique identifier on the broadcast relay"];
+  if (cached_has_bits & 0x00000008u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFixed64(5, this->thumbnail_broadcast_relay_id(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1764,8 +1934,40 @@ void CBroadcast_BeginBroadcastSession_Response::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // optional fixed64 broadcast_id = 1;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(1, this->broadcast_id(), target);
+  }
+
+  // optional string thumbnail_upload_address = 2 [(.proto.steam.description) = "Http address to upload the thumbnail data."];
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->thumbnail_upload_address().data(), this->thumbnail_upload_address().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->thumbnail_upload_address(), target);
+  }
+
+  // optional string thumbnail_upload_token = 3 [(.proto.steam.description) = "token to authorize as broadcaster to upload content to the relay."];
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->thumbnail_upload_token().data(), this->thumbnail_upload_token().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->thumbnail_upload_token(), target);
+  }
+
+  // optional uint32 thumbnail_interval_seconds = 4 [(.proto.steam.description) = "how many seconds between thumbnails"];
+  if (cached_has_bits & 0x00000010u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->thumbnail_interval_seconds(), target);
+  }
+
+  // optional fixed64 thumbnail_broadcast_relay_id = 5 [(.proto.steam.description) = "unique identifier on the broadcast relay"];
+  if (cached_has_bits & 0x00000008u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(5, this->thumbnail_broadcast_relay_id(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1785,11 +1987,39 @@ size_t CBroadcast_BeginBroadcastSession_Response::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         unknown_fields());
   }
-  // optional fixed64 broadcast_id = 1;
-  if (has_broadcast_id()) {
-    total_size += 1 + 8;
-  }
+  if (_has_bits_[0 / 32] & 31u) {
+    // optional string thumbnail_upload_address = 2 [(.proto.steam.description) = "Http address to upload the thumbnail data."];
+    if (has_thumbnail_upload_address()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->thumbnail_upload_address());
+    }
 
+    // optional string thumbnail_upload_token = 3 [(.proto.steam.description) = "token to authorize as broadcaster to upload content to the relay."];
+    if (has_thumbnail_upload_token()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->thumbnail_upload_token());
+    }
+
+    // optional fixed64 broadcast_id = 1;
+    if (has_broadcast_id()) {
+      total_size += 1 + 8;
+    }
+
+    // optional fixed64 thumbnail_broadcast_relay_id = 5 [(.proto.steam.description) = "unique identifier on the broadcast relay"];
+    if (has_thumbnail_broadcast_relay_id()) {
+      total_size += 1 + 8;
+    }
+
+    // optional uint32 thumbnail_interval_seconds = 4 [(.proto.steam.description) = "how many seconds between thumbnails"];
+    if (has_thumbnail_interval_seconds()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->thumbnail_interval_seconds());
+    }
+
+  }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -1819,8 +2049,26 @@ void CBroadcast_BeginBroadcastSession_Response::MergeFrom(const CBroadcast_Begin
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_broadcast_id()) {
-    set_broadcast_id(from.broadcast_id());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 31u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_thumbnail_upload_address();
+      thumbnail_upload_address_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.thumbnail_upload_address_);
+    }
+    if (cached_has_bits & 0x00000002u) {
+      set_has_thumbnail_upload_token();
+      thumbnail_upload_token_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.thumbnail_upload_token_);
+    }
+    if (cached_has_bits & 0x00000004u) {
+      broadcast_id_ = from.broadcast_id_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      thumbnail_broadcast_relay_id_ = from.thumbnail_broadcast_relay_id_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      thumbnail_interval_seconds_ = from.thumbnail_interval_seconds_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
 }
 
@@ -1847,7 +2095,11 @@ void CBroadcast_BeginBroadcastSession_Response::Swap(CBroadcast_BeginBroadcastSe
   InternalSwap(other);
 }
 void CBroadcast_BeginBroadcastSession_Response::InternalSwap(CBroadcast_BeginBroadcastSession_Response* other) {
+  thumbnail_upload_address_.Swap(&other->thumbnail_upload_address_);
+  thumbnail_upload_token_.Swap(&other->thumbnail_upload_token_);
   std::swap(broadcast_id_, other->broadcast_id_);
+  std::swap(thumbnail_broadcast_relay_id_, other->thumbnail_broadcast_relay_id_);
+  std::swap(thumbnail_interval_seconds_, other->thumbnail_interval_seconds_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -1863,13 +2115,13 @@ void CBroadcast_BeginBroadcastSession_Response::InternalSwap(CBroadcast_BeginBro
 
 // optional fixed64 broadcast_id = 1;
 bool CBroadcast_BeginBroadcastSession_Response::has_broadcast_id() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 void CBroadcast_BeginBroadcastSession_Response::set_has_broadcast_id() {
-  _has_bits_[0] |= 0x00000001u;
+  _has_bits_[0] |= 0x00000004u;
 }
 void CBroadcast_BeginBroadcastSession_Response::clear_has_broadcast_id() {
-  _has_bits_[0] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 void CBroadcast_BeginBroadcastSession_Response::clear_broadcast_id() {
   broadcast_id_ = GOOGLE_ULONGLONG(0);
@@ -1883,6 +2135,180 @@ void CBroadcast_BeginBroadcastSession_Response::set_broadcast_id(::google::proto
   set_has_broadcast_id();
   broadcast_id_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BeginBroadcastSession_Response.broadcast_id)
+}
+
+// optional string thumbnail_upload_address = 2 [(.proto.steam.description) = "Http address to upload the thumbnail data."];
+bool CBroadcast_BeginBroadcastSession_Response::has_thumbnail_upload_address() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CBroadcast_BeginBroadcastSession_Response::set_has_thumbnail_upload_address() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CBroadcast_BeginBroadcastSession_Response::clear_has_thumbnail_upload_address() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CBroadcast_BeginBroadcastSession_Response::clear_thumbnail_upload_address() {
+  thumbnail_upload_address_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_thumbnail_upload_address();
+}
+const ::std::string& CBroadcast_BeginBroadcastSession_Response::thumbnail_upload_address() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+  return thumbnail_upload_address_.GetNoArena();
+}
+void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_address(const ::std::string& value) {
+  set_has_thumbnail_upload_address();
+  thumbnail_upload_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+}
+#if LANG_CXX11
+void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_address(::std::string&& value) {
+  set_has_thumbnail_upload_address();
+  thumbnail_upload_address_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+}
+#endif
+void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_address(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_thumbnail_upload_address();
+  thumbnail_upload_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+}
+void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_address(const char* value, size_t size) {
+  set_has_thumbnail_upload_address();
+  thumbnail_upload_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+}
+::std::string* CBroadcast_BeginBroadcastSession_Response::mutable_thumbnail_upload_address() {
+  set_has_thumbnail_upload_address();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+  return thumbnail_upload_address_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* CBroadcast_BeginBroadcastSession_Response::release_thumbnail_upload_address() {
+  // @@protoc_insertion_point(field_release:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+  clear_has_thumbnail_upload_address();
+  return thumbnail_upload_address_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void CBroadcast_BeginBroadcastSession_Response::set_allocated_thumbnail_upload_address(::std::string* thumbnail_upload_address) {
+  if (thumbnail_upload_address != NULL) {
+    set_has_thumbnail_upload_address();
+  } else {
+    clear_has_thumbnail_upload_address();
+  }
+  thumbnail_upload_address_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), thumbnail_upload_address);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+}
+
+// optional string thumbnail_upload_token = 3 [(.proto.steam.description) = "token to authorize as broadcaster to upload content to the relay."];
+bool CBroadcast_BeginBroadcastSession_Response::has_thumbnail_upload_token() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CBroadcast_BeginBroadcastSession_Response::set_has_thumbnail_upload_token() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CBroadcast_BeginBroadcastSession_Response::clear_has_thumbnail_upload_token() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CBroadcast_BeginBroadcastSession_Response::clear_thumbnail_upload_token() {
+  thumbnail_upload_token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_thumbnail_upload_token();
+}
+const ::std::string& CBroadcast_BeginBroadcastSession_Response::thumbnail_upload_token() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+  return thumbnail_upload_token_.GetNoArena();
+}
+void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_token(const ::std::string& value) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+}
+#if LANG_CXX11
+void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_token(::std::string&& value) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+}
+#endif
+void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_token(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+}
+void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_token(const char* value, size_t size) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+}
+::std::string* CBroadcast_BeginBroadcastSession_Response::mutable_thumbnail_upload_token() {
+  set_has_thumbnail_upload_token();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+  return thumbnail_upload_token_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* CBroadcast_BeginBroadcastSession_Response::release_thumbnail_upload_token() {
+  // @@protoc_insertion_point(field_release:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+  clear_has_thumbnail_upload_token();
+  return thumbnail_upload_token_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void CBroadcast_BeginBroadcastSession_Response::set_allocated_thumbnail_upload_token(::std::string* thumbnail_upload_token) {
+  if (thumbnail_upload_token != NULL) {
+    set_has_thumbnail_upload_token();
+  } else {
+    clear_has_thumbnail_upload_token();
+  }
+  thumbnail_upload_token_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), thumbnail_upload_token);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+}
+
+// optional uint32 thumbnail_interval_seconds = 4 [(.proto.steam.description) = "how many seconds between thumbnails"];
+bool CBroadcast_BeginBroadcastSession_Response::has_thumbnail_interval_seconds() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void CBroadcast_BeginBroadcastSession_Response::set_has_thumbnail_interval_seconds() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void CBroadcast_BeginBroadcastSession_Response::clear_has_thumbnail_interval_seconds() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void CBroadcast_BeginBroadcastSession_Response::clear_thumbnail_interval_seconds() {
+  thumbnail_interval_seconds_ = 0u;
+  clear_has_thumbnail_interval_seconds();
+}
+::google::protobuf::uint32 CBroadcast_BeginBroadcastSession_Response::thumbnail_interval_seconds() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_interval_seconds)
+  return thumbnail_interval_seconds_;
+}
+void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_interval_seconds(::google::protobuf::uint32 value) {
+  set_has_thumbnail_interval_seconds();
+  thumbnail_interval_seconds_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_interval_seconds)
+}
+
+// optional fixed64 thumbnail_broadcast_relay_id = 5 [(.proto.steam.description) = "unique identifier on the broadcast relay"];
+bool CBroadcast_BeginBroadcastSession_Response::has_thumbnail_broadcast_relay_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void CBroadcast_BeginBroadcastSession_Response::set_has_thumbnail_broadcast_relay_id() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void CBroadcast_BeginBroadcastSession_Response::clear_has_thumbnail_broadcast_relay_id() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void CBroadcast_BeginBroadcastSession_Response::clear_thumbnail_broadcast_relay_id() {
+  thumbnail_broadcast_relay_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_thumbnail_broadcast_relay_id();
+}
+::google::protobuf::uint64 CBroadcast_BeginBroadcastSession_Response::thumbnail_broadcast_relay_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_broadcast_relay_id)
+  return thumbnail_broadcast_relay_id_;
+}
+void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_broadcast_relay_id(::google::protobuf::uint64 value) {
+  set_has_thumbnail_broadcast_relay_id();
+  thumbnail_broadcast_relay_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_broadcast_relay_id)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -13826,6 +14252,637 @@ void CBroadcast_BroadcastStatus_Notification::set_num_viewers(::google::protobuf
 
 // ===================================================================
 
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CBroadcast_SendThumbnailToRelay_Notification::kThumbnailUploadTokenFieldNumber;
+const int CBroadcast_SendThumbnailToRelay_Notification::kThumbnailBroadcastRelayIdFieldNumber;
+const int CBroadcast_SendThumbnailToRelay_Notification::kThumbnailDataFieldNumber;
+const int CBroadcast_SendThumbnailToRelay_Notification::kThumbnailWidthFieldNumber;
+const int CBroadcast_SendThumbnailToRelay_Notification::kThumbnailHeightFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CBroadcast_SendThumbnailToRelay_Notification::CBroadcast_SendThumbnailToRelay_Notification()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fbroadcast_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+}
+CBroadcast_SendThumbnailToRelay_Notification::CBroadcast_SendThumbnailToRelay_Notification(const CBroadcast_SendThumbnailToRelay_Notification& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  thumbnail_upload_token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_thumbnail_upload_token()) {
+    thumbnail_upload_token_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.thumbnail_upload_token_);
+  }
+  thumbnail_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_thumbnail_data()) {
+    thumbnail_data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.thumbnail_data_);
+  }
+  ::memcpy(&thumbnail_broadcast_relay_id_, &from.thumbnail_broadcast_relay_id_,
+    reinterpret_cast<char*>(&thumbnail_height_) -
+    reinterpret_cast<char*>(&thumbnail_broadcast_relay_id_) + sizeof(thumbnail_height_));
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+}
+
+void CBroadcast_SendThumbnailToRelay_Notification::SharedCtor() {
+  _cached_size_ = 0;
+  thumbnail_upload_token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  thumbnail_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&thumbnail_broadcast_relay_id_, 0, reinterpret_cast<char*>(&thumbnail_height_) -
+    reinterpret_cast<char*>(&thumbnail_broadcast_relay_id_) + sizeof(thumbnail_height_));
+}
+
+CBroadcast_SendThumbnailToRelay_Notification::~CBroadcast_SendThumbnailToRelay_Notification() {
+  // @@protoc_insertion_point(destructor:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  SharedDtor();
+}
+
+void CBroadcast_SendThumbnailToRelay_Notification::SharedDtor() {
+  thumbnail_upload_token_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  thumbnail_data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void CBroadcast_SendThumbnailToRelay_Notification::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CBroadcast_SendThumbnailToRelay_Notification::descriptor() {
+  protobuf_steammessages_5fbroadcast_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fbroadcast_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CBroadcast_SendThumbnailToRelay_Notification& CBroadcast_SendThumbnailToRelay_Notification::default_instance() {
+  protobuf_steammessages_5fbroadcast_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CBroadcast_SendThumbnailToRelay_Notification* CBroadcast_SendThumbnailToRelay_Notification::New(::google::protobuf::Arena* arena) const {
+  CBroadcast_SendThumbnailToRelay_Notification* n = new CBroadcast_SendThumbnailToRelay_Notification;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CBroadcast_SendThumbnailToRelay_Notification::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  if (_has_bits_[0 / 32] & 3u) {
+    if (has_thumbnail_upload_token()) {
+      GOOGLE_DCHECK(!thumbnail_upload_token_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*thumbnail_upload_token_.UnsafeRawStringPointer())->clear();
+    }
+    if (has_thumbnail_data()) {
+      GOOGLE_DCHECK(!thumbnail_data_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*thumbnail_data_.UnsafeRawStringPointer())->clear();
+    }
+  }
+  if (_has_bits_[0 / 32] & 28u) {
+    ::memset(&thumbnail_broadcast_relay_id_, 0, reinterpret_cast<char*>(&thumbnail_height_) -
+      reinterpret_cast<char*>(&thumbnail_broadcast_relay_id_) + sizeof(thumbnail_height_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CBroadcast_SendThumbnailToRelay_Notification::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string thumbnail_upload_token = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_thumbnail_upload_token()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->thumbnail_upload_token().data(), this->thumbnail_upload_token().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional fixed64 thumbnail_broadcast_relay_id = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(17u)) {
+          set_has_thumbnail_broadcast_relay_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
+                 input, &thumbnail_broadcast_relay_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional bytes thumbnail_data = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_thumbnail_data()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 thumbnail_width = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
+          set_has_thumbnail_width();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &thumbnail_width_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 thumbnail_height = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
+          set_has_thumbnail_height();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &thumbnail_height_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  return false;
+#undef DO_
+}
+
+void CBroadcast_SendThumbnailToRelay_Notification::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional string thumbnail_upload_token = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->thumbnail_upload_token().data(), this->thumbnail_upload_token().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->thumbnail_upload_token(), output);
+  }
+
+  // optional fixed64 thumbnail_broadcast_relay_id = 2;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFixed64(2, this->thumbnail_broadcast_relay_id(), output);
+  }
+
+  // optional bytes thumbnail_data = 3;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      3, this->thumbnail_data(), output);
+  }
+
+  // optional uint32 thumbnail_width = 4;
+  if (cached_has_bits & 0x00000008u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->thumbnail_width(), output);
+  }
+
+  // optional uint32 thumbnail_height = 5;
+  if (cached_has_bits & 0x00000010u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->thumbnail_height(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+}
+
+::google::protobuf::uint8* CBroadcast_SendThumbnailToRelay_Notification::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional string thumbnail_upload_token = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->thumbnail_upload_token().data(), this->thumbnail_upload_token().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->thumbnail_upload_token(), target);
+  }
+
+  // optional fixed64 thumbnail_broadcast_relay_id = 2;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(2, this->thumbnail_broadcast_relay_id(), target);
+  }
+
+  // optional bytes thumbnail_data = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        3, this->thumbnail_data(), target);
+  }
+
+  // optional uint32 thumbnail_width = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->thumbnail_width(), target);
+  }
+
+  // optional uint32 thumbnail_height = 5;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->thumbnail_height(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  return target;
+}
+
+size_t CBroadcast_SendThumbnailToRelay_Notification::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 31u) {
+    // optional string thumbnail_upload_token = 1;
+    if (has_thumbnail_upload_token()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->thumbnail_upload_token());
+    }
+
+    // optional bytes thumbnail_data = 3;
+    if (has_thumbnail_data()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->thumbnail_data());
+    }
+
+    // optional fixed64 thumbnail_broadcast_relay_id = 2;
+    if (has_thumbnail_broadcast_relay_id()) {
+      total_size += 1 + 8;
+    }
+
+    // optional uint32 thumbnail_width = 4;
+    if (has_thumbnail_width()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->thumbnail_width());
+    }
+
+    // optional uint32 thumbnail_height = 5;
+    if (has_thumbnail_height()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->thumbnail_height());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CBroadcast_SendThumbnailToRelay_Notification::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CBroadcast_SendThumbnailToRelay_Notification* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CBroadcast_SendThumbnailToRelay_Notification>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+    MergeFrom(*source);
+  }
+}
+
+void CBroadcast_SendThumbnailToRelay_Notification::MergeFrom(const CBroadcast_SendThumbnailToRelay_Notification& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 31u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_thumbnail_upload_token();
+      thumbnail_upload_token_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.thumbnail_upload_token_);
+    }
+    if (cached_has_bits & 0x00000002u) {
+      set_has_thumbnail_data();
+      thumbnail_data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.thumbnail_data_);
+    }
+    if (cached_has_bits & 0x00000004u) {
+      thumbnail_broadcast_relay_id_ = from.thumbnail_broadcast_relay_id_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      thumbnail_width_ = from.thumbnail_width_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      thumbnail_height_ = from.thumbnail_height_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CBroadcast_SendThumbnailToRelay_Notification::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CBroadcast_SendThumbnailToRelay_Notification::CopyFrom(const CBroadcast_SendThumbnailToRelay_Notification& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CBroadcast_SendThumbnailToRelay_Notification::IsInitialized() const {
+  return true;
+}
+
+void CBroadcast_SendThumbnailToRelay_Notification::Swap(CBroadcast_SendThumbnailToRelay_Notification* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CBroadcast_SendThumbnailToRelay_Notification::InternalSwap(CBroadcast_SendThumbnailToRelay_Notification* other) {
+  thumbnail_upload_token_.Swap(&other->thumbnail_upload_token_);
+  thumbnail_data_.Swap(&other->thumbnail_data_);
+  std::swap(thumbnail_broadcast_relay_id_, other->thumbnail_broadcast_relay_id_);
+  std::swap(thumbnail_width_, other->thumbnail_width_);
+  std::swap(thumbnail_height_, other->thumbnail_height_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CBroadcast_SendThumbnailToRelay_Notification::GetMetadata() const {
+  protobuf_steammessages_5fbroadcast_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fbroadcast_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CBroadcast_SendThumbnailToRelay_Notification
+
+// optional string thumbnail_upload_token = 1;
+bool CBroadcast_SendThumbnailToRelay_Notification::has_thumbnail_upload_token() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_has_thumbnail_upload_token() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::clear_has_thumbnail_upload_token() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::clear_thumbnail_upload_token() {
+  thumbnail_upload_token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_thumbnail_upload_token();
+}
+const ::std::string& CBroadcast_SendThumbnailToRelay_Notification::thumbnail_upload_token() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+  return thumbnail_upload_token_.GetNoArena();
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_upload_token(const ::std::string& value) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+}
+#if LANG_CXX11
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_upload_token(::std::string&& value) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+}
+#endif
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_upload_token(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_upload_token(const char* value, size_t size) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+}
+::std::string* CBroadcast_SendThumbnailToRelay_Notification::mutable_thumbnail_upload_token() {
+  set_has_thumbnail_upload_token();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+  return thumbnail_upload_token_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* CBroadcast_SendThumbnailToRelay_Notification::release_thumbnail_upload_token() {
+  // @@protoc_insertion_point(field_release:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+  clear_has_thumbnail_upload_token();
+  return thumbnail_upload_token_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_allocated_thumbnail_upload_token(::std::string* thumbnail_upload_token) {
+  if (thumbnail_upload_token != NULL) {
+    set_has_thumbnail_upload_token();
+  } else {
+    clear_has_thumbnail_upload_token();
+  }
+  thumbnail_upload_token_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), thumbnail_upload_token);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+}
+
+// optional fixed64 thumbnail_broadcast_relay_id = 2;
+bool CBroadcast_SendThumbnailToRelay_Notification::has_thumbnail_broadcast_relay_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_has_thumbnail_broadcast_relay_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::clear_has_thumbnail_broadcast_relay_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::clear_thumbnail_broadcast_relay_id() {
+  thumbnail_broadcast_relay_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_thumbnail_broadcast_relay_id();
+}
+::google::protobuf::uint64 CBroadcast_SendThumbnailToRelay_Notification::thumbnail_broadcast_relay_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_broadcast_relay_id)
+  return thumbnail_broadcast_relay_id_;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_broadcast_relay_id(::google::protobuf::uint64 value) {
+  set_has_thumbnail_broadcast_relay_id();
+  thumbnail_broadcast_relay_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_broadcast_relay_id)
+}
+
+// optional bytes thumbnail_data = 3;
+bool CBroadcast_SendThumbnailToRelay_Notification::has_thumbnail_data() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_has_thumbnail_data() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::clear_has_thumbnail_data() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::clear_thumbnail_data() {
+  thumbnail_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_thumbnail_data();
+}
+const ::std::string& CBroadcast_SendThumbnailToRelay_Notification::thumbnail_data() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+  return thumbnail_data_.GetNoArena();
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_data(const ::std::string& value) {
+  set_has_thumbnail_data();
+  thumbnail_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+}
+#if LANG_CXX11
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_data(::std::string&& value) {
+  set_has_thumbnail_data();
+  thumbnail_data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+}
+#endif
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_thumbnail_data();
+  thumbnail_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_data(const void* value, size_t size) {
+  set_has_thumbnail_data();
+  thumbnail_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+}
+::std::string* CBroadcast_SendThumbnailToRelay_Notification::mutable_thumbnail_data() {
+  set_has_thumbnail_data();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+  return thumbnail_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* CBroadcast_SendThumbnailToRelay_Notification::release_thumbnail_data() {
+  // @@protoc_insertion_point(field_release:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+  clear_has_thumbnail_data();
+  return thumbnail_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_allocated_thumbnail_data(::std::string* thumbnail_data) {
+  if (thumbnail_data != NULL) {
+    set_has_thumbnail_data();
+  } else {
+    clear_has_thumbnail_data();
+  }
+  thumbnail_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), thumbnail_data);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+}
+
+// optional uint32 thumbnail_width = 4;
+bool CBroadcast_SendThumbnailToRelay_Notification::has_thumbnail_width() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_has_thumbnail_width() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::clear_has_thumbnail_width() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::clear_thumbnail_width() {
+  thumbnail_width_ = 0u;
+  clear_has_thumbnail_width();
+}
+::google::protobuf::uint32 CBroadcast_SendThumbnailToRelay_Notification::thumbnail_width() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_width)
+  return thumbnail_width_;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_width(::google::protobuf::uint32 value) {
+  set_has_thumbnail_width();
+  thumbnail_width_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_width)
+}
+
+// optional uint32 thumbnail_height = 5;
+bool CBroadcast_SendThumbnailToRelay_Notification::has_thumbnail_height() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_has_thumbnail_height() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::clear_has_thumbnail_height() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::clear_thumbnail_height() {
+  thumbnail_height_ = 0u;
+  clear_has_thumbnail_height();
+}
+::google::protobuf::uint32 CBroadcast_SendThumbnailToRelay_Notification::thumbnail_height() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_height)
+  return thumbnail_height_;
+}
+void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_height(::google::protobuf::uint32 value) {
+  set_has_thumbnail_height();
+  thumbnail_height_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_height)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
 Broadcast::~Broadcast() {}
 
 const ::google::protobuf::ServiceDescriptor* Broadcast::descriptor() {
@@ -14294,6 +15351,14 @@ void BroadcastClient::NotifyBroadcastStatus(::google::protobuf::RpcController* c
   done->Run();
 }
 
+void BroadcastClient::SendThumbnailToRelay(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CBroadcast_SendThumbnailToRelay_Notification*,
+                         ::proto::steam::NoResponse*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method SendThumbnailToRelay() not implemented.");
+  done->Run();
+}
+
 void BroadcastClient::CallMethod(const ::google::protobuf::MethodDescriptor* method,
                              ::google::protobuf::RpcController* controller,
                              const ::google::protobuf::Message* request,
@@ -14337,6 +15402,12 @@ void BroadcastClient::CallMethod(const ::google::protobuf::MethodDescriptor* met
              ::google::protobuf::down_cast< ::proto::steam::NoResponse*>(response),
              done);
       break;
+    case 6:
+      SendThumbnailToRelay(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CBroadcast_SendThumbnailToRelay_Notification*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::NoResponse*>(response),
+             done);
+      break;
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       break;
@@ -14359,6 +15430,8 @@ const ::google::protobuf::Message& BroadcastClient::GetRequestPrototype(
       return ::proto::steam::CBroadcast_ViewerBroadcastInvite_Notification::default_instance();
     case 5:
       return ::proto::steam::CBroadcast_BroadcastStatus_Notification::default_instance();
+    case 6:
+      return ::proto::steam::CBroadcast_SendThumbnailToRelay_Notification::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::google::protobuf::MessageFactory::generated_factory()
@@ -14381,6 +15454,8 @@ const ::google::protobuf::Message& BroadcastClient::GetResponsePrototype(
     case 4:
       return ::proto::steam::NoResponse::default_instance();
     case 5:
+      return ::proto::steam::NoResponse::default_instance();
+    case 6:
       return ::proto::steam::NoResponse::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
@@ -14440,6 +15515,13 @@ void BroadcastClient_Stub::NotifyBroadcastStatus(::google::protobuf::RpcControll
                               ::proto::steam::NoResponse* response,
                               ::google::protobuf::Closure* done) {
   channel_->CallMethod(descriptor()->method(5),
+                       controller, request, response, done);
+}
+void BroadcastClient_Stub::SendThumbnailToRelay(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CBroadcast_SendThumbnailToRelay_Notification* request,
+                              ::proto::steam::NoResponse* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(6),
                        controller, request, response, done);
 }
 

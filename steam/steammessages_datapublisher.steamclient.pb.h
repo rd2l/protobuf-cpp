@@ -192,6 +192,13 @@ class CDataPublisher_ClientContentCorruptionReport_Notification : public ::googl
   bool is_manifest() const;
   void set_is_manifest(bool value);
 
+  // optional bool used_https = 9 [(.proto.steam.description) = "the request was HTTPS"];
+  bool has_used_https() const;
+  void clear_used_https();
+  static const int kUsedHttpsFieldNumber = 9;
+  bool used_https() const;
+  void set_used_https(bool value);
+
   // optional uint64 object_size = 7 [(.proto.steam.description) = "object size in bytes"];
   bool has_object_size() const;
   void clear_object_size();
@@ -224,6 +231,8 @@ class CDataPublisher_ClientContentCorruptionReport_Notification : public ::googl
   void clear_has_object_size();
   void set_has_corruption_type();
   void clear_has_corruption_type();
+  void set_has_used_https();
+  void clear_has_used_https();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -234,6 +243,7 @@ class CDataPublisher_ClientContentCorruptionReport_Notification : public ::googl
   ::google::protobuf::uint32 depotid_;
   ::google::protobuf::uint32 cellid_;
   bool is_manifest_;
+  bool used_https_;
   ::google::protobuf::uint64 object_size_;
   ::google::protobuf::uint32 corruption_type_;
   friend struct protobuf_steammessages_5fdatapublisher_2esteamclient_2eproto::TableStruct;
@@ -529,13 +539,13 @@ inline void CDataPublisher_ClientContentCorruptionReport_Notification::set_is_ma
 
 // optional uint64 object_size = 7 [(.proto.steam.description) = "object size in bytes"];
 inline bool CDataPublisher_ClientContentCorruptionReport_Notification::has_object_size() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void CDataPublisher_ClientContentCorruptionReport_Notification::set_has_object_size() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void CDataPublisher_ClientContentCorruptionReport_Notification::clear_has_object_size() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void CDataPublisher_ClientContentCorruptionReport_Notification::clear_object_size() {
   object_size_ = GOOGLE_ULONGLONG(0);
@@ -553,13 +563,13 @@ inline void CDataPublisher_ClientContentCorruptionReport_Notification::set_objec
 
 // optional uint32 corruption_type = 8 [(.proto.steam.description) = "See EContentCorruptionType"];
 inline bool CDataPublisher_ClientContentCorruptionReport_Notification::has_corruption_type() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void CDataPublisher_ClientContentCorruptionReport_Notification::set_has_corruption_type() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void CDataPublisher_ClientContentCorruptionReport_Notification::clear_has_corruption_type() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void CDataPublisher_ClientContentCorruptionReport_Notification::clear_corruption_type() {
   corruption_type_ = 0u;
@@ -573,6 +583,30 @@ inline void CDataPublisher_ClientContentCorruptionReport_Notification::set_corru
   set_has_corruption_type();
   corruption_type_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CDataPublisher_ClientContentCorruptionReport_Notification.corruption_type)
+}
+
+// optional bool used_https = 9 [(.proto.steam.description) = "the request was HTTPS"];
+inline bool CDataPublisher_ClientContentCorruptionReport_Notification::has_used_https() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void CDataPublisher_ClientContentCorruptionReport_Notification::set_has_used_https() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void CDataPublisher_ClientContentCorruptionReport_Notification::clear_has_used_https() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void CDataPublisher_ClientContentCorruptionReport_Notification::clear_used_https() {
+  used_https_ = false;
+  clear_has_used_https();
+}
+inline bool CDataPublisher_ClientContentCorruptionReport_Notification::used_https() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CDataPublisher_ClientContentCorruptionReport_Notification.used_https)
+  return used_https_;
+}
+inline void CDataPublisher_ClientContentCorruptionReport_Notification::set_used_https(bool value) {
+  set_has_used_https();
+  used_https_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CDataPublisher_ClientContentCorruptionReport_Notification.used_https)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS

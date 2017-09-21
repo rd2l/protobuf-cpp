@@ -34,24 +34,18 @@
 // @@protoc_insertion_point(includes)
 namespace proto {
 namespace steam {
+class CSiteLicense_ClientGetAvailableSeats_Request;
+class CSiteLicense_ClientGetAvailableSeats_RequestDefaultTypeInternal;
+extern CSiteLicense_ClientGetAvailableSeats_RequestDefaultTypeInternal _CSiteLicense_ClientGetAvailableSeats_Request_default_instance_;
+class CSiteLicense_ClientGetAvailableSeats_Response;
+class CSiteLicense_ClientGetAvailableSeats_ResponseDefaultTypeInternal;
+extern CSiteLicense_ClientGetAvailableSeats_ResponseDefaultTypeInternal _CSiteLicense_ClientGetAvailableSeats_Response_default_instance_;
 class CSiteLicense_ClientSeatCheckout_Request;
 class CSiteLicense_ClientSeatCheckout_RequestDefaultTypeInternal;
 extern CSiteLicense_ClientSeatCheckout_RequestDefaultTypeInternal _CSiteLicense_ClientSeatCheckout_Request_default_instance_;
 class CSiteLicense_ClientSeatCheckout_Response;
 class CSiteLicense_ClientSeatCheckout_ResponseDefaultTypeInternal;
 extern CSiteLicense_ClientSeatCheckout_ResponseDefaultTypeInternal _CSiteLicense_ClientSeatCheckout_Response_default_instance_;
-class CSiteLicense_ClientSiteAssociation_Request;
-class CSiteLicense_ClientSiteAssociation_RequestDefaultTypeInternal;
-extern CSiteLicense_ClientSiteAssociation_RequestDefaultTypeInternal _CSiteLicense_ClientSiteAssociation_Request_default_instance_;
-class CSiteLicense_ClientSiteAssociation_Response;
-class CSiteLicense_ClientSiteAssociation_ResponseDefaultTypeInternal;
-extern CSiteLicense_ClientSiteAssociation_ResponseDefaultTypeInternal _CSiteLicense_ClientSiteAssociation_Response_default_instance_;
-class CSiteLicense_ClientSiteLicenseSeatCheckout_Request;
-class CSiteLicense_ClientSiteLicenseSeatCheckout_RequestDefaultTypeInternal;
-extern CSiteLicense_ClientSiteLicenseSeatCheckout_RequestDefaultTypeInternal _CSiteLicense_ClientSiteLicenseSeatCheckout_Request_default_instance_;
-class CSiteLicense_ClientSiteLicenseSeatCheckout_Response;
-class CSiteLicense_ClientSiteLicenseSeatCheckout_ResponseDefaultTypeInternal;
-extern CSiteLicense_ClientSiteLicenseSeatCheckout_ResponseDefaultTypeInternal _CSiteLicense_ClientSiteLicenseSeatCheckout_Response_default_instance_;
 class CSiteLicense_InitiateAssociation_Request;
 class CSiteLicense_InitiateAssociation_RequestDefaultTypeInternal;
 extern CSiteLicense_InitiateAssociation_RequestDefaultTypeInternal _CSiteLicense_InitiateAssociation_Request_default_instance_;
@@ -188,35 +182,35 @@ class CSiteManagerClient_IncomingClient_Request : public ::google::protobuf::Mes
   ::std::string* release_connection_key();
   void set_allocated_connection_key(::std::string* connection_key);
 
-  // optional fixed64 client_steamid = 1;
+  // optional fixed64 site_instanceid = 1;
+  bool has_site_instanceid() const;
+  void clear_site_instanceid();
+  static const int kSiteInstanceidFieldNumber = 1;
+  ::google::protobuf::uint64 site_instanceid() const;
+  void set_site_instanceid(::google::protobuf::uint64 value);
+
+  // optional fixed64 client_steamid = 2;
   bool has_client_steamid() const;
   void clear_client_steamid();
-  static const int kClientSteamidFieldNumber = 1;
+  static const int kClientSteamidFieldNumber = 2;
   ::google::protobuf::uint64 client_steamid() const;
   void set_client_steamid(::google::protobuf::uint64 value);
 
-  // optional fixed32 client_local_ip = 2;
+  // optional fixed32 client_local_ip = 3;
   bool has_client_local_ip() const;
   void clear_client_local_ip();
-  static const int kClientLocalIpFieldNumber = 2;
+  static const int kClientLocalIpFieldNumber = 3;
   ::google::protobuf::uint32 client_local_ip() const;
   void set_client_local_ip(::google::protobuf::uint32 value);
 
-  // optional fixed32 site_local_ip = 3;
-  bool has_site_local_ip() const;
-  void clear_site_local_ip();
-  static const int kSiteLocalIpFieldNumber = 3;
-  ::google::protobuf::uint32 site_local_ip() const;
-  void set_site_local_ip(::google::protobuf::uint32 value);
-
   // @@protoc_insertion_point(class_scope:proto.steam.CSiteManagerClient_IncomingClient_Request)
  private:
+  void set_has_site_instanceid();
+  void clear_has_site_instanceid();
   void set_has_client_steamid();
   void clear_has_client_steamid();
   void set_has_client_local_ip();
   void clear_has_client_local_ip();
-  void set_has_site_local_ip();
-  void clear_has_site_local_ip();
   void set_has_connection_key();
   void clear_has_connection_key();
 
@@ -224,9 +218,9 @@ class CSiteManagerClient_IncomingClient_Request : public ::google::protobuf::Mes
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr connection_key_;
+  ::google::protobuf::uint64 site_instanceid_;
   ::google::protobuf::uint64 client_steamid_;
   ::google::protobuf::uint32 client_local_ip_;
-  ::google::protobuf::uint32 site_local_ip_;
   friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -392,12 +386,12 @@ class CSiteLicense_InitiateAssociation_Request : public ::google::protobuf::Mess
   ::google::protobuf::uint64 site_steamid() const;
   void set_site_steamid(::google::protobuf::uint64 value);
 
-  // optional fixed32 site_local_ip = 2;
-  bool has_site_local_ip() const;
-  void clear_site_local_ip();
-  static const int kSiteLocalIpFieldNumber = 2;
-  ::google::protobuf::uint32 site_local_ip() const;
-  void set_site_local_ip(::google::protobuf::uint32 value);
+  // optional fixed64 site_instanceid = 2;
+  bool has_site_instanceid() const;
+  void clear_site_instanceid();
+  static const int kSiteInstanceidFieldNumber = 2;
+  ::google::protobuf::uint64 site_instanceid() const;
+  void set_site_instanceid(::google::protobuf::uint64 value);
 
   // optional fixed32 client_local_ip = 3;
   bool has_client_local_ip() const;
@@ -410,8 +404,8 @@ class CSiteLicense_InitiateAssociation_Request : public ::google::protobuf::Mess
  private:
   void set_has_site_steamid();
   void clear_has_site_steamid();
-  void set_has_site_local_ip();
-  void clear_has_site_local_ip();
+  void set_has_site_instanceid();
+  void clear_has_site_instanceid();
   void set_has_client_local_ip();
   void clear_has_client_local_ip();
 
@@ -419,7 +413,7 @@ class CSiteLicense_InitiateAssociation_Request : public ::google::protobuf::Mess
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::uint64 site_steamid_;
-  ::google::protobuf::uint32 site_local_ip_;
+  ::google::protobuf::uint64 site_instanceid_;
   ::google::protobuf::uint32 client_local_ip_;
   friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
 };
@@ -525,382 +519,6 @@ class CSiteLicense_InitiateAssociation_Response : public ::google::protobuf::Mes
 };
 // -------------------------------------------------------------------
 
-class CSiteLicense_ClientSiteAssociation_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CSiteLicense_ClientSiteAssociation_Request) */ {
- public:
-  CSiteLicense_ClientSiteAssociation_Request();
-  virtual ~CSiteLicense_ClientSiteAssociation_Request();
-
-  CSiteLicense_ClientSiteAssociation_Request(const CSiteLicense_ClientSiteAssociation_Request& from);
-
-  inline CSiteLicense_ClientSiteAssociation_Request& operator=(const CSiteLicense_ClientSiteAssociation_Request& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const CSiteLicense_ClientSiteAssociation_Request& default_instance();
-
-  static inline const CSiteLicense_ClientSiteAssociation_Request* internal_default_instance() {
-    return reinterpret_cast<const CSiteLicense_ClientSiteAssociation_Request*>(
-               &_CSiteLicense_ClientSiteAssociation_Request_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    4;
-
-  void Swap(CSiteLicense_ClientSiteAssociation_Request* other);
-
-  // implements Message ----------------------------------------------
-
-  inline CSiteLicense_ClientSiteAssociation_Request* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  CSiteLicense_ClientSiteAssociation_Request* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const CSiteLicense_ClientSiteAssociation_Request& from);
-  void MergeFrom(const CSiteLicense_ClientSiteAssociation_Request& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(CSiteLicense_ClientSiteAssociation_Request* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional uint64 site_id = 1;
-  bool has_site_id() const;
-  void clear_site_id();
-  static const int kSiteIdFieldNumber = 1;
-  ::google::protobuf::uint64 site_id() const;
-  void set_site_id(::google::protobuf::uint64 value);
-
-  // @@protoc_insertion_point(class_scope:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
- private:
-  void set_has_site_id();
-  void clear_has_site_id();
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::uint64 site_id_;
-  friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class CSiteLicense_ClientSiteAssociation_Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CSiteLicense_ClientSiteAssociation_Response) */ {
- public:
-  CSiteLicense_ClientSiteAssociation_Response();
-  virtual ~CSiteLicense_ClientSiteAssociation_Response();
-
-  CSiteLicense_ClientSiteAssociation_Response(const CSiteLicense_ClientSiteAssociation_Response& from);
-
-  inline CSiteLicense_ClientSiteAssociation_Response& operator=(const CSiteLicense_ClientSiteAssociation_Response& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const CSiteLicense_ClientSiteAssociation_Response& default_instance();
-
-  static inline const CSiteLicense_ClientSiteAssociation_Response* internal_default_instance() {
-    return reinterpret_cast<const CSiteLicense_ClientSiteAssociation_Response*>(
-               &_CSiteLicense_ClientSiteAssociation_Response_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
-
-  void Swap(CSiteLicense_ClientSiteAssociation_Response* other);
-
-  // implements Message ----------------------------------------------
-
-  inline CSiteLicense_ClientSiteAssociation_Response* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  CSiteLicense_ClientSiteAssociation_Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const CSiteLicense_ClientSiteAssociation_Response& from);
-  void MergeFrom(const CSiteLicense_ClientSiteAssociation_Response& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(CSiteLicense_ClientSiteAssociation_Response* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional string site_name = 1;
-  bool has_site_name() const;
-  void clear_site_name();
-  static const int kSiteNameFieldNumber = 1;
-  const ::std::string& site_name() const;
-  void set_site_name(const ::std::string& value);
-  #if LANG_CXX11
-  void set_site_name(::std::string&& value);
-  #endif
-  void set_site_name(const char* value);
-  void set_site_name(const char* value, size_t size);
-  ::std::string* mutable_site_name();
-  ::std::string* release_site_name();
-  void set_allocated_site_name(::std::string* site_name);
-
-  // @@protoc_insertion_point(class_scope:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
- private:
-  void set_has_site_name();
-  void clear_has_site_name();
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::internal::ArenaStringPtr site_name_;
-  friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class CSiteLicense_ClientSiteLicenseSeatCheckout_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request) */ {
- public:
-  CSiteLicense_ClientSiteLicenseSeatCheckout_Request();
-  virtual ~CSiteLicense_ClientSiteLicenseSeatCheckout_Request();
-
-  CSiteLicense_ClientSiteLicenseSeatCheckout_Request(const CSiteLicense_ClientSiteLicenseSeatCheckout_Request& from);
-
-  inline CSiteLicense_ClientSiteLicenseSeatCheckout_Request& operator=(const CSiteLicense_ClientSiteLicenseSeatCheckout_Request& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const CSiteLicense_ClientSiteLicenseSeatCheckout_Request& default_instance();
-
-  static inline const CSiteLicense_ClientSiteLicenseSeatCheckout_Request* internal_default_instance() {
-    return reinterpret_cast<const CSiteLicense_ClientSiteLicenseSeatCheckout_Request*>(
-               &_CSiteLicense_ClientSiteLicenseSeatCheckout_Request_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    6;
-
-  void Swap(CSiteLicense_ClientSiteLicenseSeatCheckout_Request* other);
-
-  // implements Message ----------------------------------------------
-
-  inline CSiteLicense_ClientSiteLicenseSeatCheckout_Request* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  CSiteLicense_ClientSiteLicenseSeatCheckout_Request* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const CSiteLicense_ClientSiteLicenseSeatCheckout_Request& from);
-  void MergeFrom(const CSiteLicense_ClientSiteLicenseSeatCheckout_Request& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(CSiteLicense_ClientSiteLicenseSeatCheckout_Request* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional uint32 packageid = 1 [(.proto.steam.description) = "Package ID that client wants to check out"];
-  bool has_packageid() const;
-  void clear_packageid();
-  static const int kPackageidFieldNumber = 1;
-  ::google::protobuf::uint32 packageid() const;
-  void set_packageid(::google::protobuf::uint32 value);
-
-  // optional uint32 appid = 2 [(.proto.steam.description) = "App ID that client wants to play"];
-  bool has_appid() const;
-  void clear_appid();
-  static const int kAppidFieldNumber = 2;
-  ::google::protobuf::uint32 appid() const;
-  void set_appid(::google::protobuf::uint32 value);
-
-  // @@protoc_insertion_point(class_scope:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
- private:
-  void set_has_packageid();
-  void clear_has_packageid();
-  void set_has_appid();
-  void clear_has_appid();
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::uint32 packageid_;
-  ::google::protobuf::uint32 appid_;
-  friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class CSiteLicense_ClientSiteLicenseSeatCheckout_Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response) */ {
- public:
-  CSiteLicense_ClientSiteLicenseSeatCheckout_Response();
-  virtual ~CSiteLicense_ClientSiteLicenseSeatCheckout_Response();
-
-  CSiteLicense_ClientSiteLicenseSeatCheckout_Response(const CSiteLicense_ClientSiteLicenseSeatCheckout_Response& from);
-
-  inline CSiteLicense_ClientSiteLicenseSeatCheckout_Response& operator=(const CSiteLicense_ClientSiteLicenseSeatCheckout_Response& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const CSiteLicense_ClientSiteLicenseSeatCheckout_Response& default_instance();
-
-  static inline const CSiteLicense_ClientSiteLicenseSeatCheckout_Response* internal_default_instance() {
-    return reinterpret_cast<const CSiteLicense_ClientSiteLicenseSeatCheckout_Response*>(
-               &_CSiteLicense_ClientSiteLicenseSeatCheckout_Response_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    7;
-
-  void Swap(CSiteLicense_ClientSiteLicenseSeatCheckout_Response* other);
-
-  // implements Message ----------------------------------------------
-
-  inline CSiteLicense_ClientSiteLicenseSeatCheckout_Response* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  CSiteLicense_ClientSiteLicenseSeatCheckout_Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const CSiteLicense_ClientSiteLicenseSeatCheckout_Response& from);
-  void MergeFrom(const CSiteLicense_ClientSiteLicenseSeatCheckout_Response& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(CSiteLicense_ClientSiteLicenseSeatCheckout_Response* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // @@protoc_insertion_point(class_scope:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
 class CSiteLicense_LCSAuthenticate_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CSiteLicense_LCSAuthenticate_Request) */ {
  public:
   CSiteLicense_LCSAuthenticate_Request();
@@ -929,7 +547,7 @@ class CSiteLicense_LCSAuthenticate_Request : public ::google::protobuf::Message 
                &_CSiteLicense_LCSAuthenticate_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    4;
 
   void Swap(CSiteLicense_LCSAuthenticate_Request* other);
 
@@ -973,12 +591,22 @@ class CSiteLicense_LCSAuthenticate_Request : public ::google::protobuf::Message 
 
   // accessors -------------------------------------------------------
 
+  // optional fixed64 instanceid = 1;
+  bool has_instanceid() const;
+  void clear_instanceid();
+  static const int kInstanceidFieldNumber = 1;
+  ::google::protobuf::uint64 instanceid() const;
+  void set_instanceid(::google::protobuf::uint64 value);
+
   // @@protoc_insertion_point(class_scope:proto.steam.CSiteLicense_LCSAuthenticate_Request)
  private:
+  void set_has_instanceid();
+  void clear_has_instanceid();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
+  ::google::protobuf::uint64 instanceid_;
   friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -1011,7 +639,7 @@ class CSiteLicense_LCSAuthenticate_Response : public ::google::protobuf::Message
                &_CSiteLicense_LCSAuthenticate_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    9;
+    5;
 
   void Swap(CSiteLicense_LCSAuthenticate_Response* other);
 
@@ -1055,10 +683,10 @@ class CSiteLicense_LCSAuthenticate_Response : public ::google::protobuf::Message
 
   // accessors -------------------------------------------------------
 
-  // optional string site_name = 1;
+  // optional string site_name = 2;
   bool has_site_name() const;
   void clear_site_name();
-  static const int kSiteNameFieldNumber = 1;
+  static const int kSiteNameFieldNumber = 2;
   const ::std::string& site_name() const;
   void set_site_name(const ::std::string& value);
   #if LANG_CXX11
@@ -1070,15 +698,35 @@ class CSiteLicense_LCSAuthenticate_Response : public ::google::protobuf::Message
   ::std::string* release_site_name();
   void set_allocated_site_name(::std::string* site_name);
 
+  // optional uint64 site_id = 1;
+  bool has_site_id() const;
+  void clear_site_id();
+  static const int kSiteIdFieldNumber = 1;
+  ::google::protobuf::uint64 site_id() const;
+  void set_site_id(::google::protobuf::uint64 value);
+
+  // optional bool new_session = 3;
+  bool has_new_session() const;
+  void clear_new_session();
+  static const int kNewSessionFieldNumber = 3;
+  bool new_session() const;
+  void set_new_session(bool value);
+
   // @@protoc_insertion_point(class_scope:proto.steam.CSiteLicense_LCSAuthenticate_Response)
  private:
+  void set_has_site_id();
+  void clear_has_site_id();
   void set_has_site_name();
   void clear_has_site_name();
+  void set_has_new_session();
+  void clear_has_new_session();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr site_name_;
+  ::google::protobuf::uint64 site_id_;
+  bool new_session_;
   friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -1111,7 +759,7 @@ class CSiteLicense_LCSAssociateUser_Request : public ::google::protobuf::Message
                &_CSiteLicense_LCSAssociateUser_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    10;
+    6;
 
   void Swap(CSiteLicense_LCSAssociateUser_Request* other);
 
@@ -1162,17 +810,17 @@ class CSiteLicense_LCSAssociateUser_Request : public ::google::protobuf::Message
   ::google::protobuf::uint64 steamid() const;
   void set_steamid(::google::protobuf::uint64 value);
 
-  // optional uint32 sessionid = 2;
-  bool has_sessionid() const;
-  void clear_sessionid();
-  static const int kSessionidFieldNumber = 2;
-  ::google::protobuf::uint32 sessionid() const;
-  void set_sessionid(::google::protobuf::uint32 value);
+  // optional fixed64 instanceid = 3;
+  bool has_instanceid() const;
+  void clear_instanceid();
+  static const int kInstanceidFieldNumber = 3;
+  ::google::protobuf::uint64 instanceid() const;
+  void set_instanceid(::google::protobuf::uint64 value);
 
-  // optional fixed32 local_ip = 3;
+  // optional fixed32 local_ip = 2;
   bool has_local_ip() const;
   void clear_local_ip();
-  static const int kLocalIpFieldNumber = 3;
+  static const int kLocalIpFieldNumber = 2;
   ::google::protobuf::uint32 local_ip() const;
   void set_local_ip(::google::protobuf::uint32 value);
 
@@ -1180,16 +828,16 @@ class CSiteLicense_LCSAssociateUser_Request : public ::google::protobuf::Message
  private:
   void set_has_steamid();
   void clear_has_steamid();
-  void set_has_sessionid();
-  void clear_has_sessionid();
   void set_has_local_ip();
   void clear_has_local_ip();
+  void set_has_instanceid();
+  void clear_has_instanceid();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::uint64 steamid_;
-  ::google::protobuf::uint32 sessionid_;
+  ::google::protobuf::uint64 instanceid_;
   ::google::protobuf::uint32 local_ip_;
   friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
 };
@@ -1223,7 +871,7 @@ class CSiteLicense_LCSAssociateUser_Response : public ::google::protobuf::Messag
                &_CSiteLicense_LCSAssociateUser_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    11;
+    7;
 
   void Swap(CSiteLicense_LCSAssociateUser_Response* other);
 
@@ -1305,7 +953,7 @@ class CSiteLicense_ClientSeatCheckout_Request : public ::google::protobuf::Messa
                &_CSiteLicense_ClientSeatCheckout_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    12;
+    8;
 
   void Swap(CSiteLicense_ClientSeatCheckout_Request* other);
 
@@ -1356,24 +1004,17 @@ class CSiteLicense_ClientSeatCheckout_Request : public ::google::protobuf::Messa
   ::google::protobuf::uint64 steamid() const;
   void set_steamid(::google::protobuf::uint64 value);
 
-  // optional int32 sessionid = 2;
-  bool has_sessionid() const;
-  void clear_sessionid();
-  static const int kSessionidFieldNumber = 2;
-  ::google::protobuf::int32 sessionid() const;
-  void set_sessionid(::google::protobuf::int32 value);
+  // optional fixed64 instanceid = 2;
+  bool has_instanceid() const;
+  void clear_instanceid();
+  static const int kInstanceidFieldNumber = 2;
+  ::google::protobuf::uint64 instanceid() const;
+  void set_instanceid(::google::protobuf::uint64 value);
 
-  // optional uint32 packageid = 3;
-  bool has_packageid() const;
-  void clear_packageid();
-  static const int kPackageidFieldNumber = 3;
-  ::google::protobuf::uint32 packageid() const;
-  void set_packageid(::google::protobuf::uint32 value);
-
-  // optional uint32 appid = 4;
+  // optional uint32 appid = 3;
   bool has_appid() const;
   void clear_appid();
-  static const int kAppidFieldNumber = 4;
+  static const int kAppidFieldNumber = 3;
   ::google::protobuf::uint32 appid() const;
   void set_appid(::google::protobuf::uint32 value);
 
@@ -1381,10 +1022,8 @@ class CSiteLicense_ClientSeatCheckout_Request : public ::google::protobuf::Messa
  private:
   void set_has_steamid();
   void clear_has_steamid();
-  void set_has_sessionid();
-  void clear_has_sessionid();
-  void set_has_packageid();
-  void clear_has_packageid();
+  void set_has_instanceid();
+  void clear_has_instanceid();
   void set_has_appid();
   void clear_has_appid();
 
@@ -1392,8 +1031,7 @@ class CSiteLicense_ClientSeatCheckout_Request : public ::google::protobuf::Messa
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::uint64 steamid_;
-  ::google::protobuf::int32 sessionid_;
-  ::google::protobuf::uint32 packageid_;
+  ::google::protobuf::uint64 instanceid_;
   ::google::protobuf::uint32 appid_;
   friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
 };
@@ -1427,7 +1065,7 @@ class CSiteLicense_ClientSeatCheckout_Response : public ::google::protobuf::Mess
                &_CSiteLicense_ClientSeatCheckout_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    13;
+    9;
 
   void Swap(CSiteLicense_ClientSeatCheckout_Response* other);
 
@@ -1479,6 +1117,210 @@ class CSiteLicense_ClientSeatCheckout_Response : public ::google::protobuf::Mess
   mutable int _cached_size_;
   friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
 };
+// -------------------------------------------------------------------
+
+class CSiteLicense_ClientGetAvailableSeats_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request) */ {
+ public:
+  CSiteLicense_ClientGetAvailableSeats_Request();
+  virtual ~CSiteLicense_ClientGetAvailableSeats_Request();
+
+  CSiteLicense_ClientGetAvailableSeats_Request(const CSiteLicense_ClientGetAvailableSeats_Request& from);
+
+  inline CSiteLicense_ClientGetAvailableSeats_Request& operator=(const CSiteLicense_ClientGetAvailableSeats_Request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CSiteLicense_ClientGetAvailableSeats_Request& default_instance();
+
+  static inline const CSiteLicense_ClientGetAvailableSeats_Request* internal_default_instance() {
+    return reinterpret_cast<const CSiteLicense_ClientGetAvailableSeats_Request*>(
+               &_CSiteLicense_ClientGetAvailableSeats_Request_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    10;
+
+  void Swap(CSiteLicense_ClientGetAvailableSeats_Request* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CSiteLicense_ClientGetAvailableSeats_Request* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CSiteLicense_ClientGetAvailableSeats_Request* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CSiteLicense_ClientGetAvailableSeats_Request& from);
+  void MergeFrom(const CSiteLicense_ClientGetAvailableSeats_Request& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CSiteLicense_ClientGetAvailableSeats_Request* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional fixed64 steamid = 1;
+  bool has_steamid() const;
+  void clear_steamid();
+  static const int kSteamidFieldNumber = 1;
+  ::google::protobuf::uint64 steamid() const;
+  void set_steamid(::google::protobuf::uint64 value);
+
+  // optional fixed64 instanceid = 2;
+  bool has_instanceid() const;
+  void clear_instanceid();
+  static const int kInstanceidFieldNumber = 2;
+  ::google::protobuf::uint64 instanceid() const;
+  void set_instanceid(::google::protobuf::uint64 value);
+
+  // optional uint32 appid = 3;
+  bool has_appid() const;
+  void clear_appid();
+  static const int kAppidFieldNumber = 3;
+  ::google::protobuf::uint32 appid() const;
+  void set_appid(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+ private:
+  void set_has_steamid();
+  void clear_has_steamid();
+  void set_has_instanceid();
+  void clear_has_instanceid();
+  void set_has_appid();
+  void clear_has_appid();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint64 steamid_;
+  ::google::protobuf::uint64 instanceid_;
+  ::google::protobuf::uint32 appid_;
+  friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CSiteLicense_ClientGetAvailableSeats_Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response) */ {
+ public:
+  CSiteLicense_ClientGetAvailableSeats_Response();
+  virtual ~CSiteLicense_ClientGetAvailableSeats_Response();
+
+  CSiteLicense_ClientGetAvailableSeats_Response(const CSiteLicense_ClientGetAvailableSeats_Response& from);
+
+  inline CSiteLicense_ClientGetAvailableSeats_Response& operator=(const CSiteLicense_ClientGetAvailableSeats_Response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CSiteLicense_ClientGetAvailableSeats_Response& default_instance();
+
+  static inline const CSiteLicense_ClientGetAvailableSeats_Response* internal_default_instance() {
+    return reinterpret_cast<const CSiteLicense_ClientGetAvailableSeats_Response*>(
+               &_CSiteLicense_ClientGetAvailableSeats_Response_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    11;
+
+  void Swap(CSiteLicense_ClientGetAvailableSeats_Response* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CSiteLicense_ClientGetAvailableSeats_Response* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CSiteLicense_ClientGetAvailableSeats_Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CSiteLicense_ClientGetAvailableSeats_Response& from);
+  void MergeFrom(const CSiteLicense_ClientGetAvailableSeats_Response& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CSiteLicense_ClientGetAvailableSeats_Response* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 available_seats = 1;
+  bool has_available_seats() const;
+  void clear_available_seats();
+  static const int kAvailableSeatsFieldNumber = 1;
+  ::google::protobuf::uint32 available_seats() const;
+  void set_available_seats(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+ private:
+  void set_has_available_seats();
+  void clear_has_available_seats();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 available_seats_;
+  friend struct protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::TableStruct;
+};
 // ===================================================================
 
 class SiteManagerClient_Stub;
@@ -1494,7 +1336,7 @@ class SiteManagerClient : public ::google::protobuf::Service {
 
   static const ::google::protobuf::ServiceDescriptor* descriptor();
 
-  virtual void ExpectIncomingClient(::google::protobuf::RpcController* controller,
+  virtual void IncomingClient(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CSiteManagerClient_IncomingClient_Request* request,
                        ::proto::steam::CSiteManagerClient_IncomingClient_Response* response,
                        ::google::protobuf::Closure* done);
@@ -1527,7 +1369,7 @@ class SiteManagerClient_Stub : public SiteManagerClient {
 
   // implements SiteManagerClient ------------------------------------------
 
-  void ExpectIncomingClient(::google::protobuf::RpcController* controller,
+  void IncomingClient(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CSiteManagerClient_IncomingClient_Request* request,
                        ::proto::steam::CSiteManagerClient_IncomingClient_Response* response,
                        ::google::protobuf::Closure* done);
@@ -1557,14 +1399,6 @@ class SiteLicense : public ::google::protobuf::Service {
                        const ::proto::steam::CSiteLicense_InitiateAssociation_Request* request,
                        ::proto::steam::CSiteLicense_InitiateAssociation_Response* response,
                        ::google::protobuf::Closure* done);
-  virtual void ClientSiteAssociation(::google::protobuf::RpcController* controller,
-                       const ::proto::steam::CSiteLicense_ClientSiteAssociation_Request* request,
-                       ::proto::steam::CSiteLicense_ClientSiteAssociation_Response* response,
-                       ::google::protobuf::Closure* done);
-  virtual void ClientSiteLicenseSeatCheckout(::google::protobuf::RpcController* controller,
-                       const ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Request* request,
-                       ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Response* response,
-                       ::google::protobuf::Closure* done);
   virtual void LCSAuthenticate(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CSiteLicense_LCSAuthenticate_Request* request,
                        ::proto::steam::CSiteLicense_LCSAuthenticate_Response* response,
@@ -1576,6 +1410,10 @@ class SiteLicense : public ::google::protobuf::Service {
   virtual void ClientSeatCheckout(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CSiteLicense_ClientSeatCheckout_Request* request,
                        ::proto::steam::CSiteLicense_ClientSeatCheckout_Response* response,
+                       ::google::protobuf::Closure* done);
+  virtual void ClientGetAvailableSeats(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Request* request,
+                       ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Response* response,
                        ::google::protobuf::Closure* done);
 
   // implements Service ----------------------------------------------
@@ -1610,14 +1448,6 @@ class SiteLicense_Stub : public SiteLicense {
                        const ::proto::steam::CSiteLicense_InitiateAssociation_Request* request,
                        ::proto::steam::CSiteLicense_InitiateAssociation_Response* response,
                        ::google::protobuf::Closure* done);
-  void ClientSiteAssociation(::google::protobuf::RpcController* controller,
-                       const ::proto::steam::CSiteLicense_ClientSiteAssociation_Request* request,
-                       ::proto::steam::CSiteLicense_ClientSiteAssociation_Response* response,
-                       ::google::protobuf::Closure* done);
-  void ClientSiteLicenseSeatCheckout(::google::protobuf::RpcController* controller,
-                       const ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Request* request,
-                       ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Response* response,
-                       ::google::protobuf::Closure* done);
   void LCSAuthenticate(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CSiteLicense_LCSAuthenticate_Request* request,
                        ::proto::steam::CSiteLicense_LCSAuthenticate_Response* response,
@@ -1629,6 +1459,10 @@ class SiteLicense_Stub : public SiteLicense {
   void ClientSeatCheckout(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CSiteLicense_ClientSeatCheckout_Request* request,
                        ::proto::steam::CSiteLicense_ClientSeatCheckout_Response* response,
+                       ::google::protobuf::Closure* done);
+  void ClientGetAvailableSeats(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Request* request,
+                       ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Response* response,
                        ::google::protobuf::Closure* done);
  private:
   ::google::protobuf::RpcChannel* channel_;
@@ -1645,15 +1479,39 @@ class SiteLicense_Stub : public SiteLicense {
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
 // CSiteManagerClient_IncomingClient_Request
 
-// optional fixed64 client_steamid = 1;
-inline bool CSiteManagerClient_IncomingClient_Request::has_client_steamid() const {
+// optional fixed64 site_instanceid = 1;
+inline bool CSiteManagerClient_IncomingClient_Request::has_site_instanceid() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void CSiteManagerClient_IncomingClient_Request::set_has_client_steamid() {
+inline void CSiteManagerClient_IncomingClient_Request::set_has_site_instanceid() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void CSiteManagerClient_IncomingClient_Request::clear_has_client_steamid() {
+inline void CSiteManagerClient_IncomingClient_Request::clear_has_site_instanceid() {
   _has_bits_[0] &= ~0x00000002u;
+}
+inline void CSiteManagerClient_IncomingClient_Request::clear_site_instanceid() {
+  site_instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_site_instanceid();
+}
+inline ::google::protobuf::uint64 CSiteManagerClient_IncomingClient_Request::site_instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteManagerClient_IncomingClient_Request.site_instanceid)
+  return site_instanceid_;
+}
+inline void CSiteManagerClient_IncomingClient_Request::set_site_instanceid(::google::protobuf::uint64 value) {
+  set_has_site_instanceid();
+  site_instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteManagerClient_IncomingClient_Request.site_instanceid)
+}
+
+// optional fixed64 client_steamid = 2;
+inline bool CSiteManagerClient_IncomingClient_Request::has_client_steamid() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CSiteManagerClient_IncomingClient_Request::set_has_client_steamid() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CSiteManagerClient_IncomingClient_Request::clear_has_client_steamid() {
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void CSiteManagerClient_IncomingClient_Request::clear_client_steamid() {
   client_steamid_ = GOOGLE_ULONGLONG(0);
@@ -1669,15 +1527,15 @@ inline void CSiteManagerClient_IncomingClient_Request::set_client_steamid(::goog
   // @@protoc_insertion_point(field_set:proto.steam.CSiteManagerClient_IncomingClient_Request.client_steamid)
 }
 
-// optional fixed32 client_local_ip = 2;
+// optional fixed32 client_local_ip = 3;
 inline bool CSiteManagerClient_IncomingClient_Request::has_client_local_ip() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void CSiteManagerClient_IncomingClient_Request::set_has_client_local_ip() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void CSiteManagerClient_IncomingClient_Request::clear_has_client_local_ip() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void CSiteManagerClient_IncomingClient_Request::clear_client_local_ip() {
   client_local_ip_ = 0u;
@@ -1691,30 +1549,6 @@ inline void CSiteManagerClient_IncomingClient_Request::set_client_local_ip(::goo
   set_has_client_local_ip();
   client_local_ip_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CSiteManagerClient_IncomingClient_Request.client_local_ip)
-}
-
-// optional fixed32 site_local_ip = 3;
-inline bool CSiteManagerClient_IncomingClient_Request::has_site_local_ip() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void CSiteManagerClient_IncomingClient_Request::set_has_site_local_ip() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void CSiteManagerClient_IncomingClient_Request::clear_has_site_local_ip() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void CSiteManagerClient_IncomingClient_Request::clear_site_local_ip() {
-  site_local_ip_ = 0u;
-  clear_has_site_local_ip();
-}
-inline ::google::protobuf::uint32 CSiteManagerClient_IncomingClient_Request::site_local_ip() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteManagerClient_IncomingClient_Request.site_local_ip)
-  return site_local_ip_;
-}
-inline void CSiteManagerClient_IncomingClient_Request::set_site_local_ip(::google::protobuf::uint32 value) {
-  set_has_site_local_ip();
-  site_local_ip_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteManagerClient_IncomingClient_Request.site_local_ip)
 }
 
 // optional bytes connection_key = 4;
@@ -1812,28 +1646,28 @@ inline void CSiteLicense_InitiateAssociation_Request::set_site_steamid(::google:
   // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_InitiateAssociation_Request.site_steamid)
 }
 
-// optional fixed32 site_local_ip = 2;
-inline bool CSiteLicense_InitiateAssociation_Request::has_site_local_ip() const {
+// optional fixed64 site_instanceid = 2;
+inline bool CSiteLicense_InitiateAssociation_Request::has_site_instanceid() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void CSiteLicense_InitiateAssociation_Request::set_has_site_local_ip() {
+inline void CSiteLicense_InitiateAssociation_Request::set_has_site_instanceid() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void CSiteLicense_InitiateAssociation_Request::clear_has_site_local_ip() {
+inline void CSiteLicense_InitiateAssociation_Request::clear_has_site_instanceid() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void CSiteLicense_InitiateAssociation_Request::clear_site_local_ip() {
-  site_local_ip_ = 0u;
-  clear_has_site_local_ip();
+inline void CSiteLicense_InitiateAssociation_Request::clear_site_instanceid() {
+  site_instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_site_instanceid();
 }
-inline ::google::protobuf::uint32 CSiteLicense_InitiateAssociation_Request::site_local_ip() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_InitiateAssociation_Request.site_local_ip)
-  return site_local_ip_;
+inline ::google::protobuf::uint64 CSiteLicense_InitiateAssociation_Request::site_instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_InitiateAssociation_Request.site_instanceid)
+  return site_instanceid_;
 }
-inline void CSiteLicense_InitiateAssociation_Request::set_site_local_ip(::google::protobuf::uint32 value) {
-  set_has_site_local_ip();
-  site_local_ip_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_InitiateAssociation_Request.site_local_ip)
+inline void CSiteLicense_InitiateAssociation_Request::set_site_instanceid(::google::protobuf::uint64 value) {
+  set_has_site_instanceid();
+  site_instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_InitiateAssociation_Request.site_instanceid)
 }
 
 // optional fixed32 client_local_ip = 3;
@@ -1929,164 +1763,61 @@ inline void CSiteLicense_InitiateAssociation_Response::set_allocated_connection_
 
 // -------------------------------------------------------------------
 
-// CSiteLicense_ClientSiteAssociation_Request
-
-// optional uint64 site_id = 1;
-inline bool CSiteLicense_ClientSiteAssociation_Request::has_site_id() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void CSiteLicense_ClientSiteAssociation_Request::set_has_site_id() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void CSiteLicense_ClientSiteAssociation_Request::clear_has_site_id() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void CSiteLicense_ClientSiteAssociation_Request::clear_site_id() {
-  site_id_ = GOOGLE_ULONGLONG(0);
-  clear_has_site_id();
-}
-inline ::google::protobuf::uint64 CSiteLicense_ClientSiteAssociation_Request::site_id() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSiteAssociation_Request.site_id)
-  return site_id_;
-}
-inline void CSiteLicense_ClientSiteAssociation_Request::set_site_id(::google::protobuf::uint64 value) {
-  set_has_site_id();
-  site_id_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSiteAssociation_Request.site_id)
-}
-
-// -------------------------------------------------------------------
-
-// CSiteLicense_ClientSiteAssociation_Response
-
-// optional string site_name = 1;
-inline bool CSiteLicense_ClientSiteAssociation_Response::has_site_name() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void CSiteLicense_ClientSiteAssociation_Response::set_has_site_name() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void CSiteLicense_ClientSiteAssociation_Response::clear_has_site_name() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void CSiteLicense_ClientSiteAssociation_Response::clear_site_name() {
-  site_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_site_name();
-}
-inline const ::std::string& CSiteLicense_ClientSiteAssociation_Response::site_name() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-  return site_name_.GetNoArena();
-}
-inline void CSiteLicense_ClientSiteAssociation_Response::set_site_name(const ::std::string& value) {
-  set_has_site_name();
-  site_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-}
-#if LANG_CXX11
-inline void CSiteLicense_ClientSiteAssociation_Response::set_site_name(::std::string&& value) {
-  set_has_site_name();
-  site_name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-}
-#endif
-inline void CSiteLicense_ClientSiteAssociation_Response::set_site_name(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_site_name();
-  site_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-}
-inline void CSiteLicense_ClientSiteAssociation_Response::set_site_name(const char* value, size_t size) {
-  set_has_site_name();
-  site_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-}
-inline ::std::string* CSiteLicense_ClientSiteAssociation_Response::mutable_site_name() {
-  set_has_site_name();
-  // @@protoc_insertion_point(field_mutable:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-  return site_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* CSiteLicense_ClientSiteAssociation_Response::release_site_name() {
-  // @@protoc_insertion_point(field_release:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-  clear_has_site_name();
-  return site_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void CSiteLicense_ClientSiteAssociation_Response::set_allocated_site_name(::std::string* site_name) {
-  if (site_name != NULL) {
-    set_has_site_name();
-  } else {
-    clear_has_site_name();
-  }
-  site_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), site_name);
-  // @@protoc_insertion_point(field_set_allocated:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-}
-
-// -------------------------------------------------------------------
-
-// CSiteLicense_ClientSiteLicenseSeatCheckout_Request
-
-// optional uint32 packageid = 1 [(.proto.steam.description) = "Package ID that client wants to check out"];
-inline bool CSiteLicense_ClientSiteLicenseSeatCheckout_Request::has_packageid() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::set_has_packageid() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::clear_has_packageid() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::clear_packageid() {
-  packageid_ = 0u;
-  clear_has_packageid();
-}
-inline ::google::protobuf::uint32 CSiteLicense_ClientSiteLicenseSeatCheckout_Request::packageid() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request.packageid)
-  return packageid_;
-}
-inline void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::set_packageid(::google::protobuf::uint32 value) {
-  set_has_packageid();
-  packageid_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request.packageid)
-}
-
-// optional uint32 appid = 2 [(.proto.steam.description) = "App ID that client wants to play"];
-inline bool CSiteLicense_ClientSiteLicenseSeatCheckout_Request::has_appid() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::set_has_appid() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::clear_has_appid() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::clear_appid() {
-  appid_ = 0u;
-  clear_has_appid();
-}
-inline ::google::protobuf::uint32 CSiteLicense_ClientSiteLicenseSeatCheckout_Request::appid() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request.appid)
-  return appid_;
-}
-inline void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::set_appid(::google::protobuf::uint32 value) {
-  set_has_appid();
-  appid_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request.appid)
-}
-
-// -------------------------------------------------------------------
-
-// CSiteLicense_ClientSiteLicenseSeatCheckout_Response
-
-// -------------------------------------------------------------------
-
 // CSiteLicense_LCSAuthenticate_Request
+
+// optional fixed64 instanceid = 1;
+inline bool CSiteLicense_LCSAuthenticate_Request::has_instanceid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CSiteLicense_LCSAuthenticate_Request::set_has_instanceid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CSiteLicense_LCSAuthenticate_Request::clear_has_instanceid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CSiteLicense_LCSAuthenticate_Request::clear_instanceid() {
+  instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_instanceid();
+}
+inline ::google::protobuf::uint64 CSiteLicense_LCSAuthenticate_Request::instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_LCSAuthenticate_Request.instanceid)
+  return instanceid_;
+}
+inline void CSiteLicense_LCSAuthenticate_Request::set_instanceid(::google::protobuf::uint64 value) {
+  set_has_instanceid();
+  instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAuthenticate_Request.instanceid)
+}
 
 // -------------------------------------------------------------------
 
 // CSiteLicense_LCSAuthenticate_Response
 
-// optional string site_name = 1;
+// optional uint64 site_id = 1;
+inline bool CSiteLicense_LCSAuthenticate_Response::has_site_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CSiteLicense_LCSAuthenticate_Response::set_has_site_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CSiteLicense_LCSAuthenticate_Response::clear_has_site_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CSiteLicense_LCSAuthenticate_Response::clear_site_id() {
+  site_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_site_id();
+}
+inline ::google::protobuf::uint64 CSiteLicense_LCSAuthenticate_Response::site_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_LCSAuthenticate_Response.site_id)
+  return site_id_;
+}
+inline void CSiteLicense_LCSAuthenticate_Response::set_site_id(::google::protobuf::uint64 value) {
+  set_has_site_id();
+  site_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAuthenticate_Response.site_id)
+}
+
+// optional string site_name = 2;
 inline bool CSiteLicense_LCSAuthenticate_Response::has_site_name() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -2149,6 +1880,30 @@ inline void CSiteLicense_LCSAuthenticate_Response::set_allocated_site_name(::std
   // @@protoc_insertion_point(field_set_allocated:proto.steam.CSiteLicense_LCSAuthenticate_Response.site_name)
 }
 
+// optional bool new_session = 3;
+inline bool CSiteLicense_LCSAuthenticate_Response::has_new_session() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CSiteLicense_LCSAuthenticate_Response::set_has_new_session() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CSiteLicense_LCSAuthenticate_Response::clear_has_new_session() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CSiteLicense_LCSAuthenticate_Response::clear_new_session() {
+  new_session_ = false;
+  clear_has_new_session();
+}
+inline bool CSiteLicense_LCSAuthenticate_Response::new_session() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_LCSAuthenticate_Response.new_session)
+  return new_session_;
+}
+inline void CSiteLicense_LCSAuthenticate_Response::set_new_session(bool value) {
+  set_has_new_session();
+  new_session_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAuthenticate_Response.new_session)
+}
+
 // -------------------------------------------------------------------
 
 // CSiteLicense_LCSAssociateUser_Request
@@ -2177,31 +1932,7 @@ inline void CSiteLicense_LCSAssociateUser_Request::set_steamid(::google::protobu
   // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAssociateUser_Request.steamid)
 }
 
-// optional uint32 sessionid = 2;
-inline bool CSiteLicense_LCSAssociateUser_Request::has_sessionid() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void CSiteLicense_LCSAssociateUser_Request::set_has_sessionid() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void CSiteLicense_LCSAssociateUser_Request::clear_has_sessionid() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void CSiteLicense_LCSAssociateUser_Request::clear_sessionid() {
-  sessionid_ = 0u;
-  clear_has_sessionid();
-}
-inline ::google::protobuf::uint32 CSiteLicense_LCSAssociateUser_Request::sessionid() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_LCSAssociateUser_Request.sessionid)
-  return sessionid_;
-}
-inline void CSiteLicense_LCSAssociateUser_Request::set_sessionid(::google::protobuf::uint32 value) {
-  set_has_sessionid();
-  sessionid_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAssociateUser_Request.sessionid)
-}
-
-// optional fixed32 local_ip = 3;
+// optional fixed32 local_ip = 2;
 inline bool CSiteLicense_LCSAssociateUser_Request::has_local_ip() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -2223,6 +1954,30 @@ inline void CSiteLicense_LCSAssociateUser_Request::set_local_ip(::google::protob
   set_has_local_ip();
   local_ip_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAssociateUser_Request.local_ip)
+}
+
+// optional fixed64 instanceid = 3;
+inline bool CSiteLicense_LCSAssociateUser_Request::has_instanceid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CSiteLicense_LCSAssociateUser_Request::set_has_instanceid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CSiteLicense_LCSAssociateUser_Request::clear_has_instanceid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CSiteLicense_LCSAssociateUser_Request::clear_instanceid() {
+  instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_instanceid();
+}
+inline ::google::protobuf::uint64 CSiteLicense_LCSAssociateUser_Request::instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_LCSAssociateUser_Request.instanceid)
+  return instanceid_;
+}
+inline void CSiteLicense_LCSAssociateUser_Request::set_instanceid(::google::protobuf::uint64 value) {
+  set_has_instanceid();
+  instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAssociateUser_Request.instanceid)
 }
 
 // -------------------------------------------------------------------
@@ -2257,63 +2012,39 @@ inline void CSiteLicense_ClientSeatCheckout_Request::set_steamid(::google::proto
   // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSeatCheckout_Request.steamid)
 }
 
-// optional int32 sessionid = 2;
-inline bool CSiteLicense_ClientSeatCheckout_Request::has_sessionid() const {
+// optional fixed64 instanceid = 2;
+inline bool CSiteLicense_ClientSeatCheckout_Request::has_instanceid() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void CSiteLicense_ClientSeatCheckout_Request::set_has_sessionid() {
+inline void CSiteLicense_ClientSeatCheckout_Request::set_has_instanceid() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void CSiteLicense_ClientSeatCheckout_Request::clear_has_sessionid() {
+inline void CSiteLicense_ClientSeatCheckout_Request::clear_has_instanceid() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void CSiteLicense_ClientSeatCheckout_Request::clear_sessionid() {
-  sessionid_ = 0;
-  clear_has_sessionid();
+inline void CSiteLicense_ClientSeatCheckout_Request::clear_instanceid() {
+  instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_instanceid();
 }
-inline ::google::protobuf::int32 CSiteLicense_ClientSeatCheckout_Request::sessionid() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSeatCheckout_Request.sessionid)
-  return sessionid_;
+inline ::google::protobuf::uint64 CSiteLicense_ClientSeatCheckout_Request::instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSeatCheckout_Request.instanceid)
+  return instanceid_;
 }
-inline void CSiteLicense_ClientSeatCheckout_Request::set_sessionid(::google::protobuf::int32 value) {
-  set_has_sessionid();
-  sessionid_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSeatCheckout_Request.sessionid)
+inline void CSiteLicense_ClientSeatCheckout_Request::set_instanceid(::google::protobuf::uint64 value) {
+  set_has_instanceid();
+  instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSeatCheckout_Request.instanceid)
 }
 
-// optional uint32 packageid = 3;
-inline bool CSiteLicense_ClientSeatCheckout_Request::has_packageid() const {
+// optional uint32 appid = 3;
+inline bool CSiteLicense_ClientSeatCheckout_Request::has_appid() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void CSiteLicense_ClientSeatCheckout_Request::set_has_packageid() {
+inline void CSiteLicense_ClientSeatCheckout_Request::set_has_appid() {
   _has_bits_[0] |= 0x00000004u;
 }
-inline void CSiteLicense_ClientSeatCheckout_Request::clear_has_packageid() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void CSiteLicense_ClientSeatCheckout_Request::clear_packageid() {
-  packageid_ = 0u;
-  clear_has_packageid();
-}
-inline ::google::protobuf::uint32 CSiteLicense_ClientSeatCheckout_Request::packageid() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSeatCheckout_Request.packageid)
-  return packageid_;
-}
-inline void CSiteLicense_ClientSeatCheckout_Request::set_packageid(::google::protobuf::uint32 value) {
-  set_has_packageid();
-  packageid_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSeatCheckout_Request.packageid)
-}
-
-// optional uint32 appid = 4;
-inline bool CSiteLicense_ClientSeatCheckout_Request::has_appid() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void CSiteLicense_ClientSeatCheckout_Request::set_has_appid() {
-  _has_bits_[0] |= 0x00000008u;
-}
 inline void CSiteLicense_ClientSeatCheckout_Request::clear_has_appid() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void CSiteLicense_ClientSeatCheckout_Request::clear_appid() {
   appid_ = 0u;
@@ -2333,11 +2064,111 @@ inline void CSiteLicense_ClientSeatCheckout_Request::set_appid(::google::protobu
 
 // CSiteLicense_ClientSeatCheckout_Response
 
+// -------------------------------------------------------------------
+
+// CSiteLicense_ClientGetAvailableSeats_Request
+
+// optional fixed64 steamid = 1;
+inline bool CSiteLicense_ClientGetAvailableSeats_Request::has_steamid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::set_has_steamid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::clear_has_steamid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::clear_steamid() {
+  steamid_ = GOOGLE_ULONGLONG(0);
+  clear_has_steamid();
+}
+inline ::google::protobuf::uint64 CSiteLicense_ClientGetAvailableSeats_Request::steamid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.steamid)
+  return steamid_;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::set_steamid(::google::protobuf::uint64 value) {
+  set_has_steamid();
+  steamid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.steamid)
+}
+
+// optional fixed64 instanceid = 2;
+inline bool CSiteLicense_ClientGetAvailableSeats_Request::has_instanceid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::set_has_instanceid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::clear_has_instanceid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::clear_instanceid() {
+  instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_instanceid();
+}
+inline ::google::protobuf::uint64 CSiteLicense_ClientGetAvailableSeats_Request::instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.instanceid)
+  return instanceid_;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::set_instanceid(::google::protobuf::uint64 value) {
+  set_has_instanceid();
+  instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.instanceid)
+}
+
+// optional uint32 appid = 3;
+inline bool CSiteLicense_ClientGetAvailableSeats_Request::has_appid() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::set_has_appid() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+inline ::google::protobuf::uint32 CSiteLicense_ClientGetAvailableSeats_Request::appid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.appid)
+  return appid_;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Request::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.appid)
+}
+
+// -------------------------------------------------------------------
+
+// CSiteLicense_ClientGetAvailableSeats_Response
+
+// optional uint32 available_seats = 1;
+inline bool CSiteLicense_ClientGetAvailableSeats_Response::has_available_seats() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Response::set_has_available_seats() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Response::clear_has_available_seats() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Response::clear_available_seats() {
+  available_seats_ = 0u;
+  clear_has_available_seats();
+}
+inline ::google::protobuf::uint32 CSiteLicense_ClientGetAvailableSeats_Response::available_seats() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response.available_seats)
+  return available_seats_;
+}
+inline void CSiteLicense_ClientGetAvailableSeats_Response::set_available_seats(::google::protobuf::uint32 value) {
+  set_has_available_seats();
+  available_seats_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response.available_seats)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

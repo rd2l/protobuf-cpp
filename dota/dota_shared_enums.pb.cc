@@ -36,7 +36,7 @@ namespace protobuf_dota_5fshared_5fenums_2eproto {
 namespace {
 
 ::google::protobuf::Metadata file_level_metadata[5];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[28];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[30];
 
 }  // namespace
 
@@ -342,89 +342,99 @@ void AddDescriptorsImpl() {
       "UND\020\010\022\037\n\033DOTA_JOIN_RESULT_LOBBY_FULL\020\t\0222"
       "\n.DOTA_JOIN_RESULT_CUSTOM_GAME_INCORRECT"
       "_VERSION\020\n\022\034\n\030DOTA_JOIN_RESULT_TIMEOUT\020\013"
-      "*^\n\025SelectionPriorityType\022\r\n\tUNDEFINED\020\000"
-      "\022\013\n\007RADIANT\020\001\022\010\n\004DIRE\020\002\022\016\n\nFIRST_PICK\020\003\022"
-      "\017\n\013SECOND_PICK\020\004*b\n\rDOTAMatchVote\022\031\n\025DOT"
-      "AMatchVote_INVALID\020\000\022\032\n\026DOTAMatchVote_PO"
-      "SITIVE\020\001\022\032\n\026DOTAMatchVote_NEGATIVE\020\002*\203\002\n"
-      "\027DOTA_LobbyMemberXPBonus\022#\n\037DOTA_LobbyMe"
-      "mberXPBonus_DEFAULT\020\000\022*\n&DOTA_LobbyMembe"
-      "rXPBonus_BATTLE_BOOSTER\020\001\022\'\n#DOTA_LobbyM"
-      "emberXPBonus_SHARE_BONUS\020\002\022!\n\035DOTA_Lobby"
-      "MemberXPBonus_PARTY\020\003\022\'\n#DOTA_LobbyMembe"
-      "rXPBonus_RECRUITMENT\020\004\022\"\n\036DOTA_LobbyMemb"
-      "erXPBonus_PCBANG\020\005*x\n\023DOTALobbyVisibilit"
-      "y\022\036\n\032DOTALobbyVisibility_Public\020\000\022\037\n\033DOT"
-      "ALobbyVisibility_Friends\020\001\022 \n\034DOTALobbyV"
-      "isibility_Unlisted\020\002*\347\002\n\022EDOTAPlayerMMRT"
-      "ype\022 \n\034k_EDOTAPlayerMMRType_Invalid\020\000\022&\n"
-      "\"k_EDOTAPlayerMMRType_GeneralHidden\020\001\022#\n"
-      "\037k_EDOTAPlayerMMRType_SoloHidden\020\002\022+\n\'k_"
-      "EDOTAPlayerMMRType_GeneralCompetitive\020\003\022"
-      "(\n$k_EDOTAPlayerMMRType_SoloCompetitive\020"
-      "\004\022.\n*k_EDOTAPlayerMMRType_1v1Competitive"
-      "_UNUSED\020\005\022.\n*k_EDOTAPlayerMMRType_Genera"
-      "lSeasonalRanked\020\006\022+\n\'k_EDOTAPlayerMMRTyp"
-      "e_SoloSeasonalRanked\020\007*\207\002\n\tMatchType\022\025\n\021"
-      "MATCH_TYPE_CASUAL\020\000\022\030\n\024MATCH_TYPE_COOP_B"
-      "OTS\020\001\022\032\n\026MATCH_TYPE_TEAM_RANKED\020\002\022 \n\034MAT"
-      "CH_TYPE_LEGACY_SOLO_QUEUE\020\003\022\032\n\026MATCH_TYP"
-      "E_COMPETITIVE\020\004\022\036\n\032MATCH_TYPE_WEEKEND_TO"
-      "URNEY\020\005\022\031\n\025MATCH_TYPE_CASUAL_1V1\020\006\022\024\n\020MA"
-      "TCH_TYPE_EVENT\020\007\022\036\n\032MATCH_TYPE_SEASONAL_"
-      "RANKED\020\010*\204\002\n\021DOTABotDifficulty\022\032\n\026BOT_DI"
-      "FFICULTY_PASSIVE\020\000\022\027\n\023BOT_DIFFICULTY_EAS"
-      "Y\020\001\022\031\n\025BOT_DIFFICULTY_MEDIUM\020\002\022\027\n\023BOT_DI"
-      "FFICULTY_HARD\020\003\022\031\n\025BOT_DIFFICULTY_UNFAIR"
-      "\020\004\022\032\n\026BOT_DIFFICULTY_INVALID\020\005\022\031\n\025BOT_DI"
-      "FFICULTY_EXTRA1\020\006\022\031\n\025BOT_DIFFICULTY_EXTR"
-      "A2\020\007\022\031\n\025BOT_DIFFICULTY_EXTRA3\020\010*\223\006\n\rDOTA"
-      "_BOT_MODE\022\026\n\022DOTA_BOT_MODE_NONE\020\000\022\030\n\024DOT"
-      "A_BOT_MODE_LANING\020\001\022\030\n\024DOTA_BOT_MODE_ATT"
-      "ACK\020\002\022\026\n\022DOTA_BOT_MODE_ROAM\020\003\022\031\n\025DOTA_BO"
-      "T_MODE_RETREAT\020\004\022\035\n\031DOTA_BOT_MODE_SECRET"
-      "_SHOP\020\005\022\033\n\027DOTA_BOT_MODE_SIDE_SHOP\020\006\022\026\n\022"
-      "DOTA_BOT_MODE_RUNE\020\007\022 \n\034DOTA_BOT_MODE_PU"
-      "SH_TOWER_TOP\020\010\022 \n\034DOTA_BOT_MODE_PUSH_TOW"
-      "ER_MID\020\t\022 \n\034DOTA_BOT_MODE_PUSH_TOWER_BOT"
-      "\020\n\022\"\n\036DOTA_BOT_MODE_DEFEND_TOWER_TOP\020\013\022\""
-      "\n\036DOTA_BOT_MODE_DEFEND_TOWER_MID\020\014\022\"\n\036DO"
-      "TA_BOT_MODE_DEFEND_TOWER_BOT\020\r\022\032\n\026DOTA_B"
-      "OT_MODE_ASSEMBLE\020\016\022&\n\"DOTA_BOT_MODE_ASSE"
-      "MBLE_WITH_HUMANS\020\017\022\033\n\027DOTA_BOT_MODE_TEAM"
-      "_ROAM\020\020\022\026\n\022DOTA_BOT_MODE_FARM\020\021\022\035\n\031DOTA_"
-      "BOT_MODE_DEFEND_ALLY\020\022\022#\n\037DOTA_BOT_MODE_"
-      "EVASIVE_MANEUVERS\020\023\022\030\n\024DOTA_BOT_MODE_ROS"
-      "HAN\020\024\022\026\n\022DOTA_BOT_MODE_ITEM\020\025\022\026\n\022DOTA_BO"
-      "T_MODE_WARD\020\026\022\033\n\027DOTA_BOT_MODE_COMPANION"
-      "\020\027\022\037\n\033DOTA_BOT_MODE_TUTORIAL_BOSS\020\030\022\030\n\024D"
-      "OTA_BOT_MODE_MINION\020\031*\363\001\n\016MatchLanguages"
-      "\022\032\n\026MATCH_LANGUAGE_INVALID\020\000\022\032\n\026MATCH_LA"
-      "NGUAGE_ENGLISH\020\001\022\032\n\026MATCH_LANGUAGE_RUSSI"
-      "AN\020\002\022\032\n\026MATCH_LANGUAGE_CHINESE\020\003\022\031\n\025MATC"
-      "H_LANGUAGE_KOREAN\020\004\022\032\n\026MATCH_LANGUAGE_SP"
-      "ANISH\020\005\022\035\n\031MATCH_LANGUAGE_PORTUGUESE\020\006\022\033"
-      "\n\027MATCH_LANGUAGE_ENGLISH2\020\007*\330\002\n\032ETourney"
-      "QueueDeadlineState\022\'\n#k_ETourneyQueueDea"
-      "dlineState_Normal\020\000\022\'\n#k_ETourneyQueueDe"
-      "adlineState_Missed\020\001\022*\n&k_ETourneyQueueD"
-      "eadlineState_ExpiredOK\020\002\022+\n\'k_ETourneyQu"
-      "eueDeadlineState_SeekingBye\020\003\0222\n.k_ETour"
-      "neyQueueDeadlineState_EligibleForRefund\020"
-      "\004\022,\n\037k_ETourneyQueueDeadlineState_NA\020\377\377\377"
-      "\377\377\377\377\377\377\001\022-\n)k_ETourneyQueueDeadlineState_"
-      "ExpiringSoon\020e*\307\002\n\rEMatchOutcome\022\033\n\027k_EM"
-      "atchOutcome_Unknown\020\000\022\036\n\032k_EMatchOutcome"
-      "_RadVictory\020\002\022\037\n\033k_EMatchOutcome_DireVic"
-      "tory\020\003\0223\n/k_EMatchOutcome_NotScored_Poor"
-      "NetworkConditions\020@\022$\n k_EMatchOutcome_N"
-      "otScored_Leaver\020A\022)\n%k_EMatchOutcome_Not"
-      "Scored_ServerCrash\020B\022*\n&k_EMatchOutcome_"
-      "NotScored_NeverStarted\020C\022&\n\"k_EMatchOutc"
-      "ome_NotScored_Canceled\020DB\005H\001\200\001\000"
+      "*q\n\032DOTASelectionPriorityRules\022\'\n#k_DOTA"
+      "SelectionPriorityRules_Manual\020\000\022*\n&k_DOT"
+      "ASelectionPriorityRules_Automatic\020\001*\366\001\n\033"
+      "DOTASelectionPriorityChoice\022)\n%k_DOTASel"
+      "ectionPriorityChoice_Invalid\020\000\022+\n\'k_DOTA"
+      "SelectionPriorityChoice_FirstPick\020\001\022,\n(k"
+      "_DOTASelectionPriorityChoice_SecondPick\020"
+      "\002\022)\n%k_DOTASelectionPriorityChoice_Radia"
+      "nt\020\003\022&\n\"k_DOTASelectionPriorityChoice_Di"
+      "re\020\004*b\n\rDOTAMatchVote\022\031\n\025DOTAMatchVote_I"
+      "NVALID\020\000\022\032\n\026DOTAMatchVote_POSITIVE\020\001\022\032\n\026"
+      "DOTAMatchVote_NEGATIVE\020\002*\203\002\n\027DOTA_LobbyM"
+      "emberXPBonus\022#\n\037DOTA_LobbyMemberXPBonus_"
+      "DEFAULT\020\000\022*\n&DOTA_LobbyMemberXPBonus_BAT"
+      "TLE_BOOSTER\020\001\022\'\n#DOTA_LobbyMemberXPBonus"
+      "_SHARE_BONUS\020\002\022!\n\035DOTA_LobbyMemberXPBonu"
+      "s_PARTY\020\003\022\'\n#DOTA_LobbyMemberXPBonus_REC"
+      "RUITMENT\020\004\022\"\n\036DOTA_LobbyMemberXPBonus_PC"
+      "BANG\020\005*x\n\023DOTALobbyVisibility\022\036\n\032DOTALob"
+      "byVisibility_Public\020\000\022\037\n\033DOTALobbyVisibi"
+      "lity_Friends\020\001\022 \n\034DOTALobbyVisibility_Un"
+      "listed\020\002*\347\002\n\022EDOTAPlayerMMRType\022 \n\034k_EDO"
+      "TAPlayerMMRType_Invalid\020\000\022&\n\"k_EDOTAPlay"
+      "erMMRType_GeneralHidden\020\001\022#\n\037k_EDOTAPlay"
+      "erMMRType_SoloHidden\020\002\022+\n\'k_EDOTAPlayerM"
+      "MRType_GeneralCompetitive\020\003\022(\n$k_EDOTAPl"
+      "ayerMMRType_SoloCompetitive\020\004\022.\n*k_EDOTA"
+      "PlayerMMRType_1v1Competitive_UNUSED\020\005\022.\n"
+      "*k_EDOTAPlayerMMRType_GeneralSeasonalRan"
+      "ked\020\006\022+\n\'k_EDOTAPlayerMMRType_SoloSeason"
+      "alRanked\020\007*\207\002\n\tMatchType\022\025\n\021MATCH_TYPE_C"
+      "ASUAL\020\000\022\030\n\024MATCH_TYPE_COOP_BOTS\020\001\022\032\n\026MAT"
+      "CH_TYPE_TEAM_RANKED\020\002\022 \n\034MATCH_TYPE_LEGA"
+      "CY_SOLO_QUEUE\020\003\022\032\n\026MATCH_TYPE_COMPETITIV"
+      "E\020\004\022\036\n\032MATCH_TYPE_WEEKEND_TOURNEY\020\005\022\031\n\025M"
+      "ATCH_TYPE_CASUAL_1V1\020\006\022\024\n\020MATCH_TYPE_EVE"
+      "NT\020\007\022\036\n\032MATCH_TYPE_SEASONAL_RANKED\020\010*\204\002\n"
+      "\021DOTABotDifficulty\022\032\n\026BOT_DIFFICULTY_PAS"
+      "SIVE\020\000\022\027\n\023BOT_DIFFICULTY_EASY\020\001\022\031\n\025BOT_D"
+      "IFFICULTY_MEDIUM\020\002\022\027\n\023BOT_DIFFICULTY_HAR"
+      "D\020\003\022\031\n\025BOT_DIFFICULTY_UNFAIR\020\004\022\032\n\026BOT_DI"
+      "FFICULTY_INVALID\020\005\022\031\n\025BOT_DIFFICULTY_EXT"
+      "RA1\020\006\022\031\n\025BOT_DIFFICULTY_EXTRA2\020\007\022\031\n\025BOT_"
+      "DIFFICULTY_EXTRA3\020\010*\223\006\n\rDOTA_BOT_MODE\022\026\n"
+      "\022DOTA_BOT_MODE_NONE\020\000\022\030\n\024DOTA_BOT_MODE_L"
+      "ANING\020\001\022\030\n\024DOTA_BOT_MODE_ATTACK\020\002\022\026\n\022DOT"
+      "A_BOT_MODE_ROAM\020\003\022\031\n\025DOTA_BOT_MODE_RETRE"
+      "AT\020\004\022\035\n\031DOTA_BOT_MODE_SECRET_SHOP\020\005\022\033\n\027D"
+      "OTA_BOT_MODE_SIDE_SHOP\020\006\022\026\n\022DOTA_BOT_MOD"
+      "E_RUNE\020\007\022 \n\034DOTA_BOT_MODE_PUSH_TOWER_TOP"
+      "\020\010\022 \n\034DOTA_BOT_MODE_PUSH_TOWER_MID\020\t\022 \n\034"
+      "DOTA_BOT_MODE_PUSH_TOWER_BOT\020\n\022\"\n\036DOTA_B"
+      "OT_MODE_DEFEND_TOWER_TOP\020\013\022\"\n\036DOTA_BOT_M"
+      "ODE_DEFEND_TOWER_MID\020\014\022\"\n\036DOTA_BOT_MODE_"
+      "DEFEND_TOWER_BOT\020\r\022\032\n\026DOTA_BOT_MODE_ASSE"
+      "MBLE\020\016\022&\n\"DOTA_BOT_MODE_ASSEMBLE_WITH_HU"
+      "MANS\020\017\022\033\n\027DOTA_BOT_MODE_TEAM_ROAM\020\020\022\026\n\022D"
+      "OTA_BOT_MODE_FARM\020\021\022\035\n\031DOTA_BOT_MODE_DEF"
+      "END_ALLY\020\022\022#\n\037DOTA_BOT_MODE_EVASIVE_MANE"
+      "UVERS\020\023\022\030\n\024DOTA_BOT_MODE_ROSHAN\020\024\022\026\n\022DOT"
+      "A_BOT_MODE_ITEM\020\025\022\026\n\022DOTA_BOT_MODE_WARD\020"
+      "\026\022\033\n\027DOTA_BOT_MODE_COMPANION\020\027\022\037\n\033DOTA_B"
+      "OT_MODE_TUTORIAL_BOSS\020\030\022\030\n\024DOTA_BOT_MODE"
+      "_MINION\020\031*\363\001\n\016MatchLanguages\022\032\n\026MATCH_LA"
+      "NGUAGE_INVALID\020\000\022\032\n\026MATCH_LANGUAGE_ENGLI"
+      "SH\020\001\022\032\n\026MATCH_LANGUAGE_RUSSIAN\020\002\022\032\n\026MATC"
+      "H_LANGUAGE_CHINESE\020\003\022\031\n\025MATCH_LANGUAGE_K"
+      "OREAN\020\004\022\032\n\026MATCH_LANGUAGE_SPANISH\020\005\022\035\n\031M"
+      "ATCH_LANGUAGE_PORTUGUESE\020\006\022\033\n\027MATCH_LANG"
+      "UAGE_ENGLISH2\020\007*\330\002\n\032ETourneyQueueDeadlin"
+      "eState\022\'\n#k_ETourneyQueueDeadlineState_N"
+      "ormal\020\000\022\'\n#k_ETourneyQueueDeadlineState_"
+      "Missed\020\001\022*\n&k_ETourneyQueueDeadlineState"
+      "_ExpiredOK\020\002\022+\n\'k_ETourneyQueueDeadlineS"
+      "tate_SeekingBye\020\003\0222\n.k_ETourneyQueueDead"
+      "lineState_EligibleForRefund\020\004\022,\n\037k_ETour"
+      "neyQueueDeadlineState_NA\020\377\377\377\377\377\377\377\377\377\001\022-\n)k"
+      "_ETourneyQueueDeadlineState_ExpiringSoon"
+      "\020e*\307\002\n\rEMatchOutcome\022\033\n\027k_EMatchOutcome_"
+      "Unknown\020\000\022\036\n\032k_EMatchOutcome_RadVictory\020"
+      "\002\022\037\n\033k_EMatchOutcome_DireVictory\020\003\0223\n/k_"
+      "EMatchOutcome_NotScored_PoorNetworkCondi"
+      "tions\020@\022$\n k_EMatchOutcome_NotScored_Lea"
+      "ver\020A\022)\n%k_EMatchOutcome_NotScored_Serve"
+      "rCrash\020B\022*\n&k_EMatchOutcome_NotScored_Ne"
+      "verStarted\020C\022&\n\"k_EMatchOutcome_NotScore"
+      "d_Canceled\020D*f\n\nEBadgeType\022\034\n\030k_EBadgeTy"
+      "pe_TI7_Midweek\020\001\022\033\n\027k_EBadgeType_TI7_Fin"
+      "als\020\002\022\035\n\031k_EBadgeType_TI7_AllEvent\020\003B\005H\001"
+      "\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 8951);
+      descriptor, 9323);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dota_shared_enums.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -798,11 +808,25 @@ bool DOTAJoinLobbyResult_IsValid(int value) {
   }
 }
 
-const ::google::protobuf::EnumDescriptor* SelectionPriorityType_descriptor() {
+const ::google::protobuf::EnumDescriptor* DOTASelectionPriorityRules_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[17];
 }
-bool SelectionPriorityType_IsValid(int value) {
+bool DOTASelectionPriorityRules_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::google::protobuf::EnumDescriptor* DOTASelectionPriorityChoice_descriptor() {
+  protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[18];
+}
+bool DOTASelectionPriorityChoice_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
@@ -817,7 +841,7 @@ bool SelectionPriorityType_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* DOTAMatchVote_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[18];
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[19];
 }
 bool DOTAMatchVote_IsValid(int value) {
   switch (value) {
@@ -832,7 +856,7 @@ bool DOTAMatchVote_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* DOTA_LobbyMemberXPBonus_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[19];
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[20];
 }
 bool DOTA_LobbyMemberXPBonus_IsValid(int value) {
   switch (value) {
@@ -850,7 +874,7 @@ bool DOTA_LobbyMemberXPBonus_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* DOTALobbyVisibility_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[20];
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[21];
 }
 bool DOTALobbyVisibility_IsValid(int value) {
   switch (value) {
@@ -865,7 +889,7 @@ bool DOTALobbyVisibility_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* EDOTAPlayerMMRType_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[21];
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[22];
 }
 bool EDOTAPlayerMMRType_IsValid(int value) {
   switch (value) {
@@ -885,7 +909,7 @@ bool EDOTAPlayerMMRType_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* MatchType_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[22];
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[23];
 }
 bool MatchType_IsValid(int value) {
   switch (value) {
@@ -906,7 +930,7 @@ bool MatchType_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* DOTABotDifficulty_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[23];
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[24];
 }
 bool DOTABotDifficulty_IsValid(int value) {
   switch (value) {
@@ -927,7 +951,7 @@ bool DOTABotDifficulty_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* DOTA_BOT_MODE_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[24];
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[25];
 }
 bool DOTA_BOT_MODE_IsValid(int value) {
   switch (value) {
@@ -965,7 +989,7 @@ bool DOTA_BOT_MODE_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* MatchLanguages_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[25];
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[26];
 }
 bool MatchLanguages_IsValid(int value) {
   switch (value) {
@@ -985,7 +1009,7 @@ bool MatchLanguages_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* ETourneyQueueDeadlineState_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[26];
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[27];
 }
 bool ETourneyQueueDeadlineState_IsValid(int value) {
   switch (value) {
@@ -1004,7 +1028,7 @@ bool ETourneyQueueDeadlineState_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* EMatchOutcome_descriptor() {
   protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[27];
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[28];
 }
 bool EMatchOutcome_IsValid(int value) {
   switch (value) {
@@ -1016,6 +1040,21 @@ bool EMatchOutcome_IsValid(int value) {
     case 66:
     case 67:
     case 68:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::google::protobuf::EnumDescriptor* EBadgeType_descriptor() {
+  protobuf_dota_5fshared_5fenums_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_dota_5fshared_5fenums_2eproto::file_level_enum_descriptors[29];
+}
+bool EBadgeType_IsValid(int value) {
+  switch (value) {
+    case 1:
+    case 2:
+    case 3:
       return true;
     default:
       return false;

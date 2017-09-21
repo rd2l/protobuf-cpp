@@ -27,14 +27,6 @@ class CSiteLicense_InitiateAssociation_RequestDefaultTypeInternal : public ::goo
 } _CSiteLicense_InitiateAssociation_Request_default_instance_;
 class CSiteLicense_InitiateAssociation_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CSiteLicense_InitiateAssociation_Response> {
 } _CSiteLicense_InitiateAssociation_Response_default_instance_;
-class CSiteLicense_ClientSiteAssociation_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CSiteLicense_ClientSiteAssociation_Request> {
-} _CSiteLicense_ClientSiteAssociation_Request_default_instance_;
-class CSiteLicense_ClientSiteAssociation_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CSiteLicense_ClientSiteAssociation_Response> {
-} _CSiteLicense_ClientSiteAssociation_Response_default_instance_;
-class CSiteLicense_ClientSiteLicenseSeatCheckout_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CSiteLicense_ClientSiteLicenseSeatCheckout_Request> {
-} _CSiteLicense_ClientSiteLicenseSeatCheckout_Request_default_instance_;
-class CSiteLicense_ClientSiteLicenseSeatCheckout_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CSiteLicense_ClientSiteLicenseSeatCheckout_Response> {
-} _CSiteLicense_ClientSiteLicenseSeatCheckout_Response_default_instance_;
 class CSiteLicense_LCSAuthenticate_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CSiteLicense_LCSAuthenticate_Request> {
 } _CSiteLicense_LCSAuthenticate_Request_default_instance_;
 class CSiteLicense_LCSAuthenticate_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CSiteLicense_LCSAuthenticate_Response> {
@@ -47,13 +39,17 @@ class CSiteLicense_ClientSeatCheckout_RequestDefaultTypeInternal : public ::goog
 } _CSiteLicense_ClientSeatCheckout_Request_default_instance_;
 class CSiteLicense_ClientSeatCheckout_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CSiteLicense_ClientSeatCheckout_Response> {
 } _CSiteLicense_ClientSeatCheckout_Response_default_instance_;
+class CSiteLicense_ClientGetAvailableSeats_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CSiteLicense_ClientGetAvailableSeats_Request> {
+} _CSiteLicense_ClientGetAvailableSeats_Request_default_instance_;
+class CSiteLicense_ClientGetAvailableSeats_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CSiteLicense_ClientGetAvailableSeats_Response> {
+} _CSiteLicense_ClientGetAvailableSeats_Response_default_instance_;
 
 namespace protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto {
 
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[14];
+::google::protobuf::Metadata file_level_metadata[12];
 const ::google::protobuf::ServiceDescriptor* file_level_service_descriptors[2];
 
 }  // namespace
@@ -81,8 +77,6 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
 };
 
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
@@ -91,9 +85,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteManagerClient_IncomingClient_Request, site_instanceid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteManagerClient_IncomingClient_Request, client_steamid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteManagerClient_IncomingClient_Request, client_local_ip_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteManagerClient_IncomingClient_Request, site_local_ip_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteManagerClient_IncomingClient_Request, connection_key_),
   1,
   2,
@@ -110,7 +104,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_InitiateAssociation_Request, site_steamid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_InitiateAssociation_Request, site_local_ip_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_InitiateAssociation_Request, site_instanceid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_InitiateAssociation_Request, client_local_ip_),
   0,
   1,
@@ -122,57 +116,35 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_InitiateAssociation_Response, connection_key_),
   0,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteAssociation_Request, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteAssociation_Request, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteAssociation_Request, site_id_),
-  0,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteAssociation_Response, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteAssociation_Response, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteAssociation_Response, site_name_),
-  0,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteLicenseSeatCheckout_Request, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteLicenseSeatCheckout_Request, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteLicenseSeatCheckout_Request, packageid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteLicenseSeatCheckout_Request, appid_),
-  0,
-  1,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteLicenseSeatCheckout_Response, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSiteLicenseSeatCheckout_Response, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAuthenticate_Request, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAuthenticate_Request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAuthenticate_Request, instanceid_),
+  0,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAuthenticate_Response, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAuthenticate_Response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAuthenticate_Response, site_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAuthenticate_Response, site_name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAuthenticate_Response, new_session_),
+  1,
   0,
+  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAssociateUser_Request, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAssociateUser_Request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAssociateUser_Request, steamid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAssociateUser_Request, sessionid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAssociateUser_Request, local_ip_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAssociateUser_Request, instanceid_),
   0,
-  1,
   2,
+  1,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAssociateUser_Response, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_LCSAssociateUser_Response, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -184,18 +156,34 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSeatCheckout_Request, steamid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSeatCheckout_Request, sessionid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSeatCheckout_Request, packageid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSeatCheckout_Request, instanceid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSeatCheckout_Request, appid_),
   0,
   1,
   2,
-  3,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSeatCheckout_Response, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientSeatCheckout_Response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientGetAvailableSeats_Request, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientGetAvailableSeats_Request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientGetAvailableSeats_Request, steamid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientGetAvailableSeats_Request, instanceid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientGetAvailableSeats_Request, appid_),
+  0,
+  1,
+  2,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientGetAvailableSeats_Response, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientGetAvailableSeats_Response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSiteLicense_ClientGetAvailableSeats_Response, available_seats_),
+  0,
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
@@ -203,16 +191,14 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 13, 18, sizeof(CSiteManagerClient_IncomingClient_Response)},
   { 18, 26, sizeof(CSiteLicense_InitiateAssociation_Request)},
   { 29, 35, sizeof(CSiteLicense_InitiateAssociation_Response)},
-  { 36, 42, sizeof(CSiteLicense_ClientSiteAssociation_Request)},
-  { 43, 49, sizeof(CSiteLicense_ClientSiteAssociation_Response)},
-  { 50, 57, sizeof(CSiteLicense_ClientSiteLicenseSeatCheckout_Request)},
-  { 59, 64, sizeof(CSiteLicense_ClientSiteLicenseSeatCheckout_Response)},
-  { 64, 69, sizeof(CSiteLicense_LCSAuthenticate_Request)},
-  { 69, 75, sizeof(CSiteLicense_LCSAuthenticate_Response)},
-  { 76, 84, sizeof(CSiteLicense_LCSAssociateUser_Request)},
-  { 87, 92, sizeof(CSiteLicense_LCSAssociateUser_Response)},
-  { 92, 101, sizeof(CSiteLicense_ClientSeatCheckout_Request)},
-  { 105, 110, sizeof(CSiteLicense_ClientSeatCheckout_Response)},
+  { 36, 42, sizeof(CSiteLicense_LCSAuthenticate_Request)},
+  { 43, 51, sizeof(CSiteLicense_LCSAuthenticate_Response)},
+  { 54, 62, sizeof(CSiteLicense_LCSAssociateUser_Request)},
+  { 65, 70, sizeof(CSiteLicense_LCSAssociateUser_Response)},
+  { 70, 78, sizeof(CSiteLicense_ClientSeatCheckout_Request)},
+  { 81, 86, sizeof(CSiteLicense_ClientSeatCheckout_Response)},
+  { 86, 94, sizeof(CSiteLicense_ClientGetAvailableSeats_Request)},
+  { 97, 103, sizeof(CSiteLicense_ClientGetAvailableSeats_Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -220,16 +206,14 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteManagerClient_IncomingClient_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_InitiateAssociation_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_InitiateAssociation_Response_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_ClientSiteAssociation_Request_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_ClientSiteAssociation_Response_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_ClientSiteLicenseSeatCheckout_Request_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_ClientSiteLicenseSeatCheckout_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_LCSAuthenticate_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_LCSAuthenticate_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_LCSAssociateUser_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_LCSAssociateUser_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_ClientSeatCheckout_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_ClientSeatCheckout_Response_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_ClientGetAvailableSeats_Request_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CSiteLicense_ClientGetAvailableSeats_Response_default_instance_),
 };
 
 namespace {
@@ -250,7 +234,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 14);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 12);
 }
 
 }  // namespace
@@ -264,26 +248,22 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[2].reflection;
   _CSiteLicense_InitiateAssociation_Response_default_instance_.Shutdown();
   delete file_level_metadata[3].reflection;
-  _CSiteLicense_ClientSiteAssociation_Request_default_instance_.Shutdown();
-  delete file_level_metadata[4].reflection;
-  _CSiteLicense_ClientSiteAssociation_Response_default_instance_.Shutdown();
-  delete file_level_metadata[5].reflection;
-  _CSiteLicense_ClientSiteLicenseSeatCheckout_Request_default_instance_.Shutdown();
-  delete file_level_metadata[6].reflection;
-  _CSiteLicense_ClientSiteLicenseSeatCheckout_Response_default_instance_.Shutdown();
-  delete file_level_metadata[7].reflection;
   _CSiteLicense_LCSAuthenticate_Request_default_instance_.Shutdown();
-  delete file_level_metadata[8].reflection;
+  delete file_level_metadata[4].reflection;
   _CSiteLicense_LCSAuthenticate_Response_default_instance_.Shutdown();
-  delete file_level_metadata[9].reflection;
+  delete file_level_metadata[5].reflection;
   _CSiteLicense_LCSAssociateUser_Request_default_instance_.Shutdown();
-  delete file_level_metadata[10].reflection;
+  delete file_level_metadata[6].reflection;
   _CSiteLicense_LCSAssociateUser_Response_default_instance_.Shutdown();
-  delete file_level_metadata[11].reflection;
+  delete file_level_metadata[7].reflection;
   _CSiteLicense_ClientSeatCheckout_Request_default_instance_.Shutdown();
-  delete file_level_metadata[12].reflection;
+  delete file_level_metadata[8].reflection;
   _CSiteLicense_ClientSeatCheckout_Response_default_instance_.Shutdown();
-  delete file_level_metadata[13].reflection;
+  delete file_level_metadata[9].reflection;
+  _CSiteLicense_ClientGetAvailableSeats_Request_default_instance_.Shutdown();
+  delete file_level_metadata[10].reflection;
+  _CSiteLicense_ClientGetAvailableSeats_Response_default_instance_.Shutdown();
+  delete file_level_metadata[11].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -295,16 +275,14 @@ void TableStruct::InitDefaultsImpl() {
   _CSiteManagerClient_IncomingClient_Response_default_instance_.DefaultConstruct();
   _CSiteLicense_InitiateAssociation_Request_default_instance_.DefaultConstruct();
   _CSiteLicense_InitiateAssociation_Response_default_instance_.DefaultConstruct();
-  _CSiteLicense_ClientSiteAssociation_Request_default_instance_.DefaultConstruct();
-  _CSiteLicense_ClientSiteAssociation_Response_default_instance_.DefaultConstruct();
-  _CSiteLicense_ClientSiteLicenseSeatCheckout_Request_default_instance_.DefaultConstruct();
-  _CSiteLicense_ClientSiteLicenseSeatCheckout_Response_default_instance_.DefaultConstruct();
   _CSiteLicense_LCSAuthenticate_Request_default_instance_.DefaultConstruct();
   _CSiteLicense_LCSAuthenticate_Response_default_instance_.DefaultConstruct();
   _CSiteLicense_LCSAssociateUser_Request_default_instance_.DefaultConstruct();
   _CSiteLicense_LCSAssociateUser_Response_default_instance_.DefaultConstruct();
   _CSiteLicense_ClientSeatCheckout_Request_default_instance_.DefaultConstruct();
   _CSiteLicense_ClientSeatCheckout_Response_default_instance_.DefaultConstruct();
+  _CSiteLicense_ClientGetAvailableSeats_Request_default_instance_.DefaultConstruct();
+  _CSiteLicense_ClientGetAvailableSeats_Response_default_instance_.DefaultConstruct();
 }
 
 void InitDefaults() {
@@ -316,74 +294,66 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n,steammessages_site_license.steamclient"
       ".proto\022\013proto.steam\032,steammessages_unifi"
-      "ed_base.steamclient.proto\"\213\001\n)CSiteManag"
-      "erClient_IncomingClient_Request\022\026\n\016clien"
-      "t_steamid\030\001 \001(\006\022\027\n\017client_local_ip\030\002 \001(\007"
-      "\022\025\n\rsite_local_ip\030\003 \001(\007\022\026\n\016connection_ke"
-      "y\030\004 \001(\014\",\n*CSiteManagerClient_IncomingCl"
-      "ient_Response\"p\n(CSiteLicense_InitiateAs"
-      "sociation_Request\022\024\n\014site_steamid\030\001 \001(\006\022"
-      "\025\n\rsite_local_ip\030\002 \001(\007\022\027\n\017client_local_i"
-      "p\030\003 \001(\007\"C\n)CSiteLicense_InitiateAssociat"
-      "ion_Response\022\026\n\016connection_key\030\001 \001(\014\"=\n*"
-      "CSiteLicense_ClientSiteAssociation_Reque"
-      "st\022\017\n\007site_id\030\001 \001(\004\"@\n+CSiteLicense_Clie"
-      "ntSiteAssociation_Response\022\021\n\tsite_name\030"
-      "\001 \001(\t\"\253\001\n2CSiteLicense_ClientSiteLicense"
-      "SeatCheckout_Request\022@\n\tpackageid\030\001 \001(\rB"
-      "-\202\265\030)Package ID that client wants to che"
-      "ck out\0223\n\005appid\030\002 \001(\rB$\202\265\030 App ID that c"
-      "lient wants to play\"5\n3CSiteLicense_Clie"
-      "ntSiteLicenseSeatCheckout_Response\"&\n$CS"
-      "iteLicense_LCSAuthenticate_Request\":\n%CS"
-      "iteLicense_LCSAuthenticate_Response\022\021\n\ts"
-      "ite_name\030\001 \001(\t\"]\n%CSiteLicense_LCSAssoci"
-      "ateUser_Request\022\017\n\007steamid\030\001 \001(\006\022\021\n\tsess"
-      "ionid\030\002 \001(\r\022\020\n\010local_ip\030\003 \001(\007\"(\n&CSiteLi"
-      "cense_LCSAssociateUser_Response\"o\n\'CSite"
-      "License_ClientSeatCheckout_Request\022\017\n\007st"
-      "eamid\030\001 \001(\006\022\021\n\tsessionid\030\002 \001(\005\022\021\n\tpackag"
-      "eid\030\003 \001(\r\022\r\n\005appid\030\004 \001(\r\"*\n(CSiteLicense"
-      "_ClientSeatCheckout_Response2\216\002\n\021SiteMan"
-      "agerClient\022\315\001\n\024ExpectIncomingClient\0226.pr"
-      "oto.steam.CSiteManagerClient_IncomingCli"
-      "ent_Request\0327.proto.steam.CSiteManagerCl"
-      "ient_IncomingClient_Response\"D\202\265\030@Rack i"
-      "nforming site manager of new inbound cli"
-      "ent PSK connection\032)\202\265\030!Local site manag"
-      "er client service\300\265\030\0022\217\t\n\013SiteLicense\022\274\001"
-      "\n\023InitiateAssociation\0225.proto.steam.CSit"
-      "eLicense_InitiateAssociation_Request\0326.p"
+      "ed_base.steamclient.proto\"\215\001\n)CSiteManag"
+      "erClient_IncomingClient_Request\022\027\n\017site_"
+      "instanceid\030\001 \001(\006\022\026\n\016client_steamid\030\002 \001(\006"
+      "\022\027\n\017client_local_ip\030\003 \001(\007\022\026\n\016connection_"
+      "key\030\004 \001(\014\",\n*CSiteManagerClient_Incoming"
+      "Client_Response\"r\n(CSiteLicense_Initiate"
+      "Association_Request\022\024\n\014site_steamid\030\001 \001("
+      "\006\022\027\n\017site_instanceid\030\002 \001(\006\022\027\n\017client_loc"
+      "al_ip\030\003 \001(\007\"C\n)CSiteLicense_InitiateAsso"
+      "ciation_Response\022\026\n\016connection_key\030\001 \001(\014"
+      "\":\n$CSiteLicense_LCSAuthenticate_Request"
+      "\022\022\n\ninstanceid\030\001 \001(\006\"`\n%CSiteLicense_LCS"
+      "Authenticate_Response\022\017\n\007site_id\030\001 \001(\004\022\021"
+      "\n\tsite_name\030\002 \001(\t\022\023\n\013new_session\030\003 \001(\010\"^"
+      "\n%CSiteLicense_LCSAssociateUser_Request\022"
+      "\017\n\007steamid\030\001 \001(\006\022\020\n\010local_ip\030\002 \001(\007\022\022\n\nin"
+      "stanceid\030\003 \001(\006\"(\n&CSiteLicense_LCSAssoci"
+      "ateUser_Response\"]\n\'CSiteLicense_ClientS"
+      "eatCheckout_Request\022\017\n\007steamid\030\001 \001(\006\022\022\n\n"
+      "instanceid\030\002 \001(\006\022\r\n\005appid\030\003 \001(\r\"*\n(CSite"
+      "License_ClientSeatCheckout_Response\"b\n,C"
+      "SiteLicense_ClientGetAvailableSeats_Requ"
+      "est\022\017\n\007steamid\030\001 \001(\006\022\022\n\ninstanceid\030\002 \001(\006"
+      "\022\r\n\005appid\030\003 \001(\r\"H\n-CSiteLicense_ClientGe"
+      "tAvailableSeats_Response\022\027\n\017available_se"
+      "ats\030\001 \001(\r2\210\002\n\021SiteManagerClient\022\307\001\n\016Inco"
+      "mingClient\0226.proto.steam.CSiteManagerCli"
+      "ent_IncomingClient_Request\0327.proto.steam"
+      ".CSiteManagerClient_IncomingClient_Respo"
+      "nse\"D\202\265\030@Rack informing site manager of "
+      "new inbound client PSK connection\032)\202\265\030!L"
+      "ocal site manager client service\300\265\030\0022\315\007\n"
+      "\013SiteLicense\022\274\001\n\023InitiateAssociation\0225.p"
       "roto.steam.CSiteLicense_InitiateAssociat"
-      "ion_Response\"6\202\265\0302Client is requesting c"
-      "onnetion info for local site\022\272\001\n\025ClientS"
-      "iteAssociation\0227.proto.steam.CSiteLicens"
-      "e_ClientSiteAssociation_Request\0328.proto."
-      "steam.CSiteLicense_ClientSiteAssociation"
-      "_Response\".\202\265\030*Client is sending up site"
-      " association info\022\327\001\n\035ClientSiteLicenseS"
-      "eatCheckout\022\?.proto.steam.CSiteLicense_C"
-      "lientSiteLicenseSeatCheckout_Request\032@.p"
-      "roto.steam.CSiteLicense_ClientSiteLicens"
-      "eSeatCheckout_Response\"3\202\265\030/Client is re"
-      "questing use of a site license seat\022\236\001\n\017"
-      "LCSAuthenticate\0221.proto.steam.CSiteLicen"
-      "se_LCSAuthenticate_Request\0322.proto.steam"
-      ".CSiteLicense_LCSAuthenticate_Response\"$"
-      "\202\265\030 Local cafe server authentication\022\265\001\n"
-      "\020LCSAssociateUser\0222.proto.steam.CSiteLic"
-      "ense_LCSAssociateUser_Request\0323.proto.st"
-      "eam.CSiteLicense_LCSAssociateUser_Respon"
-      "se\"8\202\265\0304Local cafe server wants to grant"
-      " user access to site\022\266\001\n\022ClientSeatCheck"
-      "out\0224.proto.steam.CSiteLicense_ClientSea"
-      "tCheckout_Request\0325.proto.steam.CSiteLic"
-      "ense_ClientSeatCheckout_Response\"3\202\265\030/Cl"
-      "ient is requesting use of a site license"
-      " seat\032\030\202\265\030\024Site License serviceB\003\200\001\001"
+      "ion_Request\0326.proto.steam.CSiteLicense_I"
+      "nitiateAssociation_Response\"6\202\265\0302Client "
+      "is requesting connetion info for local s"
+      "ite\022\236\001\n\017LCSAuthenticate\0221.proto.steam.CS"
+      "iteLicense_LCSAuthenticate_Request\0322.pro"
+      "to.steam.CSiteLicense_LCSAuthenticate_Re"
+      "sponse\"$\202\265\030 Local cafe server authentica"
+      "tion\022\265\001\n\020LCSAssociateUser\0222.proto.steam."
+      "CSiteLicense_LCSAssociateUser_Request\0323."
+      "proto.steam.CSiteLicense_LCSAssociateUse"
+      "r_Response\"8\202\265\0304Local cafe server wants "
+      "to grant user access to site\022\266\001\n\022ClientS"
+      "eatCheckout\0224.proto.steam.CSiteLicense_C"
+      "lientSeatCheckout_Request\0325.proto.steam."
+      "CSiteLicense_ClientSeatCheckout_Response"
+      "\"3\202\265\030/Client is requesting use of a site"
+      " license seat\022\322\001\n\027ClientGetAvailableSeat"
+      "s\0229.proto.steam.CSiteLicense_ClientGetAv"
+      "ailableSeats_Request\032:.proto.steam.CSite"
+      "License_ClientGetAvailableSeats_Response"
+      "\"@\202\265\030<Client is requesting the number of"
+      " currently available seats\032\030\202\265\030\024Site Lic"
+      "ense serviceB\003\200\001\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2676);
+      descriptor, 2337);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "steammessages_site_license.steamclient.proto", &protobuf_RegisterTypes);
   ::proto::steam::protobuf_steammessages_5funified_5fbase_2esteamclient_2eproto::AddDescriptors();
@@ -407,9 +377,9 @@ struct StaticDescriptorInitializer {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CSiteManagerClient_IncomingClient_Request::kSiteInstanceidFieldNumber;
 const int CSiteManagerClient_IncomingClient_Request::kClientSteamidFieldNumber;
 const int CSiteManagerClient_IncomingClient_Request::kClientLocalIpFieldNumber;
-const int CSiteManagerClient_IncomingClient_Request::kSiteLocalIpFieldNumber;
 const int CSiteManagerClient_IncomingClient_Request::kConnectionKeyFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -431,17 +401,17 @@ CSiteManagerClient_IncomingClient_Request::CSiteManagerClient_IncomingClient_Req
   if (from.has_connection_key()) {
     connection_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.connection_key_);
   }
-  ::memcpy(&client_steamid_, &from.client_steamid_,
-    reinterpret_cast<char*>(&site_local_ip_) -
-    reinterpret_cast<char*>(&client_steamid_) + sizeof(site_local_ip_));
+  ::memcpy(&site_instanceid_, &from.site_instanceid_,
+    reinterpret_cast<char*>(&client_local_ip_) -
+    reinterpret_cast<char*>(&site_instanceid_) + sizeof(client_local_ip_));
   // @@protoc_insertion_point(copy_constructor:proto.steam.CSiteManagerClient_IncomingClient_Request)
 }
 
 void CSiteManagerClient_IncomingClient_Request::SharedCtor() {
   _cached_size_ = 0;
   connection_key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&client_steamid_, 0, reinterpret_cast<char*>(&site_local_ip_) -
-    reinterpret_cast<char*>(&client_steamid_) + sizeof(site_local_ip_));
+  ::memset(&site_instanceid_, 0, reinterpret_cast<char*>(&client_local_ip_) -
+    reinterpret_cast<char*>(&site_instanceid_) + sizeof(client_local_ip_));
 }
 
 CSiteManagerClient_IncomingClient_Request::~CSiteManagerClient_IncomingClient_Request() {
@@ -483,8 +453,8 @@ void CSiteManagerClient_IncomingClient_Request::Clear() {
     (*connection_key_.UnsafeRawStringPointer())->clear();
   }
   if (_has_bits_[0 / 32] & 14u) {
-    ::memset(&client_steamid_, 0, reinterpret_cast<char*>(&site_local_ip_) -
-      reinterpret_cast<char*>(&client_steamid_) + sizeof(site_local_ip_));
+    ::memset(&site_instanceid_, 0, reinterpret_cast<char*>(&client_local_ip_) -
+      reinterpret_cast<char*>(&site_instanceid_) + sizeof(client_local_ip_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -500,10 +470,24 @@ bool CSiteManagerClient_IncomingClient_Request::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional fixed64 client_steamid = 1;
+      // optional fixed64 site_instanceid = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(9u)) {
+          set_has_site_instanceid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
+                 input, &site_instanceid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional fixed64 client_steamid = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(17u)) {
           set_has_client_steamid();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
@@ -514,28 +498,14 @@ bool CSiteManagerClient_IncomingClient_Request::MergePartialFromCodedStream(
         break;
       }
 
-      // optional fixed32 client_local_ip = 2;
-      case 2: {
+      // optional fixed32 client_local_ip = 3;
+      case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(21u)) {
+            static_cast< ::google::protobuf::uint8>(29u)) {
           set_has_client_local_ip();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
                  input, &client_local_ip_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional fixed32 site_local_ip = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(29u)) {
-          set_has_site_local_ip();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, &site_local_ip_)));
         } else {
           goto handle_unusual;
         }
@@ -583,19 +553,19 @@ void CSiteManagerClient_IncomingClient_Request::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional fixed64 client_steamid = 1;
+  // optional fixed64 site_instanceid = 1;
   if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed64(1, this->client_steamid(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFixed64(1, this->site_instanceid(), output);
   }
 
-  // optional fixed32 client_local_ip = 2;
+  // optional fixed64 client_steamid = 2;
   if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(2, this->client_local_ip(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFixed64(2, this->client_steamid(), output);
   }
 
-  // optional fixed32 site_local_ip = 3;
+  // optional fixed32 client_local_ip = 3;
   if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(3, this->site_local_ip(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFixed32(3, this->client_local_ip(), output);
   }
 
   // optional bytes connection_key = 4;
@@ -618,19 +588,19 @@ void CSiteManagerClient_IncomingClient_Request::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional fixed64 client_steamid = 1;
+  // optional fixed64 site_instanceid = 1;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(1, this->client_steamid(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(1, this->site_instanceid(), target);
   }
 
-  // optional fixed32 client_local_ip = 2;
+  // optional fixed64 client_steamid = 2;
   if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(2, this->client_local_ip(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(2, this->client_steamid(), target);
   }
 
-  // optional fixed32 site_local_ip = 3;
+  // optional fixed32 client_local_ip = 3;
   if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(3, this->site_local_ip(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(3, this->client_local_ip(), target);
   }
 
   // optional bytes connection_key = 4;
@@ -665,18 +635,18 @@ size_t CSiteManagerClient_IncomingClient_Request::ByteSizeLong() const {
           this->connection_key());
     }
 
-    // optional fixed64 client_steamid = 1;
+    // optional fixed64 site_instanceid = 1;
+    if (has_site_instanceid()) {
+      total_size += 1 + 8;
+    }
+
+    // optional fixed64 client_steamid = 2;
     if (has_client_steamid()) {
       total_size += 1 + 8;
     }
 
-    // optional fixed32 client_local_ip = 2;
+    // optional fixed32 client_local_ip = 3;
     if (has_client_local_ip()) {
-      total_size += 1 + 4;
-    }
-
-    // optional fixed32 site_local_ip = 3;
-    if (has_site_local_ip()) {
       total_size += 1 + 4;
     }
 
@@ -717,13 +687,13 @@ void CSiteManagerClient_IncomingClient_Request::MergeFrom(const CSiteManagerClie
       connection_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.connection_key_);
     }
     if (cached_has_bits & 0x00000002u) {
-      client_steamid_ = from.client_steamid_;
+      site_instanceid_ = from.site_instanceid_;
     }
     if (cached_has_bits & 0x00000004u) {
-      client_local_ip_ = from.client_local_ip_;
+      client_steamid_ = from.client_steamid_;
     }
     if (cached_has_bits & 0x00000008u) {
-      site_local_ip_ = from.site_local_ip_;
+      client_local_ip_ = from.client_local_ip_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -753,9 +723,9 @@ void CSiteManagerClient_IncomingClient_Request::Swap(CSiteManagerClient_Incoming
 }
 void CSiteManagerClient_IncomingClient_Request::InternalSwap(CSiteManagerClient_IncomingClient_Request* other) {
   connection_key_.Swap(&other->connection_key_);
+  std::swap(site_instanceid_, other->site_instanceid_);
   std::swap(client_steamid_, other->client_steamid_);
   std::swap(client_local_ip_, other->client_local_ip_);
-  std::swap(site_local_ip_, other->site_local_ip_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -769,15 +739,39 @@ void CSiteManagerClient_IncomingClient_Request::InternalSwap(CSiteManagerClient_
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CSiteManagerClient_IncomingClient_Request
 
-// optional fixed64 client_steamid = 1;
-bool CSiteManagerClient_IncomingClient_Request::has_client_steamid() const {
+// optional fixed64 site_instanceid = 1;
+bool CSiteManagerClient_IncomingClient_Request::has_site_instanceid() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-void CSiteManagerClient_IncomingClient_Request::set_has_client_steamid() {
+void CSiteManagerClient_IncomingClient_Request::set_has_site_instanceid() {
   _has_bits_[0] |= 0x00000002u;
 }
-void CSiteManagerClient_IncomingClient_Request::clear_has_client_steamid() {
+void CSiteManagerClient_IncomingClient_Request::clear_has_site_instanceid() {
   _has_bits_[0] &= ~0x00000002u;
+}
+void CSiteManagerClient_IncomingClient_Request::clear_site_instanceid() {
+  site_instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_site_instanceid();
+}
+::google::protobuf::uint64 CSiteManagerClient_IncomingClient_Request::site_instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteManagerClient_IncomingClient_Request.site_instanceid)
+  return site_instanceid_;
+}
+void CSiteManagerClient_IncomingClient_Request::set_site_instanceid(::google::protobuf::uint64 value) {
+  set_has_site_instanceid();
+  site_instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteManagerClient_IncomingClient_Request.site_instanceid)
+}
+
+// optional fixed64 client_steamid = 2;
+bool CSiteManagerClient_IncomingClient_Request::has_client_steamid() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CSiteManagerClient_IncomingClient_Request::set_has_client_steamid() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CSiteManagerClient_IncomingClient_Request::clear_has_client_steamid() {
+  _has_bits_[0] &= ~0x00000004u;
 }
 void CSiteManagerClient_IncomingClient_Request::clear_client_steamid() {
   client_steamid_ = GOOGLE_ULONGLONG(0);
@@ -793,15 +787,15 @@ void CSiteManagerClient_IncomingClient_Request::set_client_steamid(::google::pro
   // @@protoc_insertion_point(field_set:proto.steam.CSiteManagerClient_IncomingClient_Request.client_steamid)
 }
 
-// optional fixed32 client_local_ip = 2;
+// optional fixed32 client_local_ip = 3;
 bool CSiteManagerClient_IncomingClient_Request::has_client_local_ip() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 void CSiteManagerClient_IncomingClient_Request::set_has_client_local_ip() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000008u;
 }
 void CSiteManagerClient_IncomingClient_Request::clear_has_client_local_ip() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 void CSiteManagerClient_IncomingClient_Request::clear_client_local_ip() {
   client_local_ip_ = 0u;
@@ -815,30 +809,6 @@ void CSiteManagerClient_IncomingClient_Request::set_client_local_ip(::google::pr
   set_has_client_local_ip();
   client_local_ip_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CSiteManagerClient_IncomingClient_Request.client_local_ip)
-}
-
-// optional fixed32 site_local_ip = 3;
-bool CSiteManagerClient_IncomingClient_Request::has_site_local_ip() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-void CSiteManagerClient_IncomingClient_Request::set_has_site_local_ip() {
-  _has_bits_[0] |= 0x00000008u;
-}
-void CSiteManagerClient_IncomingClient_Request::clear_has_site_local_ip() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-void CSiteManagerClient_IncomingClient_Request::clear_site_local_ip() {
-  site_local_ip_ = 0u;
-  clear_has_site_local_ip();
-}
-::google::protobuf::uint32 CSiteManagerClient_IncomingClient_Request::site_local_ip() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteManagerClient_IncomingClient_Request.site_local_ip)
-  return site_local_ip_;
-}
-void CSiteManagerClient_IncomingClient_Request::set_site_local_ip(::google::protobuf::uint32 value) {
-  set_has_site_local_ip();
-  site_local_ip_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteManagerClient_IncomingClient_Request.site_local_ip)
 }
 
 // optional bytes connection_key = 4;
@@ -1105,7 +1075,7 @@ void CSiteManagerClient_IncomingClient_Response::InternalSwap(CSiteManagerClient
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CSiteLicense_InitiateAssociation_Request::kSiteSteamidFieldNumber;
-const int CSiteLicense_InitiateAssociation_Request::kSiteLocalIpFieldNumber;
+const int CSiteLicense_InitiateAssociation_Request::kSiteInstanceidFieldNumber;
 const int CSiteLicense_InitiateAssociation_Request::kClientLocalIpFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -1200,14 +1170,14 @@ bool CSiteLicense_InitiateAssociation_Request::MergePartialFromCodedStream(
         break;
       }
 
-      // optional fixed32 site_local_ip = 2;
+      // optional fixed64 site_instanceid = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(21u)) {
-          set_has_site_local_ip();
+            static_cast< ::google::protobuf::uint8>(17u)) {
+          set_has_site_instanceid();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, &site_local_ip_)));
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
+                 input, &site_instanceid_)));
         } else {
           goto handle_unusual;
         }
@@ -1262,9 +1232,9 @@ void CSiteLicense_InitiateAssociation_Request::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFixed64(1, this->site_steamid(), output);
   }
 
-  // optional fixed32 site_local_ip = 2;
+  // optional fixed64 site_instanceid = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(2, this->site_local_ip(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFixed64(2, this->site_instanceid(), output);
   }
 
   // optional fixed32 client_local_ip = 3;
@@ -1291,9 +1261,9 @@ void CSiteLicense_InitiateAssociation_Request::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(1, this->site_steamid(), target);
   }
 
-  // optional fixed32 site_local_ip = 2;
+  // optional fixed64 site_instanceid = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(2, this->site_local_ip(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(2, this->site_instanceid(), target);
   }
 
   // optional fixed32 client_local_ip = 3;
@@ -1324,9 +1294,9 @@ size_t CSiteLicense_InitiateAssociation_Request::ByteSizeLong() const {
       total_size += 1 + 8;
     }
 
-    // optional fixed32 site_local_ip = 2;
-    if (has_site_local_ip()) {
-      total_size += 1 + 4;
+    // optional fixed64 site_instanceid = 2;
+    if (has_site_instanceid()) {
+      total_size += 1 + 8;
     }
 
     // optional fixed32 client_local_ip = 3;
@@ -1370,7 +1340,7 @@ void CSiteLicense_InitiateAssociation_Request::MergeFrom(const CSiteLicense_Init
       site_steamid_ = from.site_steamid_;
     }
     if (cached_has_bits & 0x00000002u) {
-      site_local_ip_ = from.site_local_ip_;
+      site_instanceid_ = from.site_instanceid_;
     }
     if (cached_has_bits & 0x00000004u) {
       client_local_ip_ = from.client_local_ip_;
@@ -1403,7 +1373,7 @@ void CSiteLicense_InitiateAssociation_Request::Swap(CSiteLicense_InitiateAssocia
 }
 void CSiteLicense_InitiateAssociation_Request::InternalSwap(CSiteLicense_InitiateAssociation_Request* other) {
   std::swap(site_steamid_, other->site_steamid_);
-  std::swap(site_local_ip_, other->site_local_ip_);
+  std::swap(site_instanceid_, other->site_instanceid_);
   std::swap(client_local_ip_, other->client_local_ip_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -1442,28 +1412,28 @@ void CSiteLicense_InitiateAssociation_Request::set_site_steamid(::google::protob
   // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_InitiateAssociation_Request.site_steamid)
 }
 
-// optional fixed32 site_local_ip = 2;
-bool CSiteLicense_InitiateAssociation_Request::has_site_local_ip() const {
+// optional fixed64 site_instanceid = 2;
+bool CSiteLicense_InitiateAssociation_Request::has_site_instanceid() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-void CSiteLicense_InitiateAssociation_Request::set_has_site_local_ip() {
+void CSiteLicense_InitiateAssociation_Request::set_has_site_instanceid() {
   _has_bits_[0] |= 0x00000002u;
 }
-void CSiteLicense_InitiateAssociation_Request::clear_has_site_local_ip() {
+void CSiteLicense_InitiateAssociation_Request::clear_has_site_instanceid() {
   _has_bits_[0] &= ~0x00000002u;
 }
-void CSiteLicense_InitiateAssociation_Request::clear_site_local_ip() {
-  site_local_ip_ = 0u;
-  clear_has_site_local_ip();
+void CSiteLicense_InitiateAssociation_Request::clear_site_instanceid() {
+  site_instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_site_instanceid();
 }
-::google::protobuf::uint32 CSiteLicense_InitiateAssociation_Request::site_local_ip() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_InitiateAssociation_Request.site_local_ip)
-  return site_local_ip_;
+::google::protobuf::uint64 CSiteLicense_InitiateAssociation_Request::site_instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_InitiateAssociation_Request.site_instanceid)
+  return site_instanceid_;
 }
-void CSiteLicense_InitiateAssociation_Request::set_site_local_ip(::google::protobuf::uint32 value) {
-  set_has_site_local_ip();
-  site_local_ip_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_InitiateAssociation_Request.site_local_ip)
+void CSiteLicense_InitiateAssociation_Request::set_site_instanceid(::google::protobuf::uint64 value) {
+  set_has_site_instanceid();
+  site_instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_InitiateAssociation_Request.site_instanceid)
 }
 
 // optional fixed32 client_local_ip = 3;
@@ -1808,1128 +1778,7 @@ void CSiteLicense_InitiateAssociation_Response::set_allocated_connection_key(::s
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CSiteLicense_ClientSiteAssociation_Request::kSiteIdFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-CSiteLicense_ClientSiteAssociation_Request::CSiteLicense_ClientSiteAssociation_Request()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-}
-CSiteLicense_ClientSiteAssociation_Request::CSiteLicense_ClientSiteAssociation_Request(const CSiteLicense_ClientSiteAssociation_Request& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  site_id_ = from.site_id_;
-  // @@protoc_insertion_point(copy_constructor:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-}
-
-void CSiteLicense_ClientSiteAssociation_Request::SharedCtor() {
-  _cached_size_ = 0;
-  site_id_ = GOOGLE_ULONGLONG(0);
-}
-
-CSiteLicense_ClientSiteAssociation_Request::~CSiteLicense_ClientSiteAssociation_Request() {
-  // @@protoc_insertion_point(destructor:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  SharedDtor();
-}
-
-void CSiteLicense_ClientSiteAssociation_Request::SharedDtor() {
-}
-
-void CSiteLicense_ClientSiteAssociation_Request::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* CSiteLicense_ClientSiteAssociation_Request::descriptor() {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const CSiteLicense_ClientSiteAssociation_Request& CSiteLicense_ClientSiteAssociation_Request::default_instance() {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
-  return *internal_default_instance();
-}
-
-CSiteLicense_ClientSiteAssociation_Request* CSiteLicense_ClientSiteAssociation_Request::New(::google::protobuf::Arena* arena) const {
-  CSiteLicense_ClientSiteAssociation_Request* n = new CSiteLicense_ClientSiteAssociation_Request;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void CSiteLicense_ClientSiteAssociation_Request::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  site_id_ = GOOGLE_ULONGLONG(0);
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool CSiteLicense_ClientSiteAssociation_Request::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional uint64 site_id = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
-          set_has_site_id();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
-                 input, &site_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  return false;
-#undef DO_
-}
-
-void CSiteLicense_ClientSiteAssociation_Request::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional uint64 site_id = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->site_id(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-}
-
-::google::protobuf::uint8* CSiteLicense_ClientSiteAssociation_Request::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional uint64 site_id = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->site_id(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  return target;
-}
-
-size_t CSiteLicense_ClientSiteAssociation_Request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  // optional uint64 site_id = 1;
-  if (has_site_id()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt64Size(
-        this->site_id());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void CSiteLicense_ClientSiteAssociation_Request::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CSiteLicense_ClientSiteAssociation_Request* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const CSiteLicense_ClientSiteAssociation_Request>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-    MergeFrom(*source);
-  }
-}
-
-void CSiteLicense_ClientSiteAssociation_Request::MergeFrom(const CSiteLicense_ClientSiteAssociation_Request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_site_id()) {
-    set_site_id(from.site_id());
-  }
-}
-
-void CSiteLicense_ClientSiteAssociation_Request::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void CSiteLicense_ClientSiteAssociation_Request::CopyFrom(const CSiteLicense_ClientSiteAssociation_Request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CSiteLicense_ClientSiteAssociation_Request)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CSiteLicense_ClientSiteAssociation_Request::IsInitialized() const {
-  return true;
-}
-
-void CSiteLicense_ClientSiteAssociation_Request::Swap(CSiteLicense_ClientSiteAssociation_Request* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void CSiteLicense_ClientSiteAssociation_Request::InternalSwap(CSiteLicense_ClientSiteAssociation_Request* other) {
-  std::swap(site_id_, other->site_id_);
-  std::swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata CSiteLicense_ClientSiteAssociation_Request::GetMetadata() const {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// CSiteLicense_ClientSiteAssociation_Request
-
-// optional uint64 site_id = 1;
-bool CSiteLicense_ClientSiteAssociation_Request::has_site_id() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-void CSiteLicense_ClientSiteAssociation_Request::set_has_site_id() {
-  _has_bits_[0] |= 0x00000001u;
-}
-void CSiteLicense_ClientSiteAssociation_Request::clear_has_site_id() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-void CSiteLicense_ClientSiteAssociation_Request::clear_site_id() {
-  site_id_ = GOOGLE_ULONGLONG(0);
-  clear_has_site_id();
-}
-::google::protobuf::uint64 CSiteLicense_ClientSiteAssociation_Request::site_id() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSiteAssociation_Request.site_id)
-  return site_id_;
-}
-void CSiteLicense_ClientSiteAssociation_Request::set_site_id(::google::protobuf::uint64 value) {
-  set_has_site_id();
-  site_id_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSiteAssociation_Request.site_id)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CSiteLicense_ClientSiteAssociation_Response::kSiteNameFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-CSiteLicense_ClientSiteAssociation_Response::CSiteLicense_ClientSiteAssociation_Response()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-}
-CSiteLicense_ClientSiteAssociation_Response::CSiteLicense_ClientSiteAssociation_Response(const CSiteLicense_ClientSiteAssociation_Response& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  site_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_site_name()) {
-    site_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.site_name_);
-  }
-  // @@protoc_insertion_point(copy_constructor:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-}
-
-void CSiteLicense_ClientSiteAssociation_Response::SharedCtor() {
-  _cached_size_ = 0;
-  site_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-CSiteLicense_ClientSiteAssociation_Response::~CSiteLicense_ClientSiteAssociation_Response() {
-  // @@protoc_insertion_point(destructor:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  SharedDtor();
-}
-
-void CSiteLicense_ClientSiteAssociation_Response::SharedDtor() {
-  site_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-void CSiteLicense_ClientSiteAssociation_Response::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* CSiteLicense_ClientSiteAssociation_Response::descriptor() {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const CSiteLicense_ClientSiteAssociation_Response& CSiteLicense_ClientSiteAssociation_Response::default_instance() {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
-  return *internal_default_instance();
-}
-
-CSiteLicense_ClientSiteAssociation_Response* CSiteLicense_ClientSiteAssociation_Response::New(::google::protobuf::Arena* arena) const {
-  CSiteLicense_ClientSiteAssociation_Response* n = new CSiteLicense_ClientSiteAssociation_Response;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void CSiteLicense_ClientSiteAssociation_Response::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  if (has_site_name()) {
-    GOOGLE_DCHECK(!site_name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-    (*site_name_.UnsafeRawStringPointer())->clear();
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool CSiteLicense_ClientSiteAssociation_Response::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string site_name = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_site_name()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->site_name().data(), this->site_name().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  return false;
-#undef DO_
-}
-
-void CSiteLicense_ClientSiteAssociation_Response::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional string site_name = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->site_name().data(), this->site_name().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->site_name(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-}
-
-::google::protobuf::uint8* CSiteLicense_ClientSiteAssociation_Response::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional string site_name = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->site_name().data(), this->site_name().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->site_name(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  return target;
-}
-
-size_t CSiteLicense_ClientSiteAssociation_Response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  // optional string site_name = 1;
-  if (has_site_name()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->site_name());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void CSiteLicense_ClientSiteAssociation_Response::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CSiteLicense_ClientSiteAssociation_Response* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const CSiteLicense_ClientSiteAssociation_Response>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-    MergeFrom(*source);
-  }
-}
-
-void CSiteLicense_ClientSiteAssociation_Response::MergeFrom(const CSiteLicense_ClientSiteAssociation_Response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_site_name()) {
-    set_has_site_name();
-    site_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.site_name_);
-  }
-}
-
-void CSiteLicense_ClientSiteAssociation_Response::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void CSiteLicense_ClientSiteAssociation_Response::CopyFrom(const CSiteLicense_ClientSiteAssociation_Response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CSiteLicense_ClientSiteAssociation_Response)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CSiteLicense_ClientSiteAssociation_Response::IsInitialized() const {
-  return true;
-}
-
-void CSiteLicense_ClientSiteAssociation_Response::Swap(CSiteLicense_ClientSiteAssociation_Response* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void CSiteLicense_ClientSiteAssociation_Response::InternalSwap(CSiteLicense_ClientSiteAssociation_Response* other) {
-  site_name_.Swap(&other->site_name_);
-  std::swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata CSiteLicense_ClientSiteAssociation_Response::GetMetadata() const {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// CSiteLicense_ClientSiteAssociation_Response
-
-// optional string site_name = 1;
-bool CSiteLicense_ClientSiteAssociation_Response::has_site_name() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-void CSiteLicense_ClientSiteAssociation_Response::set_has_site_name() {
-  _has_bits_[0] |= 0x00000001u;
-}
-void CSiteLicense_ClientSiteAssociation_Response::clear_has_site_name() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-void CSiteLicense_ClientSiteAssociation_Response::clear_site_name() {
-  site_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_site_name();
-}
-const ::std::string& CSiteLicense_ClientSiteAssociation_Response::site_name() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-  return site_name_.GetNoArena();
-}
-void CSiteLicense_ClientSiteAssociation_Response::set_site_name(const ::std::string& value) {
-  set_has_site_name();
-  site_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-}
-#if LANG_CXX11
-void CSiteLicense_ClientSiteAssociation_Response::set_site_name(::std::string&& value) {
-  set_has_site_name();
-  site_name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-}
-#endif
-void CSiteLicense_ClientSiteAssociation_Response::set_site_name(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_site_name();
-  site_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-}
-void CSiteLicense_ClientSiteAssociation_Response::set_site_name(const char* value, size_t size) {
-  set_has_site_name();
-  site_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-}
-::std::string* CSiteLicense_ClientSiteAssociation_Response::mutable_site_name() {
-  set_has_site_name();
-  // @@protoc_insertion_point(field_mutable:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-  return site_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* CSiteLicense_ClientSiteAssociation_Response::release_site_name() {
-  // @@protoc_insertion_point(field_release:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-  clear_has_site_name();
-  return site_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void CSiteLicense_ClientSiteAssociation_Response::set_allocated_site_name(::std::string* site_name) {
-  if (site_name != NULL) {
-    set_has_site_name();
-  } else {
-    clear_has_site_name();
-  }
-  site_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), site_name);
-  // @@protoc_insertion_point(field_set_allocated:proto.steam.CSiteLicense_ClientSiteAssociation_Response.site_name)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CSiteLicense_ClientSiteLicenseSeatCheckout_Request::kPackageidFieldNumber;
-const int CSiteLicense_ClientSiteLicenseSeatCheckout_Request::kAppidFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-CSiteLicense_ClientSiteLicenseSeatCheckout_Request::CSiteLicense_ClientSiteLicenseSeatCheckout_Request()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-}
-CSiteLicense_ClientSiteLicenseSeatCheckout_Request::CSiteLicense_ClientSiteLicenseSeatCheckout_Request(const CSiteLicense_ClientSiteLicenseSeatCheckout_Request& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&packageid_, &from.packageid_,
-    reinterpret_cast<char*>(&appid_) -
-    reinterpret_cast<char*>(&packageid_) + sizeof(appid_));
-  // @@protoc_insertion_point(copy_constructor:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::SharedCtor() {
-  _cached_size_ = 0;
-  ::memset(&packageid_, 0, reinterpret_cast<char*>(&appid_) -
-    reinterpret_cast<char*>(&packageid_) + sizeof(appid_));
-}
-
-CSiteLicense_ClientSiteLicenseSeatCheckout_Request::~CSiteLicense_ClientSiteLicenseSeatCheckout_Request() {
-  // @@protoc_insertion_point(destructor:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  SharedDtor();
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::SharedDtor() {
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* CSiteLicense_ClientSiteLicenseSeatCheckout_Request::descriptor() {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const CSiteLicense_ClientSiteLicenseSeatCheckout_Request& CSiteLicense_ClientSiteLicenseSeatCheckout_Request::default_instance() {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
-  return *internal_default_instance();
-}
-
-CSiteLicense_ClientSiteLicenseSeatCheckout_Request* CSiteLicense_ClientSiteLicenseSeatCheckout_Request::New(::google::protobuf::Arena* arena) const {
-  CSiteLicense_ClientSiteLicenseSeatCheckout_Request* n = new CSiteLicense_ClientSiteLicenseSeatCheckout_Request;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  if (_has_bits_[0 / 32] & 3u) {
-    ::memset(&packageid_, 0, reinterpret_cast<char*>(&appid_) -
-      reinterpret_cast<char*>(&packageid_) + sizeof(appid_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool CSiteLicense_ClientSiteLicenseSeatCheckout_Request::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional uint32 packageid = 1 [(.proto.steam.description) = "Package ID that client wants to check out"];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
-          set_has_packageid();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &packageid_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional uint32 appid = 2 [(.proto.steam.description) = "App ID that client wants to play"];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
-          set_has_appid();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &appid_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  return false;
-#undef DO_
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional uint32 packageid = 1 [(.proto.steam.description) = "Package ID that client wants to check out"];
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->packageid(), output);
-  }
-
-  // optional uint32 appid = 2 [(.proto.steam.description) = "App ID that client wants to play"];
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->appid(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-}
-
-::google::protobuf::uint8* CSiteLicense_ClientSiteLicenseSeatCheckout_Request::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional uint32 packageid = 1 [(.proto.steam.description) = "Package ID that client wants to check out"];
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->packageid(), target);
-  }
-
-  // optional uint32 appid = 2 [(.proto.steam.description) = "App ID that client wants to play"];
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->appid(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  return target;
-}
-
-size_t CSiteLicense_ClientSiteLicenseSeatCheckout_Request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  if (_has_bits_[0 / 32] & 3u) {
-    // optional uint32 packageid = 1 [(.proto.steam.description) = "Package ID that client wants to check out"];
-    if (has_packageid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->packageid());
-    }
-
-    // optional uint32 appid = 2 [(.proto.steam.description) = "App ID that client wants to play"];
-    if (has_appid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->appid());
-    }
-
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CSiteLicense_ClientSiteLicenseSeatCheckout_Request* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const CSiteLicense_ClientSiteLicenseSeatCheckout_Request>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-    MergeFrom(*source);
-  }
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::MergeFrom(const CSiteLicense_ClientSiteLicenseSeatCheckout_Request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      packageid_ = from.packageid_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      appid_ = from.appid_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::CopyFrom(const CSiteLicense_ClientSiteLicenseSeatCheckout_Request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CSiteLicense_ClientSiteLicenseSeatCheckout_Request::IsInitialized() const {
-  return true;
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::Swap(CSiteLicense_ClientSiteLicenseSeatCheckout_Request* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::InternalSwap(CSiteLicense_ClientSiteLicenseSeatCheckout_Request* other) {
-  std::swap(packageid_, other->packageid_);
-  std::swap(appid_, other->appid_);
-  std::swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata CSiteLicense_ClientSiteLicenseSeatCheckout_Request::GetMetadata() const {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// CSiteLicense_ClientSiteLicenseSeatCheckout_Request
-
-// optional uint32 packageid = 1 [(.proto.steam.description) = "Package ID that client wants to check out"];
-bool CSiteLicense_ClientSiteLicenseSeatCheckout_Request::has_packageid() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::set_has_packageid() {
-  _has_bits_[0] |= 0x00000001u;
-}
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::clear_has_packageid() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::clear_packageid() {
-  packageid_ = 0u;
-  clear_has_packageid();
-}
-::google::protobuf::uint32 CSiteLicense_ClientSiteLicenseSeatCheckout_Request::packageid() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request.packageid)
-  return packageid_;
-}
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::set_packageid(::google::protobuf::uint32 value) {
-  set_has_packageid();
-  packageid_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request.packageid)
-}
-
-// optional uint32 appid = 2 [(.proto.steam.description) = "App ID that client wants to play"];
-bool CSiteLicense_ClientSiteLicenseSeatCheckout_Request::has_appid() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::set_has_appid() {
-  _has_bits_[0] |= 0x00000002u;
-}
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::clear_has_appid() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::clear_appid() {
-  appid_ = 0u;
-  clear_has_appid();
-}
-::google::protobuf::uint32 CSiteLicense_ClientSiteLicenseSeatCheckout_Request::appid() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request.appid)
-  return appid_;
-}
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Request::set_appid(::google::protobuf::uint32 value) {
-  set_has_appid();
-  appid_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Request.appid)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-CSiteLicense_ClientSiteLicenseSeatCheckout_Response::CSiteLicense_ClientSiteLicenseSeatCheckout_Response()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-}
-CSiteLicense_ClientSiteLicenseSeatCheckout_Response::CSiteLicense_ClientSiteLicenseSeatCheckout_Response(const CSiteLicense_ClientSiteLicenseSeatCheckout_Response& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::SharedCtor() {
-  _cached_size_ = 0;
-}
-
-CSiteLicense_ClientSiteLicenseSeatCheckout_Response::~CSiteLicense_ClientSiteLicenseSeatCheckout_Response() {
-  // @@protoc_insertion_point(destructor:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  SharedDtor();
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::SharedDtor() {
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* CSiteLicense_ClientSiteLicenseSeatCheckout_Response::descriptor() {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const CSiteLicense_ClientSiteLicenseSeatCheckout_Response& CSiteLicense_ClientSiteLicenseSeatCheckout_Response::default_instance() {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
-  return *internal_default_instance();
-}
-
-CSiteLicense_ClientSiteLicenseSeatCheckout_Response* CSiteLicense_ClientSiteLicenseSeatCheckout_Response::New(::google::protobuf::Arena* arena) const {
-  CSiteLicense_ClientSiteLicenseSeatCheckout_Response* n = new CSiteLicense_ClientSiteLicenseSeatCheckout_Response;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool CSiteLicense_ClientSiteLicenseSeatCheckout_Response::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-  handle_unusual:
-    if (tag == 0 ||
-        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-      goto success;
-    }
-    DO_(::google::protobuf::internal::WireFormat::SkipField(
-          input, tag, mutable_unknown_fields()));
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  return false;
-#undef DO_
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-}
-
-::google::protobuf::uint8* CSiteLicense_ClientSiteLicenseSeatCheckout_Response::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  return target;
-}
-
-size_t CSiteLicense_ClientSiteLicenseSeatCheckout_Response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CSiteLicense_ClientSiteLicenseSeatCheckout_Response* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const CSiteLicense_ClientSiteLicenseSeatCheckout_Response>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-    MergeFrom(*source);
-  }
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::MergeFrom(const CSiteLicense_ClientSiteLicenseSeatCheckout_Response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::CopyFrom(const CSiteLicense_ClientSiteLicenseSeatCheckout_Response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CSiteLicense_ClientSiteLicenseSeatCheckout_Response)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CSiteLicense_ClientSiteLicenseSeatCheckout_Response::IsInitialized() const {
-  return true;
-}
-
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::Swap(CSiteLicense_ClientSiteLicenseSeatCheckout_Response* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void CSiteLicense_ClientSiteLicenseSeatCheckout_Response::InternalSwap(CSiteLicense_ClientSiteLicenseSeatCheckout_Response* other) {
-  std::swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata CSiteLicense_ClientSiteLicenseSeatCheckout_Response::GetMetadata() const {
-  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// CSiteLicense_ClientSiteLicenseSeatCheckout_Response
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CSiteLicense_LCSAuthenticate_Request::kInstanceidFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CSiteLicense_LCSAuthenticate_Request::CSiteLicense_LCSAuthenticate_Request()
@@ -2946,11 +1795,13 @@ CSiteLicense_LCSAuthenticate_Request::CSiteLicense_LCSAuthenticate_Request(const
       _has_bits_(from._has_bits_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  instanceid_ = from.instanceid_;
   // @@protoc_insertion_point(copy_constructor:proto.steam.CSiteLicense_LCSAuthenticate_Request)
 }
 
 void CSiteLicense_LCSAuthenticate_Request::SharedCtor() {
   _cached_size_ = 0;
+  instanceid_ = GOOGLE_ULONGLONG(0);
 }
 
 CSiteLicense_LCSAuthenticate_Request::~CSiteLicense_LCSAuthenticate_Request() {
@@ -2986,6 +1837,7 @@ CSiteLicense_LCSAuthenticate_Request* CSiteLicense_LCSAuthenticate_Request::New(
 
 void CSiteLicense_LCSAuthenticate_Request::Clear() {
 // @@protoc_insertion_point(message_clear_start:proto.steam.CSiteLicense_LCSAuthenticate_Request)
+  instanceid_ = GOOGLE_ULONGLONG(0);
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -2999,14 +1851,33 @@ bool CSiteLicense_LCSAuthenticate_Request::MergePartialFromCodedStream(
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
-  handle_unusual:
-    if (tag == 0 ||
-        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-      goto success;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional fixed64 instanceid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(9u)) {
+          set_has_instanceid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
+                 input, &instanceid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
     }
-    DO_(::google::protobuf::internal::WireFormat::SkipField(
-          input, tag, mutable_unknown_fields()));
   }
 success:
   // @@protoc_insertion_point(parse_success:proto.steam.CSiteLicense_LCSAuthenticate_Request)
@@ -3023,6 +1894,12 @@ void CSiteLicense_LCSAuthenticate_Request::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _has_bits_[0];
+  // optional fixed64 instanceid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFixed64(1, this->instanceid(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -3035,6 +1912,12 @@ void CSiteLicense_LCSAuthenticate_Request::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CSiteLicense_LCSAuthenticate_Request)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional fixed64 instanceid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(1, this->instanceid(), target);
+  }
 
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
@@ -3053,6 +1936,11 @@ size_t CSiteLicense_LCSAuthenticate_Request::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         unknown_fields());
   }
+  // optional fixed64 instanceid = 1;
+  if (has_instanceid()) {
+    total_size += 1 + 8;
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -3082,6 +1970,9 @@ void CSiteLicense_LCSAuthenticate_Request::MergeFrom(const CSiteLicense_LCSAuthe
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from.has_instanceid()) {
+    set_instanceid(from.instanceid());
+  }
 }
 
 void CSiteLicense_LCSAuthenticate_Request::CopyFrom(const ::google::protobuf::Message& from) {
@@ -3107,6 +1998,7 @@ void CSiteLicense_LCSAuthenticate_Request::Swap(CSiteLicense_LCSAuthenticate_Req
   InternalSwap(other);
 }
 void CSiteLicense_LCSAuthenticate_Request::InternalSwap(CSiteLicense_LCSAuthenticate_Request* other) {
+  std::swap(instanceid_, other->instanceid_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -3120,12 +2012,38 @@ void CSiteLicense_LCSAuthenticate_Request::InternalSwap(CSiteLicense_LCSAuthenti
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CSiteLicense_LCSAuthenticate_Request
 
+// optional fixed64 instanceid = 1;
+bool CSiteLicense_LCSAuthenticate_Request::has_instanceid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CSiteLicense_LCSAuthenticate_Request::set_has_instanceid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CSiteLicense_LCSAuthenticate_Request::clear_has_instanceid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CSiteLicense_LCSAuthenticate_Request::clear_instanceid() {
+  instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_instanceid();
+}
+::google::protobuf::uint64 CSiteLicense_LCSAuthenticate_Request::instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_LCSAuthenticate_Request.instanceid)
+  return instanceid_;
+}
+void CSiteLicense_LCSAuthenticate_Request::set_instanceid(::google::protobuf::uint64 value) {
+  set_has_instanceid();
+  instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAuthenticate_Request.instanceid)
+}
+
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CSiteLicense_LCSAuthenticate_Response::kSiteIdFieldNumber;
 const int CSiteLicense_LCSAuthenticate_Response::kSiteNameFieldNumber;
+const int CSiteLicense_LCSAuthenticate_Response::kNewSessionFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CSiteLicense_LCSAuthenticate_Response::CSiteLicense_LCSAuthenticate_Response()
@@ -3146,12 +2064,17 @@ CSiteLicense_LCSAuthenticate_Response::CSiteLicense_LCSAuthenticate_Response(con
   if (from.has_site_name()) {
     site_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.site_name_);
   }
+  ::memcpy(&site_id_, &from.site_id_,
+    reinterpret_cast<char*>(&new_session_) -
+    reinterpret_cast<char*>(&site_id_) + sizeof(new_session_));
   // @@protoc_insertion_point(copy_constructor:proto.steam.CSiteLicense_LCSAuthenticate_Response)
 }
 
 void CSiteLicense_LCSAuthenticate_Response::SharedCtor() {
   _cached_size_ = 0;
   site_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&site_id_, 0, reinterpret_cast<char*>(&new_session_) -
+    reinterpret_cast<char*>(&site_id_) + sizeof(new_session_));
 }
 
 CSiteLicense_LCSAuthenticate_Response::~CSiteLicense_LCSAuthenticate_Response() {
@@ -3192,6 +2115,10 @@ void CSiteLicense_LCSAuthenticate_Response::Clear() {
     GOOGLE_DCHECK(!site_name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
     (*site_name_.UnsafeRawStringPointer())->clear();
   }
+  if (_has_bits_[0 / 32] & 6u) {
+    ::memset(&site_id_, 0, reinterpret_cast<char*>(&new_session_) -
+      reinterpret_cast<char*>(&site_id_) + sizeof(new_session_));
+  }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -3206,16 +2133,44 @@ bool CSiteLicense_LCSAuthenticate_Response::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string site_name = 1;
+      // optional uint64 site_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_site_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &site_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional string site_name = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_site_name()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->site_name().data(), this->site_name().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
             "proto.steam.CSiteLicense_LCSAuthenticate_Response.site_name");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional bool new_session = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
+          set_has_new_session();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &new_session_)));
         } else {
           goto handle_unusual;
         }
@@ -3251,14 +2206,24 @@ void CSiteLicense_LCSAuthenticate_Response::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional string site_name = 1;
+  // optional uint64 site_id = 1;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->site_id(), output);
+  }
+
+  // optional string site_name = 2;
   if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->site_name().data(), this->site_name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
       "proto.steam.CSiteLicense_LCSAuthenticate_Response.site_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->site_name(), output);
+      2, this->site_name(), output);
+  }
+
+  // optional bool new_session = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->new_session(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -3275,7 +2240,12 @@ void CSiteLicense_LCSAuthenticate_Response::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional string site_name = 1;
+  // optional uint64 site_id = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->site_id(), target);
+  }
+
+  // optional string site_name = 2;
   if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->site_name().data(), this->site_name().length(),
@@ -3283,7 +2253,12 @@ void CSiteLicense_LCSAuthenticate_Response::SerializeWithCachedSizes(
       "proto.steam.CSiteLicense_LCSAuthenticate_Response.site_name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->site_name(), target);
+        2, this->site_name(), target);
+  }
+
+  // optional bool new_session = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->new_session(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -3303,13 +2278,27 @@ size_t CSiteLicense_LCSAuthenticate_Response::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         unknown_fields());
   }
-  // optional string site_name = 1;
-  if (has_site_name()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->site_name());
-  }
+  if (_has_bits_[0 / 32] & 7u) {
+    // optional string site_name = 2;
+    if (has_site_name()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->site_name());
+    }
 
+    // optional uint64 site_id = 1;
+    if (has_site_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->site_id());
+    }
+
+    // optional bool new_session = 3;
+    if (has_new_session()) {
+      total_size += 1 + 1;
+    }
+
+  }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -3339,9 +2328,19 @@ void CSiteLicense_LCSAuthenticate_Response::MergeFrom(const CSiteLicense_LCSAuth
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_site_name()) {
-    set_has_site_name();
-    site_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.site_name_);
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 7u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_site_name();
+      site_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.site_name_);
+    }
+    if (cached_has_bits & 0x00000002u) {
+      site_id_ = from.site_id_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      new_session_ = from.new_session_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
 }
 
@@ -3369,6 +2368,8 @@ void CSiteLicense_LCSAuthenticate_Response::Swap(CSiteLicense_LCSAuthenticate_Re
 }
 void CSiteLicense_LCSAuthenticate_Response::InternalSwap(CSiteLicense_LCSAuthenticate_Response* other) {
   site_name_.Swap(&other->site_name_);
+  std::swap(site_id_, other->site_id_);
+  std::swap(new_session_, other->new_session_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -3382,7 +2383,31 @@ void CSiteLicense_LCSAuthenticate_Response::InternalSwap(CSiteLicense_LCSAuthent
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CSiteLicense_LCSAuthenticate_Response
 
-// optional string site_name = 1;
+// optional uint64 site_id = 1;
+bool CSiteLicense_LCSAuthenticate_Response::has_site_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CSiteLicense_LCSAuthenticate_Response::set_has_site_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CSiteLicense_LCSAuthenticate_Response::clear_has_site_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CSiteLicense_LCSAuthenticate_Response::clear_site_id() {
+  site_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_site_id();
+}
+::google::protobuf::uint64 CSiteLicense_LCSAuthenticate_Response::site_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_LCSAuthenticate_Response.site_id)
+  return site_id_;
+}
+void CSiteLicense_LCSAuthenticate_Response::set_site_id(::google::protobuf::uint64 value) {
+  set_has_site_id();
+  site_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAuthenticate_Response.site_id)
+}
+
+// optional string site_name = 2;
 bool CSiteLicense_LCSAuthenticate_Response::has_site_name() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -3445,14 +2470,38 @@ void CSiteLicense_LCSAuthenticate_Response::set_allocated_site_name(::std::strin
   // @@protoc_insertion_point(field_set_allocated:proto.steam.CSiteLicense_LCSAuthenticate_Response.site_name)
 }
 
+// optional bool new_session = 3;
+bool CSiteLicense_LCSAuthenticate_Response::has_new_session() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CSiteLicense_LCSAuthenticate_Response::set_has_new_session() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CSiteLicense_LCSAuthenticate_Response::clear_has_new_session() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CSiteLicense_LCSAuthenticate_Response::clear_new_session() {
+  new_session_ = false;
+  clear_has_new_session();
+}
+bool CSiteLicense_LCSAuthenticate_Response::new_session() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_LCSAuthenticate_Response.new_session)
+  return new_session_;
+}
+void CSiteLicense_LCSAuthenticate_Response::set_new_session(bool value) {
+  set_has_new_session();
+  new_session_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAuthenticate_Response.new_session)
+}
+
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CSiteLicense_LCSAssociateUser_Request::kSteamidFieldNumber;
-const int CSiteLicense_LCSAssociateUser_Request::kSessionidFieldNumber;
 const int CSiteLicense_LCSAssociateUser_Request::kLocalIpFieldNumber;
+const int CSiteLicense_LCSAssociateUser_Request::kInstanceidFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CSiteLicense_LCSAssociateUser_Request::CSiteLicense_LCSAssociateUser_Request()
@@ -3546,28 +2595,28 @@ bool CSiteLicense_LCSAssociateUser_Request::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 sessionid = 2;
+      // optional fixed32 local_ip = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
-          set_has_sessionid();
+            static_cast< ::google::protobuf::uint8>(21u)) {
+          set_has_local_ip();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &sessionid_)));
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
+                 input, &local_ip_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // optional fixed32 local_ip = 3;
+      // optional fixed64 instanceid = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(29u)) {
-          set_has_local_ip();
+            static_cast< ::google::protobuf::uint8>(25u)) {
+          set_has_instanceid();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, &local_ip_)));
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
+                 input, &instanceid_)));
         } else {
           goto handle_unusual;
         }
@@ -3608,14 +2657,14 @@ void CSiteLicense_LCSAssociateUser_Request::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFixed64(1, this->steamid(), output);
   }
 
-  // optional uint32 sessionid = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->sessionid(), output);
+  // optional fixed32 local_ip = 2;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFixed32(2, this->local_ip(), output);
   }
 
-  // optional fixed32 local_ip = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(3, this->local_ip(), output);
+  // optional fixed64 instanceid = 3;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFixed64(3, this->instanceid(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -3637,14 +2686,14 @@ void CSiteLicense_LCSAssociateUser_Request::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(1, this->steamid(), target);
   }
 
-  // optional uint32 sessionid = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->sessionid(), target);
+  // optional fixed32 local_ip = 2;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(2, this->local_ip(), target);
   }
 
-  // optional fixed32 local_ip = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(3, this->local_ip(), target);
+  // optional fixed64 instanceid = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(3, this->instanceid(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -3670,14 +2719,12 @@ size_t CSiteLicense_LCSAssociateUser_Request::ByteSizeLong() const {
       total_size += 1 + 8;
     }
 
-    // optional uint32 sessionid = 2;
-    if (has_sessionid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->sessionid());
+    // optional fixed64 instanceid = 3;
+    if (has_instanceid()) {
+      total_size += 1 + 8;
     }
 
-    // optional fixed32 local_ip = 3;
+    // optional fixed32 local_ip = 2;
     if (has_local_ip()) {
       total_size += 1 + 4;
     }
@@ -3718,7 +2765,7 @@ void CSiteLicense_LCSAssociateUser_Request::MergeFrom(const CSiteLicense_LCSAsso
       steamid_ = from.steamid_;
     }
     if (cached_has_bits & 0x00000002u) {
-      sessionid_ = from.sessionid_;
+      instanceid_ = from.instanceid_;
     }
     if (cached_has_bits & 0x00000004u) {
       local_ip_ = from.local_ip_;
@@ -3751,7 +2798,7 @@ void CSiteLicense_LCSAssociateUser_Request::Swap(CSiteLicense_LCSAssociateUser_R
 }
 void CSiteLicense_LCSAssociateUser_Request::InternalSwap(CSiteLicense_LCSAssociateUser_Request* other) {
   std::swap(steamid_, other->steamid_);
-  std::swap(sessionid_, other->sessionid_);
+  std::swap(instanceid_, other->instanceid_);
   std::swap(local_ip_, other->local_ip_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -3790,31 +2837,7 @@ void CSiteLicense_LCSAssociateUser_Request::set_steamid(::google::protobuf::uint
   // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAssociateUser_Request.steamid)
 }
 
-// optional uint32 sessionid = 2;
-bool CSiteLicense_LCSAssociateUser_Request::has_sessionid() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-void CSiteLicense_LCSAssociateUser_Request::set_has_sessionid() {
-  _has_bits_[0] |= 0x00000002u;
-}
-void CSiteLicense_LCSAssociateUser_Request::clear_has_sessionid() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-void CSiteLicense_LCSAssociateUser_Request::clear_sessionid() {
-  sessionid_ = 0u;
-  clear_has_sessionid();
-}
-::google::protobuf::uint32 CSiteLicense_LCSAssociateUser_Request::sessionid() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_LCSAssociateUser_Request.sessionid)
-  return sessionid_;
-}
-void CSiteLicense_LCSAssociateUser_Request::set_sessionid(::google::protobuf::uint32 value) {
-  set_has_sessionid();
-  sessionid_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAssociateUser_Request.sessionid)
-}
-
-// optional fixed32 local_ip = 3;
+// optional fixed32 local_ip = 2;
 bool CSiteLicense_LCSAssociateUser_Request::has_local_ip() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -3836,6 +2859,30 @@ void CSiteLicense_LCSAssociateUser_Request::set_local_ip(::google::protobuf::uin
   set_has_local_ip();
   local_ip_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAssociateUser_Request.local_ip)
+}
+
+// optional fixed64 instanceid = 3;
+bool CSiteLicense_LCSAssociateUser_Request::has_instanceid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CSiteLicense_LCSAssociateUser_Request::set_has_instanceid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CSiteLicense_LCSAssociateUser_Request::clear_has_instanceid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CSiteLicense_LCSAssociateUser_Request::clear_instanceid() {
+  instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_instanceid();
+}
+::google::protobuf::uint64 CSiteLicense_LCSAssociateUser_Request::instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_LCSAssociateUser_Request.instanceid)
+  return instanceid_;
+}
+void CSiteLicense_LCSAssociateUser_Request::set_instanceid(::google::protobuf::uint64 value) {
+  set_has_instanceid();
+  instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_LCSAssociateUser_Request.instanceid)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4039,8 +3086,7 @@ void CSiteLicense_LCSAssociateUser_Response::InternalSwap(CSiteLicense_LCSAssoci
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CSiteLicense_ClientSeatCheckout_Request::kSteamidFieldNumber;
-const int CSiteLicense_ClientSeatCheckout_Request::kSessionidFieldNumber;
-const int CSiteLicense_ClientSeatCheckout_Request::kPackageidFieldNumber;
+const int CSiteLicense_ClientSeatCheckout_Request::kInstanceidFieldNumber;
 const int CSiteLicense_ClientSeatCheckout_Request::kAppidFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -4103,7 +3149,7 @@ CSiteLicense_ClientSeatCheckout_Request* CSiteLicense_ClientSeatCheckout_Request
 
 void CSiteLicense_ClientSeatCheckout_Request::Clear() {
 // @@protoc_insertion_point(message_clear_start:proto.steam.CSiteLicense_ClientSeatCheckout_Request)
-  if (_has_bits_[0 / 32] & 15u) {
+  if (_has_bits_[0 / 32] & 7u) {
     ::memset(&steamid_, 0, reinterpret_cast<char*>(&appid_) -
       reinterpret_cast<char*>(&steamid_) + sizeof(appid_));
   }
@@ -4135,38 +3181,24 @@ bool CSiteLicense_ClientSeatCheckout_Request::MergePartialFromCodedStream(
         break;
       }
 
-      // optional int32 sessionid = 2;
+      // optional fixed64 instanceid = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
-          set_has_sessionid();
+            static_cast< ::google::protobuf::uint8>(17u)) {
+          set_has_instanceid();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &sessionid_)));
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
+                 input, &instanceid_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // optional uint32 packageid = 3;
+      // optional uint32 appid = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u)) {
-          set_has_packageid();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &packageid_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional uint32 appid = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u)) {
           set_has_appid();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -4211,19 +3243,14 @@ void CSiteLicense_ClientSeatCheckout_Request::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFixed64(1, this->steamid(), output);
   }
 
-  // optional int32 sessionid = 2;
+  // optional fixed64 instanceid = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->sessionid(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFixed64(2, this->instanceid(), output);
   }
 
-  // optional uint32 packageid = 3;
+  // optional uint32 appid = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->packageid(), output);
-  }
-
-  // optional uint32 appid = 4;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->appid(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->appid(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -4245,19 +3272,14 @@ void CSiteLicense_ClientSeatCheckout_Request::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(1, this->steamid(), target);
   }
 
-  // optional int32 sessionid = 2;
+  // optional fixed64 instanceid = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->sessionid(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(2, this->instanceid(), target);
   }
 
-  // optional uint32 packageid = 3;
+  // optional uint32 appid = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->packageid(), target);
-  }
-
-  // optional uint32 appid = 4;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->appid(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->appid(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -4277,27 +3299,18 @@ size_t CSiteLicense_ClientSeatCheckout_Request::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         unknown_fields());
   }
-  if (_has_bits_[0 / 32] & 15u) {
+  if (_has_bits_[0 / 32] & 7u) {
     // optional fixed64 steamid = 1;
     if (has_steamid()) {
       total_size += 1 + 8;
     }
 
-    // optional int32 sessionid = 2;
-    if (has_sessionid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->sessionid());
+    // optional fixed64 instanceid = 2;
+    if (has_instanceid()) {
+      total_size += 1 + 8;
     }
 
-    // optional uint32 packageid = 3;
-    if (has_packageid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->packageid());
-    }
-
-    // optional uint32 appid = 4;
+    // optional uint32 appid = 3;
     if (has_appid()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
@@ -4335,17 +3348,14 @@ void CSiteLicense_ClientSeatCheckout_Request::MergeFrom(const CSiteLicense_Clien
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 15u) {
+  if (cached_has_bits & 7u) {
     if (cached_has_bits & 0x00000001u) {
       steamid_ = from.steamid_;
     }
     if (cached_has_bits & 0x00000002u) {
-      sessionid_ = from.sessionid_;
+      instanceid_ = from.instanceid_;
     }
     if (cached_has_bits & 0x00000004u) {
-      packageid_ = from.packageid_;
-    }
-    if (cached_has_bits & 0x00000008u) {
       appid_ = from.appid_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -4376,8 +3386,7 @@ void CSiteLicense_ClientSeatCheckout_Request::Swap(CSiteLicense_ClientSeatChecko
 }
 void CSiteLicense_ClientSeatCheckout_Request::InternalSwap(CSiteLicense_ClientSeatCheckout_Request* other) {
   std::swap(steamid_, other->steamid_);
-  std::swap(sessionid_, other->sessionid_);
-  std::swap(packageid_, other->packageid_);
+  std::swap(instanceid_, other->instanceid_);
   std::swap(appid_, other->appid_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -4416,63 +3425,39 @@ void CSiteLicense_ClientSeatCheckout_Request::set_steamid(::google::protobuf::ui
   // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSeatCheckout_Request.steamid)
 }
 
-// optional int32 sessionid = 2;
-bool CSiteLicense_ClientSeatCheckout_Request::has_sessionid() const {
+// optional fixed64 instanceid = 2;
+bool CSiteLicense_ClientSeatCheckout_Request::has_instanceid() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-void CSiteLicense_ClientSeatCheckout_Request::set_has_sessionid() {
+void CSiteLicense_ClientSeatCheckout_Request::set_has_instanceid() {
   _has_bits_[0] |= 0x00000002u;
 }
-void CSiteLicense_ClientSeatCheckout_Request::clear_has_sessionid() {
+void CSiteLicense_ClientSeatCheckout_Request::clear_has_instanceid() {
   _has_bits_[0] &= ~0x00000002u;
 }
-void CSiteLicense_ClientSeatCheckout_Request::clear_sessionid() {
-  sessionid_ = 0;
-  clear_has_sessionid();
+void CSiteLicense_ClientSeatCheckout_Request::clear_instanceid() {
+  instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_instanceid();
 }
-::google::protobuf::int32 CSiteLicense_ClientSeatCheckout_Request::sessionid() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSeatCheckout_Request.sessionid)
-  return sessionid_;
+::google::protobuf::uint64 CSiteLicense_ClientSeatCheckout_Request::instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSeatCheckout_Request.instanceid)
+  return instanceid_;
 }
-void CSiteLicense_ClientSeatCheckout_Request::set_sessionid(::google::protobuf::int32 value) {
-  set_has_sessionid();
-  sessionid_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSeatCheckout_Request.sessionid)
+void CSiteLicense_ClientSeatCheckout_Request::set_instanceid(::google::protobuf::uint64 value) {
+  set_has_instanceid();
+  instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSeatCheckout_Request.instanceid)
 }
 
-// optional uint32 packageid = 3;
-bool CSiteLicense_ClientSeatCheckout_Request::has_packageid() const {
+// optional uint32 appid = 3;
+bool CSiteLicense_ClientSeatCheckout_Request::has_appid() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
-void CSiteLicense_ClientSeatCheckout_Request::set_has_packageid() {
+void CSiteLicense_ClientSeatCheckout_Request::set_has_appid() {
   _has_bits_[0] |= 0x00000004u;
 }
-void CSiteLicense_ClientSeatCheckout_Request::clear_has_packageid() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-void CSiteLicense_ClientSeatCheckout_Request::clear_packageid() {
-  packageid_ = 0u;
-  clear_has_packageid();
-}
-::google::protobuf::uint32 CSiteLicense_ClientSeatCheckout_Request::packageid() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientSeatCheckout_Request.packageid)
-  return packageid_;
-}
-void CSiteLicense_ClientSeatCheckout_Request::set_packageid(::google::protobuf::uint32 value) {
-  set_has_packageid();
-  packageid_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientSeatCheckout_Request.packageid)
-}
-
-// optional uint32 appid = 4;
-bool CSiteLicense_ClientSeatCheckout_Request::has_appid() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-void CSiteLicense_ClientSeatCheckout_Request::set_has_appid() {
-  _has_bits_[0] |= 0x00000008u;
-}
 void CSiteLicense_ClientSeatCheckout_Request::clear_has_appid() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 void CSiteLicense_ClientSeatCheckout_Request::clear_appid() {
   appid_ = 0u;
@@ -4687,6 +3672,664 @@ void CSiteLicense_ClientSeatCheckout_Response::InternalSwap(CSiteLicense_ClientS
 
 // ===================================================================
 
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CSiteLicense_ClientGetAvailableSeats_Request::kSteamidFieldNumber;
+const int CSiteLicense_ClientGetAvailableSeats_Request::kInstanceidFieldNumber;
+const int CSiteLicense_ClientGetAvailableSeats_Request::kAppidFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CSiteLicense_ClientGetAvailableSeats_Request::CSiteLicense_ClientGetAvailableSeats_Request()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+}
+CSiteLicense_ClientGetAvailableSeats_Request::CSiteLicense_ClientGetAvailableSeats_Request(const CSiteLicense_ClientGetAvailableSeats_Request& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&steamid_, &from.steamid_,
+    reinterpret_cast<char*>(&appid_) -
+    reinterpret_cast<char*>(&steamid_) + sizeof(appid_));
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Request::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&steamid_, 0, reinterpret_cast<char*>(&appid_) -
+    reinterpret_cast<char*>(&steamid_) + sizeof(appid_));
+}
+
+CSiteLicense_ClientGetAvailableSeats_Request::~CSiteLicense_ClientGetAvailableSeats_Request() {
+  // @@protoc_insertion_point(destructor:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  SharedDtor();
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Request::SharedDtor() {
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Request::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CSiteLicense_ClientGetAvailableSeats_Request::descriptor() {
+  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CSiteLicense_ClientGetAvailableSeats_Request& CSiteLicense_ClientGetAvailableSeats_Request::default_instance() {
+  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CSiteLicense_ClientGetAvailableSeats_Request* CSiteLicense_ClientGetAvailableSeats_Request::New(::google::protobuf::Arena* arena) const {
+  CSiteLicense_ClientGetAvailableSeats_Request* n = new CSiteLicense_ClientGetAvailableSeats_Request;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Request::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  if (_has_bits_[0 / 32] & 7u) {
+    ::memset(&steamid_, 0, reinterpret_cast<char*>(&appid_) -
+      reinterpret_cast<char*>(&steamid_) + sizeof(appid_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CSiteLicense_ClientGetAvailableSeats_Request::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional fixed64 steamid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(9u)) {
+          set_has_steamid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
+                 input, &steamid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional fixed64 instanceid = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(17u)) {
+          set_has_instanceid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED64>(
+                 input, &instanceid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 appid = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
+          set_has_appid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &appid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  return false;
+#undef DO_
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Request::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional fixed64 steamid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFixed64(1, this->steamid(), output);
+  }
+
+  // optional fixed64 instanceid = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFixed64(2, this->instanceid(), output);
+  }
+
+  // optional uint32 appid = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->appid(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+}
+
+::google::protobuf::uint8* CSiteLicense_ClientGetAvailableSeats_Request::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional fixed64 steamid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(1, this->steamid(), target);
+  }
+
+  // optional fixed64 instanceid = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed64ToArray(2, this->instanceid(), target);
+  }
+
+  // optional uint32 appid = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->appid(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  return target;
+}
+
+size_t CSiteLicense_ClientGetAvailableSeats_Request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 7u) {
+    // optional fixed64 steamid = 1;
+    if (has_steamid()) {
+      total_size += 1 + 8;
+    }
+
+    // optional fixed64 instanceid = 2;
+    if (has_instanceid()) {
+      total_size += 1 + 8;
+    }
+
+    // optional uint32 appid = 3;
+    if (has_appid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->appid());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Request::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CSiteLicense_ClientGetAvailableSeats_Request* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CSiteLicense_ClientGetAvailableSeats_Request>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+    MergeFrom(*source);
+  }
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Request::MergeFrom(const CSiteLicense_ClientGetAvailableSeats_Request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 7u) {
+    if (cached_has_bits & 0x00000001u) {
+      steamid_ = from.steamid_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      instanceid_ = from.instanceid_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      appid_ = from.appid_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Request::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Request::CopyFrom(const CSiteLicense_ClientGetAvailableSeats_Request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CSiteLicense_ClientGetAvailableSeats_Request::IsInitialized() const {
+  return true;
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Request::Swap(CSiteLicense_ClientGetAvailableSeats_Request* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::InternalSwap(CSiteLicense_ClientGetAvailableSeats_Request* other) {
+  std::swap(steamid_, other->steamid_);
+  std::swap(instanceid_, other->instanceid_);
+  std::swap(appid_, other->appid_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CSiteLicense_ClientGetAvailableSeats_Request::GetMetadata() const {
+  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CSiteLicense_ClientGetAvailableSeats_Request
+
+// optional fixed64 steamid = 1;
+bool CSiteLicense_ClientGetAvailableSeats_Request::has_steamid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::set_has_steamid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::clear_has_steamid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::clear_steamid() {
+  steamid_ = GOOGLE_ULONGLONG(0);
+  clear_has_steamid();
+}
+::google::protobuf::uint64 CSiteLicense_ClientGetAvailableSeats_Request::steamid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.steamid)
+  return steamid_;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::set_steamid(::google::protobuf::uint64 value) {
+  set_has_steamid();
+  steamid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.steamid)
+}
+
+// optional fixed64 instanceid = 2;
+bool CSiteLicense_ClientGetAvailableSeats_Request::has_instanceid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::set_has_instanceid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::clear_has_instanceid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::clear_instanceid() {
+  instanceid_ = GOOGLE_ULONGLONG(0);
+  clear_has_instanceid();
+}
+::google::protobuf::uint64 CSiteLicense_ClientGetAvailableSeats_Request::instanceid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.instanceid)
+  return instanceid_;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::set_instanceid(::google::protobuf::uint64 value) {
+  set_has_instanceid();
+  instanceid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.instanceid)
+}
+
+// optional uint32 appid = 3;
+bool CSiteLicense_ClientGetAvailableSeats_Request::has_appid() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::set_has_appid() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+::google::protobuf::uint32 CSiteLicense_ClientGetAvailableSeats_Request::appid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.appid)
+  return appid_;
+}
+void CSiteLicense_ClientGetAvailableSeats_Request::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientGetAvailableSeats_Request.appid)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CSiteLicense_ClientGetAvailableSeats_Response::kAvailableSeatsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CSiteLicense_ClientGetAvailableSeats_Response::CSiteLicense_ClientGetAvailableSeats_Response()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+}
+CSiteLicense_ClientGetAvailableSeats_Response::CSiteLicense_ClientGetAvailableSeats_Response(const CSiteLicense_ClientGetAvailableSeats_Response& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  available_seats_ = from.available_seats_;
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Response::SharedCtor() {
+  _cached_size_ = 0;
+  available_seats_ = 0u;
+}
+
+CSiteLicense_ClientGetAvailableSeats_Response::~CSiteLicense_ClientGetAvailableSeats_Response() {
+  // @@protoc_insertion_point(destructor:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  SharedDtor();
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Response::SharedDtor() {
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Response::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CSiteLicense_ClientGetAvailableSeats_Response::descriptor() {
+  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CSiteLicense_ClientGetAvailableSeats_Response& CSiteLicense_ClientGetAvailableSeats_Response::default_instance() {
+  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CSiteLicense_ClientGetAvailableSeats_Response* CSiteLicense_ClientGetAvailableSeats_Response::New(::google::protobuf::Arena* arena) const {
+  CSiteLicense_ClientGetAvailableSeats_Response* n = new CSiteLicense_ClientGetAvailableSeats_Response;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Response::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  available_seats_ = 0u;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CSiteLicense_ClientGetAvailableSeats_Response::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 available_seats = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_available_seats();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &available_seats_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  return false;
+#undef DO_
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Response::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 available_seats = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->available_seats(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+}
+
+::google::protobuf::uint8* CSiteLicense_ClientGetAvailableSeats_Response::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 available_seats = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->available_seats(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  return target;
+}
+
+size_t CSiteLicense_ClientGetAvailableSeats_Response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  // optional uint32 available_seats = 1;
+  if (has_available_seats()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->available_seats());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Response::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CSiteLicense_ClientGetAvailableSeats_Response* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CSiteLicense_ClientGetAvailableSeats_Response>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+    MergeFrom(*source);
+  }
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Response::MergeFrom(const CSiteLicense_ClientGetAvailableSeats_Response& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_available_seats()) {
+    set_available_seats(from.available_seats());
+  }
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Response::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Response::CopyFrom(const CSiteLicense_ClientGetAvailableSeats_Response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CSiteLicense_ClientGetAvailableSeats_Response::IsInitialized() const {
+  return true;
+}
+
+void CSiteLicense_ClientGetAvailableSeats_Response::Swap(CSiteLicense_ClientGetAvailableSeats_Response* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CSiteLicense_ClientGetAvailableSeats_Response::InternalSwap(CSiteLicense_ClientGetAvailableSeats_Response* other) {
+  std::swap(available_seats_, other->available_seats_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CSiteLicense_ClientGetAvailableSeats_Response::GetMetadata() const {
+  protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CSiteLicense_ClientGetAvailableSeats_Response
+
+// optional uint32 available_seats = 1;
+bool CSiteLicense_ClientGetAvailableSeats_Response::has_available_seats() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CSiteLicense_ClientGetAvailableSeats_Response::set_has_available_seats() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CSiteLicense_ClientGetAvailableSeats_Response::clear_has_available_seats() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CSiteLicense_ClientGetAvailableSeats_Response::clear_available_seats() {
+  available_seats_ = 0u;
+  clear_has_available_seats();
+}
+::google::protobuf::uint32 CSiteLicense_ClientGetAvailableSeats_Response::available_seats() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response.available_seats)
+  return available_seats_;
+}
+void CSiteLicense_ClientGetAvailableSeats_Response::set_available_seats(::google::protobuf::uint32 value) {
+  set_has_available_seats();
+  available_seats_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CSiteLicense_ClientGetAvailableSeats_Response.available_seats)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
 SiteManagerClient::~SiteManagerClient() {}
 
 const ::google::protobuf::ServiceDescriptor* SiteManagerClient::descriptor() {
@@ -4698,11 +4341,11 @@ const ::google::protobuf::ServiceDescriptor* SiteManagerClient::GetDescriptor() 
   return descriptor();
 }
 
-void SiteManagerClient::ExpectIncomingClient(::google::protobuf::RpcController* controller,
+void SiteManagerClient::IncomingClient(::google::protobuf::RpcController* controller,
                          const ::proto::steam::CSiteManagerClient_IncomingClient_Request*,
                          ::proto::steam::CSiteManagerClient_IncomingClient_Response*,
                          ::google::protobuf::Closure* done) {
-  controller->SetFailed("Method ExpectIncomingClient() not implemented.");
+  controller->SetFailed("Method IncomingClient() not implemented.");
   done->Run();
 }
 
@@ -4714,7 +4357,7 @@ void SiteManagerClient::CallMethod(const ::google::protobuf::MethodDescriptor* m
   GOOGLE_DCHECK_EQ(method->service(), protobuf_steammessages_5fsite_5flicense_2esteamclient_2eproto::file_level_service_descriptors[0]);
   switch(method->index()) {
     case 0:
-      ExpectIncomingClient(controller,
+      IncomingClient(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CSiteManagerClient_IncomingClient_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CSiteManagerClient_IncomingClient_Response*>(response),
              done);
@@ -4762,7 +4405,7 @@ SiteManagerClient_Stub::~SiteManagerClient_Stub() {
   if (owns_channel_) delete channel_;
 }
 
-void SiteManagerClient_Stub::ExpectIncomingClient(::google::protobuf::RpcController* controller,
+void SiteManagerClient_Stub::IncomingClient(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CSiteManagerClient_IncomingClient_Request* request,
                               ::proto::steam::CSiteManagerClient_IncomingClient_Response* response,
                               ::google::protobuf::Closure* done) {
@@ -4790,22 +4433,6 @@ void SiteLicense::InitiateAssociation(::google::protobuf::RpcController* control
   done->Run();
 }
 
-void SiteLicense::ClientSiteAssociation(::google::protobuf::RpcController* controller,
-                         const ::proto::steam::CSiteLicense_ClientSiteAssociation_Request*,
-                         ::proto::steam::CSiteLicense_ClientSiteAssociation_Response*,
-                         ::google::protobuf::Closure* done) {
-  controller->SetFailed("Method ClientSiteAssociation() not implemented.");
-  done->Run();
-}
-
-void SiteLicense::ClientSiteLicenseSeatCheckout(::google::protobuf::RpcController* controller,
-                         const ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Request*,
-                         ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Response*,
-                         ::google::protobuf::Closure* done) {
-  controller->SetFailed("Method ClientSiteLicenseSeatCheckout() not implemented.");
-  done->Run();
-}
-
 void SiteLicense::LCSAuthenticate(::google::protobuf::RpcController* controller,
                          const ::proto::steam::CSiteLicense_LCSAuthenticate_Request*,
                          ::proto::steam::CSiteLicense_LCSAuthenticate_Response*,
@@ -4830,6 +4457,14 @@ void SiteLicense::ClientSeatCheckout(::google::protobuf::RpcController* controll
   done->Run();
 }
 
+void SiteLicense::ClientGetAvailableSeats(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Request*,
+                         ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Response*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method ClientGetAvailableSeats() not implemented.");
+  done->Run();
+}
+
 void SiteLicense::CallMethod(const ::google::protobuf::MethodDescriptor* method,
                              ::google::protobuf::RpcController* controller,
                              const ::google::protobuf::Message* request,
@@ -4844,33 +4479,27 @@ void SiteLicense::CallMethod(const ::google::protobuf::MethodDescriptor* method,
              done);
       break;
     case 1:
-      ClientSiteAssociation(controller,
-             ::google::protobuf::down_cast<const ::proto::steam::CSiteLicense_ClientSiteAssociation_Request*>(request),
-             ::google::protobuf::down_cast< ::proto::steam::CSiteLicense_ClientSiteAssociation_Response*>(response),
-             done);
-      break;
-    case 2:
-      ClientSiteLicenseSeatCheckout(controller,
-             ::google::protobuf::down_cast<const ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Request*>(request),
-             ::google::protobuf::down_cast< ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Response*>(response),
-             done);
-      break;
-    case 3:
       LCSAuthenticate(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CSiteLicense_LCSAuthenticate_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CSiteLicense_LCSAuthenticate_Response*>(response),
              done);
       break;
-    case 4:
+    case 2:
       LCSAssociateUser(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CSiteLicense_LCSAssociateUser_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CSiteLicense_LCSAssociateUser_Response*>(response),
              done);
       break;
-    case 5:
+    case 3:
       ClientSeatCheckout(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CSiteLicense_ClientSeatCheckout_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CSiteLicense_ClientSeatCheckout_Response*>(response),
+             done);
+      break;
+    case 4:
+      ClientGetAvailableSeats(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Request*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Response*>(response),
              done);
       break;
     default:
@@ -4886,15 +4515,13 @@ const ::google::protobuf::Message& SiteLicense::GetRequestPrototype(
     case 0:
       return ::proto::steam::CSiteLicense_InitiateAssociation_Request::default_instance();
     case 1:
-      return ::proto::steam::CSiteLicense_ClientSiteAssociation_Request::default_instance();
-    case 2:
-      return ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Request::default_instance();
-    case 3:
       return ::proto::steam::CSiteLicense_LCSAuthenticate_Request::default_instance();
-    case 4:
+    case 2:
       return ::proto::steam::CSiteLicense_LCSAssociateUser_Request::default_instance();
-    case 5:
+    case 3:
       return ::proto::steam::CSiteLicense_ClientSeatCheckout_Request::default_instance();
+    case 4:
+      return ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Request::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::google::protobuf::MessageFactory::generated_factory()
@@ -4909,15 +4536,13 @@ const ::google::protobuf::Message& SiteLicense::GetResponsePrototype(
     case 0:
       return ::proto::steam::CSiteLicense_InitiateAssociation_Response::default_instance();
     case 1:
-      return ::proto::steam::CSiteLicense_ClientSiteAssociation_Response::default_instance();
-    case 2:
-      return ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Response::default_instance();
-    case 3:
       return ::proto::steam::CSiteLicense_LCSAuthenticate_Response::default_instance();
-    case 4:
+    case 2:
       return ::proto::steam::CSiteLicense_LCSAssociateUser_Response::default_instance();
-    case 5:
+    case 3:
       return ::proto::steam::CSiteLicense_ClientSeatCheckout_Response::default_instance();
+    case 4:
+      return ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Response::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::google::protobuf::MessageFactory::generated_factory()
@@ -4943,39 +4568,32 @@ void SiteLicense_Stub::InitiateAssociation(::google::protobuf::RpcController* co
   channel_->CallMethod(descriptor()->method(0),
                        controller, request, response, done);
 }
-void SiteLicense_Stub::ClientSiteAssociation(::google::protobuf::RpcController* controller,
-                              const ::proto::steam::CSiteLicense_ClientSiteAssociation_Request* request,
-                              ::proto::steam::CSiteLicense_ClientSiteAssociation_Response* response,
-                              ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(1),
-                       controller, request, response, done);
-}
-void SiteLicense_Stub::ClientSiteLicenseSeatCheckout(::google::protobuf::RpcController* controller,
-                              const ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Request* request,
-                              ::proto::steam::CSiteLicense_ClientSiteLicenseSeatCheckout_Response* response,
-                              ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(2),
-                       controller, request, response, done);
-}
 void SiteLicense_Stub::LCSAuthenticate(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CSiteLicense_LCSAuthenticate_Request* request,
                               ::proto::steam::CSiteLicense_LCSAuthenticate_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(3),
+  channel_->CallMethod(descriptor()->method(1),
                        controller, request, response, done);
 }
 void SiteLicense_Stub::LCSAssociateUser(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CSiteLicense_LCSAssociateUser_Request* request,
                               ::proto::steam::CSiteLicense_LCSAssociateUser_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(4),
+  channel_->CallMethod(descriptor()->method(2),
                        controller, request, response, done);
 }
 void SiteLicense_Stub::ClientSeatCheckout(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CSiteLicense_ClientSeatCheckout_Request* request,
                               ::proto::steam::CSiteLicense_ClientSeatCheckout_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(5),
+  channel_->CallMethod(descriptor()->method(3),
+                       controller, request, response, done);
+}
+void SiteLicense_Stub::ClientGetAvailableSeats(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Request* request,
+                              ::proto::steam::CSiteLicense_ClientGetAvailableSeats_Response* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(4),
                        controller, request, response, done);
 }
 

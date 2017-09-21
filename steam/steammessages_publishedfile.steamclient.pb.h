@@ -35,6 +35,12 @@
 // @@protoc_insertion_point(includes)
 namespace proto {
 namespace steam {
+class CPublishedFile_AddAppRelationship_Request;
+class CPublishedFile_AddAppRelationship_RequestDefaultTypeInternal;
+extern CPublishedFile_AddAppRelationship_RequestDefaultTypeInternal _CPublishedFile_AddAppRelationship_Request_default_instance_;
+class CPublishedFile_AddAppRelationship_Response;
+class CPublishedFile_AddAppRelationship_ResponseDefaultTypeInternal;
+extern CPublishedFile_AddAppRelationship_ResponseDefaultTypeInternal _CPublishedFile_AddAppRelationship_Response_default_instance_;
 class CPublishedFile_AddChild_Request;
 class CPublishedFile_AddChild_RequestDefaultTypeInternal;
 extern CPublishedFile_AddChild_RequestDefaultTypeInternal _CPublishedFile_AddChild_Request_default_instance_;
@@ -47,6 +53,15 @@ extern CPublishedFile_CanSubscribe_RequestDefaultTypeInternal _CPublishedFile_Ca
 class CPublishedFile_CanSubscribe_Response;
 class CPublishedFile_CanSubscribe_ResponseDefaultTypeInternal;
 extern CPublishedFile_CanSubscribe_ResponseDefaultTypeInternal _CPublishedFile_CanSubscribe_Response_default_instance_;
+class CPublishedFile_GetAppRelationships_Request;
+class CPublishedFile_GetAppRelationships_RequestDefaultTypeInternal;
+extern CPublishedFile_GetAppRelationships_RequestDefaultTypeInternal _CPublishedFile_GetAppRelationships_Request_default_instance_;
+class CPublishedFile_GetAppRelationships_Response;
+class CPublishedFile_GetAppRelationships_ResponseDefaultTypeInternal;
+extern CPublishedFile_GetAppRelationships_ResponseDefaultTypeInternal _CPublishedFile_GetAppRelationships_Response_default_instance_;
+class CPublishedFile_GetAppRelationships_Response_AppRelationship;
+class CPublishedFile_GetAppRelationships_Response_AppRelationshipDefaultTypeInternal;
+extern CPublishedFile_GetAppRelationships_Response_AppRelationshipDefaultTypeInternal _CPublishedFile_GetAppRelationships_Response_AppRelationship_default_instance_;
 class CPublishedFile_GetChangeHistoryEntry_Request;
 class CPublishedFile_GetChangeHistoryEntry_RequestDefaultTypeInternal;
 extern CPublishedFile_GetChangeHistoryEntry_RequestDefaultTypeInternal _CPublishedFile_GetChangeHistoryEntry_Request_default_instance_;
@@ -113,6 +128,12 @@ extern CPublishedFile_RefreshVotingQueue_RequestDefaultTypeInternal _CPublishedF
 class CPublishedFile_RefreshVotingQueue_Response;
 class CPublishedFile_RefreshVotingQueue_ResponseDefaultTypeInternal;
 extern CPublishedFile_RefreshVotingQueue_ResponseDefaultTypeInternal _CPublishedFile_RefreshVotingQueue_Response_default_instance_;
+class CPublishedFile_RemoveAppRelationship_Request;
+class CPublishedFile_RemoveAppRelationship_RequestDefaultTypeInternal;
+extern CPublishedFile_RemoveAppRelationship_RequestDefaultTypeInternal _CPublishedFile_RemoveAppRelationship_Request_default_instance_;
+class CPublishedFile_RemoveAppRelationship_Response;
+class CPublishedFile_RemoveAppRelationship_ResponseDefaultTypeInternal;
+extern CPublishedFile_RemoveAppRelationship_ResponseDefaultTypeInternal _CPublishedFile_RemoveAppRelationship_Response_default_instance_;
 class CPublishedFile_RemoveChild_Request;
 class CPublishedFile_RemoveChild_RequestDefaultTypeInternal;
 extern CPublishedFile_RemoveChild_RequestDefaultTypeInternal _CPublishedFile_RemoveChild_Request_default_instance_;
@@ -6372,6 +6393,685 @@ class CPublishedFile_QueryFiles_Response : public ::google::protobuf::Message /*
 };
 // -------------------------------------------------------------------
 
+class CPublishedFile_AddAppRelationship_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPublishedFile_AddAppRelationship_Request) */ {
+ public:
+  CPublishedFile_AddAppRelationship_Request();
+  virtual ~CPublishedFile_AddAppRelationship_Request();
+
+  CPublishedFile_AddAppRelationship_Request(const CPublishedFile_AddAppRelationship_Request& from);
+
+  inline CPublishedFile_AddAppRelationship_Request& operator=(const CPublishedFile_AddAppRelationship_Request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPublishedFile_AddAppRelationship_Request& default_instance();
+
+  static inline const CPublishedFile_AddAppRelationship_Request* internal_default_instance() {
+    return reinterpret_cast<const CPublishedFile_AddAppRelationship_Request*>(
+               &_CPublishedFile_AddAppRelationship_Request_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    38;
+
+  void Swap(CPublishedFile_AddAppRelationship_Request* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPublishedFile_AddAppRelationship_Request* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPublishedFile_AddAppRelationship_Request* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPublishedFile_AddAppRelationship_Request& from);
+  void MergeFrom(const CPublishedFile_AddAppRelationship_Request& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPublishedFile_AddAppRelationship_Request* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 publishedfileid = 1;
+  bool has_publishedfileid() const;
+  void clear_publishedfileid();
+  static const int kPublishedfileidFieldNumber = 1;
+  ::google::protobuf::uint64 publishedfileid() const;
+  void set_publishedfileid(::google::protobuf::uint64 value);
+
+  // optional uint32 appid = 2;
+  bool has_appid() const;
+  void clear_appid();
+  static const int kAppidFieldNumber = 2;
+  ::google::protobuf::uint32 appid() const;
+  void set_appid(::google::protobuf::uint32 value);
+
+  // optional uint32 relationship = 3;
+  bool has_relationship() const;
+  void clear_relationship();
+  static const int kRelationshipFieldNumber = 3;
+  ::google::protobuf::uint32 relationship() const;
+  void set_relationship(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPublishedFile_AddAppRelationship_Request)
+ private:
+  void set_has_publishedfileid();
+  void clear_has_publishedfileid();
+  void set_has_appid();
+  void clear_has_appid();
+  void set_has_relationship();
+  void clear_has_relationship();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint64 publishedfileid_;
+  ::google::protobuf::uint32 appid_;
+  ::google::protobuf::uint32 relationship_;
+  friend struct protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CPublishedFile_AddAppRelationship_Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPublishedFile_AddAppRelationship_Response) */ {
+ public:
+  CPublishedFile_AddAppRelationship_Response();
+  virtual ~CPublishedFile_AddAppRelationship_Response();
+
+  CPublishedFile_AddAppRelationship_Response(const CPublishedFile_AddAppRelationship_Response& from);
+
+  inline CPublishedFile_AddAppRelationship_Response& operator=(const CPublishedFile_AddAppRelationship_Response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPublishedFile_AddAppRelationship_Response& default_instance();
+
+  static inline const CPublishedFile_AddAppRelationship_Response* internal_default_instance() {
+    return reinterpret_cast<const CPublishedFile_AddAppRelationship_Response*>(
+               &_CPublishedFile_AddAppRelationship_Response_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    39;
+
+  void Swap(CPublishedFile_AddAppRelationship_Response* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPublishedFile_AddAppRelationship_Response* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPublishedFile_AddAppRelationship_Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPublishedFile_AddAppRelationship_Response& from);
+  void MergeFrom(const CPublishedFile_AddAppRelationship_Response& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPublishedFile_AddAppRelationship_Response* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPublishedFile_AddAppRelationship_Response)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  friend struct protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CPublishedFile_RemoveAppRelationship_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPublishedFile_RemoveAppRelationship_Request) */ {
+ public:
+  CPublishedFile_RemoveAppRelationship_Request();
+  virtual ~CPublishedFile_RemoveAppRelationship_Request();
+
+  CPublishedFile_RemoveAppRelationship_Request(const CPublishedFile_RemoveAppRelationship_Request& from);
+
+  inline CPublishedFile_RemoveAppRelationship_Request& operator=(const CPublishedFile_RemoveAppRelationship_Request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPublishedFile_RemoveAppRelationship_Request& default_instance();
+
+  static inline const CPublishedFile_RemoveAppRelationship_Request* internal_default_instance() {
+    return reinterpret_cast<const CPublishedFile_RemoveAppRelationship_Request*>(
+               &_CPublishedFile_RemoveAppRelationship_Request_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    40;
+
+  void Swap(CPublishedFile_RemoveAppRelationship_Request* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPublishedFile_RemoveAppRelationship_Request* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPublishedFile_RemoveAppRelationship_Request* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPublishedFile_RemoveAppRelationship_Request& from);
+  void MergeFrom(const CPublishedFile_RemoveAppRelationship_Request& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPublishedFile_RemoveAppRelationship_Request* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 publishedfileid = 1;
+  bool has_publishedfileid() const;
+  void clear_publishedfileid();
+  static const int kPublishedfileidFieldNumber = 1;
+  ::google::protobuf::uint64 publishedfileid() const;
+  void set_publishedfileid(::google::protobuf::uint64 value);
+
+  // optional uint32 appid = 2;
+  bool has_appid() const;
+  void clear_appid();
+  static const int kAppidFieldNumber = 2;
+  ::google::protobuf::uint32 appid() const;
+  void set_appid(::google::protobuf::uint32 value);
+
+  // optional uint32 relationship = 3;
+  bool has_relationship() const;
+  void clear_relationship();
+  static const int kRelationshipFieldNumber = 3;
+  ::google::protobuf::uint32 relationship() const;
+  void set_relationship(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+ private:
+  void set_has_publishedfileid();
+  void clear_has_publishedfileid();
+  void set_has_appid();
+  void clear_has_appid();
+  void set_has_relationship();
+  void clear_has_relationship();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint64 publishedfileid_;
+  ::google::protobuf::uint32 appid_;
+  ::google::protobuf::uint32 relationship_;
+  friend struct protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CPublishedFile_RemoveAppRelationship_Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPublishedFile_RemoveAppRelationship_Response) */ {
+ public:
+  CPublishedFile_RemoveAppRelationship_Response();
+  virtual ~CPublishedFile_RemoveAppRelationship_Response();
+
+  CPublishedFile_RemoveAppRelationship_Response(const CPublishedFile_RemoveAppRelationship_Response& from);
+
+  inline CPublishedFile_RemoveAppRelationship_Response& operator=(const CPublishedFile_RemoveAppRelationship_Response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPublishedFile_RemoveAppRelationship_Response& default_instance();
+
+  static inline const CPublishedFile_RemoveAppRelationship_Response* internal_default_instance() {
+    return reinterpret_cast<const CPublishedFile_RemoveAppRelationship_Response*>(
+               &_CPublishedFile_RemoveAppRelationship_Response_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    41;
+
+  void Swap(CPublishedFile_RemoveAppRelationship_Response* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPublishedFile_RemoveAppRelationship_Response* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPublishedFile_RemoveAppRelationship_Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPublishedFile_RemoveAppRelationship_Response& from);
+  void MergeFrom(const CPublishedFile_RemoveAppRelationship_Response& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPublishedFile_RemoveAppRelationship_Response* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  friend struct protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CPublishedFile_GetAppRelationships_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPublishedFile_GetAppRelationships_Request) */ {
+ public:
+  CPublishedFile_GetAppRelationships_Request();
+  virtual ~CPublishedFile_GetAppRelationships_Request();
+
+  CPublishedFile_GetAppRelationships_Request(const CPublishedFile_GetAppRelationships_Request& from);
+
+  inline CPublishedFile_GetAppRelationships_Request& operator=(const CPublishedFile_GetAppRelationships_Request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPublishedFile_GetAppRelationships_Request& default_instance();
+
+  static inline const CPublishedFile_GetAppRelationships_Request* internal_default_instance() {
+    return reinterpret_cast<const CPublishedFile_GetAppRelationships_Request*>(
+               &_CPublishedFile_GetAppRelationships_Request_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    42;
+
+  void Swap(CPublishedFile_GetAppRelationships_Request* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPublishedFile_GetAppRelationships_Request* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPublishedFile_GetAppRelationships_Request* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPublishedFile_GetAppRelationships_Request& from);
+  void MergeFrom(const CPublishedFile_GetAppRelationships_Request& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPublishedFile_GetAppRelationships_Request* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 publishedfileid = 1;
+  bool has_publishedfileid() const;
+  void clear_publishedfileid();
+  static const int kPublishedfileidFieldNumber = 1;
+  ::google::protobuf::uint64 publishedfileid() const;
+  void set_publishedfileid(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPublishedFile_GetAppRelationships_Request)
+ private:
+  void set_has_publishedfileid();
+  void clear_has_publishedfileid();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint64 publishedfileid_;
+  friend struct protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CPublishedFile_GetAppRelationships_Response_AppRelationship : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship) */ {
+ public:
+  CPublishedFile_GetAppRelationships_Response_AppRelationship();
+  virtual ~CPublishedFile_GetAppRelationships_Response_AppRelationship();
+
+  CPublishedFile_GetAppRelationships_Response_AppRelationship(const CPublishedFile_GetAppRelationships_Response_AppRelationship& from);
+
+  inline CPublishedFile_GetAppRelationships_Response_AppRelationship& operator=(const CPublishedFile_GetAppRelationships_Response_AppRelationship& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPublishedFile_GetAppRelationships_Response_AppRelationship& default_instance();
+
+  static inline const CPublishedFile_GetAppRelationships_Response_AppRelationship* internal_default_instance() {
+    return reinterpret_cast<const CPublishedFile_GetAppRelationships_Response_AppRelationship*>(
+               &_CPublishedFile_GetAppRelationships_Response_AppRelationship_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    43;
+
+  void Swap(CPublishedFile_GetAppRelationships_Response_AppRelationship* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPublishedFile_GetAppRelationships_Response_AppRelationship* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPublishedFile_GetAppRelationships_Response_AppRelationship* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPublishedFile_GetAppRelationships_Response_AppRelationship& from);
+  void MergeFrom(const CPublishedFile_GetAppRelationships_Response_AppRelationship& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPublishedFile_GetAppRelationships_Response_AppRelationship* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 appid = 1;
+  bool has_appid() const;
+  void clear_appid();
+  static const int kAppidFieldNumber = 1;
+  ::google::protobuf::uint32 appid() const;
+  void set_appid(::google::protobuf::uint32 value);
+
+  // optional uint32 relationship = 2;
+  bool has_relationship() const;
+  void clear_relationship();
+  static const int kRelationshipFieldNumber = 2;
+  ::google::protobuf::uint32 relationship() const;
+  void set_relationship(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+ private:
+  void set_has_appid();
+  void clear_has_appid();
+  void set_has_relationship();
+  void clear_has_relationship();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 appid_;
+  ::google::protobuf::uint32 relationship_;
+  friend struct protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CPublishedFile_GetAppRelationships_Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPublishedFile_GetAppRelationships_Response) */ {
+ public:
+  CPublishedFile_GetAppRelationships_Response();
+  virtual ~CPublishedFile_GetAppRelationships_Response();
+
+  CPublishedFile_GetAppRelationships_Response(const CPublishedFile_GetAppRelationships_Response& from);
+
+  inline CPublishedFile_GetAppRelationships_Response& operator=(const CPublishedFile_GetAppRelationships_Response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPublishedFile_GetAppRelationships_Response& default_instance();
+
+  static inline const CPublishedFile_GetAppRelationships_Response* internal_default_instance() {
+    return reinterpret_cast<const CPublishedFile_GetAppRelationships_Response*>(
+               &_CPublishedFile_GetAppRelationships_Response_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    44;
+
+  void Swap(CPublishedFile_GetAppRelationships_Response* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPublishedFile_GetAppRelationships_Response* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPublishedFile_GetAppRelationships_Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPublishedFile_GetAppRelationships_Response& from);
+  void MergeFrom(const CPublishedFile_GetAppRelationships_Response& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPublishedFile_GetAppRelationships_Response* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef CPublishedFile_GetAppRelationships_Response_AppRelationship AppRelationship;
+
+  // accessors -------------------------------------------------------
+
+  // repeated .proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship app_relationships = 3;
+  int app_relationships_size() const;
+  void clear_app_relationships();
+  static const int kAppRelationshipsFieldNumber = 3;
+  const ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship& app_relationships(int index) const;
+  ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship* mutable_app_relationships(int index);
+  ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship* add_app_relationships();
+  ::google::protobuf::RepeatedPtrField< ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship >*
+      mutable_app_relationships();
+  const ::google::protobuf::RepeatedPtrField< ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship >&
+      app_relationships() const;
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPublishedFile_GetAppRelationships_Response)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedPtrField< ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship > app_relationships_;
+  friend struct protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class CPublishedFile_StartPlaytimeTracking_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPublishedFile_StartPlaytimeTracking_Request) */ {
  public:
   CPublishedFile_StartPlaytimeTracking_Request();
@@ -6400,7 +7100,7 @@ class CPublishedFile_StartPlaytimeTracking_Request : public ::google::protobuf::
                &_CPublishedFile_StartPlaytimeTracking_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    38;
+    45;
 
   void Swap(CPublishedFile_StartPlaytimeTracking_Request* other);
 
@@ -6505,7 +7205,7 @@ class CPublishedFile_StartPlaytimeTracking_Response : public ::google::protobuf:
                &_CPublishedFile_StartPlaytimeTracking_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    39;
+    46;
 
   void Swap(CPublishedFile_StartPlaytimeTracking_Response* other);
 
@@ -6587,7 +7287,7 @@ class CPublishedFile_StopPlaytimeTracking_Request : public ::google::protobuf::M
                &_CPublishedFile_StopPlaytimeTracking_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    40;
+    47;
 
   void Swap(CPublishedFile_StopPlaytimeTracking_Request* other);
 
@@ -6692,7 +7392,7 @@ class CPublishedFile_StopPlaytimeTracking_Response : public ::google::protobuf::
                &_CPublishedFile_StopPlaytimeTracking_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    41;
+    48;
 
   void Swap(CPublishedFile_StopPlaytimeTracking_Response* other);
 
@@ -6774,7 +7474,7 @@ class CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request : public ::googl
                &_CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    42;
+    49;
 
   void Swap(CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request* other);
 
@@ -6866,7 +7566,7 @@ class CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response : public ::goog
                &_CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    43;
+    50;
 
   void Swap(CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response* other);
 
@@ -6948,7 +7648,7 @@ class CPublishedFile_SetPlaytimeForControllerConfigs_Request_ControllerConfigUsa
                &_CPublishedFile_SetPlaytimeForControllerConfigs_Request_ControllerConfigUsage_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    44;
+    51;
 
   void Swap(CPublishedFile_SetPlaytimeForControllerConfigs_Request_ControllerConfigUsage* other);
 
@@ -7050,7 +7750,7 @@ class CPublishedFile_SetPlaytimeForControllerConfigs_Request : public ::google::
                &_CPublishedFile_SetPlaytimeForControllerConfigs_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    45;
+    52;
 
   void Swap(CPublishedFile_SetPlaytimeForControllerConfigs_Request* other);
 
@@ -7157,7 +7857,7 @@ class CPublishedFile_SetPlaytimeForControllerConfigs_Response : public ::google:
                &_CPublishedFile_SetPlaytimeForControllerConfigs_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    46;
+    53;
 
   void Swap(CPublishedFile_SetPlaytimeForControllerConfigs_Response* other);
 
@@ -7239,7 +7939,7 @@ class CPublishedFile_AddChild_Request : public ::google::protobuf::Message /* @@
                &_CPublishedFile_AddChild_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    47;
+    54;
 
   void Swap(CPublishedFile_AddChild_Request* other);
 
@@ -7341,7 +8041,7 @@ class CPublishedFile_AddChild_Response : public ::google::protobuf::Message /* @
                &_CPublishedFile_AddChild_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    48;
+    55;
 
   void Swap(CPublishedFile_AddChild_Response* other);
 
@@ -7423,7 +8123,7 @@ class CPublishedFile_RemoveChild_Request : public ::google::protobuf::Message /*
                &_CPublishedFile_RemoveChild_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    49;
+    56;
 
   void Swap(CPublishedFile_RemoveChild_Request* other);
 
@@ -7525,7 +8225,7 @@ class CPublishedFile_RemoveChild_Response : public ::google::protobuf::Message /
                &_CPublishedFile_RemoveChild_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    50;
+    57;
 
   void Swap(CPublishedFile_RemoveChild_Response* other);
 
@@ -7640,6 +8340,18 @@ class PublishedFile : public ::google::protobuf::Service {
                        const ::proto::steam::CPublishedFile_QueryFiles_Request* request,
                        ::proto::steam::CPublishedFile_QueryFiles_Response* response,
                        ::google::protobuf::Closure* done);
+  virtual void AddAppRelationship(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPublishedFile_AddAppRelationship_Request* request,
+                       ::proto::steam::CPublishedFile_AddAppRelationship_Response* response,
+                       ::google::protobuf::Closure* done);
+  virtual void RemoveAppRelationship(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPublishedFile_RemoveAppRelationship_Request* request,
+                       ::proto::steam::CPublishedFile_RemoveAppRelationship_Response* response,
+                       ::google::protobuf::Closure* done);
+  virtual void GetAppRelationships(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPublishedFile_GetAppRelationships_Request* request,
+                       ::proto::steam::CPublishedFile_GetAppRelationships_Response* response,
+                       ::google::protobuf::Closure* done);
   virtual void StartPlaytimeTracking(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CPublishedFile_StartPlaytimeTracking_Request* request,
                        ::proto::steam::CPublishedFile_StartPlaytimeTracking_Response* response,
@@ -7740,6 +8452,18 @@ class PublishedFile_Stub : public PublishedFile {
   void QueryFiles(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CPublishedFile_QueryFiles_Request* request,
                        ::proto::steam::CPublishedFile_QueryFiles_Response* response,
+                       ::google::protobuf::Closure* done);
+  void AddAppRelationship(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPublishedFile_AddAppRelationship_Request* request,
+                       ::proto::steam::CPublishedFile_AddAppRelationship_Response* response,
+                       ::google::protobuf::Closure* done);
+  void RemoveAppRelationship(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPublishedFile_RemoveAppRelationship_Request* request,
+                       ::proto::steam::CPublishedFile_RemoveAppRelationship_Response* response,
+                       ::google::protobuf::Closure* done);
+  void GetAppRelationships(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPublishedFile_GetAppRelationships_Request* request,
+                       ::proto::steam::CPublishedFile_GetAppRelationships_Response* response,
                        ::google::protobuf::Closure* done);
   void StartPlaytimeTracking(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CPublishedFile_StartPlaytimeTracking_Request* request,
@@ -16145,6 +16869,280 @@ CPublishedFile_QueryFiles_Response::publishedfiledetails() const {
 
 // -------------------------------------------------------------------
 
+// CPublishedFile_AddAppRelationship_Request
+
+// optional uint64 publishedfileid = 1;
+inline bool CPublishedFile_AddAppRelationship_Request::has_publishedfileid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CPublishedFile_AddAppRelationship_Request::set_has_publishedfileid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CPublishedFile_AddAppRelationship_Request::clear_has_publishedfileid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CPublishedFile_AddAppRelationship_Request::clear_publishedfileid() {
+  publishedfileid_ = GOOGLE_ULONGLONG(0);
+  clear_has_publishedfileid();
+}
+inline ::google::protobuf::uint64 CPublishedFile_AddAppRelationship_Request::publishedfileid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_AddAppRelationship_Request.publishedfileid)
+  return publishedfileid_;
+}
+inline void CPublishedFile_AddAppRelationship_Request::set_publishedfileid(::google::protobuf::uint64 value) {
+  set_has_publishedfileid();
+  publishedfileid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_AddAppRelationship_Request.publishedfileid)
+}
+
+// optional uint32 appid = 2;
+inline bool CPublishedFile_AddAppRelationship_Request::has_appid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CPublishedFile_AddAppRelationship_Request::set_has_appid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CPublishedFile_AddAppRelationship_Request::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CPublishedFile_AddAppRelationship_Request::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+inline ::google::protobuf::uint32 CPublishedFile_AddAppRelationship_Request::appid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_AddAppRelationship_Request.appid)
+  return appid_;
+}
+inline void CPublishedFile_AddAppRelationship_Request::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_AddAppRelationship_Request.appid)
+}
+
+// optional uint32 relationship = 3;
+inline bool CPublishedFile_AddAppRelationship_Request::has_relationship() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CPublishedFile_AddAppRelationship_Request::set_has_relationship() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CPublishedFile_AddAppRelationship_Request::clear_has_relationship() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CPublishedFile_AddAppRelationship_Request::clear_relationship() {
+  relationship_ = 0u;
+  clear_has_relationship();
+}
+inline ::google::protobuf::uint32 CPublishedFile_AddAppRelationship_Request::relationship() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_AddAppRelationship_Request.relationship)
+  return relationship_;
+}
+inline void CPublishedFile_AddAppRelationship_Request::set_relationship(::google::protobuf::uint32 value) {
+  set_has_relationship();
+  relationship_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_AddAppRelationship_Request.relationship)
+}
+
+// -------------------------------------------------------------------
+
+// CPublishedFile_AddAppRelationship_Response
+
+// -------------------------------------------------------------------
+
+// CPublishedFile_RemoveAppRelationship_Request
+
+// optional uint64 publishedfileid = 1;
+inline bool CPublishedFile_RemoveAppRelationship_Request::has_publishedfileid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::set_has_publishedfileid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::clear_has_publishedfileid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::clear_publishedfileid() {
+  publishedfileid_ = GOOGLE_ULONGLONG(0);
+  clear_has_publishedfileid();
+}
+inline ::google::protobuf::uint64 CPublishedFile_RemoveAppRelationship_Request::publishedfileid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_RemoveAppRelationship_Request.publishedfileid)
+  return publishedfileid_;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::set_publishedfileid(::google::protobuf::uint64 value) {
+  set_has_publishedfileid();
+  publishedfileid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_RemoveAppRelationship_Request.publishedfileid)
+}
+
+// optional uint32 appid = 2;
+inline bool CPublishedFile_RemoveAppRelationship_Request::has_appid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::set_has_appid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+inline ::google::protobuf::uint32 CPublishedFile_RemoveAppRelationship_Request::appid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_RemoveAppRelationship_Request.appid)
+  return appid_;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_RemoveAppRelationship_Request.appid)
+}
+
+// optional uint32 relationship = 3;
+inline bool CPublishedFile_RemoveAppRelationship_Request::has_relationship() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::set_has_relationship() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::clear_has_relationship() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::clear_relationship() {
+  relationship_ = 0u;
+  clear_has_relationship();
+}
+inline ::google::protobuf::uint32 CPublishedFile_RemoveAppRelationship_Request::relationship() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_RemoveAppRelationship_Request.relationship)
+  return relationship_;
+}
+inline void CPublishedFile_RemoveAppRelationship_Request::set_relationship(::google::protobuf::uint32 value) {
+  set_has_relationship();
+  relationship_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_RemoveAppRelationship_Request.relationship)
+}
+
+// -------------------------------------------------------------------
+
+// CPublishedFile_RemoveAppRelationship_Response
+
+// -------------------------------------------------------------------
+
+// CPublishedFile_GetAppRelationships_Request
+
+// optional uint64 publishedfileid = 1;
+inline bool CPublishedFile_GetAppRelationships_Request::has_publishedfileid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CPublishedFile_GetAppRelationships_Request::set_has_publishedfileid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CPublishedFile_GetAppRelationships_Request::clear_has_publishedfileid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CPublishedFile_GetAppRelationships_Request::clear_publishedfileid() {
+  publishedfileid_ = GOOGLE_ULONGLONG(0);
+  clear_has_publishedfileid();
+}
+inline ::google::protobuf::uint64 CPublishedFile_GetAppRelationships_Request::publishedfileid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_GetAppRelationships_Request.publishedfileid)
+  return publishedfileid_;
+}
+inline void CPublishedFile_GetAppRelationships_Request::set_publishedfileid(::google::protobuf::uint64 value) {
+  set_has_publishedfileid();
+  publishedfileid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_GetAppRelationships_Request.publishedfileid)
+}
+
+// -------------------------------------------------------------------
+
+// CPublishedFile_GetAppRelationships_Response_AppRelationship
+
+// optional uint32 appid = 1;
+inline bool CPublishedFile_GetAppRelationships_Response_AppRelationship::has_appid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CPublishedFile_GetAppRelationships_Response_AppRelationship::set_has_appid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CPublishedFile_GetAppRelationships_Response_AppRelationship::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CPublishedFile_GetAppRelationships_Response_AppRelationship::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+inline ::google::protobuf::uint32 CPublishedFile_GetAppRelationships_Response_AppRelationship::appid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship.appid)
+  return appid_;
+}
+inline void CPublishedFile_GetAppRelationships_Response_AppRelationship::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship.appid)
+}
+
+// optional uint32 relationship = 2;
+inline bool CPublishedFile_GetAppRelationships_Response_AppRelationship::has_relationship() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CPublishedFile_GetAppRelationships_Response_AppRelationship::set_has_relationship() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CPublishedFile_GetAppRelationships_Response_AppRelationship::clear_has_relationship() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CPublishedFile_GetAppRelationships_Response_AppRelationship::clear_relationship() {
+  relationship_ = 0u;
+  clear_has_relationship();
+}
+inline ::google::protobuf::uint32 CPublishedFile_GetAppRelationships_Response_AppRelationship::relationship() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship.relationship)
+  return relationship_;
+}
+inline void CPublishedFile_GetAppRelationships_Response_AppRelationship::set_relationship(::google::protobuf::uint32 value) {
+  set_has_relationship();
+  relationship_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship.relationship)
+}
+
+// -------------------------------------------------------------------
+
+// CPublishedFile_GetAppRelationships_Response
+
+// repeated .proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship app_relationships = 3;
+inline int CPublishedFile_GetAppRelationships_Response::app_relationships_size() const {
+  return app_relationships_.size();
+}
+inline void CPublishedFile_GetAppRelationships_Response::clear_app_relationships() {
+  app_relationships_.Clear();
+}
+inline const ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship& CPublishedFile_GetAppRelationships_Response::app_relationships(int index) const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_GetAppRelationships_Response.app_relationships)
+  return app_relationships_.Get(index);
+}
+inline ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship* CPublishedFile_GetAppRelationships_Response::mutable_app_relationships(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.steam.CPublishedFile_GetAppRelationships_Response.app_relationships)
+  return app_relationships_.Mutable(index);
+}
+inline ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship* CPublishedFile_GetAppRelationships_Response::add_app_relationships() {
+  // @@protoc_insertion_point(field_add:proto.steam.CPublishedFile_GetAppRelationships_Response.app_relationships)
+  return app_relationships_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship >*
+CPublishedFile_GetAppRelationships_Response::mutable_app_relationships() {
+  // @@protoc_insertion_point(field_mutable_list:proto.steam.CPublishedFile_GetAppRelationships_Response.app_relationships)
+  return &app_relationships_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship >&
+CPublishedFile_GetAppRelationships_Response::app_relationships() const {
+  // @@protoc_insertion_point(field_list:proto.steam.CPublishedFile_GetAppRelationships_Response.app_relationships)
+  return app_relationships_;
+}
+
+// -------------------------------------------------------------------
+
 // CPublishedFile_StartPlaytimeTracking_Request
 
 // optional uint32 appid = 1;
@@ -16526,6 +17524,20 @@ inline void CPublishedFile_RemoveChild_Request::set_child_publishedfileid(::goog
 // CPublishedFile_RemoveChild_Response
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

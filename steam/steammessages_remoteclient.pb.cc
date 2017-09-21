@@ -147,8 +147,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgRemoteClientAuth, client_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgRemoteClientAuth, status_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgRemoteClientAuth, instance_id_),
   1,
   0,
+  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgRemoteClientAuthResponse, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgRemoteClientAuthResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -252,17 +254,17 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 21, 29, sizeof(CMsgRemoteClientAppStatus_ShortcutInfo)},
   { 32, 41, sizeof(CMsgRemoteClientAppStatus_AppStatus)},
   { 45, 51, sizeof(CMsgRemoteClientAppStatus)},
-  { 52, 59, sizeof(CMsgRemoteClientAuth)},
-  { 61, 67, sizeof(CMsgRemoteClientAuthResponse)},
-  { 68, 75, sizeof(CMsgRemoteClientStartStream_ReservedGamepad)},
-  { 77, 92, sizeof(CMsgRemoteClientStartStream)},
-  { 102, 111, sizeof(CMsgRemoteClientStartStreamResponse)},
-  { 115, 120, sizeof(CMsgRemoteClientPing)},
-  { 120, 125, sizeof(CMsgRemoteClientPingResponse)},
-  { 125, 131, sizeof(CMsgRemoteClientAcceptEULA)},
-  { 132, 139, sizeof(CMsgRemoteClientGetControllerConfig)},
-  { 141, 148, sizeof(CMsgRemoteClientGetControllerConfigResponse)},
-  { 150, 156, sizeof(CMsgRemoteClientStreamingEnabled)},
+  { 52, 60, sizeof(CMsgRemoteClientAuth)},
+  { 63, 69, sizeof(CMsgRemoteClientAuthResponse)},
+  { 70, 77, sizeof(CMsgRemoteClientStartStream_ReservedGamepad)},
+  { 79, 94, sizeof(CMsgRemoteClientStartStream)},
+  { 104, 113, sizeof(CMsgRemoteClientStartStreamResponse)},
+  { 117, 122, sizeof(CMsgRemoteClientPing)},
+  { 122, 127, sizeof(CMsgRemoteClientPingResponse)},
+  { 127, 133, sizeof(CMsgRemoteClientAcceptEULA)},
+  { 134, 141, sizeof(CMsgRemoteClientGetControllerConfig)},
+  { 143, 150, sizeof(CMsgRemoteClientGetControllerConfigResponse)},
+  { 152, 158, sizeof(CMsgRemoteClientStreamingEnabled)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -393,36 +395,36 @@ void AddDescriptorsImpl() {
       "team.CMsgRemoteClientAppStatus.AppUpdate"
       "Info\022J\n\rshortcut_info\030\004 \001(\01323.proto.stea"
       "m.CMsgRemoteClientAppStatus.ShortcutInfo"
-      "\"g\n\024CMsgRemoteClientAuth\022\021\n\tclient_id\030\001 "
+      "\"|\n\024CMsgRemoteClientAuth\022\021\n\tclient_id\030\001 "
       "\001(\004\022<\n\006status\030\002 \001(\0132,.proto.steam.CMsgRe"
-      "moteClientBroadcastStatus\"2\n\034CMsgRemoteC"
-      "lientAuthResponse\022\022\n\007eresult\030\001 \001(\005:\0012\"\245\003"
-      "\n\033CMsgRemoteClientStartStream\022\016\n\006app_id\030"
-      "\001 \001(\r\022\023\n\013environment\030\002 \001(\005\022\025\n\rgamepad_co"
-      "unt\030\003 \001(\005\022\031\n\rlaunch_option\030\004 \001(\005:\002-1\022!\n\022"
-      "lock_parental_lock\030\005 \001(\010:\005false\022\034\n\024unloc"
-      "k_parental_lock\030\006 \001(\t\022\034\n\024maximum_resolut"
-      "ion_x\030\007 \001(\005\022\034\n\024maximum_resolution_y\030\010 \001("
-      "\005\022J\n\010gamepads\030\t \003(\01328.proto.steam.CMsgRe"
-      "moteClientStartStream.ReservedGamepad\022\036\n"
-      "\023audio_channel_count\030\n \001(\005:\0012\032F\n\017Reserve"
-      "dGamepad\022\027\n\017controller_type\030\001 \001(\r\022\032\n\022con"
-      "troller_subtype\030\002 \001(\r\"\202\001\n#CMsgRemoteClie"
-      "ntStartStreamResponse\022\032\n\017e_launch_result"
-      "\030\001 \001(\005:\0012\022\023\n\013stream_port\030\002 \001(\r\022\026\n\016launch"
-      "_options\030\003 \003(\005\022\022\n\nauth_token\030\004 \001(\014\"\026\n\024CM"
-      "sgRemoteClientPing\"\036\n\034CMsgRemoteClientPi"
-      "ngResponse\",\n\032CMsgRemoteClientAcceptEULA"
-      "\022\016\n\006app_id\030\001 \003(\r\"O\n#CMsgRemoteClientGetC"
-      "ontrollerConfig\022\016\n\006app_id\030\001 \001(\r\022\030\n\020contr"
-      "oller_index\030\003 \001(\r\"U\n+CMsgRemoteClientGet"
-      "ControllerConfigResponse\022\022\n\007eresult\030\001 \001("
-      "\005:\0012\022\022\n\nconfig_vdf\030\002 \001(\014\"3\n CMsgRemoteCl"
-      "ientStreamingEnabled\022\017\n\007enabled\030\001 \002(\010B\005H"
-      "\001\200\001\000"
+      "moteClientBroadcastStatus\022\023\n\013instance_id"
+      "\030\003 \001(\004\"2\n\034CMsgRemoteClientAuthResponse\022\022"
+      "\n\007eresult\030\001 \001(\005:\0012\"\245\003\n\033CMsgRemoteClientS"
+      "tartStream\022\016\n\006app_id\030\001 \001(\r\022\023\n\013environmen"
+      "t\030\002 \001(\005\022\025\n\rgamepad_count\030\003 \001(\005\022\031\n\rlaunch"
+      "_option\030\004 \001(\005:\002-1\022!\n\022lock_parental_lock\030"
+      "\005 \001(\010:\005false\022\034\n\024unlock_parental_lock\030\006 \001"
+      "(\t\022\034\n\024maximum_resolution_x\030\007 \001(\005\022\034\n\024maxi"
+      "mum_resolution_y\030\010 \001(\005\022J\n\010gamepads\030\t \003(\013"
+      "28.proto.steam.CMsgRemoteClientStartStre"
+      "am.ReservedGamepad\022\036\n\023audio_channel_coun"
+      "t\030\n \001(\005:\0012\032F\n\017ReservedGamepad\022\027\n\017control"
+      "ler_type\030\001 \001(\r\022\032\n\022controller_subtype\030\002 \001"
+      "(\r\"\202\001\n#CMsgRemoteClientStartStreamRespon"
+      "se\022\032\n\017e_launch_result\030\001 \001(\005:\0012\022\023\n\013stream"
+      "_port\030\002 \001(\r\022\026\n\016launch_options\030\003 \003(\005\022\022\n\na"
+      "uth_token\030\004 \001(\014\"\026\n\024CMsgRemoteClientPing\""
+      "\036\n\034CMsgRemoteClientPingResponse\",\n\032CMsgR"
+      "emoteClientAcceptEULA\022\016\n\006app_id\030\001 \003(\r\"O\n"
+      "#CMsgRemoteClientGetControllerConfig\022\016\n\006"
+      "app_id\030\001 \001(\r\022\030\n\020controller_index\030\003 \001(\r\"U"
+      "\n+CMsgRemoteClientGetControllerConfigRes"
+      "ponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\022\n\nconfig_vdf\030"
+      "\002 \001(\014\"3\n CMsgRemoteClientStreamingEnable"
+      "d\022\017\n\007enabled\030\001 \002(\010B\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1764);
+      descriptor, 1785);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "steammessages_remoteclient.proto", &protobuf_RegisterTypes);
   ::proto::steam::protobuf_steammessages_5fbase_2eproto::AddDescriptors();
@@ -2518,6 +2520,7 @@ CMsgRemoteClientAppStatus::status_updates() const {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CMsgRemoteClientAuth::kClientIdFieldNumber;
 const int CMsgRemoteClientAuth::kStatusFieldNumber;
+const int CMsgRemoteClientAuth::kInstanceIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CMsgRemoteClientAuth::CMsgRemoteClientAuth()
@@ -2539,14 +2542,16 @@ CMsgRemoteClientAuth::CMsgRemoteClientAuth(const CMsgRemoteClientAuth& from)
   } else {
     status_ = NULL;
   }
-  client_id_ = from.client_id_;
+  ::memcpy(&client_id_, &from.client_id_,
+    reinterpret_cast<char*>(&instance_id_) -
+    reinterpret_cast<char*>(&client_id_) + sizeof(instance_id_));
   // @@protoc_insertion_point(copy_constructor:proto.steam.CMsgRemoteClientAuth)
 }
 
 void CMsgRemoteClientAuth::SharedCtor() {
   _cached_size_ = 0;
-  ::memset(&status_, 0, reinterpret_cast<char*>(&client_id_) -
-    reinterpret_cast<char*>(&status_) + sizeof(client_id_));
+  ::memset(&status_, 0, reinterpret_cast<char*>(&instance_id_) -
+    reinterpret_cast<char*>(&status_) + sizeof(instance_id_));
 }
 
 CMsgRemoteClientAuth::~CMsgRemoteClientAuth() {
@@ -2589,7 +2594,10 @@ void CMsgRemoteClientAuth::Clear() {
     GOOGLE_DCHECK(status_ != NULL);
     status_->::proto::steam::CMsgRemoteClientBroadcastStatus::Clear();
   }
-  client_id_ = GOOGLE_ULONGLONG(0);
+  if (_has_bits_[0 / 32] & 6u) {
+    ::memset(&client_id_, 0, reinterpret_cast<char*>(&instance_id_) -
+      reinterpret_cast<char*>(&client_id_) + sizeof(instance_id_));
+  }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -2624,6 +2632,20 @@ bool CMsgRemoteClientAuth::MergePartialFromCodedStream(
             static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_status()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint64 instance_id = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
+          set_has_instance_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &instance_id_)));
         } else {
           goto handle_unusual;
         }
@@ -2670,6 +2692,11 @@ void CMsgRemoteClientAuth::SerializeWithCachedSizes(
       2, *this->status_, output);
   }
 
+  // optional uint64 instance_id = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(3, this->instance_id(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -2696,6 +2723,11 @@ void CMsgRemoteClientAuth::SerializeWithCachedSizes(
         2, *this->status_, deterministic, target);
   }
 
+  // optional uint64 instance_id = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(3, this->instance_id(), target);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -2713,7 +2745,7 @@ size_t CMsgRemoteClientAuth::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         unknown_fields());
   }
-  if (_has_bits_[0 / 32] & 3u) {
+  if (_has_bits_[0 / 32] & 7u) {
     // optional .proto.steam.CMsgRemoteClientBroadcastStatus status = 2;
     if (has_status()) {
       total_size += 1 +
@@ -2726,6 +2758,13 @@ size_t CMsgRemoteClientAuth::ByteSizeLong() const {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt64Size(
           this->client_id());
+    }
+
+    // optional uint64 instance_id = 3;
+    if (has_instance_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->instance_id());
     }
 
   }
@@ -2759,12 +2798,15 @@ void CMsgRemoteClientAuth::MergeFrom(const CMsgRemoteClientAuth& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 3u) {
+  if (cached_has_bits & 7u) {
     if (cached_has_bits & 0x00000001u) {
       mutable_status()->::proto::steam::CMsgRemoteClientBroadcastStatus::MergeFrom(from.status());
     }
     if (cached_has_bits & 0x00000002u) {
       client_id_ = from.client_id_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      instance_id_ = from.instance_id_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -2795,6 +2837,7 @@ void CMsgRemoteClientAuth::Swap(CMsgRemoteClientAuth* other) {
 void CMsgRemoteClientAuth::InternalSwap(CMsgRemoteClientAuth* other) {
   std::swap(status_, other->status_);
   std::swap(client_id_, other->client_id_);
+  std::swap(instance_id_, other->instance_id_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -2875,6 +2918,30 @@ void CMsgRemoteClientAuth::set_allocated_status(::proto::steam::CMsgRemoteClient
     clear_has_status();
   }
   // @@protoc_insertion_point(field_set_allocated:proto.steam.CMsgRemoteClientAuth.status)
+}
+
+// optional uint64 instance_id = 3;
+bool CMsgRemoteClientAuth::has_instance_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CMsgRemoteClientAuth::set_has_instance_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CMsgRemoteClientAuth::clear_has_instance_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CMsgRemoteClientAuth::clear_instance_id() {
+  instance_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_instance_id();
+}
+::google::protobuf::uint64 CMsgRemoteClientAuth::instance_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgRemoteClientAuth.instance_id)
+  return instance_id_;
+}
+void CMsgRemoteClientAuth::set_instance_id(::google::protobuf::uint64 value) {
+  set_has_instance_id();
+  instance_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgRemoteClientAuth.instance_id)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

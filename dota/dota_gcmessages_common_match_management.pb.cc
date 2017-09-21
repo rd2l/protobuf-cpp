@@ -157,6 +157,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTAParty, party_builder_match_groups_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTAParty, party_builder_start_time_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTAParty, solo_queue_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTAParty, bot_script_index_),
   1,
   2,
   ~0u,
@@ -172,8 +173,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   9,
   10,
   0,
+  30,
   31,
-  32,
   11,
   12,
   13,
@@ -183,22 +184,23 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   15,
   ~0u,
   19,
-  28,
+  27,
   ~0u,
   ~0u,
+  21,
   22,
   23,
   24,
   25,
   26,
-  27,
-  30,
+  29,
+  32,
   33,
   34,
   35,
   36,
-  21,
-  29,
+  28,
+  37,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTAPartyInvite_PartyMember, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTAPartyInvite_PartyMember, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -319,7 +321,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTALobbyMember, custom_game_product_ids_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTALobbyMember, lobby_mvp_vote_account_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTALobbyMember, search_match_type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTALobbyMember, favorite_team_and_quality_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTALobbyMember, favorite_team_packed_),
   2,
   3,
   4,
@@ -340,12 +342,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   14,
   1,
   ~0u,
+  16,
   17,
-  18,
   ~0u,
+  18,
   19,
   20,
-  16,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CLobbyTeamDetails, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CLobbyTeamDetails, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -492,9 +494,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, previous_series_matches_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, previous_match_override_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, custom_game_uses_account_records_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, league_selection_priority_team_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, league_selection_priority_choice_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, league_non_selection_priority_choice_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, game_start_time_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, pause_setting_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, lobby_mvp_account_id_),
@@ -505,6 +504,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, bot_radiant_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, bot_dire_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, event_progression_enabled_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, selection_priority_rules_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, series_previous_selection_priority_team_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, series_current_selection_priority_team_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, series_current_priority_team_choice_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, series_current_non_priority_team_choice_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSODOTALobby, series_current_selection_priority_used_coin_toss_),
   6,
   ~0u,
   ~0u,
@@ -514,7 +519,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,
   8,
   0,
-  68,
+  71,
   17,
   18,
   19,
@@ -529,8 +534,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   21,
   23,
   22,
-  69,
-  70,
+  72,
+  73,
   24,
   ~0u,
   2,
@@ -565,26 +570,29 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   47,
   48,
   49,
-  57,
+  58,
   50,
   51,
-  54,
-  ~0u,
   53,
-  58,
-  55,
+  ~0u,
+  52,
+  59,
+  54,
   56,
-  60,
-  61,
+  57,
   62,
   63,
   64,
+  74,
   65,
-  52,
-  71,
   66,
+  60,
   67,
-  59,
+  68,
+  69,
+  70,
+  55,
+  61,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgLobbyPlaytestDetails, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgLobbyPlaytestDetails, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -596,20 +604,20 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, 13, sizeof(CSODOTAPartyMember)},
-  { 21, 68, sizeof(CSODOTAParty)},
-  { 110, 118, sizeof(CSODOTAPartyInvite_PartyMember)},
-  { 121, 134, sizeof(CSODOTAPartyInvite)},
-  { 142, 149, sizeof(CSODOTALobbyInvite_LobbyMember)},
-  { 151, 164, sizeof(CSODOTALobbyInvite)},
-  { 172, 183, sizeof(CMsgLeaverState)},
-  { 189, 197, sizeof(CDOTALobbyMember_CDOTALobbyMemberXPBonus)},
-  { 200, 231, sizeof(CDOTALobbyMember)},
-  { 257, 278, sizeof(CLobbyTeamDetails)},
-  { 294, 304, sizeof(CLobbyTimedRewardDetails)},
-  { 309, 318, sizeof(CLobbyBroadcastChannelInfo)},
-  { 322, 329, sizeof(CSODOTALobby_CExtraMsg)},
-  { 331, 416, sizeof(CSODOTALobby)},
-  { 496, 502, sizeof(CMsgLobbyPlaytestDetails)},
+  { 21, 69, sizeof(CSODOTAParty)},
+  { 112, 120, sizeof(CSODOTAPartyInvite_PartyMember)},
+  { 123, 136, sizeof(CSODOTAPartyInvite)},
+  { 144, 151, sizeof(CSODOTALobbyInvite_LobbyMember)},
+  { 153, 166, sizeof(CSODOTALobbyInvite)},
+  { 174, 185, sizeof(CMsgLeaverState)},
+  { 191, 199, sizeof(CDOTALobbyMember_CDOTALobbyMemberXPBonus)},
+  { 202, 233, sizeof(CDOTALobbyMember)},
+  { 259, 280, sizeof(CLobbyTeamDetails)},
+  { 296, 306, sizeof(CLobbyTimedRewardDetails)},
+  { 311, 320, sizeof(CLobbyBroadcastChannelInfo)},
+  { 324, 331, sizeof(CSODOTALobby_CExtraMsg)},
+  { 333, 421, sizeof(CSODOTALobby)},
+  { 504, 510, sizeof(CMsgLobbyPlaytestDetails)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -729,7 +737,7 @@ void AddDescriptorsImpl() {
       "ping_times\030\005 \003(\rB\002\020\001\022\"\n\032region_ping_fail"
       "ed_bitmask\030\006 \001(\r\022\033\n\023tourney_skill_level\030"
       "\007 \001(\r\022\025\n\rtourney_buyin\030\010 \001(\r\022\035\n\025tourney_"
-      "prevent_until\030\t \001(\r\"\360\013\n\014CSODOTAParty\022\026\n\010"
+      "prevent_until\030\t \001(\r\"\212\014\n\014CSODOTAParty\022\026\n\010"
       "party_id\030\001 \001(\004B\004\200\246\035\001\022\021\n\tleader_id\030\002 \001(\006\022"
       "\022\n\nmember_ids\030\003 \003(\006\022\022\n\ngame_modes\030\004 \001(\r\022"
       "1\n\005state\030\006 \001(\0162\036.proto.dota.CSODOTAParty"
@@ -766,163 +774,172 @@ void AddDescriptorsImpl() {
       "ormal\022#\n\033party_builder_slots_to_fill\0308 \001"
       "(\r\022\"\n\032party_builder_match_groups\0309 \001(\r\022 "
       "\n\030party_builder_start_time\030: \001(\r\022\022\n\nsolo"
-      "_queue\030; \001(\010\"0\n\005State\022\006\n\002UI\020\000\022\021\n\rFINDING"
-      "_MATCH\020\001\022\014\n\010IN_MATCH\020\002\"\246\002\n\022CSODOTAPartyI"
-      "nvite\022\026\n\010group_id\030\001 \001(\004B\004\200\246\035\001\022\021\n\tsender_"
-      "id\030\002 \001(\006\022\023\n\013sender_name\030\003 \001(\t\022;\n\007members"
-      "\030\004 \003(\0132*.proto.dota.CSODOTAPartyInvite.P"
-      "artyMember\022\017\n\007team_id\030\005 \001(\r\022\033\n\023low_prior"
-      "ity_status\030\006 \001(\010\022\020\n\010as_coach\030\007 \001(\010\022\022\n\nin"
-      "vite_gid\030\010 \001(\006\032\?\n\013PartyMember\022\014\n\004name\030\001 "
-      "\001(\t\022\020\n\010steam_id\030\002 \001(\006\022\020\n\010is_coach\030\004 \001(\010\""
-      "\244\002\n\022CSODOTALobbyInvite\022\026\n\010group_id\030\001 \001(\004"
-      "B\004\200\246\035\001\022\021\n\tsender_id\030\002 \001(\006\022\023\n\013sender_name"
-      "\030\003 \001(\t\022;\n\007members\030\004 \003(\0132*.proto.dota.CSO"
-      "DOTALobbyInvite.LobbyMember\022\026\n\016custom_ga"
-      "me_id\030\005 \001(\004\022\022\n\ninvite_gid\030\006 \001(\006\022\027\n\017custo"
-      "m_game_crc\030\007 \001(\006\022\035\n\025custom_game_timestam"
-      "p\030\010 \001(\007\032-\n\013LobbyMember\022\014\n\004name\030\001 \001(\t\022\020\n\010"
-      "steam_id\030\002 \001(\006\"\340\001\n\017CMsgLeaverState\022\023\n\013lo"
-      "bby_state\030\001 \001(\r\022I\n\ngame_state\030\002 \001(\0162\032.pr"
-      "oto.dota.DOTA_GameState:\031DOTA_GAMERULES_"
-      "STATE_INIT\022\027\n\017leaver_detected\030\003 \001(\010\022\034\n\024f"
-      "irst_blood_happened\030\004 \001(\010\022\035\n\025discard_mat"
-      "ch_results\030\005 \001(\010\022\027\n\017mass_disconnect\030\006 \001("
-      "\010\"\321\007\n\020CDOTALobbyMember\022\020\n\002id\030\001 \001(\006B\004\200\246\035\001"
-      "\022\017\n\007hero_id\030\002 \001(\r\022>\n\004team\030\003 \001(\0162\030.proto."
-      "dota.DOTA_GC_TEAM:\026DOTA_GC_TEAM_GOOD_GUY"
-      "S\022\014\n\004name\030\006 \001(\t\022\014\n\004slot\030\007 \001(\r\022\020\n\010party_i"
-      "d\030\014 \001(\004\022\022\n\nmeta_level\030\r \001(\r\022\017\n\007meta_xp\030\016"
-      " \001(\r\022\027\n\017meta_xp_awarded\030\017 \001(\r\022G\n\rleaver_"
-      "status\030\020 \001(\0162\036.proto.dota.DOTALeaverStat"
-      "us_t:\020DOTA_LEAVER_NONE\022\026\n\016leaver_actions"
-      "\030\034 \001(\r\022\017\n\007channel\030\021 \001(\r\022\027\n\017prize_def_ind"
-      "ex\030\022 \001(\r\022\030\n\020disabled_hero_id\030\024 \003(\r\022J\n\024pa"
-      "rtner_account_type\030\025 \001(\0162\036.proto.dota.Pa"
-      "rtnerAccountType:\014PARTNER_NONE\022\027\n\017enable"
-      "d_hero_id\030\026 \003(\r\022A\n\ncoach_team\030\027 \001(\0162\030.pr"
-      "oto.dota.DOTA_GC_TEAM:\023DOTA_GC_TEAM_NOTE"
-      "AM\022\030\n\020nexon_pc_bang_no\030\030 \001(\r\022\032\n\022nexon_pc"
-      "_bang_name\030\031 \001(\t\022H\n\nxp_bonuses\030\033 \003(\01324.p"
-      "roto.dota.CDOTALobbyMember.CDOTALobbyMem"
-      "berXPBonus\022\023\n\013rank_change\030\035 \001(\021\022\021\n\tcamer"
-      "aman\030\036 \001(\010\022\037\n\027custom_game_product_ids\030\037 "
-      "\003(\r\022!\n\031lobby_mvp_vote_account_id\030  \001(\r\022C"
-      "\n\021search_match_type\030! \001(\0162\025.proto.dota.M"
-      "atchType:\021MATCH_TYPE_CASUAL\022!\n\031favorite_"
-      "team_and_quality\030\" \001(\r\032M\n\027CDOTALobbyMemb"
-      "erXPBonus\022\014\n\004type\030\001 \001(\r\022\020\n\010xp_bonus\030\002 \001("
-      "\002\022\022\n\nsource_key\030\003 \001(\004\"\337\002\n\021CLobbyTeamDeta"
-      "ils\022\021\n\tteam_name\030\001 \001(\t\022\020\n\010team_tag\030\003 \001(\t"
-      "\022\017\n\007team_id\030\004 \001(\r\022\021\n\tteam_logo\030\005 \001(\004\022\026\n\016"
-      "team_base_logo\030\006 \001(\004\022\030\n\020team_banner_logo"
-      "\030\007 \001(\004\022\025\n\rteam_complete\030\010 \001(\010\022\022\n\nguild_n"
-      "ame\030\t \001(\t\022\021\n\tguild_tag\030\n \001(\t\022\020\n\010guild_id"
-      "\030\013 \001(\r\022\022\n\nguild_logo\030\014 \001(\004\022\027\n\017guild_base"
-      "_logo\030\r \001(\004\022\031\n\021guild_banner_logo\030\016 \001(\004\022\014"
-      "\n\004rank\030\017 \001(\r\022\023\n\013rank_change\030\020 \001(\021\022\024\n\014is_"
-      "home_team\030\021 \001(\010\"\206\001\n\030CLobbyTimedRewardDet"
-      "ails\022\026\n\016item_def_index\030\002 \001(\r\022\027\n\017is_suppl"
-      "y_crate\030\003 \001(\010\022\025\n\ris_timed_drop\030\004 \001(\010\022\022\n\n"
-      "account_id\030\005 \001(\r\022\016\n\006origin\030\006 \001(\r\"r\n\032CLob"
-      "byBroadcastChannelInfo\022\022\n\nchannel_id\030\001 \001"
-      "(\r\022\024\n\014country_code\030\002 \001(\t\022\023\n\013description\030"
-      "\003 \001(\t\022\025\n\rlanguage_code\030\004 \001(\t\"\332\032\n\014CSODOTA"
-      "Lobby\022\026\n\010lobby_id\030\001 \001(\004B\004\200\246\035\001\022-\n\007members"
-      "\030\002 \003(\0132\034.proto.dota.CDOTALobbyMember\0222\n\014"
-      "left_members\030\007 \003(\0132\034.proto.dota.CDOTALob"
-      "byMember\022\021\n\tleader_id\030\013 \001(\006\022\024\n\tserver_id"
-      "\030\006 \001(\006:\0010\022\021\n\tgame_mode\030\003 \001(\r\022\027\n\017pending_"
-      "invites\030\n \003(\006\0221\n\005state\030\004 \001(\0162\036.proto.dot"
-      "a.CSODOTALobby.State:\002UI\022\017\n\007connect\030\005 \001("
-      "\t\022\?\n\nlobby_type\030\014 \001(\0162\".proto.dota.CSODO"
-      "TALobby.LobbyType:\007INVALID\022\024\n\014allow_chea"
-      "ts\030\r \001(\010\022\026\n\016fill_with_bots\030\016 \001(\010\022\022\n\nintr"
-      "o_mode\030\017 \001(\010\022\021\n\tgame_name\030\020 \001(\t\0223\n\014team_"
-      "details\030\021 \003(\0132\035.proto.dota.CLobbyTeamDet"
-      "ails\022\027\n\017tutorial_lesson\030\022 \001(\r\022\025\n\rtournam"
-      "ent_id\030\023 \001(\r\022\032\n\022tournament_game_id\030\024 \001(\r"
-      "\022\030\n\rserver_region\030\025 \001(\r:\0010\022I\n\ngame_state"
-      "\030\026 \001(\0162\032.proto.dota.DOTA_GameState:\031DOTA"
-      "_GAMERULES_STATE_INIT\022\026\n\016num_spectators\030"
-      "\027 \001(\r\022\022\n\nmatchgroup\030\031 \001(\r\0229\n\007cm_pick\030\034 \001"
-      "(\0162\030.proto.dota.DOTA_CM_PICK:\016DOTA_CM_RA"
-      "NDOM\022\020\n\010match_id\030\036 \001(\004\022\036\n\020allow_spectati"
-      "ng\030\037 \001(\010:\004true\022R\n\026bot_difficulty_radiant"
-      "\030$ \001(\0162\035.proto.dota.DOTABotDifficulty:\023B"
-      "OT_DIFFICULTY_HARD\022G\n\014game_version\030% \001(\016"
-      "2\033.proto.dota.DOTAGameVersion:\024GAME_VERS"
-      "ION_CURRENT\022B\n\024timed_reward_details\030& \003("
-      "\0132$.proto.dota.CLobbyTimedRewardDetails\022"
-      "\020\n\010pass_key\030\' \001(\t\022\020\n\010leagueid\030* \001(\r\022 \n\025p"
-      "enalty_level_radiant\030+ \001(\r:\0010\022\035\n\022penalty"
-      "_level_dire\030, \001(\r:\0010\022\024\n\014load_game_id\030- \001"
-      "(\r\022\023\n\013series_type\030. \001(\r\022\033\n\023radiant_serie"
-      "s_wins\030/ \001(\r\022\030\n\020dire_series_wins\0300 \001(\r\022\026"
-      "\n\016loot_generated\0301 \001(\r\022\024\n\014loot_awarded\0302"
-      " \001(\r\022\026\n\007allchat\0303 \001(\010:\005false\022C\n\rdota_tv_"
-      "delay\0305 \001(\0162\034.proto.dota.LobbyDotaTVDela"
-      "y:\016LobbyDotaTV_10\022\030\n\020custom_game_mode\0306 "
-      "\001(\t\022\027\n\017custom_map_name\0307 \001(\t\022\031\n\021custom_d"
-      "ifficulty\0308 \001(\r\022\013\n\003lan\0309 \001(\010\022F\n\026broadcas"
-      "t_channel_info\030: \003(\0132&.proto.dota.CLobby"
-      "BroadcastChannelInfo\022\036\n\026first_leaver_acc"
-      "ountid\030; \001(\r\022\021\n\tseries_id\030< \001(\r\022\024\n\014low_p"
-      "riority\030= \001(\010\022:\n\016extra_messages\030> \003(\0132\"."
-      "proto.dota.CSODOTALobby.CExtraMsg\022,\n\tsav"
-      "e_game\030\? \001(\0132\031.proto.dota.CDOTASaveGame\022"
-      "\034\n\024first_blood_happened\030A \001(\010\022I\n\rmatch_o"
-      "utcome\030F \001(\0162\031.proto.dota.EMatchOutcome:"
-      "\027k_EMatchOutcome_Unknown\022\027\n\017mass_disconn"
-      "ect\030C \001(\010\022\026\n\016custom_game_id\030D \001(\004\022\032\n\022cus"
-      "tom_min_players\030G \001(\r\022\032\n\022custom_max_play"
-      "ers\030H \001(\r\022B\n\014partner_type\030I \001(\0162\036.proto."
-      "dota.PartnerAccountType:\014PARTNER_NONE\022&\n"
-      "\036lan_host_ping_to_server_region\030J \001(\r\022O\n"
-      "\nvisibility\030K \001(\0162\037.proto.dota.DOTALobby"
-      "Visibility:\032DOTALobbyVisibility_Public\022\027"
-      "\n\017custom_game_crc\030L \001(\006\022&\n\036custom_game_a"
-      "uto_created_lobby\030M \001(\010\022\030\n\020league_series"
-      "_id\030N \001(\r\022\026\n\016league_game_id\030O \001(\r\022\035\n\025cus"
-      "tom_game_timestamp\030P \001(\007\022\037\n\027previous_ser"
-      "ies_matches\030Q \003(\004\022\037\n\027previous_match_over"
-      "ride\030R \001(\004\022(\n custom_game_uses_account_r"
-      "ecords\030S \001(\010\022&\n\036league_selection_priorit"
-      "y_team\030T \001(\r\022V\n league_selection_priorit"
-      "y_choice\030U \001(\0162!.proto.dota.SelectionPri"
-      "orityType:\tUNDEFINED\022Z\n$league_non_selec"
-      "tion_priority_choice\030V \001(\0162!.proto.dota."
-      "SelectionPriorityType:\tUNDEFINED\022\027\n\017game"
-      "_start_time\030W \001(\r\022Y\n\rpause_setting\030X \001(\016"
-      "2!.proto.dota.LobbyDotaPauseSetting:\037Lob"
-      "byDotaPauseSetting_Unlimited\022\034\n\024lobby_mv"
-      "p_account_id\030Y \001(\r\022#\n\033weekend_tourney_di"
-      "vision_id\030Z \001(\r\022#\n\033weekend_tourney_skill"
-      "_level\030[ \001(\r\022%\n\035weekend_tourney_bracket_"
-      "round\030\\ \001(\r\022O\n\023bot_difficulty_dire\030] \001(\016"
-      "2\035.proto.dota.DOTABotDifficulty:\023BOT_DIF"
-      "FICULTY_HARD\022\023\n\013bot_radiant\030^ \001(\004\022\020\n\010bot"
-      "_dire\030_ \001(\004\022!\n\031event_progression_enabled"
-      "\030` \001(\010\032)\n\tCExtraMsg\022\n\n\002id\030\001 \001(\r\022\020\n\010conte"
-      "nts\030\002 \001(\014\"d\n\005State\022\006\n\002UI\020\000\022\013\n\007READYUP\020\004\022"
-      "\017\n\013SERVERSETUP\020\001\022\007\n\003RUN\020\002\022\014\n\010POSTGAME\020\003\022"
-      "\014\n\010NOTREADY\020\005\022\020\n\014SERVERASSIGN\020\006\"\377\001\n\tLobb"
-      "yType\022\024\n\007INVALID\020\377\377\377\377\377\377\377\377\377\001\022\020\n\014CASUAL_MA"
-      "TCH\020\000\022\014\n\010PRACTICE\020\001\022\016\n\nTOURNAMENT\020\002\022\022\n\016C"
-      "OOP_BOT_MATCH\020\004\022\025\n\021LEGACY_TEAM_MATCH\020\005\022\033"
-      "\n\027LEGACY_SOLO_QUEUE_MATCH\020\006\022\025\n\021COMPETITI"
-      "VE_MATCH\020\007\022\024\n\020CASUAL_1V1_MATCH\020\010\022\023\n\017WEEK"
-      "END_TOURNEY\020\t\022\023\n\017LOCAL_BOT_MATCH\020\n\022\r\n\tSP"
-      "ECTATOR\020\013\"(\n\030CMsgLobbyPlaytestDetails\022\014\n"
-      "\004json\030\001 \001(\t*P\n\020LobbyDotaTVDelay\022\022\n\016Lobby"
-      "DotaTV_10\020\000\022\023\n\017LobbyDotaTV_120\020\001\022\023\n\017Lobb"
-      "yDotaTV_300\020\002*\203\001\n\025LobbyDotaPauseSetting\022"
-      "#\n\037LobbyDotaPauseSetting_Unlimited\020\000\022!\n\035"
-      "LobbyDotaPauseSetting_Limited\020\001\022\"\n\036Lobby"
-      "DotaPauseSetting_Disabled\020\002B\005H\001\200\001\000"
+      "_queue\030; \001(\010\022\030\n\020bot_script_index\030< \001(\r\"0"
+      "\n\005State\022\006\n\002UI\020\000\022\021\n\rFINDING_MATCH\020\001\022\014\n\010IN"
+      "_MATCH\020\002\"\246\002\n\022CSODOTAPartyInvite\022\026\n\010group"
+      "_id\030\001 \001(\004B\004\200\246\035\001\022\021\n\tsender_id\030\002 \001(\006\022\023\n\013se"
+      "nder_name\030\003 \001(\t\022;\n\007members\030\004 \003(\0132*.proto"
+      ".dota.CSODOTAPartyInvite.PartyMember\022\017\n\007"
+      "team_id\030\005 \001(\r\022\033\n\023low_priority_status\030\006 \001"
+      "(\010\022\020\n\010as_coach\030\007 \001(\010\022\022\n\ninvite_gid\030\010 \001(\006"
+      "\032\?\n\013PartyMember\022\014\n\004name\030\001 \001(\t\022\020\n\010steam_i"
+      "d\030\002 \001(\006\022\020\n\010is_coach\030\004 \001(\010\"\244\002\n\022CSODOTALob"
+      "byInvite\022\026\n\010group_id\030\001 \001(\004B\004\200\246\035\001\022\021\n\tsend"
+      "er_id\030\002 \001(\006\022\023\n\013sender_name\030\003 \001(\t\022;\n\007memb"
+      "ers\030\004 \003(\0132*.proto.dota.CSODOTALobbyInvit"
+      "e.LobbyMember\022\026\n\016custom_game_id\030\005 \001(\004\022\022\n"
+      "\ninvite_gid\030\006 \001(\006\022\027\n\017custom_game_crc\030\007 \001"
+      "(\006\022\035\n\025custom_game_timestamp\030\010 \001(\007\032-\n\013Lob"
+      "byMember\022\014\n\004name\030\001 \001(\t\022\020\n\010steam_id\030\002 \001(\006"
+      "\"\340\001\n\017CMsgLeaverState\022\023\n\013lobby_state\030\001 \001("
+      "\r\022I\n\ngame_state\030\002 \001(\0162\032.proto.dota.DOTA_"
+      "GameState:\031DOTA_GAMERULES_STATE_INIT\022\027\n\017"
+      "leaver_detected\030\003 \001(\010\022\034\n\024first_blood_hap"
+      "pened\030\004 \001(\010\022\035\n\025discard_match_results\030\005 \001"
+      "(\010\022\027\n\017mass_disconnect\030\006 \001(\010\"\314\007\n\020CDOTALob"
+      "byMember\022\020\n\002id\030\001 \001(\006B\004\200\246\035\001\022\017\n\007hero_id\030\002 "
+      "\001(\r\022>\n\004team\030\003 \001(\0162\030.proto.dota.DOTA_GC_T"
+      "EAM:\026DOTA_GC_TEAM_GOOD_GUYS\022\014\n\004name\030\006 \001("
+      "\t\022\014\n\004slot\030\007 \001(\r\022\020\n\010party_id\030\014 \001(\004\022\022\n\nmet"
+      "a_level\030\r \001(\r\022\017\n\007meta_xp\030\016 \001(\r\022\027\n\017meta_x"
+      "p_awarded\030\017 \001(\r\022G\n\rleaver_status\030\020 \001(\0162\036"
+      ".proto.dota.DOTALeaverStatus_t:\020DOTA_LEA"
+      "VER_NONE\022\026\n\016leaver_actions\030\034 \001(\r\022\017\n\007chan"
+      "nel\030\021 \001(\r\022\027\n\017prize_def_index\030\022 \001(\r\022\030\n\020di"
+      "sabled_hero_id\030\024 \003(\r\022J\n\024partner_account_"
+      "type\030\025 \001(\0162\036.proto.dota.PartnerAccountTy"
+      "pe:\014PARTNER_NONE\022\027\n\017enabled_hero_id\030\026 \003("
+      "\r\022A\n\ncoach_team\030\027 \001(\0162\030.proto.dota.DOTA_"
+      "GC_TEAM:\023DOTA_GC_TEAM_NOTEAM\022\030\n\020nexon_pc"
+      "_bang_no\030\030 \001(\r\022\032\n\022nexon_pc_bang_name\030\031 \001"
+      "(\t\022H\n\nxp_bonuses\030\033 \003(\01324.proto.dota.CDOT"
+      "ALobbyMember.CDOTALobbyMemberXPBonus\022\023\n\013"
+      "rank_change\030\035 \001(\021\022\021\n\tcameraman\030\036 \001(\010\022\037\n\027"
+      "custom_game_product_ids\030\037 \003(\r\022!\n\031lobby_m"
+      "vp_vote_account_id\030  \001(\r\022C\n\021search_match"
+      "_type\030! \001(\0162\025.proto.dota.MatchType:\021MATC"
+      "H_TYPE_CASUAL\022\034\n\024favorite_team_packed\030# "
+      "\001(\004\032M\n\027CDOTALobbyMemberXPBonus\022\014\n\004type\030\001"
+      " \001(\r\022\020\n\010xp_bonus\030\002 \001(\002\022\022\n\nsource_key\030\003 \001"
+      "(\004\"\337\002\n\021CLobbyTeamDetails\022\021\n\tteam_name\030\001 "
+      "\001(\t\022\020\n\010team_tag\030\003 \001(\t\022\017\n\007team_id\030\004 \001(\r\022\021"
+      "\n\tteam_logo\030\005 \001(\004\022\026\n\016team_base_logo\030\006 \001("
+      "\004\022\030\n\020team_banner_logo\030\007 \001(\004\022\025\n\rteam_comp"
+      "lete\030\010 \001(\010\022\022\n\nguild_name\030\t \001(\t\022\021\n\tguild_"
+      "tag\030\n \001(\t\022\020\n\010guild_id\030\013 \001(\r\022\022\n\nguild_log"
+      "o\030\014 \001(\004\022\027\n\017guild_base_logo\030\r \001(\004\022\031\n\021guil"
+      "d_banner_logo\030\016 \001(\004\022\014\n\004rank\030\017 \001(\r\022\023\n\013ran"
+      "k_change\030\020 \001(\021\022\024\n\014is_home_team\030\021 \001(\010\"\206\001\n"
+      "\030CLobbyTimedRewardDetails\022\026\n\016item_def_in"
+      "dex\030\002 \001(\r\022\027\n\017is_supply_crate\030\003 \001(\010\022\025\n\ris"
+      "_timed_drop\030\004 \001(\010\022\022\n\naccount_id\030\005 \001(\r\022\016\n"
+      "\006origin\030\006 \001(\r\"r\n\032CLobbyBroadcastChannelI"
+      "nfo\022\022\n\nchannel_id\030\001 \001(\r\022\024\n\014country_code\030"
+      "\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\025\n\rlanguage_c"
+      "ode\030\004 \001(\t\"\214\035\n\014CSODOTALobby\022\026\n\010lobby_id\030\001"
+      " \001(\004B\004\200\246\035\001\022-\n\007members\030\002 \003(\0132\034.proto.dota"
+      ".CDOTALobbyMember\0222\n\014left_members\030\007 \003(\0132"
+      "\034.proto.dota.CDOTALobbyMember\022\021\n\tleader_"
+      "id\030\013 \001(\006\022\024\n\tserver_id\030\006 \001(\006:\0010\022\021\n\tgame_m"
+      "ode\030\003 \001(\r\022\027\n\017pending_invites\030\n \003(\006\0221\n\005st"
+      "ate\030\004 \001(\0162\036.proto.dota.CSODOTALobby.Stat"
+      "e:\002UI\022\017\n\007connect\030\005 \001(\t\022\?\n\nlobby_type\030\014 \001"
+      "(\0162\".proto.dota.CSODOTALobby.LobbyType:\007"
+      "INVALID\022\024\n\014allow_cheats\030\r \001(\010\022\026\n\016fill_wi"
+      "th_bots\030\016 \001(\010\022\022\n\nintro_mode\030\017 \001(\010\022\021\n\tgam"
+      "e_name\030\020 \001(\t\0223\n\014team_details\030\021 \003(\0132\035.pro"
+      "to.dota.CLobbyTeamDetails\022\027\n\017tutorial_le"
+      "sson\030\022 \001(\r\022\025\n\rtournament_id\030\023 \001(\r\022\032\n\022tou"
+      "rnament_game_id\030\024 \001(\r\022\030\n\rserver_region\030\025"
+      " \001(\r:\0010\022I\n\ngame_state\030\026 \001(\0162\032.proto.dota"
+      ".DOTA_GameState:\031DOTA_GAMERULES_STATE_IN"
+      "IT\022\026\n\016num_spectators\030\027 \001(\r\022\022\n\nmatchgroup"
+      "\030\031 \001(\r\0229\n\007cm_pick\030\034 \001(\0162\030.proto.dota.DOT"
+      "A_CM_PICK:\016DOTA_CM_RANDOM\022\020\n\010match_id\030\036 "
+      "\001(\004\022\036\n\020allow_spectating\030\037 \001(\010:\004true\022R\n\026b"
+      "ot_difficulty_radiant\030$ \001(\0162\035.proto.dota"
+      ".DOTABotDifficulty:\023BOT_DIFFICULTY_HARD\022"
+      "G\n\014game_version\030% \001(\0162\033.proto.dota.DOTAG"
+      "ameVersion:\024GAME_VERSION_CURRENT\022B\n\024time"
+      "d_reward_details\030& \003(\0132$.proto.dota.CLob"
+      "byTimedRewardDetails\022\020\n\010pass_key\030\' \001(\t\022\020"
+      "\n\010leagueid\030* \001(\r\022 \n\025penalty_level_radian"
+      "t\030+ \001(\r:\0010\022\035\n\022penalty_level_dire\030, \001(\r:\001"
+      "0\022\024\n\014load_game_id\030- \001(\r\022\023\n\013series_type\030."
+      " \001(\r\022\033\n\023radiant_series_wins\030/ \001(\r\022\030\n\020dir"
+      "e_series_wins\0300 \001(\r\022\026\n\016loot_generated\0301 "
+      "\001(\r\022\024\n\014loot_awarded\0302 \001(\r\022\026\n\007allchat\0303 \001"
+      "(\010:\005false\022C\n\rdota_tv_delay\0305 \001(\0162\034.proto"
+      ".dota.LobbyDotaTVDelay:\016LobbyDotaTV_10\022\030"
+      "\n\020custom_game_mode\0306 \001(\t\022\027\n\017custom_map_n"
+      "ame\0307 \001(\t\022\031\n\021custom_difficulty\0308 \001(\r\022\013\n\003"
+      "lan\0309 \001(\010\022F\n\026broadcast_channel_info\030: \003("
+      "\0132&.proto.dota.CLobbyBroadcastChannelInf"
+      "o\022\036\n\026first_leaver_accountid\030; \001(\r\022\021\n\tser"
+      "ies_id\030< \001(\r\022\024\n\014low_priority\030= \001(\010\022:\n\016ex"
+      "tra_messages\030> \003(\0132\".proto.dota.CSODOTAL"
+      "obby.CExtraMsg\022,\n\tsave_game\030\? \001(\0132\031.prot"
+      "o.dota.CDOTASaveGame\022\034\n\024first_blood_happ"
+      "ened\030A \001(\010\022I\n\rmatch_outcome\030F \001(\0162\031.prot"
+      "o.dota.EMatchOutcome:\027k_EMatchOutcome_Un"
+      "known\022\027\n\017mass_disconnect\030C \001(\010\022\026\n\016custom"
+      "_game_id\030D \001(\004\022\032\n\022custom_min_players\030G \001"
+      "(\r\022\032\n\022custom_max_players\030H \001(\r\022B\n\014partne"
+      "r_type\030I \001(\0162\036.proto.dota.PartnerAccount"
+      "Type:\014PARTNER_NONE\022&\n\036lan_host_ping_to_s"
+      "erver_region\030J \001(\r\022O\n\nvisibility\030K \001(\0162\037"
+      ".proto.dota.DOTALobbyVisibility:\032DOTALob"
+      "byVisibility_Public\022\027\n\017custom_game_crc\030L"
+      " \001(\006\022&\n\036custom_game_auto_created_lobby\030M"
+      " \001(\010\022\030\n\020league_series_id\030N \001(\r\022\026\n\016league"
+      "_game_id\030O \001(\r\022\035\n\025custom_game_timestamp\030"
+      "P \001(\007\022\037\n\027previous_series_matches\030Q \003(\004\022\037"
+      "\n\027previous_match_override\030R \001(\004\022(\n custo"
+      "m_game_uses_account_records\030S \001(\010\022\027\n\017gam"
+      "e_start_time\030W \001(\r\022Y\n\rpause_setting\030X \001("
+      "\0162!.proto.dota.LobbyDotaPauseSetting:\037Lo"
+      "bbyDotaPauseSetting_Unlimited\022\034\n\024lobby_m"
+      "vp_account_id\030Y \001(\r\022#\n\033weekend_tourney_d"
+      "ivision_id\030Z \001(\r\022#\n\033weekend_tourney_skil"
+      "l_level\030[ \001(\r\022%\n\035weekend_tourney_bracket"
+      "_round\030\\ \001(\r\022O\n\023bot_difficulty_dire\030] \001("
+      "\0162\035.proto.dota.DOTABotDifficulty:\023BOT_DI"
+      "FFICULTY_HARD\022\023\n\013bot_radiant\030^ \001(\004\022\020\n\010bo"
+      "t_dire\030_ \001(\004\022!\n\031event_progression_enable"
+      "d\030` \001(\010\022m\n\030selection_priority_rules\030a \001("
+      "\0162&.proto.dota.DOTASelectionPriorityRule"
+      "s:#k_DOTASelectionPriorityRules_Manual\0222"
+      "\n*series_previous_selection_priority_tea"
+      "m_id\030b \001(\r\0221\n)series_current_selection_p"
+      "riority_team_id\030c \001(\r\022{\n#series_current_"
+      "priority_team_choice\030d \001(\0162\'.proto.dota."
+      "DOTASelectionPriorityChoice:%k_DOTASelec"
+      "tionPriorityChoice_Invalid\022\177\n\'series_cur"
+      "rent_non_priority_team_choice\030e \001(\0162\'.pr"
+      "oto.dota.DOTASelectionPriorityChoice:%k_"
+      "DOTASelectionPriorityChoice_Invalid\0228\n0s"
+      "eries_current_selection_priority_used_co"
+      "in_toss\030f \001(\010\032)\n\tCExtraMsg\022\n\n\002id\030\001 \001(\r\022\020"
+      "\n\010contents\030\002 \001(\014\"d\n\005State\022\006\n\002UI\020\000\022\013\n\007REA"
+      "DYUP\020\004\022\017\n\013SERVERSETUP\020\001\022\007\n\003RUN\020\002\022\014\n\010POST"
+      "GAME\020\003\022\014\n\010NOTREADY\020\005\022\020\n\014SERVERASSIGN\020\006\"\377"
+      "\001\n\tLobbyType\022\024\n\007INVALID\020\377\377\377\377\377\377\377\377\377\001\022\020\n\014CA"
+      "SUAL_MATCH\020\000\022\014\n\010PRACTICE\020\001\022\016\n\nTOURNAMENT"
+      "\020\002\022\022\n\016COOP_BOT_MATCH\020\004\022\025\n\021LEGACY_TEAM_MA"
+      "TCH\020\005\022\033\n\027LEGACY_SOLO_QUEUE_MATCH\020\006\022\025\n\021CO"
+      "MPETITIVE_MATCH\020\007\022\024\n\020CASUAL_1V1_MATCH\020\010\022"
+      "\023\n\017WEEKEND_TOURNEY\020\t\022\023\n\017LOCAL_BOT_MATCH\020"
+      "\n\022\r\n\tSPECTATOR\020\013\"(\n\030CMsgLobbyPlaytestDet"
+      "ails\022\014\n\004json\030\001 \001(\t*P\n\020LobbyDotaTVDelay\022\022"
+      "\n\016LobbyDotaTV_10\020\000\022\023\n\017LobbyDotaTV_120\020\001\022"
+      "\023\n\017LobbyDotaTV_300\020\002*\203\001\n\025LobbyDotaPauseS"
+      "etting\022#\n\037LobbyDotaPauseSetting_Unlimite"
+      "d\020\000\022!\n\035LobbyDotaPauseSetting_Limited\020\001\022\""
+      "\n\036LobbyDotaPauseSetting_Disabled\020\002B\005H\001\200\001"
+      "\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 8034);
+      descriptor, 8361);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dota_gcmessages_common_match_management.proto", &protobuf_RegisterTypes);
   ::proto::dota::protobuf_steammessages_2eproto::AddDescriptors();
@@ -1877,6 +1894,7 @@ const int CSODOTAParty::kPartyBuilderSlotsToFillFieldNumber;
 const int CSODOTAParty::kPartyBuilderMatchGroupsFieldNumber;
 const int CSODOTAParty::kPartyBuilderStartTimeFieldNumber;
 const int CSODOTAParty::kSoloQueueFieldNumber;
+const int CSODOTAParty::kBotScriptIndexFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CSODOTAParty::CSODOTAParty()
@@ -1903,15 +1921,15 @@ CSODOTAParty::CSODOTAParty(const CSODOTAParty& from)
     team_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.team_name_);
   }
   ::memcpy(&party_id_, &from.party_id_,
-    reinterpret_cast<char*>(&party_builder_match_groups_) -
-    reinterpret_cast<char*>(&party_id_) + sizeof(party_builder_match_groups_));
+    reinterpret_cast<char*>(&bot_script_index_) -
+    reinterpret_cast<char*>(&party_id_) + sizeof(bot_script_index_));
   // @@protoc_insertion_point(copy_constructor:proto.dota.CSODOTAParty)
 }
 
 void CSODOTAParty::SharedCtor() {
   team_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&party_id_, 0, reinterpret_cast<char*>(&party_builder_match_groups_) -
-    reinterpret_cast<char*>(&party_id_) + sizeof(party_builder_match_groups_));
+  ::memset(&party_id_, 0, reinterpret_cast<char*>(&bot_script_index_) -
+    reinterpret_cast<char*>(&party_id_) + sizeof(bot_script_index_));
   _cached_size_ = 0;
 }
 
@@ -1967,16 +1985,16 @@ void CSODOTAParty::Clear() {
       reinterpret_cast<char*>(&match_type_) + sizeof(open_guild_id_));
   }
   if (_has_bits_[16 / 32] & 16711680u) {
-    ::memset(&raw_started_matchmaking_time_, 0, reinterpret_cast<char*>(&region_select_flags_) -
-      reinterpret_cast<char*>(&raw_started_matchmaking_time_) + sizeof(region_select_flags_));
+    ::memset(&raw_started_matchmaking_time_, 0, reinterpret_cast<char*>(&exclusive_tournament_id_) -
+      reinterpret_cast<char*>(&raw_started_matchmaking_time_) + sizeof(exclusive_tournament_id_));
   }
   if (_has_bits_[24 / 32] & 4278190080u) {
-    ::memset(&exclusive_tournament_id_, 0, reinterpret_cast<char*>(&team_ui_logo_) -
-      reinterpret_cast<char*>(&exclusive_tournament_id_) + sizeof(team_ui_logo_));
+    ::memset(&tourney_division_id_, 0, reinterpret_cast<char*>(&team_base_logo_) -
+      reinterpret_cast<char*>(&tourney_division_id_) + sizeof(team_base_logo_));
   }
-  if (_has_bits_[32 / 32] & 31u) {
-    ::memset(&team_base_logo_, 0, reinterpret_cast<char*>(&party_builder_match_groups_) -
-      reinterpret_cast<char*>(&team_base_logo_) + sizeof(party_builder_match_groups_));
+  if (_has_bits_[32 / 32] & 63u) {
+    ::memset(&tourney_queue_deadline_time_, 0, reinterpret_cast<char*>(&bot_script_index_) -
+      reinterpret_cast<char*>(&tourney_queue_deadline_time_) + sizeof(bot_script_index_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -2604,6 +2622,20 @@ bool CSODOTAParty::MergePartialFromCodedStream(
         break;
       }
 
+      // optional uint32 bot_script_index = 60;
+      case 60: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(480u)) {
+          set_has_bot_script_index();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &bot_script_index_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -2755,7 +2787,7 @@ void CSODOTAParty::SerializeWithCachedSizes(
   }
 
   // optional bool open_for_join_requests = 40;
-  if (cached_has_bits & 0x10000000u) {
+  if (cached_has_bits & 0x08000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(40, this->open_for_join_requests(), output);
   }
 
@@ -2772,37 +2804,37 @@ void CSODOTAParty::SerializeWithCachedSizes(
   }
 
   // optional uint32 account_flags = 43;
-  if (cached_has_bits & 0x00400000u) {
+  if (cached_has_bits & 0x00200000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(43, this->account_flags(), output);
   }
 
   // optional uint32 region_select_flags = 44;
-  if (cached_has_bits & 0x00800000u) {
+  if (cached_has_bits & 0x00400000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(44, this->region_select_flags(), output);
   }
 
   // optional uint32 exclusive_tournament_id = 45;
-  if (cached_has_bits & 0x01000000u) {
+  if (cached_has_bits & 0x00800000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(45, this->exclusive_tournament_id(), output);
   }
 
   // optional uint32 tourney_division_id = 47;
-  if (cached_has_bits & 0x02000000u) {
+  if (cached_has_bits & 0x01000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(47, this->tourney_division_id(), output);
   }
 
   // optional uint32 tourney_schedule_time = 48;
-  if (cached_has_bits & 0x04000000u) {
+  if (cached_has_bits & 0x02000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(48, this->tourney_schedule_time(), output);
   }
 
   // optional uint32 tourney_skill_level = 49;
-  if (cached_has_bits & 0x08000000u) {
+  if (cached_has_bits & 0x04000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(49, this->tourney_skill_level(), output);
   }
 
   // optional uint32 tourney_bracket_round = 50;
-  if (cached_has_bits & 0x40000000u) {
+  if (cached_has_bits & 0x20000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(50, this->tourney_bracket_round(), output);
   }
 
@@ -2817,46 +2849,52 @@ void CSODOTAParty::SerializeWithCachedSizes(
   }
 
   // optional uint64 team_ui_logo = 52;
-  if (cached_has_bits & 0x80000000u) {
+  if (cached_has_bits & 0x40000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(52, this->team_ui_logo(), output);
   }
 
-  cached_has_bits = _has_bits_[1];
   // optional uint64 team_base_logo = 53;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x80000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(53, this->team_base_logo(), output);
   }
 
+  cached_has_bits = _has_bits_[1];
   // optional uint32 tourney_queue_deadline_time = 54;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(54, this->tourney_queue_deadline_time(), output);
   }
 
   // optional .proto.dota.ETourneyQueueDeadlineState tourney_queue_deadline_state = 55 [default = k_ETourneyQueueDeadlineState_Normal];
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       55, this->tourney_queue_deadline_state(), output);
   }
 
   // optional uint32 party_builder_slots_to_fill = 56;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(56, this->party_builder_slots_to_fill(), output);
   }
 
   // optional uint32 party_builder_match_groups = 57;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(57, this->party_builder_match_groups(), output);
   }
 
-  cached_has_bits = _has_bits_[0];
   // optional uint32 party_builder_start_time = 58;
-  if (cached_has_bits & 0x00200000u) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(58, this->party_builder_start_time(), output);
   }
 
+  cached_has_bits = _has_bits_[0];
   // optional bool solo_queue = 59;
-  if (cached_has_bits & 0x20000000u) {
+  if (cached_has_bits & 0x10000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(59, this->solo_queue(), output);
+  }
+
+  cached_has_bits = _has_bits_[1];
+  // optional uint32 bot_script_index = 60;
+  if (cached_has_bits & 0x00000020u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(60, this->bot_script_index(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2992,7 +3030,7 @@ void CSODOTAParty::SerializeWithCachedSizes(
   }
 
   // optional bool open_for_join_requests = 40;
-  if (cached_has_bits & 0x10000000u) {
+  if (cached_has_bits & 0x08000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(40, this->open_for_join_requests(), target);
   }
 
@@ -3011,37 +3049,37 @@ void CSODOTAParty::SerializeWithCachedSizes(
   }
 
   // optional uint32 account_flags = 43;
-  if (cached_has_bits & 0x00400000u) {
+  if (cached_has_bits & 0x00200000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(43, this->account_flags(), target);
   }
 
   // optional uint32 region_select_flags = 44;
-  if (cached_has_bits & 0x00800000u) {
+  if (cached_has_bits & 0x00400000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(44, this->region_select_flags(), target);
   }
 
   // optional uint32 exclusive_tournament_id = 45;
-  if (cached_has_bits & 0x01000000u) {
+  if (cached_has_bits & 0x00800000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(45, this->exclusive_tournament_id(), target);
   }
 
   // optional uint32 tourney_division_id = 47;
-  if (cached_has_bits & 0x02000000u) {
+  if (cached_has_bits & 0x01000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(47, this->tourney_division_id(), target);
   }
 
   // optional uint32 tourney_schedule_time = 48;
-  if (cached_has_bits & 0x04000000u) {
+  if (cached_has_bits & 0x02000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(48, this->tourney_schedule_time(), target);
   }
 
   // optional uint32 tourney_skill_level = 49;
-  if (cached_has_bits & 0x08000000u) {
+  if (cached_has_bits & 0x04000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(49, this->tourney_skill_level(), target);
   }
 
   // optional uint32 tourney_bracket_round = 50;
-  if (cached_has_bits & 0x40000000u) {
+  if (cached_has_bits & 0x20000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(50, this->tourney_bracket_round(), target);
   }
 
@@ -3057,46 +3095,52 @@ void CSODOTAParty::SerializeWithCachedSizes(
   }
 
   // optional uint64 team_ui_logo = 52;
-  if (cached_has_bits & 0x80000000u) {
+  if (cached_has_bits & 0x40000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(52, this->team_ui_logo(), target);
   }
 
-  cached_has_bits = _has_bits_[1];
   // optional uint64 team_base_logo = 53;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x80000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(53, this->team_base_logo(), target);
   }
 
+  cached_has_bits = _has_bits_[1];
   // optional uint32 tourney_queue_deadline_time = 54;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(54, this->tourney_queue_deadline_time(), target);
   }
 
   // optional .proto.dota.ETourneyQueueDeadlineState tourney_queue_deadline_state = 55 [default = k_ETourneyQueueDeadlineState_Normal];
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       55, this->tourney_queue_deadline_state(), target);
   }
 
   // optional uint32 party_builder_slots_to_fill = 56;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(56, this->party_builder_slots_to_fill(), target);
   }
 
   // optional uint32 party_builder_match_groups = 57;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(57, this->party_builder_match_groups(), target);
   }
 
-  cached_has_bits = _has_bits_[0];
   // optional uint32 party_builder_start_time = 58;
-  if (cached_has_bits & 0x00200000u) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(58, this->party_builder_start_time(), target);
   }
 
+  cached_has_bits = _has_bits_[0];
   // optional bool solo_queue = 59;
-  if (cached_has_bits & 0x20000000u) {
+  if (cached_has_bits & 0x10000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(59, this->solo_queue(), target);
+  }
+
+  cached_has_bits = _has_bits_[1];
+  // optional uint32 bot_script_index = 60;
+  if (cached_has_bits & 0x00000020u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(60, this->bot_script_index(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -3314,13 +3358,6 @@ size_t CSODOTAParty::ByteSizeLong() const {
           this->map_preference());
     }
 
-    // optional uint32 party_builder_start_time = 58;
-    if (has_party_builder_start_time()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->party_builder_start_time());
-    }
-
     // optional uint32 account_flags = 43;
     if (has_account_flags()) {
       total_size += 2 +
@@ -3335,8 +3372,6 @@ size_t CSODOTAParty::ByteSizeLong() const {
           this->region_select_flags());
     }
 
-  }
-  if (_has_bits_[24 / 32] & 4278190080u) {
     // optional uint32 exclusive_tournament_id = 45;
     if (has_exclusive_tournament_id()) {
       total_size += 2 +
@@ -3344,6 +3379,8 @@ size_t CSODOTAParty::ByteSizeLong() const {
           this->exclusive_tournament_id());
     }
 
+  }
+  if (_has_bits_[24 / 32] & 4278190080u) {
     // optional uint32 tourney_division_id = 47;
     if (has_tourney_division_id()) {
       total_size += 2 +
@@ -3389,8 +3426,6 @@ size_t CSODOTAParty::ByteSizeLong() const {
           this->team_ui_logo());
     }
 
-  }
-  if (_has_bits_[32 / 32] & 31u) {
     // optional uint64 team_base_logo = 53;
     if (has_team_base_logo()) {
       total_size += 2 +
@@ -3398,6 +3433,8 @@ size_t CSODOTAParty::ByteSizeLong() const {
           this->team_base_logo());
     }
 
+  }
+  if (_has_bits_[32 / 32] & 63u) {
     // optional uint32 tourney_queue_deadline_time = 54;
     if (has_tourney_queue_deadline_time()) {
       total_size += 2 +
@@ -3423,6 +3460,20 @@ size_t CSODOTAParty::ByteSizeLong() const {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
           this->party_builder_match_groups());
+    }
+
+    // optional uint32 party_builder_start_time = 58;
+    if (has_party_builder_start_time()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->party_builder_start_time());
+    }
+
+    // optional uint32 bot_script_index = 60;
+    if (has_bot_script_index()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->bot_script_index());
     }
 
   }
@@ -3533,59 +3584,62 @@ void CSODOTAParty::MergeFrom(const CSODOTAParty& from) {
       map_preference_ = from.map_preference_;
     }
     if (cached_has_bits & 0x00200000u) {
-      party_builder_start_time_ = from.party_builder_start_time_;
-    }
-    if (cached_has_bits & 0x00400000u) {
       account_flags_ = from.account_flags_;
     }
-    if (cached_has_bits & 0x00800000u) {
+    if (cached_has_bits & 0x00400000u) {
       region_select_flags_ = from.region_select_flags_;
+    }
+    if (cached_has_bits & 0x00800000u) {
+      exclusive_tournament_id_ = from.exclusive_tournament_id_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
   if (cached_has_bits & 4278190080u) {
     if (cached_has_bits & 0x01000000u) {
-      exclusive_tournament_id_ = from.exclusive_tournament_id_;
-    }
-    if (cached_has_bits & 0x02000000u) {
       tourney_division_id_ = from.tourney_division_id_;
     }
-    if (cached_has_bits & 0x04000000u) {
+    if (cached_has_bits & 0x02000000u) {
       tourney_schedule_time_ = from.tourney_schedule_time_;
     }
-    if (cached_has_bits & 0x08000000u) {
+    if (cached_has_bits & 0x04000000u) {
       tourney_skill_level_ = from.tourney_skill_level_;
     }
-    if (cached_has_bits & 0x10000000u) {
+    if (cached_has_bits & 0x08000000u) {
       open_for_join_requests_ = from.open_for_join_requests_;
     }
-    if (cached_has_bits & 0x20000000u) {
+    if (cached_has_bits & 0x10000000u) {
       solo_queue_ = from.solo_queue_;
     }
-    if (cached_has_bits & 0x40000000u) {
+    if (cached_has_bits & 0x20000000u) {
       tourney_bracket_round_ = from.tourney_bracket_round_;
     }
-    if (cached_has_bits & 0x80000000u) {
+    if (cached_has_bits & 0x40000000u) {
       team_ui_logo_ = from.team_ui_logo_;
+    }
+    if (cached_has_bits & 0x80000000u) {
+      team_base_logo_ = from.team_base_logo_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
   cached_has_bits = from._has_bits_[1];
-  if (cached_has_bits & 31u) {
+  if (cached_has_bits & 63u) {
     if (cached_has_bits & 0x00000001u) {
-      team_base_logo_ = from.team_base_logo_;
-    }
-    if (cached_has_bits & 0x00000002u) {
       tourney_queue_deadline_time_ = from.tourney_queue_deadline_time_;
     }
-    if (cached_has_bits & 0x00000004u) {
+    if (cached_has_bits & 0x00000002u) {
       tourney_queue_deadline_state_ = from.tourney_queue_deadline_state_;
     }
-    if (cached_has_bits & 0x00000008u) {
+    if (cached_has_bits & 0x00000004u) {
       party_builder_slots_to_fill_ = from.party_builder_slots_to_fill_;
     }
-    if (cached_has_bits & 0x00000010u) {
+    if (cached_has_bits & 0x00000008u) {
       party_builder_match_groups_ = from.party_builder_match_groups_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      party_builder_start_time_ = from.party_builder_start_time_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      bot_script_index_ = from.bot_script_index_;
     }
     _has_bits_[1] |= cached_has_bits;
   }
@@ -3640,7 +3694,6 @@ void CSODOTAParty::InternalSwap(CSODOTAParty* other) {
   std::swap(attempt_num_, other->attempt_num_);
   std::swap(low_priority_games_remaining_, other->low_priority_games_remaining_);
   std::swap(map_preference_, other->map_preference_);
-  std::swap(party_builder_start_time_, other->party_builder_start_time_);
   std::swap(account_flags_, other->account_flags_);
   std::swap(region_select_flags_, other->region_select_flags_);
   std::swap(exclusive_tournament_id_, other->exclusive_tournament_id_);
@@ -3656,6 +3709,8 @@ void CSODOTAParty::InternalSwap(CSODOTAParty* other) {
   std::swap(tourney_queue_deadline_state_, other->tourney_queue_deadline_state_);
   std::swap(party_builder_slots_to_fill_, other->party_builder_slots_to_fill_);
   std::swap(party_builder_match_groups_, other->party_builder_match_groups_);
+  std::swap(party_builder_start_time_, other->party_builder_start_time_);
+  std::swap(bot_script_index_, other->bot_script_index_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   std::swap(_has_bits_[1], other->_has_bits_[1]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -4080,13 +4135,13 @@ void CSODOTAParty::set_allocated_team_name(::std::string* team_name) {
 
 // optional uint64 team_ui_logo = 52;
 bool CSODOTAParty::has_team_ui_logo() const {
-  return (_has_bits_[0] & 0x80000000u) != 0;
+  return (_has_bits_[0] & 0x40000000u) != 0;
 }
 void CSODOTAParty::set_has_team_ui_logo() {
-  _has_bits_[0] |= 0x80000000u;
+  _has_bits_[0] |= 0x40000000u;
 }
 void CSODOTAParty::clear_has_team_ui_logo() {
-  _has_bits_[0] &= ~0x80000000u;
+  _has_bits_[0] &= ~0x40000000u;
 }
 void CSODOTAParty::clear_team_ui_logo() {
   team_ui_logo_ = GOOGLE_ULONGLONG(0);
@@ -4104,13 +4159,13 @@ void CSODOTAParty::set_team_ui_logo(::google::protobuf::uint64 value) {
 
 // optional uint64 team_base_logo = 53;
 bool CSODOTAParty::has_team_base_logo() const {
-  return (_has_bits_[1] & 0x00000001u) != 0;
+  return (_has_bits_[0] & 0x80000000u) != 0;
 }
 void CSODOTAParty::set_has_team_base_logo() {
-  _has_bits_[1] |= 0x00000001u;
+  _has_bits_[0] |= 0x80000000u;
 }
 void CSODOTAParty::clear_has_team_base_logo() {
-  _has_bits_[1] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x80000000u;
 }
 void CSODOTAParty::clear_team_base_logo() {
   team_base_logo_ = GOOGLE_ULONGLONG(0);
@@ -4356,13 +4411,13 @@ void CSODOTAParty::set_low_priority_games_remaining(::google::protobuf::uint32 v
 
 // optional bool open_for_join_requests = 40;
 bool CSODOTAParty::has_open_for_join_requests() const {
-  return (_has_bits_[0] & 0x10000000u) != 0;
+  return (_has_bits_[0] & 0x08000000u) != 0;
 }
 void CSODOTAParty::set_has_open_for_join_requests() {
-  _has_bits_[0] |= 0x10000000u;
+  _has_bits_[0] |= 0x08000000u;
 }
 void CSODOTAParty::clear_has_open_for_join_requests() {
-  _has_bits_[0] &= ~0x10000000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 void CSODOTAParty::clear_open_for_join_requests() {
   open_for_join_requests_ = false;
@@ -4440,13 +4495,13 @@ CSODOTAParty::recv_invites() const {
 
 // optional uint32 account_flags = 43;
 bool CSODOTAParty::has_account_flags() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
+  return (_has_bits_[0] & 0x00200000u) != 0;
 }
 void CSODOTAParty::set_has_account_flags() {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x00200000u;
 }
 void CSODOTAParty::clear_has_account_flags() {
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 void CSODOTAParty::clear_account_flags() {
   account_flags_ = 0u;
@@ -4464,13 +4519,13 @@ void CSODOTAParty::set_account_flags(::google::protobuf::uint32 value) {
 
 // optional uint32 region_select_flags = 44;
 bool CSODOTAParty::has_region_select_flags() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
+  return (_has_bits_[0] & 0x00400000u) != 0;
 }
 void CSODOTAParty::set_has_region_select_flags() {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x00400000u;
 }
 void CSODOTAParty::clear_has_region_select_flags() {
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 void CSODOTAParty::clear_region_select_flags() {
   region_select_flags_ = 0u;
@@ -4488,13 +4543,13 @@ void CSODOTAParty::set_region_select_flags(::google::protobuf::uint32 value) {
 
 // optional uint32 exclusive_tournament_id = 45;
 bool CSODOTAParty::has_exclusive_tournament_id() const {
-  return (_has_bits_[0] & 0x01000000u) != 0;
+  return (_has_bits_[0] & 0x00800000u) != 0;
 }
 void CSODOTAParty::set_has_exclusive_tournament_id() {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x00800000u;
 }
 void CSODOTAParty::clear_has_exclusive_tournament_id() {
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 void CSODOTAParty::clear_exclusive_tournament_id() {
   exclusive_tournament_id_ = 0u;
@@ -4512,13 +4567,13 @@ void CSODOTAParty::set_exclusive_tournament_id(::google::protobuf::uint32 value)
 
 // optional uint32 tourney_division_id = 47;
 bool CSODOTAParty::has_tourney_division_id() const {
-  return (_has_bits_[0] & 0x02000000u) != 0;
+  return (_has_bits_[0] & 0x01000000u) != 0;
 }
 void CSODOTAParty::set_has_tourney_division_id() {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x01000000u;
 }
 void CSODOTAParty::clear_has_tourney_division_id() {
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x01000000u;
 }
 void CSODOTAParty::clear_tourney_division_id() {
   tourney_division_id_ = 0u;
@@ -4536,13 +4591,13 @@ void CSODOTAParty::set_tourney_division_id(::google::protobuf::uint32 value) {
 
 // optional uint32 tourney_schedule_time = 48;
 bool CSODOTAParty::has_tourney_schedule_time() const {
-  return (_has_bits_[0] & 0x04000000u) != 0;
+  return (_has_bits_[0] & 0x02000000u) != 0;
 }
 void CSODOTAParty::set_has_tourney_schedule_time() {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x02000000u;
 }
 void CSODOTAParty::clear_has_tourney_schedule_time() {
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 void CSODOTAParty::clear_tourney_schedule_time() {
   tourney_schedule_time_ = 0u;
@@ -4560,13 +4615,13 @@ void CSODOTAParty::set_tourney_schedule_time(::google::protobuf::uint32 value) {
 
 // optional uint32 tourney_skill_level = 49;
 bool CSODOTAParty::has_tourney_skill_level() const {
-  return (_has_bits_[0] & 0x08000000u) != 0;
+  return (_has_bits_[0] & 0x04000000u) != 0;
 }
 void CSODOTAParty::set_has_tourney_skill_level() {
-  _has_bits_[0] |= 0x08000000u;
+  _has_bits_[0] |= 0x04000000u;
 }
 void CSODOTAParty::clear_has_tourney_skill_level() {
-  _has_bits_[0] &= ~0x08000000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 void CSODOTAParty::clear_tourney_skill_level() {
   tourney_skill_level_ = 0u;
@@ -4584,13 +4639,13 @@ void CSODOTAParty::set_tourney_skill_level(::google::protobuf::uint32 value) {
 
 // optional uint32 tourney_bracket_round = 50;
 bool CSODOTAParty::has_tourney_bracket_round() const {
-  return (_has_bits_[0] & 0x40000000u) != 0;
+  return (_has_bits_[0] & 0x20000000u) != 0;
 }
 void CSODOTAParty::set_has_tourney_bracket_round() {
-  _has_bits_[0] |= 0x40000000u;
+  _has_bits_[0] |= 0x20000000u;
 }
 void CSODOTAParty::clear_has_tourney_bracket_round() {
-  _has_bits_[0] &= ~0x40000000u;
+  _has_bits_[0] &= ~0x20000000u;
 }
 void CSODOTAParty::clear_tourney_bracket_round() {
   tourney_bracket_round_ = 0u;
@@ -4608,13 +4663,13 @@ void CSODOTAParty::set_tourney_bracket_round(::google::protobuf::uint32 value) {
 
 // optional uint32 tourney_queue_deadline_time = 54;
 bool CSODOTAParty::has_tourney_queue_deadline_time() const {
-  return (_has_bits_[1] & 0x00000002u) != 0;
+  return (_has_bits_[1] & 0x00000001u) != 0;
 }
 void CSODOTAParty::set_has_tourney_queue_deadline_time() {
-  _has_bits_[1] |= 0x00000002u;
+  _has_bits_[1] |= 0x00000001u;
 }
 void CSODOTAParty::clear_has_tourney_queue_deadline_time() {
-  _has_bits_[1] &= ~0x00000002u;
+  _has_bits_[1] &= ~0x00000001u;
 }
 void CSODOTAParty::clear_tourney_queue_deadline_time() {
   tourney_queue_deadline_time_ = 0u;
@@ -4632,13 +4687,13 @@ void CSODOTAParty::set_tourney_queue_deadline_time(::google::protobuf::uint32 va
 
 // optional .proto.dota.ETourneyQueueDeadlineState tourney_queue_deadline_state = 55 [default = k_ETourneyQueueDeadlineState_Normal];
 bool CSODOTAParty::has_tourney_queue_deadline_state() const {
-  return (_has_bits_[1] & 0x00000004u) != 0;
+  return (_has_bits_[1] & 0x00000002u) != 0;
 }
 void CSODOTAParty::set_has_tourney_queue_deadline_state() {
-  _has_bits_[1] |= 0x00000004u;
+  _has_bits_[1] |= 0x00000002u;
 }
 void CSODOTAParty::clear_has_tourney_queue_deadline_state() {
-  _has_bits_[1] &= ~0x00000004u;
+  _has_bits_[1] &= ~0x00000002u;
 }
 void CSODOTAParty::clear_tourney_queue_deadline_state() {
   tourney_queue_deadline_state_ = 0;
@@ -4657,13 +4712,13 @@ void CSODOTAParty::set_tourney_queue_deadline_state(::proto::dota::ETourneyQueue
 
 // optional uint32 party_builder_slots_to_fill = 56;
 bool CSODOTAParty::has_party_builder_slots_to_fill() const {
-  return (_has_bits_[1] & 0x00000008u) != 0;
+  return (_has_bits_[1] & 0x00000004u) != 0;
 }
 void CSODOTAParty::set_has_party_builder_slots_to_fill() {
-  _has_bits_[1] |= 0x00000008u;
+  _has_bits_[1] |= 0x00000004u;
 }
 void CSODOTAParty::clear_has_party_builder_slots_to_fill() {
-  _has_bits_[1] &= ~0x00000008u;
+  _has_bits_[1] &= ~0x00000004u;
 }
 void CSODOTAParty::clear_party_builder_slots_to_fill() {
   party_builder_slots_to_fill_ = 0u;
@@ -4681,13 +4736,13 @@ void CSODOTAParty::set_party_builder_slots_to_fill(::google::protobuf::uint32 va
 
 // optional uint32 party_builder_match_groups = 57;
 bool CSODOTAParty::has_party_builder_match_groups() const {
-  return (_has_bits_[1] & 0x00000010u) != 0;
+  return (_has_bits_[1] & 0x00000008u) != 0;
 }
 void CSODOTAParty::set_has_party_builder_match_groups() {
-  _has_bits_[1] |= 0x00000010u;
+  _has_bits_[1] |= 0x00000008u;
 }
 void CSODOTAParty::clear_has_party_builder_match_groups() {
-  _has_bits_[1] &= ~0x00000010u;
+  _has_bits_[1] &= ~0x00000008u;
 }
 void CSODOTAParty::clear_party_builder_match_groups() {
   party_builder_match_groups_ = 0u;
@@ -4705,13 +4760,13 @@ void CSODOTAParty::set_party_builder_match_groups(::google::protobuf::uint32 val
 
 // optional uint32 party_builder_start_time = 58;
 bool CSODOTAParty::has_party_builder_start_time() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
+  return (_has_bits_[1] & 0x00000010u) != 0;
 }
 void CSODOTAParty::set_has_party_builder_start_time() {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[1] |= 0x00000010u;
 }
 void CSODOTAParty::clear_has_party_builder_start_time() {
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[1] &= ~0x00000010u;
 }
 void CSODOTAParty::clear_party_builder_start_time() {
   party_builder_start_time_ = 0u;
@@ -4729,13 +4784,13 @@ void CSODOTAParty::set_party_builder_start_time(::google::protobuf::uint32 value
 
 // optional bool solo_queue = 59;
 bool CSODOTAParty::has_solo_queue() const {
-  return (_has_bits_[0] & 0x20000000u) != 0;
+  return (_has_bits_[0] & 0x10000000u) != 0;
 }
 void CSODOTAParty::set_has_solo_queue() {
-  _has_bits_[0] |= 0x20000000u;
+  _has_bits_[0] |= 0x10000000u;
 }
 void CSODOTAParty::clear_has_solo_queue() {
-  _has_bits_[0] &= ~0x20000000u;
+  _has_bits_[0] &= ~0x10000000u;
 }
 void CSODOTAParty::clear_solo_queue() {
   solo_queue_ = false;
@@ -4749,6 +4804,30 @@ void CSODOTAParty::set_solo_queue(bool value) {
   set_has_solo_queue();
   solo_queue_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CSODOTAParty.solo_queue)
+}
+
+// optional uint32 bot_script_index = 60;
+bool CSODOTAParty::has_bot_script_index() const {
+  return (_has_bits_[1] & 0x00000020u) != 0;
+}
+void CSODOTAParty::set_has_bot_script_index() {
+  _has_bits_[1] |= 0x00000020u;
+}
+void CSODOTAParty::clear_has_bot_script_index() {
+  _has_bits_[1] &= ~0x00000020u;
+}
+void CSODOTAParty::clear_bot_script_index() {
+  bot_script_index_ = 0u;
+  clear_has_bot_script_index();
+}
+::google::protobuf::uint32 CSODOTAParty::bot_script_index() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTAParty.bot_script_index)
+  return bot_script_index_;
+}
+void CSODOTAParty::set_bot_script_index(::google::protobuf::uint32 value) {
+  set_has_bot_script_index();
+  bot_script_index_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTAParty.bot_script_index)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -8126,7 +8205,7 @@ const int CDOTALobbyMember::kCameramanFieldNumber;
 const int CDOTALobbyMember::kCustomGameProductIdsFieldNumber;
 const int CDOTALobbyMember::kLobbyMvpVoteAccountIdFieldNumber;
 const int CDOTALobbyMember::kSearchMatchTypeFieldNumber;
-const int CDOTALobbyMember::kFavoriteTeamAndQualityFieldNumber;
+const int CDOTALobbyMember::kFavoriteTeamPackedFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CDOTALobbyMember::CDOTALobbyMember()
@@ -8165,8 +8244,8 @@ void CDOTALobbyMember::SharedCtor() {
   _cached_size_ = 0;
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   nexon_pc_bang_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&id_, 0, reinterpret_cast<char*>(&search_match_type_) -
-    reinterpret_cast<char*>(&id_) + sizeof(search_match_type_));
+  ::memset(&id_, 0, reinterpret_cast<char*>(&favorite_team_packed_) -
+    reinterpret_cast<char*>(&id_) + sizeof(favorite_team_packed_));
   coach_team_ = 5;
 }
 
@@ -8228,8 +8307,8 @@ void CDOTALobbyMember::Clear() {
       reinterpret_cast<char*>(&meta_xp_) + sizeof(leaver_actions_));
   }
   if (_has_bits_[16 / 32] & 4128768u) {
-    ::memset(&favorite_team_and_quality_, 0, reinterpret_cast<char*>(&search_match_type_) -
-      reinterpret_cast<char*>(&favorite_team_and_quality_) + sizeof(search_match_type_));
+    ::memset(&rank_change_, 0, reinterpret_cast<char*>(&favorite_team_packed_) -
+      reinterpret_cast<char*>(&rank_change_) + sizeof(favorite_team_packed_));
     coach_team_ = 5;
   }
   _has_bits_.Clear();
@@ -8635,14 +8714,14 @@ bool CDOTALobbyMember::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 favorite_team_and_quality = 34;
-      case 34: {
+      // optional uint64 favorite_team_packed = 35;
+      case 35: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(272u)) {
-          set_has_favorite_team_and_quality();
+            static_cast< ::google::protobuf::uint8>(280u)) {
+          set_has_favorite_team_packed();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &favorite_team_and_quality_)));
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &favorite_team_packed_)));
         } else {
           goto handle_unusual;
         }
@@ -8796,12 +8875,12 @@ void CDOTALobbyMember::SerializeWithCachedSizes(
   }
 
   // optional sint32 rank_change = 29;
-  if (cached_has_bits & 0x00020000u) {
+  if (cached_has_bits & 0x00010000u) {
     ::google::protobuf::internal::WireFormatLite::WriteSInt32(29, this->rank_change(), output);
   }
 
   // optional bool cameraman = 30;
-  if (cached_has_bits & 0x00040000u) {
+  if (cached_has_bits & 0x00020000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(30, this->cameraman(), output);
   }
 
@@ -8812,19 +8891,19 @@ void CDOTALobbyMember::SerializeWithCachedSizes(
   }
 
   // optional uint32 lobby_mvp_vote_account_id = 32;
-  if (cached_has_bits & 0x00080000u) {
+  if (cached_has_bits & 0x00040000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(32, this->lobby_mvp_vote_account_id(), output);
   }
 
   // optional .proto.dota.MatchType search_match_type = 33 [default = MATCH_TYPE_CASUAL];
-  if (cached_has_bits & 0x00100000u) {
+  if (cached_has_bits & 0x00080000u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       33, this->search_match_type(), output);
   }
 
-  // optional uint32 favorite_team_and_quality = 34;
-  if (cached_has_bits & 0x00010000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(34, this->favorite_team_and_quality(), output);
+  // optional uint64 favorite_team_packed = 35;
+  if (cached_has_bits & 0x00100000u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(35, this->favorite_team_packed(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -8958,12 +9037,12 @@ void CDOTALobbyMember::SerializeWithCachedSizes(
   }
 
   // optional sint32 rank_change = 29;
-  if (cached_has_bits & 0x00020000u) {
+  if (cached_has_bits & 0x00010000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteSInt32ToArray(29, this->rank_change(), target);
   }
 
   // optional bool cameraman = 30;
-  if (cached_has_bits & 0x00040000u) {
+  if (cached_has_bits & 0x00020000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(30, this->cameraman(), target);
   }
 
@@ -8972,19 +9051,19 @@ void CDOTALobbyMember::SerializeWithCachedSizes(
     WriteUInt32ToArray(31, this->custom_game_product_ids_, target);
 
   // optional uint32 lobby_mvp_vote_account_id = 32;
-  if (cached_has_bits & 0x00080000u) {
+  if (cached_has_bits & 0x00040000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(32, this->lobby_mvp_vote_account_id(), target);
   }
 
   // optional .proto.dota.MatchType search_match_type = 33 [default = MATCH_TYPE_CASUAL];
-  if (cached_has_bits & 0x00100000u) {
+  if (cached_has_bits & 0x00080000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       33, this->search_match_type(), target);
   }
 
-  // optional uint32 favorite_team_and_quality = 34;
-  if (cached_has_bits & 0x00010000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(34, this->favorite_team_and_quality(), target);
+  // optional uint64 favorite_team_packed = 35;
+  if (cached_has_bits & 0x00100000u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(35, this->favorite_team_packed(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -9154,13 +9233,6 @@ size_t CDOTALobbyMember::ByteSizeLong() const {
 
   }
   if (_has_bits_[16 / 32] & 4128768u) {
-    // optional uint32 favorite_team_and_quality = 34;
-    if (has_favorite_team_and_quality()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->favorite_team_and_quality());
-    }
-
     // optional sint32 rank_change = 29;
     if (has_rank_change()) {
       total_size += 2 +
@@ -9184,6 +9256,13 @@ size_t CDOTALobbyMember::ByteSizeLong() const {
     if (has_search_match_type()) {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->search_match_type());
+    }
+
+    // optional uint64 favorite_team_packed = 35;
+    if (has_favorite_team_packed()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->favorite_team_packed());
     }
 
     // optional .proto.dota.DOTA_GC_TEAM coach_team = 23 [default = DOTA_GC_TEAM_NOTEAM];
@@ -9285,19 +9364,19 @@ void CDOTALobbyMember::MergeFrom(const CDOTALobbyMember& from) {
   }
   if (cached_has_bits & 4128768u) {
     if (cached_has_bits & 0x00010000u) {
-      favorite_team_and_quality_ = from.favorite_team_and_quality_;
-    }
-    if (cached_has_bits & 0x00020000u) {
       rank_change_ = from.rank_change_;
     }
-    if (cached_has_bits & 0x00040000u) {
+    if (cached_has_bits & 0x00020000u) {
       cameraman_ = from.cameraman_;
     }
-    if (cached_has_bits & 0x00080000u) {
+    if (cached_has_bits & 0x00040000u) {
       lobby_mvp_vote_account_id_ = from.lobby_mvp_vote_account_id_;
     }
-    if (cached_has_bits & 0x00100000u) {
+    if (cached_has_bits & 0x00080000u) {
       search_match_type_ = from.search_match_type_;
+    }
+    if (cached_has_bits & 0x00100000u) {
+      favorite_team_packed_ = from.favorite_team_packed_;
     }
     if (cached_has_bits & 0x00200000u) {
       coach_team_ = from.coach_team_;
@@ -9349,11 +9428,11 @@ void CDOTALobbyMember::InternalSwap(CDOTALobbyMember* other) {
   std::swap(partner_account_type_, other->partner_account_type_);
   std::swap(nexon_pc_bang_no_, other->nexon_pc_bang_no_);
   std::swap(leaver_actions_, other->leaver_actions_);
-  std::swap(favorite_team_and_quality_, other->favorite_team_and_quality_);
   std::swap(rank_change_, other->rank_change_);
   std::swap(cameraman_, other->cameraman_);
   std::swap(lobby_mvp_vote_account_id_, other->lobby_mvp_vote_account_id_);
   std::swap(search_match_type_, other->search_match_type_);
+  std::swap(favorite_team_packed_, other->favorite_team_packed_);
   std::swap(coach_team_, other->coach_team_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -9950,13 +10029,13 @@ CDOTALobbyMember::xp_bonuses() const {
 
 // optional sint32 rank_change = 29;
 bool CDOTALobbyMember::has_rank_change() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
+  return (_has_bits_[0] & 0x00010000u) != 0;
 }
 void CDOTALobbyMember::set_has_rank_change() {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00010000u;
 }
 void CDOTALobbyMember::clear_has_rank_change() {
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 void CDOTALobbyMember::clear_rank_change() {
   rank_change_ = 0;
@@ -9974,13 +10053,13 @@ void CDOTALobbyMember::set_rank_change(::google::protobuf::int32 value) {
 
 // optional bool cameraman = 30;
 bool CDOTALobbyMember::has_cameraman() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
+  return (_has_bits_[0] & 0x00020000u) != 0;
 }
 void CDOTALobbyMember::set_has_cameraman() {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00020000u;
 }
 void CDOTALobbyMember::clear_has_cameraman() {
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 void CDOTALobbyMember::clear_cameraman() {
   cameraman_ = false;
@@ -10028,13 +10107,13 @@ CDOTALobbyMember::mutable_custom_game_product_ids() {
 
 // optional uint32 lobby_mvp_vote_account_id = 32;
 bool CDOTALobbyMember::has_lobby_mvp_vote_account_id() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
+  return (_has_bits_[0] & 0x00040000u) != 0;
 }
 void CDOTALobbyMember::set_has_lobby_mvp_vote_account_id() {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00040000u;
 }
 void CDOTALobbyMember::clear_has_lobby_mvp_vote_account_id() {
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 void CDOTALobbyMember::clear_lobby_mvp_vote_account_id() {
   lobby_mvp_vote_account_id_ = 0u;
@@ -10052,13 +10131,13 @@ void CDOTALobbyMember::set_lobby_mvp_vote_account_id(::google::protobuf::uint32 
 
 // optional .proto.dota.MatchType search_match_type = 33 [default = MATCH_TYPE_CASUAL];
 bool CDOTALobbyMember::has_search_match_type() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
+  return (_has_bits_[0] & 0x00080000u) != 0;
 }
 void CDOTALobbyMember::set_has_search_match_type() {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00080000u;
 }
 void CDOTALobbyMember::clear_has_search_match_type() {
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 void CDOTALobbyMember::clear_search_match_type() {
   search_match_type_ = 0;
@@ -10075,28 +10154,28 @@ void CDOTALobbyMember::set_search_match_type(::proto::dota::MatchType value) {
   // @@protoc_insertion_point(field_set:proto.dota.CDOTALobbyMember.search_match_type)
 }
 
-// optional uint32 favorite_team_and_quality = 34;
-bool CDOTALobbyMember::has_favorite_team_and_quality() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
+// optional uint64 favorite_team_packed = 35;
+bool CDOTALobbyMember::has_favorite_team_packed() const {
+  return (_has_bits_[0] & 0x00100000u) != 0;
 }
-void CDOTALobbyMember::set_has_favorite_team_and_quality() {
-  _has_bits_[0] |= 0x00010000u;
+void CDOTALobbyMember::set_has_favorite_team_packed() {
+  _has_bits_[0] |= 0x00100000u;
 }
-void CDOTALobbyMember::clear_has_favorite_team_and_quality() {
-  _has_bits_[0] &= ~0x00010000u;
+void CDOTALobbyMember::clear_has_favorite_team_packed() {
+  _has_bits_[0] &= ~0x00100000u;
 }
-void CDOTALobbyMember::clear_favorite_team_and_quality() {
-  favorite_team_and_quality_ = 0u;
-  clear_has_favorite_team_and_quality();
+void CDOTALobbyMember::clear_favorite_team_packed() {
+  favorite_team_packed_ = GOOGLE_ULONGLONG(0);
+  clear_has_favorite_team_packed();
 }
-::google::protobuf::uint32 CDOTALobbyMember::favorite_team_and_quality() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CDOTALobbyMember.favorite_team_and_quality)
-  return favorite_team_and_quality_;
+::google::protobuf::uint64 CDOTALobbyMember::favorite_team_packed() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTALobbyMember.favorite_team_packed)
+  return favorite_team_packed_;
 }
-void CDOTALobbyMember::set_favorite_team_and_quality(::google::protobuf::uint32 value) {
-  set_has_favorite_team_and_quality();
-  favorite_team_and_quality_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CDOTALobbyMember.favorite_team_and_quality)
+void CDOTALobbyMember::set_favorite_team_packed(::google::protobuf::uint64 value) {
+  set_has_favorite_team_packed();
+  favorite_team_packed_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTALobbyMember.favorite_team_packed)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -13144,9 +13223,6 @@ const int CSODOTALobby::kCustomGameTimestampFieldNumber;
 const int CSODOTALobby::kPreviousSeriesMatchesFieldNumber;
 const int CSODOTALobby::kPreviousMatchOverrideFieldNumber;
 const int CSODOTALobby::kCustomGameUsesAccountRecordsFieldNumber;
-const int CSODOTALobby::kLeagueSelectionPriorityTeamFieldNumber;
-const int CSODOTALobby::kLeagueSelectionPriorityChoiceFieldNumber;
-const int CSODOTALobby::kLeagueNonSelectionPriorityChoiceFieldNumber;
 const int CSODOTALobby::kGameStartTimeFieldNumber;
 const int CSODOTALobby::kPauseSettingFieldNumber;
 const int CSODOTALobby::kLobbyMvpAccountIdFieldNumber;
@@ -13157,6 +13233,12 @@ const int CSODOTALobby::kBotDifficultyDireFieldNumber;
 const int CSODOTALobby::kBotRadiantFieldNumber;
 const int CSODOTALobby::kBotDireFieldNumber;
 const int CSODOTALobby::kEventProgressionEnabledFieldNumber;
+const int CSODOTALobby::kSelectionPriorityRulesFieldNumber;
+const int CSODOTALobby::kSeriesPreviousSelectionPriorityTeamIdFieldNumber;
+const int CSODOTALobby::kSeriesCurrentSelectionPriorityTeamIdFieldNumber;
+const int CSODOTALobby::kSeriesCurrentPriorityTeamChoiceFieldNumber;
+const int CSODOTALobby::kSeriesCurrentNonPriorityTeamChoiceFieldNumber;
+const int CSODOTALobby::kSeriesCurrentSelectionPriorityUsedCoinTossFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CSODOTALobby::CSODOTALobby()
@@ -13219,8 +13301,8 @@ void CSODOTALobby::SharedCtor() {
   pass_key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   custom_game_mode_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   custom_map_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&save_game_, 0, reinterpret_cast<char*>(&bot_dire_) -
-    reinterpret_cast<char*>(&save_game_) + sizeof(bot_dire_));
+  ::memset(&save_game_, 0, reinterpret_cast<char*>(&series_current_priority_team_choice_) -
+    reinterpret_cast<char*>(&save_game_) + sizeof(series_current_priority_team_choice_));
   lobby_type_ = -1;
   allow_spectating_ = true;
   bot_difficulty_radiant_ = 3;
@@ -13327,17 +13409,19 @@ void CSODOTALobby::Clear() {
       reinterpret_cast<char*>(&first_blood_happened_) + sizeof(lan_host_ping_to_server_region_));
   }
   if (_has_bits_[48 / 32] & 16711680u) {
-    ::memset(&visibility_, 0, reinterpret_cast<char*>(&league_selection_priority_team_) -
-      reinterpret_cast<char*>(&visibility_) + sizeof(league_selection_priority_team_));
+    ::memset(&visibility_, 0, reinterpret_cast<char*>(&series_current_non_priority_team_choice_) -
+      reinterpret_cast<char*>(&visibility_) + sizeof(series_current_non_priority_team_choice_));
   }
   if (_has_bits_[56 / 32] & 4278190080u) {
-    ::memset(&league_selection_priority_choice_, 0, reinterpret_cast<char*>(&lobby_mvp_account_id_) -
-      reinterpret_cast<char*>(&league_selection_priority_choice_) + sizeof(lobby_mvp_account_id_));
+    ::memset(&pause_setting_, 0, reinterpret_cast<char*>(&weekend_tourney_skill_level_) -
+      reinterpret_cast<char*>(&pause_setting_) + sizeof(weekend_tourney_skill_level_));
   }
   if (_has_bits_[64 / 32] & 255u) {
-    ::memset(&weekend_tourney_division_id_, 0, reinterpret_cast<char*>(&bot_dire_) -
-      reinterpret_cast<char*>(&weekend_tourney_division_id_) + sizeof(bot_dire_));
+    ::memset(&weekend_tourney_bracket_round_, 0, reinterpret_cast<char*>(&series_current_priority_team_choice_) -
+      reinterpret_cast<char*>(&weekend_tourney_bracket_round_) + sizeof(series_current_priority_team_choice_));
     lobby_type_ = -1;
+  }
+  if (_has_bits_[72 / 32] & 1792u) {
     allow_spectating_ = true;
     bot_difficulty_radiant_ = 3;
     bot_difficulty_dire_ = 3;
@@ -14348,58 +14432,6 @@ bool CSODOTALobby::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 league_selection_priority_team = 84;
-      case 84: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(672u)) {
-          set_has_league_selection_priority_team();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &league_selection_priority_team_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 85 [default = UNDEFINED];
-      case 85: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(680u)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          if (::proto::dota::SelectionPriorityType_IsValid(value)) {
-            set_league_selection_priority_choice(static_cast< ::proto::dota::SelectionPriorityType >(value));
-          } else {
-            mutable_unknown_fields()->AddVarint(85, value);
-          }
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 86 [default = UNDEFINED];
-      case 86: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(688u)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          if (::proto::dota::SelectionPriorityType_IsValid(value)) {
-            set_league_non_selection_priority_choice(static_cast< ::proto::dota::SelectionPriorityType >(value));
-          } else {
-            mutable_unknown_fields()->AddVarint(86, value);
-          }
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       // optional uint32 game_start_time = 87;
       case 87: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
@@ -14550,6 +14582,105 @@ bool CSODOTALobby::MergePartialFromCodedStream(
         break;
       }
 
+      // optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 97 [default = k_DOTASelectionPriorityRules_Manual];
+      case 97: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(776u)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::proto::dota::DOTASelectionPriorityRules_IsValid(value)) {
+            set_selection_priority_rules(static_cast< ::proto::dota::DOTASelectionPriorityRules >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(97, value);
+          }
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 series_previous_selection_priority_team_id = 98;
+      case 98: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(784u)) {
+          set_has_series_previous_selection_priority_team_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &series_previous_selection_priority_team_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 series_current_selection_priority_team_id = 99;
+      case 99: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(792u)) {
+          set_has_series_current_selection_priority_team_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &series_current_selection_priority_team_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional .proto.dota.DOTASelectionPriorityChoice series_current_priority_team_choice = 100 [default = k_DOTASelectionPriorityChoice_Invalid];
+      case 100: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(800u)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::proto::dota::DOTASelectionPriorityChoice_IsValid(value)) {
+            set_series_current_priority_team_choice(static_cast< ::proto::dota::DOTASelectionPriorityChoice >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(100, value);
+          }
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional .proto.dota.DOTASelectionPriorityChoice series_current_non_priority_team_choice = 101 [default = k_DOTASelectionPriorityChoice_Invalid];
+      case 101: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(808u)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::proto::dota::DOTASelectionPriorityChoice_IsValid(value)) {
+            set_series_current_non_priority_team_choice(static_cast< ::proto::dota::DOTASelectionPriorityChoice >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(101, value);
+          }
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional bool series_current_selection_priority_used_coin_toss = 102;
+      case 102: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(816u)) {
+          set_has_series_current_selection_priority_used_coin_toss();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &series_current_selection_priority_used_coin_toss_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -14635,7 +14766,7 @@ void CSODOTALobby::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[2];
   // optional .proto.dota.CSODOTALobby.LobbyType lobby_type = 12 [default = INVALID];
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       12, this->lobby_type(), output);
   }
@@ -14721,12 +14852,12 @@ void CSODOTALobby::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[2];
   // optional bool allow_spectating = 31 [default = true];
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000100u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(31, this->allow_spectating(), output);
   }
 
   // optional .proto.dota.DOTABotDifficulty bot_difficulty_radiant = 36 [default = BOT_DIFFICULTY_HARD];
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000200u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       36, this->bot_difficulty_radiant(), output);
   }
@@ -14934,7 +15065,7 @@ void CSODOTALobby::SerializeWithCachedSizes(
   }
 
   // optional bool custom_game_auto_created_lobby = 77;
-  if (cached_has_bits & 0x02000000u) {
+  if (cached_has_bits & 0x04000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(77, this->custom_game_auto_created_lobby(), output);
   }
 
@@ -14949,7 +15080,7 @@ void CSODOTALobby::SerializeWithCachedSizes(
   }
 
   // optional fixed32 custom_game_timestamp = 80;
-  if (cached_has_bits & 0x00400000u) {
+  if (cached_has_bits & 0x00200000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFixed32(80, this->custom_game_timestamp(), output);
   }
 
@@ -14960,86 +15091,102 @@ void CSODOTALobby::SerializeWithCachedSizes(
   }
 
   // optional uint64 previous_match_override = 82;
-  if (cached_has_bits & 0x00200000u) {
+  if (cached_has_bits & 0x00100000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(82, this->previous_match_override(), output);
   }
 
   // optional bool custom_game_uses_account_records = 83;
-  if (cached_has_bits & 0x04000000u) {
+  if (cached_has_bits & 0x08000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(83, this->custom_game_uses_account_records(), output);
   }
 
-  // optional uint32 league_selection_priority_team = 84;
-  if (cached_has_bits & 0x00800000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(84, this->league_selection_priority_team(), output);
-  }
-
-  // optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 85 [default = UNDEFINED];
-  if (cached_has_bits & 0x01000000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      85, this->league_selection_priority_choice(), output);
-  }
-
-  // optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 86 [default = UNDEFINED];
-  if (cached_has_bits & 0x10000000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      86, this->league_non_selection_priority_choice(), output);
-  }
-
   // optional uint32 game_start_time = 87;
-  if (cached_has_bits & 0x20000000u) {
+  if (cached_has_bits & 0x00400000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(87, this->game_start_time(), output);
   }
 
   // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 88 [default = LobbyDotaPauseSetting_Unlimited];
-  if (cached_has_bits & 0x40000000u) {
+  if (cached_has_bits & 0x01000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       88, this->pause_setting(), output);
   }
 
   // optional uint32 lobby_mvp_account_id = 89;
-  if (cached_has_bits & 0x80000000u) {
+  if (cached_has_bits & 0x02000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(89, this->lobby_mvp_account_id(), output);
   }
 
-  cached_has_bits = _has_bits_[2];
   // optional uint32 weekend_tourney_division_id = 90;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x40000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(90, this->weekend_tourney_division_id(), output);
   }
 
   // optional uint32 weekend_tourney_skill_level = 91;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x80000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(91, this->weekend_tourney_skill_level(), output);
   }
 
-  cached_has_bits = _has_bits_[1];
+  cached_has_bits = _has_bits_[2];
   // optional uint32 weekend_tourney_bracket_round = 92;
-  if (cached_has_bits & 0x00100000u) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(92, this->weekend_tourney_bracket_round(), output);
   }
 
-  cached_has_bits = _has_bits_[2];
   // optional .proto.dota.DOTABotDifficulty bot_difficulty_dire = 93 [default = BOT_DIFFICULTY_HARD];
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000400u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       93, this->bot_difficulty_dire(), output);
   }
 
   // optional uint64 bot_radiant = 94;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(94, this->bot_radiant(), output);
   }
 
   // optional uint64 bot_dire = 95;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(95, this->bot_dire(), output);
   }
 
   cached_has_bits = _has_bits_[1];
   // optional bool event_progression_enabled = 96;
-  if (cached_has_bits & 0x08000000u) {
+  if (cached_has_bits & 0x10000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(96, this->event_progression_enabled(), output);
+  }
+
+  cached_has_bits = _has_bits_[2];
+  // optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 97 [default = k_DOTASelectionPriorityRules_Manual];
+  if (cached_has_bits & 0x00000008u) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      97, this->selection_priority_rules(), output);
+  }
+
+  // optional uint32 series_previous_selection_priority_team_id = 98;
+  if (cached_has_bits & 0x00000010u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(98, this->series_previous_selection_priority_team_id(), output);
+  }
+
+  // optional uint32 series_current_selection_priority_team_id = 99;
+  if (cached_has_bits & 0x00000020u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(99, this->series_current_selection_priority_team_id(), output);
+  }
+
+  // optional .proto.dota.DOTASelectionPriorityChoice series_current_priority_team_choice = 100 [default = k_DOTASelectionPriorityChoice_Invalid];
+  if (cached_has_bits & 0x00000040u) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      100, this->series_current_priority_team_choice(), output);
+  }
+
+  cached_has_bits = _has_bits_[1];
+  // optional .proto.dota.DOTASelectionPriorityChoice series_current_non_priority_team_choice = 101 [default = k_DOTASelectionPriorityChoice_Invalid];
+  if (cached_has_bits & 0x00800000u) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      101, this->series_current_non_priority_team_choice(), output);
+  }
+
+  // optional bool series_current_selection_priority_used_coin_toss = 102;
+  if (cached_has_bits & 0x20000000u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(102, this->series_current_selection_priority_used_coin_toss(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -15113,7 +15260,7 @@ void CSODOTALobby::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[2];
   // optional .proto.dota.CSODOTALobby.LobbyType lobby_type = 12 [default = INVALID];
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       12, this->lobby_type(), target);
   }
@@ -15201,12 +15348,12 @@ void CSODOTALobby::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[2];
   // optional bool allow_spectating = 31 [default = true];
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000100u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(31, this->allow_spectating(), target);
   }
 
   // optional .proto.dota.DOTABotDifficulty bot_difficulty_radiant = 36 [default = BOT_DIFFICULTY_HARD];
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000200u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       36, this->bot_difficulty_radiant(), target);
   }
@@ -15421,7 +15568,7 @@ void CSODOTALobby::SerializeWithCachedSizes(
   }
 
   // optional bool custom_game_auto_created_lobby = 77;
-  if (cached_has_bits & 0x02000000u) {
+  if (cached_has_bits & 0x04000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(77, this->custom_game_auto_created_lobby(), target);
   }
 
@@ -15436,7 +15583,7 @@ void CSODOTALobby::SerializeWithCachedSizes(
   }
 
   // optional fixed32 custom_game_timestamp = 80;
-  if (cached_has_bits & 0x00400000u) {
+  if (cached_has_bits & 0x00200000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(80, this->custom_game_timestamp(), target);
   }
 
@@ -15445,86 +15592,102 @@ void CSODOTALobby::SerializeWithCachedSizes(
     WriteUInt64ToArray(81, this->previous_series_matches_, target);
 
   // optional uint64 previous_match_override = 82;
-  if (cached_has_bits & 0x00200000u) {
+  if (cached_has_bits & 0x00100000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(82, this->previous_match_override(), target);
   }
 
   // optional bool custom_game_uses_account_records = 83;
-  if (cached_has_bits & 0x04000000u) {
+  if (cached_has_bits & 0x08000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(83, this->custom_game_uses_account_records(), target);
   }
 
-  // optional uint32 league_selection_priority_team = 84;
-  if (cached_has_bits & 0x00800000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(84, this->league_selection_priority_team(), target);
-  }
-
-  // optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 85 [default = UNDEFINED];
-  if (cached_has_bits & 0x01000000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      85, this->league_selection_priority_choice(), target);
-  }
-
-  // optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 86 [default = UNDEFINED];
-  if (cached_has_bits & 0x10000000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      86, this->league_non_selection_priority_choice(), target);
-  }
-
   // optional uint32 game_start_time = 87;
-  if (cached_has_bits & 0x20000000u) {
+  if (cached_has_bits & 0x00400000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(87, this->game_start_time(), target);
   }
 
   // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 88 [default = LobbyDotaPauseSetting_Unlimited];
-  if (cached_has_bits & 0x40000000u) {
+  if (cached_has_bits & 0x01000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       88, this->pause_setting(), target);
   }
 
   // optional uint32 lobby_mvp_account_id = 89;
-  if (cached_has_bits & 0x80000000u) {
+  if (cached_has_bits & 0x02000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(89, this->lobby_mvp_account_id(), target);
   }
 
-  cached_has_bits = _has_bits_[2];
   // optional uint32 weekend_tourney_division_id = 90;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x40000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(90, this->weekend_tourney_division_id(), target);
   }
 
   // optional uint32 weekend_tourney_skill_level = 91;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x80000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(91, this->weekend_tourney_skill_level(), target);
   }
 
-  cached_has_bits = _has_bits_[1];
+  cached_has_bits = _has_bits_[2];
   // optional uint32 weekend_tourney_bracket_round = 92;
-  if (cached_has_bits & 0x00100000u) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(92, this->weekend_tourney_bracket_round(), target);
   }
 
-  cached_has_bits = _has_bits_[2];
   // optional .proto.dota.DOTABotDifficulty bot_difficulty_dire = 93 [default = BOT_DIFFICULTY_HARD];
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000400u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       93, this->bot_difficulty_dire(), target);
   }
 
   // optional uint64 bot_radiant = 94;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(94, this->bot_radiant(), target);
   }
 
   // optional uint64 bot_dire = 95;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(95, this->bot_dire(), target);
   }
 
   cached_has_bits = _has_bits_[1];
   // optional bool event_progression_enabled = 96;
-  if (cached_has_bits & 0x08000000u) {
+  if (cached_has_bits & 0x10000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(96, this->event_progression_enabled(), target);
+  }
+
+  cached_has_bits = _has_bits_[2];
+  // optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 97 [default = k_DOTASelectionPriorityRules_Manual];
+  if (cached_has_bits & 0x00000008u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      97, this->selection_priority_rules(), target);
+  }
+
+  // optional uint32 series_previous_selection_priority_team_id = 98;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(98, this->series_previous_selection_priority_team_id(), target);
+  }
+
+  // optional uint32 series_current_selection_priority_team_id = 99;
+  if (cached_has_bits & 0x00000020u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(99, this->series_current_selection_priority_team_id(), target);
+  }
+
+  // optional .proto.dota.DOTASelectionPriorityChoice series_current_priority_team_choice = 100 [default = k_DOTASelectionPriorityChoice_Invalid];
+  if (cached_has_bits & 0x00000040u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      100, this->series_current_priority_team_choice(), target);
+  }
+
+  cached_has_bits = _has_bits_[1];
+  // optional .proto.dota.DOTASelectionPriorityChoice series_current_non_priority_team_choice = 101 [default = k_DOTASelectionPriorityChoice_Invalid];
+  if (cached_has_bits & 0x00800000u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      101, this->series_current_non_priority_team_choice(), target);
+  }
+
+  // optional bool series_current_selection_priority_used_coin_toss = 102;
+  if (cached_has_bits & 0x20000000u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(102, this->series_current_selection_priority_used_coin_toss(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -15975,13 +16138,6 @@ size_t CSODOTALobby::ByteSizeLong() const {
           this->league_game_id());
     }
 
-    // optional uint32 weekend_tourney_bracket_round = 92;
-    if (has_weekend_tourney_bracket_round()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->weekend_tourney_bracket_round());
-    }
-
     // optional uint64 previous_match_override = 82;
     if (has_previous_match_override()) {
       total_size += 2 +
@@ -15994,19 +16150,32 @@ size_t CSODOTALobby::ByteSizeLong() const {
       total_size += 2 + 4;
     }
 
-    // optional uint32 league_selection_priority_team = 84;
-    if (has_league_selection_priority_team()) {
+    // optional uint32 game_start_time = 87;
+    if (has_game_start_time()) {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->league_selection_priority_team());
+          this->game_start_time());
+    }
+
+    // optional .proto.dota.DOTASelectionPriorityChoice series_current_non_priority_team_choice = 101 [default = k_DOTASelectionPriorityChoice_Invalid];
+    if (has_series_current_non_priority_team_choice()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->series_current_non_priority_team_choice());
     }
 
   }
   if (_has_bits_[56 / 32] & 4278190080u) {
-    // optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 85 [default = UNDEFINED];
-    if (has_league_selection_priority_choice()) {
+    // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 88 [default = LobbyDotaPauseSetting_Unlimited];
+    if (has_pause_setting()) {
       total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::EnumSize(this->league_selection_priority_choice());
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->pause_setting());
+    }
+
+    // optional uint32 lobby_mvp_account_id = 89;
+    if (has_lobby_mvp_account_id()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->lobby_mvp_account_id());
     }
 
     // optional bool custom_game_auto_created_lobby = 77;
@@ -16024,34 +16193,11 @@ size_t CSODOTALobby::ByteSizeLong() const {
       total_size += 2 + 1;
     }
 
-    // optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 86 [default = UNDEFINED];
-    if (has_league_non_selection_priority_choice()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::EnumSize(this->league_non_selection_priority_choice());
+    // optional bool series_current_selection_priority_used_coin_toss = 102;
+    if (has_series_current_selection_priority_used_coin_toss()) {
+      total_size += 2 + 1;
     }
 
-    // optional uint32 game_start_time = 87;
-    if (has_game_start_time()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->game_start_time());
-    }
-
-    // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 88 [default = LobbyDotaPauseSetting_Unlimited];
-    if (has_pause_setting()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::EnumSize(this->pause_setting());
-    }
-
-    // optional uint32 lobby_mvp_account_id = 89;
-    if (has_lobby_mvp_account_id()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->lobby_mvp_account_id());
-    }
-
-  }
-  if (_has_bits_[64 / 32] & 255u) {
     // optional uint32 weekend_tourney_division_id = 90;
     if (has_weekend_tourney_division_id()) {
       total_size += 2 +
@@ -16064,6 +16210,15 @@ size_t CSODOTALobby::ByteSizeLong() const {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
           this->weekend_tourney_skill_level());
+    }
+
+  }
+  if (_has_bits_[64 / 32] & 255u) {
+    // optional uint32 weekend_tourney_bracket_round = 92;
+    if (has_weekend_tourney_bracket_round()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->weekend_tourney_bracket_round());
     }
 
     // optional uint64 bot_radiant = 94;
@@ -16080,12 +16235,40 @@ size_t CSODOTALobby::ByteSizeLong() const {
           this->bot_dire());
     }
 
+    // optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 97 [default = k_DOTASelectionPriorityRules_Manual];
+    if (has_selection_priority_rules()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->selection_priority_rules());
+    }
+
+    // optional uint32 series_previous_selection_priority_team_id = 98;
+    if (has_series_previous_selection_priority_team_id()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->series_previous_selection_priority_team_id());
+    }
+
+    // optional uint32 series_current_selection_priority_team_id = 99;
+    if (has_series_current_selection_priority_team_id()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->series_current_selection_priority_team_id());
+    }
+
+    // optional .proto.dota.DOTASelectionPriorityChoice series_current_priority_team_choice = 100 [default = k_DOTASelectionPriorityChoice_Invalid];
+    if (has_series_current_priority_team_choice()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->series_current_priority_team_choice());
+    }
+
     // optional .proto.dota.CSODOTALobby.LobbyType lobby_type = 12 [default = INVALID];
     if (has_lobby_type()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->lobby_type());
     }
 
+  }
+  if (_has_bits_[72 / 32] & 1792u) {
     // optional bool allow_spectating = 31 [default = true];
     if (has_allow_spectating()) {
       total_size += 2 + 1;
@@ -16324,70 +16507,82 @@ void CSODOTALobby::MergeFrom(const CSODOTALobby& from) {
       league_game_id_ = from.league_game_id_;
     }
     if (cached_has_bits & 0x00100000u) {
-      weekend_tourney_bracket_round_ = from.weekend_tourney_bracket_round_;
-    }
-    if (cached_has_bits & 0x00200000u) {
       previous_match_override_ = from.previous_match_override_;
     }
-    if (cached_has_bits & 0x00400000u) {
+    if (cached_has_bits & 0x00200000u) {
       custom_game_timestamp_ = from.custom_game_timestamp_;
     }
+    if (cached_has_bits & 0x00400000u) {
+      game_start_time_ = from.game_start_time_;
+    }
     if (cached_has_bits & 0x00800000u) {
-      league_selection_priority_team_ = from.league_selection_priority_team_;
+      series_current_non_priority_team_choice_ = from.series_current_non_priority_team_choice_;
     }
     _has_bits_[1] |= cached_has_bits;
   }
   if (cached_has_bits & 4278190080u) {
     if (cached_has_bits & 0x01000000u) {
-      league_selection_priority_choice_ = from.league_selection_priority_choice_;
-    }
-    if (cached_has_bits & 0x02000000u) {
-      custom_game_auto_created_lobby_ = from.custom_game_auto_created_lobby_;
-    }
-    if (cached_has_bits & 0x04000000u) {
-      custom_game_uses_account_records_ = from.custom_game_uses_account_records_;
-    }
-    if (cached_has_bits & 0x08000000u) {
-      event_progression_enabled_ = from.event_progression_enabled_;
-    }
-    if (cached_has_bits & 0x10000000u) {
-      league_non_selection_priority_choice_ = from.league_non_selection_priority_choice_;
-    }
-    if (cached_has_bits & 0x20000000u) {
-      game_start_time_ = from.game_start_time_;
-    }
-    if (cached_has_bits & 0x40000000u) {
       pause_setting_ = from.pause_setting_;
     }
-    if (cached_has_bits & 0x80000000u) {
+    if (cached_has_bits & 0x02000000u) {
       lobby_mvp_account_id_ = from.lobby_mvp_account_id_;
+    }
+    if (cached_has_bits & 0x04000000u) {
+      custom_game_auto_created_lobby_ = from.custom_game_auto_created_lobby_;
+    }
+    if (cached_has_bits & 0x08000000u) {
+      custom_game_uses_account_records_ = from.custom_game_uses_account_records_;
+    }
+    if (cached_has_bits & 0x10000000u) {
+      event_progression_enabled_ = from.event_progression_enabled_;
+    }
+    if (cached_has_bits & 0x20000000u) {
+      series_current_selection_priority_used_coin_toss_ = from.series_current_selection_priority_used_coin_toss_;
+    }
+    if (cached_has_bits & 0x40000000u) {
+      weekend_tourney_division_id_ = from.weekend_tourney_division_id_;
+    }
+    if (cached_has_bits & 0x80000000u) {
+      weekend_tourney_skill_level_ = from.weekend_tourney_skill_level_;
     }
     _has_bits_[1] |= cached_has_bits;
   }
   cached_has_bits = from._has_bits_[2];
   if (cached_has_bits & 255u) {
     if (cached_has_bits & 0x00000001u) {
-      weekend_tourney_division_id_ = from.weekend_tourney_division_id_;
+      weekend_tourney_bracket_round_ = from.weekend_tourney_bracket_round_;
     }
     if (cached_has_bits & 0x00000002u) {
-      weekend_tourney_skill_level_ = from.weekend_tourney_skill_level_;
-    }
-    if (cached_has_bits & 0x00000004u) {
       bot_radiant_ = from.bot_radiant_;
     }
-    if (cached_has_bits & 0x00000008u) {
+    if (cached_has_bits & 0x00000004u) {
       bot_dire_ = from.bot_dire_;
     }
+    if (cached_has_bits & 0x00000008u) {
+      selection_priority_rules_ = from.selection_priority_rules_;
+    }
     if (cached_has_bits & 0x00000010u) {
-      lobby_type_ = from.lobby_type_;
+      series_previous_selection_priority_team_id_ = from.series_previous_selection_priority_team_id_;
     }
     if (cached_has_bits & 0x00000020u) {
-      allow_spectating_ = from.allow_spectating_;
+      series_current_selection_priority_team_id_ = from.series_current_selection_priority_team_id_;
     }
     if (cached_has_bits & 0x00000040u) {
-      bot_difficulty_radiant_ = from.bot_difficulty_radiant_;
+      series_current_priority_team_choice_ = from.series_current_priority_team_choice_;
     }
     if (cached_has_bits & 0x00000080u) {
+      lobby_type_ = from.lobby_type_;
+    }
+    _has_bits_[2] |= cached_has_bits;
+  }
+  if (cached_has_bits & 1792u) {
+    if (cached_has_bits & 0x00000100u) {
+      allow_spectating_ = from.allow_spectating_;
+    }
+    if (cached_has_bits & 0x00000200u) {
+      bot_difficulty_radiant_ = from.bot_difficulty_radiant_;
+    }
+    if (cached_has_bits & 0x00000400u) {
       bot_difficulty_dire_ = from.bot_difficulty_dire_;
     }
     _has_bits_[2] |= cached_has_bits;
@@ -16477,22 +16672,25 @@ void CSODOTALobby::InternalSwap(CSODOTALobby* other) {
   std::swap(custom_game_crc_, other->custom_game_crc_);
   std::swap(league_series_id_, other->league_series_id_);
   std::swap(league_game_id_, other->league_game_id_);
-  std::swap(weekend_tourney_bracket_round_, other->weekend_tourney_bracket_round_);
   std::swap(previous_match_override_, other->previous_match_override_);
   std::swap(custom_game_timestamp_, other->custom_game_timestamp_);
-  std::swap(league_selection_priority_team_, other->league_selection_priority_team_);
-  std::swap(league_selection_priority_choice_, other->league_selection_priority_choice_);
+  std::swap(game_start_time_, other->game_start_time_);
+  std::swap(series_current_non_priority_team_choice_, other->series_current_non_priority_team_choice_);
+  std::swap(pause_setting_, other->pause_setting_);
+  std::swap(lobby_mvp_account_id_, other->lobby_mvp_account_id_);
   std::swap(custom_game_auto_created_lobby_, other->custom_game_auto_created_lobby_);
   std::swap(custom_game_uses_account_records_, other->custom_game_uses_account_records_);
   std::swap(event_progression_enabled_, other->event_progression_enabled_);
-  std::swap(league_non_selection_priority_choice_, other->league_non_selection_priority_choice_);
-  std::swap(game_start_time_, other->game_start_time_);
-  std::swap(pause_setting_, other->pause_setting_);
-  std::swap(lobby_mvp_account_id_, other->lobby_mvp_account_id_);
+  std::swap(series_current_selection_priority_used_coin_toss_, other->series_current_selection_priority_used_coin_toss_);
   std::swap(weekend_tourney_division_id_, other->weekend_tourney_division_id_);
   std::swap(weekend_tourney_skill_level_, other->weekend_tourney_skill_level_);
+  std::swap(weekend_tourney_bracket_round_, other->weekend_tourney_bracket_round_);
   std::swap(bot_radiant_, other->bot_radiant_);
   std::swap(bot_dire_, other->bot_dire_);
+  std::swap(selection_priority_rules_, other->selection_priority_rules_);
+  std::swap(series_previous_selection_priority_team_id_, other->series_previous_selection_priority_team_id_);
+  std::swap(series_current_selection_priority_team_id_, other->series_current_selection_priority_team_id_);
+  std::swap(series_current_priority_team_choice_, other->series_current_priority_team_choice_);
   std::swap(lobby_type_, other->lobby_type_);
   std::swap(allow_spectating_, other->allow_spectating_);
   std::swap(bot_difficulty_radiant_, other->bot_difficulty_radiant_);
@@ -16788,13 +16986,13 @@ void CSODOTALobby::set_allocated_connect(::std::string* connect) {
 
 // optional .proto.dota.CSODOTALobby.LobbyType lobby_type = 12 [default = INVALID];
 bool CSODOTALobby::has_lobby_type() const {
-  return (_has_bits_[2] & 0x00000010u) != 0;
+  return (_has_bits_[2] & 0x00000080u) != 0;
 }
 void CSODOTALobby::set_has_lobby_type() {
-  _has_bits_[2] |= 0x00000010u;
+  _has_bits_[2] |= 0x00000080u;
 }
 void CSODOTALobby::clear_has_lobby_type() {
-  _has_bits_[2] &= ~0x00000010u;
+  _has_bits_[2] &= ~0x00000080u;
 }
 void CSODOTALobby::clear_lobby_type() {
   lobby_type_ = -1;
@@ -17196,13 +17394,13 @@ void CSODOTALobby::set_match_id(::google::protobuf::uint64 value) {
 
 // optional bool allow_spectating = 31 [default = true];
 bool CSODOTALobby::has_allow_spectating() const {
-  return (_has_bits_[2] & 0x00000020u) != 0;
+  return (_has_bits_[2] & 0x00000100u) != 0;
 }
 void CSODOTALobby::set_has_allow_spectating() {
-  _has_bits_[2] |= 0x00000020u;
+  _has_bits_[2] |= 0x00000100u;
 }
 void CSODOTALobby::clear_has_allow_spectating() {
-  _has_bits_[2] &= ~0x00000020u;
+  _has_bits_[2] &= ~0x00000100u;
 }
 void CSODOTALobby::clear_allow_spectating() {
   allow_spectating_ = true;
@@ -17220,13 +17418,13 @@ void CSODOTALobby::set_allow_spectating(bool value) {
 
 // optional .proto.dota.DOTABotDifficulty bot_difficulty_radiant = 36 [default = BOT_DIFFICULTY_HARD];
 bool CSODOTALobby::has_bot_difficulty_radiant() const {
-  return (_has_bits_[2] & 0x00000040u) != 0;
+  return (_has_bits_[2] & 0x00000200u) != 0;
 }
 void CSODOTALobby::set_has_bot_difficulty_radiant() {
-  _has_bits_[2] |= 0x00000040u;
+  _has_bits_[2] |= 0x00000200u;
 }
 void CSODOTALobby::clear_has_bot_difficulty_radiant() {
-  _has_bits_[2] &= ~0x00000040u;
+  _has_bits_[2] &= ~0x00000200u;
 }
 void CSODOTALobby::clear_bot_difficulty_radiant() {
   bot_difficulty_radiant_ = 3;
@@ -18222,13 +18420,13 @@ void CSODOTALobby::set_custom_game_crc(::google::protobuf::uint64 value) {
 
 // optional bool custom_game_auto_created_lobby = 77;
 bool CSODOTALobby::has_custom_game_auto_created_lobby() const {
-  return (_has_bits_[1] & 0x02000000u) != 0;
+  return (_has_bits_[1] & 0x04000000u) != 0;
 }
 void CSODOTALobby::set_has_custom_game_auto_created_lobby() {
-  _has_bits_[1] |= 0x02000000u;
+  _has_bits_[1] |= 0x04000000u;
 }
 void CSODOTALobby::clear_has_custom_game_auto_created_lobby() {
-  _has_bits_[1] &= ~0x02000000u;
+  _has_bits_[1] &= ~0x04000000u;
 }
 void CSODOTALobby::clear_custom_game_auto_created_lobby() {
   custom_game_auto_created_lobby_ = false;
@@ -18294,13 +18492,13 @@ void CSODOTALobby::set_league_game_id(::google::protobuf::uint32 value) {
 
 // optional fixed32 custom_game_timestamp = 80;
 bool CSODOTALobby::has_custom_game_timestamp() const {
-  return (_has_bits_[1] & 0x00400000u) != 0;
+  return (_has_bits_[1] & 0x00200000u) != 0;
 }
 void CSODOTALobby::set_has_custom_game_timestamp() {
-  _has_bits_[1] |= 0x00400000u;
+  _has_bits_[1] |= 0x00200000u;
 }
 void CSODOTALobby::clear_has_custom_game_timestamp() {
-  _has_bits_[1] &= ~0x00400000u;
+  _has_bits_[1] &= ~0x00200000u;
 }
 void CSODOTALobby::clear_custom_game_timestamp() {
   custom_game_timestamp_ = 0u;
@@ -18348,13 +18546,13 @@ CSODOTALobby::mutable_previous_series_matches() {
 
 // optional uint64 previous_match_override = 82;
 bool CSODOTALobby::has_previous_match_override() const {
-  return (_has_bits_[1] & 0x00200000u) != 0;
+  return (_has_bits_[1] & 0x00100000u) != 0;
 }
 void CSODOTALobby::set_has_previous_match_override() {
-  _has_bits_[1] |= 0x00200000u;
+  _has_bits_[1] |= 0x00100000u;
 }
 void CSODOTALobby::clear_has_previous_match_override() {
-  _has_bits_[1] &= ~0x00200000u;
+  _has_bits_[1] &= ~0x00100000u;
 }
 void CSODOTALobby::clear_previous_match_override() {
   previous_match_override_ = GOOGLE_ULONGLONG(0);
@@ -18372,13 +18570,13 @@ void CSODOTALobby::set_previous_match_override(::google::protobuf::uint64 value)
 
 // optional bool custom_game_uses_account_records = 83;
 bool CSODOTALobby::has_custom_game_uses_account_records() const {
-  return (_has_bits_[1] & 0x04000000u) != 0;
+  return (_has_bits_[1] & 0x08000000u) != 0;
 }
 void CSODOTALobby::set_has_custom_game_uses_account_records() {
-  _has_bits_[1] |= 0x04000000u;
+  _has_bits_[1] |= 0x08000000u;
 }
 void CSODOTALobby::clear_has_custom_game_uses_account_records() {
-  _has_bits_[1] &= ~0x04000000u;
+  _has_bits_[1] &= ~0x08000000u;
 }
 void CSODOTALobby::clear_custom_game_uses_account_records() {
   custom_game_uses_account_records_ = false;
@@ -18394,89 +18592,15 @@ void CSODOTALobby::set_custom_game_uses_account_records(bool value) {
   // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.custom_game_uses_account_records)
 }
 
-// optional uint32 league_selection_priority_team = 84;
-bool CSODOTALobby::has_league_selection_priority_team() const {
-  return (_has_bits_[1] & 0x00800000u) != 0;
-}
-void CSODOTALobby::set_has_league_selection_priority_team() {
-  _has_bits_[1] |= 0x00800000u;
-}
-void CSODOTALobby::clear_has_league_selection_priority_team() {
-  _has_bits_[1] &= ~0x00800000u;
-}
-void CSODOTALobby::clear_league_selection_priority_team() {
-  league_selection_priority_team_ = 0u;
-  clear_has_league_selection_priority_team();
-}
-::google::protobuf::uint32 CSODOTALobby::league_selection_priority_team() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CSODOTALobby.league_selection_priority_team)
-  return league_selection_priority_team_;
-}
-void CSODOTALobby::set_league_selection_priority_team(::google::protobuf::uint32 value) {
-  set_has_league_selection_priority_team();
-  league_selection_priority_team_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.league_selection_priority_team)
-}
-
-// optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 85 [default = UNDEFINED];
-bool CSODOTALobby::has_league_selection_priority_choice() const {
-  return (_has_bits_[1] & 0x01000000u) != 0;
-}
-void CSODOTALobby::set_has_league_selection_priority_choice() {
-  _has_bits_[1] |= 0x01000000u;
-}
-void CSODOTALobby::clear_has_league_selection_priority_choice() {
-  _has_bits_[1] &= ~0x01000000u;
-}
-void CSODOTALobby::clear_league_selection_priority_choice() {
-  league_selection_priority_choice_ = 0;
-  clear_has_league_selection_priority_choice();
-}
-::proto::dota::SelectionPriorityType CSODOTALobby::league_selection_priority_choice() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CSODOTALobby.league_selection_priority_choice)
-  return static_cast< ::proto::dota::SelectionPriorityType >(league_selection_priority_choice_);
-}
-void CSODOTALobby::set_league_selection_priority_choice(::proto::dota::SelectionPriorityType value) {
-  assert(::proto::dota::SelectionPriorityType_IsValid(value));
-  set_has_league_selection_priority_choice();
-  league_selection_priority_choice_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.league_selection_priority_choice)
-}
-
-// optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 86 [default = UNDEFINED];
-bool CSODOTALobby::has_league_non_selection_priority_choice() const {
-  return (_has_bits_[1] & 0x10000000u) != 0;
-}
-void CSODOTALobby::set_has_league_non_selection_priority_choice() {
-  _has_bits_[1] |= 0x10000000u;
-}
-void CSODOTALobby::clear_has_league_non_selection_priority_choice() {
-  _has_bits_[1] &= ~0x10000000u;
-}
-void CSODOTALobby::clear_league_non_selection_priority_choice() {
-  league_non_selection_priority_choice_ = 0;
-  clear_has_league_non_selection_priority_choice();
-}
-::proto::dota::SelectionPriorityType CSODOTALobby::league_non_selection_priority_choice() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CSODOTALobby.league_non_selection_priority_choice)
-  return static_cast< ::proto::dota::SelectionPriorityType >(league_non_selection_priority_choice_);
-}
-void CSODOTALobby::set_league_non_selection_priority_choice(::proto::dota::SelectionPriorityType value) {
-  assert(::proto::dota::SelectionPriorityType_IsValid(value));
-  set_has_league_non_selection_priority_choice();
-  league_non_selection_priority_choice_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.league_non_selection_priority_choice)
-}
-
 // optional uint32 game_start_time = 87;
 bool CSODOTALobby::has_game_start_time() const {
-  return (_has_bits_[1] & 0x20000000u) != 0;
+  return (_has_bits_[1] & 0x00400000u) != 0;
 }
 void CSODOTALobby::set_has_game_start_time() {
-  _has_bits_[1] |= 0x20000000u;
+  _has_bits_[1] |= 0x00400000u;
 }
 void CSODOTALobby::clear_has_game_start_time() {
-  _has_bits_[1] &= ~0x20000000u;
+  _has_bits_[1] &= ~0x00400000u;
 }
 void CSODOTALobby::clear_game_start_time() {
   game_start_time_ = 0u;
@@ -18494,13 +18618,13 @@ void CSODOTALobby::set_game_start_time(::google::protobuf::uint32 value) {
 
 // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 88 [default = LobbyDotaPauseSetting_Unlimited];
 bool CSODOTALobby::has_pause_setting() const {
-  return (_has_bits_[1] & 0x40000000u) != 0;
+  return (_has_bits_[1] & 0x01000000u) != 0;
 }
 void CSODOTALobby::set_has_pause_setting() {
-  _has_bits_[1] |= 0x40000000u;
+  _has_bits_[1] |= 0x01000000u;
 }
 void CSODOTALobby::clear_has_pause_setting() {
-  _has_bits_[1] &= ~0x40000000u;
+  _has_bits_[1] &= ~0x01000000u;
 }
 void CSODOTALobby::clear_pause_setting() {
   pause_setting_ = 0;
@@ -18519,13 +18643,13 @@ void CSODOTALobby::set_pause_setting(::proto::dota::LobbyDotaPauseSetting value)
 
 // optional uint32 lobby_mvp_account_id = 89;
 bool CSODOTALobby::has_lobby_mvp_account_id() const {
-  return (_has_bits_[1] & 0x80000000u) != 0;
+  return (_has_bits_[1] & 0x02000000u) != 0;
 }
 void CSODOTALobby::set_has_lobby_mvp_account_id() {
-  _has_bits_[1] |= 0x80000000u;
+  _has_bits_[1] |= 0x02000000u;
 }
 void CSODOTALobby::clear_has_lobby_mvp_account_id() {
-  _has_bits_[1] &= ~0x80000000u;
+  _has_bits_[1] &= ~0x02000000u;
 }
 void CSODOTALobby::clear_lobby_mvp_account_id() {
   lobby_mvp_account_id_ = 0u;
@@ -18543,13 +18667,13 @@ void CSODOTALobby::set_lobby_mvp_account_id(::google::protobuf::uint32 value) {
 
 // optional uint32 weekend_tourney_division_id = 90;
 bool CSODOTALobby::has_weekend_tourney_division_id() const {
-  return (_has_bits_[2] & 0x00000001u) != 0;
+  return (_has_bits_[1] & 0x40000000u) != 0;
 }
 void CSODOTALobby::set_has_weekend_tourney_division_id() {
-  _has_bits_[2] |= 0x00000001u;
+  _has_bits_[1] |= 0x40000000u;
 }
 void CSODOTALobby::clear_has_weekend_tourney_division_id() {
-  _has_bits_[2] &= ~0x00000001u;
+  _has_bits_[1] &= ~0x40000000u;
 }
 void CSODOTALobby::clear_weekend_tourney_division_id() {
   weekend_tourney_division_id_ = 0u;
@@ -18567,13 +18691,13 @@ void CSODOTALobby::set_weekend_tourney_division_id(::google::protobuf::uint32 va
 
 // optional uint32 weekend_tourney_skill_level = 91;
 bool CSODOTALobby::has_weekend_tourney_skill_level() const {
-  return (_has_bits_[2] & 0x00000002u) != 0;
+  return (_has_bits_[1] & 0x80000000u) != 0;
 }
 void CSODOTALobby::set_has_weekend_tourney_skill_level() {
-  _has_bits_[2] |= 0x00000002u;
+  _has_bits_[1] |= 0x80000000u;
 }
 void CSODOTALobby::clear_has_weekend_tourney_skill_level() {
-  _has_bits_[2] &= ~0x00000002u;
+  _has_bits_[1] &= ~0x80000000u;
 }
 void CSODOTALobby::clear_weekend_tourney_skill_level() {
   weekend_tourney_skill_level_ = 0u;
@@ -18591,13 +18715,13 @@ void CSODOTALobby::set_weekend_tourney_skill_level(::google::protobuf::uint32 va
 
 // optional uint32 weekend_tourney_bracket_round = 92;
 bool CSODOTALobby::has_weekend_tourney_bracket_round() const {
-  return (_has_bits_[1] & 0x00100000u) != 0;
+  return (_has_bits_[2] & 0x00000001u) != 0;
 }
 void CSODOTALobby::set_has_weekend_tourney_bracket_round() {
-  _has_bits_[1] |= 0x00100000u;
+  _has_bits_[2] |= 0x00000001u;
 }
 void CSODOTALobby::clear_has_weekend_tourney_bracket_round() {
-  _has_bits_[1] &= ~0x00100000u;
+  _has_bits_[2] &= ~0x00000001u;
 }
 void CSODOTALobby::clear_weekend_tourney_bracket_round() {
   weekend_tourney_bracket_round_ = 0u;
@@ -18615,13 +18739,13 @@ void CSODOTALobby::set_weekend_tourney_bracket_round(::google::protobuf::uint32 
 
 // optional .proto.dota.DOTABotDifficulty bot_difficulty_dire = 93 [default = BOT_DIFFICULTY_HARD];
 bool CSODOTALobby::has_bot_difficulty_dire() const {
-  return (_has_bits_[2] & 0x00000080u) != 0;
+  return (_has_bits_[2] & 0x00000400u) != 0;
 }
 void CSODOTALobby::set_has_bot_difficulty_dire() {
-  _has_bits_[2] |= 0x00000080u;
+  _has_bits_[2] |= 0x00000400u;
 }
 void CSODOTALobby::clear_has_bot_difficulty_dire() {
-  _has_bits_[2] &= ~0x00000080u;
+  _has_bits_[2] &= ~0x00000400u;
 }
 void CSODOTALobby::clear_bot_difficulty_dire() {
   bot_difficulty_dire_ = 3;
@@ -18640,13 +18764,13 @@ void CSODOTALobby::set_bot_difficulty_dire(::proto::dota::DOTABotDifficulty valu
 
 // optional uint64 bot_radiant = 94;
 bool CSODOTALobby::has_bot_radiant() const {
-  return (_has_bits_[2] & 0x00000004u) != 0;
+  return (_has_bits_[2] & 0x00000002u) != 0;
 }
 void CSODOTALobby::set_has_bot_radiant() {
-  _has_bits_[2] |= 0x00000004u;
+  _has_bits_[2] |= 0x00000002u;
 }
 void CSODOTALobby::clear_has_bot_radiant() {
-  _has_bits_[2] &= ~0x00000004u;
+  _has_bits_[2] &= ~0x00000002u;
 }
 void CSODOTALobby::clear_bot_radiant() {
   bot_radiant_ = GOOGLE_ULONGLONG(0);
@@ -18664,13 +18788,13 @@ void CSODOTALobby::set_bot_radiant(::google::protobuf::uint64 value) {
 
 // optional uint64 bot_dire = 95;
 bool CSODOTALobby::has_bot_dire() const {
-  return (_has_bits_[2] & 0x00000008u) != 0;
+  return (_has_bits_[2] & 0x00000004u) != 0;
 }
 void CSODOTALobby::set_has_bot_dire() {
-  _has_bits_[2] |= 0x00000008u;
+  _has_bits_[2] |= 0x00000004u;
 }
 void CSODOTALobby::clear_has_bot_dire() {
-  _has_bits_[2] &= ~0x00000008u;
+  _has_bits_[2] &= ~0x00000004u;
 }
 void CSODOTALobby::clear_bot_dire() {
   bot_dire_ = GOOGLE_ULONGLONG(0);
@@ -18688,13 +18812,13 @@ void CSODOTALobby::set_bot_dire(::google::protobuf::uint64 value) {
 
 // optional bool event_progression_enabled = 96;
 bool CSODOTALobby::has_event_progression_enabled() const {
-  return (_has_bits_[1] & 0x08000000u) != 0;
+  return (_has_bits_[1] & 0x10000000u) != 0;
 }
 void CSODOTALobby::set_has_event_progression_enabled() {
-  _has_bits_[1] |= 0x08000000u;
+  _has_bits_[1] |= 0x10000000u;
 }
 void CSODOTALobby::clear_has_event_progression_enabled() {
-  _has_bits_[1] &= ~0x08000000u;
+  _has_bits_[1] &= ~0x10000000u;
 }
 void CSODOTALobby::clear_event_progression_enabled() {
   event_progression_enabled_ = false;
@@ -18708,6 +18832,153 @@ void CSODOTALobby::set_event_progression_enabled(bool value) {
   set_has_event_progression_enabled();
   event_progression_enabled_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.event_progression_enabled)
+}
+
+// optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 97 [default = k_DOTASelectionPriorityRules_Manual];
+bool CSODOTALobby::has_selection_priority_rules() const {
+  return (_has_bits_[2] & 0x00000008u) != 0;
+}
+void CSODOTALobby::set_has_selection_priority_rules() {
+  _has_bits_[2] |= 0x00000008u;
+}
+void CSODOTALobby::clear_has_selection_priority_rules() {
+  _has_bits_[2] &= ~0x00000008u;
+}
+void CSODOTALobby::clear_selection_priority_rules() {
+  selection_priority_rules_ = 0;
+  clear_has_selection_priority_rules();
+}
+::proto::dota::DOTASelectionPriorityRules CSODOTALobby::selection_priority_rules() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTALobby.selection_priority_rules)
+  return static_cast< ::proto::dota::DOTASelectionPriorityRules >(selection_priority_rules_);
+}
+void CSODOTALobby::set_selection_priority_rules(::proto::dota::DOTASelectionPriorityRules value) {
+  assert(::proto::dota::DOTASelectionPriorityRules_IsValid(value));
+  set_has_selection_priority_rules();
+  selection_priority_rules_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.selection_priority_rules)
+}
+
+// optional uint32 series_previous_selection_priority_team_id = 98;
+bool CSODOTALobby::has_series_previous_selection_priority_team_id() const {
+  return (_has_bits_[2] & 0x00000010u) != 0;
+}
+void CSODOTALobby::set_has_series_previous_selection_priority_team_id() {
+  _has_bits_[2] |= 0x00000010u;
+}
+void CSODOTALobby::clear_has_series_previous_selection_priority_team_id() {
+  _has_bits_[2] &= ~0x00000010u;
+}
+void CSODOTALobby::clear_series_previous_selection_priority_team_id() {
+  series_previous_selection_priority_team_id_ = 0u;
+  clear_has_series_previous_selection_priority_team_id();
+}
+::google::protobuf::uint32 CSODOTALobby::series_previous_selection_priority_team_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTALobby.series_previous_selection_priority_team_id)
+  return series_previous_selection_priority_team_id_;
+}
+void CSODOTALobby::set_series_previous_selection_priority_team_id(::google::protobuf::uint32 value) {
+  set_has_series_previous_selection_priority_team_id();
+  series_previous_selection_priority_team_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.series_previous_selection_priority_team_id)
+}
+
+// optional uint32 series_current_selection_priority_team_id = 99;
+bool CSODOTALobby::has_series_current_selection_priority_team_id() const {
+  return (_has_bits_[2] & 0x00000020u) != 0;
+}
+void CSODOTALobby::set_has_series_current_selection_priority_team_id() {
+  _has_bits_[2] |= 0x00000020u;
+}
+void CSODOTALobby::clear_has_series_current_selection_priority_team_id() {
+  _has_bits_[2] &= ~0x00000020u;
+}
+void CSODOTALobby::clear_series_current_selection_priority_team_id() {
+  series_current_selection_priority_team_id_ = 0u;
+  clear_has_series_current_selection_priority_team_id();
+}
+::google::protobuf::uint32 CSODOTALobby::series_current_selection_priority_team_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTALobby.series_current_selection_priority_team_id)
+  return series_current_selection_priority_team_id_;
+}
+void CSODOTALobby::set_series_current_selection_priority_team_id(::google::protobuf::uint32 value) {
+  set_has_series_current_selection_priority_team_id();
+  series_current_selection_priority_team_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.series_current_selection_priority_team_id)
+}
+
+// optional .proto.dota.DOTASelectionPriorityChoice series_current_priority_team_choice = 100 [default = k_DOTASelectionPriorityChoice_Invalid];
+bool CSODOTALobby::has_series_current_priority_team_choice() const {
+  return (_has_bits_[2] & 0x00000040u) != 0;
+}
+void CSODOTALobby::set_has_series_current_priority_team_choice() {
+  _has_bits_[2] |= 0x00000040u;
+}
+void CSODOTALobby::clear_has_series_current_priority_team_choice() {
+  _has_bits_[2] &= ~0x00000040u;
+}
+void CSODOTALobby::clear_series_current_priority_team_choice() {
+  series_current_priority_team_choice_ = 0;
+  clear_has_series_current_priority_team_choice();
+}
+::proto::dota::DOTASelectionPriorityChoice CSODOTALobby::series_current_priority_team_choice() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTALobby.series_current_priority_team_choice)
+  return static_cast< ::proto::dota::DOTASelectionPriorityChoice >(series_current_priority_team_choice_);
+}
+void CSODOTALobby::set_series_current_priority_team_choice(::proto::dota::DOTASelectionPriorityChoice value) {
+  assert(::proto::dota::DOTASelectionPriorityChoice_IsValid(value));
+  set_has_series_current_priority_team_choice();
+  series_current_priority_team_choice_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.series_current_priority_team_choice)
+}
+
+// optional .proto.dota.DOTASelectionPriorityChoice series_current_non_priority_team_choice = 101 [default = k_DOTASelectionPriorityChoice_Invalid];
+bool CSODOTALobby::has_series_current_non_priority_team_choice() const {
+  return (_has_bits_[1] & 0x00800000u) != 0;
+}
+void CSODOTALobby::set_has_series_current_non_priority_team_choice() {
+  _has_bits_[1] |= 0x00800000u;
+}
+void CSODOTALobby::clear_has_series_current_non_priority_team_choice() {
+  _has_bits_[1] &= ~0x00800000u;
+}
+void CSODOTALobby::clear_series_current_non_priority_team_choice() {
+  series_current_non_priority_team_choice_ = 0;
+  clear_has_series_current_non_priority_team_choice();
+}
+::proto::dota::DOTASelectionPriorityChoice CSODOTALobby::series_current_non_priority_team_choice() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTALobby.series_current_non_priority_team_choice)
+  return static_cast< ::proto::dota::DOTASelectionPriorityChoice >(series_current_non_priority_team_choice_);
+}
+void CSODOTALobby::set_series_current_non_priority_team_choice(::proto::dota::DOTASelectionPriorityChoice value) {
+  assert(::proto::dota::DOTASelectionPriorityChoice_IsValid(value));
+  set_has_series_current_non_priority_team_choice();
+  series_current_non_priority_team_choice_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.series_current_non_priority_team_choice)
+}
+
+// optional bool series_current_selection_priority_used_coin_toss = 102;
+bool CSODOTALobby::has_series_current_selection_priority_used_coin_toss() const {
+  return (_has_bits_[1] & 0x20000000u) != 0;
+}
+void CSODOTALobby::set_has_series_current_selection_priority_used_coin_toss() {
+  _has_bits_[1] |= 0x20000000u;
+}
+void CSODOTALobby::clear_has_series_current_selection_priority_used_coin_toss() {
+  _has_bits_[1] &= ~0x20000000u;
+}
+void CSODOTALobby::clear_series_current_selection_priority_used_coin_toss() {
+  series_current_selection_priority_used_coin_toss_ = false;
+  clear_has_series_current_selection_priority_used_coin_toss();
+}
+bool CSODOTALobby::series_current_selection_priority_used_coin_toss() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTALobby.series_current_selection_priority_used_coin_toss)
+  return series_current_selection_priority_used_coin_toss_;
+}
+void CSODOTALobby::set_series_current_selection_priority_used_coin_toss(bool value) {
+  set_has_series_current_selection_priority_used_coin_toss();
+  series_current_selection_priority_used_coin_toss_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTALobby.series_current_selection_priority_used_coin_toss)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

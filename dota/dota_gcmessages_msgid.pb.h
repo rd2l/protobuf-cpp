@@ -759,11 +759,23 @@ enum EDOTAGCMsg {
   k_EMsgGCToGCSignoutSpendRankWager = 8229,
   k_EMsgGCToGCGetFavoriteTeam = 8230,
   k_EMsgGCToGCGetFavoriteTeamResponse = 8231,
-  k_EMsgSignOutEventGameData = 8232
+  k_EMsgSignOutEventGameData = 8232,
+  k_EMsgGCToClientAllStarVotesRequest = 8233,
+  k_EMsgGCToClientAllStarVotesReply = 8234,
+  k_EMsgGCToClientAllStarVotesSubmit = 8236,
+  k_EMsgGCToClientAllStarVotesSubmitReply = 8237,
+  k_EMsgClientToGCQuickStatsRequest = 8238,
+  k_EMsgClientToGCQuickStatsResponse = 8239,
+  k_EMsgGCToGCSubtractEventPointsFromUser = 8240,
+  k_EMsgSelectionPriorityChoiceRequest = 8241,
+  k_EMsgSelectionPriorityChoiceResponse = 8242,
+  k_EMsgGCToGCCompendiumInGamePredictionResults = 8243,
+  k_EMsgGameAutographReward = 8244,
+  k_EMsgGameAutographRewardResponse = 8245
 };
 bool EDOTAGCMsg_IsValid(int value);
 const EDOTAGCMsg EDOTAGCMsg_MIN = k_EMsgGCDOTABase;
-const EDOTAGCMsg EDOTAGCMsg_MAX = k_EMsgSignOutEventGameData;
+const EDOTAGCMsg EDOTAGCMsg_MAX = k_EMsgGameAutographRewardResponse;
 const int EDOTAGCMsg_ARRAYSIZE = EDOTAGCMsg_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* EDOTAGCMsg_descriptor();

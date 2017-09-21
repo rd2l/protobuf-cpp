@@ -1248,14 +1248,47 @@ class CMsgClientCMList : public ::google::protobuf::Message /* @@protoc_insertio
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
       mutable_cm_ports();
 
+  // repeated string cm_websocket_addresses = 3;
+  int cm_websocket_addresses_size() const;
+  void clear_cm_websocket_addresses();
+  static const int kCmWebsocketAddressesFieldNumber = 3;
+  const ::std::string& cm_websocket_addresses(int index) const;
+  ::std::string* mutable_cm_websocket_addresses(int index);
+  void set_cm_websocket_addresses(int index, const ::std::string& value);
+  #if LANG_CXX11
+  void set_cm_websocket_addresses(int index, ::std::string&& value);
+  #endif
+  void set_cm_websocket_addresses(int index, const char* value);
+  void set_cm_websocket_addresses(int index, const char* value, size_t size);
+  ::std::string* add_cm_websocket_addresses();
+  void add_cm_websocket_addresses(const ::std::string& value);
+  #if LANG_CXX11
+  void add_cm_websocket_addresses(::std::string&& value);
+  #endif
+  void add_cm_websocket_addresses(const char* value);
+  void add_cm_websocket_addresses(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& cm_websocket_addresses() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_cm_websocket_addresses();
+
+  // optional uint32 percent_default_to_websocket = 4;
+  bool has_percent_default_to_websocket() const;
+  void clear_percent_default_to_websocket();
+  static const int kPercentDefaultToWebsocketFieldNumber = 4;
+  ::google::protobuf::uint32 percent_default_to_websocket() const;
+  void set_percent_default_to_websocket(::google::protobuf::uint32 value);
+
   // @@protoc_insertion_point(class_scope:proto.steam.CMsgClientCMList)
  private:
+  void set_has_percent_default_to_websocket();
+  void clear_has_percent_default_to_websocket();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > cm_addresses_;
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > cm_ports_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> cm_websocket_addresses_;
+  ::google::protobuf::uint32 percent_default_to_websocket_;
   friend struct protobuf_steammessages_5fclientserver_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -12782,6 +12815,13 @@ class CMsgClientGetClientAppList : public ::google::protobuf::Message /* @@proto
   bool only_changing() const;
   void set_only_changing(bool value);
 
+  // optional bool comics = 6;
+  bool has_comics() const;
+  void clear_comics();
+  static const int kComicsFieldNumber = 6;
+  bool comics() const;
+  void set_comics(bool value);
+
   // @@protoc_insertion_point(class_scope:proto.steam.CMsgClientGetClientAppList)
  private:
   void set_has_media();
@@ -12794,6 +12834,8 @@ class CMsgClientGetClientAppList : public ::google::protobuf::Message /* @@proto
   void clear_has_only_installed();
   void set_has_only_changing();
   void clear_has_only_changing();
+  void set_has_comics();
+  void clear_has_comics();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -12803,6 +12845,7 @@ class CMsgClientGetClientAppList : public ::google::protobuf::Message /* @@proto
   bool games_;
   bool only_installed_;
   bool only_changing_;
+  bool comics_;
   friend struct protobuf_steammessages_5fclientserver_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -22417,6 +22460,99 @@ inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
 CMsgClientCMList::mutable_cm_ports() {
   // @@protoc_insertion_point(field_mutable_list:proto.steam.CMsgClientCMList.cm_ports)
   return &cm_ports_;
+}
+
+// repeated string cm_websocket_addresses = 3;
+inline int CMsgClientCMList::cm_websocket_addresses_size() const {
+  return cm_websocket_addresses_.size();
+}
+inline void CMsgClientCMList::clear_cm_websocket_addresses() {
+  cm_websocket_addresses_.Clear();
+}
+inline const ::std::string& CMsgClientCMList::cm_websocket_addresses(int index) const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  return cm_websocket_addresses_.Get(index);
+}
+inline ::std::string* CMsgClientCMList::mutable_cm_websocket_addresses(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  return cm_websocket_addresses_.Mutable(index);
+}
+inline void CMsgClientCMList::set_cm_websocket_addresses(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  cm_websocket_addresses_.Mutable(index)->assign(value);
+}
+#if LANG_CXX11
+inline void CMsgClientCMList::set_cm_websocket_addresses(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  cm_websocket_addresses_.Mutable(index)->assign(std::move(value));
+}
+#endif
+inline void CMsgClientCMList::set_cm_websocket_addresses(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  cm_websocket_addresses_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+inline void CMsgClientCMList::set_cm_websocket_addresses(int index, const char* value, size_t size) {
+  cm_websocket_addresses_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+inline ::std::string* CMsgClientCMList::add_cm_websocket_addresses() {
+  // @@protoc_insertion_point(field_add_mutable:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  return cm_websocket_addresses_.Add();
+}
+inline void CMsgClientCMList::add_cm_websocket_addresses(const ::std::string& value) {
+  cm_websocket_addresses_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+#if LANG_CXX11
+inline void CMsgClientCMList::add_cm_websocket_addresses(::std::string&& value) {
+  cm_websocket_addresses_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+#endif
+inline void CMsgClientCMList::add_cm_websocket_addresses(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  cm_websocket_addresses_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+inline void CMsgClientCMList::add_cm_websocket_addresses(const char* value, size_t size) {
+  cm_websocket_addresses_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CMsgClientCMList::cm_websocket_addresses() const {
+  // @@protoc_insertion_point(field_list:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  return cm_websocket_addresses_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CMsgClientCMList::mutable_cm_websocket_addresses() {
+  // @@protoc_insertion_point(field_mutable_list:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  return &cm_websocket_addresses_;
+}
+
+// optional uint32 percent_default_to_websocket = 4;
+inline bool CMsgClientCMList::has_percent_default_to_websocket() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgClientCMList::set_has_percent_default_to_websocket() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgClientCMList::clear_has_percent_default_to_websocket() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgClientCMList::clear_percent_default_to_websocket() {
+  percent_default_to_websocket_ = 0u;
+  clear_has_percent_default_to_websocket();
+}
+inline ::google::protobuf::uint32 CMsgClientCMList::percent_default_to_websocket() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgClientCMList.percent_default_to_websocket)
+  return percent_default_to_websocket_;
+}
+inline void CMsgClientCMList::set_percent_default_to_websocket(::google::protobuf::uint32 value) {
+  set_has_percent_default_to_websocket();
+  percent_default_to_websocket_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgClientCMList.percent_default_to_websocket)
 }
 
 // -------------------------------------------------------------------
@@ -33571,6 +33707,30 @@ inline void CMsgClientGetClientAppList::set_only_changing(bool value) {
   set_has_only_changing();
   only_changing_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CMsgClientGetClientAppList.only_changing)
+}
+
+// optional bool comics = 6;
+inline bool CMsgClientGetClientAppList::has_comics() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void CMsgClientGetClientAppList::set_has_comics() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void CMsgClientGetClientAppList::clear_has_comics() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void CMsgClientGetClientAppList::clear_comics() {
+  comics_ = false;
+  clear_has_comics();
+}
+inline bool CMsgClientGetClientAppList::comics() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgClientGetClientAppList.comics)
+  return comics_;
+}
+inline void CMsgClientGetClientAppList::set_comics(bool value) {
+  set_has_comics();
+  comics_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgClientGetClientAppList.comics)
 }
 
 // -------------------------------------------------------------------

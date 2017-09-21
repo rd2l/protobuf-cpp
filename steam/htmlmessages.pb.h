@@ -1615,12 +1615,26 @@ class CMsgBrowserCreate : public ::google::protobuf::Message /* @@protoc_inserti
   ::google::protobuf::uint32 browser_type() const;
   void set_browser_type(::google::protobuf::uint32 value);
 
+  // optional int32 initial_left = 16 [default = -1];
+  bool has_initial_left() const;
+  void clear_initial_left();
+  static const int kInitialLeftFieldNumber = 16;
+  ::google::protobuf::int32 initial_left() const;
+  void set_initial_left(::google::protobuf::int32 value);
+
   // optional bool offscreen = 8 [default = true];
   bool has_offscreen() const;
   void clear_offscreen();
   static const int kOffscreenFieldNumber = 8;
   bool offscreen() const;
   void set_offscreen(bool value);
+
+  // optional int32 initial_top = 15 [default = -1];
+  bool has_initial_top() const;
+  void clear_initial_top();
+  static const int kInitialTopFieldNumber = 15;
+  ::google::protobuf::int32 initial_top() const;
+  void set_initial_top(::google::protobuf::int32 value);
 
   // @@protoc_insertion_point(class_scope:proto.steam.CMsgBrowserCreate)
  private:
@@ -1648,6 +1662,10 @@ class CMsgBrowserCreate : public ::google::protobuf::Message /* @@protoc_inserti
   void clear_has_vroverlay_key();
   void set_has_browser_type();
   void clear_has_browser_type();
+  void set_has_initial_top();
+  void clear_has_initial_top();
+  void set_has_initial_left();
+  void clear_has_initial_left();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -1663,7 +1681,9 @@ class CMsgBrowserCreate : public ::google::protobuf::Message /* @@protoc_inserti
   bool borderless_;
   ::google::protobuf::uint32 initial_height_;
   ::google::protobuf::uint32 browser_type_;
+  ::google::protobuf::int32 initial_left_;
   bool offscreen_;
+  ::google::protobuf::int32 initial_top_;
   friend struct protobuf_htmlmessages_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -15267,13 +15287,13 @@ inline void CMsgBrowserCreate::set_dpi_scaling(float value) {
 
 // optional bool offscreen = 8 [default = true];
 inline bool CMsgBrowserCreate::has_offscreen() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void CMsgBrowserCreate::set_has_offscreen() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void CMsgBrowserCreate::clear_has_offscreen() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void CMsgBrowserCreate::clear_offscreen() {
   offscreen_ = true;
@@ -15509,6 +15529,54 @@ inline void CMsgBrowserCreate::set_browser_type(::google::protobuf::uint32 value
   set_has_browser_type();
   browser_type_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CMsgBrowserCreate.browser_type)
+}
+
+// optional int32 initial_top = 15 [default = -1];
+inline bool CMsgBrowserCreate::has_initial_top() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void CMsgBrowserCreate::set_has_initial_top() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void CMsgBrowserCreate::clear_has_initial_top() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void CMsgBrowserCreate::clear_initial_top() {
+  initial_top_ = -1;
+  clear_has_initial_top();
+}
+inline ::google::protobuf::int32 CMsgBrowserCreate::initial_top() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgBrowserCreate.initial_top)
+  return initial_top_;
+}
+inline void CMsgBrowserCreate::set_initial_top(::google::protobuf::int32 value) {
+  set_has_initial_top();
+  initial_top_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgBrowserCreate.initial_top)
+}
+
+// optional int32 initial_left = 16 [default = -1];
+inline bool CMsgBrowserCreate::has_initial_left() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void CMsgBrowserCreate::set_has_initial_left() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void CMsgBrowserCreate::clear_has_initial_left() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void CMsgBrowserCreate::clear_initial_left() {
+  initial_left_ = -1;
+  clear_has_initial_left();
+}
+inline ::google::protobuf::int32 CMsgBrowserCreate::initial_left() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgBrowserCreate.initial_left)
+  return initial_left_;
+}
+inline void CMsgBrowserCreate::set_initial_left(::google::protobuf::int32 value) {
+  set_has_initial_left();
+  initial_left_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgBrowserCreate.initial_left)
 }
 
 // -------------------------------------------------------------------

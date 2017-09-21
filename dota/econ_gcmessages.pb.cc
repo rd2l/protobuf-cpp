@@ -121,6 +121,10 @@ class CMsgDevNewItemRequestDefaultTypeInternal : public ::google::protobuf::inte
 } _CMsgDevNewItemRequest_default_instance_;
 class CMsgDevNewItemRequestResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgDevNewItemRequestResponse> {
 } _CMsgDevNewItemRequestResponse_default_instance_;
+class CMsgGCCheckAccountSubscriptionDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgGCCheckAccountSubscription> {
+} _CMsgGCCheckAccountSubscription_default_instance_;
+class CMsgGCCheckAccountSubscriptionResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgGCCheckAccountSubscriptionResponse> {
+} _CMsgGCCheckAccountSubscriptionResponse_default_instance_;
 class CMsgGCAddGiftItemDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgGCAddGiftItem> {
 } _CMsgGCAddGiftItem_default_instance_;
 class CMsgClientToGCWrapAndDeliverGiftDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgClientToGCWrapAndDeliverGift> {
@@ -257,8 +261,8 @@ namespace protobuf_econ_5fgcmessages_2eproto {
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[116];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[12];
+::google::protobuf::Metadata file_level_metadata[118];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[13];
 
 }  // namespace
 
@@ -273,6 +277,8 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
     TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
@@ -877,6 +883,24 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgDevNewItemRequestResponse, success_),
   0,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCCheckAccountSubscription, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCCheckAccountSubscription, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCCheckAccountSubscription, account_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCCheckAccountSubscription, def_index_),
+  0,
+  1,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCCheckAccountSubscriptionResponse, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCCheckAccountSubscriptionResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCCheckAccountSubscriptionResponse, state_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCCheckAccountSubscriptionResponse, cache_until_),
+  0,
+  1,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCAddGiftItem, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCAddGiftItem, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1626,71 +1650,73 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 456, 463, sizeof(CMsgRedeemCodeResponse)},
   { 465, 474, sizeof(CMsgDevNewItemRequest)},
   { 478, 484, sizeof(CMsgDevNewItemRequestResponse)},
-  { 485, 492, sizeof(CMsgGCAddGiftItem)},
-  { 494, 502, sizeof(CMsgClientToGCWrapAndDeliverGift)},
-  { 505, 517, sizeof(CMsgClientToGCWrapAndDeliverGiftResponse)},
-  { 524, 530, sizeof(CMsgClientToGCUnwrapGift)},
-  { 531, 536, sizeof(CMsgClientToGCGetGiftPermissions)},
-  { 536, 543, sizeof(CMsgClientToGCGetGiftPermissionsResponse_FriendPermission)},
-  { 545, 556, sizeof(CMsgClientToGCGetGiftPermissionsResponse)},
-  { 562, 568, sizeof(CMsgClientToGCUnpackBundle)},
-  { 569, 576, sizeof(CMsgClientToGCUnpackBundleResponse)},
-  { 578, 585, sizeof(CMsgGCToClientStoreTransactionCompleted)},
-  { 587, 593, sizeof(CMsgClientToGCEquipItems)},
-  { 594, 600, sizeof(CMsgClientToGCEquipItemsResponse)},
-  { 601, 608, sizeof(CMsgClientToGCSetItemStyle)},
-  { 610, 616, sizeof(CMsgClientToGCSetItemStyleResponse)},
-  { 617, 625, sizeof(CMsgClientToGCUnlockItemStyle)},
-  { 628, 637, sizeof(CMsgClientToGCUnlockItemStyleResponse)},
-  { 641, 650, sizeof(CMsgClientToGCSetItemInventoryCategory)},
-  { 654, 661, sizeof(CMsgClientToGCUnlockCrate)},
-  { 663, 670, sizeof(CMsgClientToGCUnlockCrateResponse_Item)},
-  { 672, 679, sizeof(CMsgClientToGCUnlockCrateResponse)},
-  { 681, 687, sizeof(CMsgClientToGCRemoveItemAttribute)},
-  { 688, 695, sizeof(CMsgClientToGCRemoveItemAttributeResponse)},
-  { 697, 705, sizeof(CMsgClientToGCNameItem)},
-  { 708, 715, sizeof(CMsgClientToGCNameItemResponse)},
-  { 717, 724, sizeof(CMsgGCSetItemPosition)},
-  { 726, 740, sizeof(CAttribute_ItemDynamicRecipeComponent)},
-  { 749, 761, sizeof(CProtoItemSocket)},
-  { 768, 774, sizeof(CProtoItemSocket_Empty)},
-  { 775, 782, sizeof(CProtoItemSocket_Effect)},
-  { 784, 793, sizeof(CProtoItemSocket_Color)},
-  { 797, 805, sizeof(CProtoItemSocket_Strange)},
-  { 808, 818, sizeof(CProtoItemSocket_Spectator)},
-  { 823, 830, sizeof(CProtoItemSocket_AssetModifier)},
-  { 832, 841, sizeof(CProtoItemSocket_AssetModifier_DESERIALIZE_FROM_STRING_ONLY)},
-  { 845, 854, sizeof(CProtoItemSocket_Autograph)},
-  { 858, 864, sizeof(CProtoItemSocket_StaticVisuals)},
-  { 865, 871, sizeof(CAttribute_String)},
-  { 872, 881, sizeof(CWorkshop_GetItemDailyRevenue_Request)},
-  { 885, 894, sizeof(CWorkshop_GetItemDailyRevenue_Response_CountryDailyRevenue)},
-  { 898, 904, sizeof(CWorkshop_GetItemDailyRevenue_Response)},
-  { 905, 913, sizeof(CWorkshop_GetPackageDailyRevenue_Request)},
-  { 916, 925, sizeof(CWorkshop_GetPackageDailyRevenue_Response_CountryDailyRevenue)},
-  { 929, 935, sizeof(CWorkshop_GetPackageDailyRevenue_Response)},
-  { 936, 943, sizeof(CMsgSQLGCToGCGrantBackpackSlots)},
-  { 945, 951, sizeof(CMsgClientToGCLookupAccountName)},
-  { 952, 959, sizeof(CMsgClientToGCLookupAccountNameResponse)},
-  { 961, 968, sizeof(CMsgClientToGCCreateStaticRecipe_Item)},
-  { 970, 977, sizeof(CMsgClientToGCCreateStaticRecipe)},
-  { 979, 987, sizeof(CMsgClientToGCCreateStaticRecipeResponse_OutputItem)},
-  { 990, 997, sizeof(CMsgClientToGCCreateStaticRecipeResponse_InputError)},
-  { 999, 1006, sizeof(CMsgClientToGCCreateStaticRecipeResponse_AdditionalOutput)},
-  { 1008, 1017, sizeof(CMsgClientToGCCreateStaticRecipeResponse)},
-  { 1021, 1035, sizeof(CMsgProcessTransactionOrder_Item)},
-  { 1044, 1058, sizeof(CMsgProcessTransactionOrder)},
-  { 1067, 1074, sizeof(CMsgGCToGCStoreProcessCDKeyTransaction)},
-  { 1076, 1082, sizeof(CMsgGCToGCStoreProcessCDKeyTransactionResponse)},
-  { 1083, 1090, sizeof(CMsgGCToGCStoreProcessSettlement)},
-  { 1092, 1098, sizeof(CMsgGCToGCStoreProcessSettlementResponse)},
-  { 1099, 1108, sizeof(CMsgGCToGCBroadcastConsoleCommand)},
-  { 1112, 1119, sizeof(CMsgGCToGCConsoleOutput_OutputLine)},
-  { 1121, 1129, sizeof(CMsgGCToGCConsoleOutput)},
-  { 1132, 1139, sizeof(CMsgItemAges_MaxItemIDTimestamp)},
-  { 1141, 1147, sizeof(CMsgItemAges)},
-  { 1148, 1160, sizeof(CMsgGCToGCInternalTestMsg)},
-  { 1167, 1176, sizeof(CMsgGCToGCClientServerVersionsUpdated)},
+  { 485, 492, sizeof(CMsgGCCheckAccountSubscription)},
+  { 494, 501, sizeof(CMsgGCCheckAccountSubscriptionResponse)},
+  { 503, 510, sizeof(CMsgGCAddGiftItem)},
+  { 512, 520, sizeof(CMsgClientToGCWrapAndDeliverGift)},
+  { 523, 535, sizeof(CMsgClientToGCWrapAndDeliverGiftResponse)},
+  { 542, 548, sizeof(CMsgClientToGCUnwrapGift)},
+  { 549, 554, sizeof(CMsgClientToGCGetGiftPermissions)},
+  { 554, 561, sizeof(CMsgClientToGCGetGiftPermissionsResponse_FriendPermission)},
+  { 563, 574, sizeof(CMsgClientToGCGetGiftPermissionsResponse)},
+  { 580, 586, sizeof(CMsgClientToGCUnpackBundle)},
+  { 587, 594, sizeof(CMsgClientToGCUnpackBundleResponse)},
+  { 596, 603, sizeof(CMsgGCToClientStoreTransactionCompleted)},
+  { 605, 611, sizeof(CMsgClientToGCEquipItems)},
+  { 612, 618, sizeof(CMsgClientToGCEquipItemsResponse)},
+  { 619, 626, sizeof(CMsgClientToGCSetItemStyle)},
+  { 628, 634, sizeof(CMsgClientToGCSetItemStyleResponse)},
+  { 635, 643, sizeof(CMsgClientToGCUnlockItemStyle)},
+  { 646, 655, sizeof(CMsgClientToGCUnlockItemStyleResponse)},
+  { 659, 668, sizeof(CMsgClientToGCSetItemInventoryCategory)},
+  { 672, 679, sizeof(CMsgClientToGCUnlockCrate)},
+  { 681, 688, sizeof(CMsgClientToGCUnlockCrateResponse_Item)},
+  { 690, 697, sizeof(CMsgClientToGCUnlockCrateResponse)},
+  { 699, 705, sizeof(CMsgClientToGCRemoveItemAttribute)},
+  { 706, 713, sizeof(CMsgClientToGCRemoveItemAttributeResponse)},
+  { 715, 723, sizeof(CMsgClientToGCNameItem)},
+  { 726, 733, sizeof(CMsgClientToGCNameItemResponse)},
+  { 735, 742, sizeof(CMsgGCSetItemPosition)},
+  { 744, 758, sizeof(CAttribute_ItemDynamicRecipeComponent)},
+  { 767, 779, sizeof(CProtoItemSocket)},
+  { 786, 792, sizeof(CProtoItemSocket_Empty)},
+  { 793, 800, sizeof(CProtoItemSocket_Effect)},
+  { 802, 811, sizeof(CProtoItemSocket_Color)},
+  { 815, 823, sizeof(CProtoItemSocket_Strange)},
+  { 826, 836, sizeof(CProtoItemSocket_Spectator)},
+  { 841, 848, sizeof(CProtoItemSocket_AssetModifier)},
+  { 850, 859, sizeof(CProtoItemSocket_AssetModifier_DESERIALIZE_FROM_STRING_ONLY)},
+  { 863, 872, sizeof(CProtoItemSocket_Autograph)},
+  { 876, 882, sizeof(CProtoItemSocket_StaticVisuals)},
+  { 883, 889, sizeof(CAttribute_String)},
+  { 890, 899, sizeof(CWorkshop_GetItemDailyRevenue_Request)},
+  { 903, 912, sizeof(CWorkshop_GetItemDailyRevenue_Response_CountryDailyRevenue)},
+  { 916, 922, sizeof(CWorkshop_GetItemDailyRevenue_Response)},
+  { 923, 931, sizeof(CWorkshop_GetPackageDailyRevenue_Request)},
+  { 934, 943, sizeof(CWorkshop_GetPackageDailyRevenue_Response_CountryDailyRevenue)},
+  { 947, 953, sizeof(CWorkshop_GetPackageDailyRevenue_Response)},
+  { 954, 961, sizeof(CMsgSQLGCToGCGrantBackpackSlots)},
+  { 963, 969, sizeof(CMsgClientToGCLookupAccountName)},
+  { 970, 977, sizeof(CMsgClientToGCLookupAccountNameResponse)},
+  { 979, 986, sizeof(CMsgClientToGCCreateStaticRecipe_Item)},
+  { 988, 995, sizeof(CMsgClientToGCCreateStaticRecipe)},
+  { 997, 1005, sizeof(CMsgClientToGCCreateStaticRecipeResponse_OutputItem)},
+  { 1008, 1015, sizeof(CMsgClientToGCCreateStaticRecipeResponse_InputError)},
+  { 1017, 1024, sizeof(CMsgClientToGCCreateStaticRecipeResponse_AdditionalOutput)},
+  { 1026, 1035, sizeof(CMsgClientToGCCreateStaticRecipeResponse)},
+  { 1039, 1053, sizeof(CMsgProcessTransactionOrder_Item)},
+  { 1062, 1076, sizeof(CMsgProcessTransactionOrder)},
+  { 1085, 1092, sizeof(CMsgGCToGCStoreProcessCDKeyTransaction)},
+  { 1094, 1100, sizeof(CMsgGCToGCStoreProcessCDKeyTransactionResponse)},
+  { 1101, 1108, sizeof(CMsgGCToGCStoreProcessSettlement)},
+  { 1110, 1116, sizeof(CMsgGCToGCStoreProcessSettlementResponse)},
+  { 1117, 1126, sizeof(CMsgGCToGCBroadcastConsoleCommand)},
+  { 1130, 1137, sizeof(CMsgGCToGCConsoleOutput_OutputLine)},
+  { 1139, 1147, sizeof(CMsgGCToGCConsoleOutput)},
+  { 1150, 1157, sizeof(CMsgItemAges_MaxItemIDTimestamp)},
+  { 1159, 1165, sizeof(CMsgItemAges)},
+  { 1166, 1178, sizeof(CMsgGCToGCInternalTestMsg)},
+  { 1185, 1194, sizeof(CMsgGCToGCClientServerVersionsUpdated)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -1745,6 +1771,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgRedeemCodeResponse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgDevNewItemRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgDevNewItemRequestResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgGCCheckAccountSubscription_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgGCCheckAccountSubscriptionResponse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgGCAddGiftItem_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgClientToGCWrapAndDeliverGift_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgClientToGCWrapAndDeliverGiftResponse_default_instance_),
@@ -1830,7 +1858,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 116);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 118);
 }
 
 }  // namespace
@@ -1938,136 +1966,140 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[49].reflection;
   _CMsgDevNewItemRequestResponse_default_instance_.Shutdown();
   delete file_level_metadata[50].reflection;
-  _CMsgGCAddGiftItem_default_instance_.Shutdown();
+  _CMsgGCCheckAccountSubscription_default_instance_.Shutdown();
   delete file_level_metadata[51].reflection;
-  _CMsgClientToGCWrapAndDeliverGift_default_instance_.Shutdown();
+  _CMsgGCCheckAccountSubscriptionResponse_default_instance_.Shutdown();
   delete file_level_metadata[52].reflection;
-  _CMsgClientToGCWrapAndDeliverGiftResponse_default_instance_.Shutdown();
+  _CMsgGCAddGiftItem_default_instance_.Shutdown();
   delete file_level_metadata[53].reflection;
-  _CMsgClientToGCUnwrapGift_default_instance_.Shutdown();
+  _CMsgClientToGCWrapAndDeliverGift_default_instance_.Shutdown();
   delete file_level_metadata[54].reflection;
-  _CMsgClientToGCGetGiftPermissions_default_instance_.Shutdown();
+  _CMsgClientToGCWrapAndDeliverGiftResponse_default_instance_.Shutdown();
   delete file_level_metadata[55].reflection;
-  _CMsgClientToGCGetGiftPermissionsResponse_FriendPermission_default_instance_.Shutdown();
+  _CMsgClientToGCUnwrapGift_default_instance_.Shutdown();
   delete file_level_metadata[56].reflection;
-  _CMsgClientToGCGetGiftPermissionsResponse_default_instance_.Shutdown();
+  _CMsgClientToGCGetGiftPermissions_default_instance_.Shutdown();
   delete file_level_metadata[57].reflection;
-  _CMsgClientToGCUnpackBundle_default_instance_.Shutdown();
+  _CMsgClientToGCGetGiftPermissionsResponse_FriendPermission_default_instance_.Shutdown();
   delete file_level_metadata[58].reflection;
-  _CMsgClientToGCUnpackBundleResponse_default_instance_.Shutdown();
+  _CMsgClientToGCGetGiftPermissionsResponse_default_instance_.Shutdown();
   delete file_level_metadata[59].reflection;
-  _CMsgGCToClientStoreTransactionCompleted_default_instance_.Shutdown();
+  _CMsgClientToGCUnpackBundle_default_instance_.Shutdown();
   delete file_level_metadata[60].reflection;
-  _CMsgClientToGCEquipItems_default_instance_.Shutdown();
+  _CMsgClientToGCUnpackBundleResponse_default_instance_.Shutdown();
   delete file_level_metadata[61].reflection;
-  _CMsgClientToGCEquipItemsResponse_default_instance_.Shutdown();
+  _CMsgGCToClientStoreTransactionCompleted_default_instance_.Shutdown();
   delete file_level_metadata[62].reflection;
-  _CMsgClientToGCSetItemStyle_default_instance_.Shutdown();
+  _CMsgClientToGCEquipItems_default_instance_.Shutdown();
   delete file_level_metadata[63].reflection;
-  _CMsgClientToGCSetItemStyleResponse_default_instance_.Shutdown();
+  _CMsgClientToGCEquipItemsResponse_default_instance_.Shutdown();
   delete file_level_metadata[64].reflection;
-  _CMsgClientToGCUnlockItemStyle_default_instance_.Shutdown();
+  _CMsgClientToGCSetItemStyle_default_instance_.Shutdown();
   delete file_level_metadata[65].reflection;
-  _CMsgClientToGCUnlockItemStyleResponse_default_instance_.Shutdown();
+  _CMsgClientToGCSetItemStyleResponse_default_instance_.Shutdown();
   delete file_level_metadata[66].reflection;
-  _CMsgClientToGCSetItemInventoryCategory_default_instance_.Shutdown();
+  _CMsgClientToGCUnlockItemStyle_default_instance_.Shutdown();
   delete file_level_metadata[67].reflection;
-  _CMsgClientToGCUnlockCrate_default_instance_.Shutdown();
+  _CMsgClientToGCUnlockItemStyleResponse_default_instance_.Shutdown();
   delete file_level_metadata[68].reflection;
-  _CMsgClientToGCUnlockCrateResponse_Item_default_instance_.Shutdown();
+  _CMsgClientToGCSetItemInventoryCategory_default_instance_.Shutdown();
   delete file_level_metadata[69].reflection;
-  _CMsgClientToGCUnlockCrateResponse_default_instance_.Shutdown();
+  _CMsgClientToGCUnlockCrate_default_instance_.Shutdown();
   delete file_level_metadata[70].reflection;
-  _CMsgClientToGCRemoveItemAttribute_default_instance_.Shutdown();
+  _CMsgClientToGCUnlockCrateResponse_Item_default_instance_.Shutdown();
   delete file_level_metadata[71].reflection;
-  _CMsgClientToGCRemoveItemAttributeResponse_default_instance_.Shutdown();
+  _CMsgClientToGCUnlockCrateResponse_default_instance_.Shutdown();
   delete file_level_metadata[72].reflection;
-  _CMsgClientToGCNameItem_default_instance_.Shutdown();
+  _CMsgClientToGCRemoveItemAttribute_default_instance_.Shutdown();
   delete file_level_metadata[73].reflection;
-  _CMsgClientToGCNameItemResponse_default_instance_.Shutdown();
+  _CMsgClientToGCRemoveItemAttributeResponse_default_instance_.Shutdown();
   delete file_level_metadata[74].reflection;
-  _CMsgGCSetItemPosition_default_instance_.Shutdown();
+  _CMsgClientToGCNameItem_default_instance_.Shutdown();
   delete file_level_metadata[75].reflection;
-  _CAttribute_ItemDynamicRecipeComponent_default_instance_.Shutdown();
+  _CMsgClientToGCNameItemResponse_default_instance_.Shutdown();
   delete file_level_metadata[76].reflection;
-  _CProtoItemSocket_default_instance_.Shutdown();
+  _CMsgGCSetItemPosition_default_instance_.Shutdown();
   delete file_level_metadata[77].reflection;
-  _CProtoItemSocket_Empty_default_instance_.Shutdown();
+  _CAttribute_ItemDynamicRecipeComponent_default_instance_.Shutdown();
   delete file_level_metadata[78].reflection;
-  _CProtoItemSocket_Effect_default_instance_.Shutdown();
+  _CProtoItemSocket_default_instance_.Shutdown();
   delete file_level_metadata[79].reflection;
-  _CProtoItemSocket_Color_default_instance_.Shutdown();
+  _CProtoItemSocket_Empty_default_instance_.Shutdown();
   delete file_level_metadata[80].reflection;
-  _CProtoItemSocket_Strange_default_instance_.Shutdown();
+  _CProtoItemSocket_Effect_default_instance_.Shutdown();
   delete file_level_metadata[81].reflection;
-  _CProtoItemSocket_Spectator_default_instance_.Shutdown();
+  _CProtoItemSocket_Color_default_instance_.Shutdown();
   delete file_level_metadata[82].reflection;
-  _CProtoItemSocket_AssetModifier_default_instance_.Shutdown();
+  _CProtoItemSocket_Strange_default_instance_.Shutdown();
   delete file_level_metadata[83].reflection;
-  _CProtoItemSocket_AssetModifier_DESERIALIZE_FROM_STRING_ONLY_default_instance_.Shutdown();
+  _CProtoItemSocket_Spectator_default_instance_.Shutdown();
   delete file_level_metadata[84].reflection;
-  _CProtoItemSocket_Autograph_default_instance_.Shutdown();
+  _CProtoItemSocket_AssetModifier_default_instance_.Shutdown();
   delete file_level_metadata[85].reflection;
-  _CProtoItemSocket_StaticVisuals_default_instance_.Shutdown();
+  _CProtoItemSocket_AssetModifier_DESERIALIZE_FROM_STRING_ONLY_default_instance_.Shutdown();
   delete file_level_metadata[86].reflection;
-  _CAttribute_String_default_instance_.Shutdown();
+  _CProtoItemSocket_Autograph_default_instance_.Shutdown();
   delete file_level_metadata[87].reflection;
-  _CWorkshop_GetItemDailyRevenue_Request_default_instance_.Shutdown();
+  _CProtoItemSocket_StaticVisuals_default_instance_.Shutdown();
   delete file_level_metadata[88].reflection;
-  _CWorkshop_GetItemDailyRevenue_Response_CountryDailyRevenue_default_instance_.Shutdown();
+  _CAttribute_String_default_instance_.Shutdown();
   delete file_level_metadata[89].reflection;
-  _CWorkshop_GetItemDailyRevenue_Response_default_instance_.Shutdown();
+  _CWorkshop_GetItemDailyRevenue_Request_default_instance_.Shutdown();
   delete file_level_metadata[90].reflection;
-  _CWorkshop_GetPackageDailyRevenue_Request_default_instance_.Shutdown();
+  _CWorkshop_GetItemDailyRevenue_Response_CountryDailyRevenue_default_instance_.Shutdown();
   delete file_level_metadata[91].reflection;
-  _CWorkshop_GetPackageDailyRevenue_Response_CountryDailyRevenue_default_instance_.Shutdown();
+  _CWorkshop_GetItemDailyRevenue_Response_default_instance_.Shutdown();
   delete file_level_metadata[92].reflection;
-  _CWorkshop_GetPackageDailyRevenue_Response_default_instance_.Shutdown();
+  _CWorkshop_GetPackageDailyRevenue_Request_default_instance_.Shutdown();
   delete file_level_metadata[93].reflection;
-  _CMsgSQLGCToGCGrantBackpackSlots_default_instance_.Shutdown();
+  _CWorkshop_GetPackageDailyRevenue_Response_CountryDailyRevenue_default_instance_.Shutdown();
   delete file_level_metadata[94].reflection;
-  _CMsgClientToGCLookupAccountName_default_instance_.Shutdown();
+  _CWorkshop_GetPackageDailyRevenue_Response_default_instance_.Shutdown();
   delete file_level_metadata[95].reflection;
-  _CMsgClientToGCLookupAccountNameResponse_default_instance_.Shutdown();
+  _CMsgSQLGCToGCGrantBackpackSlots_default_instance_.Shutdown();
   delete file_level_metadata[96].reflection;
-  _CMsgClientToGCCreateStaticRecipe_Item_default_instance_.Shutdown();
+  _CMsgClientToGCLookupAccountName_default_instance_.Shutdown();
   delete file_level_metadata[97].reflection;
-  _CMsgClientToGCCreateStaticRecipe_default_instance_.Shutdown();
+  _CMsgClientToGCLookupAccountNameResponse_default_instance_.Shutdown();
   delete file_level_metadata[98].reflection;
-  _CMsgClientToGCCreateStaticRecipeResponse_OutputItem_default_instance_.Shutdown();
+  _CMsgClientToGCCreateStaticRecipe_Item_default_instance_.Shutdown();
   delete file_level_metadata[99].reflection;
-  _CMsgClientToGCCreateStaticRecipeResponse_InputError_default_instance_.Shutdown();
+  _CMsgClientToGCCreateStaticRecipe_default_instance_.Shutdown();
   delete file_level_metadata[100].reflection;
-  _CMsgClientToGCCreateStaticRecipeResponse_AdditionalOutput_default_instance_.Shutdown();
+  _CMsgClientToGCCreateStaticRecipeResponse_OutputItem_default_instance_.Shutdown();
   delete file_level_metadata[101].reflection;
-  _CMsgClientToGCCreateStaticRecipeResponse_default_instance_.Shutdown();
+  _CMsgClientToGCCreateStaticRecipeResponse_InputError_default_instance_.Shutdown();
   delete file_level_metadata[102].reflection;
-  _CMsgProcessTransactionOrder_Item_default_instance_.Shutdown();
+  _CMsgClientToGCCreateStaticRecipeResponse_AdditionalOutput_default_instance_.Shutdown();
   delete file_level_metadata[103].reflection;
-  _CMsgProcessTransactionOrder_default_instance_.Shutdown();
+  _CMsgClientToGCCreateStaticRecipeResponse_default_instance_.Shutdown();
   delete file_level_metadata[104].reflection;
-  _CMsgGCToGCStoreProcessCDKeyTransaction_default_instance_.Shutdown();
+  _CMsgProcessTransactionOrder_Item_default_instance_.Shutdown();
   delete file_level_metadata[105].reflection;
-  _CMsgGCToGCStoreProcessCDKeyTransactionResponse_default_instance_.Shutdown();
+  _CMsgProcessTransactionOrder_default_instance_.Shutdown();
   delete file_level_metadata[106].reflection;
-  _CMsgGCToGCStoreProcessSettlement_default_instance_.Shutdown();
+  _CMsgGCToGCStoreProcessCDKeyTransaction_default_instance_.Shutdown();
   delete file_level_metadata[107].reflection;
-  _CMsgGCToGCStoreProcessSettlementResponse_default_instance_.Shutdown();
+  _CMsgGCToGCStoreProcessCDKeyTransactionResponse_default_instance_.Shutdown();
   delete file_level_metadata[108].reflection;
-  _CMsgGCToGCBroadcastConsoleCommand_default_instance_.Shutdown();
+  _CMsgGCToGCStoreProcessSettlement_default_instance_.Shutdown();
   delete file_level_metadata[109].reflection;
-  _CMsgGCToGCConsoleOutput_OutputLine_default_instance_.Shutdown();
+  _CMsgGCToGCStoreProcessSettlementResponse_default_instance_.Shutdown();
   delete file_level_metadata[110].reflection;
-  _CMsgGCToGCConsoleOutput_default_instance_.Shutdown();
+  _CMsgGCToGCBroadcastConsoleCommand_default_instance_.Shutdown();
   delete file_level_metadata[111].reflection;
-  _CMsgItemAges_MaxItemIDTimestamp_default_instance_.Shutdown();
+  _CMsgGCToGCConsoleOutput_OutputLine_default_instance_.Shutdown();
   delete file_level_metadata[112].reflection;
-  _CMsgItemAges_default_instance_.Shutdown();
+  _CMsgGCToGCConsoleOutput_default_instance_.Shutdown();
   delete file_level_metadata[113].reflection;
-  _CMsgGCToGCInternalTestMsg_default_instance_.Shutdown();
+  _CMsgItemAges_MaxItemIDTimestamp_default_instance_.Shutdown();
   delete file_level_metadata[114].reflection;
-  _CMsgGCToGCClientServerVersionsUpdated_default_instance_.Shutdown();
+  _CMsgItemAges_default_instance_.Shutdown();
   delete file_level_metadata[115].reflection;
+  _CMsgGCToGCInternalTestMsg_default_instance_.Shutdown();
+  delete file_level_metadata[116].reflection;
+  _CMsgGCToGCClientServerVersionsUpdated_default_instance_.Shutdown();
+  delete file_level_metadata[117].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -2127,6 +2159,8 @@ void TableStruct::InitDefaultsImpl() {
   _CMsgRedeemCodeResponse_default_instance_.DefaultConstruct();
   _CMsgDevNewItemRequest_default_instance_.DefaultConstruct();
   _CMsgDevNewItemRequestResponse_default_instance_.DefaultConstruct();
+  _CMsgGCCheckAccountSubscription_default_instance_.DefaultConstruct();
+  _CMsgGCCheckAccountSubscriptionResponse_default_instance_.DefaultConstruct();
   _CMsgGCAddGiftItem_default_instance_.DefaultConstruct();
   _CMsgClientToGCWrapAndDeliverGift_default_instance_.DefaultConstruct();
   _CMsgClientToGCWrapAndDeliverGiftResponse_default_instance_.DefaultConstruct();
@@ -2346,464 +2380,476 @@ void AddDescriptorsImpl() {
       " \001(\t\022\026\n\016loot_list_name\030\004 \001(\t\022\025\n\rattr_def"
       "_name\030\005 \003(\t\022\022\n\nattr_value\030\006 \003(\t\"0\n\035CMsgD"
       "evNewItemRequestResponse\022\017\n\007success\030\001 \001("
-      "\010\"8\n\021CMsgGCAddGiftItem\022\022\n\naccount_id\030\001 \001"
-      "(\r\022\017\n\007item_id\030\002 \001(\004\"e\n CMsgClientToGCWra"
-      "pAndDeliverGift\022\017\n\007item_id\030\001 \001(\004\022\032\n\022give"
-      "_to_account_id\030\002 \001(\r\022\024\n\014gift_message\030\003 \001"
-      "(\t\"\332\002\n(CMsgClientToGCWrapAndDeliverGiftR"
-      "esponse\022@\n\010response\030\001 \001(\0162\032.proto.dota.E"
-      "GCMsgResponse:\022k_EGCMsgResponseOK\022\033\n\023gif"
-      "ting_charge_uses\030\002 \001(\r\022\032\n\022gifting_charge"
-      "_max\030\003 \001(\005\022\024\n\014gifting_uses\030\004 \001(\r\022\023\n\013gift"
-      "ing_max\030\005 \001(\005\022\034\n\024gifting_window_hours\030\006 "
-      "\001(\r\022j\n\021trade_restriction\030\007 \001(\0162\'.proto.d"
-      "ota.EGCMsgInitiateTradeResponse:&k_EGCMs"
-      "gInitiateTradeResponse_Accepted\"+\n\030CMsgC"
-      "lientToGCUnwrapGift\022\017\n\007item_id\030\001 \001(\004\"\"\n "
-      "CMsgClientToGCGetGiftPermissions\"\210\004\n(CMs"
-      "gClientToGCGetGiftPermissionsResponse\022\024\n"
-      "\014is_unlimited\030\001 \001(\010\022\026\n\016has_two_factor\030\003 "
-      "\001(\010\022j\n\021sender_permission\030\006 \001(\0162\'.proto.d"
-      "ota.EGCMsgInitiateTradeResponse:&k_EGCMs"
-      "gInitiateTradeResponse_Accepted\022\"\n\032frien"
-      "dship_age_requirement\030\007 \001(\r\022-\n%friendshi"
-      "p_age_requirement_two_factor\030\010 \001(\r\022a\n\022fr"
-      "iend_permissions\030\t \003(\0132E.proto.dota.CMsg"
-      "ClientToGCGetGiftPermissionsResponse.Fri"
-      "endPermission\032\213\001\n\020FriendPermission\022\022\n\nac"
-      "count_id\030\001 \001(\r\022c\n\npermission\030\002 \001(\0162\'.pro"
-      "to.dota.EGCMsgInitiateTradeResponse:&k_E"
-      "GCMsgInitiateTradeResponse_Accepted\"-\n\032C"
-      "MsgClientToGCUnpackBundle\022\017\n\007item_id\030\001 \001"
-      "(\004\"\345\003\n\"CMsgClientToGCUnpackBundleRespons"
-      "e\022\031\n\021unpacked_item_ids\030\001 \003(\004\022h\n\010response"
-      "\030\002 \001(\0162<.proto.dota.CMsgClientToGCUnpack"
-      "BundleResponse.EUnpackBundle:\030k_UnpackBu"
-      "ndle_Succeeded\"\271\002\n\rEUnpackBundle\022\034\n\030k_Un"
-      "packBundle_Succeeded\020\000\022)\n%k_UnpackBundle"
-      "_Failed_ItemIsNotBundle\020\001\0225\n1k_UnpackBun"
-      "dle_Failed_UnableToCreateContainedItem\020\002"
-      "\022&\n\"k_UnpackBundle_Failed_SOCacheError\020\003"
-      "\022\'\n#k_UnpackBundle_Failed_ItemIsInvalid\020"
-      "\004\022)\n%k_UnpackBundle_Failed_BadItemQuanti"
-      "ty\020\005\022,\n(k_UnpackBundle_Failed_UnableToDe"
-      "leteItem\020\006\"K\n\'CMsgGCToClientStoreTransac"
-      "tionCompleted\022\016\n\006txn_id\030\001 \001(\004\022\020\n\010item_id"
-      "s\030\002 \003(\004\"S\n\030CMsgClientToGCEquipItems\0227\n\006e"
-      "quips\030\001 \003(\0132\'.proto.dota.CMsgAdjustItemE"
-      "quippedState\"\?\n CMsgClientToGCEquipItems"
-      "Response\022\033\n\023so_cache_version_id\030\001 \001(\006\"B\n"
-      "\032CMsgClientToGCSetItemStyle\022\017\n\007item_id\030\001"
-      " \001(\004\022\023\n\013style_index\030\002 \001(\r\"\351\001\n\"CMsgClient"
-      "ToGCSetItemStyleResponse\022`\n\010response\030\001 \001"
-      "(\01628.proto.dota.CMsgClientToGCSetItemSty"
-      "leResponse.ESetStyle:\024k_SetStyle_Succeed"
-      "ed\"a\n\tESetStyle\022\030\n\024k_SetStyle_Succeeded\020"
-      "\000\022\025\n\021k_SetStyle_Failed\020\001\022#\n\037k_SetStyle_F"
-      "ailed_StyleIsLocked\020\002\"i\n\035CMsgClientToGCU"
-      "nlockItemStyle\022\026\n\016item_to_unlock\030\001 \001(\004\022\023"
-      "\n\013style_index\030\002 \001(\r\022\033\n\023consumable_item_i"
-      "ds\030\003 \003(\004\"\255\005\n%CMsgClientToGCUnlockItemSty"
-      "leResponse\022i\n\010response\030\001 \001(\0162>.proto.dot"
-      "a.CMsgClientToGCUnlockItemStyleResponse."
-      "EUnlockStyle:\027k_UnlockStyle_Succeeded\022\017\n"
-      "\007item_id\030\002 \001(\004\022\023\n\013style_index\030\003 \001(\r\022\024\n\014s"
-      "tyle_prereq\030\004 \001(\r\"\334\003\n\014EUnlockStyle\022\033\n\027k_"
-      "UnlockStyle_Succeeded\020\000\022\037\n\033k_UnlockStyle"
-      "_Failed_PreReq\020\001\022#\n\037k_UnlockStyle_Failed"
-      "_CantAfford\020\002\022#\n\037k_UnlockStyle_Failed_Ca"
-      "ntCommit\020\003\022&\n\"k_UnlockStyle_Failed_CantL"
-      "ockCache\020\004\022)\n%k_UnlockStyle_Failed_CantA"
-      "ffordAttrib\020\005\022&\n\"k_UnlockStyle_Failed_Ca"
-      "ntAffordGem\020\006\022*\n&k_UnlockStyle_Failed_No"
-      "CompendiumLevel\020\007\022(\n$k_UnlockStyle_Faile"
-      "d_AlreadyUnlocked\020\010\022#\n\037k_UnlockStyle_Fai"
-      "led_OtherError\020\t\022&\n\"k_UnlockStyle_Failed"
-      "_ItemIsInvalid\020\n\022&\n\"k_UnlockStyle_Failed"
-      "_ToolIsInvalid\020\013\"\203\001\n&CMsgClientToGCSetIt"
-      "emInventoryCategory\022\020\n\010item_ids\030\001 \003(\004\022\024\n"
-      "\014set_to_value\030\002 \001(\r\022\031\n\021remove_categories"
-      "\030\003 \001(\r\022\026\n\016add_categories\030\004 \001(\r\"G\n\031CMsgCl"
-      "ientToGCUnlockCrate\022\025\n\rcrate_item_id\030\001 \001"
-      "(\004\022\023\n\013key_item_id\030\002 \001(\004\"\332\001\n!CMsgClientTo"
-      "GCUnlockCrateResponse\022>\n\006result\030\001 \001(\0162\032."
-      "proto.dota.EGCMsgResponse:\022k_EGCMsgRespo"
-      "nseOK\022I\n\rgranted_items\030\002 \003(\01322.proto.dot"
-      "a.CMsgClientToGCUnlockCrateResponse.Item"
-      "\032*\n\004Item\022\017\n\007item_id\030\001 \001(\004\022\021\n\tdef_index\030\002"
-      " \001(\r\"4\n!CMsgClientToGCRemoveItemAttribut"
-      "e\022\017\n\007item_id\030\001 \001(\004\"\275\003\n)CMsgClientToGCRem"
-      "oveItemAttributeResponse\022}\n\010response\030\001 \001"
-      "(\0162J.proto.dota.CMsgClientToGCRemoveItem"
-      "AttributeResponse.ERemoveItemAttribute:\037"
-      "k_RemoveItemAttribute_Succeeded\022\017\n\007item_"
-      "id\030\002 \001(\004\"\377\001\n\024ERemoveItemAttribute\022#\n\037k_R"
-      "emoveItemAttribute_Succeeded\020\000\022 \n\034k_Remo"
-      "veItemAttribute_Failed\020\001\022.\n*k_RemoveItem"
-      "Attribute_Failed_ItemIsInvalid\020\002\0229\n5k_Re"
-      "moveItemAttribute_Failed_AttributeCannot"
-      "BeRemoved\020\003\0225\n1k_RemoveItemAttribute_Fai"
-      "led_AttributeDoesntExist\020\004\"U\n\026CMsgClient"
-      "ToGCNameItem\022\027\n\017subject_item_id\030\001 \001(\004\022\024\n"
-      "\014tool_item_id\030\002 \001(\004\022\014\n\004name\030\003 \001(\t\"\275\002\n\036CM"
-      "sgClientToGCNameItemResponse\022\\\n\010response"
-      "\030\001 \001(\01624.proto.dota.CMsgClientToGCNameIt"
-      "emResponse.ENameItem:\024k_NameItem_Succeed"
-      "ed\022\017\n\007item_id\030\002 \001(\004\"\253\001\n\tENameItem\022\030\n\024k_N"
-      "ameItem_Succeeded\020\000\022\025\n\021k_NameItem_Failed"
-      "\020\001\022#\n\037k_NameItem_Failed_ToolIsInvalid\020\002\022"
-      "#\n\037k_NameItem_Failed_ItemIsInvalid\020\003\022#\n\037"
-      "k_NameItem_Failed_NameIsInvalid\020\004\">\n\025CMs"
-      "gGCSetItemPosition\022\017\n\007item_id\030\001 \001(\004\022\024\n\014n"
-      "ew_position\030\002 \001(\r\"\355\001\n%CAttribute_ItemDyn"
-      "amicRecipeComponent\022\020\n\010item_def\030\001 \001(\r\022\024\n"
-      "\014item_quality\030\002 \001(\r\022\022\n\nitem_flags\030\003 \001(\r\022"
-      "\031\n\021attributes_string\030\004 \001(\t\022\022\n\nitem_count"
-      "\030\005 \001(\r\022\027\n\017items_fulfilled\030\006 \001(\r\022\023\n\013item_"
-      "rarity\030\007 \001(\r\022\020\n\010lootlist\030\010 \001(\t\022\031\n\021fulfil"
-      "led_item_id\030\t \001(\004\"\262\001\n\020CProtoItemSocket\022\017"
-      "\n\007item_id\030\001 \001(\004\022\026\n\016attr_def_index\030\002 \001(\r\022"
-      "\025\n\rrequired_type\030\003 \001(\r\022\025\n\rrequired_hero\030"
-      "\004 \001(\t\022\025\n\rgem_def_index\030\005 \001(\r\022\024\n\014not_trad"
-      "able\030\006 \001(\010\022\032\n\022required_item_slot\030\007 \001(\t\"F"
-      "\n\026CProtoItemSocket_Empty\022,\n\006socket\030\001 \001(\013"
-      "2\034.proto.dota.CProtoItemSocket\"W\n\027CProto"
-      "ItemSocket_Effect\022,\n\006socket\030\001 \001(\0132\034.prot"
-      "o.dota.CProtoItemSocket\022\016\n\006effect\030\002 \001(\r\""
-      "p\n\026CProtoItemSocket_Color\022,\n\006socket\030\001 \001("
-      "\0132\034.proto.dota.CProtoItemSocket\022\013\n\003red\030\002"
-      " \001(\r\022\r\n\005green\030\003 \001(\r\022\014\n\004blue\030\004 \001(\r\"u\n\030CPr"
-      "otoItemSocket_Strange\022,\n\006socket\030\001 \001(\0132\034."
-      "proto.dota.CProtoItemSocket\022\024\n\014strange_t"
-      "ype\030\002 \001(\r\022\025\n\rstrange_value\030\003 \001(\r\"\234\001\n\032CPr"
-      "otoItemSocket_Spectator\022,\n\006socket\030\001 \001(\0132"
-      "\034.proto.dota.CProtoItemSocket\022\024\n\014games_v"
-      "iewed\030\002 \001(\r\022\026\n\016corporation_id\030\003 \001(\r\022\021\n\tl"
-      "eague_id\030\004 \001(\r\022\017\n\007team_id\030\005 \001(\r\"f\n\036CProt"
-      "oItemSocket_AssetModifier\022,\n\006socket\030\001 \001("
-      "\0132\034.proto.dota.CProtoItemSocket\022\026\n\016asset"
-      "_modifier\030\002 \001(\r\"\262\001\n;CProtoItemSocket_Ass"
-      "etModifier_DESERIALIZE_FROM_STRING_ONLY\022"
-      ",\n\006socket\030\001 \001(\0132\034.proto.dota.CProtoItemS"
-      "ocket\022\026\n\016asset_modifier\030\002 \001(\r\022\025\n\ranim_mo"
-      "difier\030\003 \001(\r\022\026\n\016ability_effect\030\004 \001(\r\"\214\001\n"
-      "\032CProtoItemSocket_Autograph\022,\n\006socket\030\001 "
-      "\001(\0132\034.proto.dota.CProtoItemSocket\022\021\n\taut"
-      "ograph\030\002 \001(\t\022\024\n\014autograph_id\030\003 \001(\r\022\027\n\017au"
-      "tograph_score\030\004 \001(\r\"N\n\036CProtoItemSocket_"
-      "StaticVisuals\022,\n\006socket\030\001 \001(\0132\034.proto.do"
-      "ta.CProtoItemSocket\"\"\n\021CAttribute_String"
-      "\022\r\n\005value\030\001 \001(\t\"m\n%CWorkshop_GetItemDail"
-      "yRevenue_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007item_"
-      "id\030\002 \001(\r\022\022\n\ndate_start\030\003 \001(\r\022\020\n\010date_end"
-      "\030\004 \001(\r\"\350\001\n&CWorkshop_GetItemDailyRevenue"
-      "_Response\022_\n\017country_revenue\030\001 \003(\0132F.pro"
-      "to.dota.CWorkshop_GetItemDailyRevenue_Re"
-      "sponse.CountryDailyRevenue\032]\n\023CountryDai"
-      "lyRevenue\022\024\n\014country_code\030\001 \001(\t\022\014\n\004date\030"
-      "\002 \001(\r\022\023\n\013revenue_usd\030\003 \001(\003\022\r\n\005units\030\004 \001("
-      "\005\"c\n(CWorkshop_GetPackageDailyRevenue_Re"
-      "quest\022\021\n\tpackageid\030\001 \001(\r\022\022\n\ndate_start\030\002"
-      " \001(\r\022\020\n\010date_end\030\003 \001(\r\"\356\001\n)CWorkshop_Get"
-      "PackageDailyRevenue_Response\022b\n\017country_"
-      "revenue\030\001 \003(\0132I.proto.dota.CWorkshop_Get"
-      "PackageDailyRevenue_Response.CountryDail"
-      "yRevenue\032]\n\023CountryDailyRevenue\022\024\n\014count"
-      "ry_code\030\001 \001(\t\022\014\n\004date\030\002 \001(\r\022\023\n\013revenue_u"
-      "sd\030\003 \001(\003\022\r\n\005units\030\004 \001(\005\"H\n\037CMsgSQLGCToGC"
-      "GrantBackpackSlots\022\022\n\naccount_id\030\001 \001(\r\022\021"
-      "\n\tadd_slots\030\002 \001(\r\"5\n\037CMsgClientToGCLooku"
-      "pAccountName\022\022\n\naccount_id\030\001 \001(\r\"S\n\'CMsg"
-      "ClientToGCLookupAccountNameResponse\022\022\n\na"
-      "ccount_id\030\001 \001(\r\022\024\n\014account_name\030\002 \001(\t\"\250\001"
-      "\n CMsgClientToGCCreateStaticRecipe\022@\n\005it"
-      "ems\030\001 \003(\01321.proto.dota.CMsgClientToGCCre"
-      "ateStaticRecipe.Item\022\030\n\020recipe_def_index"
-      "\030\002 \001(\r\032(\n\004Item\022\017\n\007item_id\030\001 \001(\004\022\017\n\007slot_"
-      "id\030\002 \001(\r\"\263\006\n(CMsgClientToGCCreateStaticR"
-      "ecipeResponse\022c\n\010response\030\001 \001(\0162>.proto."
-      "dota.CMsgClientToGCCreateStaticRecipeRes"
-      "ponse.EResponse:\021eResponse_Success\022U\n\014ou"
-      "tput_items\030\002 \003(\0132\?.proto.dota.CMsgClient"
-      "ToGCCreateStaticRecipeResponse.OutputIte"
-      "m\022U\n\014input_errors\030\003 \003(\0132\?.proto.dota.CMs"
-      "gClientToGCCreateStaticRecipeResponse.In"
-      "putError\022a\n\022additional_outputs\030\004 \003(\0132E.p"
-      "roto.dota.CMsgClientToGCCreateStaticReci"
-      "peResponse.AdditionalOutput\032A\n\nOutputIte"
-      "m\022\021\n\tdef_index\030\001 \001(\r\022\017\n\007item_id\030\002 \001(\004\022\017\n"
-      "\007slot_id\030\003 \001(\r\032\177\n\nInputError\022\017\n\007slot_id\030"
-      "\001 \001(\r\022`\n\005error\030\002 \001(\0162>.proto.dota.CMsgCl"
-      "ientToGCCreateStaticRecipeResponse.EResp"
-      "onse:\021eResponse_Success\0322\n\020AdditionalOut"
-      "put\022\017\n\007slot_id\030\001 \001(\r\022\r\n\005value\030\002 \001(\004\"\230\001\n\t"
-      "EResponse\022\025\n\021eResponse_Success\020\000\022\036\n\032eRes"
-      "ponse_OfferingDisabled\020\001\022\032\n\026eResponse_In"
-      "validItems\020\002\022\033\n\027eResponse_InternalError\020"
-      "\003\022\033\n\027eResponse_MissingLeague\020\004\"\346\003\n\033CMsgP"
-      "rocessTransactionOrder\022\016\n\006txn_id\030\001 \001(\004\022\024"
-      "\n\014steam_txn_id\030\002 \001(\004\022\026\n\016partner_txn_id\030\003"
-      " \001(\004\022\020\n\010steam_id\030\004 \001(\006\022\022\n\ntime_stamp\030\005 \001"
-      "(\r\022\021\n\twatermark\030\006 \001(\004\022\036\n\026purchase_report"
-      "_status\030\007 \001(\005\022\020\n\010currency\030\010 \001(\r\022;\n\005items"
-      "\030\t \003(\0132,.proto.dota.CMsgProcessTransacti"
-      "onOrder.Item\032\340\001\n\004Item\022\026\n\016item_def_index\030"
-      "\001 \001(\r\022\022\n\nitem_price\030\002 \001(\r\022\020\n\010quantity\030\003 "
-      "\001(\r\022\025\n\rcategory_desc\030\004 \001(\t\022\033\n\023store_purc"
-      "hase_type\030\005 \001(\r\022\033\n\023source_reference_id\030\006"
-      " \001(\004\022\032\n\022parent_stack_index\030\007 \001(\005\022\025\n\rdefa"
-      "ult_price\030\010 \001(\010\022\026\n\016is_user_facing\030\t \001(\010\""
-      "u\n&CMsgGCToGCStoreProcessCDKeyTransactio"
-      "n\0226\n\005order\030\001 \001(\0132\'.proto.dota.CMsgProces"
-      "sTransactionOrder\022\023\n\013reason_code\030\002 \001(\r\"A"
-      "\n.CMsgGCToGCStoreProcessCDKeyTransaction"
-      "Response\022\017\n\007success\030\001 \001(\010\"k\n CMsgGCToGCS"
-      "toreProcessSettlement\0226\n\005order\030\001 \001(\0132\'.p"
-      "roto.dota.CMsgProcessTransactionOrder\022\017\n"
-      "\007partner\030\002 \001(\r\";\n(CMsgGCToGCStoreProcess"
-      "SettlementResponse\022\017\n\007success\030\001 \001(\010\"}\n!C"
-      "MsgGCToGCBroadcastConsoleCommand\022\023\n\013con_"
-      "command\030\001 \001(\t\022\025\n\rreport_output\030\002 \001(\010\022\022\n\n"
-      "sending_gc\030\003 \001(\r\022\030\n\020output_initiator\030\004 \001"
-      "(\t\"\256\001\n\027CMsgGCToGCConsoleOutput\022\021\n\tinitia"
-      "tor\030\001 \001(\t\022\022\n\nsending_gc\030\002 \001(\r\022<\n\004msgs\030\003 "
-      "\003(\0132..proto.dota.CMsgGCToGCConsoleOutput"
-      ".OutputLine\032.\n\nOutputLine\022\014\n\004text\030\001 \001(\t\022"
-      "\022\n\nspew_level\030\002 \001(\r\"\231\001\n\014CMsgItemAges\022K\n\026"
-      "max_item_id_timestamps\030\001 \003(\0132+.proto.dot"
-      "a.CMsgItemAges.MaxItemIDTimestamp\032<\n\022Max"
-      "ItemIDTimestamp\022\021\n\ttimestamp\030\001 \001(\r\022\023\n\013ma"
-      "x_item_id\030\002 \001(\004\"\253\001\n\031CMsgGCToGCInternalTe"
-      "stMsg\022\022\n\nsending_gc\030\001 \001(\r\022\021\n\tsender_id\030\002"
-      " \001(\006\022\017\n\007context\030\003 \001(\r\022\022\n\nmessage_id\030\004 \001("
-      "\r\022\024\n\014message_body\030\005 \001(\014\022\025\n\rjob_id_source"
-      "\030\006 \001(\006\022\025\n\rjob_id_target\030\007 \001(\006\"\252\001\n%CMsgGC"
-      "ToGCClientServerVersionsUpdated\022\"\n\032clien"
-      "t_min_allowed_version\030\001 \001(\r\022\035\n\025client_ac"
-      "tive_version\030\002 \001(\r\022\035\n\025server_active_vers"
-      "ion\030\003 \001(\r\022\037\n\027server_deployed_version\030\004 \001"
-      "(\r*\3064\n\nEGCItemMsg\022\021\n\014k_EMsgGCBase\020\350\007\022\034\n\027"
-      "k_EMsgGCSetItemPosition\020\351\007\022\023\n\016k_EMsgGCDe"
-      "lete\020\354\007\022$\n\037k_EMsgGCVerifyCacheSubscripti"
-      "on\020\355\007\022\035\n\030k_EMsgClientToGCNameItem\020\356\007\022\026\n\021"
-      "k_EMsgGCPaintItem\020\361\007\022\036\n\031k_EMsgGCPaintIte"
-      "mResponse\020\362\007\022\"\n\035k_EMsgGCGoldenWrenchBroa"
-      "dcast\020\363\007\022\030\n\023k_EMsgGCMOTDRequest\020\364\007\022 \n\033k_"
-      "EMsgGCMOTDRequestResponse\020\365\007\022\'\n\"k_EMsgGC"
-      "AddItemToSocket_DEPRECATED\020\366\007\022/\n*k_EMsgG"
-      "CAddItemToSocketResponse_DEPRECATED\020\367\007\022+"
-      "\n&k_EMsgGCAddSocketToBaseItem_DEPRECATED"
-      "\020\370\007\022\'\n\"k_EMsgGCAddSocketToItem_DEPRECATE"
-      "D\020\371\007\022/\n*k_EMsgGCAddSocketToItemResponse_"
-      "DEPRECATED\020\372\007\022\031\n\024k_EMsgGCNameBaseItem\020\373\007"
-      "\022!\n\034k_EMsgGCNameBaseItemResponse\020\374\007\022(\n#k"
-      "_EMsgGCRemoveSocketItem_DEPRECATED\020\375\007\0220\n"
-      "+k_EMsgGCRemoveSocketItemResponse_DEPREC"
-      "ATED\020\376\007\022!\n\034k_EMsgGCCustomizeItemTexture\020"
-      "\377\007\022)\n$k_EMsgGCCustomizeItemTextureRespon"
-      "se\020\200\010\022\033\n\026k_EMsgGCUseItemRequest\020\201\010\022\034\n\027k_"
-      "EMsgGCUseItemResponse\020\202\010\022\030\n\023k_EMsgGCGift"
-      "edItems\020\203\010\022\033\n\026k_EMsgGCRemoveItemName\020\206\010\022"
-      "\034\n\027k_EMsgGCRemoveItemPaint\020\207\010\022\036\n\031k_EMsgG"
-      "CUnwrapGiftRequest\020\215\010\022\037\n\032k_EMsgGCUnwrapG"
-      "iftResponse\020\216\010\022$\n\037k_EMsgGCSetItemStyle_D"
-      "EPRECATED\020\217\010\022\036\n\031k_EMsgGCUsedClaimCodeIte"
-      "m\020\220\010\022\026\n\021k_EMsgGCSortItems\020\221\010\022*\n%k_EMsgGC"
-      "_RevolvingLootList_DEPRECATED\020\222\010\022\035\n\030k_EM"
-      "sgGCUpdateItemSchema\020\231\010\022 \n\033k_EMsgGCRemov"
-      "eCustomTexture\020\233\010\022(\n#k_EMsgGCRemoveCusto"
-      "mTextureResponse\020\234\010\022\035\n\030k_EMsgGCRemoveMak"
-      "ersMark\020\235\010\022%\n k_EMsgGCRemoveMakersMarkRe"
-      "sponse\020\236\010\022#\n\036k_EMsgGCRemoveUniqueCraftIn"
-      "dex\020\237\010\022+\n&k_EMsgGCRemoveUniqueCraftIndex"
-      "Response\020\240\010\022\033\n\026k_EMsgGCSaxxyBroadcast\020\241\010"
-      "\022!\n\034k_EMsgGCBackpackSortFinished\020\242\010\022$\n\037k"
-      "_EMsgGCAdjustItemEquippedState\020\243\010\022\030\n\023k_E"
-      "MsgGCCollectItem\020\245\010\022\035\n\030k_EMsgGCItemAckno"
-      "wledged\020\246\010\022)\n$k_EMsgGCPresets_SelectPres"
-      "etForClass\020\247\010\022$\n\037k_EMsgGCPresets_SetItem"
-      "Position\020\250\010\022.\n)k_EMsgGCPresets_SelectPre"
-      "setForClassReply\020\253\010\022%\n k_EMsgClientToGCN"
-      "ameItemResponse\020\254\010\022#\n\036k_EMsgGCApplyConsu"
-      "mableEffects\020\255\010\022 \n\033k_EMsgGCConsumableExh"
-      "austed\020\256\010\022\036\n\031k_EMsgGCShowItemsPickedUp\020\257"
-      "\010\022&\n!k_EMsgGCClientDisplayNotification\020\260"
-      "\010\022\035\n\030k_EMsgGCApplyStrangePart\020\261\010\022(\n#k_EM"
-      "sgGC_IncrementKillCountResponse\020\263\010\022 \n\033k_"
-      "EMsgGCApplyPennantUpgrade\020\264\010\022\035\n\030k_EMsgGC"
-      "SetItemPositions\020\265\010\022)\n$k_EMsgGCSetItemPo"
-      "sitions_RateLimited\020\310\010\022\034\n\027k_EMsgGCApplyE"
-      "ggEssence\020\266\010\022#\n\036k_EMsgGCNameEggEssenceRe"
-      "sponse\020\267\010\022*\n%k_EMsgGCFulfillDynamicRecip"
-      "eComponent\020\272\010\0222\n-k_EMsgGCFulfillDynamicR"
-      "ecipeComponentResponse\020\273\010\022$\n\037k_EMsgGCCli"
-      "entRequestMarketData\020\274\010\022,\n\'k_EMsgGCClien"
-      "tRequestMarketDataResponse\020\275\010\022\030\n\023k_EMsgG"
-      "CExtractGems\020\276\010\022\026\n\021k_EMsgGCAddSocket\020\277\010\022"
-      "\034\n\027k_EMsgGCAddItemToSocket\020\300\010\022$\n\037k_EMsgG"
-      "CAddItemToSocketResponse\020\301\010\022\036\n\031k_EMsgGCA"
-      "ddSocketResponse\020\302\010\022!\n\034k_EMsgGCResetStra"
-      "ngeGemCount\020\303\010\022\036\n\031k_EMsgGCRequestCrateIt"
-      "ems\020\304\010\022&\n!k_EMsgGCRequestCrateItemsRespo"
-      "nse\020\305\010\022 \n\033k_EMsgGCExtractGemsResponse\020\306\010"
-      "\022)\n$k_EMsgGCResetStrangeGemCountResponse"
-      "\020\307\010\022!\n\034k_EMsgGCServerUseItemRequest\020\317\010\022\030"
-      "\n\023k_EMsgGCAddGiftItem\020\320\010\022\"\n\035k_EMsgGCRemo"
-      "veItemGiftMessage\020\321\010\022*\n%k_EMsgGCRemoveIt"
-      "emGiftMessageResponse\020\322\010\022&\n!k_EMsgGCRemo"
-      "veItemGifterAccountId\020\323\010\022.\n)k_EMsgGCRemo"
-      "veItemGifterAccountIdResponse\020\324\010\022/\n*k_EM"
-      "sgClientToGCRemoveItemGifterAttributes\020\325"
-      "\010\022#\n\036k_EMsgClientToGCRemoveItemName\020\326\010\022*"
-      "\n%k_EMsgClientToGCRemoveItemDescription\020"
-      "\327\010\0220\n+k_EMsgClientToGCRemoveItemAttribut"
-      "eResponse\020\330\010\022\030\n\023k_EMsgGCTradingBase\020\334\013\022)"
-      "\n$k_EMsgGCTrading_InitiateTradeRequest\020\335"
-      "\013\022*\n%k_EMsgGCTrading_InitiateTradeRespon"
-      "se\020\336\013\022!\n\034k_EMsgGCTrading_StartSession\020\337\013"
-      "\022\"\n\035k_EMsgGCTrading_SessionClosed\020\345\013\0221\n,"
-      "k_EMsgGCTrading_InitiateTradeRequestResp"
-      "onse\020\352\013\022)\n$k_EMsgGCServerBrowser_Favorit"
-      "eServer\020\301\014\022*\n%k_EMsgGCServerBrowser_Blac"
-      "klistServer\020\302\014\022\036\n\031k_EMsgGCServerRentalsB"
-      "ase\020\244\r\022\037\n\032k_EMsgGCDev_NewItemRequest\020\321\017\022"
-      "\'\n\"k_EMsgGCDev_NewItemRequestResponse\020\322\017"
-      "\022\035\n\030k_EMsgGCStoreGetUserData\020\304\023\022%\n k_EMs"
-      "gGCStoreGetUserDataResponse\020\305\023\022\"\n\035k_EMsg"
-      "GCStorePurchaseFinalize\020\310\023\022*\n%k_EMsgGCSt"
-      "orePurchaseFinalizeResponse\020\311\023\022 \n\033k_EMsg"
-      "GCStorePurchaseCancel\020\312\023\022(\n#k_EMsgGCStor"
-      "ePurchaseCancelResponse\020\313\023\022\036\n\031k_EMsgGCSt"
-      "orePurchaseInit\020\316\023\022&\n!k_EMsgGCStorePurch"
-      "aseInitResponse\020\317\023\022\"\n\035k_EMsgGCBannedWord"
-      "ListRequest\020\320\023\022#\n\036k_EMsgGCBannedWordList"
-      "Response\020\321\023\022(\n#k_EMsgGCToGCBannedWordLis"
-      "tBroadcast\020\322\023\022&\n!k_EMsgGCToGCBannedWordL"
-      "istUpdated\020\323\023\022\036\n\031k_EMsgGCToGCDirtySDOCac"
-      "he\020\324\023\022&\n!k_EMsgGCToGCDirtyMultipleSDOCac"
-      "he\020\325\023\022\"\n\035k_EMsgGCToGCUpdateSQLKeyValue\020\326"
-      "\023\022(\n#k_EMsgGCToGCBroadcastConsoleCommand"
-      "\020\331\023\022!\n\034k_EMsgGCServerVersionUpdated\020\332\023\022\033"
-      "\n\026k_EMsgGCApplyAutograph\020\333\023\022%\n k_EMsgGCT"
-      "oGCWebAPIAccountChanged\020\334\023\022!\n\034k_EMsgGCCl"
-      "ientVersionUpdated\020\340\023\022+\n&k_EMsgGCItemPur"
-      "gatory_FinalizePurchase\020\343\023\0223\n.k_EMsgGCIt"
-      "emPurgatory_FinalizePurchaseResponse\020\344\023\022"
-      ")\n$k_EMsgGCItemPurgatory_RefundPurchase\020"
-      "\345\023\0221\n,k_EMsgGCItemPurgatory_RefundPurcha"
-      "seResponse\020\346\023\022.\n)k_EMsgGCToGCPlayerStran"
-      "geCountAdjustments\020\347\023\022\"\n\035k_EMsgGCRequest"
-      "StoreSalesData\020\350\023\022*\n%k_EMsgGCRequestStor"
-      "eSalesDataResponse\020\351\023\0222\n-k_EMsgGCRequest"
-      "StoreSalesDataUpToDateResponse\020\352\023\022\034\n\027k_E"
-      "MsgGCToGCPingRequest\020\353\023\022\035\n\030k_EMsgGCToGCP"
-      "ingResponse\020\354\023\022%\n k_EMsgGCToGCGetUserSes"
-      "sionServer\020\355\023\022-\n(k_EMsgGCToGCGetUserSess"
-      "ionServerResponse\020\356\023\022%\n k_EMsgGCToGCGetU"
-      "serServerMembers\020\357\023\022-\n(k_EMsgGCToGCGetUs"
-      "erServerMembersResponse\020\360\023\022 \n\033k_EMsgGCTo"
-      "GCGetUserPCBangNo\020\361\023\022(\n#k_EMsgGCToGCGetU"
-      "serPCBangNoResponse\020\362\023\022$\n\037k_EMsgGCToGCCa"
-      "nUseDropRateBonus\020\363\023\022\036\n\031k_EMsgSQLAddDrop"
-      "RateBonus\020\364\023\022\037\n\032k_EMsgGCToGCRefreshSOCac"
-      "he\020\365\023\022&\n!k_EMsgGCToGCApplyLocalizationDi"
-      "ff\020\366\023\022.\n)k_EMsgGCToGCApplyLocalizationDi"
-      "ffResponse\020\367\023\022(\n#k_EMsgGCToGCCheckAccoun"
-      "tTradeStatus\020\370\023\0220\n+k_EMsgGCToGCCheckAcco"
-      "untTradeStatusResponse\020\371\023\022(\n#k_EMsgGCToG"
-      "CGrantAccountRolledItems\020\372\023\022+\n&k_EMsgGCT"
-      "oGCGrantSelfMadeItemToAccount\020\373\023\022\"\n\035k_EM"
-      "sgGCPartnerBalanceRequest\020\375\023\022#\n\036k_EMsgGC"
-      "PartnerBalanceResponse\020\376\023\022.\n)k_EMsgGCPar"
-      "tnerRechargeRedirectURLRequest\020\377\023\022/\n*k_E"
-      "MsgGCPartnerRechargeRedirectURLResponse\020"
-      "\200\024\022\030\n\023k_EMsgGCStatueCraft\020\201\024\022\027\n\022k_EMsgGC"
-      "RedeemCode\020\202\024\022\037\n\032k_EMsgGCRedeemCodeRespo"
-      "nse\020\203\024\022(\n#k_EMsgGCToGCItemConsumptionRol"
-      "lback\020\204\024\022\'\n\"k_EMsgClientToGCWrapAndDeliv"
-      "erGift\020\205\024\022/\n*k_EMsgClientToGCWrapAndDeli"
-      "verGiftResponse\020\206\024\022)\n$k_EMsgClientToGCUn"
-      "packBundleResponse\020\207\024\022.\n)k_EMsgGCToClien"
-      "tStoreTransactionCompleted\020\210\024\022\037\n\032k_EMsgC"
-      "lientToGCEquipItems\020\211\024\022\'\n\"k_EMsgClientTo"
-      "GCEquipItemsResponse\020\212\024\022$\n\037k_EMsgClientT"
-      "oGCUnlockItemStyle\020\213\024\022,\n\'k_EMsgClientToG"
-      "CUnlockItemStyleResponse\020\214\024\022-\n(k_EMsgCli"
-      "entToGCSetItemInventoryCategory\020\215\024\022 \n\033k_"
-      "EMsgClientToGCUnlockCrate\020\216\024\022(\n#k_EMsgCl"
-      "ientToGCUnlockCrateResponse\020\217\024\022!\n\034k_EMsg"
-      "ClientToGCUnpackBundle\020\220\024\022!\n\034k_EMsgClien"
-      "tToGCSetItemStyle\020\221\024\022)\n$k_EMsgClientToGC"
-      "SetItemStyleResponse\020\222\024\022&\n!k_EMsgSQLGCTo"
-      "GCGrantBackpackSlots\020\224\024\022&\n!k_EMsgClientT"
-      "oGCLookupAccountName\020\225\024\022.\n)k_EMsgClientT"
-      "oGCLookupAccountNameResponse\020\226\024\022#\n\036k_EMs"
-      "gGCToGCDevRevokeUserItems\020\227\024\022\'\n\"k_EMsgCl"
-      "ientToGCCreateStaticRecipe\020\230\024\022/\n*k_EMsgC"
-      "lientToGCCreateStaticRecipeResponse\020\231\024\022-"
-      "\n(k_EMsgGCToGCStoreProcessCDKeyTransacti"
-      "on\020\232\024\0225\n0k_EMsgGCToGCStoreProcessCDKeyTr"
-      "ansactionResponse\020\233\024\022\'\n\"k_EMsgGCToGCStor"
-      "eProcessSettlement\020\234\024\022/\n*k_EMsgGCToGCSto"
-      "reProcessSettlementResponse\020\235\024\022\036\n\031k_EMsg"
-      "GCToGCConsoleOutput\020\236\024\022\035\n\030k_EMsgGCToClie"
-      "ntItemAges\020\237\024\022 \n\033k_EMsgGCToGCInternalTes"
-      "tMsg\020\240\024\022,\n\'k_EMsgGCToGCClientServerVersi"
-      "onsUpdated\020\241\024\022$\n\037k_EMsgGCUseMultipleItem"
-      "sRequest\020\242\024*\363\002\n\037EItemPurgatoryResponse_F"
-      "inalize\022.\n*k_ItemPurgatoryResponse_Final"
-      "ize_Succeeded\020\000\0226\n2k_ItemPurgatoryRespon"
-      "se_Finalize_Failed_Incomplete\020\001\022\?\n;k_Ite"
-      "mPurgatoryResponse_Finalize_Failed_Items"
-      "NotInPurgatory\020\002\022=\n9k_ItemPurgatoryRespo"
-      "nse_Finalize_Failed_CouldNotFindItems\020\003\022"
-      "5\n1k_ItemPurgatoryResponse_Finalize_Fail"
-      "ed_NoSOCache\020\004\0221\n-k_ItemPurgatoryRespons"
-      "e_Finalize_BackpackFull\020\005*\347\002\n\035EItemPurga"
-      "toryResponse_Refund\022,\n(k_ItemPurgatoryRe"
-      "sponse_Refund_Succeeded\020\000\022<\n8k_ItemPurga"
-      "toryResponse_Refund_Failed_ItemNotInPurg"
-      "atory\020\001\022:\n6k_ItemPurgatoryResponse_Refun"
-      "d_Failed_CouldNotFindItem\020\002\0223\n/k_ItemPur"
-      "gatoryResponse_Refund_Failed_NoSOCache\020\003"
-      "\0222\n.k_ItemPurgatoryResponse_Refund_Faile"
-      "d_NoDetail\020\004\0225\n1k_ItemPurgatoryResponse_"
-      "Refund_Failed_NexonWebAPI\020\005*\200\n\n\033EGCMsgIn"
-      "itiateTradeResponse\022*\n&k_EGCMsgInitiateT"
-      "radeResponse_Accepted\020\000\022*\n&k_EGCMsgIniti"
-      "ateTradeResponse_Declined\020\001\0226\n2k_EGCMsgI"
-      "nitiateTradeResponse_VAC_Banned_Initiato"
-      "r\020\002\0223\n/k_EGCMsgInitiateTradeResponse_VAC"
-      "_Banned_Target\020\003\0228\n4k_EGCMsgInitiateTrad"
-      "eResponse_Target_Already_Trading\020\004\022*\n&k_"
-      "EGCMsgInitiateTradeResponse_Disabled\020\005\022-"
-      "\n)k_EGCMsgInitiateTradeResponse_NotLogge"
-      "dIn\020\006\022(\n$k_EGCMsgInitiateTradeResponse_C"
-      "ancel\020\007\022)\n%k_EGCMsgInitiateTradeResponse"
-      "_TooSoon\020\010\0220\n,k_EGCMsgInitiateTradeRespo"
-      "nse_TooSoonPenalty\020\t\0228\n4k_EGCMsgInitiate"
-      "TradeResponse_Trade_Banned_Initiator\020\n\0225"
-      "\n1k_EGCMsgInitiateTradeResponse_Trade_Ba"
-      "nned_Target\020\013\022C\n\?k_EGCMsgInitiateTradeRe"
-      "sponse_Free_Account_Initiator_DEPRECATED"
-      "\020\014\022:\n6k_EGCMsgInitiateTradeResponse_Shar"
-      "ed_Account_Initiator\020\r\0225\n1k_EGCMsgInitia"
-      "teTradeResponse_Service_Unavailable\020\016\0220\n"
-      ",k_EGCMsgInitiateTradeResponse_Target_Bl"
-      "ocked\020\017\0223\n/k_EGCMsgInitiateTradeResponse"
-      "_NeedVerifiedEmail\020\020\0220\n,k_EGCMsgInitiate"
-      "TradeResponse_NeedSteamGuard\020\021\0224\n0k_EGCM"
-      "sgInitiateTradeResponse_SteamGuardDurati"
-      "on\020\022\0221\n-k_EGCMsgInitiateTradeResponse_Th"
-      "eyCannotTrade\020\023\0227\n3k_EGCMsgInitiateTrade"
-      "Response_Recent_Password_Reset\020\024\0222\n.k_EG"
-      "CMsgInitiateTradeResponse_Using_New_Devi"
-      "ce\020\025\0225\n1k_EGCMsgInitiateTradeResponse_Se"
-      "nt_Invalid_Cookie\020\026\0221\n-k_EGCMsgInitiateT"
-      "radeResponse_TooRecentFriend\020\027B\005H\001\200\001\000"
+      "\010\"G\n\036CMsgGCCheckAccountSubscription\022\022\n\na"
+      "ccount_id\030\001 \001(\r\022\021\n\tdef_index\030\002 \001(\r\"\361\001\n&C"
+      "MsgGCCheckAccountSubscriptionResponse\022c\n"
+      "\005state\030\001 \001(\0162E.proto.dota.CMsgGCCheckAcc"
+      "ountSubscriptionResponse.ESubscriptionSt"
+      "ate:\rSTATE_UNKNOWN\022\023\n\013cache_until\030\002 \001(\r\""
+      "M\n\022ESubscriptionState\022\021\n\rSTATE_UNKNOWN\020\000"
+      "\022\022\n\016STATE_INACTIVE\020\001\022\020\n\014STATE_ACTIVE\020\002\"8"
+      "\n\021CMsgGCAddGiftItem\022\022\n\naccount_id\030\001 \001(\r\022"
+      "\017\n\007item_id\030\002 \001(\004\"e\n CMsgClientToGCWrapAn"
+      "dDeliverGift\022\017\n\007item_id\030\001 \001(\004\022\032\n\022give_to"
+      "_account_id\030\002 \001(\r\022\024\n\014gift_message\030\003 \001(\t\""
+      "\332\002\n(CMsgClientToGCWrapAndDeliverGiftResp"
+      "onse\022@\n\010response\030\001 \001(\0162\032.proto.dota.EGCM"
+      "sgResponse:\022k_EGCMsgResponseOK\022\033\n\023giftin"
+      "g_charge_uses\030\002 \001(\r\022\032\n\022gifting_charge_ma"
+      "x\030\003 \001(\005\022\024\n\014gifting_uses\030\004 \001(\r\022\023\n\013gifting"
+      "_max\030\005 \001(\005\022\034\n\024gifting_window_hours\030\006 \001(\r"
+      "\022j\n\021trade_restriction\030\007 \001(\0162\'.proto.dota"
+      ".EGCMsgInitiateTradeResponse:&k_EGCMsgIn"
+      "itiateTradeResponse_Accepted\"+\n\030CMsgClie"
+      "ntToGCUnwrapGift\022\017\n\007item_id\030\001 \001(\004\"\"\n CMs"
+      "gClientToGCGetGiftPermissions\"\210\004\n(CMsgCl"
+      "ientToGCGetGiftPermissionsResponse\022\024\n\014is"
+      "_unlimited\030\001 \001(\010\022\026\n\016has_two_factor\030\003 \001(\010"
+      "\022j\n\021sender_permission\030\006 \001(\0162\'.proto.dota"
+      ".EGCMsgInitiateTradeResponse:&k_EGCMsgIn"
+      "itiateTradeResponse_Accepted\022\"\n\032friendsh"
+      "ip_age_requirement\030\007 \001(\r\022-\n%friendship_a"
+      "ge_requirement_two_factor\030\010 \001(\r\022a\n\022frien"
+      "d_permissions\030\t \003(\0132E.proto.dota.CMsgCli"
+      "entToGCGetGiftPermissionsResponse.Friend"
+      "Permission\032\213\001\n\020FriendPermission\022\022\n\naccou"
+      "nt_id\030\001 \001(\r\022c\n\npermission\030\002 \001(\0162\'.proto."
+      "dota.EGCMsgInitiateTradeResponse:&k_EGCM"
+      "sgInitiateTradeResponse_Accepted\"-\n\032CMsg"
+      "ClientToGCUnpackBundle\022\017\n\007item_id\030\001 \001(\004\""
+      "\345\003\n\"CMsgClientToGCUnpackBundleResponse\022\031"
+      "\n\021unpacked_item_ids\030\001 \003(\004\022h\n\010response\030\002 "
+      "\001(\0162<.proto.dota.CMsgClientToGCUnpackBun"
+      "dleResponse.EUnpackBundle:\030k_UnpackBundl"
+      "e_Succeeded\"\271\002\n\rEUnpackBundle\022\034\n\030k_Unpac"
+      "kBundle_Succeeded\020\000\022)\n%k_UnpackBundle_Fa"
+      "iled_ItemIsNotBundle\020\001\0225\n1k_UnpackBundle"
+      "_Failed_UnableToCreateContainedItem\020\002\022&\n"
+      "\"k_UnpackBundle_Failed_SOCacheError\020\003\022\'\n"
+      "#k_UnpackBundle_Failed_ItemIsInvalid\020\004\022)"
+      "\n%k_UnpackBundle_Failed_BadItemQuantity\020"
+      "\005\022,\n(k_UnpackBundle_Failed_UnableToDelet"
+      "eItem\020\006\"K\n\'CMsgGCToClientStoreTransactio"
+      "nCompleted\022\016\n\006txn_id\030\001 \001(\004\022\020\n\010item_ids\030\002"
+      " \003(\004\"S\n\030CMsgClientToGCEquipItems\0227\n\006equi"
+      "ps\030\001 \003(\0132\'.proto.dota.CMsgAdjustItemEqui"
+      "ppedState\"\?\n CMsgClientToGCEquipItemsRes"
+      "ponse\022\033\n\023so_cache_version_id\030\001 \001(\006\"B\n\032CM"
+      "sgClientToGCSetItemStyle\022\017\n\007item_id\030\001 \001("
+      "\004\022\023\n\013style_index\030\002 \001(\r\"\351\001\n\"CMsgClientToG"
+      "CSetItemStyleResponse\022`\n\010response\030\001 \001(\0162"
+      "8.proto.dota.CMsgClientToGCSetItemStyleR"
+      "esponse.ESetStyle:\024k_SetStyle_Succeeded\""
+      "a\n\tESetStyle\022\030\n\024k_SetStyle_Succeeded\020\000\022\025"
+      "\n\021k_SetStyle_Failed\020\001\022#\n\037k_SetStyle_Fail"
+      "ed_StyleIsLocked\020\002\"i\n\035CMsgClientToGCUnlo"
+      "ckItemStyle\022\026\n\016item_to_unlock\030\001 \001(\004\022\023\n\013s"
+      "tyle_index\030\002 \001(\r\022\033\n\023consumable_item_ids\030"
+      "\003 \003(\004\"\255\005\n%CMsgClientToGCUnlockItemStyleR"
+      "esponse\022i\n\010response\030\001 \001(\0162>.proto.dota.C"
+      "MsgClientToGCUnlockItemStyleResponse.EUn"
+      "lockStyle:\027k_UnlockStyle_Succeeded\022\017\n\007it"
+      "em_id\030\002 \001(\004\022\023\n\013style_index\030\003 \001(\r\022\024\n\014styl"
+      "e_prereq\030\004 \001(\r\"\334\003\n\014EUnlockStyle\022\033\n\027k_Unl"
+      "ockStyle_Succeeded\020\000\022\037\n\033k_UnlockStyle_Fa"
+      "iled_PreReq\020\001\022#\n\037k_UnlockStyle_Failed_Ca"
+      "ntAfford\020\002\022#\n\037k_UnlockStyle_Failed_CantC"
+      "ommit\020\003\022&\n\"k_UnlockStyle_Failed_CantLock"
+      "Cache\020\004\022)\n%k_UnlockStyle_Failed_CantAffo"
+      "rdAttrib\020\005\022&\n\"k_UnlockStyle_Failed_CantA"
+      "ffordGem\020\006\022*\n&k_UnlockStyle_Failed_NoCom"
+      "pendiumLevel\020\007\022(\n$k_UnlockStyle_Failed_A"
+      "lreadyUnlocked\020\010\022#\n\037k_UnlockStyle_Failed"
+      "_OtherError\020\t\022&\n\"k_UnlockStyle_Failed_It"
+      "emIsInvalid\020\n\022&\n\"k_UnlockStyle_Failed_To"
+      "olIsInvalid\020\013\"\203\001\n&CMsgClientToGCSetItemI"
+      "nventoryCategory\022\020\n\010item_ids\030\001 \003(\004\022\024\n\014se"
+      "t_to_value\030\002 \001(\r\022\031\n\021remove_categories\030\003 "
+      "\001(\r\022\026\n\016add_categories\030\004 \001(\r\"G\n\031CMsgClien"
+      "tToGCUnlockCrate\022\025\n\rcrate_item_id\030\001 \001(\004\022"
+      "\023\n\013key_item_id\030\002 \001(\004\"\332\001\n!CMsgClientToGCU"
+      "nlockCrateResponse\022>\n\006result\030\001 \001(\0162\032.pro"
+      "to.dota.EGCMsgResponse:\022k_EGCMsgResponse"
+      "OK\022I\n\rgranted_items\030\002 \003(\01322.proto.dota.C"
+      "MsgClientToGCUnlockCrateResponse.Item\032*\n"
+      "\004Item\022\017\n\007item_id\030\001 \001(\004\022\021\n\tdef_index\030\002 \001("
+      "\r\"4\n!CMsgClientToGCRemoveItemAttribute\022\017"
+      "\n\007item_id\030\001 \001(\004\"\275\003\n)CMsgClientToGCRemove"
+      "ItemAttributeResponse\022}\n\010response\030\001 \001(\0162"
+      "J.proto.dota.CMsgClientToGCRemoveItemAtt"
+      "ributeResponse.ERemoveItemAttribute:\037k_R"
+      "emoveItemAttribute_Succeeded\022\017\n\007item_id\030"
+      "\002 \001(\004\"\377\001\n\024ERemoveItemAttribute\022#\n\037k_Remo"
+      "veItemAttribute_Succeeded\020\000\022 \n\034k_RemoveI"
+      "temAttribute_Failed\020\001\022.\n*k_RemoveItemAtt"
+      "ribute_Failed_ItemIsInvalid\020\002\0229\n5k_Remov"
+      "eItemAttribute_Failed_AttributeCannotBeR"
+      "emoved\020\003\0225\n1k_RemoveItemAttribute_Failed"
+      "_AttributeDoesntExist\020\004\"U\n\026CMsgClientToG"
+      "CNameItem\022\027\n\017subject_item_id\030\001 \001(\004\022\024\n\014to"
+      "ol_item_id\030\002 \001(\004\022\014\n\004name\030\003 \001(\t\"\275\002\n\036CMsgC"
+      "lientToGCNameItemResponse\022\\\n\010response\030\001 "
+      "\001(\01624.proto.dota.CMsgClientToGCNameItemR"
+      "esponse.ENameItem:\024k_NameItem_Succeeded\022"
+      "\017\n\007item_id\030\002 \001(\004\"\253\001\n\tENameItem\022\030\n\024k_Name"
+      "Item_Succeeded\020\000\022\025\n\021k_NameItem_Failed\020\001\022"
+      "#\n\037k_NameItem_Failed_ToolIsInvalid\020\002\022#\n\037"
+      "k_NameItem_Failed_ItemIsInvalid\020\003\022#\n\037k_N"
+      "ameItem_Failed_NameIsInvalid\020\004\">\n\025CMsgGC"
+      "SetItemPosition\022\017\n\007item_id\030\001 \001(\004\022\024\n\014new_"
+      "position\030\002 \001(\r\"\355\001\n%CAttribute_ItemDynami"
+      "cRecipeComponent\022\020\n\010item_def\030\001 \001(\r\022\024\n\014it"
+      "em_quality\030\002 \001(\r\022\022\n\nitem_flags\030\003 \001(\r\022\031\n\021"
+      "attributes_string\030\004 \001(\t\022\022\n\nitem_count\030\005 "
+      "\001(\r\022\027\n\017items_fulfilled\030\006 \001(\r\022\023\n\013item_rar"
+      "ity\030\007 \001(\r\022\020\n\010lootlist\030\010 \001(\t\022\031\n\021fulfilled"
+      "_item_id\030\t \001(\004\"\262\001\n\020CProtoItemSocket\022\017\n\007i"
+      "tem_id\030\001 \001(\004\022\026\n\016attr_def_index\030\002 \001(\r\022\025\n\r"
+      "required_type\030\003 \001(\r\022\025\n\rrequired_hero\030\004 \001"
+      "(\t\022\025\n\rgem_def_index\030\005 \001(\r\022\024\n\014not_tradabl"
+      "e\030\006 \001(\010\022\032\n\022required_item_slot\030\007 \001(\t\"F\n\026C"
+      "ProtoItemSocket_Empty\022,\n\006socket\030\001 \001(\0132\034."
+      "proto.dota.CProtoItemSocket\"W\n\027CProtoIte"
+      "mSocket_Effect\022,\n\006socket\030\001 \001(\0132\034.proto.d"
+      "ota.CProtoItemSocket\022\016\n\006effect\030\002 \001(\r\"p\n\026"
+      "CProtoItemSocket_Color\022,\n\006socket\030\001 \001(\0132\034"
+      ".proto.dota.CProtoItemSocket\022\013\n\003red\030\002 \001("
+      "\r\022\r\n\005green\030\003 \001(\r\022\014\n\004blue\030\004 \001(\r\"u\n\030CProto"
+      "ItemSocket_Strange\022,\n\006socket\030\001 \001(\0132\034.pro"
+      "to.dota.CProtoItemSocket\022\024\n\014strange_type"
+      "\030\002 \001(\r\022\025\n\rstrange_value\030\003 \001(\r\"\234\001\n\032CProto"
+      "ItemSocket_Spectator\022,\n\006socket\030\001 \001(\0132\034.p"
+      "roto.dota.CProtoItemSocket\022\024\n\014games_view"
+      "ed\030\002 \001(\r\022\026\n\016corporation_id\030\003 \001(\r\022\021\n\tleag"
+      "ue_id\030\004 \001(\r\022\017\n\007team_id\030\005 \001(\r\"f\n\036CProtoIt"
+      "emSocket_AssetModifier\022,\n\006socket\030\001 \001(\0132\034"
+      ".proto.dota.CProtoItemSocket\022\026\n\016asset_mo"
+      "difier\030\002 \001(\r\"\262\001\n;CProtoItemSocket_AssetM"
+      "odifier_DESERIALIZE_FROM_STRING_ONLY\022,\n\006"
+      "socket\030\001 \001(\0132\034.proto.dota.CProtoItemSock"
+      "et\022\026\n\016asset_modifier\030\002 \001(\r\022\025\n\ranim_modif"
+      "ier\030\003 \001(\r\022\026\n\016ability_effect\030\004 \001(\r\"\214\001\n\032CP"
+      "rotoItemSocket_Autograph\022,\n\006socket\030\001 \001(\013"
+      "2\034.proto.dota.CProtoItemSocket\022\021\n\tautogr"
+      "aph\030\002 \001(\t\022\024\n\014autograph_id\030\003 \001(\r\022\027\n\017autog"
+      "raph_score\030\004 \001(\r\"N\n\036CProtoItemSocket_Sta"
+      "ticVisuals\022,\n\006socket\030\001 \001(\0132\034.proto.dota."
+      "CProtoItemSocket\"\"\n\021CAttribute_String\022\r\n"
+      "\005value\030\001 \001(\t\"m\n%CWorkshop_GetItemDailyRe"
+      "venue_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007item_id\030"
+      "\002 \001(\r\022\022\n\ndate_start\030\003 \001(\r\022\020\n\010date_end\030\004 "
+      "\001(\r\"\350\001\n&CWorkshop_GetItemDailyRevenue_Re"
+      "sponse\022_\n\017country_revenue\030\001 \003(\0132F.proto."
+      "dota.CWorkshop_GetItemDailyRevenue_Respo"
+      "nse.CountryDailyRevenue\032]\n\023CountryDailyR"
+      "evenue\022\024\n\014country_code\030\001 \001(\t\022\014\n\004date\030\002 \001"
+      "(\r\022\023\n\013revenue_usd\030\003 \001(\003\022\r\n\005units\030\004 \001(\005\"c"
+      "\n(CWorkshop_GetPackageDailyRevenue_Reque"
+      "st\022\021\n\tpackageid\030\001 \001(\r\022\022\n\ndate_start\030\002 \001("
+      "\r\022\020\n\010date_end\030\003 \001(\r\"\356\001\n)CWorkshop_GetPac"
+      "kageDailyRevenue_Response\022b\n\017country_rev"
+      "enue\030\001 \003(\0132I.proto.dota.CWorkshop_GetPac"
+      "kageDailyRevenue_Response.CountryDailyRe"
+      "venue\032]\n\023CountryDailyRevenue\022\024\n\014country_"
+      "code\030\001 \001(\t\022\014\n\004date\030\002 \001(\r\022\023\n\013revenue_usd\030"
+      "\003 \001(\003\022\r\n\005units\030\004 \001(\005\"H\n\037CMsgSQLGCToGCGra"
+      "ntBackpackSlots\022\022\n\naccount_id\030\001 \001(\r\022\021\n\ta"
+      "dd_slots\030\002 \001(\r\"5\n\037CMsgClientToGCLookupAc"
+      "countName\022\022\n\naccount_id\030\001 \001(\r\"S\n\'CMsgCli"
+      "entToGCLookupAccountNameResponse\022\022\n\nacco"
+      "unt_id\030\001 \001(\r\022\024\n\014account_name\030\002 \001(\t\"\250\001\n C"
+      "MsgClientToGCCreateStaticRecipe\022@\n\005items"
+      "\030\001 \003(\01321.proto.dota.CMsgClientToGCCreate"
+      "StaticRecipe.Item\022\030\n\020recipe_def_index\030\002 "
+      "\001(\r\032(\n\004Item\022\017\n\007item_id\030\001 \001(\004\022\017\n\007slot_id\030"
+      "\002 \001(\r\"\263\006\n(CMsgClientToGCCreateStaticReci"
+      "peResponse\022c\n\010response\030\001 \001(\0162>.proto.dot"
+      "a.CMsgClientToGCCreateStaticRecipeRespon"
+      "se.EResponse:\021eResponse_Success\022U\n\014outpu"
+      "t_items\030\002 \003(\0132\?.proto.dota.CMsgClientToG"
+      "CCreateStaticRecipeResponse.OutputItem\022U"
+      "\n\014input_errors\030\003 \003(\0132\?.proto.dota.CMsgCl"
+      "ientToGCCreateStaticRecipeResponse.Input"
+      "Error\022a\n\022additional_outputs\030\004 \003(\0132E.prot"
+      "o.dota.CMsgClientToGCCreateStaticRecipeR"
+      "esponse.AdditionalOutput\032A\n\nOutputItem\022\021"
+      "\n\tdef_index\030\001 \001(\r\022\017\n\007item_id\030\002 \001(\004\022\017\n\007sl"
+      "ot_id\030\003 \001(\r\032\177\n\nInputError\022\017\n\007slot_id\030\001 \001"
+      "(\r\022`\n\005error\030\002 \001(\0162>.proto.dota.CMsgClien"
+      "tToGCCreateStaticRecipeResponse.ERespons"
+      "e:\021eResponse_Success\0322\n\020AdditionalOutput"
+      "\022\017\n\007slot_id\030\001 \001(\r\022\r\n\005value\030\002 \001(\004\"\230\001\n\tERe"
+      "sponse\022\025\n\021eResponse_Success\020\000\022\036\n\032eRespon"
+      "se_OfferingDisabled\020\001\022\032\n\026eResponse_Inval"
+      "idItems\020\002\022\033\n\027eResponse_InternalError\020\003\022\033"
+      "\n\027eResponse_MissingLeague\020\004\"\346\003\n\033CMsgProc"
+      "essTransactionOrder\022\016\n\006txn_id\030\001 \001(\004\022\024\n\014s"
+      "team_txn_id\030\002 \001(\004\022\026\n\016partner_txn_id\030\003 \001("
+      "\004\022\020\n\010steam_id\030\004 \001(\006\022\022\n\ntime_stamp\030\005 \001(\r\022"
+      "\021\n\twatermark\030\006 \001(\004\022\036\n\026purchase_report_st"
+      "atus\030\007 \001(\005\022\020\n\010currency\030\010 \001(\r\022;\n\005items\030\t "
+      "\003(\0132,.proto.dota.CMsgProcessTransactionO"
+      "rder.Item\032\340\001\n\004Item\022\026\n\016item_def_index\030\001 \001"
+      "(\r\022\022\n\nitem_price\030\002 \001(\r\022\020\n\010quantity\030\003 \001(\r"
+      "\022\025\n\rcategory_desc\030\004 \001(\t\022\033\n\023store_purchas"
+      "e_type\030\005 \001(\r\022\033\n\023source_reference_id\030\006 \001("
+      "\004\022\032\n\022parent_stack_index\030\007 \001(\005\022\025\n\rdefault"
+      "_price\030\010 \001(\010\022\026\n\016is_user_facing\030\t \001(\010\"u\n&"
+      "CMsgGCToGCStoreProcessCDKeyTransaction\0226"
+      "\n\005order\030\001 \001(\0132\'.proto.dota.CMsgProcessTr"
+      "ansactionOrder\022\023\n\013reason_code\030\002 \001(\r\"A\n.C"
+      "MsgGCToGCStoreProcessCDKeyTransactionRes"
+      "ponse\022\017\n\007success\030\001 \001(\010\"k\n CMsgGCToGCStor"
+      "eProcessSettlement\0226\n\005order\030\001 \001(\0132\'.prot"
+      "o.dota.CMsgProcessTransactionOrder\022\017\n\007pa"
+      "rtner\030\002 \001(\r\";\n(CMsgGCToGCStoreProcessSet"
+      "tlementResponse\022\017\n\007success\030\001 \001(\010\"}\n!CMsg"
+      "GCToGCBroadcastConsoleCommand\022\023\n\013con_com"
+      "mand\030\001 \001(\t\022\025\n\rreport_output\030\002 \001(\010\022\022\n\nsen"
+      "ding_gc\030\003 \001(\r\022\030\n\020output_initiator\030\004 \001(\t\""
+      "\256\001\n\027CMsgGCToGCConsoleOutput\022\021\n\tinitiator"
+      "\030\001 \001(\t\022\022\n\nsending_gc\030\002 \001(\r\022<\n\004msgs\030\003 \003(\013"
+      "2..proto.dota.CMsgGCToGCConsoleOutput.Ou"
+      "tputLine\032.\n\nOutputLine\022\014\n\004text\030\001 \001(\t\022\022\n\n"
+      "spew_level\030\002 \001(\r\"\231\001\n\014CMsgItemAges\022K\n\026max"
+      "_item_id_timestamps\030\001 \003(\0132+.proto.dota.C"
+      "MsgItemAges.MaxItemIDTimestamp\032<\n\022MaxIte"
+      "mIDTimestamp\022\021\n\ttimestamp\030\001 \001(\r\022\023\n\013max_i"
+      "tem_id\030\002 \001(\004\"\253\001\n\031CMsgGCToGCInternalTestM"
+      "sg\022\022\n\nsending_gc\030\001 \001(\r\022\021\n\tsender_id\030\002 \001("
+      "\006\022\017\n\007context\030\003 \001(\r\022\022\n\nmessage_id\030\004 \001(\r\022\024"
+      "\n\014message_body\030\005 \001(\014\022\025\n\rjob_id_source\030\006 "
+      "\001(\006\022\025\n\rjob_id_target\030\007 \001(\006\"\252\001\n%CMsgGCToG"
+      "CClientServerVersionsUpdated\022\"\n\032client_m"
+      "in_allowed_version\030\001 \001(\r\022\035\n\025client_activ"
+      "e_version\030\002 \001(\r\022\035\n\025server_active_version"
+      "\030\003 \001(\r\022\037\n\027server_deployed_version\030\004 \001(\r*"
+      "\2345\n\nEGCItemMsg\022\021\n\014k_EMsgGCBase\020\350\007\022\034\n\027k_E"
+      "MsgGCSetItemPosition\020\351\007\022\023\n\016k_EMsgGCDelet"
+      "e\020\354\007\022$\n\037k_EMsgGCVerifyCacheSubscription\020"
+      "\355\007\022\035\n\030k_EMsgClientToGCNameItem\020\356\007\022\026\n\021k_E"
+      "MsgGCPaintItem\020\361\007\022\036\n\031k_EMsgGCPaintItemRe"
+      "sponse\020\362\007\022\"\n\035k_EMsgGCGoldenWrenchBroadca"
+      "st\020\363\007\022\030\n\023k_EMsgGCMOTDRequest\020\364\007\022 \n\033k_EMs"
+      "gGCMOTDRequestResponse\020\365\007\022\'\n\"k_EMsgGCAdd"
+      "ItemToSocket_DEPRECATED\020\366\007\022/\n*k_EMsgGCAd"
+      "dItemToSocketResponse_DEPRECATED\020\367\007\022+\n&k"
+      "_EMsgGCAddSocketToBaseItem_DEPRECATED\020\370\007"
+      "\022\'\n\"k_EMsgGCAddSocketToItem_DEPRECATED\020\371"
+      "\007\022/\n*k_EMsgGCAddSocketToItemResponse_DEP"
+      "RECATED\020\372\007\022\031\n\024k_EMsgGCNameBaseItem\020\373\007\022!\n"
+      "\034k_EMsgGCNameBaseItemResponse\020\374\007\022(\n#k_EM"
+      "sgGCRemoveSocketItem_DEPRECATED\020\375\007\0220\n+k_"
+      "EMsgGCRemoveSocketItemResponse_DEPRECATE"
+      "D\020\376\007\022!\n\034k_EMsgGCCustomizeItemTexture\020\377\007\022"
+      ")\n$k_EMsgGCCustomizeItemTextureResponse\020"
+      "\200\010\022\033\n\026k_EMsgGCUseItemRequest\020\201\010\022\034\n\027k_EMs"
+      "gGCUseItemResponse\020\202\010\022\030\n\023k_EMsgGCGiftedI"
+      "tems\020\203\010\022\033\n\026k_EMsgGCRemoveItemName\020\206\010\022\034\n\027"
+      "k_EMsgGCRemoveItemPaint\020\207\010\022\036\n\031k_EMsgGCUn"
+      "wrapGiftRequest\020\215\010\022\037\n\032k_EMsgGCUnwrapGift"
+      "Response\020\216\010\022$\n\037k_EMsgGCSetItemStyle_DEPR"
+      "ECATED\020\217\010\022\036\n\031k_EMsgGCUsedClaimCodeItem\020\220"
+      "\010\022\026\n\021k_EMsgGCSortItems\020\221\010\022*\n%k_EMsgGC_Re"
+      "volvingLootList_DEPRECATED\020\222\010\022\035\n\030k_EMsgG"
+      "CUpdateItemSchema\020\231\010\022 \n\033k_EMsgGCRemoveCu"
+      "stomTexture\020\233\010\022(\n#k_EMsgGCRemoveCustomTe"
+      "xtureResponse\020\234\010\022\035\n\030k_EMsgGCRemoveMakers"
+      "Mark\020\235\010\022%\n k_EMsgGCRemoveMakersMarkRespo"
+      "nse\020\236\010\022#\n\036k_EMsgGCRemoveUniqueCraftIndex"
+      "\020\237\010\022+\n&k_EMsgGCRemoveUniqueCraftIndexRes"
+      "ponse\020\240\010\022\033\n\026k_EMsgGCSaxxyBroadcast\020\241\010\022!\n"
+      "\034k_EMsgGCBackpackSortFinished\020\242\010\022$\n\037k_EM"
+      "sgGCAdjustItemEquippedState\020\243\010\022\030\n\023k_EMsg"
+      "GCCollectItem\020\245\010\022\035\n\030k_EMsgGCItemAcknowle"
+      "dged\020\246\010\022)\n$k_EMsgGCPresets_SelectPresetF"
+      "orClass\020\247\010\022$\n\037k_EMsgGCPresets_SetItemPos"
+      "ition\020\250\010\022.\n)k_EMsgGCPresets_SelectPreset"
+      "ForClassReply\020\253\010\022%\n k_EMsgClientToGCName"
+      "ItemResponse\020\254\010\022#\n\036k_EMsgGCApplyConsumab"
+      "leEffects\020\255\010\022 \n\033k_EMsgGCConsumableExhaus"
+      "ted\020\256\010\022\036\n\031k_EMsgGCShowItemsPickedUp\020\257\010\022&"
+      "\n!k_EMsgGCClientDisplayNotification\020\260\010\022\035"
+      "\n\030k_EMsgGCApplyStrangePart\020\261\010\022(\n#k_EMsgG"
+      "C_IncrementKillCountResponse\020\263\010\022 \n\033k_EMs"
+      "gGCApplyPennantUpgrade\020\264\010\022\035\n\030k_EMsgGCSet"
+      "ItemPositions\020\265\010\022)\n$k_EMsgGCSetItemPosit"
+      "ions_RateLimited\020\310\010\022\034\n\027k_EMsgGCApplyEggE"
+      "ssence\020\266\010\022#\n\036k_EMsgGCNameEggEssenceRespo"
+      "nse\020\267\010\022*\n%k_EMsgGCFulfillDynamicRecipeCo"
+      "mponent\020\272\010\0222\n-k_EMsgGCFulfillDynamicReci"
+      "peComponentResponse\020\273\010\022$\n\037k_EMsgGCClient"
+      "RequestMarketData\020\274\010\022,\n\'k_EMsgGCClientRe"
+      "questMarketDataResponse\020\275\010\022\030\n\023k_EMsgGCEx"
+      "tractGems\020\276\010\022\026\n\021k_EMsgGCAddSocket\020\277\010\022\034\n\027"
+      "k_EMsgGCAddItemToSocket\020\300\010\022$\n\037k_EMsgGCAd"
+      "dItemToSocketResponse\020\301\010\022\036\n\031k_EMsgGCAddS"
+      "ocketResponse\020\302\010\022!\n\034k_EMsgGCResetStrange"
+      "GemCount\020\303\010\022\036\n\031k_EMsgGCRequestCrateItems"
+      "\020\304\010\022&\n!k_EMsgGCRequestCrateItemsResponse"
+      "\020\305\010\022 \n\033k_EMsgGCExtractGemsResponse\020\306\010\022)\n"
+      "$k_EMsgGCResetStrangeGemCountResponse\020\307\010"
+      "\022!\n\034k_EMsgGCServerUseItemRequest\020\317\010\022\030\n\023k"
+      "_EMsgGCAddGiftItem\020\320\010\022\"\n\035k_EMsgGCRemoveI"
+      "temGiftMessage\020\321\010\022*\n%k_EMsgGCRemoveItemG"
+      "iftMessageResponse\020\322\010\022&\n!k_EMsgGCRemoveI"
+      "temGifterAccountId\020\323\010\022.\n)k_EMsgGCRemoveI"
+      "temGifterAccountIdResponse\020\324\010\022/\n*k_EMsgC"
+      "lientToGCRemoveItemGifterAttributes\020\325\010\022#"
+      "\n\036k_EMsgClientToGCRemoveItemName\020\326\010\022*\n%k"
+      "_EMsgClientToGCRemoveItemDescription\020\327\010\022"
+      "0\n+k_EMsgClientToGCRemoveItemAttributeRe"
+      "sponse\020\330\010\022\030\n\023k_EMsgGCTradingBase\020\334\013\022)\n$k"
+      "_EMsgGCTrading_InitiateTradeRequest\020\335\013\022*"
+      "\n%k_EMsgGCTrading_InitiateTradeResponse\020"
+      "\336\013\022!\n\034k_EMsgGCTrading_StartSession\020\337\013\022\"\n"
+      "\035k_EMsgGCTrading_SessionClosed\020\345\013\0221\n,k_E"
+      "MsgGCTrading_InitiateTradeRequestRespons"
+      "e\020\352\013\022)\n$k_EMsgGCServerBrowser_FavoriteSe"
+      "rver\020\301\014\022*\n%k_EMsgGCServerBrowser_Blackli"
+      "stServer\020\302\014\022\036\n\031k_EMsgGCServerRentalsBase"
+      "\020\244\r\022\037\n\032k_EMsgGCDev_NewItemRequest\020\321\017\022\'\n\""
+      "k_EMsgGCDev_NewItemRequestResponse\020\322\017\022\035\n"
+      "\030k_EMsgGCStoreGetUserData\020\304\023\022%\n k_EMsgGC"
+      "StoreGetUserDataResponse\020\305\023\022\"\n\035k_EMsgGCS"
+      "torePurchaseFinalize\020\310\023\022*\n%k_EMsgGCStore"
+      "PurchaseFinalizeResponse\020\311\023\022 \n\033k_EMsgGCS"
+      "torePurchaseCancel\020\312\023\022(\n#k_EMsgGCStorePu"
+      "rchaseCancelResponse\020\313\023\022\036\n\031k_EMsgGCStore"
+      "PurchaseInit\020\316\023\022&\n!k_EMsgGCStorePurchase"
+      "InitResponse\020\317\023\022\"\n\035k_EMsgGCBannedWordLis"
+      "tRequest\020\320\023\022#\n\036k_EMsgGCBannedWordListRes"
+      "ponse\020\321\023\022(\n#k_EMsgGCToGCBannedWordListBr"
+      "oadcast\020\322\023\022&\n!k_EMsgGCToGCBannedWordList"
+      "Updated\020\323\023\022\036\n\031k_EMsgGCToGCDirtySDOCache\020"
+      "\324\023\022&\n!k_EMsgGCToGCDirtyMultipleSDOCache\020"
+      "\325\023\022\"\n\035k_EMsgGCToGCUpdateSQLKeyValue\020\326\023\022("
+      "\n#k_EMsgGCToGCBroadcastConsoleCommand\020\331\023"
+      "\022!\n\034k_EMsgGCServerVersionUpdated\020\332\023\022\033\n\026k"
+      "_EMsgGCApplyAutograph\020\333\023\022%\n k_EMsgGCToGC"
+      "WebAPIAccountChanged\020\334\023\022!\n\034k_EMsgGCClien"
+      "tVersionUpdated\020\340\023\022+\n&k_EMsgGCItemPurgat"
+      "ory_FinalizePurchase\020\343\023\0223\n.k_EMsgGCItemP"
+      "urgatory_FinalizePurchaseResponse\020\344\023\022)\n$"
+      "k_EMsgGCItemPurgatory_RefundPurchase\020\345\023\022"
+      "1\n,k_EMsgGCItemPurgatory_RefundPurchaseR"
+      "esponse\020\346\023\022.\n)k_EMsgGCToGCPlayerStrangeC"
+      "ountAdjustments\020\347\023\022\"\n\035k_EMsgGCRequestSto"
+      "reSalesData\020\350\023\022*\n%k_EMsgGCRequestStoreSa"
+      "lesDataResponse\020\351\023\0222\n-k_EMsgGCRequestSto"
+      "reSalesDataUpToDateResponse\020\352\023\022\034\n\027k_EMsg"
+      "GCToGCPingRequest\020\353\023\022\035\n\030k_EMsgGCToGCPing"
+      "Response\020\354\023\022%\n k_EMsgGCToGCGetUserSessio"
+      "nServer\020\355\023\022-\n(k_EMsgGCToGCGetUserSession"
+      "ServerResponse\020\356\023\022%\n k_EMsgGCToGCGetUser"
+      "ServerMembers\020\357\023\022-\n(k_EMsgGCToGCGetUserS"
+      "erverMembersResponse\020\360\023\022 \n\033k_EMsgGCToGCG"
+      "etUserPCBangNo\020\361\023\022(\n#k_EMsgGCToGCGetUser"
+      "PCBangNoResponse\020\362\023\022$\n\037k_EMsgGCToGCCanUs"
+      "eDropRateBonus\020\363\023\022\036\n\031k_EMsgSQLAddDropRat"
+      "eBonus\020\364\023\022\037\n\032k_EMsgGCToGCRefreshSOCache\020"
+      "\365\023\022&\n!k_EMsgGCToGCApplyLocalizationDiff\020"
+      "\366\023\022.\n)k_EMsgGCToGCApplyLocalizationDiffR"
+      "esponse\020\367\023\022(\n#k_EMsgGCToGCCheckAccountTr"
+      "adeStatus\020\370\023\0220\n+k_EMsgGCToGCCheckAccount"
+      "TradeStatusResponse\020\371\023\022(\n#k_EMsgGCToGCGr"
+      "antAccountRolledItems\020\372\023\022+\n&k_EMsgGCToGC"
+      "GrantSelfMadeItemToAccount\020\373\023\022\"\n\035k_EMsgG"
+      "CPartnerBalanceRequest\020\375\023\022#\n\036k_EMsgGCPar"
+      "tnerBalanceResponse\020\376\023\022.\n)k_EMsgGCPartne"
+      "rRechargeRedirectURLRequest\020\377\023\022/\n*k_EMsg"
+      "GCPartnerRechargeRedirectURLResponse\020\200\024\022"
+      "\030\n\023k_EMsgGCStatueCraft\020\201\024\022\027\n\022k_EMsgGCRed"
+      "eemCode\020\202\024\022\037\n\032k_EMsgGCRedeemCodeResponse"
+      "\020\203\024\022(\n#k_EMsgGCToGCItemConsumptionRollba"
+      "ck\020\204\024\022\'\n\"k_EMsgClientToGCWrapAndDeliverG"
+      "ift\020\205\024\022/\n*k_EMsgClientToGCWrapAndDeliver"
+      "GiftResponse\020\206\024\022)\n$k_EMsgClientToGCUnpac"
+      "kBundleResponse\020\207\024\022.\n)k_EMsgGCToClientSt"
+      "oreTransactionCompleted\020\210\024\022\037\n\032k_EMsgClie"
+      "ntToGCEquipItems\020\211\024\022\'\n\"k_EMsgClientToGCE"
+      "quipItemsResponse\020\212\024\022$\n\037k_EMsgClientToGC"
+      "UnlockItemStyle\020\213\024\022,\n\'k_EMsgClientToGCUn"
+      "lockItemStyleResponse\020\214\024\022-\n(k_EMsgClient"
+      "ToGCSetItemInventoryCategory\020\215\024\022 \n\033k_EMs"
+      "gClientToGCUnlockCrate\020\216\024\022(\n#k_EMsgClien"
+      "tToGCUnlockCrateResponse\020\217\024\022!\n\034k_EMsgCli"
+      "entToGCUnpackBundle\020\220\024\022!\n\034k_EMsgClientTo"
+      "GCSetItemStyle\020\221\024\022)\n$k_EMsgClientToGCSet"
+      "ItemStyleResponse\020\222\024\022&\n!k_EMsgSQLGCToGCG"
+      "rantBackpackSlots\020\224\024\022&\n!k_EMsgClientToGC"
+      "LookupAccountName\020\225\024\022.\n)k_EMsgClientToGC"
+      "LookupAccountNameResponse\020\226\024\022#\n\036k_EMsgGC"
+      "ToGCDevRevokeUserItems\020\227\024\022\'\n\"k_EMsgClien"
+      "tToGCCreateStaticRecipe\020\230\024\022/\n*k_EMsgClie"
+      "ntToGCCreateStaticRecipeResponse\020\231\024\022-\n(k"
+      "_EMsgGCToGCStoreProcessCDKeyTransaction\020"
+      "\232\024\0225\n0k_EMsgGCToGCStoreProcessCDKeyTrans"
+      "actionResponse\020\233\024\022\'\n\"k_EMsgGCToGCStorePr"
+      "ocessSettlement\020\234\024\022/\n*k_EMsgGCToGCStoreP"
+      "rocessSettlementResponse\020\235\024\022\036\n\031k_EMsgGCT"
+      "oGCConsoleOutput\020\236\024\022\035\n\030k_EMsgGCToClientI"
+      "temAges\020\237\024\022 \n\033k_EMsgGCToGCInternalTestMs"
+      "g\020\240\024\022,\n\'k_EMsgGCToGCClientServerVersions"
+      "Updated\020\241\024\022$\n\037k_EMsgGCUseMultipleItemsRe"
+      "quest\020\242\024\022%\n k_EMsgGCCheckAccountSubscrip"
+      "tion\020\243\024\022-\n(k_EMsgGCCheckAccountSubscript"
+      "ionResponse\020\244\024*\363\002\n\037EItemPurgatoryRespons"
+      "e_Finalize\022.\n*k_ItemPurgatoryResponse_Fi"
+      "nalize_Succeeded\020\000\0226\n2k_ItemPurgatoryRes"
+      "ponse_Finalize_Failed_Incomplete\020\001\022\?\n;k_"
+      "ItemPurgatoryResponse_Finalize_Failed_It"
+      "emsNotInPurgatory\020\002\022=\n9k_ItemPurgatoryRe"
+      "sponse_Finalize_Failed_CouldNotFindItems"
+      "\020\003\0225\n1k_ItemPurgatoryResponse_Finalize_F"
+      "ailed_NoSOCache\020\004\0221\n-k_ItemPurgatoryResp"
+      "onse_Finalize_BackpackFull\020\005*\347\002\n\035EItemPu"
+      "rgatoryResponse_Refund\022,\n(k_ItemPurgator"
+      "yResponse_Refund_Succeeded\020\000\022<\n8k_ItemPu"
+      "rgatoryResponse_Refund_Failed_ItemNotInP"
+      "urgatory\020\001\022:\n6k_ItemPurgatoryResponse_Re"
+      "fund_Failed_CouldNotFindItem\020\002\0223\n/k_Item"
+      "PurgatoryResponse_Refund_Failed_NoSOCach"
+      "e\020\003\0222\n.k_ItemPurgatoryResponse_Refund_Fa"
+      "iled_NoDetail\020\004\0225\n1k_ItemPurgatoryRespon"
+      "se_Refund_Failed_NexonWebAPI\020\005*\271\n\n\033EGCMs"
+      "gInitiateTradeResponse\022*\n&k_EGCMsgInitia"
+      "teTradeResponse_Accepted\020\000\022*\n&k_EGCMsgIn"
+      "itiateTradeResponse_Declined\020\001\0226\n2k_EGCM"
+      "sgInitiateTradeResponse_VAC_Banned_Initi"
+      "ator\020\002\0223\n/k_EGCMsgInitiateTradeResponse_"
+      "VAC_Banned_Target\020\003\0228\n4k_EGCMsgInitiateT"
+      "radeResponse_Target_Already_Trading\020\004\022*\n"
+      "&k_EGCMsgInitiateTradeResponse_Disabled\020"
+      "\005\022-\n)k_EGCMsgInitiateTradeResponse_NotLo"
+      "ggedIn\020\006\022(\n$k_EGCMsgInitiateTradeRespons"
+      "e_Cancel\020\007\022)\n%k_EGCMsgInitiateTradeRespo"
+      "nse_TooSoon\020\010\0220\n,k_EGCMsgInitiateTradeRe"
+      "sponse_TooSoonPenalty\020\t\0228\n4k_EGCMsgIniti"
+      "ateTradeResponse_Trade_Banned_Initiator\020"
+      "\n\0225\n1k_EGCMsgInitiateTradeResponse_Trade"
+      "_Banned_Target\020\013\022C\n\?k_EGCMsgInitiateTrad"
+      "eResponse_Free_Account_Initiator_DEPRECA"
+      "TED\020\014\022:\n6k_EGCMsgInitiateTradeResponse_S"
+      "hared_Account_Initiator\020\r\0225\n1k_EGCMsgIni"
+      "tiateTradeResponse_Service_Unavailable\020\016"
+      "\0220\n,k_EGCMsgInitiateTradeResponse_Target"
+      "_Blocked\020\017\0223\n/k_EGCMsgInitiateTradeRespo"
+      "nse_NeedVerifiedEmail\020\020\0220\n,k_EGCMsgIniti"
+      "ateTradeResponse_NeedSteamGuard\020\021\0224\n0k_E"
+      "GCMsgInitiateTradeResponse_SteamGuardDur"
+      "ation\020\022\0221\n-k_EGCMsgInitiateTradeResponse"
+      "_TheyCannotTrade\020\023\0227\n3k_EGCMsgInitiateTr"
+      "adeResponse_Recent_Password_Reset\020\024\0222\n.k"
+      "_EGCMsgInitiateTradeResponse_Using_New_D"
+      "evice\020\025\0225\n1k_EGCMsgInitiateTradeResponse"
+      "_Sent_Invalid_Cookie\020\026\0221\n-k_EGCMsgInitia"
+      "teTradeResponse_TooRecentFriend\020\027\0227\n3k_E"
+      "GCMsgInitiateTradeResponse_WalledFundsNo"
+      "tTrusted\020\030B\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 23037);
+      descriptor, 23497);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "econ_gcmessages.proto", &protobuf_RegisterTypes);
   ::proto::dota::protobuf_steammessages_2eproto::AddDescriptors();
@@ -2870,9 +2916,32 @@ const CMsgRedeemCodeResponse_EResultCode CMsgRedeemCodeResponse::EResultCode_MIN
 const CMsgRedeemCodeResponse_EResultCode CMsgRedeemCodeResponse::EResultCode_MAX;
 const int CMsgRedeemCodeResponse::EResultCode_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-const ::google::protobuf::EnumDescriptor* CMsgClientToGCUnpackBundleResponse_EUnpackBundle_descriptor() {
+const ::google::protobuf::EnumDescriptor* CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState_descriptor() {
   protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[2];
+}
+bool CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState CMsgGCCheckAccountSubscriptionResponse::STATE_UNKNOWN;
+const CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState CMsgGCCheckAccountSubscriptionResponse::STATE_INACTIVE;
+const CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState CMsgGCCheckAccountSubscriptionResponse::STATE_ACTIVE;
+const CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState CMsgGCCheckAccountSubscriptionResponse::ESubscriptionState_MIN;
+const CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState CMsgGCCheckAccountSubscriptionResponse::ESubscriptionState_MAX;
+const int CMsgGCCheckAccountSubscriptionResponse::ESubscriptionState_ARRAYSIZE;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+const ::google::protobuf::EnumDescriptor* CMsgClientToGCUnpackBundleResponse_EUnpackBundle_descriptor() {
+  protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[3];
 }
 bool CMsgClientToGCUnpackBundleResponse_EUnpackBundle_IsValid(int value) {
   switch (value) {
@@ -2903,7 +2972,7 @@ const int CMsgClientToGCUnpackBundleResponse::EUnpackBundle_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 const ::google::protobuf::EnumDescriptor* CMsgClientToGCSetItemStyleResponse_ESetStyle_descriptor() {
   protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[3];
+  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[4];
 }
 bool CMsgClientToGCSetItemStyleResponse_ESetStyle_IsValid(int value) {
   switch (value) {
@@ -2926,7 +2995,7 @@ const int CMsgClientToGCSetItemStyleResponse::ESetStyle_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 const ::google::protobuf::EnumDescriptor* CMsgClientToGCUnlockItemStyleResponse_EUnlockStyle_descriptor() {
   protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[4];
+  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[5];
 }
 bool CMsgClientToGCUnlockItemStyleResponse_EUnlockStyle_IsValid(int value) {
   switch (value) {
@@ -2967,7 +3036,7 @@ const int CMsgClientToGCUnlockItemStyleResponse::EUnlockStyle_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 const ::google::protobuf::EnumDescriptor* CMsgClientToGCRemoveItemAttributeResponse_ERemoveItemAttribute_descriptor() {
   protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[5];
+  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[6];
 }
 bool CMsgClientToGCRemoveItemAttributeResponse_ERemoveItemAttribute_IsValid(int value) {
   switch (value) {
@@ -2994,7 +3063,7 @@ const int CMsgClientToGCRemoveItemAttributeResponse::ERemoveItemAttribute_ARRAYS
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 const ::google::protobuf::EnumDescriptor* CMsgClientToGCNameItemResponse_ENameItem_descriptor() {
   protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[6];
+  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[7];
 }
 bool CMsgClientToGCNameItemResponse_ENameItem_IsValid(int value) {
   switch (value) {
@@ -3021,7 +3090,7 @@ const int CMsgClientToGCNameItemResponse::ENameItem_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 const ::google::protobuf::EnumDescriptor* CMsgClientToGCCreateStaticRecipeResponse_EResponse_descriptor() {
   protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[7];
+  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[8];
 }
 bool CMsgClientToGCCreateStaticRecipeResponse_EResponse_IsValid(int value) {
   switch (value) {
@@ -3048,7 +3117,7 @@ const int CMsgClientToGCCreateStaticRecipeResponse::EResponse_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 const ::google::protobuf::EnumDescriptor* EGCItemMsg_descriptor() {
   protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[8];
+  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[9];
 }
 bool EGCItemMsg_IsValid(int value) {
   switch (value) {
@@ -3228,6 +3297,8 @@ bool EGCItemMsg_IsValid(int value) {
     case 2592:
     case 2593:
     case 2594:
+    case 2595:
+    case 2596:
       return true;
     default:
       return false;
@@ -3236,7 +3307,7 @@ bool EGCItemMsg_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* EItemPurgatoryResponse_Finalize_descriptor() {
   protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[9];
+  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[10];
 }
 bool EItemPurgatoryResponse_Finalize_IsValid(int value) {
   switch (value) {
@@ -3254,7 +3325,7 @@ bool EItemPurgatoryResponse_Finalize_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* EItemPurgatoryResponse_Refund_descriptor() {
   protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[10];
+  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[11];
 }
 bool EItemPurgatoryResponse_Refund_IsValid(int value) {
   switch (value) {
@@ -3272,7 +3343,7 @@ bool EItemPurgatoryResponse_Refund_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* EGCMsgInitiateTradeResponse_descriptor() {
   protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[11];
+  return protobuf_econ_5fgcmessages_2eproto::file_level_enum_descriptors[12];
 }
 bool EGCMsgInitiateTradeResponse_IsValid(int value) {
   switch (value) {
@@ -3300,6 +3371,7 @@ bool EGCMsgInitiateTradeResponse_IsValid(int value) {
     case 21:
     case 22:
     case 23:
+    case 24:
       return true;
     default:
       return false;
@@ -21838,6 +21910,687 @@ void CMsgDevNewItemRequestResponse::set_success(bool value) {
   set_has_success();
   success_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgDevNewItemRequestResponse.success)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CMsgGCCheckAccountSubscription::kAccountIdFieldNumber;
+const int CMsgGCCheckAccountSubscription::kDefIndexFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CMsgGCCheckAccountSubscription::CMsgGCCheckAccountSubscription()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_econ_5fgcmessages_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.dota.CMsgGCCheckAccountSubscription)
+}
+CMsgGCCheckAccountSubscription::CMsgGCCheckAccountSubscription(const CMsgGCCheckAccountSubscription& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&account_id_, &from.account_id_,
+    reinterpret_cast<char*>(&def_index_) -
+    reinterpret_cast<char*>(&account_id_) + sizeof(def_index_));
+  // @@protoc_insertion_point(copy_constructor:proto.dota.CMsgGCCheckAccountSubscription)
+}
+
+void CMsgGCCheckAccountSubscription::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&account_id_, 0, reinterpret_cast<char*>(&def_index_) -
+    reinterpret_cast<char*>(&account_id_) + sizeof(def_index_));
+}
+
+CMsgGCCheckAccountSubscription::~CMsgGCCheckAccountSubscription() {
+  // @@protoc_insertion_point(destructor:proto.dota.CMsgGCCheckAccountSubscription)
+  SharedDtor();
+}
+
+void CMsgGCCheckAccountSubscription::SharedDtor() {
+}
+
+void CMsgGCCheckAccountSubscription::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CMsgGCCheckAccountSubscription::descriptor() {
+  protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_econ_5fgcmessages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CMsgGCCheckAccountSubscription& CMsgGCCheckAccountSubscription::default_instance() {
+  protobuf_econ_5fgcmessages_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CMsgGCCheckAccountSubscription* CMsgGCCheckAccountSubscription::New(::google::protobuf::Arena* arena) const {
+  CMsgGCCheckAccountSubscription* n = new CMsgGCCheckAccountSubscription;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CMsgGCCheckAccountSubscription::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.dota.CMsgGCCheckAccountSubscription)
+  if (_has_bits_[0 / 32] & 3u) {
+    ::memset(&account_id_, 0, reinterpret_cast<char*>(&def_index_) -
+      reinterpret_cast<char*>(&account_id_) + sizeof(def_index_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CMsgGCCheckAccountSubscription::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.dota.CMsgGCCheckAccountSubscription)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 account_id = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_account_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &account_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 def_index = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
+          set_has_def_index();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &def_index_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.dota.CMsgGCCheckAccountSubscription)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.dota.CMsgGCCheckAccountSubscription)
+  return false;
+#undef DO_
+}
+
+void CMsgGCCheckAccountSubscription::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.dota.CMsgGCCheckAccountSubscription)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 account_id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->account_id(), output);
+  }
+
+  // optional uint32 def_index = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->def_index(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.dota.CMsgGCCheckAccountSubscription)
+}
+
+::google::protobuf::uint8* CMsgGCCheckAccountSubscription::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.dota.CMsgGCCheckAccountSubscription)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 account_id = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->account_id(), target);
+  }
+
+  // optional uint32 def_index = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->def_index(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.dota.CMsgGCCheckAccountSubscription)
+  return target;
+}
+
+size_t CMsgGCCheckAccountSubscription::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.dota.CMsgGCCheckAccountSubscription)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 3u) {
+    // optional uint32 account_id = 1;
+    if (has_account_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->account_id());
+    }
+
+    // optional uint32 def_index = 2;
+    if (has_def_index()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->def_index());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CMsgGCCheckAccountSubscription::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.dota.CMsgGCCheckAccountSubscription)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CMsgGCCheckAccountSubscription* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CMsgGCCheckAccountSubscription>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.dota.CMsgGCCheckAccountSubscription)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.dota.CMsgGCCheckAccountSubscription)
+    MergeFrom(*source);
+  }
+}
+
+void CMsgGCCheckAccountSubscription::MergeFrom(const CMsgGCCheckAccountSubscription& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.dota.CMsgGCCheckAccountSubscription)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      account_id_ = from.account_id_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      def_index_ = from.def_index_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CMsgGCCheckAccountSubscription::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.dota.CMsgGCCheckAccountSubscription)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CMsgGCCheckAccountSubscription::CopyFrom(const CMsgGCCheckAccountSubscription& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.dota.CMsgGCCheckAccountSubscription)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CMsgGCCheckAccountSubscription::IsInitialized() const {
+  return true;
+}
+
+void CMsgGCCheckAccountSubscription::Swap(CMsgGCCheckAccountSubscription* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CMsgGCCheckAccountSubscription::InternalSwap(CMsgGCCheckAccountSubscription* other) {
+  std::swap(account_id_, other->account_id_);
+  std::swap(def_index_, other->def_index_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CMsgGCCheckAccountSubscription::GetMetadata() const {
+  protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_econ_5fgcmessages_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CMsgGCCheckAccountSubscription
+
+// optional uint32 account_id = 1;
+bool CMsgGCCheckAccountSubscription::has_account_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CMsgGCCheckAccountSubscription::set_has_account_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CMsgGCCheckAccountSubscription::clear_has_account_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CMsgGCCheckAccountSubscription::clear_account_id() {
+  account_id_ = 0u;
+  clear_has_account_id();
+}
+::google::protobuf::uint32 CMsgGCCheckAccountSubscription::account_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCCheckAccountSubscription.account_id)
+  return account_id_;
+}
+void CMsgGCCheckAccountSubscription::set_account_id(::google::protobuf::uint32 value) {
+  set_has_account_id();
+  account_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCCheckAccountSubscription.account_id)
+}
+
+// optional uint32 def_index = 2;
+bool CMsgGCCheckAccountSubscription::has_def_index() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CMsgGCCheckAccountSubscription::set_has_def_index() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CMsgGCCheckAccountSubscription::clear_has_def_index() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CMsgGCCheckAccountSubscription::clear_def_index() {
+  def_index_ = 0u;
+  clear_has_def_index();
+}
+::google::protobuf::uint32 CMsgGCCheckAccountSubscription::def_index() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCCheckAccountSubscription.def_index)
+  return def_index_;
+}
+void CMsgGCCheckAccountSubscription::set_def_index(::google::protobuf::uint32 value) {
+  set_has_def_index();
+  def_index_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCCheckAccountSubscription.def_index)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CMsgGCCheckAccountSubscriptionResponse::kStateFieldNumber;
+const int CMsgGCCheckAccountSubscriptionResponse::kCacheUntilFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CMsgGCCheckAccountSubscriptionResponse::CMsgGCCheckAccountSubscriptionResponse()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_econ_5fgcmessages_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+}
+CMsgGCCheckAccountSubscriptionResponse::CMsgGCCheckAccountSubscriptionResponse(const CMsgGCCheckAccountSubscriptionResponse& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&state_, &from.state_,
+    reinterpret_cast<char*>(&cache_until_) -
+    reinterpret_cast<char*>(&state_) + sizeof(cache_until_));
+  // @@protoc_insertion_point(copy_constructor:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+}
+
+void CMsgGCCheckAccountSubscriptionResponse::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&state_, 0, reinterpret_cast<char*>(&cache_until_) -
+    reinterpret_cast<char*>(&state_) + sizeof(cache_until_));
+}
+
+CMsgGCCheckAccountSubscriptionResponse::~CMsgGCCheckAccountSubscriptionResponse() {
+  // @@protoc_insertion_point(destructor:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  SharedDtor();
+}
+
+void CMsgGCCheckAccountSubscriptionResponse::SharedDtor() {
+}
+
+void CMsgGCCheckAccountSubscriptionResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CMsgGCCheckAccountSubscriptionResponse::descriptor() {
+  protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_econ_5fgcmessages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CMsgGCCheckAccountSubscriptionResponse& CMsgGCCheckAccountSubscriptionResponse::default_instance() {
+  protobuf_econ_5fgcmessages_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CMsgGCCheckAccountSubscriptionResponse* CMsgGCCheckAccountSubscriptionResponse::New(::google::protobuf::Arena* arena) const {
+  CMsgGCCheckAccountSubscriptionResponse* n = new CMsgGCCheckAccountSubscriptionResponse;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CMsgGCCheckAccountSubscriptionResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  if (_has_bits_[0 / 32] & 3u) {
+    ::memset(&state_, 0, reinterpret_cast<char*>(&cache_until_) -
+      reinterpret_cast<char*>(&state_) + sizeof(cache_until_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CMsgGCCheckAccountSubscriptionResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .proto.dota.CMsgGCCheckAccountSubscriptionResponse.ESubscriptionState state = 1 [default = STATE_UNKNOWN];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::proto::dota::CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState_IsValid(value)) {
+            set_state(static_cast< ::proto::dota::CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 cache_until = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
+          set_has_cache_until();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &cache_until_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  return false;
+#undef DO_
+}
+
+void CMsgGCCheckAccountSubscriptionResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional .proto.dota.CMsgGCCheckAccountSubscriptionResponse.ESubscriptionState state = 1 [default = STATE_UNKNOWN];
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->state(), output);
+  }
+
+  // optional uint32 cache_until = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->cache_until(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+}
+
+::google::protobuf::uint8* CMsgGCCheckAccountSubscriptionResponse::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional .proto.dota.CMsgGCCheckAccountSubscriptionResponse.ESubscriptionState state = 1 [default = STATE_UNKNOWN];
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->state(), target);
+  }
+
+  // optional uint32 cache_until = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->cache_until(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  return target;
+}
+
+size_t CMsgGCCheckAccountSubscriptionResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 3u) {
+    // optional .proto.dota.CMsgGCCheckAccountSubscriptionResponse.ESubscriptionState state = 1 [default = STATE_UNKNOWN];
+    if (has_state()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->state());
+    }
+
+    // optional uint32 cache_until = 2;
+    if (has_cache_until()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->cache_until());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CMsgGCCheckAccountSubscriptionResponse::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CMsgGCCheckAccountSubscriptionResponse* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CMsgGCCheckAccountSubscriptionResponse>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+    MergeFrom(*source);
+  }
+}
+
+void CMsgGCCheckAccountSubscriptionResponse::MergeFrom(const CMsgGCCheckAccountSubscriptionResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      state_ = from.state_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      cache_until_ = from.cache_until_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CMsgGCCheckAccountSubscriptionResponse::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CMsgGCCheckAccountSubscriptionResponse::CopyFrom(const CMsgGCCheckAccountSubscriptionResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.dota.CMsgGCCheckAccountSubscriptionResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CMsgGCCheckAccountSubscriptionResponse::IsInitialized() const {
+  return true;
+}
+
+void CMsgGCCheckAccountSubscriptionResponse::Swap(CMsgGCCheckAccountSubscriptionResponse* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CMsgGCCheckAccountSubscriptionResponse::InternalSwap(CMsgGCCheckAccountSubscriptionResponse* other) {
+  std::swap(state_, other->state_);
+  std::swap(cache_until_, other->cache_until_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CMsgGCCheckAccountSubscriptionResponse::GetMetadata() const {
+  protobuf_econ_5fgcmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_econ_5fgcmessages_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CMsgGCCheckAccountSubscriptionResponse
+
+// optional .proto.dota.CMsgGCCheckAccountSubscriptionResponse.ESubscriptionState state = 1 [default = STATE_UNKNOWN];
+bool CMsgGCCheckAccountSubscriptionResponse::has_state() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CMsgGCCheckAccountSubscriptionResponse::set_has_state() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CMsgGCCheckAccountSubscriptionResponse::clear_has_state() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CMsgGCCheckAccountSubscriptionResponse::clear_state() {
+  state_ = 0;
+  clear_has_state();
+}
+::proto::dota::CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState CMsgGCCheckAccountSubscriptionResponse::state() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCCheckAccountSubscriptionResponse.state)
+  return static_cast< ::proto::dota::CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState >(state_);
+}
+void CMsgGCCheckAccountSubscriptionResponse::set_state(::proto::dota::CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState value) {
+  assert(::proto::dota::CMsgGCCheckAccountSubscriptionResponse_ESubscriptionState_IsValid(value));
+  set_has_state();
+  state_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCCheckAccountSubscriptionResponse.state)
+}
+
+// optional uint32 cache_until = 2;
+bool CMsgGCCheckAccountSubscriptionResponse::has_cache_until() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CMsgGCCheckAccountSubscriptionResponse::set_has_cache_until() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CMsgGCCheckAccountSubscriptionResponse::clear_has_cache_until() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CMsgGCCheckAccountSubscriptionResponse::clear_cache_until() {
+  cache_until_ = 0u;
+  clear_has_cache_until();
+}
+::google::protobuf::uint32 CMsgGCCheckAccountSubscriptionResponse::cache_until() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCCheckAccountSubscriptionResponse.cache_until)
+  return cache_until_;
+}
+void CMsgGCCheckAccountSubscriptionResponse::set_cache_until(::google::protobuf::uint32 value) {
+  set_has_cache_until();
+  cache_until_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCCheckAccountSubscriptionResponse.cache_until)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

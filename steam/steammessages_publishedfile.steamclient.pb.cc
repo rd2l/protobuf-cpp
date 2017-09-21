@@ -95,6 +95,20 @@ class CPublishedFile_QueryFiles_RequestDefaultTypeInternal : public ::google::pr
 } _CPublishedFile_QueryFiles_Request_default_instance_;
 class CPublishedFile_QueryFiles_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPublishedFile_QueryFiles_Response> {
 } _CPublishedFile_QueryFiles_Response_default_instance_;
+class CPublishedFile_AddAppRelationship_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPublishedFile_AddAppRelationship_Request> {
+} _CPublishedFile_AddAppRelationship_Request_default_instance_;
+class CPublishedFile_AddAppRelationship_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPublishedFile_AddAppRelationship_Response> {
+} _CPublishedFile_AddAppRelationship_Response_default_instance_;
+class CPublishedFile_RemoveAppRelationship_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPublishedFile_RemoveAppRelationship_Request> {
+} _CPublishedFile_RemoveAppRelationship_Request_default_instance_;
+class CPublishedFile_RemoveAppRelationship_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPublishedFile_RemoveAppRelationship_Response> {
+} _CPublishedFile_RemoveAppRelationship_Response_default_instance_;
+class CPublishedFile_GetAppRelationships_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPublishedFile_GetAppRelationships_Request> {
+} _CPublishedFile_GetAppRelationships_Request_default_instance_;
+class CPublishedFile_GetAppRelationships_Response_AppRelationshipDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPublishedFile_GetAppRelationships_Response_AppRelationship> {
+} _CPublishedFile_GetAppRelationships_Response_AppRelationship_default_instance_;
+class CPublishedFile_GetAppRelationships_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPublishedFile_GetAppRelationships_Response> {
+} _CPublishedFile_GetAppRelationships_Response_default_instance_;
 class CPublishedFile_StartPlaytimeTracking_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPublishedFile_StartPlaytimeTracking_Request> {
 } _CPublishedFile_StartPlaytimeTracking_Request_default_instance_;
 class CPublishedFile_StartPlaytimeTracking_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPublishedFile_StartPlaytimeTracking_Response> {
@@ -127,7 +141,7 @@ namespace protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto {
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[51];
+::google::protobuf::Metadata file_level_metadata[58];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 const ::google::protobuf::ServiceDescriptor* file_level_service_descriptors[1];
 
@@ -144,6 +158,13 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
     TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
@@ -870,6 +891,61 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_QueryFiles_Response, publishedfiledetails_),
   0,
   ~0u,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_AddAppRelationship_Request, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_AddAppRelationship_Request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_AddAppRelationship_Request, publishedfileid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_AddAppRelationship_Request, appid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_AddAppRelationship_Request, relationship_),
+  0,
+  1,
+  2,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_AddAppRelationship_Response, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_AddAppRelationship_Response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_RemoveAppRelationship_Request, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_RemoveAppRelationship_Request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_RemoveAppRelationship_Request, publishedfileid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_RemoveAppRelationship_Request, appid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_RemoveAppRelationship_Request, relationship_),
+  0,
+  1,
+  2,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_RemoveAppRelationship_Response, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_RemoveAppRelationship_Response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_GetAppRelationships_Request, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_GetAppRelationships_Request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_GetAppRelationships_Request, publishedfileid_),
+  0,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_GetAppRelationships_Response_AppRelationship, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_GetAppRelationships_Response_AppRelationship, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_GetAppRelationships_Response_AppRelationship, appid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_GetAppRelationships_Response_AppRelationship, relationship_),
+  0,
+  1,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_GetAppRelationships_Response, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_GetAppRelationships_Response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_GetAppRelationships_Response, app_relationships_),
+  ~0u,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_StartPlaytimeTracking_Request, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPublishedFile_StartPlaytimeTracking_Request, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1002,19 +1078,26 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 591, 598, sizeof(CPublishedFile_QueryFiles_Request_KVTag)},
   { 600, 634, sizeof(CPublishedFile_QueryFiles_Request)},
   { 663, 670, sizeof(CPublishedFile_QueryFiles_Response)},
-  { 672, 679, sizeof(CPublishedFile_StartPlaytimeTracking_Request)},
-  { 681, 686, sizeof(CPublishedFile_StartPlaytimeTracking_Response)},
-  { 686, 693, sizeof(CPublishedFile_StopPlaytimeTracking_Request)},
-  { 695, 700, sizeof(CPublishedFile_StopPlaytimeTracking_Response)},
-  { 700, 706, sizeof(CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request)},
-  { 707, 712, sizeof(CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response)},
-  { 712, 719, sizeof(CPublishedFile_SetPlaytimeForControllerConfigs_Request_ControllerConfigUsage)},
-  { 721, 728, sizeof(CPublishedFile_SetPlaytimeForControllerConfigs_Request)},
-  { 730, 735, sizeof(CPublishedFile_SetPlaytimeForControllerConfigs_Response)},
-  { 735, 742, sizeof(CPublishedFile_AddChild_Request)},
-  { 744, 749, sizeof(CPublishedFile_AddChild_Response)},
-  { 749, 756, sizeof(CPublishedFile_RemoveChild_Request)},
-  { 758, 763, sizeof(CPublishedFile_RemoveChild_Response)},
+  { 672, 680, sizeof(CPublishedFile_AddAppRelationship_Request)},
+  { 683, 688, sizeof(CPublishedFile_AddAppRelationship_Response)},
+  { 688, 696, sizeof(CPublishedFile_RemoveAppRelationship_Request)},
+  { 699, 704, sizeof(CPublishedFile_RemoveAppRelationship_Response)},
+  { 704, 710, sizeof(CPublishedFile_GetAppRelationships_Request)},
+  { 711, 718, sizeof(CPublishedFile_GetAppRelationships_Response_AppRelationship)},
+  { 720, 726, sizeof(CPublishedFile_GetAppRelationships_Response)},
+  { 727, 734, sizeof(CPublishedFile_StartPlaytimeTracking_Request)},
+  { 736, 741, sizeof(CPublishedFile_StartPlaytimeTracking_Response)},
+  { 741, 748, sizeof(CPublishedFile_StopPlaytimeTracking_Request)},
+  { 750, 755, sizeof(CPublishedFile_StopPlaytimeTracking_Response)},
+  { 755, 761, sizeof(CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request)},
+  { 762, 767, sizeof(CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response)},
+  { 767, 774, sizeof(CPublishedFile_SetPlaytimeForControllerConfigs_Request_ControllerConfigUsage)},
+  { 776, 783, sizeof(CPublishedFile_SetPlaytimeForControllerConfigs_Request)},
+  { 785, 790, sizeof(CPublishedFile_SetPlaytimeForControllerConfigs_Response)},
+  { 790, 797, sizeof(CPublishedFile_AddChild_Request)},
+  { 799, 804, sizeof(CPublishedFile_AddChild_Response)},
+  { 804, 811, sizeof(CPublishedFile_RemoveChild_Request)},
+  { 813, 818, sizeof(CPublishedFile_RemoveChild_Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -1056,6 +1139,13 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_QueryFiles_Request_KVTag_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_QueryFiles_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_QueryFiles_Response_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_AddAppRelationship_Request_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_AddAppRelationship_Response_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_RemoveAppRelationship_Request_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_RemoveAppRelationship_Response_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_GetAppRelationships_Request_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_GetAppRelationships_Response_AppRelationship_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_GetAppRelationships_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_StartPlaytimeTracking_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_StartPlaytimeTracking_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPublishedFile_StopPlaytimeTracking_Request_default_instance_),
@@ -1089,7 +1179,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 51);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 58);
 }
 
 }  // namespace
@@ -1173,32 +1263,46 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[36].reflection;
   _CPublishedFile_QueryFiles_Response_default_instance_.Shutdown();
   delete file_level_metadata[37].reflection;
-  _CPublishedFile_StartPlaytimeTracking_Request_default_instance_.Shutdown();
+  _CPublishedFile_AddAppRelationship_Request_default_instance_.Shutdown();
   delete file_level_metadata[38].reflection;
-  _CPublishedFile_StartPlaytimeTracking_Response_default_instance_.Shutdown();
+  _CPublishedFile_AddAppRelationship_Response_default_instance_.Shutdown();
   delete file_level_metadata[39].reflection;
-  _CPublishedFile_StopPlaytimeTracking_Request_default_instance_.Shutdown();
+  _CPublishedFile_RemoveAppRelationship_Request_default_instance_.Shutdown();
   delete file_level_metadata[40].reflection;
-  _CPublishedFile_StopPlaytimeTracking_Response_default_instance_.Shutdown();
+  _CPublishedFile_RemoveAppRelationship_Response_default_instance_.Shutdown();
   delete file_level_metadata[41].reflection;
-  _CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request_default_instance_.Shutdown();
+  _CPublishedFile_GetAppRelationships_Request_default_instance_.Shutdown();
   delete file_level_metadata[42].reflection;
-  _CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response_default_instance_.Shutdown();
+  _CPublishedFile_GetAppRelationships_Response_AppRelationship_default_instance_.Shutdown();
   delete file_level_metadata[43].reflection;
-  _CPublishedFile_SetPlaytimeForControllerConfigs_Request_ControllerConfigUsage_default_instance_.Shutdown();
+  _CPublishedFile_GetAppRelationships_Response_default_instance_.Shutdown();
   delete file_level_metadata[44].reflection;
-  _CPublishedFile_SetPlaytimeForControllerConfigs_Request_default_instance_.Shutdown();
+  _CPublishedFile_StartPlaytimeTracking_Request_default_instance_.Shutdown();
   delete file_level_metadata[45].reflection;
-  _CPublishedFile_SetPlaytimeForControllerConfigs_Response_default_instance_.Shutdown();
+  _CPublishedFile_StartPlaytimeTracking_Response_default_instance_.Shutdown();
   delete file_level_metadata[46].reflection;
-  _CPublishedFile_AddChild_Request_default_instance_.Shutdown();
+  _CPublishedFile_StopPlaytimeTracking_Request_default_instance_.Shutdown();
   delete file_level_metadata[47].reflection;
-  _CPublishedFile_AddChild_Response_default_instance_.Shutdown();
+  _CPublishedFile_StopPlaytimeTracking_Response_default_instance_.Shutdown();
   delete file_level_metadata[48].reflection;
-  _CPublishedFile_RemoveChild_Request_default_instance_.Shutdown();
+  _CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request_default_instance_.Shutdown();
   delete file_level_metadata[49].reflection;
-  _CPublishedFile_RemoveChild_Response_default_instance_.Shutdown();
+  _CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response_default_instance_.Shutdown();
   delete file_level_metadata[50].reflection;
+  _CPublishedFile_SetPlaytimeForControllerConfigs_Request_ControllerConfigUsage_default_instance_.Shutdown();
+  delete file_level_metadata[51].reflection;
+  _CPublishedFile_SetPlaytimeForControllerConfigs_Request_default_instance_.Shutdown();
+  delete file_level_metadata[52].reflection;
+  _CPublishedFile_SetPlaytimeForControllerConfigs_Response_default_instance_.Shutdown();
+  delete file_level_metadata[53].reflection;
+  _CPublishedFile_AddChild_Request_default_instance_.Shutdown();
+  delete file_level_metadata[54].reflection;
+  _CPublishedFile_AddChild_Response_default_instance_.Shutdown();
+  delete file_level_metadata[55].reflection;
+  _CPublishedFile_RemoveChild_Request_default_instance_.Shutdown();
+  delete file_level_metadata[56].reflection;
+  _CPublishedFile_RemoveChild_Response_default_instance_.Shutdown();
+  delete file_level_metadata[57].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -1248,6 +1352,13 @@ void TableStruct::InitDefaultsImpl() {
   _CPublishedFile_QueryFiles_Request_KVTag_default_instance_.DefaultConstruct();
   _CPublishedFile_QueryFiles_Request_default_instance_.DefaultConstruct();
   _CPublishedFile_QueryFiles_Response_default_instance_.DefaultConstruct();
+  _CPublishedFile_AddAppRelationship_Request_default_instance_.DefaultConstruct();
+  _CPublishedFile_AddAppRelationship_Response_default_instance_.DefaultConstruct();
+  _CPublishedFile_RemoveAppRelationship_Request_default_instance_.DefaultConstruct();
+  _CPublishedFile_RemoveAppRelationship_Response_default_instance_.DefaultConstruct();
+  _CPublishedFile_GetAppRelationships_Request_default_instance_.DefaultConstruct();
+  _CPublishedFile_GetAppRelationships_Response_AppRelationship_default_instance_.DefaultConstruct();
+  _CPublishedFile_GetAppRelationships_Response_default_instance_.DefaultConstruct();
   _CPublishedFile_StartPlaytimeTracking_Request_default_instance_.DefaultConstruct();
   _CPublishedFile_StartPlaytimeTracking_Response_default_instance_.DefaultConstruct();
   _CPublishedFile_StopPlaytimeTracking_Request_default_instance_.DefaultConstruct();
@@ -1629,121 +1740,152 @@ void AddDescriptorsImpl() {
       "edetails\030\002 \003(\0132!.proto.steam.PublishedFi"
       "leDetailsBX\202\265\030TEach file details will be"
       " populated, depending on what return val"
-      "ues were requested.\"W\n,CPublishedFile_St"
-      "artPlaytimeTracking_Request\022\r\n\005appid\030\001 \001"
-      "(\r\022\030\n\020publishedfileids\030\002 \003(\004\"/\n-CPublish"
-      "edFile_StartPlaytimeTracking_Response\"V\n"
-      "+CPublishedFile_StopPlaytimeTracking_Req"
-      "uest\022\r\n\005appid\030\001 \001(\r\022\030\n\020publishedfileids\030"
-      "\002 \003(\004\".\n,CPublishedFile_StopPlaytimeTrac"
-      "king_Response\"J\n9CPublishedFile_StopPlay"
-      "timeTrackingForAllAppItems_Request\022\r\n\005ap"
-      "pid\030\001 \001(\r\"<\n:CPublishedFile_StopPlaytime"
-      "TrackingForAllAppItems_Response\"\215\002\n6CPub"
-      "lishedFile_SetPlaytimeForControllerConfi"
-      "gs_Request\022\r\n\005appid\030\001 \001(\r\022z\n\027controller_"
-      "config_usage\030\002 \003(\0132Y.proto.steam.CPublis"
-      "hedFile_SetPlaytimeForControllerConfigs_"
-      "Request.ControllerConfigUsage\032H\n\025Control"
-      "lerConfigUsage\022\027\n\017publishedfileid\030\001 \001(\004\022"
-      "\026\n\016seconds_active\030\002 \001(\002\"9\n7CPublishedFil"
-      "e_SetPlaytimeForControllerConfigs_Respon"
-      "se\"Y\n\037CPublishedFile_AddChild_Request\022\027\n"
-      "\017publishedfileid\030\001 \001(\004\022\035\n\025child_publishe"
-      "dfileid\030\002 \001(\004\"\"\n CPublishedFile_AddChild"
-      "_Response\"\\\n\"CPublishedFile_RemoveChild_"
-      "Request\022\027\n\017publishedfileid\030\001 \001(\004\022\035\n\025chil"
-      "d_publishedfileid\030\002 \001(\004\"%\n#CPublishedFil"
-      "e_RemoveChild_Response2\370\032\n\rPublishedFile"
-      "\022\231\001\n\tSubscribe\022-.proto.steam.CPublishedF"
-      "ile_Subscribe_Request\032..proto.steam.CPub"
-      "lishedFile_Subscribe_Response\"-\202\265\030)Subsc"
-      "ribes the user to the published file\022\243\001\n"
-      "\013Unsubscribe\022/.proto.steam.CPublishedFil"
-      "e_Unsubscribe_Request\0320.proto.steam.CPub"
-      "lishedFile_Unsubscribe_Response\"1\202\265\030-Uns"
-      "ubscribes the user from the published fi"
-      "le\022\256\001\n\014CanSubscribe\0220.proto.steam.CPubli"
-      "shedFile_CanSubscribe_Request\0321.proto.st"
-      "eam.CPublishedFile_CanSubscribe_Response"
-      "\"9\202\265\0305Check if the user can subscribe to"
-      " the published file\022\230\001\n\007Publish\022+.proto."
-      "steam.CPublishedFile_Publish_Request\032,.p"
-      "roto.steam.CPublishedFile_Publish_Respon"
-      "se\"2\202\265\030.Publishes a clouded user file to"
-      " the Workshop.\022\250\001\n\nGetDetails\022..proto.st"
-      "eam.CPublishedFile_GetDetails_Request\032/."
-      "proto.steam.CPublishedFile_GetDetails_Re"
-      "sponse\"9\202\265\0305Retrieves information about "
-      "a set of published files.\022\253\001\n\013GetItemInf"
-      "o\022/.proto.steam.CPublishedFile_GetItemIn"
-      "fo_Request\0320.proto.steam.CPublishedFile_"
-      "GetItemInfo_Response\"9\202\265\0305Retrieves info"
-      "rmation about a set of published files.\022"
-      "\235\001\n\014GetUserFiles\0220.proto.steam.CPublishe"
-      "dFile_GetUserFiles_Request\0321.proto.steam"
-      ".CPublishedFile_GetUserFiles_Response\"(\202"
-      "\265\030$Retrieves files published by a user.\022"
-      "\222\001\n\006Update\022*.proto.steam.CPublishedFile_"
-      "Update_Request\032+.proto.steam.CPublishedF"
-      "ile_Update_Response\"/\202\265\030+Updates informa"
-      "tion about a published file.\022\330\001\n\025GetChan"
-      "geHistoryEntry\0229.proto.steam.CPublishedF"
-      "ile_GetChangeHistoryEntry_Request\032:.prot"
-      "o.steam.CPublishedFile_GetChangeHistoryE"
-      "ntry_Response\"H\202\265\030DReturns data on a spe"
-      "cific change history entry for a publish"
-      "ed file\022\274\001\n\020GetChangeHistory\0224.proto.ste"
-      "am.CPublishedFile_GetChangeHistory_Reque"
-      "st\0325.proto.steam.CPublishedFile_GetChang"
-      "eHistory_Response\";\202\265\0307Returns data on t"
-      "he change history for a published file\022\260"
-      "\001\n\022RefreshVotingQueue\0226.proto.steam.CPub"
-      "lishedFile_RefreshVotingQueue_Request\0327."
-      "proto.steam.CPublishedFile_RefreshVoting"
-      "Queue_Response\")\202\265\030%Refresh the voting q"
-      "ueue for the user\022\236\001\n\nQueryFiles\022..proto"
-      ".steam.CPublishedFile_QueryFiles_Request"
-      "\032/.proto.steam.CPublishedFile_QueryFiles"
-      "_Response\"/\202\265\030+Performs a search query f"
-      "or published files\022\313\001\n\025StartPlaytimeTrac"
-      "king\0229.proto.steam.CPublishedFile_StartP"
-      "laytimeTracking_Request\032:.proto.steam.CP"
-      "ublishedFile_StartPlaytimeTracking_Respo"
-      "nse\";\202\265\0307Start usage tracking for a give"
-      "n set of published files\022\310\001\n\024StopPlaytim"
-      "eTracking\0228.proto.steam.CPublishedFile_S"
-      "topPlaytimeTracking_Request\0329.proto.stea"
-      "m.CPublishedFile_StopPlaytimeTracking_Re"
-      "sponse\";\202\265\0307Stops usage tracking for a g"
-      "iven set of published files\022\205\002\n\"StopPlay"
-      "timeTrackingForAllAppItems\022F.proto.steam"
-      ".CPublishedFile_StopPlaytimeTrackingForA"
-      "llAppItems_Request\032G.proto.steam.CPublis"
-      "hedFile_StopPlaytimeTrackingForAllAppIte"
-      "ms_Response\"N\202\265\030JStops usage tracking fo"
-      "r all items currently tracked for the sp"
-      "ecified app\022\260\002\n\037SetPlaytimeForController"
-      "Configs\022C.proto.steam.CPublishedFile_Set"
-      "PlaytimeForControllerConfigs_Request\032D.p"
-      "roto.steam.CPublishedFile_SetPlaytimeFor"
-      "ControllerConfigs_Response\"\201\001\202\265\030}Stops u"
-      "sage tracking all controller configs for"
-      " the given app and set the usage time fo"
-      "r the for the given controller configs\022\247"
-      "\001\n\010AddChild\022,.proto.steam.CPublishedFile"
-      "_AddChild_Request\032-.proto.steam.CPublish"
-      "edFile_AddChild_Response\">\202\265\030:Adds a par"
-      "ent->child relationship between the give"
-      "n items.\022\261\001\n\013RemoveChild\022/.proto.steam.C"
-      "PublishedFile_RemoveChild_Request\0320.prot"
-      "o.steam.CPublishedFile_RemoveChild_Respo"
-      "nse\"\?\202\265\030;Removes parent->child relations"
-      "hip between the given items.\032+\202\265\030\'A serv"
-      "ice to access published file dataB\003\200\001\001"
+      "ues were requested.\"i\n)CPublishedFile_Ad"
+      "dAppRelationship_Request\022\027\n\017publishedfil"
+      "eid\030\001 \001(\004\022\r\n\005appid\030\002 \001(\r\022\024\n\014relationship"
+      "\030\003 \001(\r\",\n*CPublishedFile_AddAppRelations"
+      "hip_Response\"l\n,CPublishedFile_RemoveApp"
+      "Relationship_Request\022\027\n\017publishedfileid\030"
+      "\001 \001(\004\022\r\n\005appid\030\002 \001(\r\022\024\n\014relationship\030\003 \001"
+      "(\r\"/\n-CPublishedFile_RemoveAppRelationsh"
+      "ip_Response\"E\n*CPublishedFile_GetAppRela"
+      "tionships_Request\022\027\n\017publishedfileid\030\001 \001"
+      "(\004\"\312\001\n+CPublishedFile_GetAppRelationship"
+      "s_Response\022c\n\021app_relationships\030\003 \003(\0132H."
+      "proto.steam.CPublishedFile_GetAppRelatio"
+      "nships_Response.AppRelationship\0326\n\017AppRe"
+      "lationship\022\r\n\005appid\030\001 \001(\r\022\024\n\014relationshi"
+      "p\030\002 \001(\r\"W\n,CPublishedFile_StartPlaytimeT"
+      "racking_Request\022\r\n\005appid\030\001 \001(\r\022\030\n\020publis"
+      "hedfileids\030\002 \003(\004\"/\n-CPublishedFile_Start"
+      "PlaytimeTracking_Response\"V\n+CPublishedF"
+      "ile_StopPlaytimeTracking_Request\022\r\n\005appi"
+      "d\030\001 \001(\r\022\030\n\020publishedfileids\030\002 \003(\004\".\n,CPu"
+      "blishedFile_StopPlaytimeTracking_Respons"
+      "e\"J\n9CPublishedFile_StopPlaytimeTracking"
+      "ForAllAppItems_Request\022\r\n\005appid\030\001 \001(\r\"<\n"
+      ":CPublishedFile_StopPlaytimeTrackingForA"
+      "llAppItems_Response\"\215\002\n6CPublishedFile_S"
+      "etPlaytimeForControllerConfigs_Request\022\r"
+      "\n\005appid\030\001 \001(\r\022z\n\027controller_config_usage"
+      "\030\002 \003(\0132Y.proto.steam.CPublishedFile_SetP"
+      "laytimeForControllerConfigs_Request.Cont"
+      "rollerConfigUsage\032H\n\025ControllerConfigUsa"
+      "ge\022\027\n\017publishedfileid\030\001 \001(\004\022\026\n\016seconds_a"
+      "ctive\030\002 \001(\002\"9\n7CPublishedFile_SetPlaytim"
+      "eForControllerConfigs_Response\"Y\n\037CPubli"
+      "shedFile_AddChild_Request\022\027\n\017publishedfi"
+      "leid\030\001 \001(\004\022\035\n\025child_publishedfileid\030\002 \001("
+      "\004\"\"\n CPublishedFile_AddChild_Response\"\\\n"
+      "\"CPublishedFile_RemoveChild_Request\022\027\n\017p"
+      "ublishedfileid\030\001 \001(\004\022\035\n\025child_publishedf"
+      "ileid\030\002 \001(\004\"%\n#CPublishedFile_RemoveChil"
+      "d_Response2\355\037\n\rPublishedFile\022\231\001\n\tSubscri"
+      "be\022-.proto.steam.CPublishedFile_Subscrib"
+      "e_Request\032..proto.steam.CPublishedFile_S"
+      "ubscribe_Response\"-\202\265\030)Subscribes the us"
+      "er to the published file\022\243\001\n\013Unsubscribe"
+      "\022/.proto.steam.CPublishedFile_Unsubscrib"
+      "e_Request\0320.proto.steam.CPublishedFile_U"
+      "nsubscribe_Response\"1\202\265\030-Unsubscribes th"
+      "e user from the published file\022\256\001\n\014CanSu"
+      "bscribe\0220.proto.steam.CPublishedFile_Can"
+      "Subscribe_Request\0321.proto.steam.CPublish"
+      "edFile_CanSubscribe_Response\"9\202\265\0305Check "
+      "if the user can subscribe to the publish"
+      "ed file\022\230\001\n\007Publish\022+.proto.steam.CPubli"
+      "shedFile_Publish_Request\032,.proto.steam.C"
+      "PublishedFile_Publish_Response\"2\202\265\030.Publ"
+      "ishes a clouded user file to the Worksho"
+      "p.\022\250\001\n\nGetDetails\022..proto.steam.CPublish"
+      "edFile_GetDetails_Request\032/.proto.steam."
+      "CPublishedFile_GetDetails_Response\"9\202\265\0305"
+      "Retrieves information about a set of pub"
+      "lished files.\022\253\001\n\013GetItemInfo\022/.proto.st"
+      "eam.CPublishedFile_GetItemInfo_Request\0320"
+      ".proto.steam.CPublishedFile_GetItemInfo_"
+      "Response\"9\202\265\0305Retrieves information abou"
+      "t a set of published files.\022\235\001\n\014GetUserF"
+      "iles\0220.proto.steam.CPublishedFile_GetUse"
+      "rFiles_Request\0321.proto.steam.CPublishedF"
+      "ile_GetUserFiles_Response\"(\202\265\030$Retrieves"
+      " files published by a user.\022\222\001\n\006Update\022*"
+      ".proto.steam.CPublishedFile_Update_Reque"
+      "st\032+.proto.steam.CPublishedFile_Update_R"
+      "esponse\"/\202\265\030+Updates information about a"
+      " published file.\022\330\001\n\025GetChangeHistoryEnt"
+      "ry\0229.proto.steam.CPublishedFile_GetChang"
+      "eHistoryEntry_Request\032:.proto.steam.CPub"
+      "lishedFile_GetChangeHistoryEntry_Respons"
+      "e\"H\202\265\030DReturns data on a specific change"
+      " history entry for a published file\022\274\001\n\020"
+      "GetChangeHistory\0224.proto.steam.CPublishe"
+      "dFile_GetChangeHistory_Request\0325.proto.s"
+      "team.CPublishedFile_GetChangeHistory_Res"
+      "ponse\";\202\265\0307Returns data on the change hi"
+      "story for a published file\022\260\001\n\022RefreshVo"
+      "tingQueue\0226.proto.steam.CPublishedFile_R"
+      "efreshVotingQueue_Request\0327.proto.steam."
+      "CPublishedFile_RefreshVotingQueue_Respon"
+      "se\")\202\265\030%Refresh the voting queue for the"
+      " user\022\236\001\n\nQueryFiles\022..proto.steam.CPubl"
+      "ishedFile_QueryFiles_Request\032/.proto.ste"
+      "am.CPublishedFile_QueryFiles_Response\"/\202"
+      "\265\030+Performs a search query for published"
+      " files\022\313\001\n\022AddAppRelationship\0226.proto.st"
+      "eam.CPublishedFile_AddAppRelationship_Re"
+      "quest\0327.proto.steam.CPublishedFile_AddAp"
+      "pRelationship_Response\"D\202\265\030@Adds a relat"
+      "ionship between the published file and t"
+      "he given app\022\326\001\n\025RemoveAppRelationship\0229"
+      ".proto.steam.CPublishedFile_RemoveAppRel"
+      "ationship_Request\032:.proto.steam.CPublish"
+      "edFile_RemoveAppRelationship_Response\"F\202"
+      "\265\030BRemove a relationship between the pub"
+      "lished file and the given app\022\313\001\n\023GetApp"
+      "Relationships\0227.proto.steam.CPublishedFi"
+      "le_GetAppRelationships_Request\0328.proto.s"
+      "team.CPublishedFile_GetAppRelationships_"
+      "Response\"A\202\265\030=Returns the list of app re"
+      "lationships for this published file\022\313\001\n\025"
+      "StartPlaytimeTracking\0229.proto.steam.CPub"
+      "lishedFile_StartPlaytimeTracking_Request"
+      "\032:.proto.steam.CPublishedFile_StartPlayt"
+      "imeTracking_Response\";\202\265\0307Start usage tr"
+      "acking for a given set of published file"
+      "s\022\310\001\n\024StopPlaytimeTracking\0228.proto.steam"
+      ".CPublishedFile_StopPlaytimeTracking_Req"
+      "uest\0329.proto.steam.CPublishedFile_StopPl"
+      "aytimeTracking_Response\";\202\265\0307Stops usage"
+      " tracking for a given set of published f"
+      "iles\022\205\002\n\"StopPlaytimeTrackingForAllAppIt"
+      "ems\022F.proto.steam.CPublishedFile_StopPla"
+      "ytimeTrackingForAllAppItems_Request\032G.pr"
+      "oto.steam.CPublishedFile_StopPlaytimeTra"
+      "ckingForAllAppItems_Response\"N\202\265\030JStops "
+      "usage tracking for all items currently t"
+      "racked for the specified app\022\260\002\n\037SetPlay"
+      "timeForControllerConfigs\022C.proto.steam.C"
+      "PublishedFile_SetPlaytimeForControllerCo"
+      "nfigs_Request\032D.proto.steam.CPublishedFi"
+      "le_SetPlaytimeForControllerConfigs_Respo"
+      "nse\"\201\001\202\265\030}Stops usage tracking all contr"
+      "oller configs for the given app and set "
+      "the usage time for the for the given con"
+      "troller configs\022\247\001\n\010AddChild\022,.proto.ste"
+      "am.CPublishedFile_AddChild_Request\032-.pro"
+      "to.steam.CPublishedFile_AddChild_Respons"
+      "e\">\202\265\030:Adds a parent->child relationship"
+      " between the given items.\022\261\001\n\013RemoveChil"
+      "d\022/.proto.steam.CPublishedFile_RemoveChi"
+      "ld_Request\0320.proto.steam.CPublishedFile_"
+      "RemoveChild_Response\"\?\202\265\030;Removes parent"
+      "->child relationship between the given i"
+      "tems.\032+\202\265\030\'A service to access published"
+      " file dataB\003\200\001\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 18598);
+      descriptor, 19815);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "steammessages_publishedfile.steamclient.proto", &protobuf_RegisterTypes);
   ::proto::steam::protobuf_steammessages_5funified_5fbase_2esteamclient_2eproto::AddDescriptors();
@@ -28153,6 +28295,2063 @@ CPublishedFile_QueryFiles_Response::publishedfiledetails() const {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPublishedFile_AddAppRelationship_Request::kPublishedfileidFieldNumber;
+const int CPublishedFile_AddAppRelationship_Request::kAppidFieldNumber;
+const int CPublishedFile_AddAppRelationship_Request::kRelationshipFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPublishedFile_AddAppRelationship_Request::CPublishedFile_AddAppRelationship_Request()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPublishedFile_AddAppRelationship_Request)
+}
+CPublishedFile_AddAppRelationship_Request::CPublishedFile_AddAppRelationship_Request(const CPublishedFile_AddAppRelationship_Request& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&publishedfileid_, &from.publishedfileid_,
+    reinterpret_cast<char*>(&relationship_) -
+    reinterpret_cast<char*>(&publishedfileid_) + sizeof(relationship_));
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPublishedFile_AddAppRelationship_Request)
+}
+
+void CPublishedFile_AddAppRelationship_Request::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&publishedfileid_, 0, reinterpret_cast<char*>(&relationship_) -
+    reinterpret_cast<char*>(&publishedfileid_) + sizeof(relationship_));
+}
+
+CPublishedFile_AddAppRelationship_Request::~CPublishedFile_AddAppRelationship_Request() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  SharedDtor();
+}
+
+void CPublishedFile_AddAppRelationship_Request::SharedDtor() {
+}
+
+void CPublishedFile_AddAppRelationship_Request::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPublishedFile_AddAppRelationship_Request::descriptor() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPublishedFile_AddAppRelationship_Request& CPublishedFile_AddAppRelationship_Request::default_instance() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPublishedFile_AddAppRelationship_Request* CPublishedFile_AddAppRelationship_Request::New(::google::protobuf::Arena* arena) const {
+  CPublishedFile_AddAppRelationship_Request* n = new CPublishedFile_AddAppRelationship_Request;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPublishedFile_AddAppRelationship_Request::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  if (_has_bits_[0 / 32] & 7u) {
+    ::memset(&publishedfileid_, 0, reinterpret_cast<char*>(&relationship_) -
+      reinterpret_cast<char*>(&publishedfileid_) + sizeof(relationship_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPublishedFile_AddAppRelationship_Request::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint64 publishedfileid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_publishedfileid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &publishedfileid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 appid = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
+          set_has_appid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &appid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 relationship = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
+          set_has_relationship();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &relationship_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  return false;
+#undef DO_
+}
+
+void CPublishedFile_AddAppRelationship_Request::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 publishedfileid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->publishedfileid(), output);
+  }
+
+  // optional uint32 appid = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->appid(), output);
+  }
+
+  // optional uint32 relationship = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->relationship(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPublishedFile_AddAppRelationship_Request)
+}
+
+::google::protobuf::uint8* CPublishedFile_AddAppRelationship_Request::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 publishedfileid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->publishedfileid(), target);
+  }
+
+  // optional uint32 appid = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->appid(), target);
+  }
+
+  // optional uint32 relationship = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->relationship(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  return target;
+}
+
+size_t CPublishedFile_AddAppRelationship_Request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 7u) {
+    // optional uint64 publishedfileid = 1;
+    if (has_publishedfileid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->publishedfileid());
+    }
+
+    // optional uint32 appid = 2;
+    if (has_appid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->appid());
+    }
+
+    // optional uint32 relationship = 3;
+    if (has_relationship()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->relationship());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPublishedFile_AddAppRelationship_Request::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPublishedFile_AddAppRelationship_Request* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPublishedFile_AddAppRelationship_Request>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPublishedFile_AddAppRelationship_Request)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPublishedFile_AddAppRelationship_Request)
+    MergeFrom(*source);
+  }
+}
+
+void CPublishedFile_AddAppRelationship_Request::MergeFrom(const CPublishedFile_AddAppRelationship_Request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 7u) {
+    if (cached_has_bits & 0x00000001u) {
+      publishedfileid_ = from.publishedfileid_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      appid_ = from.appid_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      relationship_ = from.relationship_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CPublishedFile_AddAppRelationship_Request::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPublishedFile_AddAppRelationship_Request::CopyFrom(const CPublishedFile_AddAppRelationship_Request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPublishedFile_AddAppRelationship_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPublishedFile_AddAppRelationship_Request::IsInitialized() const {
+  return true;
+}
+
+void CPublishedFile_AddAppRelationship_Request::Swap(CPublishedFile_AddAppRelationship_Request* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPublishedFile_AddAppRelationship_Request::InternalSwap(CPublishedFile_AddAppRelationship_Request* other) {
+  std::swap(publishedfileid_, other->publishedfileid_);
+  std::swap(appid_, other->appid_);
+  std::swap(relationship_, other->relationship_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPublishedFile_AddAppRelationship_Request::GetMetadata() const {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPublishedFile_AddAppRelationship_Request
+
+// optional uint64 publishedfileid = 1;
+bool CPublishedFile_AddAppRelationship_Request::has_publishedfileid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CPublishedFile_AddAppRelationship_Request::set_has_publishedfileid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CPublishedFile_AddAppRelationship_Request::clear_has_publishedfileid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CPublishedFile_AddAppRelationship_Request::clear_publishedfileid() {
+  publishedfileid_ = GOOGLE_ULONGLONG(0);
+  clear_has_publishedfileid();
+}
+::google::protobuf::uint64 CPublishedFile_AddAppRelationship_Request::publishedfileid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_AddAppRelationship_Request.publishedfileid)
+  return publishedfileid_;
+}
+void CPublishedFile_AddAppRelationship_Request::set_publishedfileid(::google::protobuf::uint64 value) {
+  set_has_publishedfileid();
+  publishedfileid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_AddAppRelationship_Request.publishedfileid)
+}
+
+// optional uint32 appid = 2;
+bool CPublishedFile_AddAppRelationship_Request::has_appid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CPublishedFile_AddAppRelationship_Request::set_has_appid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CPublishedFile_AddAppRelationship_Request::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CPublishedFile_AddAppRelationship_Request::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+::google::protobuf::uint32 CPublishedFile_AddAppRelationship_Request::appid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_AddAppRelationship_Request.appid)
+  return appid_;
+}
+void CPublishedFile_AddAppRelationship_Request::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_AddAppRelationship_Request.appid)
+}
+
+// optional uint32 relationship = 3;
+bool CPublishedFile_AddAppRelationship_Request::has_relationship() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CPublishedFile_AddAppRelationship_Request::set_has_relationship() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CPublishedFile_AddAppRelationship_Request::clear_has_relationship() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CPublishedFile_AddAppRelationship_Request::clear_relationship() {
+  relationship_ = 0u;
+  clear_has_relationship();
+}
+::google::protobuf::uint32 CPublishedFile_AddAppRelationship_Request::relationship() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_AddAppRelationship_Request.relationship)
+  return relationship_;
+}
+void CPublishedFile_AddAppRelationship_Request::set_relationship(::google::protobuf::uint32 value) {
+  set_has_relationship();
+  relationship_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_AddAppRelationship_Request.relationship)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPublishedFile_AddAppRelationship_Response::CPublishedFile_AddAppRelationship_Response()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPublishedFile_AddAppRelationship_Response)
+}
+CPublishedFile_AddAppRelationship_Response::CPublishedFile_AddAppRelationship_Response(const CPublishedFile_AddAppRelationship_Response& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPublishedFile_AddAppRelationship_Response)
+}
+
+void CPublishedFile_AddAppRelationship_Response::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+CPublishedFile_AddAppRelationship_Response::~CPublishedFile_AddAppRelationship_Response() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  SharedDtor();
+}
+
+void CPublishedFile_AddAppRelationship_Response::SharedDtor() {
+}
+
+void CPublishedFile_AddAppRelationship_Response::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPublishedFile_AddAppRelationship_Response::descriptor() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPublishedFile_AddAppRelationship_Response& CPublishedFile_AddAppRelationship_Response::default_instance() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPublishedFile_AddAppRelationship_Response* CPublishedFile_AddAppRelationship_Response::New(::google::protobuf::Arena* arena) const {
+  CPublishedFile_AddAppRelationship_Response* n = new CPublishedFile_AddAppRelationship_Response;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPublishedFile_AddAppRelationship_Response::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPublishedFile_AddAppRelationship_Response::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0 ||
+        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, mutable_unknown_fields()));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  return false;
+#undef DO_
+}
+
+void CPublishedFile_AddAppRelationship_Response::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPublishedFile_AddAppRelationship_Response)
+}
+
+::google::protobuf::uint8* CPublishedFile_AddAppRelationship_Response::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  return target;
+}
+
+size_t CPublishedFile_AddAppRelationship_Response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPublishedFile_AddAppRelationship_Response::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPublishedFile_AddAppRelationship_Response* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPublishedFile_AddAppRelationship_Response>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPublishedFile_AddAppRelationship_Response)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPublishedFile_AddAppRelationship_Response)
+    MergeFrom(*source);
+  }
+}
+
+void CPublishedFile_AddAppRelationship_Response::MergeFrom(const CPublishedFile_AddAppRelationship_Response& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void CPublishedFile_AddAppRelationship_Response::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPublishedFile_AddAppRelationship_Response::CopyFrom(const CPublishedFile_AddAppRelationship_Response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPublishedFile_AddAppRelationship_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPublishedFile_AddAppRelationship_Response::IsInitialized() const {
+  return true;
+}
+
+void CPublishedFile_AddAppRelationship_Response::Swap(CPublishedFile_AddAppRelationship_Response* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPublishedFile_AddAppRelationship_Response::InternalSwap(CPublishedFile_AddAppRelationship_Response* other) {
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPublishedFile_AddAppRelationship_Response::GetMetadata() const {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPublishedFile_AddAppRelationship_Response
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPublishedFile_RemoveAppRelationship_Request::kPublishedfileidFieldNumber;
+const int CPublishedFile_RemoveAppRelationship_Request::kAppidFieldNumber;
+const int CPublishedFile_RemoveAppRelationship_Request::kRelationshipFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPublishedFile_RemoveAppRelationship_Request::CPublishedFile_RemoveAppRelationship_Request()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+}
+CPublishedFile_RemoveAppRelationship_Request::CPublishedFile_RemoveAppRelationship_Request(const CPublishedFile_RemoveAppRelationship_Request& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&publishedfileid_, &from.publishedfileid_,
+    reinterpret_cast<char*>(&relationship_) -
+    reinterpret_cast<char*>(&publishedfileid_) + sizeof(relationship_));
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+}
+
+void CPublishedFile_RemoveAppRelationship_Request::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&publishedfileid_, 0, reinterpret_cast<char*>(&relationship_) -
+    reinterpret_cast<char*>(&publishedfileid_) + sizeof(relationship_));
+}
+
+CPublishedFile_RemoveAppRelationship_Request::~CPublishedFile_RemoveAppRelationship_Request() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  SharedDtor();
+}
+
+void CPublishedFile_RemoveAppRelationship_Request::SharedDtor() {
+}
+
+void CPublishedFile_RemoveAppRelationship_Request::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPublishedFile_RemoveAppRelationship_Request::descriptor() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPublishedFile_RemoveAppRelationship_Request& CPublishedFile_RemoveAppRelationship_Request::default_instance() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPublishedFile_RemoveAppRelationship_Request* CPublishedFile_RemoveAppRelationship_Request::New(::google::protobuf::Arena* arena) const {
+  CPublishedFile_RemoveAppRelationship_Request* n = new CPublishedFile_RemoveAppRelationship_Request;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPublishedFile_RemoveAppRelationship_Request::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  if (_has_bits_[0 / 32] & 7u) {
+    ::memset(&publishedfileid_, 0, reinterpret_cast<char*>(&relationship_) -
+      reinterpret_cast<char*>(&publishedfileid_) + sizeof(relationship_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPublishedFile_RemoveAppRelationship_Request::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint64 publishedfileid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_publishedfileid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &publishedfileid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 appid = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
+          set_has_appid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &appid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 relationship = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
+          set_has_relationship();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &relationship_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  return false;
+#undef DO_
+}
+
+void CPublishedFile_RemoveAppRelationship_Request::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 publishedfileid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->publishedfileid(), output);
+  }
+
+  // optional uint32 appid = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->appid(), output);
+  }
+
+  // optional uint32 relationship = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->relationship(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+}
+
+::google::protobuf::uint8* CPublishedFile_RemoveAppRelationship_Request::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 publishedfileid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->publishedfileid(), target);
+  }
+
+  // optional uint32 appid = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->appid(), target);
+  }
+
+  // optional uint32 relationship = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->relationship(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  return target;
+}
+
+size_t CPublishedFile_RemoveAppRelationship_Request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 7u) {
+    // optional uint64 publishedfileid = 1;
+    if (has_publishedfileid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->publishedfileid());
+    }
+
+    // optional uint32 appid = 2;
+    if (has_appid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->appid());
+    }
+
+    // optional uint32 relationship = 3;
+    if (has_relationship()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->relationship());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPublishedFile_RemoveAppRelationship_Request::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPublishedFile_RemoveAppRelationship_Request* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPublishedFile_RemoveAppRelationship_Request>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+    MergeFrom(*source);
+  }
+}
+
+void CPublishedFile_RemoveAppRelationship_Request::MergeFrom(const CPublishedFile_RemoveAppRelationship_Request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 7u) {
+    if (cached_has_bits & 0x00000001u) {
+      publishedfileid_ = from.publishedfileid_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      appid_ = from.appid_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      relationship_ = from.relationship_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CPublishedFile_RemoveAppRelationship_Request::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPublishedFile_RemoveAppRelationship_Request::CopyFrom(const CPublishedFile_RemoveAppRelationship_Request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPublishedFile_RemoveAppRelationship_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPublishedFile_RemoveAppRelationship_Request::IsInitialized() const {
+  return true;
+}
+
+void CPublishedFile_RemoveAppRelationship_Request::Swap(CPublishedFile_RemoveAppRelationship_Request* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPublishedFile_RemoveAppRelationship_Request::InternalSwap(CPublishedFile_RemoveAppRelationship_Request* other) {
+  std::swap(publishedfileid_, other->publishedfileid_);
+  std::swap(appid_, other->appid_);
+  std::swap(relationship_, other->relationship_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPublishedFile_RemoveAppRelationship_Request::GetMetadata() const {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPublishedFile_RemoveAppRelationship_Request
+
+// optional uint64 publishedfileid = 1;
+bool CPublishedFile_RemoveAppRelationship_Request::has_publishedfileid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CPublishedFile_RemoveAppRelationship_Request::set_has_publishedfileid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CPublishedFile_RemoveAppRelationship_Request::clear_has_publishedfileid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CPublishedFile_RemoveAppRelationship_Request::clear_publishedfileid() {
+  publishedfileid_ = GOOGLE_ULONGLONG(0);
+  clear_has_publishedfileid();
+}
+::google::protobuf::uint64 CPublishedFile_RemoveAppRelationship_Request::publishedfileid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_RemoveAppRelationship_Request.publishedfileid)
+  return publishedfileid_;
+}
+void CPublishedFile_RemoveAppRelationship_Request::set_publishedfileid(::google::protobuf::uint64 value) {
+  set_has_publishedfileid();
+  publishedfileid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_RemoveAppRelationship_Request.publishedfileid)
+}
+
+// optional uint32 appid = 2;
+bool CPublishedFile_RemoveAppRelationship_Request::has_appid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CPublishedFile_RemoveAppRelationship_Request::set_has_appid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CPublishedFile_RemoveAppRelationship_Request::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CPublishedFile_RemoveAppRelationship_Request::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+::google::protobuf::uint32 CPublishedFile_RemoveAppRelationship_Request::appid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_RemoveAppRelationship_Request.appid)
+  return appid_;
+}
+void CPublishedFile_RemoveAppRelationship_Request::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_RemoveAppRelationship_Request.appid)
+}
+
+// optional uint32 relationship = 3;
+bool CPublishedFile_RemoveAppRelationship_Request::has_relationship() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CPublishedFile_RemoveAppRelationship_Request::set_has_relationship() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CPublishedFile_RemoveAppRelationship_Request::clear_has_relationship() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CPublishedFile_RemoveAppRelationship_Request::clear_relationship() {
+  relationship_ = 0u;
+  clear_has_relationship();
+}
+::google::protobuf::uint32 CPublishedFile_RemoveAppRelationship_Request::relationship() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_RemoveAppRelationship_Request.relationship)
+  return relationship_;
+}
+void CPublishedFile_RemoveAppRelationship_Request::set_relationship(::google::protobuf::uint32 value) {
+  set_has_relationship();
+  relationship_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_RemoveAppRelationship_Request.relationship)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPublishedFile_RemoveAppRelationship_Response::CPublishedFile_RemoveAppRelationship_Response()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+}
+CPublishedFile_RemoveAppRelationship_Response::CPublishedFile_RemoveAppRelationship_Response(const CPublishedFile_RemoveAppRelationship_Response& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+}
+
+void CPublishedFile_RemoveAppRelationship_Response::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+CPublishedFile_RemoveAppRelationship_Response::~CPublishedFile_RemoveAppRelationship_Response() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  SharedDtor();
+}
+
+void CPublishedFile_RemoveAppRelationship_Response::SharedDtor() {
+}
+
+void CPublishedFile_RemoveAppRelationship_Response::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPublishedFile_RemoveAppRelationship_Response::descriptor() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPublishedFile_RemoveAppRelationship_Response& CPublishedFile_RemoveAppRelationship_Response::default_instance() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPublishedFile_RemoveAppRelationship_Response* CPublishedFile_RemoveAppRelationship_Response::New(::google::protobuf::Arena* arena) const {
+  CPublishedFile_RemoveAppRelationship_Response* n = new CPublishedFile_RemoveAppRelationship_Response;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPublishedFile_RemoveAppRelationship_Response::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPublishedFile_RemoveAppRelationship_Response::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0 ||
+        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, mutable_unknown_fields()));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  return false;
+#undef DO_
+}
+
+void CPublishedFile_RemoveAppRelationship_Response::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+}
+
+::google::protobuf::uint8* CPublishedFile_RemoveAppRelationship_Response::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  return target;
+}
+
+size_t CPublishedFile_RemoveAppRelationship_Response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPublishedFile_RemoveAppRelationship_Response::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPublishedFile_RemoveAppRelationship_Response* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPublishedFile_RemoveAppRelationship_Response>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+    MergeFrom(*source);
+  }
+}
+
+void CPublishedFile_RemoveAppRelationship_Response::MergeFrom(const CPublishedFile_RemoveAppRelationship_Response& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void CPublishedFile_RemoveAppRelationship_Response::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPublishedFile_RemoveAppRelationship_Response::CopyFrom(const CPublishedFile_RemoveAppRelationship_Response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPublishedFile_RemoveAppRelationship_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPublishedFile_RemoveAppRelationship_Response::IsInitialized() const {
+  return true;
+}
+
+void CPublishedFile_RemoveAppRelationship_Response::Swap(CPublishedFile_RemoveAppRelationship_Response* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPublishedFile_RemoveAppRelationship_Response::InternalSwap(CPublishedFile_RemoveAppRelationship_Response* other) {
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPublishedFile_RemoveAppRelationship_Response::GetMetadata() const {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPublishedFile_RemoveAppRelationship_Response
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPublishedFile_GetAppRelationships_Request::kPublishedfileidFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPublishedFile_GetAppRelationships_Request::CPublishedFile_GetAppRelationships_Request()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPublishedFile_GetAppRelationships_Request)
+}
+CPublishedFile_GetAppRelationships_Request::CPublishedFile_GetAppRelationships_Request(const CPublishedFile_GetAppRelationships_Request& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  publishedfileid_ = from.publishedfileid_;
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPublishedFile_GetAppRelationships_Request)
+}
+
+void CPublishedFile_GetAppRelationships_Request::SharedCtor() {
+  _cached_size_ = 0;
+  publishedfileid_ = GOOGLE_ULONGLONG(0);
+}
+
+CPublishedFile_GetAppRelationships_Request::~CPublishedFile_GetAppRelationships_Request() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  SharedDtor();
+}
+
+void CPublishedFile_GetAppRelationships_Request::SharedDtor() {
+}
+
+void CPublishedFile_GetAppRelationships_Request::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPublishedFile_GetAppRelationships_Request::descriptor() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPublishedFile_GetAppRelationships_Request& CPublishedFile_GetAppRelationships_Request::default_instance() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPublishedFile_GetAppRelationships_Request* CPublishedFile_GetAppRelationships_Request::New(::google::protobuf::Arena* arena) const {
+  CPublishedFile_GetAppRelationships_Request* n = new CPublishedFile_GetAppRelationships_Request;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPublishedFile_GetAppRelationships_Request::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  publishedfileid_ = GOOGLE_ULONGLONG(0);
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPublishedFile_GetAppRelationships_Request::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint64 publishedfileid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_publishedfileid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &publishedfileid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  return false;
+#undef DO_
+}
+
+void CPublishedFile_GetAppRelationships_Request::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 publishedfileid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->publishedfileid(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPublishedFile_GetAppRelationships_Request)
+}
+
+::google::protobuf::uint8* CPublishedFile_GetAppRelationships_Request::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 publishedfileid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->publishedfileid(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  return target;
+}
+
+size_t CPublishedFile_GetAppRelationships_Request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  // optional uint64 publishedfileid = 1;
+  if (has_publishedfileid()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->publishedfileid());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPublishedFile_GetAppRelationships_Request::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPublishedFile_GetAppRelationships_Request* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPublishedFile_GetAppRelationships_Request>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPublishedFile_GetAppRelationships_Request)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPublishedFile_GetAppRelationships_Request)
+    MergeFrom(*source);
+  }
+}
+
+void CPublishedFile_GetAppRelationships_Request::MergeFrom(const CPublishedFile_GetAppRelationships_Request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_publishedfileid()) {
+    set_publishedfileid(from.publishedfileid());
+  }
+}
+
+void CPublishedFile_GetAppRelationships_Request::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPublishedFile_GetAppRelationships_Request::CopyFrom(const CPublishedFile_GetAppRelationships_Request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPublishedFile_GetAppRelationships_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPublishedFile_GetAppRelationships_Request::IsInitialized() const {
+  return true;
+}
+
+void CPublishedFile_GetAppRelationships_Request::Swap(CPublishedFile_GetAppRelationships_Request* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPublishedFile_GetAppRelationships_Request::InternalSwap(CPublishedFile_GetAppRelationships_Request* other) {
+  std::swap(publishedfileid_, other->publishedfileid_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPublishedFile_GetAppRelationships_Request::GetMetadata() const {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPublishedFile_GetAppRelationships_Request
+
+// optional uint64 publishedfileid = 1;
+bool CPublishedFile_GetAppRelationships_Request::has_publishedfileid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CPublishedFile_GetAppRelationships_Request::set_has_publishedfileid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CPublishedFile_GetAppRelationships_Request::clear_has_publishedfileid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CPublishedFile_GetAppRelationships_Request::clear_publishedfileid() {
+  publishedfileid_ = GOOGLE_ULONGLONG(0);
+  clear_has_publishedfileid();
+}
+::google::protobuf::uint64 CPublishedFile_GetAppRelationships_Request::publishedfileid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_GetAppRelationships_Request.publishedfileid)
+  return publishedfileid_;
+}
+void CPublishedFile_GetAppRelationships_Request::set_publishedfileid(::google::protobuf::uint64 value) {
+  set_has_publishedfileid();
+  publishedfileid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_GetAppRelationships_Request.publishedfileid)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPublishedFile_GetAppRelationships_Response_AppRelationship::kAppidFieldNumber;
+const int CPublishedFile_GetAppRelationships_Response_AppRelationship::kRelationshipFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPublishedFile_GetAppRelationships_Response_AppRelationship::CPublishedFile_GetAppRelationships_Response_AppRelationship()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+}
+CPublishedFile_GetAppRelationships_Response_AppRelationship::CPublishedFile_GetAppRelationships_Response_AppRelationship(const CPublishedFile_GetAppRelationships_Response_AppRelationship& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&appid_, &from.appid_,
+    reinterpret_cast<char*>(&relationship_) -
+    reinterpret_cast<char*>(&appid_) + sizeof(relationship_));
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+}
+
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&appid_, 0, reinterpret_cast<char*>(&relationship_) -
+    reinterpret_cast<char*>(&appid_) + sizeof(relationship_));
+}
+
+CPublishedFile_GetAppRelationships_Response_AppRelationship::~CPublishedFile_GetAppRelationships_Response_AppRelationship() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  SharedDtor();
+}
+
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::SharedDtor() {
+}
+
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPublishedFile_GetAppRelationships_Response_AppRelationship::descriptor() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPublishedFile_GetAppRelationships_Response_AppRelationship& CPublishedFile_GetAppRelationships_Response_AppRelationship::default_instance() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPublishedFile_GetAppRelationships_Response_AppRelationship* CPublishedFile_GetAppRelationships_Response_AppRelationship::New(::google::protobuf::Arena* arena) const {
+  CPublishedFile_GetAppRelationships_Response_AppRelationship* n = new CPublishedFile_GetAppRelationships_Response_AppRelationship;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  if (_has_bits_[0 / 32] & 3u) {
+    ::memset(&appid_, 0, reinterpret_cast<char*>(&relationship_) -
+      reinterpret_cast<char*>(&appid_) + sizeof(relationship_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPublishedFile_GetAppRelationships_Response_AppRelationship::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 appid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_appid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &appid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 relationship = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
+          set_has_relationship();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &relationship_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  return false;
+#undef DO_
+}
+
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 appid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->appid(), output);
+  }
+
+  // optional uint32 relationship = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->relationship(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+}
+
+::google::protobuf::uint8* CPublishedFile_GetAppRelationships_Response_AppRelationship::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 appid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->appid(), target);
+  }
+
+  // optional uint32 relationship = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->relationship(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  return target;
+}
+
+size_t CPublishedFile_GetAppRelationships_Response_AppRelationship::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 3u) {
+    // optional uint32 appid = 1;
+    if (has_appid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->appid());
+    }
+
+    // optional uint32 relationship = 2;
+    if (has_relationship()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->relationship());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPublishedFile_GetAppRelationships_Response_AppRelationship* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPublishedFile_GetAppRelationships_Response_AppRelationship>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+    MergeFrom(*source);
+  }
+}
+
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::MergeFrom(const CPublishedFile_GetAppRelationships_Response_AppRelationship& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      appid_ = from.appid_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      relationship_ = from.relationship_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::CopyFrom(const CPublishedFile_GetAppRelationships_Response_AppRelationship& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPublishedFile_GetAppRelationships_Response_AppRelationship::IsInitialized() const {
+  return true;
+}
+
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::Swap(CPublishedFile_GetAppRelationships_Response_AppRelationship* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::InternalSwap(CPublishedFile_GetAppRelationships_Response_AppRelationship* other) {
+  std::swap(appid_, other->appid_);
+  std::swap(relationship_, other->relationship_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPublishedFile_GetAppRelationships_Response_AppRelationship::GetMetadata() const {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPublishedFile_GetAppRelationships_Response_AppRelationship
+
+// optional uint32 appid = 1;
+bool CPublishedFile_GetAppRelationships_Response_AppRelationship::has_appid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::set_has_appid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+::google::protobuf::uint32 CPublishedFile_GetAppRelationships_Response_AppRelationship::appid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship.appid)
+  return appid_;
+}
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship.appid)
+}
+
+// optional uint32 relationship = 2;
+bool CPublishedFile_GetAppRelationships_Response_AppRelationship::has_relationship() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::set_has_relationship() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::clear_has_relationship() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::clear_relationship() {
+  relationship_ = 0u;
+  clear_has_relationship();
+}
+::google::protobuf::uint32 CPublishedFile_GetAppRelationships_Response_AppRelationship::relationship() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship.relationship)
+  return relationship_;
+}
+void CPublishedFile_GetAppRelationships_Response_AppRelationship::set_relationship(::google::protobuf::uint32 value) {
+  set_has_relationship();
+  relationship_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship.relationship)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPublishedFile_GetAppRelationships_Response::kAppRelationshipsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPublishedFile_GetAppRelationships_Response::CPublishedFile_GetAppRelationships_Response()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPublishedFile_GetAppRelationships_Response)
+}
+CPublishedFile_GetAppRelationships_Response::CPublishedFile_GetAppRelationships_Response(const CPublishedFile_GetAppRelationships_Response& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0),
+      app_relationships_(from.app_relationships_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPublishedFile_GetAppRelationships_Response)
+}
+
+void CPublishedFile_GetAppRelationships_Response::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+CPublishedFile_GetAppRelationships_Response::~CPublishedFile_GetAppRelationships_Response() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  SharedDtor();
+}
+
+void CPublishedFile_GetAppRelationships_Response::SharedDtor() {
+}
+
+void CPublishedFile_GetAppRelationships_Response::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPublishedFile_GetAppRelationships_Response::descriptor() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPublishedFile_GetAppRelationships_Response& CPublishedFile_GetAppRelationships_Response::default_instance() {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPublishedFile_GetAppRelationships_Response* CPublishedFile_GetAppRelationships_Response::New(::google::protobuf::Arena* arena) const {
+  CPublishedFile_GetAppRelationships_Response* n = new CPublishedFile_GetAppRelationships_Response;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPublishedFile_GetAppRelationships_Response::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  app_relationships_.Clear();
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPublishedFile_GetAppRelationships_Response::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship app_relationships = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_app_relationships()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  return false;
+#undef DO_
+}
+
+void CPublishedFile_GetAppRelationships_Response::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship app_relationships = 3;
+  for (unsigned int i = 0, n = this->app_relationships_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->app_relationships(i), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPublishedFile_GetAppRelationships_Response)
+}
+
+::google::protobuf::uint8* CPublishedFile_GetAppRelationships_Response::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship app_relationships = 3;
+  for (unsigned int i = 0, n = this->app_relationships_size(); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        3, this->app_relationships(i), deterministic, target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  return target;
+}
+
+size_t CPublishedFile_GetAppRelationships_Response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  // repeated .proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship app_relationships = 3;
+  {
+    unsigned int count = this->app_relationships_size();
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->app_relationships(i));
+    }
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPublishedFile_GetAppRelationships_Response::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPublishedFile_GetAppRelationships_Response* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPublishedFile_GetAppRelationships_Response>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPublishedFile_GetAppRelationships_Response)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPublishedFile_GetAppRelationships_Response)
+    MergeFrom(*source);
+  }
+}
+
+void CPublishedFile_GetAppRelationships_Response::MergeFrom(const CPublishedFile_GetAppRelationships_Response& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  app_relationships_.MergeFrom(from.app_relationships_);
+}
+
+void CPublishedFile_GetAppRelationships_Response::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPublishedFile_GetAppRelationships_Response::CopyFrom(const CPublishedFile_GetAppRelationships_Response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPublishedFile_GetAppRelationships_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPublishedFile_GetAppRelationships_Response::IsInitialized() const {
+  return true;
+}
+
+void CPublishedFile_GetAppRelationships_Response::Swap(CPublishedFile_GetAppRelationships_Response* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPublishedFile_GetAppRelationships_Response::InternalSwap(CPublishedFile_GetAppRelationships_Response* other) {
+  app_relationships_.InternalSwap(&other->app_relationships_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPublishedFile_GetAppRelationships_Response::GetMetadata() const {
+  protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpublishedfile_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPublishedFile_GetAppRelationships_Response
+
+// repeated .proto.steam.CPublishedFile_GetAppRelationships_Response.AppRelationship app_relationships = 3;
+int CPublishedFile_GetAppRelationships_Response::app_relationships_size() const {
+  return app_relationships_.size();
+}
+void CPublishedFile_GetAppRelationships_Response::clear_app_relationships() {
+  app_relationships_.Clear();
+}
+const ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship& CPublishedFile_GetAppRelationships_Response::app_relationships(int index) const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPublishedFile_GetAppRelationships_Response.app_relationships)
+  return app_relationships_.Get(index);
+}
+::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship* CPublishedFile_GetAppRelationships_Response::mutable_app_relationships(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.steam.CPublishedFile_GetAppRelationships_Response.app_relationships)
+  return app_relationships_.Mutable(index);
+}
+::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship* CPublishedFile_GetAppRelationships_Response::add_app_relationships() {
+  // @@protoc_insertion_point(field_add:proto.steam.CPublishedFile_GetAppRelationships_Response.app_relationships)
+  return app_relationships_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship >*
+CPublishedFile_GetAppRelationships_Response::mutable_app_relationships() {
+  // @@protoc_insertion_point(field_mutable_list:proto.steam.CPublishedFile_GetAppRelationships_Response.app_relationships)
+  return &app_relationships_;
+}
+const ::google::protobuf::RepeatedPtrField< ::proto::steam::CPublishedFile_GetAppRelationships_Response_AppRelationship >&
+CPublishedFile_GetAppRelationships_Response::app_relationships() const {
+  // @@protoc_insertion_point(field_list:proto.steam.CPublishedFile_GetAppRelationships_Response.app_relationships)
+  return app_relationships_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CPublishedFile_StartPlaytimeTracking_Request::kAppidFieldNumber;
 const int CPublishedFile_StartPlaytimeTracking_Request::kPublishedfileidsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -31713,6 +33912,30 @@ void PublishedFile::QueryFiles(::google::protobuf::RpcController* controller,
   done->Run();
 }
 
+void PublishedFile::AddAppRelationship(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CPublishedFile_AddAppRelationship_Request*,
+                         ::proto::steam::CPublishedFile_AddAppRelationship_Response*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method AddAppRelationship() not implemented.");
+  done->Run();
+}
+
+void PublishedFile::RemoveAppRelationship(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CPublishedFile_RemoveAppRelationship_Request*,
+                         ::proto::steam::CPublishedFile_RemoveAppRelationship_Response*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method RemoveAppRelationship() not implemented.");
+  done->Run();
+}
+
+void PublishedFile::GetAppRelationships(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CPublishedFile_GetAppRelationships_Request*,
+                         ::proto::steam::CPublishedFile_GetAppRelationships_Response*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method GetAppRelationships() not implemented.");
+  done->Run();
+}
+
 void PublishedFile::StartPlaytimeTracking(::google::protobuf::RpcController* controller,
                          const ::proto::steam::CPublishedFile_StartPlaytimeTracking_Request*,
                          ::proto::steam::CPublishedFile_StartPlaytimeTracking_Response*,
@@ -31841,36 +34064,54 @@ void PublishedFile::CallMethod(const ::google::protobuf::MethodDescriptor* metho
              done);
       break;
     case 12:
+      AddAppRelationship(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CPublishedFile_AddAppRelationship_Request*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::CPublishedFile_AddAppRelationship_Response*>(response),
+             done);
+      break;
+    case 13:
+      RemoveAppRelationship(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CPublishedFile_RemoveAppRelationship_Request*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::CPublishedFile_RemoveAppRelationship_Response*>(response),
+             done);
+      break;
+    case 14:
+      GetAppRelationships(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CPublishedFile_GetAppRelationships_Request*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::CPublishedFile_GetAppRelationships_Response*>(response),
+             done);
+      break;
+    case 15:
       StartPlaytimeTracking(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPublishedFile_StartPlaytimeTracking_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPublishedFile_StartPlaytimeTracking_Response*>(response),
              done);
       break;
-    case 13:
+    case 16:
       StopPlaytimeTracking(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPublishedFile_StopPlaytimeTracking_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPublishedFile_StopPlaytimeTracking_Response*>(response),
              done);
       break;
-    case 14:
+    case 17:
       StopPlaytimeTrackingForAllAppItems(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response*>(response),
              done);
       break;
-    case 15:
+    case 18:
       SetPlaytimeForControllerConfigs(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPublishedFile_SetPlaytimeForControllerConfigs_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPublishedFile_SetPlaytimeForControllerConfigs_Response*>(response),
              done);
       break;
-    case 16:
+    case 19:
       AddChild(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPublishedFile_AddChild_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPublishedFile_AddChild_Response*>(response),
              done);
       break;
-    case 17:
+    case 20:
       RemoveChild(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPublishedFile_RemoveChild_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPublishedFile_RemoveChild_Response*>(response),
@@ -31911,16 +34152,22 @@ const ::google::protobuf::Message& PublishedFile::GetRequestPrototype(
     case 11:
       return ::proto::steam::CPublishedFile_QueryFiles_Request::default_instance();
     case 12:
-      return ::proto::steam::CPublishedFile_StartPlaytimeTracking_Request::default_instance();
+      return ::proto::steam::CPublishedFile_AddAppRelationship_Request::default_instance();
     case 13:
-      return ::proto::steam::CPublishedFile_StopPlaytimeTracking_Request::default_instance();
+      return ::proto::steam::CPublishedFile_RemoveAppRelationship_Request::default_instance();
     case 14:
-      return ::proto::steam::CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request::default_instance();
+      return ::proto::steam::CPublishedFile_GetAppRelationships_Request::default_instance();
     case 15:
-      return ::proto::steam::CPublishedFile_SetPlaytimeForControllerConfigs_Request::default_instance();
+      return ::proto::steam::CPublishedFile_StartPlaytimeTracking_Request::default_instance();
     case 16:
-      return ::proto::steam::CPublishedFile_AddChild_Request::default_instance();
+      return ::proto::steam::CPublishedFile_StopPlaytimeTracking_Request::default_instance();
     case 17:
+      return ::proto::steam::CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request::default_instance();
+    case 18:
+      return ::proto::steam::CPublishedFile_SetPlaytimeForControllerConfigs_Request::default_instance();
+    case 19:
+      return ::proto::steam::CPublishedFile_AddChild_Request::default_instance();
+    case 20:
       return ::proto::steam::CPublishedFile_RemoveChild_Request::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
@@ -31958,16 +34205,22 @@ const ::google::protobuf::Message& PublishedFile::GetResponsePrototype(
     case 11:
       return ::proto::steam::CPublishedFile_QueryFiles_Response::default_instance();
     case 12:
-      return ::proto::steam::CPublishedFile_StartPlaytimeTracking_Response::default_instance();
+      return ::proto::steam::CPublishedFile_AddAppRelationship_Response::default_instance();
     case 13:
-      return ::proto::steam::CPublishedFile_StopPlaytimeTracking_Response::default_instance();
+      return ::proto::steam::CPublishedFile_RemoveAppRelationship_Response::default_instance();
     case 14:
-      return ::proto::steam::CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response::default_instance();
+      return ::proto::steam::CPublishedFile_GetAppRelationships_Response::default_instance();
     case 15:
-      return ::proto::steam::CPublishedFile_SetPlaytimeForControllerConfigs_Response::default_instance();
+      return ::proto::steam::CPublishedFile_StartPlaytimeTracking_Response::default_instance();
     case 16:
-      return ::proto::steam::CPublishedFile_AddChild_Response::default_instance();
+      return ::proto::steam::CPublishedFile_StopPlaytimeTracking_Response::default_instance();
     case 17:
+      return ::proto::steam::CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response::default_instance();
+    case 18:
+      return ::proto::steam::CPublishedFile_SetPlaytimeForControllerConfigs_Response::default_instance();
+    case 19:
+      return ::proto::steam::CPublishedFile_AddChild_Response::default_instance();
+    case 20:
       return ::proto::steam::CPublishedFile_RemoveChild_Response::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
@@ -32071,46 +34324,67 @@ void PublishedFile_Stub::QueryFiles(::google::protobuf::RpcController* controlle
   channel_->CallMethod(descriptor()->method(11),
                        controller, request, response, done);
 }
+void PublishedFile_Stub::AddAppRelationship(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CPublishedFile_AddAppRelationship_Request* request,
+                              ::proto::steam::CPublishedFile_AddAppRelationship_Response* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(12),
+                       controller, request, response, done);
+}
+void PublishedFile_Stub::RemoveAppRelationship(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CPublishedFile_RemoveAppRelationship_Request* request,
+                              ::proto::steam::CPublishedFile_RemoveAppRelationship_Response* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(13),
+                       controller, request, response, done);
+}
+void PublishedFile_Stub::GetAppRelationships(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CPublishedFile_GetAppRelationships_Request* request,
+                              ::proto::steam::CPublishedFile_GetAppRelationships_Response* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(14),
+                       controller, request, response, done);
+}
 void PublishedFile_Stub::StartPlaytimeTracking(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPublishedFile_StartPlaytimeTracking_Request* request,
                               ::proto::steam::CPublishedFile_StartPlaytimeTracking_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(12),
+  channel_->CallMethod(descriptor()->method(15),
                        controller, request, response, done);
 }
 void PublishedFile_Stub::StopPlaytimeTracking(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPublishedFile_StopPlaytimeTracking_Request* request,
                               ::proto::steam::CPublishedFile_StopPlaytimeTracking_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(13),
+  channel_->CallMethod(descriptor()->method(16),
                        controller, request, response, done);
 }
 void PublishedFile_Stub::StopPlaytimeTrackingForAllAppItems(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request* request,
                               ::proto::steam::CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(14),
+  channel_->CallMethod(descriptor()->method(17),
                        controller, request, response, done);
 }
 void PublishedFile_Stub::SetPlaytimeForControllerConfigs(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPublishedFile_SetPlaytimeForControllerConfigs_Request* request,
                               ::proto::steam::CPublishedFile_SetPlaytimeForControllerConfigs_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(15),
+  channel_->CallMethod(descriptor()->method(18),
                        controller, request, response, done);
 }
 void PublishedFile_Stub::AddChild(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPublishedFile_AddChild_Request* request,
                               ::proto::steam::CPublishedFile_AddChild_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(16),
+  channel_->CallMethod(descriptor()->method(19),
                        controller, request, response, done);
 }
 void PublishedFile_Stub::RemoveChild(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPublishedFile_RemoveChild_Request* request,
                               ::proto::steam::CPublishedFile_RemoveChild_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(17),
+  channel_->CallMethod(descriptor()->method(20),
                        controller, request, response, done);
 }
 

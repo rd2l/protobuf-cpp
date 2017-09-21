@@ -617,8 +617,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientCMList, cm_addresses_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientCMList, cm_ports_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientCMList, cm_websocket_addresses_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientCMList, percent_default_to_websocket_),
   ~0u,
   ~0u,
+  ~0u,
+  0,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientP2PConnectionInfo, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientP2PConnectionInfo, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1798,11 +1802,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientGetClientAppList, games_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientGetClientAppList, only_installed_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientGetClientAppList, only_changing_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientGetClientAppList, comics_),
   0,
   1,
   2,
   3,
   4,
+  5,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientGetClientAppListResponse_App_DLC, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgClientGetClientAppListResponse_App_DLC, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2666,169 +2672,169 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 9, 24, sizeof(CMsgClientUDSP2PSessionEnded)},
   { 34, 42, sizeof(CMsgClientRegisterAuthTicketWithCM)},
   { 45, 58, sizeof(CMsgClientTicketAuthComplete)},
-  { 66, 73, sizeof(CMsgClientCMList)},
-  { 75, 84, sizeof(CMsgClientP2PConnectionInfo)},
-  { 88, 97, sizeof(CMsgClientP2PConnectionFailInfo)},
-  { 101, 107, sizeof(CMsgClientGetAppOwnershipTicket)},
-  { 108, 116, sizeof(CMsgClientGetAppOwnershipTicketResponse)},
-  { 119, 125, sizeof(CMsgClientSessionToken)},
-  { 126, 133, sizeof(CMsgClientGameConnectTokens)},
-  { 135, 147, sizeof(CMsgGSServerType)},
-  { 154, 160, sizeof(CMsgGSStatusReply)},
-  { 161, 169, sizeof(CMsgGSPlayerList_Player)},
-  { 172, 178, sizeof(CMsgGSPlayerList)},
-  { 179, 187, sizeof(CMsgGSUserPlaying)},
-  { 190, 196, sizeof(CMsgGSDisconnectNotice)},
-  { 197, 222, sizeof(CMsgClientGamesPlayed_GamePlayed)},
-  { 242, 249, sizeof(CMsgClientGamesPlayed)},
-  { 251, 258, sizeof(CMsgGSApprove)},
-  { 260, 268, sizeof(CMsgGSDeny)},
-  { 271, 278, sizeof(CMsgGSKick)},
-  { 280, 291, sizeof(CMsgClientAuthList)},
-  { 297, 305, sizeof(CMsgClientAuthListAck)},
-  { 308, 329, sizeof(CMsgClientLicenseList_License)},
-  { 345, 352, sizeof(CMsgClientLicenseList)},
-  { 354, 364, sizeof(CMsgClientLBSSetScore)},
-  { 369, 379, sizeof(CMsgClientLBSSetScoreResponse)},
-  { 384, 392, sizeof(CMsgClientLBSSetUGC)},
-  { 395, 401, sizeof(CMsgClientLBSSetUGCResponse)},
-  { 402, 412, sizeof(CMsgClientLBSFindOrCreateLB)},
-  { 417, 428, sizeof(CMsgClientLBSFindOrCreateLBResponse)},
-  { 434, 445, sizeof(CMsgClientLBSGetLBEntries)},
-  { 451, 461, sizeof(CMsgClientLBSGetLBEntriesResponse_Entry)},
-  { 466, 474, sizeof(CMsgClientLBSGetLBEntriesResponse)},
-  { 477, 485, sizeof(CMsgClientAppMinutesPlayedData_AppMinutesPlayedData)},
-  { 488, 494, sizeof(CMsgClientAppMinutesPlayedData)},
-  { 495, 504, sizeof(CMsgClientIsLimitedAccount)},
-  { 508, 516, sizeof(CMsgClientServerList_Server)},
-  { 519, 525, sizeof(CMsgClientServerList)},
-  { 526, 533, sizeof(CMsgClientRequestedClientStats_StatsToSend)},
-  { 535, 541, sizeof(CMsgClientRequestedClientStats)},
-  { 542, 553, sizeof(CMsgClientStat2_StatDetail)},
-  { 559, 565, sizeof(CMsgClientStat2)},
-  { 566, 579, sizeof(CMsgClientMMSCreateLobby)},
-  { 587, 595, sizeof(CMsgClientMMSCreateLobbyResponse)},
-  { 598, 606, sizeof(CMsgClientMMSJoinLobby)},
-  { 609, 617, sizeof(CMsgClientMMSJoinLobbyResponse_Member)},
-  { 620, 634, sizeof(CMsgClientMMSJoinLobbyResponse)},
-  { 643, 650, sizeof(CMsgClientMMSLeaveLobby)},
-  { 652, 660, sizeof(CMsgClientMMSLeaveLobbyResponse)},
-  { 663, 672, sizeof(CMsgClientMMSGetLobbyList_Filter)},
-  { 676, 686, sizeof(CMsgClientMMSGetLobbyList)},
-  { 691, 704, sizeof(CMsgClientMMSGetLobbyListResponse_Lobby)},
-  { 712, 720, sizeof(CMsgClientMMSGetLobbyListResponse)},
-  { 723, 735, sizeof(CMsgClientMMSSetLobbyData)},
-  { 742, 750, sizeof(CMsgClientMMSSetLobbyDataResponse)},
-  { 753, 760, sizeof(CMsgClientMMSGetLobbyData)},
-  { 762, 770, sizeof(CMsgClientMMSLobbyData_Member)},
-  { 773, 788, sizeof(CMsgClientMMSLobbyData)},
-  { 798, 807, sizeof(CMsgClientMMSSendLobbyChatMsg)},
-  { 811, 820, sizeof(CMsgClientMMSLobbyChatMsg)},
-  { 824, 832, sizeof(CMsgClientMMSSetLobbyOwner)},
-  { 835, 843, sizeof(CMsgClientMMSSetLobbyOwnerResponse)},
-  { 846, 854, sizeof(CMsgClientMMSSetLobbyLinked)},
-  { 857, 867, sizeof(CMsgClientMMSSetLobbyGameServer)},
-  { 872, 882, sizeof(CMsgClientMMSLobbyGameServerSet)},
-  { 887, 896, sizeof(CMsgClientMMSUserJoinedLobby)},
-  { 900, 909, sizeof(CMsgClientMMSUserLeftLobby)},
-  { 913, 921, sizeof(CMsgClientMMSInviteToLobby)},
-  { 924, 932, sizeof(CMsgClientUDSInviteToGame)},
-  { 935, 947, sizeof(CMsgClientChatInvite)},
-  { 954, 966, sizeof(CMsgClientConnectionStats_Stats_Logon)},
-  { 973, 983, sizeof(CMsgClientConnectionStats_Stats_UDP)},
-  { 988, 1013, sizeof(CMsgClientConnectionStats_Stats_VConn)},
-  { 1033, 1040, sizeof(CMsgClientConnectionStats)},
-  { 1042, 1049, sizeof(CMsgClientServersAvailable_Server_Types_Available)},
-  { 1051, 1058, sizeof(CMsgClientServersAvailable)},
-  { 1060, 1069, sizeof(CMsgClientGetUserStats)},
-  { 1073, 1080, sizeof(CMsgClientGetUserStatsResponse_Stats)},
-  { 1082, 1089, sizeof(CMsgClientGetUserStatsResponse_Achievement_Blocks)},
-  { 1091, 1102, sizeof(CMsgClientGetUserStatsResponse)},
-  { 1108, 1115, sizeof(CMsgClientStoreUserStatsResponse_Stats_Failed_Validation)},
-  { 1117, 1127, sizeof(CMsgClientStoreUserStatsResponse)},
-  { 1132, 1139, sizeof(CMsgClientStoreUserStats2_Stats)},
-  { 1141, 1152, sizeof(CMsgClientStoreUserStats2)},
-  { 1158, 1165, sizeof(CMsgClientStatsUpdated_Updated_Stats)},
-  { 1167, 1176, sizeof(CMsgClientStatsUpdated)},
-  { 1180, 1187, sizeof(CMsgClientStoreUserStats_Stats_To_Store)},
-  { 1189, 1197, sizeof(CMsgClientStoreUserStats)},
-  { 1200, 1205, sizeof(CMsgClientGetClientDetails)},
-  { 1205, 1211, sizeof(CMsgClientReportOverlayDetourFailure)},
-  { 1212, 1220, sizeof(CMsgClientGetClientDetailsResponse_Game)},
-  { 1223, 1236, sizeof(CMsgClientGetClientDetailsResponse)},
-  { 1244, 1254, sizeof(CMsgClientGetClientAppList)},
-  { 1259, 1266, sizeof(CMsgClientGetClientAppListResponse_App_DLC)},
-  { 1268, 1288, sizeof(CMsgClientGetClientAppListResponse_App)},
-  { 1303, 1310, sizeof(CMsgClientGetClientAppListResponse)},
-  { 1312, 1318, sizeof(CMsgClientInstallClientApp)},
-  { 1319, 1325, sizeof(CMsgClientInstallClientAppResponse)},
-  { 1326, 1332, sizeof(CMsgClientUninstallClientApp)},
-  { 1333, 1339, sizeof(CMsgClientUninstallClientAppResponse)},
-  { 1340, 1347, sizeof(CMsgClientSetClientAppUpdateState)},
-  { 1349, 1355, sizeof(CMsgClientSetClientAppUpdateStateResponse)},
-  { 1356, 1371, sizeof(CMsgClientUFSUploadFileRequest)},
-  { 1381, 1394, sizeof(CMsgClientUFSUploadFileResponse)},
-  { 1402, 1412, sizeof(CMsgClientUFSUploadCommit_File)},
-  { 1417, 1423, sizeof(CMsgClientUFSUploadCommit)},
-  { 1424, 1432, sizeof(CMsgClientUFSUploadCommitResponse_File)},
-  { 1435, 1441, sizeof(CMsgClientUFSUploadCommitResponse)},
-  { 1442, 1450, sizeof(CMsgClientUFSFileChunk)},
-  { 1453, 1458, sizeof(CMsgClientUFSTransferHeartbeat)},
-  { 1458, 1465, sizeof(CMsgClientUFSUploadFileFinished)},
-  { 1467, 1475, sizeof(CMsgClientUFSDeleteFileRequest)},
-  { 1478, 1485, sizeof(CMsgClientUFSDeleteFileResponse)},
-  { 1487, 1494, sizeof(CMsgClientUFSGetFileListForApp)},
-  { 1496, 1509, sizeof(CMsgClientUFSGetFileListForAppResponse_File)},
-  { 1517, 1524, sizeof(CMsgClientUFSGetFileListForAppResponse)},
-  { 1526, 1534, sizeof(CMsgClientUFSDownloadRequest)},
-  { 1537, 1555, sizeof(CMsgClientUFSDownloadResponse)},
-  { 1568, 1576, sizeof(CMsgClientUFSLoginRequest)},
-  { 1579, 1585, sizeof(CMsgClientUFSLoginResponse)},
-  { 1586, 1593, sizeof(CMsgClientRequestEncryptedAppTicket)},
-  { 1595, 1603, sizeof(CMsgClientRequestEncryptedAppTicketResponse)},
-  { 1606, 1617, sizeof(CMsgClientWalletInfoUpdate)},
-  { 1623, 1630, sizeof(CMsgClientAppInfoUpdate)},
-  { 1632, 1640, sizeof(CMsgClientAppInfoChanges)},
-  { 1643, 1651, sizeof(CMsgClientAppInfoRequest_App)},
-  { 1654, 1661, sizeof(CMsgClientAppInfoRequest)},
-  { 1663, 1670, sizeof(CMsgClientAppInfoResponse_App_Section)},
-  { 1672, 1680, sizeof(CMsgClientAppInfoResponse_App)},
-  { 1683, 1691, sizeof(CMsgClientAppInfoResponse)},
-  { 1694, 1701, sizeof(CMsgClientPackageInfoRequest)},
-  { 1703, 1712, sizeof(CMsgClientPackageInfoResponse_Package)},
-  { 1716, 1724, sizeof(CMsgClientPackageInfoResponse)},
-  { 1727, 1737, sizeof(CMsgClientPICSChangesSinceRequest)},
-  { 1742, 1750, sizeof(CMsgClientPICSChangesSinceResponse_PackageChange)},
-  { 1753, 1761, sizeof(CMsgClientPICSChangesSinceResponse_AppChange)},
-  { 1764, 1776, sizeof(CMsgClientPICSChangesSinceResponse)},
-  { 1783, 1791, sizeof(CMsgClientPICSProductInfoRequest_AppInfo)},
-  { 1794, 1801, sizeof(CMsgClientPICSProductInfoRequest_PackageInfo)},
-  { 1803, 1812, sizeof(CMsgClientPICSProductInfoRequest)},
-  { 1816, 1828, sizeof(CMsgClientPICSProductInfoResponse_AppInfo)},
-  { 1835, 1846, sizeof(CMsgClientPICSProductInfoResponse_PackageInfo)},
-  { 1852, 1865, sizeof(CMsgClientPICSProductInfoResponse)},
-  { 1873, 1880, sizeof(CMsgClientPICSAccessTokenRequest)},
-  { 1882, 1889, sizeof(CMsgClientPICSAccessTokenResponse_PackageToken)},
-  { 1891, 1898, sizeof(CMsgClientPICSAccessTokenResponse_AppToken)},
-  { 1900, 1909, sizeof(CMsgClientPICSAccessTokenResponse)},
-  { 1913, 1919, sizeof(CMsgClientUFSGetUGCDetails)},
-  { 1920, 1934, sizeof(CMsgClientUFSGetUGCDetailsResponse)},
-  { 1943, 1950, sizeof(CMsgClientUFSGetSingleFileInfo)},
-  { 1952, 1964, sizeof(CMsgClientUFSGetSingleFileInfoResponse)},
-  { 1971, 1978, sizeof(CMsgClientUFSShareFile)},
-  { 1980, 1987, sizeof(CMsgClientUFSShareFileResponse)},
-  { 1989, 1995, sizeof(CMsgClientAMGetClanOfficers)},
-  { 1996, 2004, sizeof(CMsgClientAMGetClanOfficersResponse)},
-  { 2007, 2013, sizeof(CMsgClientAMGetPersonaNameHistory_IdInstance)},
-  { 2014, 2021, sizeof(CMsgClientAMGetPersonaNameHistory)},
-  { 2023, 2030, sizeof(CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance)},
-  { 2032, 2040, sizeof(CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance)},
-  { 2043, 2049, sizeof(CMsgClientAMGetPersonaNameHistoryResponse)},
-  { 2050, 2057, sizeof(CMsgClientDeregisterWithServer)},
-  { 2059, 2066, sizeof(CMsgClientClanState_NameInfo)},
-  { 2068, 2077, sizeof(CMsgClientClanState_UserCounts)},
-  { 2081, 2091, sizeof(CMsgClientClanState_Event)},
-  { 2096, 2108, sizeof(CMsgClientClanState)},
+  { 66, 75, sizeof(CMsgClientCMList)},
+  { 79, 88, sizeof(CMsgClientP2PConnectionInfo)},
+  { 92, 101, sizeof(CMsgClientP2PConnectionFailInfo)},
+  { 105, 111, sizeof(CMsgClientGetAppOwnershipTicket)},
+  { 112, 120, sizeof(CMsgClientGetAppOwnershipTicketResponse)},
+  { 123, 129, sizeof(CMsgClientSessionToken)},
+  { 130, 137, sizeof(CMsgClientGameConnectTokens)},
+  { 139, 151, sizeof(CMsgGSServerType)},
+  { 158, 164, sizeof(CMsgGSStatusReply)},
+  { 165, 173, sizeof(CMsgGSPlayerList_Player)},
+  { 176, 182, sizeof(CMsgGSPlayerList)},
+  { 183, 191, sizeof(CMsgGSUserPlaying)},
+  { 194, 200, sizeof(CMsgGSDisconnectNotice)},
+  { 201, 226, sizeof(CMsgClientGamesPlayed_GamePlayed)},
+  { 246, 253, sizeof(CMsgClientGamesPlayed)},
+  { 255, 262, sizeof(CMsgGSApprove)},
+  { 264, 272, sizeof(CMsgGSDeny)},
+  { 275, 282, sizeof(CMsgGSKick)},
+  { 284, 295, sizeof(CMsgClientAuthList)},
+  { 301, 309, sizeof(CMsgClientAuthListAck)},
+  { 312, 333, sizeof(CMsgClientLicenseList_License)},
+  { 349, 356, sizeof(CMsgClientLicenseList)},
+  { 358, 368, sizeof(CMsgClientLBSSetScore)},
+  { 373, 383, sizeof(CMsgClientLBSSetScoreResponse)},
+  { 388, 396, sizeof(CMsgClientLBSSetUGC)},
+  { 399, 405, sizeof(CMsgClientLBSSetUGCResponse)},
+  { 406, 416, sizeof(CMsgClientLBSFindOrCreateLB)},
+  { 421, 432, sizeof(CMsgClientLBSFindOrCreateLBResponse)},
+  { 438, 449, sizeof(CMsgClientLBSGetLBEntries)},
+  { 455, 465, sizeof(CMsgClientLBSGetLBEntriesResponse_Entry)},
+  { 470, 478, sizeof(CMsgClientLBSGetLBEntriesResponse)},
+  { 481, 489, sizeof(CMsgClientAppMinutesPlayedData_AppMinutesPlayedData)},
+  { 492, 498, sizeof(CMsgClientAppMinutesPlayedData)},
+  { 499, 508, sizeof(CMsgClientIsLimitedAccount)},
+  { 512, 520, sizeof(CMsgClientServerList_Server)},
+  { 523, 529, sizeof(CMsgClientServerList)},
+  { 530, 537, sizeof(CMsgClientRequestedClientStats_StatsToSend)},
+  { 539, 545, sizeof(CMsgClientRequestedClientStats)},
+  { 546, 557, sizeof(CMsgClientStat2_StatDetail)},
+  { 563, 569, sizeof(CMsgClientStat2)},
+  { 570, 583, sizeof(CMsgClientMMSCreateLobby)},
+  { 591, 599, sizeof(CMsgClientMMSCreateLobbyResponse)},
+  { 602, 610, sizeof(CMsgClientMMSJoinLobby)},
+  { 613, 621, sizeof(CMsgClientMMSJoinLobbyResponse_Member)},
+  { 624, 638, sizeof(CMsgClientMMSJoinLobbyResponse)},
+  { 647, 654, sizeof(CMsgClientMMSLeaveLobby)},
+  { 656, 664, sizeof(CMsgClientMMSLeaveLobbyResponse)},
+  { 667, 676, sizeof(CMsgClientMMSGetLobbyList_Filter)},
+  { 680, 690, sizeof(CMsgClientMMSGetLobbyList)},
+  { 695, 708, sizeof(CMsgClientMMSGetLobbyListResponse_Lobby)},
+  { 716, 724, sizeof(CMsgClientMMSGetLobbyListResponse)},
+  { 727, 739, sizeof(CMsgClientMMSSetLobbyData)},
+  { 746, 754, sizeof(CMsgClientMMSSetLobbyDataResponse)},
+  { 757, 764, sizeof(CMsgClientMMSGetLobbyData)},
+  { 766, 774, sizeof(CMsgClientMMSLobbyData_Member)},
+  { 777, 792, sizeof(CMsgClientMMSLobbyData)},
+  { 802, 811, sizeof(CMsgClientMMSSendLobbyChatMsg)},
+  { 815, 824, sizeof(CMsgClientMMSLobbyChatMsg)},
+  { 828, 836, sizeof(CMsgClientMMSSetLobbyOwner)},
+  { 839, 847, sizeof(CMsgClientMMSSetLobbyOwnerResponse)},
+  { 850, 858, sizeof(CMsgClientMMSSetLobbyLinked)},
+  { 861, 871, sizeof(CMsgClientMMSSetLobbyGameServer)},
+  { 876, 886, sizeof(CMsgClientMMSLobbyGameServerSet)},
+  { 891, 900, sizeof(CMsgClientMMSUserJoinedLobby)},
+  { 904, 913, sizeof(CMsgClientMMSUserLeftLobby)},
+  { 917, 925, sizeof(CMsgClientMMSInviteToLobby)},
+  { 928, 936, sizeof(CMsgClientUDSInviteToGame)},
+  { 939, 951, sizeof(CMsgClientChatInvite)},
+  { 958, 970, sizeof(CMsgClientConnectionStats_Stats_Logon)},
+  { 977, 987, sizeof(CMsgClientConnectionStats_Stats_UDP)},
+  { 992, 1017, sizeof(CMsgClientConnectionStats_Stats_VConn)},
+  { 1037, 1044, sizeof(CMsgClientConnectionStats)},
+  { 1046, 1053, sizeof(CMsgClientServersAvailable_Server_Types_Available)},
+  { 1055, 1062, sizeof(CMsgClientServersAvailable)},
+  { 1064, 1073, sizeof(CMsgClientGetUserStats)},
+  { 1077, 1084, sizeof(CMsgClientGetUserStatsResponse_Stats)},
+  { 1086, 1093, sizeof(CMsgClientGetUserStatsResponse_Achievement_Blocks)},
+  { 1095, 1106, sizeof(CMsgClientGetUserStatsResponse)},
+  { 1112, 1119, sizeof(CMsgClientStoreUserStatsResponse_Stats_Failed_Validation)},
+  { 1121, 1131, sizeof(CMsgClientStoreUserStatsResponse)},
+  { 1136, 1143, sizeof(CMsgClientStoreUserStats2_Stats)},
+  { 1145, 1156, sizeof(CMsgClientStoreUserStats2)},
+  { 1162, 1169, sizeof(CMsgClientStatsUpdated_Updated_Stats)},
+  { 1171, 1180, sizeof(CMsgClientStatsUpdated)},
+  { 1184, 1191, sizeof(CMsgClientStoreUserStats_Stats_To_Store)},
+  { 1193, 1201, sizeof(CMsgClientStoreUserStats)},
+  { 1204, 1209, sizeof(CMsgClientGetClientDetails)},
+  { 1209, 1215, sizeof(CMsgClientReportOverlayDetourFailure)},
+  { 1216, 1224, sizeof(CMsgClientGetClientDetailsResponse_Game)},
+  { 1227, 1240, sizeof(CMsgClientGetClientDetailsResponse)},
+  { 1248, 1259, sizeof(CMsgClientGetClientAppList)},
+  { 1265, 1272, sizeof(CMsgClientGetClientAppListResponse_App_DLC)},
+  { 1274, 1294, sizeof(CMsgClientGetClientAppListResponse_App)},
+  { 1309, 1316, sizeof(CMsgClientGetClientAppListResponse)},
+  { 1318, 1324, sizeof(CMsgClientInstallClientApp)},
+  { 1325, 1331, sizeof(CMsgClientInstallClientAppResponse)},
+  { 1332, 1338, sizeof(CMsgClientUninstallClientApp)},
+  { 1339, 1345, sizeof(CMsgClientUninstallClientAppResponse)},
+  { 1346, 1353, sizeof(CMsgClientSetClientAppUpdateState)},
+  { 1355, 1361, sizeof(CMsgClientSetClientAppUpdateStateResponse)},
+  { 1362, 1377, sizeof(CMsgClientUFSUploadFileRequest)},
+  { 1387, 1400, sizeof(CMsgClientUFSUploadFileResponse)},
+  { 1408, 1418, sizeof(CMsgClientUFSUploadCommit_File)},
+  { 1423, 1429, sizeof(CMsgClientUFSUploadCommit)},
+  { 1430, 1438, sizeof(CMsgClientUFSUploadCommitResponse_File)},
+  { 1441, 1447, sizeof(CMsgClientUFSUploadCommitResponse)},
+  { 1448, 1456, sizeof(CMsgClientUFSFileChunk)},
+  { 1459, 1464, sizeof(CMsgClientUFSTransferHeartbeat)},
+  { 1464, 1471, sizeof(CMsgClientUFSUploadFileFinished)},
+  { 1473, 1481, sizeof(CMsgClientUFSDeleteFileRequest)},
+  { 1484, 1491, sizeof(CMsgClientUFSDeleteFileResponse)},
+  { 1493, 1500, sizeof(CMsgClientUFSGetFileListForApp)},
+  { 1502, 1515, sizeof(CMsgClientUFSGetFileListForAppResponse_File)},
+  { 1523, 1530, sizeof(CMsgClientUFSGetFileListForAppResponse)},
+  { 1532, 1540, sizeof(CMsgClientUFSDownloadRequest)},
+  { 1543, 1561, sizeof(CMsgClientUFSDownloadResponse)},
+  { 1574, 1582, sizeof(CMsgClientUFSLoginRequest)},
+  { 1585, 1591, sizeof(CMsgClientUFSLoginResponse)},
+  { 1592, 1599, sizeof(CMsgClientRequestEncryptedAppTicket)},
+  { 1601, 1609, sizeof(CMsgClientRequestEncryptedAppTicketResponse)},
+  { 1612, 1623, sizeof(CMsgClientWalletInfoUpdate)},
+  { 1629, 1636, sizeof(CMsgClientAppInfoUpdate)},
+  { 1638, 1646, sizeof(CMsgClientAppInfoChanges)},
+  { 1649, 1657, sizeof(CMsgClientAppInfoRequest_App)},
+  { 1660, 1667, sizeof(CMsgClientAppInfoRequest)},
+  { 1669, 1676, sizeof(CMsgClientAppInfoResponse_App_Section)},
+  { 1678, 1686, sizeof(CMsgClientAppInfoResponse_App)},
+  { 1689, 1697, sizeof(CMsgClientAppInfoResponse)},
+  { 1700, 1707, sizeof(CMsgClientPackageInfoRequest)},
+  { 1709, 1718, sizeof(CMsgClientPackageInfoResponse_Package)},
+  { 1722, 1730, sizeof(CMsgClientPackageInfoResponse)},
+  { 1733, 1743, sizeof(CMsgClientPICSChangesSinceRequest)},
+  { 1748, 1756, sizeof(CMsgClientPICSChangesSinceResponse_PackageChange)},
+  { 1759, 1767, sizeof(CMsgClientPICSChangesSinceResponse_AppChange)},
+  { 1770, 1782, sizeof(CMsgClientPICSChangesSinceResponse)},
+  { 1789, 1797, sizeof(CMsgClientPICSProductInfoRequest_AppInfo)},
+  { 1800, 1807, sizeof(CMsgClientPICSProductInfoRequest_PackageInfo)},
+  { 1809, 1818, sizeof(CMsgClientPICSProductInfoRequest)},
+  { 1822, 1834, sizeof(CMsgClientPICSProductInfoResponse_AppInfo)},
+  { 1841, 1852, sizeof(CMsgClientPICSProductInfoResponse_PackageInfo)},
+  { 1858, 1871, sizeof(CMsgClientPICSProductInfoResponse)},
+  { 1879, 1886, sizeof(CMsgClientPICSAccessTokenRequest)},
+  { 1888, 1895, sizeof(CMsgClientPICSAccessTokenResponse_PackageToken)},
+  { 1897, 1904, sizeof(CMsgClientPICSAccessTokenResponse_AppToken)},
+  { 1906, 1915, sizeof(CMsgClientPICSAccessTokenResponse)},
+  { 1919, 1925, sizeof(CMsgClientUFSGetUGCDetails)},
+  { 1926, 1940, sizeof(CMsgClientUFSGetUGCDetailsResponse)},
+  { 1949, 1956, sizeof(CMsgClientUFSGetSingleFileInfo)},
+  { 1958, 1970, sizeof(CMsgClientUFSGetSingleFileInfoResponse)},
+  { 1977, 1984, sizeof(CMsgClientUFSShareFile)},
+  { 1986, 1993, sizeof(CMsgClientUFSShareFileResponse)},
+  { 1995, 2001, sizeof(CMsgClientAMGetClanOfficers)},
+  { 2002, 2010, sizeof(CMsgClientAMGetClanOfficersResponse)},
+  { 2013, 2019, sizeof(CMsgClientAMGetPersonaNameHistory_IdInstance)},
+  { 2020, 2027, sizeof(CMsgClientAMGetPersonaNameHistory)},
+  { 2029, 2036, sizeof(CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance)},
+  { 2038, 2046, sizeof(CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance)},
+  { 2049, 2055, sizeof(CMsgClientAMGetPersonaNameHistoryResponse)},
+  { 2056, 2063, sizeof(CMsgClientDeregisterWithServer)},
+  { 2065, 2072, sizeof(CMsgClientClanState_NameInfo)},
+  { 2074, 2083, sizeof(CMsgClientClanState_UserCounts)},
+  { 2087, 2097, sizeof(CMsgClientClanState_Event)},
+  { 2102, 2114, sizeof(CMsgClientClanState)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -3573,516 +3579,519 @@ void AddDescriptorsImpl() {
       "e_id\030\002 \001(\006\022\016\n\006estate\030\003 \001(\r\022\036\n\026eauth_sess"
       "ion_response\030\004 \001(\r\022\031\n\021DEPRECATED_ticket\030"
       "\005 \001(\014\022\022\n\nticket_crc\030\006 \001(\r\022\027\n\017ticket_sequ"
-      "ence\030\007 \001(\r\022\026\n\016owner_steam_id\030\010 \001(\006\":\n\020CM"
-      "sgClientCMList\022\024\n\014cm_addresses\030\001 \003(\r\022\020\n\010"
-      "cm_ports\030\002 \003(\r\"m\n\033CMsgClientP2PConnectio"
-      "nInfo\022\025\n\rsteam_id_dest\030\001 \001(\006\022\024\n\014steam_id"
-      "_src\030\002 \001(\006\022\016\n\006app_id\030\003 \001(\r\022\021\n\tcandidate\030"
-      "\004 \001(\014\"z\n\037CMsgClientP2PConnectionFailInfo"
-      "\022\025\n\rsteam_id_dest\030\001 \001(\006\022\024\n\014steam_id_src\030"
-      "\002 \001(\006\022\016\n\006app_id\030\003 \001(\r\022\032\n\022ep2p_session_er"
-      "ror\030\004 \001(\r\"1\n\037CMsgClientGetAppOwnershipTi"
-      "cket\022\016\n\006app_id\030\001 \001(\r\"]\n\'CMsgClientGetApp"
-      "OwnershipTicketResponse\022\022\n\007eresult\030\001 \001(\r"
-      ":\0012\022\016\n\006app_id\030\002 \001(\r\022\016\n\006ticket\030\003 \001(\014\"\'\n\026C"
-      "MsgClientSessionToken\022\r\n\005token\030\001 \001(\004\"M\n\033"
-      "CMsgClientGameConnectTokens\022\036\n\022max_token"
-      "s_to_keep\030\001 \001(\r:\00210\022\016\n\006tokens\030\002 \003(\014\"\245\001\n\020"
-      "CMsgGSServerType\022\025\n\rapp_id_served\030\001 \001(\r\022"
-      "\r\n\005flags\030\002 \001(\r\022\027\n\017game_ip_address\030\003 \001(\r\022"
-      "\021\n\tgame_port\030\004 \001(\r\022\020\n\010game_dir\030\005 \001(\t\022\024\n\014"
-      "game_version\030\006 \001(\t\022\027\n\017game_query_port\030\007 "
-      "\001(\r\"&\n\021CMsgGSStatusReply\022\021\n\tis_secure\030\001 "
-      "\001(\010\"\207\001\n\020CMsgGSPlayerList\0225\n\007players\030\001 \003("
-      "\0132$.proto.steam.CMsgGSPlayerList.Player\032"
-      "<\n\006Player\022\020\n\010steam_id\030\001 \001(\004\022\021\n\tpublic_ip"
-      "\030\002 \001(\r\022\r\n\005token\030\003 \001(\014\"G\n\021CMsgGSUserPlayi"
-      "ng\022\020\n\010steam_id\030\001 \001(\006\022\021\n\tpublic_ip\030\002 \001(\r\022"
-      "\r\n\005token\030\003 \001(\014\"*\n\026CMsgGSDisconnectNotice"
-      "\022\020\n\010steam_id\030\001 \001(\006\"\231\005\n\025CMsgClientGamesPl"
-      "ayed\022C\n\014games_played\030\001 \003(\0132-.proto.steam"
-      ".CMsgClientGamesPlayed.GamePlayed\022\026\n\016cli"
-      "ent_os_type\030\002 \001(\r\032\242\004\n\nGamePlayed\022\023\n\013stea"
-      "m_id_gs\030\001 \001(\004\022\017\n\007game_id\030\002 \001(\006\022\027\n\017game_i"
-      "p_address\030\003 \001(\r\022\021\n\tgame_port\030\004 \001(\r\022\021\n\tis"
-      "_secure\030\005 \001(\010\022\r\n\005token\030\006 \001(\014\022\027\n\017game_ext"
-      "ra_info\030\007 \001(\t\022\026\n\016game_data_blob\030\010 \001(\014\022\022\n"
-      "\nprocess_id\030\t \001(\r\022\035\n\025streaming_provider_"
-      "id\030\n \001(\r\022\022\n\ngame_flags\030\013 \001(\r\022\020\n\010owner_id"
-      "\030\014 \001(\r\022\025\n\rvr_hmd_vendor\030\r \001(\t\022\024\n\014vr_hmd_"
-      "model\030\016 \001(\t\022\035\n\022launch_option_type\030\017 \001(\r:"
-      "\0010\022#\n\027primary_controller_type\030\020 \001(\005:\002-1\022"
-      "\'\n\037primary_steam_controller_serial\030\021 \001(\t"
-      "\022\'\n\034total_steam_controller_count\030\022 \001(\r:\001"
-      "0\022+\n total_non_steam_controller_count\030\023 "
-      "\001(\r:\0010\022&\n\033controller_workshop_file_id\030\024 "
-      "\001(\004:\0010\"9\n\rCMsgGSApprove\022\020\n\010steam_id\030\001 \001("
-      "\006\022\026\n\016owner_steam_id\030\002 \001(\006\"I\n\nCMsgGSDeny\022"
-      "\020\n\010steam_id\030\001 \001(\006\022\024\n\014edeny_reason\030\002 \001(\005\022"
-      "\023\n\013deny_string\030\003 \001(\t\"4\n\nCMsgGSKick\022\020\n\010st"
-      "eam_id\030\001 \001(\006\022\024\n\014edeny_reason\030\002 \001(\005\"\302\001\n\022C"
-      "MsgClientAuthList\022\023\n\013tokens_left\030\001 \001(\r\022\030"
-      "\n\020last_request_seq\030\002 \001(\r\022$\n\034last_request"
-      "_seq_from_server\030\003 \001(\r\022,\n\007tickets\030\004 \003(\0132"
-      "\033.proto.steam.CMsgAuthTicket\022\017\n\007app_ids\030"
-      "\005 \003(\r\022\030\n\020message_sequence\030\006 \001(\r\"V\n\025CMsgC"
-      "lientAuthListAck\022\022\n\nticket_crc\030\001 \003(\r\022\017\n\007"
-      "app_ids\030\002 \003(\r\022\030\n\020message_sequence\030\003 \001(\r\""
-      "\351\003\n\025CMsgClientLicenseList\022\022\n\007eresult\030\001 \001"
-      "(\005:\0012\022<\n\010licenses\030\002 \003(\0132*.proto.steam.CM"
-      "sgClientLicenseList.License\032\375\002\n\007License\022"
-      "\022\n\npackage_id\030\001 \001(\r\022\024\n\014time_created\030\002 \001("
-      "\007\022\031\n\021time_next_process\030\003 \001(\007\022\024\n\014minute_l"
-      "imit\030\004 \001(\005\022\024\n\014minutes_used\030\005 \001(\005\022\026\n\016paym"
-      "ent_method\030\006 \001(\r\022\r\n\005flags\030\007 \001(\r\022\035\n\025purch"
-      "ase_country_code\030\010 \001(\t\022\024\n\014license_type\030\t"
-      " \001(\r\022\026\n\016territory_code\030\n \001(\005\022\025\n\rchange_n"
-      "umber\030\013 \001(\005\022\020\n\010owner_id\030\014 \001(\r\022\026\n\016initial"
-      "_period\030\r \001(\r\022\031\n\021initial_time_unit\030\016 \001(\r"
-      "\022\026\n\016renewal_period\030\017 \001(\r\022\031\n\021renewal_time"
-      "_unit\030\020 \001(\r\"|\n\025CMsgClientLBSSetScore\022\016\n\006"
-      "app_id\030\001 \001(\r\022\026\n\016leaderboard_id\030\002 \001(\005\022\r\n\005"
-      "score\030\003 \001(\005\022\017\n\007details\030\004 \001(\014\022\033\n\023upload_s"
-      "core_method\030\005 \001(\005\"\242\001\n\035CMsgClientLBSSetSc"
-      "oreResponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\037\n\027leade"
-      "rboard_entry_count\030\002 \001(\005\022\025\n\rscore_change"
-      "d\030\003 \001(\010\022\034\n\024global_rank_previous\030\004 \001(\005\022\027\n"
-      "\017global_rank_new\030\005 \001(\005\"M\n\023CMsgClientLBSS"
-      "etUGC\022\016\n\006app_id\030\001 \001(\r\022\026\n\016leaderboard_id\030"
-      "\002 \001(\005\022\016\n\006ugc_id\030\003 \001(\006\"1\n\033CMsgClientLBSSe"
-      "tUGCResponse\022\022\n\007eresult\030\001 \001(\005:\0012\"\247\001\n\033CMs"
-      "gClientLBSFindOrCreateLB\022\016\n\006app_id\030\001 \001(\r"
-      "\022\037\n\027leaderboard_sort_method\030\002 \001(\005\022 \n\030lea"
-      "derboard_display_type\030\003 \001(\005\022\033\n\023create_if"
-      "_not_found\030\004 \001(\010\022\030\n\020leaderboard_name\030\005 \001"
-      "(\t\"\325\001\n#CMsgClientLBSFindOrCreateLBRespon"
-      "se\022\022\n\007eresult\030\001 \001(\005:\0012\022\026\n\016leaderboard_id"
-      "\030\002 \001(\005\022\037\n\027leaderboard_entry_count\030\003 \001(\005\022"
-      "\"\n\027leaderboard_sort_method\030\004 \001(\005:\0010\022#\n\030l"
-      "eaderboard_display_type\030\005 \001(\005:\0010\022\030\n\020lead"
-      "erboard_name\030\006 \001(\t\"\237\001\n\031CMsgClientLBSGetL"
-      "BEntries\022\016\n\006app_id\030\001 \001(\005\022\026\n\016leaderboard_"
-      "id\030\002 \001(\005\022\023\n\013range_start\030\003 \001(\005\022\021\n\trange_e"
-      "nd\030\004 \001(\005\022 \n\030leaderboard_data_request\030\005 \001"
-      "(\005\022\020\n\010steamids\030\006 \003(\006\"\204\002\n!CMsgClientLBSGe"
-      "tLBEntriesResponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\037"
-      "\n\027leaderboard_entry_count\030\002 \001(\005\022E\n\007entri"
-      "es\030\003 \003(\01324.proto.steam.CMsgClientLBSGetL"
-      "BEntriesResponse.Entry\032c\n\005Entry\022\025\n\rsteam"
-      "_id_user\030\001 \001(\006\022\023\n\013global_rank\030\002 \001(\005\022\r\n\005s"
-      "core\030\003 \001(\005\022\017\n\007details\030\004 \001(\014\022\016\n\006ugc_id\030\005 "
-      "\001(\006\"\313\001\n\036CMsgClientAppMinutesPlayedData\022X"
-      "\n\016minutes_played\030\001 \003(\0132@.proto.steam.CMs"
-      "gClientAppMinutesPlayedData.AppMinutesPl"
-      "ayedData\032O\n\024AppMinutesPlayedData\022\016\n\006app_"
-      "id\030\001 \001(\r\022\017\n\007forever\030\002 \001(\005\022\026\n\016last_two_we"
-      "eks\030\003 \001(\005\"\252\001\n\032CMsgClientIsLimitedAccount"
-      "\022\033\n\023bis_limited_account\030\001 \001(\010\022\034\n\024bis_com"
-      "munity_banned\030\002 \001(\010\022\032\n\022bis_locked_accoun"
-      "t\030\003 \001(\010\0225\n-bis_limited_account_allowed_t"
-      "o_invite_friends\030\004 \001(\010\"\230\001\n\024CMsgClientSer"
-      "verList\0229\n\007servers\030\001 \003(\0132(.proto.steam.C"
-      "MsgClientServerList.Server\032E\n\006Server\022\023\n\013"
-      "server_type\030\001 \001(\r\022\021\n\tserver_ip\030\002 \001(\r\022\023\n\013"
-      "server_port\030\003 \001(\r\"\263\001\n\036CMsgClientRequeste"
-      "dClientStats\022N\n\rstats_to_send\030\001 \003(\01327.pr"
-      "oto.steam.CMsgClientRequestedClientStats"
-      ".StatsToSend\032A\n\013StatsToSend\022\023\n\013client_st"
-      "at\030\001 \001(\r\022\035\n\025stat_aggregate_method\030\002 \001(\r\""
-      "\314\001\n\017CMsgClientStat2\022<\n\013stat_detail\030\001 \003(\013"
-      "2\'.proto.steam.CMsgClientStat2.StatDetai"
-      "l\032{\n\nStatDetail\022\023\n\013client_stat\030\001 \001(\r\022\020\n\010"
-      "ll_value\030\002 \001(\003\022\023\n\013time_of_day\030\003 \001(\r\022\017\n\007c"
-      "ell_id\030\004 \001(\r\022\020\n\010depot_id\030\005 \001(\r\022\016\n\006app_id"
-      "\030\006 \001(\r\"\272\001\n\030CMsgClientMMSCreateLobby\022\016\n\006a"
-      "pp_id\030\001 \001(\r\022\023\n\013max_members\030\002 \001(\005\022\022\n\nlobb"
-      "y_type\030\003 \001(\005\022\023\n\013lobby_flags\030\004 \001(\005\022\017\n\007cel"
-      "l_id\030\005 \001(\r\022\021\n\tpublic_ip\030\006 \001(\r\022\020\n\010metadat"
-      "a\030\007 \001(\014\022\032\n\022persona_name_owner\030\010 \001(\t\"^\n C"
-      "MsgClientMMSCreateLobbyResponse\022\016\n\006app_i"
-      "d\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\022\n\007eresu"
-      "lt\030\003 \001(\005:\0012\"V\n\026CMsgClientMMSJoinLobby\022\016\n"
-      "\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\024\n"
-      "\014persona_name\030\003 \001(\t\"\333\002\n\036CMsgClientMMSJoi"
-      "nLobbyResponse\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_"
-      "id_lobby\030\002 \001(\006\022 \n\030chat_room_enter_respon"
-      "se\030\003 \001(\005\022\023\n\013max_members\030\004 \001(\005\022\022\n\nlobby_t"
-      "ype\030\005 \001(\005\022\023\n\013lobby_flags\030\006 \001(\005\022\026\n\016steam_"
-      "id_owner\030\007 \001(\006\022\020\n\010metadata\030\010 \001(\014\022C\n\007memb"
-      "ers\030\t \003(\01322.proto.steam.CMsgClientMMSJoi"
-      "nLobbyResponse.Member\032B\n\006Member\022\020\n\010steam"
-      "_id\030\001 \001(\006\022\024\n\014persona_name\030\002 \001(\t\022\020\n\010metad"
-      "ata\030\003 \001(\014\"A\n\027CMsgClientMMSLeaveLobby\022\016\n\006"
-      "app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\"]\n\037"
-      "CMsgClientMMSLeaveLobbyResponse\022\016\n\006app_i"
-      "d\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\022\n\007eresu"
-      "lt\030\003 \001(\005:\0012\"\376\001\n\031CMsgClientMMSGetLobbyLis"
-      "t\022\016\n\006app_id\030\001 \001(\r\022\035\n\025num_lobbies_request"
-      "ed\030\003 \001(\005\022\017\n\007cell_id\030\004 \001(\r\022\021\n\tpublic_ip\030\005"
-      " \001(\r\022>\n\007filters\030\006 \003(\0132-.proto.steam.CMsg"
-      "ClientMMSGetLobbyList.Filter\032N\n\006Filter\022\013"
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022\023\n\013comparisio"
-      "n\030\003 \001(\005\022\023\n\013filter_type\030\004 \001(\005\"\261\002\n!CMsgCli"
-      "entMMSGetLobbyListResponse\022\016\n\006app_id\030\001 \001"
-      "(\r\022\022\n\007eresult\030\003 \001(\005:\0012\022E\n\007lobbies\030\004 \003(\0132"
-      "4.proto.steam.CMsgClientMMSGetLobbyListR"
-      "esponse.Lobby\032\240\001\n\005Lobby\022\020\n\010steam_id\030\001 \001("
-      "\006\022\023\n\013max_members\030\002 \001(\005\022\022\n\nlobby_type\030\003 \001"
-      "(\005\022\023\n\013lobby_flags\030\004 \001(\005\022\020\n\010metadata\030\005 \001("
-      "\014\022\023\n\013num_members\030\006 \001(\005\022\020\n\010distance\030\007 \001(\002"
-      "\022\016\n\006weight\030\010 \001(\003\"\254\001\n\031CMsgClientMMSSetLob"
-      "byData\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby"
-      "\030\002 \001(\006\022\027\n\017steam_id_member\030\003 \001(\006\022\023\n\013max_m"
-      "embers\030\004 \001(\005\022\022\n\nlobby_type\030\005 \001(\005\022\023\n\013lobb"
-      "y_flags\030\006 \001(\005\022\020\n\010metadata\030\007 \001(\014\"_\n!CMsgC"
-      "lientMMSSetLobbyDataResponse\022\016\n\006app_id\030\001"
-      " \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\022\n\007eresult\030"
-      "\003 \001(\005:\0012\"C\n\031CMsgClientMMSGetLobbyData\022\016\n"
-      "\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\"\324\002"
-      "\n\026CMsgClientMMSLobbyData\022\016\n\006app_id\030\001 \001(\r"
-      "\022\026\n\016steam_id_lobby\030\002 \001(\006\022\023\n\013num_members\030"
-      "\003 \001(\005\022\023\n\013max_members\030\004 \001(\005\022\022\n\nlobby_type"
-      "\030\005 \001(\005\022\023\n\013lobby_flags\030\006 \001(\005\022\026\n\016steam_id_"
-      "owner\030\007 \001(\006\022\020\n\010metadata\030\010 \001(\014\022;\n\007members"
-      "\030\t \003(\0132*.proto.steam.CMsgClientMMSLobbyD"
-      "ata.Member\022\024\n\014lobby_cellid\030\n \001(\r\032B\n\006Memb"
-      "er\022\020\n\010steam_id\030\001 \001(\006\022\024\n\014persona_name\030\002 \001"
-      "(\t\022\020\n\010metadata\030\003 \001(\014\"w\n\035CMsgClientMMSSen"
-      "dLobbyChatMsg\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_i"
-      "d_lobby\030\002 \001(\006\022\027\n\017steam_id_target\030\003 \001(\006\022\025"
-      "\n\rlobby_message\030\004 \001(\014\"s\n\031CMsgClientMMSLo"
-      "bbyChatMsg\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_l"
-      "obby\030\002 \001(\006\022\027\n\017steam_id_sender\030\003 \001(\006\022\025\n\rl"
-      "obby_message\030\004 \001(\014\"`\n\032CMsgClientMMSSetLo"
-      "bbyOwner\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lob"
-      "by\030\002 \001(\006\022\032\n\022steam_id_new_owner\030\003 \001(\006\"`\n\""
-      "CMsgClientMMSSetLobbyOwnerResponse\022\016\n\006ap"
-      "p_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\022\n\007er"
-      "esult\030\003 \001(\005:\0012\"^\n\033CMsgClientMMSSetLobbyL"
-      "inked\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030"
-      "\002 \001(\006\022\027\n\017steam_id_lobby2\030\003 \001(\006\"\231\001\n\037CMsgC"
-      "lientMMSSetLobbyGameServer\022\016\n\006app_id\030\001 \001"
-      "(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\026\n\016game_serve"
-      "r_ip\030\003 \001(\r\022\030\n\020game_server_port\030\004 \001(\r\022\034\n\024"
-      "game_server_steam_id\030\005 \001(\006\"\231\001\n\037CMsgClien"
-      "tMMSLobbyGameServerSet\022\016\n\006app_id\030\001 \001(\r\022\026"
-      "\n\016steam_id_lobby\030\002 \001(\006\022\026\n\016game_server_ip"
-      "\030\003 \001(\r\022\030\n\020game_server_port\030\004 \001(\r\022\034\n\024game"
-      "_server_steam_id\030\005 \001(\006\"s\n\034CMsgClientMMSU"
-      "serJoinedLobby\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_"
-      "id_lobby\030\002 \001(\006\022\025\n\rsteam_id_user\030\003 \001(\006\022\024\n"
-      "\014persona_name\030\004 \001(\t\"q\n\032CMsgClientMMSUser"
-      "LeftLobby\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lo"
-      "bby\030\002 \001(\006\022\025\n\rsteam_id_user\030\003 \001(\006\022\024\n\014pers"
-      "ona_name\030\004 \001(\t\"c\n\032CMsgClientMMSInviteToL"
-      "obby\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002"
-      " \001(\006\022\035\n\025steam_id_user_invited\030\003 \001(\006\"`\n\031C"
-      "MsgClientUDSInviteToGame\022\025\n\rsteam_id_des"
-      "t\030\001 \001(\006\022\024\n\014steam_id_src\030\002 \001(\006\022\026\n\016connect"
-      "_string\030\003 \001(\t\"\271\001\n\024CMsgClientChatInvite\022\030"
-      "\n\020steam_id_invited\030\001 \001(\006\022\025\n\rsteam_id_cha"
-      "t\030\002 \001(\006\022\027\n\017steam_id_patron\030\003 \001(\006\022\025\n\rchat"
-      "room_type\030\004 \001(\005\022\034\n\024steam_id_friend_chat\030"
-      "\005 \001(\006\022\021\n\tchat_name\030\006 \001(\t\022\017\n\007game_id\030\007 \001("
-      "\006\"\256\010\n\031CMsgClientConnectionStats\022G\n\013stats"
-      "_logon\030\001 \001(\01322.proto.steam.CMsgClientCon"
-      "nectionStats.Stats_Logon\022G\n\013stats_vconn\030"
-      "\002 \001(\01322.proto.steam.CMsgClientConnection"
-      "Stats.Stats_VConn\032\307\001\n\013Stats_Logon\022\030\n\020con"
-      "nect_attempts\030\001 \001(\005\022\031\n\021connect_successes"
-      "\030\002 \001(\005\022\030\n\020connect_failures\030\003 \001(\005\022\033\n\023conn"
-      "ections_dropped\030\004 \001(\005\022\027\n\017seconds_running"
-      "\030\005 \001(\r\022\034\n\024msec_tologonthistime\030\006 \001(\r\022\025\n\r"
-      "count_bad_cms\030\007 \001(\r\032q\n\tStats_UDP\022\021\n\tpkts"
-      "_sent\030\001 \001(\004\022\022\n\nbytes_sent\030\002 \001(\004\022\021\n\tpkts_"
-      "recv\030\003 \001(\004\022\026\n\016pkts_processed\030\004 \001(\004\022\022\n\nby"
-      "tes_recv\030\005 \001(\004\032\301\004\n\013Stats_VConn\022\027\n\017connec"
-      "tions_udp\030\001 \001(\r\022\027\n\017connections_tcp\030\002 \001(\r"
-      "\022C\n\tstats_udp\030\003 \001(\01320.proto.steam.CMsgCl"
-      "ientConnectionStats.Stats_UDP\022\026\n\016pkts_ab"
-      "andoned\030\004 \001(\004\022\031\n\021conn_req_received\030\005 \001(\004"
-      "\022\023\n\013pkts_resent\030\006 \001(\004\022\021\n\tmsgs_sent\030\007 \001(\004"
-      "\022\030\n\020msgs_sent_failed\030\010 \001(\004\022\021\n\tmsgs_recv\030"
-      "\t \001(\004\022\026\n\016datagrams_sent\030\n \001(\004\022\026\n\016datagra"
-      "ms_recv\030\013 \001(\004\022\025\n\rbad_pkts_recv\030\014 \001(\004\022\036\n\026"
-      "unknown_conn_pkts_recv\030\r \001(\004\022\030\n\020missed_p"
-      "kts_recv\030\016 \001(\004\022\025\n\rdup_pkts_recv\030\017 \001(\004\022!\n"
-      "\031failed_connect_challenges\030\020 \001(\004\022\035\n\025micr"
-      "o_sec_avg_latency\030\021 \001(\r\022\035\n\025micro_sec_min"
-      "_latency\030\022 \001(\r\022\035\n\025micro_sec_max_latency\030"
-      "\023 \001(\r\022\033\n\023mem_pool_msg_in_use\030\024 \001(\r\"\336\001\n\032C"
-      "MsgClientServersAvailable\022^\n\026server_type"
-      "s_available\030\001 \003(\0132>.proto.steam.CMsgClie"
-      "ntServersAvailable.Server_Types_Availabl"
-      "e\022%\n\035server_type_for_auth_services\030\002 \001(\r"
-      "\0329\n\026Server_Types_Available\022\016\n\006server\030\001 \001"
-      "(\r\022\017\n\007changed\030\002 \001(\010\"u\n\026CMsgClientGetUser"
-      "Stats\022\017\n\007game_id\030\001 \001(\006\022\021\n\tcrc_stats\030\002 \001("
-      "\r\022\034\n\024schema_local_version\030\003 \001(\005\022\031\n\021steam"
-      "_id_for_user\030\004 \001(\006\"\367\002\n\036CMsgClientGetUser"
-      "StatsResponse\022\017\n\007game_id\030\001 \001(\006\022\022\n\007eresul"
-      "t\030\002 \001(\005:\0012\022\021\n\tcrc_stats\030\003 \001(\r\022\016\n\006schema\030"
-      "\004 \001(\014\022@\n\005stats\030\005 \003(\01321.proto.steam.CMsgC"
-      "lientGetUserStatsResponse.Stats\022Z\n\022achie"
-      "vement_blocks\030\006 \003(\0132>.proto.steam.CMsgCl"
-      "ientGetUserStatsResponse.Achievement_Blo"
-      "cks\032,\n\005Stats\022\017\n\007stat_id\030\001 \001(\r\022\022\n\nstat_va"
-      "lue\030\002 \001(\r\032A\n\022Achievement_Blocks\022\026\n\016achie"
-      "vement_id\030\001 \001(\r\022\023\n\013unlock_time\030\002 \003(\007\"\246\002\n"
-      " CMsgClientStoreUserStatsResponse\022\017\n\007gam"
-      "e_id\030\001 \001(\006\022\022\n\007eresult\030\002 \001(\005:\0012\022\021\n\tcrc_st"
-      "ats\030\003 \001(\r\022f\n\027stats_failed_validation\030\004 \003"
-      "(\0132E.proto.steam.CMsgClientStoreUserStat"
-      "sResponse.Stats_Failed_Validation\022\031\n\021sta"
-      "ts_out_of_date\030\005 \001(\010\032G\n\027Stats_Failed_Val"
-      "idation\022\017\n\007stat_id\030\001 \001(\r\022\033\n\023reverted_sta"
-      "t_value\030\002 \001(\r\"\364\001\n\031CMsgClientStoreUserSta"
-      "ts2\022\017\n\007game_id\030\001 \001(\006\022\027\n\017settor_steam_id\030"
-      "\002 \001(\006\022\027\n\017settee_steam_id\030\003 \001(\006\022\021\n\tcrc_st"
-      "ats\030\004 \001(\r\022\026\n\016explicit_reset\030\005 \001(\010\022;\n\005sta"
-      "ts\030\006 \003(\0132,.proto.steam.CMsgClientStoreUs"
-      "erStats2.Stats\032,\n\005Stats\022\017\n\007stat_id\030\001 \001(\r"
-      "\022\022\n\nstat_value\030\002 \001(\r\"\316\001\n\026CMsgClientStats"
-      "Updated\022\020\n\010steam_id\030\001 \001(\006\022\017\n\007game_id\030\002 \001"
-      "(\006\022\021\n\tcrc_stats\030\003 \001(\r\022H\n\rupdated_stats\030\004"
-      " \003(\01321.proto.steam.CMsgClientStatsUpdate"
-      "d.Updated_Stats\0324\n\rUpdated_Stats\022\017\n\007stat"
-      "_id\030\001 \001(\r\022\022\n\nstat_value\030\002 \001(\r\"\310\001\n\030CMsgCl"
-      "ientStoreUserStats\022\017\n\007game_id\030\001 \001(\006\022\026\n\016e"
-      "xplicit_reset\030\002 \001(\010\022L\n\016stats_to_store\030\003 "
-      "\003(\01324.proto.steam.CMsgClientStoreUserSta"
-      "ts.Stats_To_Store\0325\n\016Stats_To_Store\022\017\n\007s"
-      "tat_id\030\001 \001(\r\022\022\n\nstat_value\030\002 \001(\r\"\034\n\032CMsg"
-      "ClientGetClientDetails\"\?\n$CMsgClientRepo"
-      "rtOverlayDetourFailure\022\027\n\017failure_string"
-      "s\030\001 \003(\t\"\313\002\n\"CMsgClientGetClientDetailsRe"
-      "sponse\022\027\n\017package_version\030\001 \001(\r\022\030\n\020proto"
-      "col_version\030\010 \001(\r\022\n\n\002os\030\002 \001(\t\022\024\n\014machine"
-      "_name\030\003 \001(\t\022\021\n\tip_public\030\004 \001(\t\022\022\n\nip_pri"
-      "vate\030\005 \001(\t\022\027\n\017bytes_available\030\007 \001(\004\022K\n\rg"
-      "ames_running\030\006 \003(\01324.proto.steam.CMsgCli"
-      "entGetClientDetailsResponse.Game\032C\n\004Game"
-      "\022\r\n\005appid\030\001 \001(\r\022\022\n\nextra_info\030\002 \001(\t\022\030\n\020t"
-      "ime_running_sec\030\003 \001(\r\"x\n\032CMsgClientGetCl"
-      "ientAppList\022\r\n\005media\030\001 \001(\010\022\r\n\005tools\030\002 \001("
-      "\010\022\r\n\005games\030\003 \001(\010\022\026\n\016only_installed\030\004 \001(\010"
-      "\022\025\n\ronly_changing\030\005 \001(\010\"\251\004\n\"CMsgClientGe"
-      "tClientAppListResponse\022A\n\004apps\030\001 \003(\01323.p"
-      "roto.steam.CMsgClientGetClientAppListRes"
-      "ponse.App\022\027\n\017bytes_available\030\002 \001(\004\032\246\003\n\003A"
-      "pp\022\r\n\005appid\030\001 \001(\r\022\020\n\010category\030\002 \001(\t\022\020\n\010a"
-      "pp_type\030\n \001(\t\022\020\n\010favorite\030\003 \001(\010\022\021\n\tinsta"
-      "lled\030\004 \001(\010\022\023\n\013auto_update\030\005 \001(\010\022\030\n\020bytes"
-      "_downloaded\030\006 \001(\004\022\024\n\014bytes_needed\030\007 \001(\004\022"
-      "\033\n\023bytes_download_rate\030\010 \001(\r\022\027\n\017download"
-      "_paused\030\013 \001(\010\022\027\n\017num_downloading\030\014 \001(\r\022\022"
-      "\n\nnum_paused\030\r \001(\r\022\020\n\010changing\030\016 \001(\010\022\035\n\025"
-      "available_on_platform\030\017 \001(\010\022E\n\004dlcs\030\t \003("
-      "\01327.proto.steam.CMsgClientGetClientAppLi"
-      "stResponse.App.DLC\032\'\n\003DLC\022\r\n\005appid\030\001 \001(\r"
-      "\022\021\n\tinstalled\030\002 \001(\010\"+\n\032CMsgClientInstall"
-      "ClientApp\022\r\n\005appid\030\001 \001(\r\"4\n\"CMsgClientIn"
-      "stallClientAppResponse\022\016\n\006result\030\001 \001(\r\"-"
-      "\n\034CMsgClientUninstallClientApp\022\r\n\005appid\030"
-      "\001 \001(\r\"6\n$CMsgClientUninstallClientAppRes"
-      "ponse\022\016\n\006result\030\001 \001(\r\"B\n!CMsgClientSetCl"
-      "ientAppUpdateState\022\r\n\005appid\030\001 \001(\r\022\016\n\006upd"
-      "ate\030\002 \001(\010\";\n)CMsgClientSetClientAppUpdat"
-      "eStateResponse\022\016\n\006result\030\001 \001(\r\"\206\002\n\036CMsgC"
-      "lientUFSUploadFileRequest\022\016\n\006app_id\030\001 \001("
-      "\r\022\021\n\tfile_size\030\002 \001(\r\022\025\n\rraw_file_size\030\003 "
-      "\001(\r\022\020\n\010sha_file\030\004 \001(\014\022\022\n\ntime_stamp\030\005 \001("
-      "\004\022\021\n\tfile_name\030\006 \001(\t\022$\n\034platforms_to_syn"
-      "c_deprecated\030\007 \001(\r\022%\n\021platforms_to_sync\030"
-      "\010 \001(\r:\n4294967295\022\017\n\007cell_id\030\t \001(\r\022\023\n\013ca"
-      "n_encrypt\030\n \001(\010\"\273\001\n\037CMsgClientUFSUploadF"
-      "ileResponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\020\n\010sha_f"
-      "ile\030\002 \001(\014\022\020\n\010use_http\030\003 \001(\010\022\021\n\thttp_host"
-      "\030\004 \001(\t\022\020\n\010http_url\030\005 \001(\t\022\022\n\nkv_headers\030\006"
-      " \001(\014\022\021\n\tuse_https\030\007 \001(\010\022\024\n\014encrypt_file\030"
-      "\010 \001(\010\"\272\001\n\031CMsgClientUFSUploadCommit\022:\n\005f"
-      "iles\030\001 \003(\0132+.proto.steam.CMsgClientUFSUp"
-      "loadCommit.File\032a\n\004File\022\022\n\007eresult\030\001 \001(\005"
-      ":\0012\022\016\n\006app_id\030\002 \001(\r\022\020\n\010sha_file\030\003 \001(\014\022\020\n"
-      "\010cub_file\030\004 \001(\r\022\021\n\tfile_name\030\005 \001(\t\"\245\001\n!C"
-      "MsgClientUFSUploadCommitResponse\022B\n\005file"
-      "s\030\001 \003(\01323.proto.steam.CMsgClientUFSUploa"
-      "dCommitResponse.File\032<\n\004File\022\022\n\007eresult\030"
-      "\001 \001(\005:\0012\022\016\n\006app_id\030\002 \001(\r\022\020\n\010sha_file\030\003 \001"
-      "(\014\"L\n\026CMsgClientUFSFileChunk\022\020\n\010sha_file"
-      "\030\001 \001(\014\022\022\n\nfile_start\030\002 \001(\r\022\014\n\004data\030\003 \001(\014"
-      "\" \n\036CMsgClientUFSTransferHeartbeat\"G\n\037CM"
-      "sgClientUFSUploadFileFinished\022\022\n\007eresult"
-      "\030\001 \001(\005:\0012\022\020\n\010sha_file\030\002 \001(\014\"_\n\036CMsgClien"
-      "tUFSDeleteFileRequest\022\016\n\006app_id\030\001 \001(\r\022\021\n"
-      "\tfile_name\030\002 \001(\t\022\032\n\022is_explicit_delete\030\003"
-      " \001(\010\"H\n\037CMsgClientUFSDeleteFileResponse\022"
-      "\022\n\007eresult\030\001 \001(\005:\0012\022\021\n\tfile_name\030\002 \001(\t\"S"
-      "\n\036CMsgClientUFSGetFileListForApp\022\025\n\rapps"
-      "_to_query\030\001 \003(\r\022\032\n\022send_path_prefixes\030\002 "
-      "\001(\010\"\315\002\n&CMsgClientUFSGetFileListForAppRe"
-      "sponse\022G\n\005files\030\001 \003(\01328.proto.steam.CMsg"
-      "ClientUFSGetFileListForAppResponse.File\022"
-      "\025\n\rpath_prefixes\030\002 \003(\t\032\270\001\n\004File\022\016\n\006app_i"
-      "d\030\001 \001(\r\022\021\n\tfile_name\030\002 \001(\t\022\020\n\010sha_file\030\003"
-      " \001(\014\022\022\n\ntime_stamp\030\004 \001(\004\022\025\n\rraw_file_siz"
-      "e\030\005 \001(\r\022\032\n\022is_explicit_delete\030\006 \001(\010\022\031\n\021p"
-      "latforms_to_sync\030\007 \001(\r\022\031\n\021path_prefix_in"
-      "dex\030\010 \001(\r:\010\200\265\030\010\210\265\030\020\"Z\n\034CMsgClientUFSDown"
-      "loadRequest\022\016\n\006app_id\030\001 \001(\r\022\021\n\tfile_name"
-      "\030\002 \001(\t\022\027\n\017can_handle_http\030\003 \001(\010\"\240\002\n\035CMsg"
-      "ClientUFSDownloadResponse\022\022\n\007eresult\030\001 \001"
-      "(\005:\0012\022\016\n\006app_id\030\002 \001(\r\022\021\n\tfile_size\030\003 \001(\r"
-      "\022\025\n\rraw_file_size\030\004 \001(\r\022\020\n\010sha_file\030\005 \001("
-      "\014\022\022\n\ntime_stamp\030\006 \001(\004\022\032\n\022is_explicit_del"
-      "ete\030\007 \001(\010\022\020\n\010use_http\030\010 \001(\010\022\021\n\thttp_host"
-      "\030\t \001(\t\022\020\n\010http_url\030\n \001(\t\022\022\n\nkv_headers\030\013"
-      " \001(\014\022\021\n\tuse_https\030\014 \001(\010\022\021\n\tencrypted\030\r \001"
-      "(\010\"]\n\031CMsgClientUFSLoginRequest\022\030\n\020proto"
-      "col_version\030\001 \001(\r\022\030\n\020am_session_token\030\002 "
-      "\001(\004\022\014\n\004apps\030\003 \003(\r\"0\n\032CMsgClientUFSLoginR"
-      "esponse\022\022\n\007eresult\030\001 \001(\005:\0012\"G\n#CMsgClien"
-      "tRequestEncryptedAppTicket\022\016\n\006app_id\030\001 \001"
-      "(\r\022\020\n\010userdata\030\002 \001(\014\"\220\001\n+CMsgClientReque"
-      "stEncryptedAppTicketResponse\022\016\n\006app_id\030\001"
-      " \001(\r\022\022\n\007eresult\030\002 \001(\005:\0012\022=\n\024encrypted_ap"
-      "p_ticket\030\003 \001(\0132\037.proto.steam.EncryptedAp"
-      "pTicket\"\246\001\n\032CMsgClientWalletInfoUpdate\022\022"
-      "\n\nhas_wallet\030\001 \001(\010\022\017\n\007balance\030\002 \001(\005\022\020\n\010c"
-      "urrency\030\003 \001(\005\022\027\n\017balance_delayed\030\004 \001(\005\022\027"
-      "\n\tbalance64\030\005 \001(\003B\004\240\266\030\001\022\037\n\021balance64_del"
-      "ayed\030\006 \001(\003B\004\240\266\030\001\"M\n\027CMsgClientAppInfoUpd"
-      "ate\022\031\n\021last_changenumber\030\001 \001(\r\022\027\n\017send_c"
-      "hangelist\030\002 \001(\010\"d\n\030CMsgClientAppInfoChan"
-      "ges\022\035\n\025current_change_number\030\001 \001(\r\022\031\n\021fo"
-      "rce_full_update\030\002 \001(\010\022\016\n\006appIDs\030\003 \003(\r\"\267\001"
-      "\n\030CMsgClientAppInfoRequest\0227\n\004apps\030\001 \003(\013"
-      "2).proto.steam.CMsgClientAppInfoRequest."
-      "App\022\037\n\020supports_batches\030\002 \001(\010:\005false\032A\n\003"
-      "App\022\016\n\006app_id\030\001 \001(\r\022\025\n\rsection_flags\030\002 \001"
-      "(\r\022\023\n\013section_CRC\030\003 \003(\r\"\263\002\n\031CMsgClientAp"
-      "pInfoResponse\0228\n\004apps\030\001 \003(\0132*.proto.stea"
-      "m.CMsgClientAppInfoResponse.App\022\024\n\014apps_"
-      "unknown\030\002 \003(\r\022\024\n\014apps_pending\030\003 \001(\r\032\245\001\n\003"
-      "App\022\016\n\006app_id\030\001 \001(\r\022\025\n\rchange_number\030\002 \001"
-      "(\r\022D\n\010sections\030\003 \003(\01322.proto.steam.CMsgC"
-      "lientAppInfoResponse.App.Section\0321\n\007Sect"
-      "ion\022\022\n\nsection_id\030\001 \001(\r\022\022\n\nsection_kv\030\002 "
-      "\001(\014:\010\200\265\030\000\210\265\030\000\"K\n\034CMsgClientPackageInfoRe"
-      "quest\022\023\n\013package_ids\030\001 \003(\r\022\026\n\016meta_data_"
-      "only\030\002 \001(\010\"\354\001\n\035CMsgClientPackageInfoResp"
-      "onse\022D\n\010packages\030\001 \003(\01322.proto.steam.CMs"
-      "gClientPackageInfoResponse.Package\022\030\n\020pa"
-      "ckages_unknown\030\002 \003(\r\022\030\n\020packages_pending"
-      "\030\003 \001(\r\032Q\n\007Package\022\022\n\npackage_id\030\001 \001(\r\022\025\n"
-      "\rchange_number\030\002 \001(\r\022\013\n\003sha\030\003 \001(\014\022\016\n\006buf"
-      "fer\030\004 \001(\014\"\300\001\n!CMsgClientPICSChangesSince"
-      "Request\022\033\n\023since_change_number\030\001 \001(\r\022\035\n\025"
-      "send_app_info_changes\030\002 \001(\010\022!\n\031send_pack"
-      "age_info_changes\030\003 \001(\010\022\033\n\023num_app_info_c"
-      "ached\030\004 \001(\r\022\037\n\027num_package_info_cached\030\005"
-      " \001(\r\"\375\003\n\"CMsgClientPICSChangesSinceRespo"
-      "nse\022\035\n\025current_change_number\030\001 \001(\r\022\033\n\023si"
-      "nce_change_number\030\002 \001(\r\022\031\n\021force_full_up"
-      "date\030\003 \001(\010\022V\n\017package_changes\030\004 \003(\0132=.pr"
-      "oto.steam.CMsgClientPICSChangesSinceResp"
-      "onse.PackageChange\022N\n\013app_changes\030\005 \003(\0132"
-      "9.proto.steam.CMsgClientPICSChangesSince"
-      "Response.AppChange\022\035\n\025force_full_app_upd"
-      "ate\030\006 \001(\010\022!\n\031force_full_package_update\030\007"
-      " \001(\010\032N\n\rPackageChange\022\021\n\tpackageid\030\001 \001(\r"
+      "ence\030\007 \001(\r\022\026\n\016owner_steam_id\030\010 \001(\006\"\200\001\n\020C"
+      "MsgClientCMList\022\024\n\014cm_addresses\030\001 \003(\r\022\020\n"
+      "\010cm_ports\030\002 \003(\r\022\036\n\026cm_websocket_addresse"
+      "s\030\003 \003(\t\022$\n\034percent_default_to_websocket\030"
+      "\004 \001(\r\"m\n\033CMsgClientP2PConnectionInfo\022\025\n\r"
+      "steam_id_dest\030\001 \001(\006\022\024\n\014steam_id_src\030\002 \001("
+      "\006\022\016\n\006app_id\030\003 \001(\r\022\021\n\tcandidate\030\004 \001(\014\"z\n\037"
+      "CMsgClientP2PConnectionFailInfo\022\025\n\rsteam"
+      "_id_dest\030\001 \001(\006\022\024\n\014steam_id_src\030\002 \001(\006\022\016\n\006"
+      "app_id\030\003 \001(\r\022\032\n\022ep2p_session_error\030\004 \001(\r"
+      "\"1\n\037CMsgClientGetAppOwnershipTicket\022\016\n\006a"
+      "pp_id\030\001 \001(\r\"]\n\'CMsgClientGetAppOwnership"
+      "TicketResponse\022\022\n\007eresult\030\001 \001(\r:\0012\022\016\n\006ap"
+      "p_id\030\002 \001(\r\022\016\n\006ticket\030\003 \001(\014\"\'\n\026CMsgClient"
+      "SessionToken\022\r\n\005token\030\001 \001(\004\"M\n\033CMsgClien"
+      "tGameConnectTokens\022\036\n\022max_tokens_to_keep"
+      "\030\001 \001(\r:\00210\022\016\n\006tokens\030\002 \003(\014\"\245\001\n\020CMsgGSSer"
+      "verType\022\025\n\rapp_id_served\030\001 \001(\r\022\r\n\005flags\030"
+      "\002 \001(\r\022\027\n\017game_ip_address\030\003 \001(\r\022\021\n\tgame_p"
+      "ort\030\004 \001(\r\022\020\n\010game_dir\030\005 \001(\t\022\024\n\014game_vers"
+      "ion\030\006 \001(\t\022\027\n\017game_query_port\030\007 \001(\r\"&\n\021CM"
+      "sgGSStatusReply\022\021\n\tis_secure\030\001 \001(\010\"\207\001\n\020C"
+      "MsgGSPlayerList\0225\n\007players\030\001 \003(\0132$.proto"
+      ".steam.CMsgGSPlayerList.Player\032<\n\006Player"
+      "\022\020\n\010steam_id\030\001 \001(\004\022\021\n\tpublic_ip\030\002 \001(\r\022\r\n"
+      "\005token\030\003 \001(\014\"G\n\021CMsgGSUserPlaying\022\020\n\010ste"
+      "am_id\030\001 \001(\006\022\021\n\tpublic_ip\030\002 \001(\r\022\r\n\005token\030"
+      "\003 \001(\014\"*\n\026CMsgGSDisconnectNotice\022\020\n\010steam"
+      "_id\030\001 \001(\006\"\231\005\n\025CMsgClientGamesPlayed\022C\n\014g"
+      "ames_played\030\001 \003(\0132-.proto.steam.CMsgClie"
+      "ntGamesPlayed.GamePlayed\022\026\n\016client_os_ty"
+      "pe\030\002 \001(\r\032\242\004\n\nGamePlayed\022\023\n\013steam_id_gs\030\001"
+      " \001(\004\022\017\n\007game_id\030\002 \001(\006\022\027\n\017game_ip_address"
+      "\030\003 \001(\r\022\021\n\tgame_port\030\004 \001(\r\022\021\n\tis_secure\030\005"
+      " \001(\010\022\r\n\005token\030\006 \001(\014\022\027\n\017game_extra_info\030\007"
+      " \001(\t\022\026\n\016game_data_blob\030\010 \001(\014\022\022\n\nprocess_"
+      "id\030\t \001(\r\022\035\n\025streaming_provider_id\030\n \001(\r\022"
+      "\022\n\ngame_flags\030\013 \001(\r\022\020\n\010owner_id\030\014 \001(\r\022\025\n"
+      "\rvr_hmd_vendor\030\r \001(\t\022\024\n\014vr_hmd_model\030\016 \001"
+      "(\t\022\035\n\022launch_option_type\030\017 \001(\r:\0010\022#\n\027pri"
+      "mary_controller_type\030\020 \001(\005:\002-1\022\'\n\037primar"
+      "y_steam_controller_serial\030\021 \001(\t\022\'\n\034total"
+      "_steam_controller_count\030\022 \001(\r:\0010\022+\n tota"
+      "l_non_steam_controller_count\030\023 \001(\r:\0010\022&\n"
+      "\033controller_workshop_file_id\030\024 \001(\004:\0010\"9\n"
+      "\rCMsgGSApprove\022\020\n\010steam_id\030\001 \001(\006\022\026\n\016owne"
+      "r_steam_id\030\002 \001(\006\"I\n\nCMsgGSDeny\022\020\n\010steam_"
+      "id\030\001 \001(\006\022\024\n\014edeny_reason\030\002 \001(\005\022\023\n\013deny_s"
+      "tring\030\003 \001(\t\"4\n\nCMsgGSKick\022\020\n\010steam_id\030\001 "
+      "\001(\006\022\024\n\014edeny_reason\030\002 \001(\005\"\302\001\n\022CMsgClient"
+      "AuthList\022\023\n\013tokens_left\030\001 \001(\r\022\030\n\020last_re"
+      "quest_seq\030\002 \001(\r\022$\n\034last_request_seq_from"
+      "_server\030\003 \001(\r\022,\n\007tickets\030\004 \003(\0132\033.proto.s"
+      "team.CMsgAuthTicket\022\017\n\007app_ids\030\005 \003(\r\022\030\n\020"
+      "message_sequence\030\006 \001(\r\"V\n\025CMsgClientAuth"
+      "ListAck\022\022\n\nticket_crc\030\001 \003(\r\022\017\n\007app_ids\030\002"
+      " \003(\r\022\030\n\020message_sequence\030\003 \001(\r\"\351\003\n\025CMsgC"
+      "lientLicenseList\022\022\n\007eresult\030\001 \001(\005:\0012\022<\n\010"
+      "licenses\030\002 \003(\0132*.proto.steam.CMsgClientL"
+      "icenseList.License\032\375\002\n\007License\022\022\n\npackag"
+      "e_id\030\001 \001(\r\022\024\n\014time_created\030\002 \001(\007\022\031\n\021time"
+      "_next_process\030\003 \001(\007\022\024\n\014minute_limit\030\004 \001("
+      "\005\022\024\n\014minutes_used\030\005 \001(\005\022\026\n\016payment_metho"
+      "d\030\006 \001(\r\022\r\n\005flags\030\007 \001(\r\022\035\n\025purchase_count"
+      "ry_code\030\010 \001(\t\022\024\n\014license_type\030\t \001(\r\022\026\n\016t"
+      "erritory_code\030\n \001(\005\022\025\n\rchange_number\030\013 \001"
+      "(\005\022\020\n\010owner_id\030\014 \001(\r\022\026\n\016initial_period\030\r"
+      " \001(\r\022\031\n\021initial_time_unit\030\016 \001(\r\022\026\n\016renew"
+      "al_period\030\017 \001(\r\022\031\n\021renewal_time_unit\030\020 \001"
+      "(\r\"|\n\025CMsgClientLBSSetScore\022\016\n\006app_id\030\001 "
+      "\001(\r\022\026\n\016leaderboard_id\030\002 \001(\005\022\r\n\005score\030\003 \001"
+      "(\005\022\017\n\007details\030\004 \001(\014\022\033\n\023upload_score_meth"
+      "od\030\005 \001(\005\"\242\001\n\035CMsgClientLBSSetScoreRespon"
+      "se\022\022\n\007eresult\030\001 \001(\005:\0012\022\037\n\027leaderboard_en"
+      "try_count\030\002 \001(\005\022\025\n\rscore_changed\030\003 \001(\010\022\034"
+      "\n\024global_rank_previous\030\004 \001(\005\022\027\n\017global_r"
+      "ank_new\030\005 \001(\005\"M\n\023CMsgClientLBSSetUGC\022\016\n\006"
+      "app_id\030\001 \001(\r\022\026\n\016leaderboard_id\030\002 \001(\005\022\016\n\006"
+      "ugc_id\030\003 \001(\006\"1\n\033CMsgClientLBSSetUGCRespo"
+      "nse\022\022\n\007eresult\030\001 \001(\005:\0012\"\247\001\n\033CMsgClientLB"
+      "SFindOrCreateLB\022\016\n\006app_id\030\001 \001(\r\022\037\n\027leade"
+      "rboard_sort_method\030\002 \001(\005\022 \n\030leaderboard_"
+      "display_type\030\003 \001(\005\022\033\n\023create_if_not_foun"
+      "d\030\004 \001(\010\022\030\n\020leaderboard_name\030\005 \001(\t\"\325\001\n#CM"
+      "sgClientLBSFindOrCreateLBResponse\022\022\n\007ere"
+      "sult\030\001 \001(\005:\0012\022\026\n\016leaderboard_id\030\002 \001(\005\022\037\n"
+      "\027leaderboard_entry_count\030\003 \001(\005\022\"\n\027leader"
+      "board_sort_method\030\004 \001(\005:\0010\022#\n\030leaderboar"
+      "d_display_type\030\005 \001(\005:\0010\022\030\n\020leaderboard_n"
+      "ame\030\006 \001(\t\"\237\001\n\031CMsgClientLBSGetLBEntries\022"
+      "\016\n\006app_id\030\001 \001(\005\022\026\n\016leaderboard_id\030\002 \001(\005\022"
+      "\023\n\013range_start\030\003 \001(\005\022\021\n\trange_end\030\004 \001(\005\022"
+      " \n\030leaderboard_data_request\030\005 \001(\005\022\020\n\010ste"
+      "amids\030\006 \003(\006\"\204\002\n!CMsgClientLBSGetLBEntrie"
+      "sResponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\037\n\027leaderb"
+      "oard_entry_count\030\002 \001(\005\022E\n\007entries\030\003 \003(\0132"
+      "4.proto.steam.CMsgClientLBSGetLBEntriesR"
+      "esponse.Entry\032c\n\005Entry\022\025\n\rsteam_id_user\030"
+      "\001 \001(\006\022\023\n\013global_rank\030\002 \001(\005\022\r\n\005score\030\003 \001("
+      "\005\022\017\n\007details\030\004 \001(\014\022\016\n\006ugc_id\030\005 \001(\006\"\313\001\n\036C"
+      "MsgClientAppMinutesPlayedData\022X\n\016minutes"
+      "_played\030\001 \003(\0132@.proto.steam.CMsgClientAp"
+      "pMinutesPlayedData.AppMinutesPlayedData\032"
+      "O\n\024AppMinutesPlayedData\022\016\n\006app_id\030\001 \001(\r\022"
+      "\017\n\007forever\030\002 \001(\005\022\026\n\016last_two_weeks\030\003 \001(\005"
+      "\"\252\001\n\032CMsgClientIsLimitedAccount\022\033\n\023bis_l"
+      "imited_account\030\001 \001(\010\022\034\n\024bis_community_ba"
+      "nned\030\002 \001(\010\022\032\n\022bis_locked_account\030\003 \001(\010\0225"
+      "\n-bis_limited_account_allowed_to_invite_"
+      "friends\030\004 \001(\010\"\230\001\n\024CMsgClientServerList\0229"
+      "\n\007servers\030\001 \003(\0132(.proto.steam.CMsgClient"
+      "ServerList.Server\032E\n\006Server\022\023\n\013server_ty"
+      "pe\030\001 \001(\r\022\021\n\tserver_ip\030\002 \001(\r\022\023\n\013server_po"
+      "rt\030\003 \001(\r\"\263\001\n\036CMsgClientRequestedClientSt"
+      "ats\022N\n\rstats_to_send\030\001 \003(\01327.proto.steam"
+      ".CMsgClientRequestedClientStats.StatsToS"
+      "end\032A\n\013StatsToSend\022\023\n\013client_stat\030\001 \001(\r\022"
+      "\035\n\025stat_aggregate_method\030\002 \001(\r\"\314\001\n\017CMsgC"
+      "lientStat2\022<\n\013stat_detail\030\001 \003(\0132\'.proto."
+      "steam.CMsgClientStat2.StatDetail\032{\n\nStat"
+      "Detail\022\023\n\013client_stat\030\001 \001(\r\022\020\n\010ll_value\030"
+      "\002 \001(\003\022\023\n\013time_of_day\030\003 \001(\r\022\017\n\007cell_id\030\004 "
+      "\001(\r\022\020\n\010depot_id\030\005 \001(\r\022\016\n\006app_id\030\006 \001(\r\"\272\001"
+      "\n\030CMsgClientMMSCreateLobby\022\016\n\006app_id\030\001 \001"
+      "(\r\022\023\n\013max_members\030\002 \001(\005\022\022\n\nlobby_type\030\003 "
+      "\001(\005\022\023\n\013lobby_flags\030\004 \001(\005\022\017\n\007cell_id\030\005 \001("
+      "\r\022\021\n\tpublic_ip\030\006 \001(\r\022\020\n\010metadata\030\007 \001(\014\022\032"
+      "\n\022persona_name_owner\030\010 \001(\t\"^\n CMsgClient"
+      "MMSCreateLobbyResponse\022\016\n\006app_id\030\001 \001(\r\022\026"
+      "\n\016steam_id_lobby\030\002 \001(\006\022\022\n\007eresult\030\003 \001(\005:"
+      "\0012\"V\n\026CMsgClientMMSJoinLobby\022\016\n\006app_id\030\001"
+      " \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\024\n\014persona_"
+      "name\030\003 \001(\t\"\333\002\n\036CMsgClientMMSJoinLobbyRes"
+      "ponse\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030"
+      "\002 \001(\006\022 \n\030chat_room_enter_response\030\003 \001(\005\022"
+      "\023\n\013max_members\030\004 \001(\005\022\022\n\nlobby_type\030\005 \001(\005"
+      "\022\023\n\013lobby_flags\030\006 \001(\005\022\026\n\016steam_id_owner\030"
+      "\007 \001(\006\022\020\n\010metadata\030\010 \001(\014\022C\n\007members\030\t \003(\013"
+      "22.proto.steam.CMsgClientMMSJoinLobbyRes"
+      "ponse.Member\032B\n\006Member\022\020\n\010steam_id\030\001 \001(\006"
+      "\022\024\n\014persona_name\030\002 \001(\t\022\020\n\010metadata\030\003 \001(\014"
+      "\"A\n\027CMsgClientMMSLeaveLobby\022\016\n\006app_id\030\001 "
+      "\001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\"]\n\037CMsgClien"
+      "tMMSLeaveLobbyResponse\022\016\n\006app_id\030\001 \001(\r\022\026"
+      "\n\016steam_id_lobby\030\002 \001(\006\022\022\n\007eresult\030\003 \001(\005:"
+      "\0012\"\376\001\n\031CMsgClientMMSGetLobbyList\022\016\n\006app_"
+      "id\030\001 \001(\r\022\035\n\025num_lobbies_requested\030\003 \001(\005\022"
+      "\017\n\007cell_id\030\004 \001(\r\022\021\n\tpublic_ip\030\005 \001(\r\022>\n\007f"
+      "ilters\030\006 \003(\0132-.proto.steam.CMsgClientMMS"
+      "GetLobbyList.Filter\032N\n\006Filter\022\013\n\003key\030\001 \001"
+      "(\t\022\r\n\005value\030\002 \001(\t\022\023\n\013comparision\030\003 \001(\005\022\023"
+      "\n\013filter_type\030\004 \001(\005\"\261\002\n!CMsgClientMMSGet"
+      "LobbyListResponse\022\016\n\006app_id\030\001 \001(\r\022\022\n\007ere"
+      "sult\030\003 \001(\005:\0012\022E\n\007lobbies\030\004 \003(\01324.proto.s"
+      "team.CMsgClientMMSGetLobbyListResponse.L"
+      "obby\032\240\001\n\005Lobby\022\020\n\010steam_id\030\001 \001(\006\022\023\n\013max_"
+      "members\030\002 \001(\005\022\022\n\nlobby_type\030\003 \001(\005\022\023\n\013lob"
+      "by_flags\030\004 \001(\005\022\020\n\010metadata\030\005 \001(\014\022\023\n\013num_"
+      "members\030\006 \001(\005\022\020\n\010distance\030\007 \001(\002\022\016\n\006weigh"
+      "t\030\010 \001(\003\"\254\001\n\031CMsgClientMMSSetLobbyData\022\016\n"
+      "\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\027\n"
+      "\017steam_id_member\030\003 \001(\006\022\023\n\013max_members\030\004 "
+      "\001(\005\022\022\n\nlobby_type\030\005 \001(\005\022\023\n\013lobby_flags\030\006"
+      " \001(\005\022\020\n\010metadata\030\007 \001(\014\"_\n!CMsgClientMMSS"
+      "etLobbyDataResponse\022\016\n\006app_id\030\001 \001(\r\022\026\n\016s"
+      "team_id_lobby\030\002 \001(\006\022\022\n\007eresult\030\003 \001(\005:\0012\""
+      "C\n\031CMsgClientMMSGetLobbyData\022\016\n\006app_id\030\001"
+      " \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\"\324\002\n\026CMsgCli"
+      "entMMSLobbyData\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam"
+      "_id_lobby\030\002 \001(\006\022\023\n\013num_members\030\003 \001(\005\022\023\n\013"
+      "max_members\030\004 \001(\005\022\022\n\nlobby_type\030\005 \001(\005\022\023\n"
+      "\013lobby_flags\030\006 \001(\005\022\026\n\016steam_id_owner\030\007 \001"
+      "(\006\022\020\n\010metadata\030\010 \001(\014\022;\n\007members\030\t \003(\0132*."
+      "proto.steam.CMsgClientMMSLobbyData.Membe"
+      "r\022\024\n\014lobby_cellid\030\n \001(\r\032B\n\006Member\022\020\n\010ste"
+      "am_id\030\001 \001(\006\022\024\n\014persona_name\030\002 \001(\t\022\020\n\010met"
+      "adata\030\003 \001(\014\"w\n\035CMsgClientMMSSendLobbyCha"
+      "tMsg\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002"
+      " \001(\006\022\027\n\017steam_id_target\030\003 \001(\006\022\025\n\rlobby_m"
+      "essage\030\004 \001(\014\"s\n\031CMsgClientMMSLobbyChatMs"
+      "g\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001("
+      "\006\022\027\n\017steam_id_sender\030\003 \001(\006\022\025\n\rlobby_mess"
+      "age\030\004 \001(\014\"`\n\032CMsgClientMMSSetLobbyOwner\022"
+      "\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022"
+      "\032\n\022steam_id_new_owner\030\003 \001(\006\"`\n\"CMsgClien"
+      "tMMSSetLobbyOwnerResponse\022\016\n\006app_id\030\001 \001("
+      "\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\022\n\007eresult\030\003 \001"
+      "(\005:\0012\"^\n\033CMsgClientMMSSetLobbyLinked\022\016\n\006"
+      "app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\027\n\017"
+      "steam_id_lobby2\030\003 \001(\006\"\231\001\n\037CMsgClientMMSS"
+      "etLobbyGameServer\022\016\n\006app_id\030\001 \001(\r\022\026\n\016ste"
+      "am_id_lobby\030\002 \001(\006\022\026\n\016game_server_ip\030\003 \001("
+      "\r\022\030\n\020game_server_port\030\004 \001(\r\022\034\n\024game_serv"
+      "er_steam_id\030\005 \001(\006\"\231\001\n\037CMsgClientMMSLobby"
+      "GameServerSet\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_i"
+      "d_lobby\030\002 \001(\006\022\026\n\016game_server_ip\030\003 \001(\r\022\030\n"
+      "\020game_server_port\030\004 \001(\r\022\034\n\024game_server_s"
+      "team_id\030\005 \001(\006\"s\n\034CMsgClientMMSUserJoined"
+      "Lobby\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030"
+      "\002 \001(\006\022\025\n\rsteam_id_user\030\003 \001(\006\022\024\n\014persona_"
+      "name\030\004 \001(\t\"q\n\032CMsgClientMMSUserLeftLobby"
+      "\022\016\n\006app_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006"
+      "\022\025\n\rsteam_id_user\030\003 \001(\006\022\024\n\014persona_name\030"
+      "\004 \001(\t\"c\n\032CMsgClientMMSInviteToLobby\022\016\n\006a"
+      "pp_id\030\001 \001(\r\022\026\n\016steam_id_lobby\030\002 \001(\006\022\035\n\025s"
+      "team_id_user_invited\030\003 \001(\006\"`\n\031CMsgClient"
+      "UDSInviteToGame\022\025\n\rsteam_id_dest\030\001 \001(\006\022\024"
+      "\n\014steam_id_src\030\002 \001(\006\022\026\n\016connect_string\030\003"
+      " \001(\t\"\271\001\n\024CMsgClientChatInvite\022\030\n\020steam_i"
+      "d_invited\030\001 \001(\006\022\025\n\rsteam_id_chat\030\002 \001(\006\022\027"
+      "\n\017steam_id_patron\030\003 \001(\006\022\025\n\rchatroom_type"
+      "\030\004 \001(\005\022\034\n\024steam_id_friend_chat\030\005 \001(\006\022\021\n\t"
+      "chat_name\030\006 \001(\t\022\017\n\007game_id\030\007 \001(\006\"\256\010\n\031CMs"
+      "gClientConnectionStats\022G\n\013stats_logon\030\001 "
+      "\001(\01322.proto.steam.CMsgClientConnectionSt"
+      "ats.Stats_Logon\022G\n\013stats_vconn\030\002 \001(\01322.p"
+      "roto.steam.CMsgClientConnectionStats.Sta"
+      "ts_VConn\032\307\001\n\013Stats_Logon\022\030\n\020connect_atte"
+      "mpts\030\001 \001(\005\022\031\n\021connect_successes\030\002 \001(\005\022\030\n"
+      "\020connect_failures\030\003 \001(\005\022\033\n\023connections_d"
+      "ropped\030\004 \001(\005\022\027\n\017seconds_running\030\005 \001(\r\022\034\n"
+      "\024msec_tologonthistime\030\006 \001(\r\022\025\n\rcount_bad"
+      "_cms\030\007 \001(\r\032q\n\tStats_UDP\022\021\n\tpkts_sent\030\001 \001"
+      "(\004\022\022\n\nbytes_sent\030\002 \001(\004\022\021\n\tpkts_recv\030\003 \001("
+      "\004\022\026\n\016pkts_processed\030\004 \001(\004\022\022\n\nbytes_recv\030"
+      "\005 \001(\004\032\301\004\n\013Stats_VConn\022\027\n\017connections_udp"
+      "\030\001 \001(\r\022\027\n\017connections_tcp\030\002 \001(\r\022C\n\tstats"
+      "_udp\030\003 \001(\01320.proto.steam.CMsgClientConne"
+      "ctionStats.Stats_UDP\022\026\n\016pkts_abandoned\030\004"
+      " \001(\004\022\031\n\021conn_req_received\030\005 \001(\004\022\023\n\013pkts_"
+      "resent\030\006 \001(\004\022\021\n\tmsgs_sent\030\007 \001(\004\022\030\n\020msgs_"
+      "sent_failed\030\010 \001(\004\022\021\n\tmsgs_recv\030\t \001(\004\022\026\n\016"
+      "datagrams_sent\030\n \001(\004\022\026\n\016datagrams_recv\030\013"
+      " \001(\004\022\025\n\rbad_pkts_recv\030\014 \001(\004\022\036\n\026unknown_c"
+      "onn_pkts_recv\030\r \001(\004\022\030\n\020missed_pkts_recv\030"
+      "\016 \001(\004\022\025\n\rdup_pkts_recv\030\017 \001(\004\022!\n\031failed_c"
+      "onnect_challenges\030\020 \001(\004\022\035\n\025micro_sec_avg"
+      "_latency\030\021 \001(\r\022\035\n\025micro_sec_min_latency\030"
+      "\022 \001(\r\022\035\n\025micro_sec_max_latency\030\023 \001(\r\022\033\n\023"
+      "mem_pool_msg_in_use\030\024 \001(\r\"\336\001\n\032CMsgClient"
+      "ServersAvailable\022^\n\026server_types_availab"
+      "le\030\001 \003(\0132>.proto.steam.CMsgClientServers"
+      "Available.Server_Types_Available\022%\n\035serv"
+      "er_type_for_auth_services\030\002 \001(\r\0329\n\026Serve"
+      "r_Types_Available\022\016\n\006server\030\001 \001(\r\022\017\n\007cha"
+      "nged\030\002 \001(\010\"u\n\026CMsgClientGetUserStats\022\017\n\007"
+      "game_id\030\001 \001(\006\022\021\n\tcrc_stats\030\002 \001(\r\022\034\n\024sche"
+      "ma_local_version\030\003 \001(\005\022\031\n\021steam_id_for_u"
+      "ser\030\004 \001(\006\"\367\002\n\036CMsgClientGetUserStatsResp"
+      "onse\022\017\n\007game_id\030\001 \001(\006\022\022\n\007eresult\030\002 \001(\005:\001"
+      "2\022\021\n\tcrc_stats\030\003 \001(\r\022\016\n\006schema\030\004 \001(\014\022@\n\005"
+      "stats\030\005 \003(\01321.proto.steam.CMsgClientGetU"
+      "serStatsResponse.Stats\022Z\n\022achievement_bl"
+      "ocks\030\006 \003(\0132>.proto.steam.CMsgClientGetUs"
+      "erStatsResponse.Achievement_Blocks\032,\n\005St"
+      "ats\022\017\n\007stat_id\030\001 \001(\r\022\022\n\nstat_value\030\002 \001(\r"
+      "\032A\n\022Achievement_Blocks\022\026\n\016achievement_id"
+      "\030\001 \001(\r\022\023\n\013unlock_time\030\002 \003(\007\"\246\002\n CMsgClie"
+      "ntStoreUserStatsResponse\022\017\n\007game_id\030\001 \001("
+      "\006\022\022\n\007eresult\030\002 \001(\005:\0012\022\021\n\tcrc_stats\030\003 \001(\r"
+      "\022f\n\027stats_failed_validation\030\004 \003(\0132E.prot"
+      "o.steam.CMsgClientStoreUserStatsResponse"
+      ".Stats_Failed_Validation\022\031\n\021stats_out_of"
+      "_date\030\005 \001(\010\032G\n\027Stats_Failed_Validation\022\017"
+      "\n\007stat_id\030\001 \001(\r\022\033\n\023reverted_stat_value\030\002"
+      " \001(\r\"\364\001\n\031CMsgClientStoreUserStats2\022\017\n\007ga"
+      "me_id\030\001 \001(\006\022\027\n\017settor_steam_id\030\002 \001(\006\022\027\n\017"
+      "settee_steam_id\030\003 \001(\006\022\021\n\tcrc_stats\030\004 \001(\r"
+      "\022\026\n\016explicit_reset\030\005 \001(\010\022;\n\005stats\030\006 \003(\0132"
+      ",.proto.steam.CMsgClientStoreUserStats2."
+      "Stats\032,\n\005Stats\022\017\n\007stat_id\030\001 \001(\r\022\022\n\nstat_"
+      "value\030\002 \001(\r\"\316\001\n\026CMsgClientStatsUpdated\022\020"
+      "\n\010steam_id\030\001 \001(\006\022\017\n\007game_id\030\002 \001(\006\022\021\n\tcrc"
+      "_stats\030\003 \001(\r\022H\n\rupdated_stats\030\004 \003(\01321.pr"
+      "oto.steam.CMsgClientStatsUpdated.Updated"
+      "_Stats\0324\n\rUpdated_Stats\022\017\n\007stat_id\030\001 \001(\r"
+      "\022\022\n\nstat_value\030\002 \001(\r\"\310\001\n\030CMsgClientStore"
+      "UserStats\022\017\n\007game_id\030\001 \001(\006\022\026\n\016explicit_r"
+      "eset\030\002 \001(\010\022L\n\016stats_to_store\030\003 \003(\01324.pro"
+      "to.steam.CMsgClientStoreUserStats.Stats_"
+      "To_Store\0325\n\016Stats_To_Store\022\017\n\007stat_id\030\001 "
+      "\001(\r\022\022\n\nstat_value\030\002 \001(\r\"\034\n\032CMsgClientGet"
+      "ClientDetails\"\?\n$CMsgClientReportOverlay"
+      "DetourFailure\022\027\n\017failure_strings\030\001 \003(\t\"\313"
+      "\002\n\"CMsgClientGetClientDetailsResponse\022\027\n"
+      "\017package_version\030\001 \001(\r\022\030\n\020protocol_versi"
+      "on\030\010 \001(\r\022\n\n\002os\030\002 \001(\t\022\024\n\014machine_name\030\003 \001"
+      "(\t\022\021\n\tip_public\030\004 \001(\t\022\022\n\nip_private\030\005 \001("
+      "\t\022\027\n\017bytes_available\030\007 \001(\004\022K\n\rgames_runn"
+      "ing\030\006 \003(\01324.proto.steam.CMsgClientGetCli"
+      "entDetailsResponse.Game\032C\n\004Game\022\r\n\005appid"
+      "\030\001 \001(\r\022\022\n\nextra_info\030\002 \001(\t\022\030\n\020time_runni"
+      "ng_sec\030\003 \001(\r\"\210\001\n\032CMsgClientGetClientAppL"
+      "ist\022\r\n\005media\030\001 \001(\010\022\r\n\005tools\030\002 \001(\010\022\r\n\005gam"
+      "es\030\003 \001(\010\022\026\n\016only_installed\030\004 \001(\010\022\025\n\ronly"
+      "_changing\030\005 \001(\010\022\016\n\006comics\030\006 \001(\010\"\251\004\n\"CMsg"
+      "ClientGetClientAppListResponse\022A\n\004apps\030\001"
+      " \003(\01323.proto.steam.CMsgClientGetClientAp"
+      "pListResponse.App\022\027\n\017bytes_available\030\002 \001"
+      "(\004\032\246\003\n\003App\022\r\n\005appid\030\001 \001(\r\022\020\n\010category\030\002 "
+      "\001(\t\022\020\n\010app_type\030\n \001(\t\022\020\n\010favorite\030\003 \001(\010\022"
+      "\021\n\tinstalled\030\004 \001(\010\022\023\n\013auto_update\030\005 \001(\010\022"
+      "\030\n\020bytes_downloaded\030\006 \001(\004\022\024\n\014bytes_neede"
+      "d\030\007 \001(\004\022\033\n\023bytes_download_rate\030\010 \001(\r\022\027\n\017"
+      "download_paused\030\013 \001(\010\022\027\n\017num_downloading"
+      "\030\014 \001(\r\022\022\n\nnum_paused\030\r \001(\r\022\020\n\010changing\030\016"
+      " \001(\010\022\035\n\025available_on_platform\030\017 \001(\010\022E\n\004d"
+      "lcs\030\t \003(\01327.proto.steam.CMsgClientGetCli"
+      "entAppListResponse.App.DLC\032\'\n\003DLC\022\r\n\005app"
+      "id\030\001 \001(\r\022\021\n\tinstalled\030\002 \001(\010\"+\n\032CMsgClien"
+      "tInstallClientApp\022\r\n\005appid\030\001 \001(\r\"4\n\"CMsg"
+      "ClientInstallClientAppResponse\022\016\n\006result"
+      "\030\001 \001(\r\"-\n\034CMsgClientUninstallClientApp\022\r"
+      "\n\005appid\030\001 \001(\r\"6\n$CMsgClientUninstallClie"
+      "ntAppResponse\022\016\n\006result\030\001 \001(\r\"B\n!CMsgCli"
+      "entSetClientAppUpdateState\022\r\n\005appid\030\001 \001("
+      "\r\022\016\n\006update\030\002 \001(\010\";\n)CMsgClientSetClient"
+      "AppUpdateStateResponse\022\016\n\006result\030\001 \001(\r\"\206"
+      "\002\n\036CMsgClientUFSUploadFileRequest\022\016\n\006app"
+      "_id\030\001 \001(\r\022\021\n\tfile_size\030\002 \001(\r\022\025\n\rraw_file"
+      "_size\030\003 \001(\r\022\020\n\010sha_file\030\004 \001(\014\022\022\n\ntime_st"
+      "amp\030\005 \001(\004\022\021\n\tfile_name\030\006 \001(\t\022$\n\034platform"
+      "s_to_sync_deprecated\030\007 \001(\r\022%\n\021platforms_"
+      "to_sync\030\010 \001(\r:\n4294967295\022\017\n\007cell_id\030\t \001"
+      "(\r\022\023\n\013can_encrypt\030\n \001(\010\"\273\001\n\037CMsgClientUF"
+      "SUploadFileResponse\022\022\n\007eresult\030\001 \001(\005:\0012\022"
+      "\020\n\010sha_file\030\002 \001(\014\022\020\n\010use_http\030\003 \001(\010\022\021\n\th"
+      "ttp_host\030\004 \001(\t\022\020\n\010http_url\030\005 \001(\t\022\022\n\nkv_h"
+      "eaders\030\006 \001(\014\022\021\n\tuse_https\030\007 \001(\010\022\024\n\014encry"
+      "pt_file\030\010 \001(\010\"\272\001\n\031CMsgClientUFSUploadCom"
+      "mit\022:\n\005files\030\001 \003(\0132+.proto.steam.CMsgCli"
+      "entUFSUploadCommit.File\032a\n\004File\022\022\n\007eresu"
+      "lt\030\001 \001(\005:\0012\022\016\n\006app_id\030\002 \001(\r\022\020\n\010sha_file\030"
+      "\003 \001(\014\022\020\n\010cub_file\030\004 \001(\r\022\021\n\tfile_name\030\005 \001"
+      "(\t\"\245\001\n!CMsgClientUFSUploadCommitResponse"
+      "\022B\n\005files\030\001 \003(\01323.proto.steam.CMsgClient"
+      "UFSUploadCommitResponse.File\032<\n\004File\022\022\n\007"
+      "eresult\030\001 \001(\005:\0012\022\016\n\006app_id\030\002 \001(\r\022\020\n\010sha_"
+      "file\030\003 \001(\014\"L\n\026CMsgClientUFSFileChunk\022\020\n\010"
+      "sha_file\030\001 \001(\014\022\022\n\nfile_start\030\002 \001(\r\022\014\n\004da"
+      "ta\030\003 \001(\014\" \n\036CMsgClientUFSTransferHeartbe"
+      "at\"G\n\037CMsgClientUFSUploadFileFinished\022\022\n"
+      "\007eresult\030\001 \001(\005:\0012\022\020\n\010sha_file\030\002 \001(\014\"_\n\036C"
+      "MsgClientUFSDeleteFileRequest\022\016\n\006app_id\030"
+      "\001 \001(\r\022\021\n\tfile_name\030\002 \001(\t\022\032\n\022is_explicit_"
+      "delete\030\003 \001(\010\"H\n\037CMsgClientUFSDeleteFileR"
+      "esponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\021\n\tfile_name"
+      "\030\002 \001(\t\"S\n\036CMsgClientUFSGetFileListForApp"
+      "\022\025\n\rapps_to_query\030\001 \003(\r\022\032\n\022send_path_pre"
+      "fixes\030\002 \001(\010\"\315\002\n&CMsgClientUFSGetFileList"
+      "ForAppResponse\022G\n\005files\030\001 \003(\01328.proto.st"
+      "eam.CMsgClientUFSGetFileListForAppRespon"
+      "se.File\022\025\n\rpath_prefixes\030\002 \003(\t\032\270\001\n\004File\022"
+      "\016\n\006app_id\030\001 \001(\r\022\021\n\tfile_name\030\002 \001(\t\022\020\n\010sh"
+      "a_file\030\003 \001(\014\022\022\n\ntime_stamp\030\004 \001(\004\022\025\n\rraw_"
+      "file_size\030\005 \001(\r\022\032\n\022is_explicit_delete\030\006 "
+      "\001(\010\022\031\n\021platforms_to_sync\030\007 \001(\r\022\031\n\021path_p"
+      "refix_index\030\010 \001(\r:\010\200\265\030\010\210\265\030\020\"Z\n\034CMsgClien"
+      "tUFSDownloadRequest\022\016\n\006app_id\030\001 \001(\r\022\021\n\tf"
+      "ile_name\030\002 \001(\t\022\027\n\017can_handle_http\030\003 \001(\010\""
+      "\240\002\n\035CMsgClientUFSDownloadResponse\022\022\n\007ere"
+      "sult\030\001 \001(\005:\0012\022\016\n\006app_id\030\002 \001(\r\022\021\n\tfile_si"
+      "ze\030\003 \001(\r\022\025\n\rraw_file_size\030\004 \001(\r\022\020\n\010sha_f"
+      "ile\030\005 \001(\014\022\022\n\ntime_stamp\030\006 \001(\004\022\032\n\022is_expl"
+      "icit_delete\030\007 \001(\010\022\020\n\010use_http\030\010 \001(\010\022\021\n\th"
+      "ttp_host\030\t \001(\t\022\020\n\010http_url\030\n \001(\t\022\022\n\nkv_h"
+      "eaders\030\013 \001(\014\022\021\n\tuse_https\030\014 \001(\010\022\021\n\tencry"
+      "pted\030\r \001(\010\"]\n\031CMsgClientUFSLoginRequest\022"
+      "\030\n\020protocol_version\030\001 \001(\r\022\030\n\020am_session_"
+      "token\030\002 \001(\004\022\014\n\004apps\030\003 \003(\r\"0\n\032CMsgClientU"
+      "FSLoginResponse\022\022\n\007eresult\030\001 \001(\005:\0012\"G\n#C"
+      "MsgClientRequestEncryptedAppTicket\022\016\n\006ap"
+      "p_id\030\001 \001(\r\022\020\n\010userdata\030\002 \001(\014\"\220\001\n+CMsgCli"
+      "entRequestEncryptedAppTicketResponse\022\016\n\006"
+      "app_id\030\001 \001(\r\022\022\n\007eresult\030\002 \001(\005:\0012\022=\n\024encr"
+      "ypted_app_ticket\030\003 \001(\0132\037.proto.steam.Enc"
+      "ryptedAppTicket\"\246\001\n\032CMsgClientWalletInfo"
+      "Update\022\022\n\nhas_wallet\030\001 \001(\010\022\017\n\007balance\030\002 "
+      "\001(\005\022\020\n\010currency\030\003 \001(\005\022\027\n\017balance_delayed"
+      "\030\004 \001(\005\022\027\n\tbalance64\030\005 \001(\003B\004\240\266\030\001\022\037\n\021balan"
+      "ce64_delayed\030\006 \001(\003B\004\240\266\030\001\"M\n\027CMsgClientAp"
+      "pInfoUpdate\022\031\n\021last_changenumber\030\001 \001(\r\022\027"
+      "\n\017send_changelist\030\002 \001(\010\"d\n\030CMsgClientApp"
+      "InfoChanges\022\035\n\025current_change_number\030\001 \001"
+      "(\r\022\031\n\021force_full_update\030\002 \001(\010\022\016\n\006appIDs\030"
+      "\003 \003(\r\"\267\001\n\030CMsgClientAppInfoRequest\0227\n\004ap"
+      "ps\030\001 \003(\0132).proto.steam.CMsgClientAppInfo"
+      "Request.App\022\037\n\020supports_batches\030\002 \001(\010:\005f"
+      "alse\032A\n\003App\022\016\n\006app_id\030\001 \001(\r\022\025\n\rsection_f"
+      "lags\030\002 \001(\r\022\023\n\013section_CRC\030\003 \003(\r\"\263\002\n\031CMsg"
+      "ClientAppInfoResponse\0228\n\004apps\030\001 \003(\0132*.pr"
+      "oto.steam.CMsgClientAppInfoResponse.App\022"
+      "\024\n\014apps_unknown\030\002 \003(\r\022\024\n\014apps_pending\030\003 "
+      "\001(\r\032\245\001\n\003App\022\016\n\006app_id\030\001 \001(\r\022\025\n\rchange_nu"
+      "mber\030\002 \001(\r\022D\n\010sections\030\003 \003(\01322.proto.ste"
+      "am.CMsgClientAppInfoResponse.App.Section"
+      "\0321\n\007Section\022\022\n\nsection_id\030\001 \001(\r\022\022\n\nsecti"
+      "on_kv\030\002 \001(\014:\010\200\265\030\000\210\265\030\000\"K\n\034CMsgClientPacka"
+      "geInfoRequest\022\023\n\013package_ids\030\001 \003(\r\022\026\n\016me"
+      "ta_data_only\030\002 \001(\010\"\354\001\n\035CMsgClientPackage"
+      "InfoResponse\022D\n\010packages\030\001 \003(\01322.proto.s"
+      "team.CMsgClientPackageInfoResponse.Packa"
+      "ge\022\030\n\020packages_unknown\030\002 \003(\r\022\030\n\020packages"
+      "_pending\030\003 \001(\r\032Q\n\007Package\022\022\n\npackage_id\030"
+      "\001 \001(\r\022\025\n\rchange_number\030\002 \001(\r\022\013\n\003sha\030\003 \001("
+      "\014\022\016\n\006buffer\030\004 \001(\014\"\300\001\n!CMsgClientPICSChan"
+      "gesSinceRequest\022\033\n\023since_change_number\030\001"
+      " \001(\r\022\035\n\025send_app_info_changes\030\002 \001(\010\022!\n\031s"
+      "end_package_info_changes\030\003 \001(\010\022\033\n\023num_ap"
+      "p_info_cached\030\004 \001(\r\022\037\n\027num_package_info_"
+      "cached\030\005 \001(\r\"\375\003\n\"CMsgClientPICSChangesSi"
+      "nceResponse\022\035\n\025current_change_number\030\001 \001"
+      "(\r\022\033\n\023since_change_number\030\002 \001(\r\022\031\n\021force"
+      "_full_update\030\003 \001(\010\022V\n\017package_changes\030\004 "
+      "\003(\0132=.proto.steam.CMsgClientPICSChangesS"
+      "inceResponse.PackageChange\022N\n\013app_change"
+      "s\030\005 \003(\01329.proto.steam.CMsgClientPICSChan"
+      "gesSinceResponse.AppChange\022\035\n\025force_full"
+      "_app_update\030\006 \001(\010\022!\n\031force_full_package_"
+      "update\030\007 \001(\010\032N\n\rPackageChange\022\021\n\tpackage"
+      "id\030\001 \001(\r\022\025\n\rchange_number\030\002 \001(\r\022\023\n\013needs"
+      "_token\030\003 \001(\010\032F\n\tAppChange\022\r\n\005appid\030\001 \001(\r"
       "\022\025\n\rchange_number\030\002 \001(\r\022\023\n\013needs_token\030\003"
-      " \001(\010\032F\n\tAppChange\022\r\n\005appid\030\001 \001(\r\022\025\n\rchan"
-      "ge_number\030\002 \001(\r\022\023\n\013needs_token\030\003 \001(\010\"\342\002\n"
-      " CMsgClientPICSProductInfoRequest\022K\n\010pac"
-      "kages\030\001 \003(\01329.proto.steam.CMsgClientPICS"
-      "ProductInfoRequest.PackageInfo\022C\n\004apps\030\002"
-      " \003(\01325.proto.steam.CMsgClientPICSProduct"
-      "InfoRequest.AppInfo\022\026\n\016meta_data_only\030\003 "
-      "\001(\010\022\027\n\017num_prev_failed\030\004 \001(\r\032C\n\007AppInfo\022"
-      "\r\n\005appid\030\001 \001(\r\022\024\n\014access_token\030\002 \001(\004\022\023\n\013"
-      "only_public\030\003 \001(\010\0326\n\013PackageInfo\022\021\n\tpack"
-      "ageid\030\001 \001(\r\022\024\n\014access_token\030\002 \001(\004\"\325\004\n!CM"
-      "sgClientPICSProductInfoResponse\022D\n\004apps\030"
-      "\001 \003(\01326.proto.steam.CMsgClientPICSProduc"
-      "tInfoResponse.AppInfo\022\026\n\016unknown_appids\030"
-      "\002 \003(\r\022L\n\010packages\030\003 \003(\0132:.proto.steam.CM"
-      "sgClientPICSProductInfoResponse.PackageI"
-      "nfo\022\032\n\022unknown_packageids\030\004 \003(\r\022\026\n\016meta_"
-      "data_only\030\005 \001(\010\022\030\n\020response_pending\030\006 \001("
-      "\010\022\025\n\rhttp_min_size\030\007 \001(\r\022\021\n\thttp_host\030\010 "
-      "\001(\t\032\206\001\n\007AppInfo\022\r\n\005appid\030\001 \001(\r\022\025\n\rchange"
-      "_number\030\002 \001(\r\022\025\n\rmissing_token\030\003 \001(\010\022\013\n\003"
-      "sha\030\004 \001(\014\022\016\n\006buffer\030\005 \001(\014\022\023\n\013only_public"
-      "\030\006 \001(\010\022\014\n\004size\030\007 \001(\r\032y\n\013PackageInfo\022\021\n\tp"
-      "ackageid\030\001 \001(\r\022\025\n\rchange_number\030\002 \001(\r\022\025\n"
-      "\rmissing_token\030\003 \001(\010\022\013\n\003sha\030\004 \001(\014\022\016\n\006buf"
-      "fer\030\005 \001(\014\022\014\n\004size\030\006 \001(\r:\010\200\265\030\000\210\265\030\000\"F\n CMs"
-      "gClientPICSAccessTokenRequest\022\022\n\npackage"
-      "ids\030\001 \003(\r\022\016\n\006appids\030\002 \003(\r\"\367\002\n!CMsgClient"
-      "PICSAccessTokenResponse\022Z\n\025package_acces"
-      "s_tokens\030\001 \003(\0132;.proto.steam.CMsgClientP"
-      "ICSAccessTokenResponse.PackageToken\022\035\n\025p"
-      "ackage_denied_tokens\030\002 \003(\r\022R\n\021app_access"
-      "_tokens\030\003 \003(\01327.proto.steam.CMsgClientPI"
-      "CSAccessTokenResponse.AppToken\022\031\n\021app_de"
-      "nied_tokens\030\004 \003(\r\0327\n\014PackageToken\022\021\n\tpac"
-      "kageid\030\001 \001(\r\022\024\n\014access_token\030\002 \001(\004\032/\n\010Ap"
-      "pToken\022\r\n\005appid\030\001 \001(\r\022\024\n\014access_token\030\002 "
-      "\001(\004\"D\n\032CMsgClientUFSGetUGCDetails\022&\n\010hco"
-      "ntent\030\001 \001(\006:\02418446744073709551615\"\345\001\n\"CM"
-      "sgClientUFSGetUGCDetailsResponse\022\022\n\007eres"
-      "ult\030\001 \001(\005:\0012\022\013\n\003url\030\002 \001(\t\022\016\n\006app_id\030\003 \001("
-      "\r\022\020\n\010filename\030\004 \001(\t\022\027\n\017steamid_creator\030\005"
-      " \001(\006\022\021\n\tfile_size\030\006 \001(\r\022\034\n\024compressed_fi"
-      "le_size\030\007 \001(\r\022\027\n\017rangecheck_host\030\010 \001(\t\022\031"
-      "\n\021file_encoded_sha1\030\t \001(\t\"C\n\036CMsgClientU"
-      "FSGetSingleFileInfo\022\016\n\006app_id\030\001 \001(\r\022\021\n\tf"
-      "ile_name\030\002 \001(\t\"\270\001\n&CMsgClientUFSGetSingl"
-      "eFileInfoResponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\016\n"
-      "\006app_id\030\002 \001(\r\022\021\n\tfile_name\030\003 \001(\t\022\020\n\010sha_"
-      "file\030\004 \001(\014\022\022\n\ntime_stamp\030\005 \001(\004\022\025\n\rraw_fi"
-      "le_size\030\006 \001(\r\022\032\n\022is_explicit_delete\030\007 \001("
-      "\010\";\n\026CMsgClientUFSShareFile\022\016\n\006app_id\030\001 "
-      "\001(\r\022\021\n\tfile_name\030\002 \001(\t\"\\\n\036CMsgClientUFSS"
-      "hareFileResponse\022\022\n\007eresult\030\001 \001(\005:\0012\022&\n\010"
-      "hcontent\030\002 \001(\006:\02418446744073709551615\"3\n\033"
-      "CMsgClientAMGetClanOfficers\022\024\n\014steamid_c"
-      "lan\030\001 \001(\006\"f\n#CMsgClientAMGetClanOfficers"
-      "Response\022\022\n\007eresult\030\001 \001(\005:\0012\022\024\n\014steamid_"
-      "clan\030\002 \001(\006\022\025\n\rofficer_count\030\003 \001(\005\"\234\001\n!CM"
-      "sgClientAMGetPersonaNameHistory\022\020\n\010id_co"
-      "unt\030\001 \001(\005\022F\n\003Ids\030\002 \003(\01329.proto.steam.CMs"
-      "gClientAMGetPersonaNameHistory.IdInstanc"
-      "e\032\035\n\nIdInstance\022\017\n\007steamid\030\001 \001(\006\"\333\002\n)CMs"
-      "gClientAMGetPersonaNameHistoryResponse\022["
-      "\n\tresponses\030\002 \003(\0132H.proto.steam.CMsgClie"
-      "ntAMGetPersonaNameHistoryResponse.NameTa"
-      "bleInstance\032\320\001\n\021NameTableInstance\022\022\n\007ere"
-      "sult\030\001 \001(\005:\0012\022\017\n\007steamid\030\002 \001(\006\022d\n\005names\030"
-      "\003 \003(\0132U.proto.steam.CMsgClientAMGetPerso"
-      "naNameHistoryResponse.NameTableInstance."
-      "NameInstance\0320\n\014NameInstance\022\022\n\nname_sin"
-      "ce\030\001 \001(\007\022\014\n\004name\030\002 \001(\t\"E\n\036CMsgClientDere"
-      "gisterWithServer\022\023\n\013eservertype\030\001 \001(\r\022\016\n"
-      "\006app_id\030\002 \001(\r\"\276\004\n\023CMsgClientClanState\022\024\n"
-      "\014steamid_clan\030\001 \001(\006\022\027\n\017m_unStatusFlags\030\002"
-      " \001(\r\022\032\n\022clan_account_flags\030\003 \001(\r\022<\n\tname"
-      "_info\030\004 \001(\0132).proto.steam.CMsgClientClan"
-      "State.NameInfo\022@\n\013user_counts\030\005 \001(\0132+.pr"
-      "oto.steam.CMsgClientClanState.UserCounts"
-      "\0226\n\006events\030\006 \003(\0132&.proto.steam.CMsgClien"
-      "tClanState.Event\022=\n\rannouncements\030\007 \003(\0132"
-      "&.proto.steam.CMsgClientClanState.Event\032"
-      "1\n\010NameInfo\022\021\n\tclan_name\030\001 \001(\t\022\022\n\nsha_av"
-      "atar\030\002 \001(\014\032P\n\nUserCounts\022\017\n\007members\030\001 \001("
-      "\r\022\016\n\006online\030\002 \001(\r\022\020\n\010chatting\030\003 \001(\r\022\017\n\007i"
-      "n_game\030\004 \001(\r\032`\n\005Event\022\013\n\003gid\030\001 \001(\006\022\022\n\nev"
-      "ent_time\030\002 \001(\r\022\020\n\010headline\030\003 \001(\t\022\017\n\007game"
-      "_id\030\004 \001(\006\022\023\n\013just_posted\030\005 \001(\010B\005H\001\200\001\000"
+      " \001(\010\"\342\002\n CMsgClientPICSProductInfoReques"
+      "t\022K\n\010packages\030\001 \003(\01329.proto.steam.CMsgCl"
+      "ientPICSProductInfoRequest.PackageInfo\022C"
+      "\n\004apps\030\002 \003(\01325.proto.steam.CMsgClientPIC"
+      "SProductInfoRequest.AppInfo\022\026\n\016meta_data"
+      "_only\030\003 \001(\010\022\027\n\017num_prev_failed\030\004 \001(\r\032C\n\007"
+      "AppInfo\022\r\n\005appid\030\001 \001(\r\022\024\n\014access_token\030\002"
+      " \001(\004\022\023\n\013only_public\030\003 \001(\010\0326\n\013PackageInfo"
+      "\022\021\n\tpackageid\030\001 \001(\r\022\024\n\014access_token\030\002 \001("
+      "\004\"\325\004\n!CMsgClientPICSProductInfoResponse\022"
+      "D\n\004apps\030\001 \003(\01326.proto.steam.CMsgClientPI"
+      "CSProductInfoResponse.AppInfo\022\026\n\016unknown"
+      "_appids\030\002 \003(\r\022L\n\010packages\030\003 \003(\0132:.proto."
+      "steam.CMsgClientPICSProductInfoResponse."
+      "PackageInfo\022\032\n\022unknown_packageids\030\004 \003(\r\022"
+      "\026\n\016meta_data_only\030\005 \001(\010\022\030\n\020response_pend"
+      "ing\030\006 \001(\010\022\025\n\rhttp_min_size\030\007 \001(\r\022\021\n\thttp"
+      "_host\030\010 \001(\t\032\206\001\n\007AppInfo\022\r\n\005appid\030\001 \001(\r\022\025"
+      "\n\rchange_number\030\002 \001(\r\022\025\n\rmissing_token\030\003"
+      " \001(\010\022\013\n\003sha\030\004 \001(\014\022\016\n\006buffer\030\005 \001(\014\022\023\n\013onl"
+      "y_public\030\006 \001(\010\022\014\n\004size\030\007 \001(\r\032y\n\013PackageI"
+      "nfo\022\021\n\tpackageid\030\001 \001(\r\022\025\n\rchange_number\030"
+      "\002 \001(\r\022\025\n\rmissing_token\030\003 \001(\010\022\013\n\003sha\030\004 \001("
+      "\014\022\016\n\006buffer\030\005 \001(\014\022\014\n\004size\030\006 \001(\r:\010\200\265\030\000\210\265\030"
+      "\000\"F\n CMsgClientPICSAccessTokenRequest\022\022\n"
+      "\npackageids\030\001 \003(\r\022\016\n\006appids\030\002 \003(\r\"\367\002\n!CM"
+      "sgClientPICSAccessTokenResponse\022Z\n\025packa"
+      "ge_access_tokens\030\001 \003(\0132;.proto.steam.CMs"
+      "gClientPICSAccessTokenResponse.PackageTo"
+      "ken\022\035\n\025package_denied_tokens\030\002 \003(\r\022R\n\021ap"
+      "p_access_tokens\030\003 \003(\01327.proto.steam.CMsg"
+      "ClientPICSAccessTokenResponse.AppToken\022\031"
+      "\n\021app_denied_tokens\030\004 \003(\r\0327\n\014PackageToke"
+      "n\022\021\n\tpackageid\030\001 \001(\r\022\024\n\014access_token\030\002 \001"
+      "(\004\032/\n\010AppToken\022\r\n\005appid\030\001 \001(\r\022\024\n\014access_"
+      "token\030\002 \001(\004\"D\n\032CMsgClientUFSGetUGCDetail"
+      "s\022&\n\010hcontent\030\001 \001(\006:\0241844674407370955161"
+      "5\"\345\001\n\"CMsgClientUFSGetUGCDetailsResponse"
+      "\022\022\n\007eresult\030\001 \001(\005:\0012\022\013\n\003url\030\002 \001(\t\022\016\n\006app"
+      "_id\030\003 \001(\r\022\020\n\010filename\030\004 \001(\t\022\027\n\017steamid_c"
+      "reator\030\005 \001(\006\022\021\n\tfile_size\030\006 \001(\r\022\034\n\024compr"
+      "essed_file_size\030\007 \001(\r\022\027\n\017rangecheck_host"
+      "\030\010 \001(\t\022\031\n\021file_encoded_sha1\030\t \001(\t\"C\n\036CMs"
+      "gClientUFSGetSingleFileInfo\022\016\n\006app_id\030\001 "
+      "\001(\r\022\021\n\tfile_name\030\002 \001(\t\"\270\001\n&CMsgClientUFS"
+      "GetSingleFileInfoResponse\022\022\n\007eresult\030\001 \001"
+      "(\005:\0012\022\016\n\006app_id\030\002 \001(\r\022\021\n\tfile_name\030\003 \001(\t"
+      "\022\020\n\010sha_file\030\004 \001(\014\022\022\n\ntime_stamp\030\005 \001(\004\022\025"
+      "\n\rraw_file_size\030\006 \001(\r\022\032\n\022is_explicit_del"
+      "ete\030\007 \001(\010\";\n\026CMsgClientUFSShareFile\022\016\n\006a"
+      "pp_id\030\001 \001(\r\022\021\n\tfile_name\030\002 \001(\t\"\\\n\036CMsgCl"
+      "ientUFSShareFileResponse\022\022\n\007eresult\030\001 \001("
+      "\005:\0012\022&\n\010hcontent\030\002 \001(\006:\0241844674407370955"
+      "1615\"3\n\033CMsgClientAMGetClanOfficers\022\024\n\014s"
+      "teamid_clan\030\001 \001(\006\"f\n#CMsgClientAMGetClan"
+      "OfficersResponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\024\n\014"
+      "steamid_clan\030\002 \001(\006\022\025\n\rofficer_count\030\003 \001("
+      "\005\"\234\001\n!CMsgClientAMGetPersonaNameHistory\022"
+      "\020\n\010id_count\030\001 \001(\005\022F\n\003Ids\030\002 \003(\01329.proto.s"
+      "team.CMsgClientAMGetPersonaNameHistory.I"
+      "dInstance\032\035\n\nIdInstance\022\017\n\007steamid\030\001 \001(\006"
+      "\"\333\002\n)CMsgClientAMGetPersonaNameHistoryRe"
+      "sponse\022[\n\tresponses\030\002 \003(\0132H.proto.steam."
+      "CMsgClientAMGetPersonaNameHistoryRespons"
+      "e.NameTableInstance\032\320\001\n\021NameTableInstanc"
+      "e\022\022\n\007eresult\030\001 \001(\005:\0012\022\017\n\007steamid\030\002 \001(\006\022d"
+      "\n\005names\030\003 \003(\0132U.proto.steam.CMsgClientAM"
+      "GetPersonaNameHistoryResponse.NameTableI"
+      "nstance.NameInstance\0320\n\014NameInstance\022\022\n\n"
+      "name_since\030\001 \001(\007\022\014\n\004name\030\002 \001(\t\"E\n\036CMsgCl"
+      "ientDeregisterWithServer\022\023\n\013eservertype\030"
+      "\001 \001(\r\022\016\n\006app_id\030\002 \001(\r\"\276\004\n\023CMsgClientClan"
+      "State\022\024\n\014steamid_clan\030\001 \001(\006\022\027\n\017m_unStatu"
+      "sFlags\030\002 \001(\r\022\032\n\022clan_account_flags\030\003 \001(\r"
+      "\022<\n\tname_info\030\004 \001(\0132).proto.steam.CMsgCl"
+      "ientClanState.NameInfo\022@\n\013user_counts\030\005 "
+      "\001(\0132+.proto.steam.CMsgClientClanState.Us"
+      "erCounts\0226\n\006events\030\006 \003(\0132&.proto.steam.C"
+      "MsgClientClanState.Event\022=\n\rannouncement"
+      "s\030\007 \003(\0132&.proto.steam.CMsgClientClanStat"
+      "e.Event\0321\n\010NameInfo\022\021\n\tclan_name\030\001 \001(\t\022\022"
+      "\n\nsha_avatar\030\002 \001(\014\032P\n\nUserCounts\022\017\n\007memb"
+      "ers\030\001 \001(\r\022\016\n\006online\030\002 \001(\r\022\020\n\010chatting\030\003 "
+      "\001(\r\022\017\n\007in_game\030\004 \001(\r\032`\n\005Event\022\013\n\003gid\030\001 \001"
+      "(\006\022\022\n\nevent_time\030\002 \001(\r\022\020\n\010headline\030\003 \001(\t"
+      "\022\017\n\007game_id\030\004 \001(\006\022\023\n\013just_posted\030\005 \001(\010B\005"
+      "H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 20997);
+      descriptor, 21085);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "steammessages_clientserver.proto", &protobuf_RegisterTypes);
   ::proto::steam::protobuf_steammessages_5fbase_2eproto::AddDescriptors();
@@ -6458,6 +6467,8 @@ void CMsgClientTicketAuthComplete::set_owner_steam_id(::google::protobuf::uint64
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CMsgClientCMList::kCmAddressesFieldNumber;
 const int CMsgClientCMList::kCmPortsFieldNumber;
+const int CMsgClientCMList::kCmWebsocketAddressesFieldNumber;
+const int CMsgClientCMList::kPercentDefaultToWebsocketFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CMsgClientCMList::CMsgClientCMList()
@@ -6474,13 +6485,16 @@ CMsgClientCMList::CMsgClientCMList(const CMsgClientCMList& from)
       _has_bits_(from._has_bits_),
       _cached_size_(0),
       cm_addresses_(from.cm_addresses_),
-      cm_ports_(from.cm_ports_) {
+      cm_ports_(from.cm_ports_),
+      cm_websocket_addresses_(from.cm_websocket_addresses_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  percent_default_to_websocket_ = from.percent_default_to_websocket_;
   // @@protoc_insertion_point(copy_constructor:proto.steam.CMsgClientCMList)
 }
 
 void CMsgClientCMList::SharedCtor() {
   _cached_size_ = 0;
+  percent_default_to_websocket_ = 0u;
 }
 
 CMsgClientCMList::~CMsgClientCMList() {
@@ -6518,6 +6532,8 @@ void CMsgClientCMList::Clear() {
 // @@protoc_insertion_point(message_clear_start:proto.steam.CMsgClientCMList)
   cm_addresses_.Clear();
   cm_ports_.Clear();
+  cm_websocket_addresses_.Clear();
+  percent_default_to_websocket_ = 0u;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -6568,6 +6584,37 @@ bool CMsgClientCMList::MergePartialFromCodedStream(
         break;
       }
 
+      // repeated string cm_websocket_addresses = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_cm_websocket_addresses()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->cm_websocket_addresses(this->cm_websocket_addresses_size() - 1).data(),
+            this->cm_websocket_addresses(this->cm_websocket_addresses_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "proto.steam.CMsgClientCMList.cm_websocket_addresses");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 percent_default_to_websocket = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
+          set_has_percent_default_to_websocket();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &percent_default_to_websocket_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -6608,6 +6655,22 @@ void CMsgClientCMList::SerializeWithCachedSizes(
       2, this->cm_ports(i), output);
   }
 
+  // repeated string cm_websocket_addresses = 3;
+  for (int i = 0, n = this->cm_websocket_addresses_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->cm_websocket_addresses(i).data(), this->cm_websocket_addresses(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CMsgClientCMList.cm_websocket_addresses");
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      3, this->cm_websocket_addresses(i), output);
+  }
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 percent_default_to_websocket = 4;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->percent_default_to_websocket(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -6628,6 +6691,22 @@ void CMsgClientCMList::SerializeWithCachedSizes(
   // repeated uint32 cm_ports = 2;
   target = ::google::protobuf::internal::WireFormatLite::
     WriteUInt32ToArray(2, this->cm_ports_, target);
+
+  // repeated string cm_websocket_addresses = 3;
+  for (int i = 0, n = this->cm_websocket_addresses_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->cm_websocket_addresses(i).data(), this->cm_websocket_addresses(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CMsgClientCMList.cm_websocket_addresses");
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(3, this->cm_websocket_addresses(i), target);
+  }
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 percent_default_to_websocket = 4;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->percent_default_to_websocket(), target);
+  }
 
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
@@ -6664,6 +6743,21 @@ size_t CMsgClientCMList::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  // repeated string cm_websocket_addresses = 3;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->cm_websocket_addresses_size());
+  for (int i = 0, n = this->cm_websocket_addresses_size(); i < n; i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->cm_websocket_addresses(i));
+  }
+
+  // optional uint32 percent_default_to_websocket = 4;
+  if (has_percent_default_to_websocket()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->percent_default_to_websocket());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -6695,6 +6789,10 @@ void CMsgClientCMList::MergeFrom(const CMsgClientCMList& from) {
 
   cm_addresses_.MergeFrom(from.cm_addresses_);
   cm_ports_.MergeFrom(from.cm_ports_);
+  cm_websocket_addresses_.MergeFrom(from.cm_websocket_addresses_);
+  if (from.has_percent_default_to_websocket()) {
+    set_percent_default_to_websocket(from.percent_default_to_websocket());
+  }
 }
 
 void CMsgClientCMList::CopyFrom(const ::google::protobuf::Message& from) {
@@ -6722,6 +6820,8 @@ void CMsgClientCMList::Swap(CMsgClientCMList* other) {
 void CMsgClientCMList::InternalSwap(CMsgClientCMList* other) {
   cm_addresses_.InternalSwap(&other->cm_addresses_);
   cm_ports_.InternalSwap(&other->cm_ports_);
+  cm_websocket_addresses_.InternalSwap(&other->cm_websocket_addresses_);
+  std::swap(percent_default_to_websocket_, other->percent_default_to_websocket_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -6793,6 +6893,99 @@ CMsgClientCMList::cm_ports() const {
 CMsgClientCMList::mutable_cm_ports() {
   // @@protoc_insertion_point(field_mutable_list:proto.steam.CMsgClientCMList.cm_ports)
   return &cm_ports_;
+}
+
+// repeated string cm_websocket_addresses = 3;
+int CMsgClientCMList::cm_websocket_addresses_size() const {
+  return cm_websocket_addresses_.size();
+}
+void CMsgClientCMList::clear_cm_websocket_addresses() {
+  cm_websocket_addresses_.Clear();
+}
+const ::std::string& CMsgClientCMList::cm_websocket_addresses(int index) const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  return cm_websocket_addresses_.Get(index);
+}
+::std::string* CMsgClientCMList::mutable_cm_websocket_addresses(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  return cm_websocket_addresses_.Mutable(index);
+}
+void CMsgClientCMList::set_cm_websocket_addresses(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  cm_websocket_addresses_.Mutable(index)->assign(value);
+}
+#if LANG_CXX11
+void CMsgClientCMList::set_cm_websocket_addresses(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  cm_websocket_addresses_.Mutable(index)->assign(std::move(value));
+}
+#endif
+void CMsgClientCMList::set_cm_websocket_addresses(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  cm_websocket_addresses_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+void CMsgClientCMList::set_cm_websocket_addresses(int index, const char* value, size_t size) {
+  cm_websocket_addresses_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+::std::string* CMsgClientCMList::add_cm_websocket_addresses() {
+  // @@protoc_insertion_point(field_add_mutable:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  return cm_websocket_addresses_.Add();
+}
+void CMsgClientCMList::add_cm_websocket_addresses(const ::std::string& value) {
+  cm_websocket_addresses_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+#if LANG_CXX11
+void CMsgClientCMList::add_cm_websocket_addresses(::std::string&& value) {
+  cm_websocket_addresses_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+#endif
+void CMsgClientCMList::add_cm_websocket_addresses(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  cm_websocket_addresses_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+void CMsgClientCMList::add_cm_websocket_addresses(const char* value, size_t size) {
+  cm_websocket_addresses_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+}
+const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CMsgClientCMList::cm_websocket_addresses() const {
+  // @@protoc_insertion_point(field_list:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  return cm_websocket_addresses_;
+}
+::google::protobuf::RepeatedPtrField< ::std::string>*
+CMsgClientCMList::mutable_cm_websocket_addresses() {
+  // @@protoc_insertion_point(field_mutable_list:proto.steam.CMsgClientCMList.cm_websocket_addresses)
+  return &cm_websocket_addresses_;
+}
+
+// optional uint32 percent_default_to_websocket = 4;
+bool CMsgClientCMList::has_percent_default_to_websocket() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CMsgClientCMList::set_has_percent_default_to_websocket() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CMsgClientCMList::clear_has_percent_default_to_websocket() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CMsgClientCMList::clear_percent_default_to_websocket() {
+  percent_default_to_websocket_ = 0u;
+  clear_has_percent_default_to_websocket();
+}
+::google::protobuf::uint32 CMsgClientCMList::percent_default_to_websocket() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgClientCMList.percent_default_to_websocket)
+  return percent_default_to_websocket_;
+}
+void CMsgClientCMList::set_percent_default_to_websocket(::google::protobuf::uint32 value) {
+  set_has_percent_default_to_websocket();
+  percent_default_to_websocket_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgClientCMList.percent_default_to_websocket)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -50473,6 +50666,7 @@ const int CMsgClientGetClientAppList::kToolsFieldNumber;
 const int CMsgClientGetClientAppList::kGamesFieldNumber;
 const int CMsgClientGetClientAppList::kOnlyInstalledFieldNumber;
 const int CMsgClientGetClientAppList::kOnlyChangingFieldNumber;
+const int CMsgClientGetClientAppList::kComicsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CMsgClientGetClientAppList::CMsgClientGetClientAppList()
@@ -50490,15 +50684,15 @@ CMsgClientGetClientAppList::CMsgClientGetClientAppList(const CMsgClientGetClient
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&media_, &from.media_,
-    reinterpret_cast<char*>(&only_changing_) -
-    reinterpret_cast<char*>(&media_) + sizeof(only_changing_));
+    reinterpret_cast<char*>(&comics_) -
+    reinterpret_cast<char*>(&media_) + sizeof(comics_));
   // @@protoc_insertion_point(copy_constructor:proto.steam.CMsgClientGetClientAppList)
 }
 
 void CMsgClientGetClientAppList::SharedCtor() {
   _cached_size_ = 0;
-  ::memset(&media_, 0, reinterpret_cast<char*>(&only_changing_) -
-    reinterpret_cast<char*>(&media_) + sizeof(only_changing_));
+  ::memset(&media_, 0, reinterpret_cast<char*>(&comics_) -
+    reinterpret_cast<char*>(&media_) + sizeof(comics_));
 }
 
 CMsgClientGetClientAppList::~CMsgClientGetClientAppList() {
@@ -50534,9 +50728,9 @@ CMsgClientGetClientAppList* CMsgClientGetClientAppList::New(::google::protobuf::
 
 void CMsgClientGetClientAppList::Clear() {
 // @@protoc_insertion_point(message_clear_start:proto.steam.CMsgClientGetClientAppList)
-  if (_has_bits_[0 / 32] & 31u) {
-    ::memset(&media_, 0, reinterpret_cast<char*>(&only_changing_) -
-      reinterpret_cast<char*>(&media_) + sizeof(only_changing_));
+  if (_has_bits_[0 / 32] & 63u) {
+    ::memset(&media_, 0, reinterpret_cast<char*>(&comics_) -
+      reinterpret_cast<char*>(&media_) + sizeof(comics_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -50622,6 +50816,20 @@ bool CMsgClientGetClientAppList::MergePartialFromCodedStream(
         break;
       }
 
+      // optional bool comics = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u)) {
+          set_has_comics();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &comics_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -50676,6 +50884,11 @@ void CMsgClientGetClientAppList::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->only_changing(), output);
   }
 
+  // optional bool comics = 6;
+  if (cached_has_bits & 0x00000020u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->comics(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -50715,6 +50928,11 @@ void CMsgClientGetClientAppList::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->only_changing(), target);
   }
 
+  // optional bool comics = 6;
+  if (cached_has_bits & 0x00000020u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->comics(), target);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -50732,7 +50950,7 @@ size_t CMsgClientGetClientAppList::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         unknown_fields());
   }
-  if (_has_bits_[0 / 32] & 31u) {
+  if (_has_bits_[0 / 32] & 63u) {
     // optional bool media = 1;
     if (has_media()) {
       total_size += 1 + 1;
@@ -50755,6 +50973,11 @@ size_t CMsgClientGetClientAppList::ByteSizeLong() const {
 
     // optional bool only_changing = 5;
     if (has_only_changing()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool comics = 6;
+    if (has_comics()) {
       total_size += 1 + 1;
     }
 
@@ -50789,7 +51012,7 @@ void CMsgClientGetClientAppList::MergeFrom(const CMsgClientGetClientAppList& fro
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 31u) {
+  if (cached_has_bits & 63u) {
     if (cached_has_bits & 0x00000001u) {
       media_ = from.media_;
     }
@@ -50804,6 +51027,9 @@ void CMsgClientGetClientAppList::MergeFrom(const CMsgClientGetClientAppList& fro
     }
     if (cached_has_bits & 0x00000010u) {
       only_changing_ = from.only_changing_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      comics_ = from.comics_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -50837,6 +51063,7 @@ void CMsgClientGetClientAppList::InternalSwap(CMsgClientGetClientAppList* other)
   std::swap(games_, other->games_);
   std::swap(only_installed_, other->only_installed_);
   std::swap(only_changing_, other->only_changing_);
+  std::swap(comics_, other->comics_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -50968,6 +51195,30 @@ void CMsgClientGetClientAppList::set_only_changing(bool value) {
   set_has_only_changing();
   only_changing_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CMsgClientGetClientAppList.only_changing)
+}
+
+// optional bool comics = 6;
+bool CMsgClientGetClientAppList::has_comics() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+void CMsgClientGetClientAppList::set_has_comics() {
+  _has_bits_[0] |= 0x00000020u;
+}
+void CMsgClientGetClientAppList::clear_has_comics() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+void CMsgClientGetClientAppList::clear_comics() {
+  comics_ = false;
+  clear_has_comics();
+}
+bool CMsgClientGetClientAppList::comics() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgClientGetClientAppList.comics)
+  return comics_;
+}
+void CMsgClientGetClientAppList::set_comics(bool value) {
+  set_has_comics();
+  comics_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgClientGetClientAppList.comics)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

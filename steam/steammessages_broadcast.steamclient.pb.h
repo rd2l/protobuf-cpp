@@ -110,6 +110,9 @@ extern CBroadcast_SendBroadcastStateToServer_RequestDefaultTypeInternal _CBroadc
 class CBroadcast_SendBroadcastStateToServer_Response;
 class CBroadcast_SendBroadcastStateToServer_ResponseDefaultTypeInternal;
 extern CBroadcast_SendBroadcastStateToServer_ResponseDefaultTypeInternal _CBroadcast_SendBroadcastStateToServer_Response_default_instance_;
+class CBroadcast_SendThumbnailToRelay_Notification;
+class CBroadcast_SendThumbnailToRelay_NotificationDefaultTypeInternal;
+extern CBroadcast_SendThumbnailToRelay_NotificationDefaultTypeInternal _CBroadcast_SendThumbnailToRelay_Notification_default_instance_;
 class CBroadcast_SessionClosed_Notification;
 class CBroadcast_SessionClosed_NotificationDefaultTypeInternal;
 extern CBroadcast_SessionClosed_NotificationDefaultTypeInternal _CBroadcast_SessionClosed_Notification_default_instance_;
@@ -430,6 +433,36 @@ class CBroadcast_BeginBroadcastSession_Response : public ::google::protobuf::Mes
 
   // accessors -------------------------------------------------------
 
+  // optional string thumbnail_upload_address = 2 [(.proto.steam.description) = "Http address to upload the thumbnail data."];
+  bool has_thumbnail_upload_address() const;
+  void clear_thumbnail_upload_address();
+  static const int kThumbnailUploadAddressFieldNumber = 2;
+  const ::std::string& thumbnail_upload_address() const;
+  void set_thumbnail_upload_address(const ::std::string& value);
+  #if LANG_CXX11
+  void set_thumbnail_upload_address(::std::string&& value);
+  #endif
+  void set_thumbnail_upload_address(const char* value);
+  void set_thumbnail_upload_address(const char* value, size_t size);
+  ::std::string* mutable_thumbnail_upload_address();
+  ::std::string* release_thumbnail_upload_address();
+  void set_allocated_thumbnail_upload_address(::std::string* thumbnail_upload_address);
+
+  // optional string thumbnail_upload_token = 3 [(.proto.steam.description) = "token to authorize as broadcaster to upload content to the relay."];
+  bool has_thumbnail_upload_token() const;
+  void clear_thumbnail_upload_token();
+  static const int kThumbnailUploadTokenFieldNumber = 3;
+  const ::std::string& thumbnail_upload_token() const;
+  void set_thumbnail_upload_token(const ::std::string& value);
+  #if LANG_CXX11
+  void set_thumbnail_upload_token(::std::string&& value);
+  #endif
+  void set_thumbnail_upload_token(const char* value);
+  void set_thumbnail_upload_token(const char* value, size_t size);
+  ::std::string* mutable_thumbnail_upload_token();
+  ::std::string* release_thumbnail_upload_token();
+  void set_allocated_thumbnail_upload_token(::std::string* thumbnail_upload_token);
+
   // optional fixed64 broadcast_id = 1;
   bool has_broadcast_id() const;
   void clear_broadcast_id();
@@ -437,15 +470,41 @@ class CBroadcast_BeginBroadcastSession_Response : public ::google::protobuf::Mes
   ::google::protobuf::uint64 broadcast_id() const;
   void set_broadcast_id(::google::protobuf::uint64 value);
 
+  // optional fixed64 thumbnail_broadcast_relay_id = 5 [(.proto.steam.description) = "unique identifier on the broadcast relay"];
+  bool has_thumbnail_broadcast_relay_id() const;
+  void clear_thumbnail_broadcast_relay_id();
+  static const int kThumbnailBroadcastRelayIdFieldNumber = 5;
+  ::google::protobuf::uint64 thumbnail_broadcast_relay_id() const;
+  void set_thumbnail_broadcast_relay_id(::google::protobuf::uint64 value);
+
+  // optional uint32 thumbnail_interval_seconds = 4 [(.proto.steam.description) = "how many seconds between thumbnails"];
+  bool has_thumbnail_interval_seconds() const;
+  void clear_thumbnail_interval_seconds();
+  static const int kThumbnailIntervalSecondsFieldNumber = 4;
+  ::google::protobuf::uint32 thumbnail_interval_seconds() const;
+  void set_thumbnail_interval_seconds(::google::protobuf::uint32 value);
+
   // @@protoc_insertion_point(class_scope:proto.steam.CBroadcast_BeginBroadcastSession_Response)
  private:
   void set_has_broadcast_id();
   void clear_has_broadcast_id();
+  void set_has_thumbnail_upload_address();
+  void clear_has_thumbnail_upload_address();
+  void set_has_thumbnail_upload_token();
+  void clear_has_thumbnail_upload_token();
+  void set_has_thumbnail_interval_seconds();
+  void clear_has_thumbnail_interval_seconds();
+  void set_has_thumbnail_broadcast_relay_id();
+  void clear_has_thumbnail_broadcast_relay_id();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr thumbnail_upload_address_;
+  ::google::protobuf::internal::ArenaStringPtr thumbnail_upload_token_;
   ::google::protobuf::uint64 broadcast_id_;
+  ::google::protobuf::uint64 thumbnail_broadcast_relay_id_;
+  ::google::protobuf::uint32 thumbnail_interval_seconds_;
   friend struct protobuf_steammessages_5fbroadcast_2esteamclient_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -3946,6 +4005,154 @@ class CBroadcast_BroadcastStatus_Notification : public ::google::protobuf::Messa
   ::google::protobuf::int32 num_viewers_;
   friend struct protobuf_steammessages_5fbroadcast_2esteamclient_2eproto::TableStruct;
 };
+// -------------------------------------------------------------------
+
+class CBroadcast_SendThumbnailToRelay_Notification : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CBroadcast_SendThumbnailToRelay_Notification) */ {
+ public:
+  CBroadcast_SendThumbnailToRelay_Notification();
+  virtual ~CBroadcast_SendThumbnailToRelay_Notification();
+
+  CBroadcast_SendThumbnailToRelay_Notification(const CBroadcast_SendThumbnailToRelay_Notification& from);
+
+  inline CBroadcast_SendThumbnailToRelay_Notification& operator=(const CBroadcast_SendThumbnailToRelay_Notification& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CBroadcast_SendThumbnailToRelay_Notification& default_instance();
+
+  static inline const CBroadcast_SendThumbnailToRelay_Notification* internal_default_instance() {
+    return reinterpret_cast<const CBroadcast_SendThumbnailToRelay_Notification*>(
+               &_CBroadcast_SendThumbnailToRelay_Notification_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    33;
+
+  void Swap(CBroadcast_SendThumbnailToRelay_Notification* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CBroadcast_SendThumbnailToRelay_Notification* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CBroadcast_SendThumbnailToRelay_Notification* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CBroadcast_SendThumbnailToRelay_Notification& from);
+  void MergeFrom(const CBroadcast_SendThumbnailToRelay_Notification& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CBroadcast_SendThumbnailToRelay_Notification* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string thumbnail_upload_token = 1;
+  bool has_thumbnail_upload_token() const;
+  void clear_thumbnail_upload_token();
+  static const int kThumbnailUploadTokenFieldNumber = 1;
+  const ::std::string& thumbnail_upload_token() const;
+  void set_thumbnail_upload_token(const ::std::string& value);
+  #if LANG_CXX11
+  void set_thumbnail_upload_token(::std::string&& value);
+  #endif
+  void set_thumbnail_upload_token(const char* value);
+  void set_thumbnail_upload_token(const char* value, size_t size);
+  ::std::string* mutable_thumbnail_upload_token();
+  ::std::string* release_thumbnail_upload_token();
+  void set_allocated_thumbnail_upload_token(::std::string* thumbnail_upload_token);
+
+  // optional bytes thumbnail_data = 3;
+  bool has_thumbnail_data() const;
+  void clear_thumbnail_data();
+  static const int kThumbnailDataFieldNumber = 3;
+  const ::std::string& thumbnail_data() const;
+  void set_thumbnail_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_thumbnail_data(::std::string&& value);
+  #endif
+  void set_thumbnail_data(const char* value);
+  void set_thumbnail_data(const void* value, size_t size);
+  ::std::string* mutable_thumbnail_data();
+  ::std::string* release_thumbnail_data();
+  void set_allocated_thumbnail_data(::std::string* thumbnail_data);
+
+  // optional fixed64 thumbnail_broadcast_relay_id = 2;
+  bool has_thumbnail_broadcast_relay_id() const;
+  void clear_thumbnail_broadcast_relay_id();
+  static const int kThumbnailBroadcastRelayIdFieldNumber = 2;
+  ::google::protobuf::uint64 thumbnail_broadcast_relay_id() const;
+  void set_thumbnail_broadcast_relay_id(::google::protobuf::uint64 value);
+
+  // optional uint32 thumbnail_width = 4;
+  bool has_thumbnail_width() const;
+  void clear_thumbnail_width();
+  static const int kThumbnailWidthFieldNumber = 4;
+  ::google::protobuf::uint32 thumbnail_width() const;
+  void set_thumbnail_width(::google::protobuf::uint32 value);
+
+  // optional uint32 thumbnail_height = 5;
+  bool has_thumbnail_height() const;
+  void clear_thumbnail_height();
+  static const int kThumbnailHeightFieldNumber = 5;
+  ::google::protobuf::uint32 thumbnail_height() const;
+  void set_thumbnail_height(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CBroadcast_SendThumbnailToRelay_Notification)
+ private:
+  void set_has_thumbnail_upload_token();
+  void clear_has_thumbnail_upload_token();
+  void set_has_thumbnail_broadcast_relay_id();
+  void clear_has_thumbnail_broadcast_relay_id();
+  void set_has_thumbnail_data();
+  void clear_has_thumbnail_data();
+  void set_has_thumbnail_width();
+  void clear_has_thumbnail_width();
+  void set_has_thumbnail_height();
+  void clear_has_thumbnail_height();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr thumbnail_upload_token_;
+  ::google::protobuf::internal::ArenaStringPtr thumbnail_data_;
+  ::google::protobuf::uint64 thumbnail_broadcast_relay_id_;
+  ::google::protobuf::uint32 thumbnail_width_;
+  ::google::protobuf::uint32 thumbnail_height_;
+  friend struct protobuf_steammessages_5fbroadcast_2esteamclient_2eproto::TableStruct;
+};
 // ===================================================================
 
 class Broadcast_Stub;
@@ -4148,6 +4355,10 @@ class BroadcastClient : public ::google::protobuf::Service {
                        const ::proto::steam::CBroadcast_BroadcastStatus_Notification* request,
                        ::proto::steam::NoResponse* response,
                        ::google::protobuf::Closure* done);
+  virtual void SendThumbnailToRelay(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CBroadcast_SendThumbnailToRelay_Notification* request,
+                       ::proto::steam::NoResponse* response,
+                       ::google::protobuf::Closure* done);
 
   // implements Service ----------------------------------------------
 
@@ -4199,6 +4410,10 @@ class BroadcastClient_Stub : public BroadcastClient {
                        ::google::protobuf::Closure* done);
   void NotifyBroadcastStatus(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CBroadcast_BroadcastStatus_Notification* request,
+                       ::proto::steam::NoResponse* response,
+                       ::google::protobuf::Closure* done);
+  void SendThumbnailToRelay(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CBroadcast_SendThumbnailToRelay_Notification* request,
                        ::proto::steam::NoResponse* response,
                        ::google::protobuf::Closure* done);
  private:
@@ -4405,13 +4620,13 @@ inline void CBroadcast_BeginBroadcastSession_Request::set_rtmp_token(::google::p
 
 // optional fixed64 broadcast_id = 1;
 inline bool CBroadcast_BeginBroadcastSession_Response::has_broadcast_id() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void CBroadcast_BeginBroadcastSession_Response::set_has_broadcast_id() {
-  _has_bits_[0] |= 0x00000001u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void CBroadcast_BeginBroadcastSession_Response::clear_has_broadcast_id() {
-  _has_bits_[0] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void CBroadcast_BeginBroadcastSession_Response::clear_broadcast_id() {
   broadcast_id_ = GOOGLE_ULONGLONG(0);
@@ -4425,6 +4640,180 @@ inline void CBroadcast_BeginBroadcastSession_Response::set_broadcast_id(::google
   set_has_broadcast_id();
   broadcast_id_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BeginBroadcastSession_Response.broadcast_id)
+}
+
+// optional string thumbnail_upload_address = 2 [(.proto.steam.description) = "Http address to upload the thumbnail data."];
+inline bool CBroadcast_BeginBroadcastSession_Response::has_thumbnail_upload_address() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_has_thumbnail_upload_address() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::clear_has_thumbnail_upload_address() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::clear_thumbnail_upload_address() {
+  thumbnail_upload_address_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_thumbnail_upload_address();
+}
+inline const ::std::string& CBroadcast_BeginBroadcastSession_Response::thumbnail_upload_address() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+  return thumbnail_upload_address_.GetNoArena();
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_address(const ::std::string& value) {
+  set_has_thumbnail_upload_address();
+  thumbnail_upload_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+}
+#if LANG_CXX11
+inline void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_address(::std::string&& value) {
+  set_has_thumbnail_upload_address();
+  thumbnail_upload_address_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+}
+#endif
+inline void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_address(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_thumbnail_upload_address();
+  thumbnail_upload_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_address(const char* value, size_t size) {
+  set_has_thumbnail_upload_address();
+  thumbnail_upload_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+}
+inline ::std::string* CBroadcast_BeginBroadcastSession_Response::mutable_thumbnail_upload_address() {
+  set_has_thumbnail_upload_address();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+  return thumbnail_upload_address_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CBroadcast_BeginBroadcastSession_Response::release_thumbnail_upload_address() {
+  // @@protoc_insertion_point(field_release:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+  clear_has_thumbnail_upload_address();
+  return thumbnail_upload_address_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_allocated_thumbnail_upload_address(::std::string* thumbnail_upload_address) {
+  if (thumbnail_upload_address != NULL) {
+    set_has_thumbnail_upload_address();
+  } else {
+    clear_has_thumbnail_upload_address();
+  }
+  thumbnail_upload_address_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), thumbnail_upload_address);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_address)
+}
+
+// optional string thumbnail_upload_token = 3 [(.proto.steam.description) = "token to authorize as broadcaster to upload content to the relay."];
+inline bool CBroadcast_BeginBroadcastSession_Response::has_thumbnail_upload_token() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_has_thumbnail_upload_token() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::clear_has_thumbnail_upload_token() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::clear_thumbnail_upload_token() {
+  thumbnail_upload_token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_thumbnail_upload_token();
+}
+inline const ::std::string& CBroadcast_BeginBroadcastSession_Response::thumbnail_upload_token() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+  return thumbnail_upload_token_.GetNoArena();
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_token(const ::std::string& value) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+}
+#if LANG_CXX11
+inline void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_token(::std::string&& value) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+}
+#endif
+inline void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_token(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_upload_token(const char* value, size_t size) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+}
+inline ::std::string* CBroadcast_BeginBroadcastSession_Response::mutable_thumbnail_upload_token() {
+  set_has_thumbnail_upload_token();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+  return thumbnail_upload_token_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CBroadcast_BeginBroadcastSession_Response::release_thumbnail_upload_token() {
+  // @@protoc_insertion_point(field_release:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+  clear_has_thumbnail_upload_token();
+  return thumbnail_upload_token_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_allocated_thumbnail_upload_token(::std::string* thumbnail_upload_token) {
+  if (thumbnail_upload_token != NULL) {
+    set_has_thumbnail_upload_token();
+  } else {
+    clear_has_thumbnail_upload_token();
+  }
+  thumbnail_upload_token_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), thumbnail_upload_token);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_upload_token)
+}
+
+// optional uint32 thumbnail_interval_seconds = 4 [(.proto.steam.description) = "how many seconds between thumbnails"];
+inline bool CBroadcast_BeginBroadcastSession_Response::has_thumbnail_interval_seconds() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_has_thumbnail_interval_seconds() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::clear_has_thumbnail_interval_seconds() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::clear_thumbnail_interval_seconds() {
+  thumbnail_interval_seconds_ = 0u;
+  clear_has_thumbnail_interval_seconds();
+}
+inline ::google::protobuf::uint32 CBroadcast_BeginBroadcastSession_Response::thumbnail_interval_seconds() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_interval_seconds)
+  return thumbnail_interval_seconds_;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_interval_seconds(::google::protobuf::uint32 value) {
+  set_has_thumbnail_interval_seconds();
+  thumbnail_interval_seconds_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_interval_seconds)
+}
+
+// optional fixed64 thumbnail_broadcast_relay_id = 5 [(.proto.steam.description) = "unique identifier on the broadcast relay"];
+inline bool CBroadcast_BeginBroadcastSession_Response::has_thumbnail_broadcast_relay_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_has_thumbnail_broadcast_relay_id() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::clear_has_thumbnail_broadcast_relay_id() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::clear_thumbnail_broadcast_relay_id() {
+  thumbnail_broadcast_relay_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_thumbnail_broadcast_relay_id();
+}
+inline ::google::protobuf::uint64 CBroadcast_BeginBroadcastSession_Response::thumbnail_broadcast_relay_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_broadcast_relay_id)
+  return thumbnail_broadcast_relay_id_;
+}
+inline void CBroadcast_BeginBroadcastSession_Response::set_thumbnail_broadcast_relay_id(::google::protobuf::uint64 value) {
+  set_has_thumbnail_broadcast_relay_id();
+  thumbnail_broadcast_relay_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BeginBroadcastSession_Response.thumbnail_broadcast_relay_id)
 }
 
 // -------------------------------------------------------------------
@@ -6920,7 +7309,211 @@ inline void CBroadcast_BroadcastStatus_Notification::set_num_viewers(::google::p
   // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_BroadcastStatus_Notification.num_viewers)
 }
 
+// -------------------------------------------------------------------
+
+// CBroadcast_SendThumbnailToRelay_Notification
+
+// optional string thumbnail_upload_token = 1;
+inline bool CBroadcast_SendThumbnailToRelay_Notification::has_thumbnail_upload_token() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_has_thumbnail_upload_token() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::clear_has_thumbnail_upload_token() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::clear_thumbnail_upload_token() {
+  thumbnail_upload_token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_thumbnail_upload_token();
+}
+inline const ::std::string& CBroadcast_SendThumbnailToRelay_Notification::thumbnail_upload_token() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+  return thumbnail_upload_token_.GetNoArena();
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_upload_token(const ::std::string& value) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+}
+#if LANG_CXX11
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_upload_token(::std::string&& value) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+}
+#endif
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_upload_token(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_upload_token(const char* value, size_t size) {
+  set_has_thumbnail_upload_token();
+  thumbnail_upload_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+}
+inline ::std::string* CBroadcast_SendThumbnailToRelay_Notification::mutable_thumbnail_upload_token() {
+  set_has_thumbnail_upload_token();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+  return thumbnail_upload_token_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CBroadcast_SendThumbnailToRelay_Notification::release_thumbnail_upload_token() {
+  // @@protoc_insertion_point(field_release:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+  clear_has_thumbnail_upload_token();
+  return thumbnail_upload_token_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_allocated_thumbnail_upload_token(::std::string* thumbnail_upload_token) {
+  if (thumbnail_upload_token != NULL) {
+    set_has_thumbnail_upload_token();
+  } else {
+    clear_has_thumbnail_upload_token();
+  }
+  thumbnail_upload_token_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), thumbnail_upload_token);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_upload_token)
+}
+
+// optional fixed64 thumbnail_broadcast_relay_id = 2;
+inline bool CBroadcast_SendThumbnailToRelay_Notification::has_thumbnail_broadcast_relay_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_has_thumbnail_broadcast_relay_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::clear_has_thumbnail_broadcast_relay_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::clear_thumbnail_broadcast_relay_id() {
+  thumbnail_broadcast_relay_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_thumbnail_broadcast_relay_id();
+}
+inline ::google::protobuf::uint64 CBroadcast_SendThumbnailToRelay_Notification::thumbnail_broadcast_relay_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_broadcast_relay_id)
+  return thumbnail_broadcast_relay_id_;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_broadcast_relay_id(::google::protobuf::uint64 value) {
+  set_has_thumbnail_broadcast_relay_id();
+  thumbnail_broadcast_relay_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_broadcast_relay_id)
+}
+
+// optional bytes thumbnail_data = 3;
+inline bool CBroadcast_SendThumbnailToRelay_Notification::has_thumbnail_data() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_has_thumbnail_data() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::clear_has_thumbnail_data() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::clear_thumbnail_data() {
+  thumbnail_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_thumbnail_data();
+}
+inline const ::std::string& CBroadcast_SendThumbnailToRelay_Notification::thumbnail_data() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+  return thumbnail_data_.GetNoArena();
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_data(const ::std::string& value) {
+  set_has_thumbnail_data();
+  thumbnail_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+}
+#if LANG_CXX11
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_data(::std::string&& value) {
+  set_has_thumbnail_data();
+  thumbnail_data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+}
+#endif
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_thumbnail_data();
+  thumbnail_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_data(const void* value, size_t size) {
+  set_has_thumbnail_data();
+  thumbnail_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+}
+inline ::std::string* CBroadcast_SendThumbnailToRelay_Notification::mutable_thumbnail_data() {
+  set_has_thumbnail_data();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+  return thumbnail_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CBroadcast_SendThumbnailToRelay_Notification::release_thumbnail_data() {
+  // @@protoc_insertion_point(field_release:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+  clear_has_thumbnail_data();
+  return thumbnail_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_allocated_thumbnail_data(::std::string* thumbnail_data) {
+  if (thumbnail_data != NULL) {
+    set_has_thumbnail_data();
+  } else {
+    clear_has_thumbnail_data();
+  }
+  thumbnail_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), thumbnail_data);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_data)
+}
+
+// optional uint32 thumbnail_width = 4;
+inline bool CBroadcast_SendThumbnailToRelay_Notification::has_thumbnail_width() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_has_thumbnail_width() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::clear_has_thumbnail_width() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::clear_thumbnail_width() {
+  thumbnail_width_ = 0u;
+  clear_has_thumbnail_width();
+}
+inline ::google::protobuf::uint32 CBroadcast_SendThumbnailToRelay_Notification::thumbnail_width() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_width)
+  return thumbnail_width_;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_width(::google::protobuf::uint32 value) {
+  set_has_thumbnail_width();
+  thumbnail_width_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_width)
+}
+
+// optional uint32 thumbnail_height = 5;
+inline bool CBroadcast_SendThumbnailToRelay_Notification::has_thumbnail_height() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_has_thumbnail_height() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::clear_has_thumbnail_height() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::clear_thumbnail_height() {
+  thumbnail_height_ = 0u;
+  clear_has_thumbnail_height();
+}
+inline ::google::protobuf::uint32 CBroadcast_SendThumbnailToRelay_Notification::thumbnail_height() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_height)
+  return thumbnail_height_;
+}
+inline void CBroadcast_SendThumbnailToRelay_Notification::set_thumbnail_height(::google::protobuf::uint32 value) {
+  set_has_thumbnail_height();
+  thumbnail_height_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CBroadcast_SendThumbnailToRelay_Notification.thumbnail_height)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

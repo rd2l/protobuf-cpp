@@ -379,17 +379,10 @@ class CTwoFactor_Status_Response : public ::google::protobuf::Message /* @@proto
   ::google::protobuf::uint32 revocation_attempts_remaining() const;
   void set_revocation_attempts_remaining(::google::protobuf::uint32 value);
 
-  // optional uint32 external_authenticator_type = 13 [(.proto.steam.description) = "Type of third-party authenticator"];
-  bool has_external_authenticator_type() const;
-  void clear_external_authenticator_type();
-  static const int kExternalAuthenticatorTypeFieldNumber = 13;
-  ::google::protobuf::uint32 external_authenticator_type() const;
-  void set_external_authenticator_type(::google::protobuf::uint32 value);
-
-  // optional uint32 time_transferred = 14 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
+  // optional uint32 time_transferred = 13 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
   bool has_time_transferred() const;
   void clear_time_transferred();
-  static const int kTimeTransferredFieldNumber = 14;
+  static const int kTimeTransferredFieldNumber = 13;
   ::google::protobuf::uint32 time_transferred() const;
   void set_time_transferred(::google::protobuf::uint32 value);
 
@@ -419,8 +412,6 @@ class CTwoFactor_Status_Response : public ::google::protobuf::Message /* @@proto
   void clear_has_classified_agent();
   void set_has_allow_external_authenticator();
   void clear_has_allow_external_authenticator();
-  void set_has_external_authenticator_type();
-  void clear_has_external_authenticator_type();
   void set_has_time_transferred();
   void clear_has_time_transferred();
 
@@ -439,7 +430,6 @@ class CTwoFactor_Status_Response : public ::google::protobuf::Message /* @@proto
   bool allow_external_authenticator_;
   ::google::protobuf::uint32 time_created_;
   ::google::protobuf::uint32 revocation_attempts_remaining_;
-  ::google::protobuf::uint32 external_authenticator_type_;
   ::google::protobuf::uint32 time_transferred_;
   friend struct protobuf_steammessages_5ftwofactor_2esteamclient_2eproto::TableStruct;
 };
@@ -2690,39 +2680,15 @@ inline void CTwoFactor_Status_Response::set_allow_external_authenticator(bool va
   // @@protoc_insertion_point(field_set:proto.steam.CTwoFactor_Status_Response.allow_external_authenticator)
 }
 
-// optional uint32 external_authenticator_type = 13 [(.proto.steam.description) = "Type of third-party authenticator"];
-inline bool CTwoFactor_Status_Response::has_external_authenticator_type() const {
+// optional uint32 time_transferred = 13 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
+inline bool CTwoFactor_Status_Response::has_time_transferred() const {
   return (_has_bits_[0] & 0x00001000u) != 0;
 }
-inline void CTwoFactor_Status_Response::set_has_external_authenticator_type() {
+inline void CTwoFactor_Status_Response::set_has_time_transferred() {
   _has_bits_[0] |= 0x00001000u;
 }
-inline void CTwoFactor_Status_Response::clear_has_external_authenticator_type() {
-  _has_bits_[0] &= ~0x00001000u;
-}
-inline void CTwoFactor_Status_Response::clear_external_authenticator_type() {
-  external_authenticator_type_ = 0u;
-  clear_has_external_authenticator_type();
-}
-inline ::google::protobuf::uint32 CTwoFactor_Status_Response::external_authenticator_type() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CTwoFactor_Status_Response.external_authenticator_type)
-  return external_authenticator_type_;
-}
-inline void CTwoFactor_Status_Response::set_external_authenticator_type(::google::protobuf::uint32 value) {
-  set_has_external_authenticator_type();
-  external_authenticator_type_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CTwoFactor_Status_Response.external_authenticator_type)
-}
-
-// optional uint32 time_transferred = 14 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
-inline bool CTwoFactor_Status_Response::has_time_transferred() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
-}
-inline void CTwoFactor_Status_Response::set_has_time_transferred() {
-  _has_bits_[0] |= 0x00002000u;
-}
 inline void CTwoFactor_Status_Response::clear_has_time_transferred() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void CTwoFactor_Status_Response::clear_time_transferred() {
   time_transferred_ = 0u;

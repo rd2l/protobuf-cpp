@@ -518,18 +518,22 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBrowserCreate, borderless_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBrowserCreate, vroverlay_key_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBrowserCreate, browser_type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBrowserCreate, initial_top_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBrowserCreate, initial_left_),
   4,
   0,
   1,
   7,
   5,
-  11,
+  12,
   6,
   9,
   2,
   8,
   3,
   10,
+  13,
+  11,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBrowserCreateResponse, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBrowserCreateResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1688,117 +1692,117 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 66, 74, sizeof(CMsgMouseWheel)},
   { 77, 86, sizeof(CMsgMouseMove)},
   { 90, 96, sizeof(CMsgMouseLeave)},
-  { 97, 114, sizeof(CMsgBrowserCreate)},
-  { 126, 133, sizeof(CMsgBrowserCreateResponse)},
-  { 135, 141, sizeof(CMsgBrowserRemove)},
-  { 142, 150, sizeof(CMsgSetLocalFileRequestMapping_AdditionalRoute)},
-  { 153, 162, sizeof(CMsgSetLocalFileRequestMapping)},
-  { 166, 179, sizeof(CMsgBrowserErrorStrings)},
-  { 187, 195, sizeof(CMsgBrowserSize)},
-  { 198, 207, sizeof(CMsgPostURL)},
-  { 211, 219, sizeof(CMsgAddHeader)},
-  { 222, 228, sizeof(CMsgStopLoad)},
-  { 229, 235, sizeof(CMsgReload)},
-  { 236, 242, sizeof(CMsgGoForward)},
-  { 243, 249, sizeof(CMsgGoBack)},
-  { 250, 256, sizeof(CMsgClearHistory)},
-  { 257, 263, sizeof(CMsgCopy)},
-  { 264, 270, sizeof(CMsgPaste)},
-  { 271, 278, sizeof(CMsgExecuteJavaScript)},
-  { 280, 287, sizeof(CMsgSetFocus)},
-  { 289, 295, sizeof(CMsgHorizontalScrollBarSize)},
-  { 296, 307, sizeof(CMsgHorizontalScrollBarSizeResponse)},
-  { 313, 319, sizeof(CMsgVerticalScrollBarSize)},
-  { 320, 331, sizeof(CMsgVerticalScrollBarSizeResponse)},
-  { 337, 346, sizeof(CMsgFind)},
-  { 350, 356, sizeof(CMsgStopFind)},
-  { 357, 364, sizeof(CMsgSetHorizontalScroll)},
-  { 366, 373, sizeof(CMsgSetVerticalScroll)},
-  { 375, 382, sizeof(CMsgSetZoomLevel)},
-  { 384, 390, sizeof(CMsgViewSource)},
-  { 391, 398, sizeof(CMsgBrowserReady)},
-  { 400, 411, sizeof(CMsgURLChanged)},
-  { 417, 424, sizeof(CHTMLHeader)},
-  { 426, 438, sizeof(CHTMLPageSecurityInfo)},
-  { 445, 453, sizeof(CMsgFinishedRequest)},
-  { 456, 465, sizeof(CMsgLoadedRequest)},
-  { 469, 477, sizeof(CMsgPageSecurity)},
-  { 480, 490, sizeof(CMsgStartRequest)},
-  { 495, 502, sizeof(CMsgStartRequestResponse)},
-  { 504, 510, sizeof(CMsgShowPopup)},
-  { 511, 517, sizeof(CMsgHidePopup)},
-  { 518, 528, sizeof(CMsgSizePopup)},
-  { 533, 541, sizeof(CMsgOpenNewTab)},
-  { 544, 556, sizeof(CMsgPopupHTMLWindow)},
-  { 563, 570, sizeof(CMsgPopupHTMLWindowResponse)},
-  { 572, 579, sizeof(CMsgSetHTMLTitle)},
-  { 581, 588, sizeof(CMsgLoadingResource)},
-  { 590, 597, sizeof(CMsgStatusText)},
-  { 599, 611, sizeof(CMsgSetCursor)},
-  { 618, 626, sizeof(CMsgFileLoadDialog)},
-  { 629, 636, sizeof(CMsgFileLoadDialogResponse)},
-  { 638, 645, sizeof(CMsgShowToolTip)},
-  { 647, 654, sizeof(CMsgUpdateToolTip)},
-  { 656, 662, sizeof(CMsgHideToolTip)},
-  { 663, 671, sizeof(CMsgSearchResults)},
-  { 674, 680, sizeof(CMsgClose)},
-  { 681, 692, sizeof(CMsgSetSharedPaintBuffers)},
-  { 698, 708, sizeof(CMsgNeedsPaint)},
-  { 713, 724, sizeof(CMsgComboNeedsPaint)},
-  { 730, 736, sizeof(CMsgGetZoom)},
-  { 737, 744, sizeof(CMsgGetZoomResponse)},
-  { 746, 754, sizeof(CMsgLinkAtPosition)},
-  { 757, 768, sizeof(CMsgLinkAtPositionResponse)},
-  { 774, 782, sizeof(CMsgZoomToElementAtPosition)},
-  { 785, 793, sizeof(CMsgZoomToElementAtPositionResponse)},
-  { 796, 805, sizeof(CMsgScalePageToValue)},
-  { 809, 816, sizeof(CMsgScalePageToValueResponse)},
-  { 818, 828, sizeof(CMsgSavePageToJPEG)},
-  { 833, 841, sizeof(CMsgSavePageToJPEGResponse)},
-  { 844, 851, sizeof(CMsgJSAlert)},
-  { 853, 860, sizeof(CMsgJSConfirm)},
-  { 862, 869, sizeof(CMsgJSDialogResponse)},
-  { 871, 879, sizeof(CMsgCanGoBackAndForward)},
-  { 882, 889, sizeof(CMsgOpenSteamURL)},
-  { 891, 903, sizeof(CMsgSetCookie)},
-  { 910, 917, sizeof(CMsgSetTargetFrameRate)},
-  { 919, 925, sizeof(CMsgPauseRepaint)},
-  { 926, 932, sizeof(CMsgFullRepaint)},
-  { 933, 939, sizeof(CMsgRequestFullScreen)},
-  { 940, 947, sizeof(CMsgRequestFullScreenResponse)},
-  { 949, 955, sizeof(CMsgExitFullScreen)},
-  { 956, 963, sizeof(CMsgGetCookiesForURL)},
-  { 965, 974, sizeof(CCookie)},
-  { 978, 986, sizeof(CMsgGetCookiesForURLResponse)},
-  { 989, 1001, sizeof(CMsgNodeHasFocus)},
-  { 1008, 1014, sizeof(CMsgZoomToFocusedElement)},
-  { 1015, 1021, sizeof(CMsgCloseFullScreenFlashIfOpen)},
-  { 1022, 1028, sizeof(CMsgPauseFullScreenFlashMovieIfOpen)},
-  { 1029, 1035, sizeof(CMsgFocusedNodeText)},
-  { 1036, 1043, sizeof(CMsgFocusedNodeTextResponse)},
-  { 1045, 1051, sizeof(CMsgBuildID)},
-  { 1052, 1058, sizeof(CMsgOpenDevTools)},
-  { 1059, 1065, sizeof(CMsgCloseDevTools)},
-  { 1066, 1073, sizeof(CMsgUnlockH264)},
-  { 1075, 1083, sizeof(CMsgScreenInformationChanged)},
-  { 1086, 1092, sizeof(CMsgClearAllCookies)},
-  { 1093, 1100, sizeof(CMsgScreenDPI)},
-  { 1102, 1108, sizeof(CMsgAuthedSteamDomains)},
-  { 1109, 1115, sizeof(CMsgSteamAuthNeeded)},
-  { 1116, 1122, sizeof(CMsgSteamAuthCookiesSet)},
-  { 1123, 1131, sizeof(CMsgJSRegisterMethod)},
-  { 1134, 1141, sizeof(CJSMethodArgument)},
-  { 1143, 1150, sizeof(CMsgJSValue_JSObjectProperty)},
-  { 1152, 1167, sizeof(CMsgJSValue)},
-  { 1177, 1185, sizeof(CMsgJSMethodCall)},
-  { 1188, 1196, sizeof(CMsgJSExecuteCallback)},
-  { 1199, 1206, sizeof(CMsgJSReleaseCallback)},
-  { 1208, 1215, sizeof(CMsgJSRaiseException)},
-  { 1217, 1225, sizeof(CMsgLoadLocalization)},
-  { 1228, 1234, sizeof(CMsgEnableSteamClientAPI)},
-  { 1235, 1243, sizeof(CMsgJumpListLink)},
-  { 1246, 1255, sizeof(CMSgJumpListMRUApp)},
-  { 1259, 1268, sizeof(CMsgSetJumpList)},
+  { 97, 116, sizeof(CMsgBrowserCreate)},
+  { 130, 137, sizeof(CMsgBrowserCreateResponse)},
+  { 139, 145, sizeof(CMsgBrowserRemove)},
+  { 146, 154, sizeof(CMsgSetLocalFileRequestMapping_AdditionalRoute)},
+  { 157, 166, sizeof(CMsgSetLocalFileRequestMapping)},
+  { 170, 183, sizeof(CMsgBrowserErrorStrings)},
+  { 191, 199, sizeof(CMsgBrowserSize)},
+  { 202, 211, sizeof(CMsgPostURL)},
+  { 215, 223, sizeof(CMsgAddHeader)},
+  { 226, 232, sizeof(CMsgStopLoad)},
+  { 233, 239, sizeof(CMsgReload)},
+  { 240, 246, sizeof(CMsgGoForward)},
+  { 247, 253, sizeof(CMsgGoBack)},
+  { 254, 260, sizeof(CMsgClearHistory)},
+  { 261, 267, sizeof(CMsgCopy)},
+  { 268, 274, sizeof(CMsgPaste)},
+  { 275, 282, sizeof(CMsgExecuteJavaScript)},
+  { 284, 291, sizeof(CMsgSetFocus)},
+  { 293, 299, sizeof(CMsgHorizontalScrollBarSize)},
+  { 300, 311, sizeof(CMsgHorizontalScrollBarSizeResponse)},
+  { 317, 323, sizeof(CMsgVerticalScrollBarSize)},
+  { 324, 335, sizeof(CMsgVerticalScrollBarSizeResponse)},
+  { 341, 350, sizeof(CMsgFind)},
+  { 354, 360, sizeof(CMsgStopFind)},
+  { 361, 368, sizeof(CMsgSetHorizontalScroll)},
+  { 370, 377, sizeof(CMsgSetVerticalScroll)},
+  { 379, 386, sizeof(CMsgSetZoomLevel)},
+  { 388, 394, sizeof(CMsgViewSource)},
+  { 395, 402, sizeof(CMsgBrowserReady)},
+  { 404, 415, sizeof(CMsgURLChanged)},
+  { 421, 428, sizeof(CHTMLHeader)},
+  { 430, 442, sizeof(CHTMLPageSecurityInfo)},
+  { 449, 457, sizeof(CMsgFinishedRequest)},
+  { 460, 469, sizeof(CMsgLoadedRequest)},
+  { 473, 481, sizeof(CMsgPageSecurity)},
+  { 484, 494, sizeof(CMsgStartRequest)},
+  { 499, 506, sizeof(CMsgStartRequestResponse)},
+  { 508, 514, sizeof(CMsgShowPopup)},
+  { 515, 521, sizeof(CMsgHidePopup)},
+  { 522, 532, sizeof(CMsgSizePopup)},
+  { 537, 545, sizeof(CMsgOpenNewTab)},
+  { 548, 560, sizeof(CMsgPopupHTMLWindow)},
+  { 567, 574, sizeof(CMsgPopupHTMLWindowResponse)},
+  { 576, 583, sizeof(CMsgSetHTMLTitle)},
+  { 585, 592, sizeof(CMsgLoadingResource)},
+  { 594, 601, sizeof(CMsgStatusText)},
+  { 603, 615, sizeof(CMsgSetCursor)},
+  { 622, 630, sizeof(CMsgFileLoadDialog)},
+  { 633, 640, sizeof(CMsgFileLoadDialogResponse)},
+  { 642, 649, sizeof(CMsgShowToolTip)},
+  { 651, 658, sizeof(CMsgUpdateToolTip)},
+  { 660, 666, sizeof(CMsgHideToolTip)},
+  { 667, 675, sizeof(CMsgSearchResults)},
+  { 678, 684, sizeof(CMsgClose)},
+  { 685, 696, sizeof(CMsgSetSharedPaintBuffers)},
+  { 702, 712, sizeof(CMsgNeedsPaint)},
+  { 717, 728, sizeof(CMsgComboNeedsPaint)},
+  { 734, 740, sizeof(CMsgGetZoom)},
+  { 741, 748, sizeof(CMsgGetZoomResponse)},
+  { 750, 758, sizeof(CMsgLinkAtPosition)},
+  { 761, 772, sizeof(CMsgLinkAtPositionResponse)},
+  { 778, 786, sizeof(CMsgZoomToElementAtPosition)},
+  { 789, 797, sizeof(CMsgZoomToElementAtPositionResponse)},
+  { 800, 809, sizeof(CMsgScalePageToValue)},
+  { 813, 820, sizeof(CMsgScalePageToValueResponse)},
+  { 822, 832, sizeof(CMsgSavePageToJPEG)},
+  { 837, 845, sizeof(CMsgSavePageToJPEGResponse)},
+  { 848, 855, sizeof(CMsgJSAlert)},
+  { 857, 864, sizeof(CMsgJSConfirm)},
+  { 866, 873, sizeof(CMsgJSDialogResponse)},
+  { 875, 883, sizeof(CMsgCanGoBackAndForward)},
+  { 886, 893, sizeof(CMsgOpenSteamURL)},
+  { 895, 907, sizeof(CMsgSetCookie)},
+  { 914, 921, sizeof(CMsgSetTargetFrameRate)},
+  { 923, 929, sizeof(CMsgPauseRepaint)},
+  { 930, 936, sizeof(CMsgFullRepaint)},
+  { 937, 943, sizeof(CMsgRequestFullScreen)},
+  { 944, 951, sizeof(CMsgRequestFullScreenResponse)},
+  { 953, 959, sizeof(CMsgExitFullScreen)},
+  { 960, 967, sizeof(CMsgGetCookiesForURL)},
+  { 969, 978, sizeof(CCookie)},
+  { 982, 990, sizeof(CMsgGetCookiesForURLResponse)},
+  { 993, 1005, sizeof(CMsgNodeHasFocus)},
+  { 1012, 1018, sizeof(CMsgZoomToFocusedElement)},
+  { 1019, 1025, sizeof(CMsgCloseFullScreenFlashIfOpen)},
+  { 1026, 1032, sizeof(CMsgPauseFullScreenFlashMovieIfOpen)},
+  { 1033, 1039, sizeof(CMsgFocusedNodeText)},
+  { 1040, 1047, sizeof(CMsgFocusedNodeTextResponse)},
+  { 1049, 1055, sizeof(CMsgBuildID)},
+  { 1056, 1062, sizeof(CMsgOpenDevTools)},
+  { 1063, 1069, sizeof(CMsgCloseDevTools)},
+  { 1070, 1077, sizeof(CMsgUnlockH264)},
+  { 1079, 1087, sizeof(CMsgScreenInformationChanged)},
+  { 1090, 1096, sizeof(CMsgClearAllCookies)},
+  { 1097, 1104, sizeof(CMsgScreenDPI)},
+  { 1106, 1112, sizeof(CMsgAuthedSteamDomains)},
+  { 1113, 1119, sizeof(CMsgSteamAuthNeeded)},
+  { 1120, 1126, sizeof(CMsgSteamAuthCookiesSet)},
+  { 1127, 1135, sizeof(CMsgJSRegisterMethod)},
+  { 1138, 1145, sizeof(CJSMethodArgument)},
+  { 1147, 1154, sizeof(CMsgJSValue_JSObjectProperty)},
+  { 1156, 1171, sizeof(CMsgJSValue)},
+  { 1181, 1189, sizeof(CMsgJSMethodCall)},
+  { 1192, 1200, sizeof(CMsgJSExecuteCallback)},
+  { 1203, 1210, sizeof(CMsgJSReleaseCallback)},
+  { 1212, 1219, sizeof(CMsgJSRaiseException)},
+  { 1221, 1229, sizeof(CMsgLoadLocalization)},
+  { 1232, 1238, sizeof(CMsgEnableSteamClientAPI)},
+  { 1239, 1247, sizeof(CMsgJumpListLink)},
+  { 1250, 1259, sizeof(CMSgJumpListMRUApp)},
+  { 1263, 1272, sizeof(CMsgSetJumpList)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -2344,7 +2348,7 @@ void AddDescriptorsImpl() {
       "\005\022\021\n\tmodifiers\030\003 \001(\r\"P\n\rCMsgMouseMove\022\026\n"
       "\016browser_handle\030\001 \001(\r\022\t\n\001x\030\002 \001(\005\022\t\n\001y\030\003 "
       "\001(\005\022\021\n\tmodifiers\030\004 \001(\r\"(\n\016CMsgMouseLeave"
-      "\022\026\n\016browser_handle\030\001 \001(\r\"\251\002\n\021CMsgBrowser"
+      "\022\026\n\016browser_handle\030\001 \001(\r\"\334\002\n\021CMsgBrowser"
       "Create\022\022\n\nrequest_id\030\001 \001(\r\022\021\n\tuseragent\030"
       "\003 \001(\t\022\020\n\010user_css\030\005 \001(\t\022\030\n\020native_dropdo"
       "wns\030\006 \001(\010\022\023\n\013dpi_scaling\030\007 \001(\002\022\027\n\toffscr"
@@ -2352,234 +2356,235 @@ void AddDescriptorsImpl() {
       "0\022\031\n\016initial_height\030\n \001(\r:\0010\022\023\n\013window_i"
       "con\030\013 \001(\t\022\031\n\nborderless\030\014 \001(\010:\005false\022\025\n\r"
       "vroverlay_key\030\r \001(\t\022\027\n\014browser_type\030\016 \001("
-      "\r:\0010\"G\n\031CMsgBrowserCreateResponse\022\026\n\016bro"
-      "wser_handle\030\001 \001(\r\022\022\n\nrequest_id\030\002 \001(\r\"+\n"
-      "\021CMsgBrowserRemove\022\026\n\016browser_handle\030\001 \001"
-      "(\r\"\217\002\n\036CMsgSetLocalFileRequestMapping\022\026\n"
-      "\016browser_handle\030\001 \001(\r\022\023\n\013request_url\030\002 \001"
-      "(\t\022\032\n\022default_local_path\030\003 \001(\t\022K\n\006routes"
-      "\030\004 \003(\0132;.proto.steam.CMsgSetLocalFileReq"
-      "uestMapping.AdditionalRoute\032W\n\017Additiona"
-      "lRoute\022\024\n\014relative_url\030\001 \001(\t\022\022\n\nlocal_pa"
-      "th\030\002 \001(\t\022\032\n\022allowed_extensions\030\003 \001(\t\"\271\001\n"
-      "\027CMsgBrowserErrorStrings\022\026\n\016browser_hand"
-      "le\030\001 \001(\r\022\r\n\005title\030\002 \001(\t\022\016\n\006header\030\003 \001(\t\022"
-      "\022\n\ncache_miss\030\004 \001(\t\022\017\n\007bad_url\030\005 \001(\t\022\032\n\022"
-      "connection_problem\030\006 \001(\t\022\025\n\rproxy_proble"
-      "m\030\007 \001(\t\022\017\n\007unknown\030\010 \001(\t\"H\n\017CMsgBrowserS"
-      "ize\022\026\n\016browser_handle\030\001 \001(\r\022\r\n\005width\030\002 \001"
-      "(\r\022\016\n\006height\030\003 \001(\r\"T\n\013CMsgPostURL\022\026\n\016bro"
-      "wser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\014\n\004post\030\003"
-      " \001(\t\022\022\n\npageserial\030\004 \001(\r\"C\n\rCMsgAddHeade"
-      "r\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003key\030\002 \001(\t\022\r"
-      "\n\005value\030\003 \001(\t\"&\n\014CMsgStopLoad\022\026\n\016browser"
-      "_handle\030\001 \001(\r\"$\n\nCMsgReload\022\026\n\016browser_h"
-      "andle\030\001 \001(\r\"\'\n\rCMsgGoForward\022\026\n\016browser_"
-      "handle\030\001 \001(\r\"$\n\nCMsgGoBack\022\026\n\016browser_ha"
-      "ndle\030\001 \001(\r\"*\n\020CMsgClearHistory\022\026\n\016browse"
-      "r_handle\030\001 \001(\r\"\"\n\010CMsgCopy\022\026\n\016browser_ha"
-      "ndle\030\001 \001(\r\"#\n\tCMsgPaste\022\026\n\016browser_handl"
-      "e\030\001 \001(\r\"\?\n\025CMsgExecuteJavaScript\022\026\n\016brow"
-      "ser_handle\030\001 \001(\r\022\016\n\006script\030\002 \001(\t\"5\n\014CMsg"
-      "SetFocus\022\026\n\016browser_handle\030\001 \001(\r\022\r\n\005focu"
-      "s\030\002 \001(\010\"5\n\033CMsgHorizontalScrollBarSize\022\026"
-      "\n\016browser_handle\030\001 \001(\r\"\223\001\n#CMsgHorizonta"
-      "lScrollBarSizeResponse\022\026\n\016browser_handle"
-      "\030\001 \001(\r\022\022\n\nscroll_max\030\006 \001(\r\022\016\n\006scroll\030\007 \001"
-      "(\r\022\014\n\004zoom\030\010 \001(\002\022\017\n\007visible\030\t \001(\010\022\021\n\tpag"
-      "e_size\030\n \001(\r\"3\n\031CMsgVerticalScrollBarSiz"
-      "e\022\026\n\016browser_handle\030\001 \001(\r\"\221\001\n!CMsgVertic"
-      "alScrollBarSizeResponse\022\026\n\016browser_handl"
-      "e\030\001 \001(\r\022\022\n\nscroll_max\030\006 \001(\r\022\016\n\006scroll\030\007 "
-      "\001(\r\022\014\n\004zoom\030\010 \001(\002\022\017\n\007visible\030\t \001(\010\022\021\n\tpa"
-      "ge_size\030\n \001(\r\"X\n\010CMsgFind\022\026\n\016browser_han"
-      "dle\030\001 \001(\r\022\014\n\004find\030\002 \001(\t\022\016\n\006infind\030\003 \001(\010\022"
-      "\026\n\007reverse\030\004 \001(\010:\005false\"&\n\014CMsgStopFind\022"
-      "\026\n\016browser_handle\030\001 \001(\r\"A\n\027CMsgSetHorizo"
-      "ntalScroll\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006sc"
-      "roll\030\002 \001(\r\"\?\n\025CMsgSetVerticalScroll\022\026\n\016b"
-      "rowser_handle\030\001 \001(\r\022\016\n\006scroll\030\002 \001(\r\"8\n\020C"
-      "MsgSetZoomLevel\022\026\n\016browser_handle\030\001 \001(\r\022"
-      "\014\n\004zoom\030\002 \001(\r\"(\n\016CMsgViewSource\022\026\n\016brows"
-      "er_handle\030\001 \001(\r\"B\n\020CMsgBrowserReady\022\026\n\016b"
-      "rowser_handle\030\001 \001(\r\022\026\n\016vr_overlay_key\030\002 "
-      "\001(\t\"\207\001\n\016CMsgURLChanged\022\026\n\016browser_handle"
-      "\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\020\n\010postData\030\003 \001(\t\022\023\n"
-      "\013bIsRedirect\030\004 \001(\010\022\021\n\tpagetitle\030\005 \001(\t\022\026\n"
-      "\016bNewNavigation\030\006 \001(\010\")\n\013CHTMLHeader\022\013\n\003"
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\274\001\n\025CHTMLPageSe"
-      "curityInfo\022\030\n\tbIsSecure\030\001 \001(\010:\005false\022\034\n\r"
-      "bHasCertError\030\002 \001(\010:\005false\022\022\n\nissuerName"
-      "\030\003 \001(\t\022\020\n\010certName\030\004 \001(\t\022\025\n\ncertExpiry\030\005"
-      " \001(\005:\0010\022\024\n\tnCertBits\030\006 \001(\005:\0010\022\030\n\tbIsEVCe"
-      "rt\030\007 \001(\010:\005false\"M\n\023CMsgFinishedRequest\022\026"
-      "\n\016browser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\021\n\tp"
-      "ageTitle\030\003 \001(\t\"v\n\021CMsgLoadedRequest\022\026\n\016b"
-      "rowser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\021\n\tpage"
-      "Title\030\003 \001(\t\022)\n\007headers\030\005 \003(\0132\030.proto.ste"
-      "am.CHTMLHeader\"r\n\020CMsgPageSecurity\022\026\n\016br"
-      "owser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\0229\n\rsecur"
-      "ity_info\030\003 \001(\0132\".proto.steam.CHTMLPageSe"
-      "curityInfo\"n\n\020CMsgStartRequest\022\026\n\016browse"
-      "r_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\016\n\006target\030\003 "
-      "\001(\t\022\020\n\010postData\030\004 \001(\t\022\023\n\013bIsRedirect\030\005 \001"
-      "(\010\"B\n\030CMsgStartRequestResponse\022\026\n\016browse"
-      "r_handle\030\001 \001(\r\022\016\n\006bAllow\030\002 \001(\010\"\'\n\rCMsgSh"
-      "owPopup\022\026\n\016browser_handle\030\001 \001(\r\"\'\n\rCMsgH"
-      "idePopup\022\026\n\016browser_handle\030\001 \001(\r\"Y\n\rCMsg"
-      "SizePopup\022\026\n\016browser_handle\030\001 \001(\r\022\t\n\001x\030\002"
-      " \001(\r\022\t\n\001y\030\003 \001(\r\022\014\n\004wide\030\004 \001(\r\022\014\n\004tall\030\005 "
-      "\001(\r\"J\n\016CMsgOpenNewTab\022\026\n\016browser_handle\030"
-      "\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\023\n\013bForeground\030\003 \001(\010\""
-      "\201\001\n\023CMsgPopupHTMLWindow\022\026\n\016browser_handl"
-      "e\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\t\n\001x\030\003 \001(\r\022\t\n\001y\030\004 \001"
-      "(\r\022\014\n\004wide\030\005 \001(\r\022\014\n\004tall\030\006 \001(\r\022\023\n\013popup_"
-      "index\030\007 \001(\r\"E\n\033CMsgPopupHTMLWindowRespon"
-      "se\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006bAllow\030\002 \001"
-      "(\010\"9\n\020CMsgSetHTMLTitle\022\026\n\016browser_handle"
-      "\030\001 \001(\r\022\r\n\005title\030\002 \001(\t\":\n\023CMsgLoadingReso"
-      "urce\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001("
-      "\t\"6\n\016CMsgStatusText\022\026\n\016browser_handle\030\001 "
-      "\001(\r\022\014\n\004text\030\002 \001(\t\"\214\001\n\rCMsgSetCursor\022\026\n\016b"
-      "rowser_handle\030\001 \001(\r\022\016\n\006cursor\030\002 \001(\r\022\023\n\013c"
-      "ustom_data\030\003 \001(\014\022\014\n\004wide\030\004 \001(\r\022\014\n\004tall\030\005"
-      " \001(\r\022\020\n\010xhotspot\030\006 \001(\r\022\020\n\010yhotspot\030\007 \001(\r"
-      "\"P\n\022CMsgFileLoadDialog\022\026\n\016browser_handle"
-      "\030\001 \001(\r\022\r\n\005title\030\002 \001(\t\022\023\n\013initialFile\030\003 \001"
-      "(\t\"C\n\032CMsgFileLoadDialogResponse\022\026\n\016brow"
-      "ser_handle\030\001 \001(\r\022\r\n\005files\030\002 \003(\t\"7\n\017CMsgS"
-      "howToolTip\022\026\n\016browser_handle\030\001 \001(\r\022\014\n\004te"
-      "xt\030\002 \001(\t\"9\n\021CMsgUpdateToolTip\022\026\n\016browser"
-      "_handle\030\001 \001(\r\022\014\n\004text\030\002 \001(\t\")\n\017CMsgHideT"
-      "oolTip\022\026\n\016browser_handle\030\001 \001(\r\"Q\n\021CMsgSe"
-      "archResults\022\026\n\016browser_handle\030\001 \001(\r\022\023\n\013a"
-      "ctiveMatch\030\002 \001(\005\022\017\n\007results\030\003 \001(\005\"#\n\tCMs"
-      "gClose\022\026\n\016browser_handle\030\001 \001(\r\"\212\001\n\031CMsgS"
-      "etSharedPaintBuffers\022\026\n\016browser_handle\030\001"
-      " \001(\r\022\014\n\004wide\030\002 \001(\r\022\014\n\004tall\030\003 \001(\r\022\022\n\nsour"
-      "ce_pid\030\004 \001(\004\022\025\n\rsource_handle\030\005 \001(\004\022\016\n\006h"
-      "andle\030\006 \001(\004\"q\n\016CMsgNeedsPaint\022\026\n\016browser"
-      "_handle\030\001 \001(\r\022\017\n\007scrollx\030\n \001(\r\022\017\n\007scroll"
-      "y\030\013 \001(\r\022\021\n\tpagescale\030\014 \001(\002\022\022\n\npageserial"
-      "\030\017 \001(\r\"\257\001\n\023CMsgComboNeedsPaint\022\026\n\016browse"
-      "r_handle\030\001 \001(\r\022\014\n\004rgba\030\002 \001(\004\022\030\n\rcombobox"
-      "_wide\030\003 \001(\r:\0010\022\030\n\rcombobox_tall\030\004 \001(\r:\0010"
-      "\022\037\n\024shared_memory_handle\030\005 \001(\004:\0010\022\035\n\022sha"
-      "red_memory_size\030\007 \001(\004:\0010\"%\n\013CMsgGetZoom\022"
-      "\026\n\016browser_handle\030\001 \001(\r\";\n\023CMsgGetZoomRe"
-      "sponse\022\026\n\016browser_handle\030\001 \001(\r\022\014\n\004zoom\030\002"
-      " \001(\002\"B\n\022CMsgLinkAtPosition\022\026\n\016browser_ha"
-      "ndle\030\001 \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 \001(\r\"z\n\032CMsg"
-      "LinkAtPositionResponse\022\026\n\016browser_handle"
-      "\030\001 \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 \001(\r\022\013\n\003url\030\004 \001("
-      "\t\022\021\n\tblivelink\030\005 \001(\010\022\016\n\006binput\030\006 \001(\010\"K\n\033"
-      "CMsgZoomToElementAtPosition\022\026\n\016browser_h"
-      "andle\030\001 \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 \001(\r\"^\n#CMs"
-      "gZoomToElementAtPositionResponse\022\026\n\016brow"
-      "ser_handle\030\001 \001(\r\022\r\n\005scale\030\002 \001(\002\022\020\n\010durat"
-      "ion\030\003 \001(\002\"S\n\024CMsgScalePageToValue\022\026\n\016bro"
-      "wser_handle\030\001 \001(\r\022\r\n\005scale\030\002 \001(\002\022\t\n\001x\030\003 "
-      "\001(\002\022\t\n\001y\030\004 \001(\002\"D\n\034CMsgScalePageToValueRe"
-      "sponse\022\026\n\016browser_handle\030\001 \001(\r\022\014\n\004zoom\030\002"
-      " \001(\002\"j\n\022CMsgSavePageToJPEG\022\026\n\016browser_ha"
-      "ndle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\020\n\010filename\030\003 \001("
-      "\t\022\r\n\005width\030\004 \001(\r\022\016\n\006height\030\005 \001(\r\"S\n\032CMsg"
-      "SavePageToJPEGResponse\022\026\n\016browser_handle"
-      "\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\020\n\010filename\030\003 \001(\t\"6\n"
-      "\013CMsgJSAlert\022\026\n\016browser_handle\030\001 \001(\r\022\017\n\007"
-      "message\030\002 \001(\t\"8\n\rCMsgJSConfirm\022\026\n\016browse"
-      "r_handle\030\001 \001(\r\022\017\n\007message\030\002 \001(\t\">\n\024CMsgJ"
-      "SDialogResponse\022\026\n\016browser_handle\030\001 \001(\r\022"
-      "\016\n\006result\030\002 \001(\010\"V\n\027CMsgCanGoBackAndForwa"
-      "rd\022\026\n\016browser_handle\030\001 \001(\r\022\017\n\007bgoback\030\002 "
-      "\001(\010\022\022\n\nbgoforward\030\003 \001(\010\"7\n\020CMsgOpenSteam"
-      "URL\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t"
-      "\"z\n\rCMsgSetCookie\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030"
-      "\002 \001(\t\022\014\n\004path\030\003 \001(\t\022\014\n\004host\030\004 \001(\t\022\017\n\007exp"
-      "ires\030\005 \001(\r\022\016\n\006secure\030\006 \001(\010\022\020\n\010httponly\030\007"
-      " \001(\010\"J\n\026CMsgSetTargetFrameRate\022\026\n\016browse"
-      "r_handle\030\001 \001(\r\022\030\n\020nTargetFrameRate\030\002 \001(\r"
-      "\"*\n\020CMsgPauseRepaint\022\026\n\016browser_handle\030\001"
-      " \001(\r\")\n\017CMsgFullRepaint\022\026\n\016browser_handl"
-      "e\030\001 \001(\r\"/\n\025CMsgRequestFullScreen\022\026\n\016brow"
-      "ser_handle\030\001 \001(\r\"G\n\035CMsgRequestFullScree"
-      "nResponse\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006bal"
-      "low\030\002 \001(\010\",\n\022CMsgExitFullScreen\022\026\n\016brows"
-      "er_handle\030\001 \001(\r\";\n\024CMsgGetCookiesForURL\022"
-      "\026\n\016browser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\"D\n\007"
-      "CCookie\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022\016\n\006"
-      "domain\030\003 \001(\t\022\014\n\004path\030\004 \001(\t\"j\n\034CMsgGetCoo"
-      "kiesForURLResponse\022\026\n\016browser_handle\030\001 \001"
-      "(\r\022\013\n\003url\030\002 \001(\t\022%\n\007cookies\030\003 \003(\0132\024.proto"
-      ".steam.CCookie\"\252\001\n\020CMsgNodeHasFocus\022\026\n\016b"
-      "rowser_handle\030\001 \001(\r\022\016\n\006bInput\030\002 \001(\010\022\014\n\004n"
-      "ame\030\003 \001(\t\022\026\n\016elementtagname\030\004 \001(\t\022\030\n\020sea"
-      "rchbuttontext\030\005 \001(\t\022\032\n\022bHasMultipleInput"
-      "s\030\006 \001(\010\022\022\n\ninput_type\030\007 \001(\t\"2\n\030CMsgZoomT"
-      "oFocusedElement\022\026\n\016browser_handle\030\001 \001(\r\""
-      "8\n\036CMsgCloseFullScreenFlashIfOpen\022\026\n\016bro"
-      "wser_handle\030\001 \001(\r\"=\n#CMsgPauseFullScreen"
-      "FlashMovieIfOpen\022\026\n\016browser_handle\030\001 \001(\r"
-      "\"-\n\023CMsgFocusedNodeText\022\026\n\016browser_handl"
-      "e\030\001 \001(\r\"D\n\033CMsgFocusedNodeTextResponse\022\026"
-      "\n\016browser_handle\030\001 \001(\r\022\r\n\005value\030\002 \001(\t\"\037\n"
-      "\013CMsgBuildID\022\020\n\010build_id\030\001 \001(\004\"*\n\020CMsgOp"
-      "enDevTools\022\026\n\016browser_handle\030\001 \001(\r\"+\n\021CM"
-      "sgCloseDevTools\022\026\n\016browser_handle\030\001 \001(\r\""
-      "=\n\016CMsgUnlockH264\022\026\n\016browser_handle\030\001 \001("
-      "\r\022\023\n\013unlock_code\030\002 \001(\t\"g\n\034CMsgScreenInfo"
-      "rmationChanged\022\026\n\016browser_handle\030\001 \001(\r\022\026"
-      "\n\016override_width\030\002 \001(\r\022\027\n\017override_heigh"
-      "t\030\003 \001(\r\"-\n\023CMsgClearAllCookies\022\026\n\016browse"
-      "r_handle\030\001 \001(\r\"<\n\rCMsgScreenDPI\022\026\n\016brows"
-      "er_handle\030\001 \001(\r\022\023\n\013dpi_scaling\030\002 \001(\002\")\n\026"
-      "CMsgAuthedSteamDomains\022\017\n\007domains\030\001 \003(\t\""
-      "%\n\023CMsgSteamAuthNeeded\022\016\n\006filler\030\001 \001(\010\"*"
-      "\n\027CMsgSteamAuthCookiesSet\022\017\n\007success\030\001 \001"
-      "(\010\"\226\001\n\024CMsgJSRegisterMethod\022\026\n\016browser_h"
-      "andle\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022X\n\013method_type"
-      "\030\003 \001(\0162\".proto.steam.EJSRegisterMethodTy"
-      "pe:\037k_EJSRegisterMethodType_Invalid\"\?\n\021C"
-      "JSMethodArgument\022\021\n\tjson_data\030\001 \001(\t\022\027\n\017f"
-      "unction_handle\030\002 \001(\004\"\362\002\n\013CMsgJSValue\022\022\n\n"
-      "bool_value\030\001 \001(\010\022\021\n\tint_value\030\002 \001(\005\022\022\n\nu"
-      "int_value\030\003 \001(\r\022\023\n\013float_value\030\004 \001(\002\022\024\n\014"
-      "string_value\030\005 \001(\t\022\027\n\017function_handle\030\006 "
-      "\001(\004\022\020\n\010is_array\030\010 \001(\010\022.\n\014array_values\030\t "
-      "\003(\0132\030.proto.steam.CMsgJSValue\022\021\n\tis_obje"
-      "ct\030\n \001(\010\022D\n\021object_properties\030\013 \003(\0132).pr"
-      "oto.steam.CMsgJSValue.JSObjectProperty\032I"
-      "\n\020JSObjectProperty\022\014\n\004name\030\001 \001(\t\022\'\n\005valu"
-      "e\030\002 \001(\0132\030.proto.steam.CMsgJSValue\"e\n\020CMs"
-      "gJSMethodCall\022\026\n\016browser_handle\030\001 \001(\r\022\014\n"
-      "\004name\030\002 \001(\t\022+\n\targuments\030\003 \003(\0132\030.proto.s"
-      "team.CMsgJSValue\"u\n\025CMsgJSExecuteCallbac"
-      "k\022\026\n\016browser_handle\030\001 \001(\r\022\027\n\017function_ha"
-      "ndle\030\002 \001(\004\022+\n\targuments\030\003 \003(\0132\030.proto.st"
-      "eam.CMsgJSValue\"H\n\025CMsgJSReleaseCallback"
-      "\022\026\n\016browser_handle\030\001 \001(\r\022\027\n\017function_han"
-      "dle\030\002 \001(\004\"A\n\024CMsgJSRaiseException\022\026\n\016bro"
-      "wser_handle\030\001 \001(\r\022\021\n\texception\030\002 \001(\t\"[\n\024"
-      "CMsgLoadLocalization\022\026\n\016browser_handle\030\001"
-      " \001(\r\022\031\n\021localization_path\030\002 \001(\t\022\020\n\010langu"
-      "age\030\003 \001(\t\"2\n\030CMsgEnableSteamClientAPI\022\026\n"
-      "\016browser_handle\030\001 \001(\r\"M\n\020CMsgJumpListLin"
-      "k\022\024\n\014display_name\030\001 \001(\t\022\020\n\010url_link\030\002 \001("
-      "\t\022\021\n\ticon_path\030\003 \001(\t\"^\n\022CMSgJumpListMRUA"
-      "pp\022\r\n\005appid\030\001 \001(\r\022\024\n\014display_name\030\002 \001(\t\022"
-      "\020\n\010url_link\030\003 \001(\t\022\021\n\ticon_path\030\004 \001(\t\"\225\001\n"
-      "\017CMsgSetJumpList\022\022\n\nsteam_path\030\001 \001(\t\022\021\n\t"
-      "mru_title\030\002 \001(\t\022-\n\004apps\030\003 \003(\0132\037.proto.st"
-      "eam.CMSgJumpListMRUApp\022,\n\005links\030\004 \003(\0132\035."
-      "proto.steam.CMsgJumpListLink*\255\001\n\025EJSRegi"
-      "sterMethodType\022#\n\037k_EJSRegisterMethodTyp"
-      "e_Invalid\020\000\022$\n k_EJSRegisterMethodType_F"
-      "unction\020\001\022$\n k_EJSRegisterMethodType_Cal"
-      "lback\020\002\022#\n\037k_EJSRegisterMethodType_Promi"
-      "se\020\003B\005H\001\200\001\000"
+      "\r:\0010\022\027\n\013initial_top\030\017 \001(\005:\002-1\022\030\n\014initial"
+      "_left\030\020 \001(\005:\002-1\"G\n\031CMsgBrowserCreateResp"
+      "onse\022\026\n\016browser_handle\030\001 \001(\r\022\022\n\nrequest_"
+      "id\030\002 \001(\r\"+\n\021CMsgBrowserRemove\022\026\n\016browser"
+      "_handle\030\001 \001(\r\"\217\002\n\036CMsgSetLocalFileReques"
+      "tMapping\022\026\n\016browser_handle\030\001 \001(\r\022\023\n\013requ"
+      "est_url\030\002 \001(\t\022\032\n\022default_local_path\030\003 \001("
+      "\t\022K\n\006routes\030\004 \003(\0132;.proto.steam.CMsgSetL"
+      "ocalFileRequestMapping.AdditionalRoute\032W"
+      "\n\017AdditionalRoute\022\024\n\014relative_url\030\001 \001(\t\022"
+      "\022\n\nlocal_path\030\002 \001(\t\022\032\n\022allowed_extension"
+      "s\030\003 \001(\t\"\271\001\n\027CMsgBrowserErrorStrings\022\026\n\016b"
+      "rowser_handle\030\001 \001(\r\022\r\n\005title\030\002 \001(\t\022\016\n\006he"
+      "ader\030\003 \001(\t\022\022\n\ncache_miss\030\004 \001(\t\022\017\n\007bad_ur"
+      "l\030\005 \001(\t\022\032\n\022connection_problem\030\006 \001(\t\022\025\n\rp"
+      "roxy_problem\030\007 \001(\t\022\017\n\007unknown\030\010 \001(\t\"H\n\017C"
+      "MsgBrowserSize\022\026\n\016browser_handle\030\001 \001(\r\022\r"
+      "\n\005width\030\002 \001(\r\022\016\n\006height\030\003 \001(\r\"T\n\013CMsgPos"
+      "tURL\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001("
+      "\t\022\014\n\004post\030\003 \001(\t\022\022\n\npageserial\030\004 \001(\r\"C\n\rC"
+      "MsgAddHeader\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003"
+      "key\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\"&\n\014CMsgStopLoad"
+      "\022\026\n\016browser_handle\030\001 \001(\r\"$\n\nCMsgReload\022\026"
+      "\n\016browser_handle\030\001 \001(\r\"\'\n\rCMsgGoForward\022"
+      "\026\n\016browser_handle\030\001 \001(\r\"$\n\nCMsgGoBack\022\026\n"
+      "\016browser_handle\030\001 \001(\r\"*\n\020CMsgClearHistor"
+      "y\022\026\n\016browser_handle\030\001 \001(\r\"\"\n\010CMsgCopy\022\026\n"
+      "\016browser_handle\030\001 \001(\r\"#\n\tCMsgPaste\022\026\n\016br"
+      "owser_handle\030\001 \001(\r\"\?\n\025CMsgExecuteJavaScr"
+      "ipt\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006script\030\002 "
+      "\001(\t\"5\n\014CMsgSetFocus\022\026\n\016browser_handle\030\001 "
+      "\001(\r\022\r\n\005focus\030\002 \001(\010\"5\n\033CMsgHorizontalScro"
+      "llBarSize\022\026\n\016browser_handle\030\001 \001(\r\"\223\001\n#CM"
+      "sgHorizontalScrollBarSizeResponse\022\026\n\016bro"
+      "wser_handle\030\001 \001(\r\022\022\n\nscroll_max\030\006 \001(\r\022\016\n"
+      "\006scroll\030\007 \001(\r\022\014\n\004zoom\030\010 \001(\002\022\017\n\007visible\030\t"
+      " \001(\010\022\021\n\tpage_size\030\n \001(\r\"3\n\031CMsgVerticalS"
+      "crollBarSize\022\026\n\016browser_handle\030\001 \001(\r\"\221\001\n"
+      "!CMsgVerticalScrollBarSizeResponse\022\026\n\016br"
+      "owser_handle\030\001 \001(\r\022\022\n\nscroll_max\030\006 \001(\r\022\016"
+      "\n\006scroll\030\007 \001(\r\022\014\n\004zoom\030\010 \001(\002\022\017\n\007visible\030"
+      "\t \001(\010\022\021\n\tpage_size\030\n \001(\r\"X\n\010CMsgFind\022\026\n\016"
+      "browser_handle\030\001 \001(\r\022\014\n\004find\030\002 \001(\t\022\016\n\006in"
+      "find\030\003 \001(\010\022\026\n\007reverse\030\004 \001(\010:\005false\"&\n\014CM"
+      "sgStopFind\022\026\n\016browser_handle\030\001 \001(\r\"A\n\027CM"
+      "sgSetHorizontalScroll\022\026\n\016browser_handle\030"
+      "\001 \001(\r\022\016\n\006scroll\030\002 \001(\r\"\?\n\025CMsgSetVertical"
+      "Scroll\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006scroll"
+      "\030\002 \001(\r\"8\n\020CMsgSetZoomLevel\022\026\n\016browser_ha"
+      "ndle\030\001 \001(\r\022\014\n\004zoom\030\002 \001(\r\"(\n\016CMsgViewSour"
+      "ce\022\026\n\016browser_handle\030\001 \001(\r\"B\n\020CMsgBrowse"
+      "rReady\022\026\n\016browser_handle\030\001 \001(\r\022\026\n\016vr_ove"
+      "rlay_key\030\002 \001(\t\"\207\001\n\016CMsgURLChanged\022\026\n\016bro"
+      "wser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\020\n\010postDa"
+      "ta\030\003 \001(\t\022\023\n\013bIsRedirect\030\004 \001(\010\022\021\n\tpagetit"
+      "le\030\005 \001(\t\022\026\n\016bNewNavigation\030\006 \001(\010\")\n\013CHTM"
+      "LHeader\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\274\001\n\025"
+      "CHTMLPageSecurityInfo\022\030\n\tbIsSecure\030\001 \001(\010"
+      ":\005false\022\034\n\rbHasCertError\030\002 \001(\010:\005false\022\022\n"
+      "\nissuerName\030\003 \001(\t\022\020\n\010certName\030\004 \001(\t\022\025\n\nc"
+      "ertExpiry\030\005 \001(\005:\0010\022\024\n\tnCertBits\030\006 \001(\005:\0010"
+      "\022\030\n\tbIsEVCert\030\007 \001(\010:\005false\"M\n\023CMsgFinish"
+      "edRequest\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003url"
+      "\030\002 \001(\t\022\021\n\tpageTitle\030\003 \001(\t\"v\n\021CMsgLoadedR"
+      "equest\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003url\030\002 "
+      "\001(\t\022\021\n\tpageTitle\030\003 \001(\t\022)\n\007headers\030\005 \003(\0132"
+      "\030.proto.steam.CHTMLHeader\"r\n\020CMsgPageSec"
+      "urity\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001"
+      "(\t\0229\n\rsecurity_info\030\003 \001(\0132\".proto.steam."
+      "CHTMLPageSecurityInfo\"n\n\020CMsgStartReques"
+      "t\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\016"
+      "\n\006target\030\003 \001(\t\022\020\n\010postData\030\004 \001(\t\022\023\n\013bIsR"
+      "edirect\030\005 \001(\010\"B\n\030CMsgStartRequestRespons"
+      "e\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006bAllow\030\002 \001("
+      "\010\"\'\n\rCMsgShowPopup\022\026\n\016browser_handle\030\001 \001"
+      "(\r\"\'\n\rCMsgHidePopup\022\026\n\016browser_handle\030\001 "
+      "\001(\r\"Y\n\rCMsgSizePopup\022\026\n\016browser_handle\030\001"
+      " \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 \001(\r\022\014\n\004wide\030\004 \001(\r"
+      "\022\014\n\004tall\030\005 \001(\r\"J\n\016CMsgOpenNewTab\022\026\n\016brow"
+      "ser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\023\n\013bForegr"
+      "ound\030\003 \001(\010\"\201\001\n\023CMsgPopupHTMLWindow\022\026\n\016br"
+      "owser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\t\n\001x\030\003 \001"
+      "(\r\022\t\n\001y\030\004 \001(\r\022\014\n\004wide\030\005 \001(\r\022\014\n\004tall\030\006 \001("
+      "\r\022\023\n\013popup_index\030\007 \001(\r\"E\n\033CMsgPopupHTMLW"
+      "indowResponse\022\026\n\016browser_handle\030\001 \001(\r\022\016\n"
+      "\006bAllow\030\002 \001(\010\"9\n\020CMsgSetHTMLTitle\022\026\n\016bro"
+      "wser_handle\030\001 \001(\r\022\r\n\005title\030\002 \001(\t\":\n\023CMsg"
+      "LoadingResource\022\026\n\016browser_handle\030\001 \001(\r\022"
+      "\013\n\003url\030\002 \001(\t\"6\n\016CMsgStatusText\022\026\n\016browse"
+      "r_handle\030\001 \001(\r\022\014\n\004text\030\002 \001(\t\"\214\001\n\rCMsgSet"
+      "Cursor\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006cursor"
+      "\030\002 \001(\r\022\023\n\013custom_data\030\003 \001(\014\022\014\n\004wide\030\004 \001("
+      "\r\022\014\n\004tall\030\005 \001(\r\022\020\n\010xhotspot\030\006 \001(\r\022\020\n\010yho"
+      "tspot\030\007 \001(\r\"P\n\022CMsgFileLoadDialog\022\026\n\016bro"
+      "wser_handle\030\001 \001(\r\022\r\n\005title\030\002 \001(\t\022\023\n\013init"
+      "ialFile\030\003 \001(\t\"C\n\032CMsgFileLoadDialogRespo"
+      "nse\022\026\n\016browser_handle\030\001 \001(\r\022\r\n\005files\030\002 \003"
+      "(\t\"7\n\017CMsgShowToolTip\022\026\n\016browser_handle\030"
+      "\001 \001(\r\022\014\n\004text\030\002 \001(\t\"9\n\021CMsgUpdateToolTip"
+      "\022\026\n\016browser_handle\030\001 \001(\r\022\014\n\004text\030\002 \001(\t\")"
+      "\n\017CMsgHideToolTip\022\026\n\016browser_handle\030\001 \001("
+      "\r\"Q\n\021CMsgSearchResults\022\026\n\016browser_handle"
+      "\030\001 \001(\r\022\023\n\013activeMatch\030\002 \001(\005\022\017\n\007results\030\003"
+      " \001(\005\"#\n\tCMsgClose\022\026\n\016browser_handle\030\001 \001("
+      "\r\"\212\001\n\031CMsgSetSharedPaintBuffers\022\026\n\016brows"
+      "er_handle\030\001 \001(\r\022\014\n\004wide\030\002 \001(\r\022\014\n\004tall\030\003 "
+      "\001(\r\022\022\n\nsource_pid\030\004 \001(\004\022\025\n\rsource_handle"
+      "\030\005 \001(\004\022\016\n\006handle\030\006 \001(\004\"q\n\016CMsgNeedsPaint"
+      "\022\026\n\016browser_handle\030\001 \001(\r\022\017\n\007scrollx\030\n \001("
+      "\r\022\017\n\007scrolly\030\013 \001(\r\022\021\n\tpagescale\030\014 \001(\002\022\022\n"
+      "\npageserial\030\017 \001(\r\"\257\001\n\023CMsgComboNeedsPain"
+      "t\022\026\n\016browser_handle\030\001 \001(\r\022\014\n\004rgba\030\002 \001(\004\022"
+      "\030\n\rcombobox_wide\030\003 \001(\r:\0010\022\030\n\rcombobox_ta"
+      "ll\030\004 \001(\r:\0010\022\037\n\024shared_memory_handle\030\005 \001("
+      "\004:\0010\022\035\n\022shared_memory_size\030\007 \001(\004:\0010\"%\n\013C"
+      "MsgGetZoom\022\026\n\016browser_handle\030\001 \001(\r\";\n\023CM"
+      "sgGetZoomResponse\022\026\n\016browser_handle\030\001 \001("
+      "\r\022\014\n\004zoom\030\002 \001(\002\"B\n\022CMsgLinkAtPosition\022\026\n"
+      "\016browser_handle\030\001 \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 "
+      "\001(\r\"z\n\032CMsgLinkAtPositionResponse\022\026\n\016bro"
+      "wser_handle\030\001 \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 \001(\r\022"
+      "\013\n\003url\030\004 \001(\t\022\021\n\tblivelink\030\005 \001(\010\022\016\n\006binpu"
+      "t\030\006 \001(\010\"K\n\033CMsgZoomToElementAtPosition\022\026"
+      "\n\016browser_handle\030\001 \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003"
+      " \001(\r\"^\n#CMsgZoomToElementAtPositionRespo"
+      "nse\022\026\n\016browser_handle\030\001 \001(\r\022\r\n\005scale\030\002 \001"
+      "(\002\022\020\n\010duration\030\003 \001(\002\"S\n\024CMsgScalePageToV"
+      "alue\022\026\n\016browser_handle\030\001 \001(\r\022\r\n\005scale\030\002 "
+      "\001(\002\022\t\n\001x\030\003 \001(\002\022\t\n\001y\030\004 \001(\002\"D\n\034CMsgScalePa"
+      "geToValueResponse\022\026\n\016browser_handle\030\001 \001("
+      "\r\022\014\n\004zoom\030\002 \001(\002\"j\n\022CMsgSavePageToJPEG\022\026\n"
+      "\016browser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\020\n\010fi"
+      "lename\030\003 \001(\t\022\r\n\005width\030\004 \001(\r\022\016\n\006height\030\005 "
+      "\001(\r\"S\n\032CMsgSavePageToJPEGResponse\022\026\n\016bro"
+      "wser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\020\n\010filena"
+      "me\030\003 \001(\t\"6\n\013CMsgJSAlert\022\026\n\016browser_handl"
+      "e\030\001 \001(\r\022\017\n\007message\030\002 \001(\t\"8\n\rCMsgJSConfir"
+      "m\022\026\n\016browser_handle\030\001 \001(\r\022\017\n\007message\030\002 \001"
+      "(\t\">\n\024CMsgJSDialogResponse\022\026\n\016browser_ha"
+      "ndle\030\001 \001(\r\022\016\n\006result\030\002 \001(\010\"V\n\027CMsgCanGoB"
+      "ackAndForward\022\026\n\016browser_handle\030\001 \001(\r\022\017\n"
+      "\007bgoback\030\002 \001(\010\022\022\n\nbgoforward\030\003 \001(\010\"7\n\020CM"
+      "sgOpenSteamURL\022\026\n\016browser_handle\030\001 \001(\r\022\013"
+      "\n\003url\030\002 \001(\t\"z\n\rCMsgSetCookie\022\013\n\003key\030\001 \001("
+      "\t\022\r\n\005value\030\002 \001(\t\022\014\n\004path\030\003 \001(\t\022\014\n\004host\030\004"
+      " \001(\t\022\017\n\007expires\030\005 \001(\r\022\016\n\006secure\030\006 \001(\010\022\020\n"
+      "\010httponly\030\007 \001(\010\"J\n\026CMsgSetTargetFrameRat"
+      "e\022\026\n\016browser_handle\030\001 \001(\r\022\030\n\020nTargetFram"
+      "eRate\030\002 \001(\r\"*\n\020CMsgPauseRepaint\022\026\n\016brows"
+      "er_handle\030\001 \001(\r\")\n\017CMsgFullRepaint\022\026\n\016br"
+      "owser_handle\030\001 \001(\r\"/\n\025CMsgRequestFullScr"
+      "een\022\026\n\016browser_handle\030\001 \001(\r\"G\n\035CMsgReque"
+      "stFullScreenResponse\022\026\n\016browser_handle\030\001"
+      " \001(\r\022\016\n\006ballow\030\002 \001(\010\",\n\022CMsgExitFullScre"
+      "en\022\026\n\016browser_handle\030\001 \001(\r\";\n\024CMsgGetCoo"
+      "kiesForURL\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003ur"
+      "l\030\002 \001(\t\"D\n\007CCookie\022\014\n\004name\030\001 \001(\t\022\r\n\005valu"
+      "e\030\002 \001(\t\022\016\n\006domain\030\003 \001(\t\022\014\n\004path\030\004 \001(\t\"j\n"
+      "\034CMsgGetCookiesForURLResponse\022\026\n\016browser"
+      "_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022%\n\007cookies\030\003 "
+      "\003(\0132\024.proto.steam.CCookie\"\252\001\n\020CMsgNodeHa"
+      "sFocus\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006bInput"
+      "\030\002 \001(\010\022\014\n\004name\030\003 \001(\t\022\026\n\016elementtagname\030\004"
+      " \001(\t\022\030\n\020searchbuttontext\030\005 \001(\t\022\032\n\022bHasMu"
+      "ltipleInputs\030\006 \001(\010\022\022\n\ninput_type\030\007 \001(\t\"2"
+      "\n\030CMsgZoomToFocusedElement\022\026\n\016browser_ha"
+      "ndle\030\001 \001(\r\"8\n\036CMsgCloseFullScreenFlashIf"
+      "Open\022\026\n\016browser_handle\030\001 \001(\r\"=\n#CMsgPaus"
+      "eFullScreenFlashMovieIfOpen\022\026\n\016browser_h"
+      "andle\030\001 \001(\r\"-\n\023CMsgFocusedNodeText\022\026\n\016br"
+      "owser_handle\030\001 \001(\r\"D\n\033CMsgFocusedNodeTex"
+      "tResponse\022\026\n\016browser_handle\030\001 \001(\r\022\r\n\005val"
+      "ue\030\002 \001(\t\"\037\n\013CMsgBuildID\022\020\n\010build_id\030\001 \001("
+      "\004\"*\n\020CMsgOpenDevTools\022\026\n\016browser_handle\030"
+      "\001 \001(\r\"+\n\021CMsgCloseDevTools\022\026\n\016browser_ha"
+      "ndle\030\001 \001(\r\"=\n\016CMsgUnlockH264\022\026\n\016browser_"
+      "handle\030\001 \001(\r\022\023\n\013unlock_code\030\002 \001(\t\"g\n\034CMs"
+      "gScreenInformationChanged\022\026\n\016browser_han"
+      "dle\030\001 \001(\r\022\026\n\016override_width\030\002 \001(\r\022\027\n\017ove"
+      "rride_height\030\003 \001(\r\"-\n\023CMsgClearAllCookie"
+      "s\022\026\n\016browser_handle\030\001 \001(\r\"<\n\rCMsgScreenD"
+      "PI\022\026\n\016browser_handle\030\001 \001(\r\022\023\n\013dpi_scalin"
+      "g\030\002 \001(\002\")\n\026CMsgAuthedSteamDomains\022\017\n\007dom"
+      "ains\030\001 \003(\t\"%\n\023CMsgSteamAuthNeeded\022\016\n\006fil"
+      "ler\030\001 \001(\010\"*\n\027CMsgSteamAuthCookiesSet\022\017\n\007"
+      "success\030\001 \001(\010\"\226\001\n\024CMsgJSRegisterMethod\022\026"
+      "\n\016browser_handle\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022X\n\013"
+      "method_type\030\003 \001(\0162\".proto.steam.EJSRegis"
+      "terMethodType:\037k_EJSRegisterMethodType_I"
+      "nvalid\"\?\n\021CJSMethodArgument\022\021\n\tjson_data"
+      "\030\001 \001(\t\022\027\n\017function_handle\030\002 \001(\004\"\362\002\n\013CMsg"
+      "JSValue\022\022\n\nbool_value\030\001 \001(\010\022\021\n\tint_value"
+      "\030\002 \001(\005\022\022\n\nuint_value\030\003 \001(\r\022\023\n\013float_valu"
+      "e\030\004 \001(\002\022\024\n\014string_value\030\005 \001(\t\022\027\n\017functio"
+      "n_handle\030\006 \001(\004\022\020\n\010is_array\030\010 \001(\010\022.\n\014arra"
+      "y_values\030\t \003(\0132\030.proto.steam.CMsgJSValue"
+      "\022\021\n\tis_object\030\n \001(\010\022D\n\021object_properties"
+      "\030\013 \003(\0132).proto.steam.CMsgJSValue.JSObjec"
+      "tProperty\032I\n\020JSObjectProperty\022\014\n\004name\030\001 "
+      "\001(\t\022\'\n\005value\030\002 \001(\0132\030.proto.steam.CMsgJSV"
+      "alue\"e\n\020CMsgJSMethodCall\022\026\n\016browser_hand"
+      "le\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022+\n\targuments\030\003 \003("
+      "\0132\030.proto.steam.CMsgJSValue\"u\n\025CMsgJSExe"
+      "cuteCallback\022\026\n\016browser_handle\030\001 \001(\r\022\027\n\017"
+      "function_handle\030\002 \001(\004\022+\n\targuments\030\003 \003(\013"
+      "2\030.proto.steam.CMsgJSValue\"H\n\025CMsgJSRele"
+      "aseCallback\022\026\n\016browser_handle\030\001 \001(\r\022\027\n\017f"
+      "unction_handle\030\002 \001(\004\"A\n\024CMsgJSRaiseExcep"
+      "tion\022\026\n\016browser_handle\030\001 \001(\r\022\021\n\texceptio"
+      "n\030\002 \001(\t\"[\n\024CMsgLoadLocalization\022\026\n\016brows"
+      "er_handle\030\001 \001(\r\022\031\n\021localization_path\030\002 \001"
+      "(\t\022\020\n\010language\030\003 \001(\t\"2\n\030CMsgEnableSteamC"
+      "lientAPI\022\026\n\016browser_handle\030\001 \001(\r\"M\n\020CMsg"
+      "JumpListLink\022\024\n\014display_name\030\001 \001(\t\022\020\n\010ur"
+      "l_link\030\002 \001(\t\022\021\n\ticon_path\030\003 \001(\t\"^\n\022CMSgJ"
+      "umpListMRUApp\022\r\n\005appid\030\001 \001(\r\022\024\n\014display_"
+      "name\030\002 \001(\t\022\020\n\010url_link\030\003 \001(\t\022\021\n\ticon_pat"
+      "h\030\004 \001(\t\"\225\001\n\017CMsgSetJumpList\022\022\n\nsteam_pat"
+      "h\030\001 \001(\t\022\021\n\tmru_title\030\002 \001(\t\022-\n\004apps\030\003 \003(\013"
+      "2\037.proto.steam.CMSgJumpListMRUApp\022,\n\005lin"
+      "ks\030\004 \003(\0132\035.proto.steam.CMsgJumpListLink*"
+      "\255\001\n\025EJSRegisterMethodType\022#\n\037k_EJSRegist"
+      "erMethodType_Invalid\020\000\022$\n k_EJSRegisterM"
+      "ethodType_Function\020\001\022$\n k_EJSRegisterMet"
+      "hodType_Callback\020\002\022#\n\037k_EJSRegisterMetho"
+      "dType_Promise\020\003B\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 9971);
+      descriptor, 10022);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "htmlmessages.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -6131,6 +6136,8 @@ const int CMsgBrowserCreate::kWindowIconFieldNumber;
 const int CMsgBrowserCreate::kBorderlessFieldNumber;
 const int CMsgBrowserCreate::kVroverlayKeyFieldNumber;
 const int CMsgBrowserCreate::kBrowserTypeFieldNumber;
+const int CMsgBrowserCreate::kInitialTopFieldNumber;
+const int CMsgBrowserCreate::kInitialLeftFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CMsgBrowserCreate::CMsgBrowserCreate()
@@ -6164,8 +6171,8 @@ CMsgBrowserCreate::CMsgBrowserCreate(const CMsgBrowserCreate& from)
     vroverlay_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.vroverlay_key_);
   }
   ::memcpy(&request_id_, &from.request_id_,
-    reinterpret_cast<char*>(&offscreen_) -
-    reinterpret_cast<char*>(&request_id_) + sizeof(offscreen_));
+    reinterpret_cast<char*>(&initial_top_) -
+    reinterpret_cast<char*>(&request_id_) + sizeof(initial_top_));
   // @@protoc_insertion_point(copy_constructor:proto.steam.CMsgBrowserCreate)
 }
 
@@ -6177,7 +6184,9 @@ void CMsgBrowserCreate::SharedCtor() {
   vroverlay_key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&request_id_, 0, reinterpret_cast<char*>(&browser_type_) -
     reinterpret_cast<char*>(&request_id_) + sizeof(browser_type_));
+  initial_left_ = -1;
   offscreen_ = true;
+  initial_top_ = -1;
 }
 
 CMsgBrowserCreate::~CMsgBrowserCreate() {
@@ -6239,10 +6248,12 @@ void CMsgBrowserCreate::Clear() {
     ::memset(&request_id_, 0, reinterpret_cast<char*>(&native_dropdowns_) -
       reinterpret_cast<char*>(&request_id_) + sizeof(native_dropdowns_));
   }
-  if (_has_bits_[8 / 32] & 3840u) {
+  if (_has_bits_[8 / 32] & 16128u) {
     ::memset(&borderless_, 0, reinterpret_cast<char*>(&browser_type_) -
       reinterpret_cast<char*>(&borderless_) + sizeof(browser_type_));
+    initial_left_ = -1;
     offscreen_ = true;
+    initial_top_ = -1;
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -6254,7 +6265,7 @@ bool CMsgBrowserCreate::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:proto.steam.CMsgBrowserCreate)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -6434,6 +6445,34 @@ bool CMsgBrowserCreate::MergePartialFromCodedStream(
         break;
       }
 
+      // optional int32 initial_top = 15 [default = -1];
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(120u)) {
+          set_has_initial_top();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &initial_top_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional int32 initial_left = 16 [default = -1];
+      case 16: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(128u)) {
+          set_has_initial_left();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &initial_left_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -6499,7 +6538,7 @@ void CMsgBrowserCreate::SerializeWithCachedSizes(
   }
 
   // optional bool offscreen = 8 [default = true];
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00001000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->offscreen(), output);
   }
 
@@ -6541,6 +6580,16 @@ void CMsgBrowserCreate::SerializeWithCachedSizes(
   // optional uint32 browser_type = 14 [default = 0];
   if (cached_has_bits & 0x00000400u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(14, this->browser_type(), output);
+  }
+
+  // optional int32 initial_top = 15 [default = -1];
+  if (cached_has_bits & 0x00002000u) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->initial_top(), output);
+  }
+
+  // optional int32 initial_left = 16 [default = -1];
+  if (cached_has_bits & 0x00000800u) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(16, this->initial_left(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -6595,7 +6644,7 @@ void CMsgBrowserCreate::SerializeWithCachedSizes(
   }
 
   // optional bool offscreen = 8 [default = true];
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00001000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->offscreen(), target);
   }
 
@@ -6639,6 +6688,16 @@ void CMsgBrowserCreate::SerializeWithCachedSizes(
   // optional uint32 browser_type = 14 [default = 0];
   if (cached_has_bits & 0x00000400u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(14, this->browser_type(), target);
+  }
+
+  // optional int32 initial_top = 15 [default = -1];
+  if (cached_has_bits & 0x00002000u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->initial_top(), target);
+  }
+
+  // optional int32 initial_left = 16 [default = -1];
+  if (cached_has_bits & 0x00000800u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(16, this->initial_left(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -6712,7 +6771,7 @@ size_t CMsgBrowserCreate::ByteSizeLong() const {
     }
 
   }
-  if (_has_bits_[8 / 32] & 3840u) {
+  if (_has_bits_[8 / 32] & 16128u) {
     // optional bool borderless = 12 [default = false];
     if (has_borderless()) {
       total_size += 1 + 1;
@@ -6732,9 +6791,23 @@ size_t CMsgBrowserCreate::ByteSizeLong() const {
           this->browser_type());
     }
 
+    // optional int32 initial_left = 16 [default = -1];
+    if (has_initial_left()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->initial_left());
+    }
+
     // optional bool offscreen = 8 [default = true];
     if (has_offscreen()) {
       total_size += 1 + 1;
+    }
+
+    // optional int32 initial_top = 15 [default = -1];
+    if (has_initial_top()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->initial_top());
     }
 
   }
@@ -6799,7 +6872,7 @@ void CMsgBrowserCreate::MergeFrom(const CMsgBrowserCreate& from) {
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 3840u) {
+  if (cached_has_bits & 16128u) {
     if (cached_has_bits & 0x00000100u) {
       borderless_ = from.borderless_;
     }
@@ -6810,7 +6883,13 @@ void CMsgBrowserCreate::MergeFrom(const CMsgBrowserCreate& from) {
       browser_type_ = from.browser_type_;
     }
     if (cached_has_bits & 0x00000800u) {
+      initial_left_ = from.initial_left_;
+    }
+    if (cached_has_bits & 0x00001000u) {
       offscreen_ = from.offscreen_;
+    }
+    if (cached_has_bits & 0x00002000u) {
+      initial_top_ = from.initial_top_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -6850,7 +6929,9 @@ void CMsgBrowserCreate::InternalSwap(CMsgBrowserCreate* other) {
   std::swap(borderless_, other->borderless_);
   std::swap(initial_height_, other->initial_height_);
   std::swap(browser_type_, other->browser_type_);
+  std::swap(initial_left_, other->initial_left_);
   std::swap(offscreen_, other->offscreen_);
+  std::swap(initial_top_, other->initial_top_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -7064,13 +7145,13 @@ void CMsgBrowserCreate::set_dpi_scaling(float value) {
 
 // optional bool offscreen = 8 [default = true];
 bool CMsgBrowserCreate::has_offscreen() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 void CMsgBrowserCreate::set_has_offscreen() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 void CMsgBrowserCreate::clear_has_offscreen() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 void CMsgBrowserCreate::clear_offscreen() {
   offscreen_ = true;
@@ -7306,6 +7387,54 @@ void CMsgBrowserCreate::set_browser_type(::google::protobuf::uint32 value) {
   set_has_browser_type();
   browser_type_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CMsgBrowserCreate.browser_type)
+}
+
+// optional int32 initial_top = 15 [default = -1];
+bool CMsgBrowserCreate::has_initial_top() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+void CMsgBrowserCreate::set_has_initial_top() {
+  _has_bits_[0] |= 0x00002000u;
+}
+void CMsgBrowserCreate::clear_has_initial_top() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+void CMsgBrowserCreate::clear_initial_top() {
+  initial_top_ = -1;
+  clear_has_initial_top();
+}
+::google::protobuf::int32 CMsgBrowserCreate::initial_top() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgBrowserCreate.initial_top)
+  return initial_top_;
+}
+void CMsgBrowserCreate::set_initial_top(::google::protobuf::int32 value) {
+  set_has_initial_top();
+  initial_top_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgBrowserCreate.initial_top)
+}
+
+// optional int32 initial_left = 16 [default = -1];
+bool CMsgBrowserCreate::has_initial_left() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+void CMsgBrowserCreate::set_has_initial_left() {
+  _has_bits_[0] |= 0x00000800u;
+}
+void CMsgBrowserCreate::clear_has_initial_left() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+void CMsgBrowserCreate::clear_initial_left() {
+  initial_left_ = -1;
+  clear_has_initial_left();
+}
+::google::protobuf::int32 CMsgBrowserCreate::initial_left() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgBrowserCreate.initial_left)
+  return initial_left_;
+}
+void CMsgBrowserCreate::set_initial_left(::google::protobuf::int32 value) {
+  set_has_initial_left();
+  initial_left_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgBrowserCreate.initial_left)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

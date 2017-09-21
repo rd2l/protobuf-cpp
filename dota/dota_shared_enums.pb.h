@@ -508,27 +508,46 @@ inline bool DOTAJoinLobbyResult_Parse(
   return ::google::protobuf::internal::ParseNamedEnum<DOTAJoinLobbyResult>(
     DOTAJoinLobbyResult_descriptor(), name, value);
 }
-enum SelectionPriorityType {
-  UNDEFINED = 0,
-  RADIANT = 1,
-  DIRE = 2,
-  FIRST_PICK = 3,
-  SECOND_PICK = 4
+enum DOTASelectionPriorityRules {
+  k_DOTASelectionPriorityRules_Manual = 0,
+  k_DOTASelectionPriorityRules_Automatic = 1
 };
-bool SelectionPriorityType_IsValid(int value);
-const SelectionPriorityType SelectionPriorityType_MIN = UNDEFINED;
-const SelectionPriorityType SelectionPriorityType_MAX = SECOND_PICK;
-const int SelectionPriorityType_ARRAYSIZE = SelectionPriorityType_MAX + 1;
+bool DOTASelectionPriorityRules_IsValid(int value);
+const DOTASelectionPriorityRules DOTASelectionPriorityRules_MIN = k_DOTASelectionPriorityRules_Manual;
+const DOTASelectionPriorityRules DOTASelectionPriorityRules_MAX = k_DOTASelectionPriorityRules_Automatic;
+const int DOTASelectionPriorityRules_ARRAYSIZE = DOTASelectionPriorityRules_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor* SelectionPriorityType_descriptor();
-inline const ::std::string& SelectionPriorityType_Name(SelectionPriorityType value) {
+const ::google::protobuf::EnumDescriptor* DOTASelectionPriorityRules_descriptor();
+inline const ::std::string& DOTASelectionPriorityRules_Name(DOTASelectionPriorityRules value) {
   return ::google::protobuf::internal::NameOfEnum(
-    SelectionPriorityType_descriptor(), value);
+    DOTASelectionPriorityRules_descriptor(), value);
 }
-inline bool SelectionPriorityType_Parse(
-    const ::std::string& name, SelectionPriorityType* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<SelectionPriorityType>(
-    SelectionPriorityType_descriptor(), name, value);
+inline bool DOTASelectionPriorityRules_Parse(
+    const ::std::string& name, DOTASelectionPriorityRules* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<DOTASelectionPriorityRules>(
+    DOTASelectionPriorityRules_descriptor(), name, value);
+}
+enum DOTASelectionPriorityChoice {
+  k_DOTASelectionPriorityChoice_Invalid = 0,
+  k_DOTASelectionPriorityChoice_FirstPick = 1,
+  k_DOTASelectionPriorityChoice_SecondPick = 2,
+  k_DOTASelectionPriorityChoice_Radiant = 3,
+  k_DOTASelectionPriorityChoice_Dire = 4
+};
+bool DOTASelectionPriorityChoice_IsValid(int value);
+const DOTASelectionPriorityChoice DOTASelectionPriorityChoice_MIN = k_DOTASelectionPriorityChoice_Invalid;
+const DOTASelectionPriorityChoice DOTASelectionPriorityChoice_MAX = k_DOTASelectionPriorityChoice_Dire;
+const int DOTASelectionPriorityChoice_ARRAYSIZE = DOTASelectionPriorityChoice_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* DOTASelectionPriorityChoice_descriptor();
+inline const ::std::string& DOTASelectionPriorityChoice_Name(DOTASelectionPriorityChoice value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    DOTASelectionPriorityChoice_descriptor(), value);
+}
+inline bool DOTASelectionPriorityChoice_Parse(
+    const ::std::string& name, DOTASelectionPriorityChoice* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<DOTASelectionPriorityChoice>(
+    DOTASelectionPriorityChoice_descriptor(), name, value);
 }
 enum DOTAMatchVote {
   DOTAMatchVote_INVALID = 0,
@@ -786,6 +805,26 @@ inline bool EMatchOutcome_Parse(
     const ::std::string& name, EMatchOutcome* value) {
   return ::google::protobuf::internal::ParseNamedEnum<EMatchOutcome>(
     EMatchOutcome_descriptor(), name, value);
+}
+enum EBadgeType {
+  k_EBadgeType_TI7_Midweek = 1,
+  k_EBadgeType_TI7_Finals = 2,
+  k_EBadgeType_TI7_AllEvent = 3
+};
+bool EBadgeType_IsValid(int value);
+const EBadgeType EBadgeType_MIN = k_EBadgeType_TI7_Midweek;
+const EBadgeType EBadgeType_MAX = k_EBadgeType_TI7_AllEvent;
+const int EBadgeType_ARRAYSIZE = EBadgeType_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* EBadgeType_descriptor();
+inline const ::std::string& EBadgeType_Name(EBadgeType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    EBadgeType_descriptor(), value);
+}
+inline bool EBadgeType_Parse(
+    const ::std::string& name, EBadgeType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<EBadgeType>(
+    EBadgeType_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -2167,10 +2206,15 @@ template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::DOTAJoinLobbyResult>() {
   return ::proto::dota::DOTAJoinLobbyResult_descriptor();
 }
-template <> struct is_proto_enum< ::proto::dota::SelectionPriorityType> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::proto::dota::DOTASelectionPriorityRules> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::SelectionPriorityType>() {
-  return ::proto::dota::SelectionPriorityType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::DOTASelectionPriorityRules>() {
+  return ::proto::dota::DOTASelectionPriorityRules_descriptor();
+}
+template <> struct is_proto_enum< ::proto::dota::DOTASelectionPriorityChoice> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::DOTASelectionPriorityChoice>() {
+  return ::proto::dota::DOTASelectionPriorityChoice_descriptor();
 }
 template <> struct is_proto_enum< ::proto::dota::DOTAMatchVote> : ::google::protobuf::internal::true_type {};
 template <>
@@ -2221,6 +2265,11 @@ template <> struct is_proto_enum< ::proto::dota::EMatchOutcome> : ::google::prot
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::EMatchOutcome>() {
   return ::proto::dota::EMatchOutcome_descriptor();
+}
+template <> struct is_proto_enum< ::proto::dota::EBadgeType> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::EBadgeType>() {
+  return ::proto::dota::EBadgeType_descriptor();
 }
 
 }  // namespace protobuf

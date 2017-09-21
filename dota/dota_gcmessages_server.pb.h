@@ -606,6 +606,12 @@ extern CMsgGCBanStatusRequestDefaultTypeInternal _CMsgGCBanStatusRequest_default
 class CMsgGCBanStatusResponse;
 class CMsgGCBanStatusResponseDefaultTypeInternal;
 extern CMsgGCBanStatusResponseDefaultTypeInternal _CMsgGCBanStatusResponse_default_instance_;
+class CMsgGCCheckAccountSubscription;
+class CMsgGCCheckAccountSubscriptionDefaultTypeInternal;
+extern CMsgGCCheckAccountSubscriptionDefaultTypeInternal _CMsgGCCheckAccountSubscription_default_instance_;
+class CMsgGCCheckAccountSubscriptionResponse;
+class CMsgGCCheckAccountSubscriptionResponseDefaultTypeInternal;
+extern CMsgGCCheckAccountSubscriptionResponseDefaultTypeInternal _CMsgGCCheckAccountSubscriptionResponse_default_instance_;
 class CMsgGCCheckFriendship;
 class CMsgGCCheckFriendshipDefaultTypeInternal;
 extern CMsgGCCheckFriendshipDefaultTypeInternal _CMsgGCCheckFriendship_default_instance_;
@@ -768,6 +774,9 @@ extern CMsgGCToGCCheckAccountTradeStatusResponseDefaultTypeInternal _CMsgGCToGCC
 class CMsgGCToGCClientServerVersionsUpdated;
 class CMsgGCToGCClientServerVersionsUpdatedDefaultTypeInternal;
 extern CMsgGCToGCClientServerVersionsUpdatedDefaultTypeInternal _CMsgGCToGCClientServerVersionsUpdated_default_instance_;
+class CMsgGCToGCCompendiumInGamePredictionResults;
+class CMsgGCToGCCompendiumInGamePredictionResultsDefaultTypeInternal;
+extern CMsgGCToGCCompendiumInGamePredictionResultsDefaultTypeInternal _CMsgGCToGCCompendiumInGamePredictionResults_default_instance_;
 class CMsgGCToGCConsoleOutput;
 class CMsgGCToGCConsoleOutputDefaultTypeInternal;
 extern CMsgGCToGCConsoleOutputDefaultTypeInternal _CMsgGCToGCConsoleOutput_default_instance_;
@@ -17933,6 +17942,100 @@ class CMsgServerToGCCompendiumInGamePredictionResultsResponse : public ::google:
   bool result_;
   friend struct protobuf_dota_5fgcmessages_5fserver_2eproto::TableStruct;
 };
+// -------------------------------------------------------------------
+
+class CMsgGCToGCCompendiumInGamePredictionResults : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults) */ {
+ public:
+  CMsgGCToGCCompendiumInGamePredictionResults();
+  virtual ~CMsgGCToGCCompendiumInGamePredictionResults();
+
+  CMsgGCToGCCompendiumInGamePredictionResults(const CMsgGCToGCCompendiumInGamePredictionResults& from);
+
+  inline CMsgGCToGCCompendiumInGamePredictionResults& operator=(const CMsgGCToGCCompendiumInGamePredictionResults& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToGCCompendiumInGamePredictionResults& default_instance();
+
+  static inline const CMsgGCToGCCompendiumInGamePredictionResults* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToGCCompendiumInGamePredictionResults*>(
+               &_CMsgGCToGCCompendiumInGamePredictionResults_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    125;
+
+  void Swap(CMsgGCToGCCompendiumInGamePredictionResults* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToGCCompendiumInGamePredictionResults* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToGCCompendiumInGamePredictionResults* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToGCCompendiumInGamePredictionResults& from);
+  void MergeFrom(const CMsgGCToGCCompendiumInGamePredictionResults& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToGCCompendiumInGamePredictionResults* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .proto.dota.CMsgServerToGCCompendiumInGamePredictionResults results = 1;
+  bool has_results() const;
+  void clear_results();
+  static const int kResultsFieldNumber = 1;
+  const ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults& results() const;
+  ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* mutable_results();
+  ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* release_results();
+  void set_allocated_results(::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* results);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+ private:
+  void set_has_results();
+  void clear_has_results();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* results_;
+  friend struct protobuf_dota_5fgcmessages_5fserver_2eproto::TableStruct;
+};
 // ===================================================================
 
 
@@ -32744,7 +32847,58 @@ inline void CMsgServerToGCCompendiumInGamePredictionResultsResponse::set_result(
   // @@protoc_insertion_point(field_set:proto.dota.CMsgServerToGCCompendiumInGamePredictionResultsResponse.result)
 }
 
+// -------------------------------------------------------------------
+
+// CMsgGCToGCCompendiumInGamePredictionResults
+
+// optional .proto.dota.CMsgServerToGCCompendiumInGamePredictionResults results = 1;
+inline bool CMsgGCToGCCompendiumInGamePredictionResults::has_results() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToGCCompendiumInGamePredictionResults::set_has_results() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToGCCompendiumInGamePredictionResults::clear_has_results() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToGCCompendiumInGamePredictionResults::clear_results() {
+  if (results_ != NULL) results_->::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults::Clear();
+  clear_has_results();
+}
+inline const ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults& CMsgGCToGCCompendiumInGamePredictionResults::results() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults.results)
+  return results_ != NULL ? *results_
+                         : *::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults::internal_default_instance();
+}
+inline ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* CMsgGCToGCCompendiumInGamePredictionResults::mutable_results() {
+  set_has_results();
+  if (results_ == NULL) {
+    results_ = new ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults.results)
+  return results_;
+}
+inline ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* CMsgGCToGCCompendiumInGamePredictionResults::release_results() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults.results)
+  clear_has_results();
+  ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* temp = results_;
+  results_ = NULL;
+  return temp;
+}
+inline void CMsgGCToGCCompendiumInGamePredictionResults::set_allocated_results(::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* results) {
+  delete results_;
+  results_ = results;
+  if (results) {
+    set_has_results();
+  } else {
+    clear_has_results();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults.results)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

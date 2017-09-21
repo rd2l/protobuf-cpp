@@ -85,7 +85,7 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\033dota_gcmessages_msgid.proto\022\nproto.dot"
-      "a*\335\336\001\n\nEDOTAGCMsg\022\025\n\020k_EMsgGCDOTABase\020\3306"
+      "a*\330\342\001\n\nEDOTAGCMsg\022\025\n\020k_EMsgGCDOTABase\020\3306"
       "\022\034\n\027k_EMsgGCGeneralResponse\020\3316\022\035\n\030k_EMsg"
       "GCGameMatchSignOut\020\3346\022%\n k_EMsgGCGameMat"
       "chSignOutResponse\020\3356\022\034\n\027k_EMsgGCJoinChat"
@@ -797,11 +797,23 @@ void AddDescriptorsImpl() {
       "se\020\244@\022&\n!k_EMsgGCToGCSignoutSpendRankWag"
       "er\020\245@\022 \n\033k_EMsgGCToGCGetFavoriteTeam\020\246@\022"
       "(\n#k_EMsgGCToGCGetFavoriteTeamResponse\020\247"
-      "@\022\037\n\032k_EMsgSignOutEventGameData\020\250@B\005H\001\200\001"
-      "\000"
+      "@\022\037\n\032k_EMsgSignOutEventGameData\020\250@\022(\n#k_"
+      "EMsgGCToClientAllStarVotesRequest\020\251@\022&\n!"
+      "k_EMsgGCToClientAllStarVotesReply\020\252@\022\'\n\""
+      "k_EMsgGCToClientAllStarVotesSubmit\020\254@\022,\n"
+      "\'k_EMsgGCToClientAllStarVotesSubmitReply"
+      "\020\255@\022&\n!k_EMsgClientToGCQuickStatsRequest"
+      "\020\256@\022\'\n\"k_EMsgClientToGCQuickStatsRespons"
+      "e\020\257@\022,\n\'k_EMsgGCToGCSubtractEventPointsF"
+      "romUser\020\260@\022)\n$k_EMsgSelectionPriorityCho"
+      "iceRequest\020\261@\022*\n%k_EMsgSelectionPriority"
+      "ChoiceResponse\020\262@\0222\n-k_EMsgGCToGCCompend"
+      "iumInGamePredictionResults\020\263@\022\036\n\031k_EMsgG"
+      "ameAutographReward\020\264@\022&\n!k_EMsgGameAutog"
+      "raphRewardResponse\020\265@B\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 28561);
+      descriptor, 29068);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dota_gcmessages_msgid.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -1534,6 +1546,18 @@ bool EDOTAGCMsg_IsValid(int value) {
     case 8230:
     case 8231:
     case 8232:
+    case 8233:
+    case 8234:
+    case 8236:
+    case 8237:
+    case 8238:
+    case 8239:
+    case 8240:
+    case 8241:
+    case 8242:
+    case 8243:
+    case 8244:
+    case 8245:
       return true;
     default:
       return false;

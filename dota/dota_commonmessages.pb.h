@@ -161,11 +161,12 @@ enum EDOTAStatPopupTypes {
   k_EDOTA_SPT_Basic = 1,
   k_EDOTA_SPT_Poll = 2,
   k_EDOTA_SPT_Grid = 3,
-  k_EDOTA_SPT_DualImage = 4
+  k_EDOTA_SPT_DualImage = 4,
+  k_EDOTA_SPT_Movie = 5
 };
 bool EDOTAStatPopupTypes_IsValid(int value);
 const EDOTAStatPopupTypes EDOTAStatPopupTypes_MIN = k_EDOTA_SPT_Textline;
-const EDOTAStatPopupTypes EDOTAStatPopupTypes_MAX = k_EDOTA_SPT_DualImage;
+const EDOTAStatPopupTypes EDOTAStatPopupTypes_MAX = k_EDOTA_SPT_Movie;
 const int EDOTAStatPopupTypes_ARRAYSIZE = EDOTAStatPopupTypes_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* EDOTAStatPopupTypes_descriptor();
@@ -839,6 +840,21 @@ class CDOTAMsg_SendStatPopup : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
       mutable_stat_image_types();
 
+  // optional string movie_name = 7;
+  bool has_movie_name() const;
+  void clear_movie_name();
+  static const int kMovieNameFieldNumber = 7;
+  const ::std::string& movie_name() const;
+  void set_movie_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_movie_name(::std::string&& value);
+  #endif
+  void set_movie_name(const char* value);
+  void set_movie_name(const char* value, size_t size);
+  ::std::string* mutable_movie_name();
+  ::std::string* release_movie_name();
+  void set_allocated_movie_name(::std::string* movie_name);
+
   // optional .proto.dota.EDOTAStatPopupTypes style = 1 [default = k_EDOTA_SPT_Textline];
   bool has_style() const;
   void clear_style();
@@ -853,12 +869,23 @@ class CDOTAMsg_SendStatPopup : public ::google::protobuf::Message /* @@protoc_in
   float duration() const;
   void set_duration(float value);
 
+  // optional bool use_html = 6;
+  bool has_use_html() const;
+  void clear_use_html();
+  static const int kUseHtmlFieldNumber = 6;
+  bool use_html() const;
+  void set_use_html(bool value);
+
   // @@protoc_insertion_point(class_scope:proto.dota.CDOTAMsg_SendStatPopup)
  private:
   void set_has_style();
   void clear_has_style();
   void set_has_duration();
   void clear_has_duration();
+  void set_has_use_html();
+  void clear_has_use_html();
+  void set_has_movie_name();
+  void clear_has_movie_name();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -866,8 +893,10 @@ class CDOTAMsg_SendStatPopup : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::RepeatedPtrField< ::std::string> stat_strings_;
   ::google::protobuf::RepeatedField< ::google::protobuf::int32 > stat_images_;
   ::google::protobuf::RepeatedField< ::google::protobuf::int32 > stat_image_types_;
+  ::google::protobuf::internal::ArenaStringPtr movie_name_;
   int style_;
   float duration_;
+  bool use_html_;
   friend struct protobuf_dota_5fcommonmessages_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -1659,13 +1688,13 @@ inline void CDOTAMsg_WorldLine::set_end(bool value) {
 
 // optional .proto.dota.EDOTAStatPopupTypes style = 1 [default = k_EDOTA_SPT_Textline];
 inline bool CDOTAMsg_SendStatPopup::has_style() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void CDOTAMsg_SendStatPopup::set_has_style() {
-  _has_bits_[0] |= 0x00000001u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void CDOTAMsg_SendStatPopup::clear_has_style() {
-  _has_bits_[0] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void CDOTAMsg_SendStatPopup::clear_style() {
   style_ = 0;
@@ -1813,13 +1842,13 @@ CDOTAMsg_SendStatPopup::mutable_stat_image_types() {
 
 // optional float duration = 5;
 inline bool CDOTAMsg_SendStatPopup::has_duration() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void CDOTAMsg_SendStatPopup::set_has_duration() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void CDOTAMsg_SendStatPopup::clear_has_duration() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void CDOTAMsg_SendStatPopup::clear_duration() {
   duration_ = 0;
@@ -1833,6 +1862,93 @@ inline void CDOTAMsg_SendStatPopup::set_duration(float value) {
   set_has_duration();
   duration_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CDOTAMsg_SendStatPopup.duration)
+}
+
+// optional bool use_html = 6;
+inline bool CDOTAMsg_SendStatPopup::has_use_html() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CDOTAMsg_SendStatPopup::set_has_use_html() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CDOTAMsg_SendStatPopup::clear_has_use_html() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CDOTAMsg_SendStatPopup::clear_use_html() {
+  use_html_ = false;
+  clear_has_use_html();
+}
+inline bool CDOTAMsg_SendStatPopup::use_html() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMsg_SendStatPopup.use_html)
+  return use_html_;
+}
+inline void CDOTAMsg_SendStatPopup::set_use_html(bool value) {
+  set_has_use_html();
+  use_html_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMsg_SendStatPopup.use_html)
+}
+
+// optional string movie_name = 7;
+inline bool CDOTAMsg_SendStatPopup::has_movie_name() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CDOTAMsg_SendStatPopup::set_has_movie_name() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CDOTAMsg_SendStatPopup::clear_has_movie_name() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CDOTAMsg_SendStatPopup::clear_movie_name() {
+  movie_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_movie_name();
+}
+inline const ::std::string& CDOTAMsg_SendStatPopup::movie_name() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+  return movie_name_.GetNoArena();
+}
+inline void CDOTAMsg_SendStatPopup::set_movie_name(const ::std::string& value) {
+  set_has_movie_name();
+  movie_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+}
+#if LANG_CXX11
+inline void CDOTAMsg_SendStatPopup::set_movie_name(::std::string&& value) {
+  set_has_movie_name();
+  movie_name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+}
+#endif
+inline void CDOTAMsg_SendStatPopup::set_movie_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_movie_name();
+  movie_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+}
+inline void CDOTAMsg_SendStatPopup::set_movie_name(const char* value, size_t size) {
+  set_has_movie_name();
+  movie_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+}
+inline ::std::string* CDOTAMsg_SendStatPopup::mutable_movie_name() {
+  set_has_movie_name();
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+  return movie_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CDOTAMsg_SendStatPopup::release_movie_name() {
+  // @@protoc_insertion_point(field_release:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+  clear_has_movie_name();
+  return movie_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CDOTAMsg_SendStatPopup::set_allocated_movie_name(::std::string* movie_name) {
+  if (movie_name != NULL) {
+    set_has_movie_name();
+  } else {
+    clear_has_movie_name();
+  }
+  movie_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), movie_name);
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
 }
 
 // -------------------------------------------------------------------

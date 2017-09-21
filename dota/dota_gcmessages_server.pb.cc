@@ -269,13 +269,15 @@ class CMsgServerToGCCompendiumInGamePredictionResultsDefaultTypeInternal : publi
 } _CMsgServerToGCCompendiumInGamePredictionResults_default_instance_;
 class CMsgServerToGCCompendiumInGamePredictionResultsResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgServerToGCCompendiumInGamePredictionResultsResponse> {
 } _CMsgServerToGCCompendiumInGamePredictionResultsResponse_default_instance_;
+class CMsgGCToGCCompendiumInGamePredictionResultsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgGCToGCCompendiumInGamePredictionResults> {
+} _CMsgGCToGCCompendiumInGamePredictionResults_default_instance_;
 
 namespace protobuf_dota_5fgcmessages_5fserver_2eproto {
 
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[125];
+::google::protobuf::Metadata file_level_metadata[126];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[12];
 
 }  // namespace
@@ -291,6 +293,7 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
     TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
@@ -2120,6 +2123,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgServerToGCCompendiumInGamePredictionResultsResponse, result_),
   0,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCToGCCompendiumInGamePredictionResults, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCToGCCompendiumInGamePredictionResults, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCToGCCompendiumInGamePredictionResults, results_),
+  0,
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
@@ -2248,6 +2258,7 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 1674, 1682, sizeof(CMsgServerToGCCompendiumInGamePredictionResults_PredictionResult)},
   { 1685, 1692, sizeof(CMsgServerToGCCompendiumInGamePredictionResults)},
   { 1694, 1700, sizeof(CMsgServerToGCCompendiumInGamePredictionResultsResponse)},
+  { 1701, 1707, sizeof(CMsgGCToGCCompendiumInGamePredictionResults)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -2376,6 +2387,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgServerToGCCompendiumInGamePredictionResults_PredictionResult_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgServerToGCCompendiumInGamePredictionResults_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgServerToGCCompendiumInGamePredictionResultsResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgGCToGCCompendiumInGamePredictionResults_default_instance_),
 };
 
 namespace {
@@ -2396,7 +2408,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 125);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 126);
 }
 
 }  // namespace
@@ -2652,6 +2664,8 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[123].reflection;
   _CMsgServerToGCCompendiumInGamePredictionResultsResponse_default_instance_.Shutdown();
   delete file_level_metadata[124].reflection;
+  _CMsgGCToGCCompendiumInGamePredictionResults_default_instance_.Shutdown();
+  delete file_level_metadata[125].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -2789,6 +2803,7 @@ void TableStruct::InitDefaultsImpl() {
   _CMsgServerToGCCompendiumInGamePredictionResults_PredictionResult_default_instance_.DefaultConstruct();
   _CMsgServerToGCCompendiumInGamePredictionResults_default_instance_.DefaultConstruct();
   _CMsgServerToGCCompendiumInGamePredictionResultsResponse_default_instance_.DefaultConstruct();
+  _CMsgGCToGCCompendiumInGamePredictionResults_default_instance_.DefaultConstruct();
   _CMsgConnectedPlayers_Player_default_instance_.get_mutable()->leaver_state_ = const_cast< ::proto::dota::CMsgLeaverState*>(
       ::proto::dota::CMsgLeaverState::internal_default_instance());
   _CMsgConnectedPlayers_default_instance_.get_mutable()->poor_network_conditions_ = const_cast< ::proto::dota::CMsgPoorNetworkConditions*>(
@@ -2817,6 +2832,8 @@ void TableStruct::InitDefaultsImpl() {
       ::proto::dota::CSerializedCombatLog_Dictionary::internal_default_instance());
   _CMsgServerToGCRerollPlayerChallenge_default_instance_.get_mutable()->reroll_msg_ = const_cast< ::proto::dota::CMsgClientToGCRerollPlayerChallenge*>(
       ::proto::dota::CMsgClientToGCRerollPlayerChallenge::internal_default_instance());
+  _CMsgGCToGCCompendiumInGamePredictionResults_default_instance_.get_mutable()->results_ = const_cast< ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults*>(
+      ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults::internal_default_instance());
 }
 
 void InitDefaults() {
@@ -3341,50 +3358,53 @@ void AddDescriptorsImpl() {
       "d\030\001 \001(\r\022\030\n\020prediction_value\030\002 \001(\r\022 \n\030pre"
       "diction_value_is_mask\030\003 \001(\010\"I\n7CMsgServe"
       "rToGCCompendiumInGamePredictionResultsRe"
-      "sponse\022\016\n\006result\030\001 \001(\010*\306\001\n\032EPoorNetworkC"
-      "onditionsType\022!\n\035k_EPoorNetworkCondition"
-      "s_None\020\000\022$\n k_EPoorNetworkConditions_Unk"
-      "nown\020\001\022+\n\'k_EPoorNetworkConditions_MassD"
-      "isconnect\020\002\0222\n.k_EPoorNetworkConditions_"
-      "ExcessBadQosIntervals\020\003*\300\002\n\021EAbilityAbus"
-      "eType\022\034\n\030k_EAbilityAbuseType_None\020\000\022#\n\037k"
-      "_EAbilityAbuseType_Io_Relocate\020\001\022*\n&k_EA"
-      "bilityAbuseType_Chen_Test_Of_Faith\020\002\022&\n\""
-      "k_EAbilityAbuseType_Bane_Nightmare\020\003\022-\n)"
-      "k_EAbilityAbuseType_Bloodseeker_Bloodrag"
-      "e\020\004\0224\n0k_EAbilityAbuseType_Outworld_Astr"
-      "al_Imprisonment\020\005\022/\n+k_EAbilityAbuseType"
-      "_Shadow_Demon_Disruption\020\006*\371\003\n\027EIntentio"
-      "nalFeedingType\022\"\n\036k_EIntentionalFeedingT"
-      "ype_None\020\000\022-\n)k_EIntentionalFeedingType_"
-      "ExcessiveDeaths\020\001\0226\n2k_EIntentionalFeedi"
-      "ngType_MultipleCourierPurchases\020\002\0223\n/k_E"
-      "IntentionalFeedingType_MultipleCourierDe"
-      "aths\020\004\022)\n%k_EIntentionalFeedingType_LowA"
-      "ctivity\020\010\022\'\n#k_EIntentionalFeedingType_L"
-      "owDamage\020\020\022-\n)k_EIntentionalFeedingType_"
-      "HighUnspentGold\020 \0222\n.k_EIntentionalFeedi"
-      "ngType_SoldTooMuchItemValue\020@\0222\n-k_EInte"
-      "ntionalFeedingType_TooManyDroppedItems\020\200"
-      "\001\0223\n.k_EIntentionalFeedingType_Excessive"
-      "TowerDamage\020\200\002*\243\001\n\023ESuspiciousActivity\022/"
-      "\n+k_ESuspiciousActivity_VAC_MultipleInst"
-      "ances\020\001\022,\n(k_ESuspiciousActivity_Intenti"
-      "onalFeeding\020d\022-\n)k_ESuspiciousActivity_S"
-      "uspectedBotFarming\020e*\200\003\n\024ESuspiciousBuil"
-      "dType\022\037\n\033k_ESuspiciousBuildType_None\020\000\022&"
-      "\n\"k_ESuspiciousBuildType_NoGoldSpent\020\001\022\""
-      "\n\036k_ESuspiciousBuildType_NoItems\020\002\022-\n)k_"
-      "ESuspiciousBuildType_NoSignificantItems\020"
-      "\003\022\'\n#k_ESuspiciousBuildType_TooManyBoots"
-      "\020\004\022\037\n\033k_ESuspiciousBuildType_Bot1\020e\022\037\n\033k"
-      "_ESuspiciousBuildType_Bot2\020f\022\037\n\033k_ESuspi"
-      "ciousBuildType_Bot3\020g\022\037\n\033k_ESuspiciousBu"
-      "ildType_Bot4\020h\022\037\n\033k_ESuspiciousBuildType"
-      "_Bot5\020iB\005H\001\200\001\000"
+      "sponse\022\016\n\006result\030\001 \001(\010\"{\n+CMsgGCToGCComp"
+      "endiumInGamePredictionResults\022L\n\007results"
+      "\030\001 \001(\0132;.proto.dota.CMsgServerToGCCompen"
+      "diumInGamePredictionResults*\306\001\n\032EPoorNet"
+      "workConditionsType\022!\n\035k_EPoorNetworkCond"
+      "itions_None\020\000\022$\n k_EPoorNetworkCondition"
+      "s_Unknown\020\001\022+\n\'k_EPoorNetworkConditions_"
+      "MassDisconnect\020\002\0222\n.k_EPoorNetworkCondit"
+      "ions_ExcessBadQosIntervals\020\003*\300\002\n\021EAbilit"
+      "yAbuseType\022\034\n\030k_EAbilityAbuseType_None\020\000"
+      "\022#\n\037k_EAbilityAbuseType_Io_Relocate\020\001\022*\n"
+      "&k_EAbilityAbuseType_Chen_Test_Of_Faith\020"
+      "\002\022&\n\"k_EAbilityAbuseType_Bane_Nightmare\020"
+      "\003\022-\n)k_EAbilityAbuseType_Bloodseeker_Blo"
+      "odrage\020\004\0224\n0k_EAbilityAbuseType_Outworld"
+      "_Astral_Imprisonment\020\005\022/\n+k_EAbilityAbus"
+      "eType_Shadow_Demon_Disruption\020\006*\371\003\n\027EInt"
+      "entionalFeedingType\022\"\n\036k_EIntentionalFee"
+      "dingType_None\020\000\022-\n)k_EIntentionalFeeding"
+      "Type_ExcessiveDeaths\020\001\0226\n2k_EIntentional"
+      "FeedingType_MultipleCourierPurchases\020\002\0223"
+      "\n/k_EIntentionalFeedingType_MultipleCour"
+      "ierDeaths\020\004\022)\n%k_EIntentionalFeedingType"
+      "_LowActivity\020\010\022\'\n#k_EIntentionalFeedingT"
+      "ype_LowDamage\020\020\022-\n)k_EIntentionalFeeding"
+      "Type_HighUnspentGold\020 \0222\n.k_EIntentional"
+      "FeedingType_SoldTooMuchItemValue\020@\0222\n-k_"
+      "EIntentionalFeedingType_TooManyDroppedIt"
+      "ems\020\200\001\0223\n.k_EIntentionalFeedingType_Exce"
+      "ssiveTowerDamage\020\200\002*\243\001\n\023ESuspiciousActiv"
+      "ity\022/\n+k_ESuspiciousActivity_VAC_Multipl"
+      "eInstances\020\001\022,\n(k_ESuspiciousActivity_In"
+      "tentionalFeeding\020d\022-\n)k_ESuspiciousActiv"
+      "ity_SuspectedBotFarming\020e*\200\003\n\024ESuspiciou"
+      "sBuildType\022\037\n\033k_ESuspiciousBuildType_Non"
+      "e\020\000\022&\n\"k_ESuspiciousBuildType_NoGoldSpen"
+      "t\020\001\022\"\n\036k_ESuspiciousBuildType_NoItems\020\002\022"
+      "-\n)k_ESuspiciousBuildType_NoSignificantI"
+      "tems\020\003\022\'\n#k_ESuspiciousBuildType_TooMany"
+      "Boots\020\004\022\037\n\033k_ESuspiciousBuildType_Bot1\020e"
+      "\022\037\n\033k_ESuspiciousBuildType_Bot2\020f\022\037\n\033k_E"
+      "SuspiciousBuildType_Bot3\020g\022\037\n\033k_ESuspici"
+      "ousBuildType_Bot4\020h\022\037\n\033k_ESuspiciousBuil"
+      "dType_Bot5\020iB\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 22214);
+      descriptor, 22339);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dota_gcmessages_server.proto", &protobuf_RegisterTypes);
   ::proto::dota::protobuf_steammessages_2eproto::AddDescriptors();
@@ -64858,6 +64878,303 @@ void CMsgServerToGCCompendiumInGamePredictionResultsResponse::set_result(bool va
   set_has_result();
   result_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgServerToGCCompendiumInGamePredictionResultsResponse.result)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CMsgGCToGCCompendiumInGamePredictionResults::kResultsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CMsgGCToGCCompendiumInGamePredictionResults::CMsgGCToGCCompendiumInGamePredictionResults()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_dota_5fgcmessages_5fserver_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+}
+CMsgGCToGCCompendiumInGamePredictionResults::CMsgGCToGCCompendiumInGamePredictionResults(const CMsgGCToGCCompendiumInGamePredictionResults& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_results()) {
+    results_ = new ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults(*from.results_);
+  } else {
+    results_ = NULL;
+  }
+  // @@protoc_insertion_point(copy_constructor:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+}
+
+void CMsgGCToGCCompendiumInGamePredictionResults::SharedCtor() {
+  _cached_size_ = 0;
+  results_ = NULL;
+}
+
+CMsgGCToGCCompendiumInGamePredictionResults::~CMsgGCToGCCompendiumInGamePredictionResults() {
+  // @@protoc_insertion_point(destructor:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  SharedDtor();
+}
+
+void CMsgGCToGCCompendiumInGamePredictionResults::SharedDtor() {
+  if (this != internal_default_instance()) {
+    delete results_;
+  }
+}
+
+void CMsgGCToGCCompendiumInGamePredictionResults::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CMsgGCToGCCompendiumInGamePredictionResults::descriptor() {
+  protobuf_dota_5fgcmessages_5fserver_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_dota_5fgcmessages_5fserver_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CMsgGCToGCCompendiumInGamePredictionResults& CMsgGCToGCCompendiumInGamePredictionResults::default_instance() {
+  protobuf_dota_5fgcmessages_5fserver_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CMsgGCToGCCompendiumInGamePredictionResults* CMsgGCToGCCompendiumInGamePredictionResults::New(::google::protobuf::Arena* arena) const {
+  CMsgGCToGCCompendiumInGamePredictionResults* n = new CMsgGCToGCCompendiumInGamePredictionResults;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CMsgGCToGCCompendiumInGamePredictionResults::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  if (has_results()) {
+    GOOGLE_DCHECK(results_ != NULL);
+    results_->::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults::Clear();
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CMsgGCToGCCompendiumInGamePredictionResults::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .proto.dota.CMsgServerToGCCompendiumInGamePredictionResults results = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_results()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  return false;
+#undef DO_
+}
+
+void CMsgGCToGCCompendiumInGamePredictionResults::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional .proto.dota.CMsgServerToGCCompendiumInGamePredictionResults results = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, *this->results_, output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+}
+
+::google::protobuf::uint8* CMsgGCToGCCompendiumInGamePredictionResults::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional .proto.dota.CMsgServerToGCCompendiumInGamePredictionResults results = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        1, *this->results_, deterministic, target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  return target;
+}
+
+size_t CMsgGCToGCCompendiumInGamePredictionResults::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  // optional .proto.dota.CMsgServerToGCCompendiumInGamePredictionResults results = 1;
+  if (has_results()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->results_);
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CMsgGCToGCCompendiumInGamePredictionResults::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CMsgGCToGCCompendiumInGamePredictionResults* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CMsgGCToGCCompendiumInGamePredictionResults>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+    MergeFrom(*source);
+  }
+}
+
+void CMsgGCToGCCompendiumInGamePredictionResults::MergeFrom(const CMsgGCToGCCompendiumInGamePredictionResults& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_results()) {
+    mutable_results()->::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults::MergeFrom(from.results());
+  }
+}
+
+void CMsgGCToGCCompendiumInGamePredictionResults::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CMsgGCToGCCompendiumInGamePredictionResults::CopyFrom(const CMsgGCToGCCompendiumInGamePredictionResults& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CMsgGCToGCCompendiumInGamePredictionResults::IsInitialized() const {
+  return true;
+}
+
+void CMsgGCToGCCompendiumInGamePredictionResults::Swap(CMsgGCToGCCompendiumInGamePredictionResults* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CMsgGCToGCCompendiumInGamePredictionResults::InternalSwap(CMsgGCToGCCompendiumInGamePredictionResults* other) {
+  std::swap(results_, other->results_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CMsgGCToGCCompendiumInGamePredictionResults::GetMetadata() const {
+  protobuf_dota_5fgcmessages_5fserver_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_dota_5fgcmessages_5fserver_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CMsgGCToGCCompendiumInGamePredictionResults
+
+// optional .proto.dota.CMsgServerToGCCompendiumInGamePredictionResults results = 1;
+bool CMsgGCToGCCompendiumInGamePredictionResults::has_results() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CMsgGCToGCCompendiumInGamePredictionResults::set_has_results() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CMsgGCToGCCompendiumInGamePredictionResults::clear_has_results() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CMsgGCToGCCompendiumInGamePredictionResults::clear_results() {
+  if (results_ != NULL) results_->::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults::Clear();
+  clear_has_results();
+}
+const ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults& CMsgGCToGCCompendiumInGamePredictionResults::results() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults.results)
+  return results_ != NULL ? *results_
+                         : *::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults::internal_default_instance();
+}
+::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* CMsgGCToGCCompendiumInGamePredictionResults::mutable_results() {
+  set_has_results();
+  if (results_ == NULL) {
+    results_ = new ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults.results)
+  return results_;
+}
+::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* CMsgGCToGCCompendiumInGamePredictionResults::release_results() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults.results)
+  clear_has_results();
+  ::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* temp = results_;
+  results_ = NULL;
+  return temp;
+}
+void CMsgGCToGCCompendiumInGamePredictionResults::set_allocated_results(::proto::dota::CMsgServerToGCCompendiumInGamePredictionResults* results) {
+  delete results_;
+  results_ = results;
+  if (results) {
+    set_has_results();
+  } else {
+    clear_has_results();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToGCCompendiumInGamePredictionResults.results)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

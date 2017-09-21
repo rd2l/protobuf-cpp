@@ -2613,15 +2613,25 @@ class CMsgClientUCMDeletePublishedFile : public ::google::protobuf::Message /* @
   ::google::protobuf::uint64 published_file_id() const;
   void set_published_file_id(::google::protobuf::uint64 value);
 
+  // optional uint32 app_id = 2;
+  bool has_app_id() const;
+  void clear_app_id();
+  static const int kAppIdFieldNumber = 2;
+  ::google::protobuf::uint32 app_id() const;
+  void set_app_id(::google::protobuf::uint32 value);
+
   // @@protoc_insertion_point(class_scope:proto.steam.CMsgClientUCMDeletePublishedFile)
  private:
   void set_has_published_file_id();
   void clear_has_published_file_id();
+  void set_has_app_id();
+  void clear_has_app_id();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::uint64 published_file_id_;
+  ::google::protobuf::uint32 app_id_;
   friend struct protobuf_steammessages_5fclientserver_5f2_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -10786,6 +10796,21 @@ class CMsgDownloadRateStatistics_StatsInfo : public ::google::protobuf::Message 
 
   // accessors -------------------------------------------------------
 
+  // optional string host_name = 5;
+  bool has_host_name() const;
+  void clear_host_name();
+  static const int kHostNameFieldNumber = 5;
+  const ::std::string& host_name() const;
+  void set_host_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_host_name(::std::string&& value);
+  #endif
+  void set_host_name(const char* value);
+  void set_host_name(const char* value, size_t size);
+  ::std::string* mutable_host_name();
+  ::std::string* release_host_name();
+  void set_allocated_host_name(::std::string* host_name);
+
   // optional uint32 source_type = 1;
   bool has_source_type() const;
   void clear_source_type();
@@ -10824,10 +10849,13 @@ class CMsgDownloadRateStatistics_StatsInfo : public ::google::protobuf::Message 
   void clear_has_seconds();
   void set_has_bytes();
   void clear_has_bytes();
+  void set_has_host_name();
+  void clear_has_host_name();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr host_name_;
   ::google::protobuf::uint32 source_type_;
   ::google::protobuf::uint32 source_id_;
   ::google::protobuf::uint64 bytes_;
@@ -26375,6 +26403,30 @@ inline void CMsgClientUCMDeletePublishedFile::set_published_file_id(::google::pr
   // @@protoc_insertion_point(field_set:proto.steam.CMsgClientUCMDeletePublishedFile.published_file_id)
 }
 
+// optional uint32 app_id = 2;
+inline bool CMsgClientUCMDeletePublishedFile::has_app_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgClientUCMDeletePublishedFile::set_has_app_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgClientUCMDeletePublishedFile::clear_has_app_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgClientUCMDeletePublishedFile::clear_app_id() {
+  app_id_ = 0u;
+  clear_has_app_id();
+}
+inline ::google::protobuf::uint32 CMsgClientUCMDeletePublishedFile::app_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgClientUCMDeletePublishedFile.app_id)
+  return app_id_;
+}
+inline void CMsgClientUCMDeletePublishedFile::set_app_id(::google::protobuf::uint32 value) {
+  set_has_app_id();
+  app_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgClientUCMDeletePublishedFile.app_id)
+}
+
 // -------------------------------------------------------------------
 
 // CMsgClientUCMDeletePublishedFileResponse
@@ -34386,13 +34438,13 @@ inline void CMsgClientGetCDNAuthTokenResponse::set_expiration_time(::google::pro
 
 // optional uint32 source_type = 1;
 inline bool CMsgDownloadRateStatistics_StatsInfo::has_source_type() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::set_has_source_type() {
-  _has_bits_[0] |= 0x00000001u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::clear_has_source_type() {
-  _has_bits_[0] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::clear_source_type() {
   source_type_ = 0u;
@@ -34410,13 +34462,13 @@ inline void CMsgDownloadRateStatistics_StatsInfo::set_source_type(::google::prot
 
 // optional uint32 source_id = 2;
 inline bool CMsgDownloadRateStatistics_StatsInfo::has_source_id() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::set_has_source_id() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::clear_has_source_id() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::clear_source_id() {
   source_id_ = 0u;
@@ -34434,13 +34486,13 @@ inline void CMsgDownloadRateStatistics_StatsInfo::set_source_id(::google::protob
 
 // optional uint32 seconds = 3;
 inline bool CMsgDownloadRateStatistics_StatsInfo::has_seconds() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::set_has_seconds() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::clear_has_seconds() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::clear_seconds() {
   seconds_ = 0u;
@@ -34458,13 +34510,13 @@ inline void CMsgDownloadRateStatistics_StatsInfo::set_seconds(::google::protobuf
 
 // optional uint64 bytes = 4;
 inline bool CMsgDownloadRateStatistics_StatsInfo::has_bytes() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::set_has_bytes() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::clear_has_bytes() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void CMsgDownloadRateStatistics_StatsInfo::clear_bytes() {
   bytes_ = GOOGLE_ULONGLONG(0);
@@ -34478,6 +34530,69 @@ inline void CMsgDownloadRateStatistics_StatsInfo::set_bytes(::google::protobuf::
   set_has_bytes();
   bytes_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CMsgDownloadRateStatistics.StatsInfo.bytes)
+}
+
+// optional string host_name = 5;
+inline bool CMsgDownloadRateStatistics_StatsInfo::has_host_name() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDownloadRateStatistics_StatsInfo::set_has_host_name() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDownloadRateStatistics_StatsInfo::clear_has_host_name() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDownloadRateStatistics_StatsInfo::clear_host_name() {
+  host_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_host_name();
+}
+inline const ::std::string& CMsgDownloadRateStatistics_StatsInfo::host_name() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgDownloadRateStatistics.StatsInfo.host_name)
+  return host_name_.GetNoArena();
+}
+inline void CMsgDownloadRateStatistics_StatsInfo::set_host_name(const ::std::string& value) {
+  set_has_host_name();
+  host_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgDownloadRateStatistics.StatsInfo.host_name)
+}
+#if LANG_CXX11
+inline void CMsgDownloadRateStatistics_StatsInfo::set_host_name(::std::string&& value) {
+  set_has_host_name();
+  host_name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CMsgDownloadRateStatistics.StatsInfo.host_name)
+}
+#endif
+inline void CMsgDownloadRateStatistics_StatsInfo::set_host_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_host_name();
+  host_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CMsgDownloadRateStatistics.StatsInfo.host_name)
+}
+inline void CMsgDownloadRateStatistics_StatsInfo::set_host_name(const char* value, size_t size) {
+  set_has_host_name();
+  host_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CMsgDownloadRateStatistics.StatsInfo.host_name)
+}
+inline ::std::string* CMsgDownloadRateStatistics_StatsInfo::mutable_host_name() {
+  set_has_host_name();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CMsgDownloadRateStatistics.StatsInfo.host_name)
+  return host_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CMsgDownloadRateStatistics_StatsInfo::release_host_name() {
+  // @@protoc_insertion_point(field_release:proto.steam.CMsgDownloadRateStatistics.StatsInfo.host_name)
+  clear_has_host_name();
+  return host_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CMsgDownloadRateStatistics_StatsInfo::set_allocated_host_name(::std::string* host_name) {
+  if (host_name != NULL) {
+    set_has_host_name();
+  } else {
+    clear_has_host_name();
+  }
+  host_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), host_name);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CMsgDownloadRateStatistics.StatsInfo.host_name)
 }
 
 // -------------------------------------------------------------------

@@ -116,7 +116,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTwoFactor_Status_Response, revocation_attempts_remaining_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTwoFactor_Status_Response, classified_agent_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTwoFactor_Status_Response, allow_external_authenticator_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTwoFactor_Status_Response, external_authenticator_type_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTwoFactor_Status_Response, time_transferred_),
   3,
   4,
@@ -131,7 +130,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   2,
   9,
   12,
-  13,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTwoFactor_AddAuthenticator_Request, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTwoFactor_AddAuthenticator_Request, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -286,21 +284,21 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, 6, sizeof(CTwoFactor_Status_Request)},
-  { 7, 26, sizeof(CTwoFactor_Status_Response)},
-  { 40, 52, sizeof(CTwoFactor_AddAuthenticator_Request)},
-  { 59, 74, sizeof(CTwoFactor_AddAuthenticator_Response)},
-  { 84, 92, sizeof(CTwoFactor_SendEmail_Request)},
-  { 95, 100, sizeof(CTwoFactor_SendEmail_Response)},
-  { 100, 110, sizeof(CTwoFactor_FinalizeAddAuthenticator_Request)},
-  { 115, 124, sizeof(CTwoFactor_FinalizeAddAuthenticator_Response)},
-  { 128, 137, sizeof(CTwoFactor_RemoveAuthenticator_Request)},
-  { 141, 149, sizeof(CTwoFactor_RemoveAuthenticator_Response)},
-  { 152, 157, sizeof(CTwoFactor_CreateEmergencyCodes_Request)},
-  { 157, 163, sizeof(CTwoFactor_CreateEmergencyCodes_Response)},
-  { 164, 170, sizeof(CTwoFactor_DestroyEmergencyCodes_Request)},
-  { 171, 176, sizeof(CTwoFactor_DestroyEmergencyCodes_Response)},
-  { 176, 182, sizeof(CTwoFactor_ValidateToken_Request)},
-  { 183, 189, sizeof(CTwoFactor_ValidateToken_Response)},
+  { 7, 25, sizeof(CTwoFactor_Status_Response)},
+  { 38, 50, sizeof(CTwoFactor_AddAuthenticator_Request)},
+  { 57, 72, sizeof(CTwoFactor_AddAuthenticator_Response)},
+  { 82, 90, sizeof(CTwoFactor_SendEmail_Request)},
+  { 93, 98, sizeof(CTwoFactor_SendEmail_Response)},
+  { 98, 108, sizeof(CTwoFactor_FinalizeAddAuthenticator_Request)},
+  { 113, 122, sizeof(CTwoFactor_FinalizeAddAuthenticator_Response)},
+  { 126, 135, sizeof(CTwoFactor_RemoveAuthenticator_Request)},
+  { 139, 147, sizeof(CTwoFactor_RemoveAuthenticator_Response)},
+  { 150, 155, sizeof(CTwoFactor_CreateEmergencyCodes_Request)},
+  { 155, 161, sizeof(CTwoFactor_CreateEmergencyCodes_Response)},
+  { 162, 168, sizeof(CTwoFactor_DestroyEmergencyCodes_Request)},
+  { 169, 174, sizeof(CTwoFactor_DestroyEmergencyCodes_Response)},
+  { 174, 180, sizeof(CTwoFactor_ValidateToken_Request)},
+  { 181, 187, sizeof(CTwoFactor_ValidateToken_Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -414,7 +412,7 @@ void AddDescriptorsImpl() {
       "oto\022\013proto.steam\032,steammessages_unified_"
       "base.steamclient.proto\"@\n\031CTwoFactor_Sta"
       "tus_Request\022#\n\007steamid\030\001 \001(\006B\022\202\265\030\016steami"
-      "d to use\"\222\010\n\032CTwoFactor_Status_Response\022"
+      "d to use\"\306\007\n\032CTwoFactor_Status_Response\022"
       "&\n\005state\030\001 \001(\rB\027\202\265\030\023Authenticator state\022"
       "=\n\023inactivation_reason\030\002 \001(\rB \202\265\030\034Inacti"
       "vation reason (if any)\0225\n\022authenticator_"
@@ -436,123 +434,121 @@ void AddDescriptorsImpl() {
       "ndroid / other)\022g\n\034allow_external_authen"
       "ticator\030\014 \001(\010BA\202\265\030=Allow a third-party a"
       "uthenticator (in addition to two-factor)"
-      "\022J\n\033external_authenticator_type\030\r \001(\rB%\202"
-      "\265\030!Type of third-party authenticator\022_\n\020"
-      "time_transferred\030\016 \001(\rBE\202\265\030AWhen the tok"
-      "en was transferred from another device, "
-      "if applicable\"\262\003\n#CTwoFactor_AddAuthenti"
-      "cator_Request\022#\n\007steamid\030\001 \001(\006B\022\202\265\030\016stea"
-      "mid to use\022:\n\022authenticator_time\030\002 \001(\004B\036"
-      "\202\265\030\032Current authenticator time\022\?\n\rserial"
-      "_number\030\003 \001(\006B(\202\265\030$locally computed seri"
-      "al (deprecated)\0222\n\022authenticator_type\030\004 "
-      "\001(\rB\026\202\265\030\022Authenticator type\0227\n\021device_id"
-      "entifier\030\005 \001(\tB\034\202\265\030\030Authenticator identi"
-      "fier\022A\n\014sms_phone_id\030\006 \001(\tB+\202\265\030\'ID of ph"
-      "one to use for SMS verification\0229\n\014http_"
-      "headers\030\007 \003(\tB#\202\265\030\037HTTP headers alternat"
-      "ing by K/V\"\363\004\n$CTwoFactor_AddAuthenticat"
-      "or_Response\022I\n\rshared_secret\030\001 \001(\014B2\202\265\030."
-      "Shared secret between server and authent"
-      "icator\022I\n\rserial_number\030\002 \001(\006B2\202\265\030.Authe"
-      "nticator serial number (unique per token"
-      ")\022>\n\017revocation_code\030\003 \001(\tB%\202\265\030!code use"
-      "d to revoke authenticator\022+\n\003uri\030\004 \001(\tB\036"
-      "\202\265\030\032URI for QR code generation\022,\n\013server"
-      "_time\030\005 \001(\004B\027\202\265\030\023Current server time\022A\n\014"
-      "account_name\030\006 \001(\tB+\202\265\030\'Account name to "
-      "display on token client\0223\n\ttoken_gid\030\007 \001"
-      "(\tB \202\265\030\034Token GID assigned by server\022V\n\017"
-      "identity_secret\030\010 \001(\014B=\202\265\0309Secret used f"
-      "or identity attestation (e.g., for event"
-      "ing)\022)\n\010secret_1\030\t \001(\014B\027\202\265\030\023Spare shared"
-      " secret\022\037\n\006status\030\n \001(\005B\017\202\265\030\013Result code"
-      "\"\335\001\n\034CTwoFactor_SendEmail_Request\022#\n\007ste"
-      "amid\030\001 \001(\006B\022\202\265\030\016Steamid to use\022F\n\nemail_"
-      "type\030\002 \001(\rB2\202\265\030.Type of email to send (E"
-      "TwoFactorEmailType::*)\022P\n\027include_activa"
-      "tion_code\030\003 \001(\010B/\202\265\030+Include activation "
-      "code in email parameters\"\037\n\035CTwoFactor_S"
-      "endEmail_Response\"\303\002\n+CTwoFactor_Finaliz"
-      "eAddAuthenticator_Request\022#\n\007steamid\030\001 \001"
-      "(\006B\022\202\265\030\016steamid to use\0221\n\022authenticator_"
-      "code\030\002 \001(\tB\025\202\265\030\021Current auth code\022:\n\022aut"
-      "henticator_time\030\003 \001(\004B\036\202\265\030\032Current authe"
-      "nticator time\022E\n\017activation_code\030\004 \001(\tB,"
-      "\202\265\030(Activation code from out-of-band mes"
-      "sage\0229\n\014http_headers\030\005 \003(\tB#\202\265\030\037HTTP hea"
-      "ders alternating by K/V\"\351\001\n,CTwoFactor_F"
-      "inalizeAddAuthenticator_Response\022:\n\007succ"
-      "ess\030\001 \001(\010B)\202\265\030%True if succeeded, or wan"
-      "t more tries\022.\n\twant_more\030\002 \001(\010B\033\202\265\030\027Tru"
-      "e if want more tries\022,\n\013server_time\030\003 \001("
-      "\004B\027\202\265\030\023Current server time\022\037\n\006status\030\004 \001"
-      "(\005B\017\202\265\030\013Result code\"\313\002\n&CTwoFactor_Remov"
-      "eAuthenticator_Request\022<\n\017revocation_cod"
-      "e\030\002 \001(\tB#\202\265\030\037Password needed to remove t"
-      "oken\022H\n\021revocation_reason\030\005 \001(\rB-\202\265\030)Rea"
-      "son the authenticator is being removed\022O"
-      "\n\021steamguard_scheme\030\006 \001(\rB4\202\265\0300Type of S"
-      "team Guard to use once token is removed\022"
-      "H\n\035remove_all_steamguard_cookies\030\007 \001(\010B!"
-      "\202\265\030\035Remove all steamguard cookies\"\376\001\n\'CT"
-      "woFactor_RemoveAuthenticator_Response\022L\n"
-      "\007success\030\001 \001(\010B;\202\265\0307True if request succ"
-      "eeeded. The mobile app checks this.\022,\n\013s"
-      "erver_time\030\003 \001(\004B\027\202\265\030\023Current server tim"
-      "e\022W\n\035revocation_attempts_remaining\030\005 \001(\r"
-      "B0\202\265\030,Number of revocation code attempts"
-      " remaining\")\n\'CTwoFactor_CreateEmergency"
-      "Codes_Request\"N\n(CTwoFactor_CreateEmerge"
-      "ncyCodes_Response\022\"\n\005codes\030\001 \003(\tB\023\202\265\030\017Em"
-      "ergency codes\"O\n(CTwoFactor_DestroyEmerg"
-      "encyCodes_Request\022#\n\007steamid\030\001 \001(\006B\022\202\265\030\016"
-      "steamid to use\"+\n)CTwoFactor_DestroyEmer"
-      "gencyCodes_Response\"F\n CTwoFactor_Valida"
-      "teToken_Request\022\"\n\004code\030\001 \001(\tB\024\202\265\030\020code "
-      "to validate\"L\n!CTwoFactor_ValidateToken_"
-      "Response\022\'\n\005valid\030\001 \001(\010B\030\202\265\030\024result of v"
-      "alidation2\306\013\n\tTwoFactor\022\244\001\n\013QueryStatus\022"
-      "&.proto.steam.CTwoFactor_Status_Request\032"
-      "\'.proto.steam.CTwoFactor_Status_Response"
-      "\"D\202\265\030@Get two-factor authentication sett"
-      "ings for the logged-in account\022\262\001\n\020AddAu"
-      "thenticator\0220.proto.steam.CTwoFactor_Add"
-      "Authenticator_Request\0321.proto.steam.CTwo"
-      "Factor_AddAuthenticator_Response\"9\202\265\0305Ad"
-      "d two-factor authenticator to the logged"
-      "-in account\022\201\001\n\tSendEmail\022).proto.steam."
-      "CTwoFactor_SendEmail_Request\032*.proto.ste"
-      "am.CTwoFactor_SendEmail_Response\"\035\202\265\030\031Se"
-      "nd email to the account\022\331\001\n\030FinalizeAddA"
-      "uthenticator\0228.proto.steam.CTwoFactor_Fi"
-      "nalizeAddAuthenticator_Request\0329.proto.s"
-      "team.CTwoFactor_FinalizeAddAuthenticator"
-      "_Response\"H\202\265\030DFinalize two-factor authe"
-      "ntication addition to the logged-in acco"
-      "unt\022\312\001\n\023RemoveAuthenticator\0223.proto.stea"
-      "m.CTwoFactor_RemoveAuthenticator_Request"
-      "\0324.proto.steam.CTwoFactor_RemoveAuthenti"
-      "cator_Response\"H\202\265\030DRemove two-factor au"
-      "thentication addition from the logged-in"
-      " account\022\257\001\n\024CreateEmergencyCodes\0224.prot"
-      "o.steam.CTwoFactor_CreateEmergencyCodes_"
-      "Request\0325.proto.steam.CTwoFactor_CreateE"
-      "mergencyCodes_Response\"*\202\265\030&Generate eme"
-      "rgency authenticator codes\022\301\001\n\025DestroyEm"
-      "ergencyCodes\0225.proto.steam.CTwoFactor_De"
-      "stroyEmergencyCodes_Request\0326.proto.stea"
-      "m.CTwoFactor_DestroyEmergencyCodes_Respo"
-      "nse\"9\202\265\0305Destroy emergency authenticator"
-      " codes for the account\022\222\001\n\rValidateToken"
-      "\022-.proto.steam.CTwoFactor_ValidateToken_"
-      "Request\032..proto.steam.CTwoFactor_Validat"
-      "eToken_Response\"\"\202\265\030\036Validate (and consu"
-      "me) a token\032%\202\265\030!Two Factor Authenticati"
-      "on ServiceB\003\200\001\001"
+      "\022_\n\020time_transferred\030\r \001(\rBE\202\265\030AWhen the"
+      " token was transferred from another devi"
+      "ce, if applicable\"\262\003\n#CTwoFactor_AddAuth"
+      "enticator_Request\022#\n\007steamid\030\001 \001(\006B\022\202\265\030\016"
+      "steamid to use\022:\n\022authenticator_time\030\002 \001"
+      "(\004B\036\202\265\030\032Current authenticator time\022\?\n\rse"
+      "rial_number\030\003 \001(\006B(\202\265\030$locally computed "
+      "serial (deprecated)\0222\n\022authenticator_typ"
+      "e\030\004 \001(\rB\026\202\265\030\022Authenticator type\0227\n\021devic"
+      "e_identifier\030\005 \001(\tB\034\202\265\030\030Authenticator id"
+      "entifier\022A\n\014sms_phone_id\030\006 \001(\tB+\202\265\030\'ID o"
+      "f phone to use for SMS verification\0229\n\014h"
+      "ttp_headers\030\007 \003(\tB#\202\265\030\037HTTP headers alte"
+      "rnating by K/V\"\363\004\n$CTwoFactor_AddAuthent"
+      "icator_Response\022I\n\rshared_secret\030\001 \001(\014B2"
+      "\202\265\030.Shared secret between server and aut"
+      "henticator\022I\n\rserial_number\030\002 \001(\006B2\202\265\030.A"
+      "uthenticator serial number (unique per t"
+      "oken)\022>\n\017revocation_code\030\003 \001(\tB%\202\265\030!code"
+      " used to revoke authenticator\022+\n\003uri\030\004 \001"
+      "(\tB\036\202\265\030\032URI for QR code generation\022,\n\013se"
+      "rver_time\030\005 \001(\004B\027\202\265\030\023Current server time"
+      "\022A\n\014account_name\030\006 \001(\tB+\202\265\030\'Account name"
+      " to display on token client\0223\n\ttoken_gid"
+      "\030\007 \001(\tB \202\265\030\034Token GID assigned by server"
+      "\022V\n\017identity_secret\030\010 \001(\014B=\202\265\0309Secret us"
+      "ed for identity attestation (e.g., for e"
+      "venting)\022)\n\010secret_1\030\t \001(\014B\027\202\265\030\023Spare sh"
+      "ared secret\022\037\n\006status\030\n \001(\005B\017\202\265\030\013Result "
+      "code\"\335\001\n\034CTwoFactor_SendEmail_Request\022#\n"
+      "\007steamid\030\001 \001(\006B\022\202\265\030\016Steamid to use\022F\n\nem"
+      "ail_type\030\002 \001(\rB2\202\265\030.Type of email to sen"
+      "d (ETwoFactorEmailType::*)\022P\n\027include_ac"
+      "tivation_code\030\003 \001(\010B/\202\265\030+Include activat"
+      "ion code in email parameters\"\037\n\035CTwoFact"
+      "or_SendEmail_Response\"\303\002\n+CTwoFactor_Fin"
+      "alizeAddAuthenticator_Request\022#\n\007steamid"
+      "\030\001 \001(\006B\022\202\265\030\016steamid to use\0221\n\022authentica"
+      "tor_code\030\002 \001(\tB\025\202\265\030\021Current auth code\022:\n"
+      "\022authenticator_time\030\003 \001(\004B\036\202\265\030\032Current a"
+      "uthenticator time\022E\n\017activation_code\030\004 \001"
+      "(\tB,\202\265\030(Activation code from out-of-band"
+      " message\0229\n\014http_headers\030\005 \003(\tB#\202\265\030\037HTTP"
+      " headers alternating by K/V\"\351\001\n,CTwoFact"
+      "or_FinalizeAddAuthenticator_Response\022:\n\007"
+      "success\030\001 \001(\010B)\202\265\030%True if succeeded, or"
+      " want more tries\022.\n\twant_more\030\002 \001(\010B\033\202\265\030"
+      "\027True if want more tries\022,\n\013server_time\030"
+      "\003 \001(\004B\027\202\265\030\023Current server time\022\037\n\006status"
+      "\030\004 \001(\005B\017\202\265\030\013Result code\"\313\002\n&CTwoFactor_R"
+      "emoveAuthenticator_Request\022<\n\017revocation"
+      "_code\030\002 \001(\tB#\202\265\030\037Password needed to remo"
+      "ve token\022H\n\021revocation_reason\030\005 \001(\rB-\202\265\030"
+      ")Reason the authenticator is being remov"
+      "ed\022O\n\021steamguard_scheme\030\006 \001(\rB4\202\265\0300Type "
+      "of Steam Guard to use once token is remo"
+      "ved\022H\n\035remove_all_steamguard_cookies\030\007 \001"
+      "(\010B!\202\265\030\035Remove all steamguard cookies\"\376\001"
+      "\n\'CTwoFactor_RemoveAuthenticator_Respons"
+      "e\022L\n\007success\030\001 \001(\010B;\202\265\0307True if request "
+      "succeeeded. The mobile app checks this.\022"
+      ",\n\013server_time\030\003 \001(\004B\027\202\265\030\023Current server"
+      " time\022W\n\035revocation_attempts_remaining\030\005"
+      " \001(\rB0\202\265\030,Number of revocation code atte"
+      "mpts remaining\")\n\'CTwoFactor_CreateEmerg"
+      "encyCodes_Request\"N\n(CTwoFactor_CreateEm"
+      "ergencyCodes_Response\022\"\n\005codes\030\001 \003(\tB\023\202\265"
+      "\030\017Emergency codes\"O\n(CTwoFactor_DestroyE"
+      "mergencyCodes_Request\022#\n\007steamid\030\001 \001(\006B\022"
+      "\202\265\030\016steamid to use\"+\n)CTwoFactor_Destroy"
+      "EmergencyCodes_Response\"F\n CTwoFactor_Va"
+      "lidateToken_Request\022\"\n\004code\030\001 \001(\tB\024\202\265\030\020c"
+      "ode to validate\"L\n!CTwoFactor_ValidateTo"
+      "ken_Response\022\'\n\005valid\030\001 \001(\010B\030\202\265\030\024result "
+      "of validation2\306\013\n\tTwoFactor\022\244\001\n\013QuerySta"
+      "tus\022&.proto.steam.CTwoFactor_Status_Requ"
+      "est\032\'.proto.steam.CTwoFactor_Status_Resp"
+      "onse\"D\202\265\030@Get two-factor authentication "
+      "settings for the logged-in account\022\262\001\n\020A"
+      "ddAuthenticator\0220.proto.steam.CTwoFactor"
+      "_AddAuthenticator_Request\0321.proto.steam."
+      "CTwoFactor_AddAuthenticator_Response\"9\202\265"
+      "\0305Add two-factor authenticator to the lo"
+      "gged-in account\022\201\001\n\tSendEmail\022).proto.st"
+      "eam.CTwoFactor_SendEmail_Request\032*.proto"
+      ".steam.CTwoFactor_SendEmail_Response\"\035\202\265"
+      "\030\031Send email to the account\022\331\001\n\030Finalize"
+      "AddAuthenticator\0228.proto.steam.CTwoFacto"
+      "r_FinalizeAddAuthenticator_Request\0329.pro"
+      "to.steam.CTwoFactor_FinalizeAddAuthentic"
+      "ator_Response\"H\202\265\030DFinalize two-factor a"
+      "uthentication addition to the logged-in "
+      "account\022\312\001\n\023RemoveAuthenticator\0223.proto."
+      "steam.CTwoFactor_RemoveAuthenticator_Req"
+      "uest\0324.proto.steam.CTwoFactor_RemoveAuth"
+      "enticator_Response\"H\202\265\030DRemove two-facto"
+      "r authentication addition from the logge"
+      "d-in account\022\257\001\n\024CreateEmergencyCodes\0224."
+      "proto.steam.CTwoFactor_CreateEmergencyCo"
+      "des_Request\0325.proto.steam.CTwoFactor_Cre"
+      "ateEmergencyCodes_Response\"*\202\265\030&Generate"
+      " emergency authenticator codes\022\301\001\n\025Destr"
+      "oyEmergencyCodes\0225.proto.steam.CTwoFacto"
+      "r_DestroyEmergencyCodes_Request\0326.proto."
+      "steam.CTwoFactor_DestroyEmergencyCodes_R"
+      "esponse\"9\202\265\0305Destroy emergency authentic"
+      "ator codes for the account\022\222\001\n\rValidateT"
+      "oken\022-.proto.steam.CTwoFactor_ValidateTo"
+      "ken_Request\032..proto.steam.CTwoFactor_Val"
+      "idateToken_Response\"\"\202\265\030\036Validate (and c"
+      "onsume) a token\032%\202\265\030!Two Factor Authenti"
+      "cation ServiceB\003\200\001\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 5575);
+      descriptor, 5499);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "steammessages_twofactor.steamclient.proto", &protobuf_RegisterTypes);
   ::proto::steam::protobuf_steammessages_5funified_5fbase_2esteamclient_2eproto::AddDescriptors();
@@ -851,7 +847,6 @@ const int CTwoFactor_Status_Response::kTimeCreatedFieldNumber;
 const int CTwoFactor_Status_Response::kRevocationAttemptsRemainingFieldNumber;
 const int CTwoFactor_Status_Response::kClassifiedAgentFieldNumber;
 const int CTwoFactor_Status_Response::kAllowExternalAuthenticatorFieldNumber;
-const int CTwoFactor_Status_Response::kExternalAuthenticatorTypeFieldNumber;
 const int CTwoFactor_Status_Response::kTimeTransferredFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -950,7 +945,7 @@ void CTwoFactor_Status_Response::Clear() {
     ::memset(&state_, 0, reinterpret_cast<char*>(&authenticator_allowed_) -
       reinterpret_cast<char*>(&state_) + sizeof(authenticator_allowed_));
   }
-  if (_has_bits_[8 / 32] & 16128u) {
+  if (_has_bits_[8 / 32] & 7936u) {
     ::memset(&email_validated_, 0, reinterpret_cast<char*>(&time_transferred_) -
       reinterpret_cast<char*>(&email_validated_) + sizeof(time_transferred_));
   }
@@ -1142,24 +1137,10 @@ bool CTwoFactor_Status_Response::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 external_authenticator_type = 13 [(.proto.steam.description) = "Type of third-party authenticator"];
+      // optional uint32 time_transferred = 13 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
       case 13: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(104u)) {
-          set_has_external_authenticator_type();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &external_authenticator_type_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional uint32 time_transferred = 14 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
-      case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(112u)) {
           set_has_time_transferred();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1274,14 +1255,9 @@ void CTwoFactor_Status_Response::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(12, this->allow_external_authenticator(), output);
   }
 
-  // optional uint32 external_authenticator_type = 13 [(.proto.steam.description) = "Type of third-party authenticator"];
+  // optional uint32 time_transferred = 13 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
   if (cached_has_bits & 0x00001000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(13, this->external_authenticator_type(), output);
-  }
-
-  // optional uint32 time_transferred = 14 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
-  if (cached_has_bits & 0x00002000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(14, this->time_transferred(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(13, this->time_transferred(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1376,14 +1352,9 @@ void CTwoFactor_Status_Response::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(12, this->allow_external_authenticator(), target);
   }
 
-  // optional uint32 external_authenticator_type = 13 [(.proto.steam.description) = "Type of third-party authenticator"];
+  // optional uint32 time_transferred = 13 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
   if (cached_has_bits & 0x00001000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(13, this->external_authenticator_type(), target);
-  }
-
-  // optional uint32 time_transferred = 14 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
-  if (cached_has_bits & 0x00002000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(14, this->time_transferred(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(13, this->time_transferred(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1459,7 +1430,7 @@ size_t CTwoFactor_Status_Response::ByteSizeLong() const {
     }
 
   }
-  if (_has_bits_[8 / 32] & 16128u) {
+  if (_has_bits_[8 / 32] & 7936u) {
     // optional bool email_validated = 7 [(.proto.steam.description) = "Account has verified email capability"];
     if (has_email_validated()) {
       total_size += 1 + 1;
@@ -1484,14 +1455,7 @@ size_t CTwoFactor_Status_Response::ByteSizeLong() const {
           this->revocation_attempts_remaining());
     }
 
-    // optional uint32 external_authenticator_type = 13 [(.proto.steam.description) = "Type of third-party authenticator"];
-    if (has_external_authenticator_type()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->external_authenticator_type());
-    }
-
-    // optional uint32 time_transferred = 14 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
+    // optional uint32 time_transferred = 13 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
     if (has_time_transferred()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
@@ -1559,7 +1523,7 @@ void CTwoFactor_Status_Response::MergeFrom(const CTwoFactor_Status_Response& fro
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 16128u) {
+  if (cached_has_bits & 7936u) {
     if (cached_has_bits & 0x00000100u) {
       email_validated_ = from.email_validated_;
     }
@@ -1573,9 +1537,6 @@ void CTwoFactor_Status_Response::MergeFrom(const CTwoFactor_Status_Response& fro
       revocation_attempts_remaining_ = from.revocation_attempts_remaining_;
     }
     if (cached_has_bits & 0x00001000u) {
-      external_authenticator_type_ = from.external_authenticator_type_;
-    }
-    if (cached_has_bits & 0x00002000u) {
       time_transferred_ = from.time_transferred_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -1617,7 +1578,6 @@ void CTwoFactor_Status_Response::InternalSwap(CTwoFactor_Status_Response* other)
   std::swap(allow_external_authenticator_, other->allow_external_authenticator_);
   std::swap(time_created_, other->time_created_);
   std::swap(revocation_attempts_remaining_, other->revocation_attempts_remaining_);
-  std::swap(external_authenticator_type_, other->external_authenticator_type_);
   std::swap(time_transferred_, other->time_transferred_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -2037,39 +1997,15 @@ void CTwoFactor_Status_Response::set_allow_external_authenticator(bool value) {
   // @@protoc_insertion_point(field_set:proto.steam.CTwoFactor_Status_Response.allow_external_authenticator)
 }
 
-// optional uint32 external_authenticator_type = 13 [(.proto.steam.description) = "Type of third-party authenticator"];
-bool CTwoFactor_Status_Response::has_external_authenticator_type() const {
+// optional uint32 time_transferred = 13 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
+bool CTwoFactor_Status_Response::has_time_transferred() const {
   return (_has_bits_[0] & 0x00001000u) != 0;
 }
-void CTwoFactor_Status_Response::set_has_external_authenticator_type() {
+void CTwoFactor_Status_Response::set_has_time_transferred() {
   _has_bits_[0] |= 0x00001000u;
 }
-void CTwoFactor_Status_Response::clear_has_external_authenticator_type() {
-  _has_bits_[0] &= ~0x00001000u;
-}
-void CTwoFactor_Status_Response::clear_external_authenticator_type() {
-  external_authenticator_type_ = 0u;
-  clear_has_external_authenticator_type();
-}
-::google::protobuf::uint32 CTwoFactor_Status_Response::external_authenticator_type() const {
-  // @@protoc_insertion_point(field_get:proto.steam.CTwoFactor_Status_Response.external_authenticator_type)
-  return external_authenticator_type_;
-}
-void CTwoFactor_Status_Response::set_external_authenticator_type(::google::protobuf::uint32 value) {
-  set_has_external_authenticator_type();
-  external_authenticator_type_ = value;
-  // @@protoc_insertion_point(field_set:proto.steam.CTwoFactor_Status_Response.external_authenticator_type)
-}
-
-// optional uint32 time_transferred = 14 [(.proto.steam.description) = "When the token was transferred from another device, if applicable"];
-bool CTwoFactor_Status_Response::has_time_transferred() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
-}
-void CTwoFactor_Status_Response::set_has_time_transferred() {
-  _has_bits_[0] |= 0x00002000u;
-}
 void CTwoFactor_Status_Response::clear_has_time_transferred() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 void CTwoFactor_Status_Response::clear_time_transferred() {
   time_transferred_ = 0u;

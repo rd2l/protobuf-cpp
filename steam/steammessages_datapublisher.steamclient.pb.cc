@@ -60,18 +60,20 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDataPublisher_ClientContentCorruptionReport_Notification, is_manifest_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDataPublisher_ClientContentCorruptionReport_Notification, object_size_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDataPublisher_ClientContentCorruptionReport_Notification, corruption_type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDataPublisher_ClientContentCorruptionReport_Notification, used_https_),
   2,
   3,
   0,
   1,
   4,
   5,
-  6,
   7,
+  8,
+  6,
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
-  { 0, 13, sizeof(CDataPublisher_ClientContentCorruptionReport_Notification)},
+  { 0, 14, sizeof(CDataPublisher_ClientContentCorruptionReport_Notification)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -123,7 +125,7 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n-steammessages_datapublisher.steamclien"
       "t.proto\022\013proto.steam\032,steammessages_unif"
-      "ied_base.steamclient.proto\"\222\003\n9CDataPubl"
+      "ied_base.steamclient.proto\"\301\003\n9CDataPubl"
       "isher_ClientContentCorruptionReport_Noti"
       "fication\022\r\n\005appid\030\001 \001(\r\022\017\n\007depotid\030\002 \001(\r"
       "\0229\n\017download_source\030\003 \001(\tB \202\265\030\034host name"
@@ -133,15 +135,16 @@ void AddDescriptorsImpl() {
       " \001(\010B)\202\265\030%The object is a manifest, not "
       "a chunk\022-\n\013object_size\030\007 \001(\004B\030\202\265\030\024object"
       " size in bytes\0227\n\017corruption_type\030\010 \001(\rB"
-      "\036\202\265\030\032See EContentCorruptionType2\273\001\n\rData"
-      "Publisher\022\200\001\n\035ClientContentCorruptionRep"
-      "ort\022F.proto.steam.CDataPublisher_ClientC"
-      "ontentCorruptionReport_Notification\032\027.pr"
-      "oto.steam.NoResponse\032\'\202\265\030#Data Publisher"
-      " (DP) server servicesB\003\200\001\001"
+      "\036\202\265\030\032See EContentCorruptionType\022-\n\nused_"
+      "https\030\t \001(\010B\031\202\265\030\025the request was HTTPS2\273"
+      "\001\n\rDataPublisher\022\200\001\n\035ClientContentCorrup"
+      "tionReport\022F.proto.steam.CDataPublisher_"
+      "ClientContentCorruptionReport_Notificati"
+      "on\032\027.proto.steam.NoResponse\032\'\202\265\030#Data Pu"
+      "blisher (DP) server servicesB\003\200\001\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 706);
+      descriptor, 753);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "steammessages_datapublisher.steamclient.proto", &protobuf_RegisterTypes);
   ::proto::steam::protobuf_steammessages_5funified_5fbase_2esteamclient_2eproto::AddDescriptors();
@@ -173,6 +176,7 @@ const int CDataPublisher_ClientContentCorruptionReport_Notification::kCellidFiel
 const int CDataPublisher_ClientContentCorruptionReport_Notification::kIsManifestFieldNumber;
 const int CDataPublisher_ClientContentCorruptionReport_Notification::kObjectSizeFieldNumber;
 const int CDataPublisher_ClientContentCorruptionReport_Notification::kCorruptionTypeFieldNumber;
+const int CDataPublisher_ClientContentCorruptionReport_Notification::kUsedHttpsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CDataPublisher_ClientContentCorruptionReport_Notification::CDataPublisher_ClientContentCorruptionReport_Notification()
@@ -257,9 +261,10 @@ void CDataPublisher_ClientContentCorruptionReport_Notification::Clear() {
     }
   }
   if (_has_bits_[0 / 32] & 252u) {
-    ::memset(&appid_, 0, reinterpret_cast<char*>(&corruption_type_) -
-      reinterpret_cast<char*>(&appid_) + sizeof(corruption_type_));
+    ::memset(&appid_, 0, reinterpret_cast<char*>(&object_size_) -
+      reinterpret_cast<char*>(&appid_) + sizeof(object_size_));
   }
+  corruption_type_ = 0u;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -390,6 +395,20 @@ bool CDataPublisher_ClientContentCorruptionReport_Notification::MergePartialFrom
         break;
       }
 
+      // optional bool used_https = 9 [(.proto.steam.description) = "the request was HTTPS"];
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(72u)) {
+          set_has_used_https();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &used_https_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -460,13 +479,18 @@ void CDataPublisher_ClientContentCorruptionReport_Notification::SerializeWithCac
   }
 
   // optional uint64 object_size = 7 [(.proto.steam.description) = "object size in bytes"];
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(7, this->object_size(), output);
   }
 
   // optional uint32 corruption_type = 8 [(.proto.steam.description) = "See EContentCorruptionType"];
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000100u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(8, this->corruption_type(), output);
+  }
+
+  // optional bool used_https = 9 [(.proto.steam.description) = "the request was HTTPS"];
+  if (cached_has_bits & 0x00000040u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->used_https(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -526,13 +550,18 @@ void CDataPublisher_ClientContentCorruptionReport_Notification::SerializeWithCac
   }
 
   // optional uint64 object_size = 7 [(.proto.steam.description) = "object size in bytes"];
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(7, this->object_size(), target);
   }
 
   // optional uint32 corruption_type = 8 [(.proto.steam.description) = "See EContentCorruptionType"];
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000100u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(8, this->corruption_type(), target);
+  }
+
+  // optional bool used_https = 9 [(.proto.steam.description) = "the request was HTTPS"];
+  if (cached_has_bits & 0x00000040u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->used_https(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -593,6 +622,11 @@ size_t CDataPublisher_ClientContentCorruptionReport_Notification::ByteSizeLong()
       total_size += 1 + 1;
     }
 
+    // optional bool used_https = 9 [(.proto.steam.description) = "the request was HTTPS"];
+    if (has_used_https()) {
+      total_size += 1 + 1;
+    }
+
     // optional uint64 object_size = 7 [(.proto.steam.description) = "object size in bytes"];
     if (has_object_size()) {
       total_size += 1 +
@@ -600,14 +634,14 @@ size_t CDataPublisher_ClientContentCorruptionReport_Notification::ByteSizeLong()
           this->object_size());
     }
 
-    // optional uint32 corruption_type = 8 [(.proto.steam.description) = "See EContentCorruptionType"];
-    if (has_corruption_type()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->corruption_type());
-    }
-
   }
+  // optional uint32 corruption_type = 8 [(.proto.steam.description) = "See EContentCorruptionType"];
+  if (has_corruption_type()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->corruption_type());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -660,12 +694,15 @@ void CDataPublisher_ClientContentCorruptionReport_Notification::MergeFrom(const 
       is_manifest_ = from.is_manifest_;
     }
     if (cached_has_bits & 0x00000040u) {
-      object_size_ = from.object_size_;
+      used_https_ = from.used_https_;
     }
     if (cached_has_bits & 0x00000080u) {
-      corruption_type_ = from.corruption_type_;
+      object_size_ = from.object_size_;
     }
     _has_bits_[0] |= cached_has_bits;
+  }
+  if (cached_has_bits & 0x00000100u) {
+    set_corruption_type(from.corruption_type());
   }
 }
 
@@ -698,6 +735,7 @@ void CDataPublisher_ClientContentCorruptionReport_Notification::InternalSwap(CDa
   std::swap(depotid_, other->depotid_);
   std::swap(cellid_, other->cellid_);
   std::swap(is_manifest_, other->is_manifest_);
+  std::swap(used_https_, other->used_https_);
   std::swap(object_size_, other->object_size_);
   std::swap(corruption_type_, other->corruption_type_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
@@ -937,13 +975,13 @@ void CDataPublisher_ClientContentCorruptionReport_Notification::set_is_manifest(
 
 // optional uint64 object_size = 7 [(.proto.steam.description) = "object size in bytes"];
 bool CDataPublisher_ClientContentCorruptionReport_Notification::has_object_size() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 void CDataPublisher_ClientContentCorruptionReport_Notification::set_has_object_size() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
 }
 void CDataPublisher_ClientContentCorruptionReport_Notification::clear_has_object_size() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 void CDataPublisher_ClientContentCorruptionReport_Notification::clear_object_size() {
   object_size_ = GOOGLE_ULONGLONG(0);
@@ -961,13 +999,13 @@ void CDataPublisher_ClientContentCorruptionReport_Notification::set_object_size(
 
 // optional uint32 corruption_type = 8 [(.proto.steam.description) = "See EContentCorruptionType"];
 bool CDataPublisher_ClientContentCorruptionReport_Notification::has_corruption_type() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 void CDataPublisher_ClientContentCorruptionReport_Notification::set_has_corruption_type() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
 }
 void CDataPublisher_ClientContentCorruptionReport_Notification::clear_has_corruption_type() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 void CDataPublisher_ClientContentCorruptionReport_Notification::clear_corruption_type() {
   corruption_type_ = 0u;
@@ -981,6 +1019,30 @@ void CDataPublisher_ClientContentCorruptionReport_Notification::set_corruption_t
   set_has_corruption_type();
   corruption_type_ = value;
   // @@protoc_insertion_point(field_set:proto.steam.CDataPublisher_ClientContentCorruptionReport_Notification.corruption_type)
+}
+
+// optional bool used_https = 9 [(.proto.steam.description) = "the request was HTTPS"];
+bool CDataPublisher_ClientContentCorruptionReport_Notification::has_used_https() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+void CDataPublisher_ClientContentCorruptionReport_Notification::set_has_used_https() {
+  _has_bits_[0] |= 0x00000040u;
+}
+void CDataPublisher_ClientContentCorruptionReport_Notification::clear_has_used_https() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+void CDataPublisher_ClientContentCorruptionReport_Notification::clear_used_https() {
+  used_https_ = false;
+  clear_has_used_https();
+}
+bool CDataPublisher_ClientContentCorruptionReport_Notification::used_https() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CDataPublisher_ClientContentCorruptionReport_Notification.used_https)
+  return used_https_;
+}
+void CDataPublisher_ClientContentCorruptionReport_Notification::set_used_https(bool value) {
+  set_has_used_https();
+  used_https_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CDataPublisher_ClientContentCorruptionReport_Notification.used_https)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

@@ -9,6 +9,16 @@
 		'include_dirs': [
 			'steam',
 		],
+		'conditions': [
+			['OS=="linux"', {
+				'!cflags': [
+				  '-Weverything',
+				],
+				'cflags': [
+				  '-w',
+				]
+			}
+		]],
 		'sources': [
 			'<!@pymod_do_main(glob-files steam/**/*.cc)',
 			'<!@pymod_do_main(glob-files steam/**/*.h)',
@@ -24,6 +34,16 @@
 		'include_dirs': [
 			'dota',
 		],
+		'conditions': [
+			['OS=="linux"', {
+				'!cflags': [
+				  '-Weverything',
+				],
+				'cflags': [
+				  '-w',
+				]
+			}
+		]],
 		'sources': [
 			'<!@pymod_do_main(glob-files dota/**/*.cc)',
 			'<!@pymod_do_main(glob-files dota/**/*.h)',
@@ -40,6 +60,20 @@
 		'include_dirs': [
 			'protobuf/src',
 		],
+		
+		'conditions': [
+			['OS=="linux"', {
+				'defines': [
+					'HAVE_PTHREAD',
+				],
+				'!cflags': [
+				  '-Weverything',
+				],
+				'cflags': [
+				  '-w',
+				  '-Wno-unused-parameter',
+				]
+			}]],
 		'sources': [
 		"protobuf/src/google/protobuf/stubs/atomicops_internals_x86_gcc.cc",
 		"protobuf/src/google/protobuf/stubs/atomicops_internals_x86_msvc.cc",

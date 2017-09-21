@@ -130,11 +130,15 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAMsg_SendStatPopup, stat_images_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAMsg_SendStatPopup, stat_image_types_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAMsg_SendStatPopup, duration_),
-  0,
-  ~0u,
-  ~0u,
-  ~0u,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAMsg_SendStatPopup, use_html_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAMsg_SendStatPopup, movie_name_),
   1,
+  ~0u,
+  ~0u,
+  ~0u,
+  2,
+  3,
+  0,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAMsg_DismissAllStatPopups, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAMsg_DismissAllStatPopups, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -181,10 +185,10 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 15, 23, sizeof(CDOTAMsg_ItemAlert)},
   { 26, 34, sizeof(CDOTAMsg_MapLine)},
   { 37, 47, sizeof(CDOTAMsg_WorldLine)},
-  { 52, 62, sizeof(CDOTAMsg_SendStatPopup)},
-  { 67, 73, sizeof(CDOTAMsg_DismissAllStatPopups)},
-  { 74, 82, sizeof(CDOTAMsg_CoachHUDPing)},
-  { 85, 98, sizeof(CDOTAMsg_UnitOrder)},
+  { 52, 64, sizeof(CDOTAMsg_SendStatPopup)},
+  { 71, 77, sizeof(CDOTAMsg_DismissAllStatPopups)},
+  { 78, 86, sizeof(CDOTAMsg_CoachHUDPing)},
+  { 89, 102, sizeof(CDOTAMsg_UnitOrder)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -273,58 +277,60 @@ void AddDescriptorsImpl() {
       "e\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\017\n\007initial\030\003 \001(\010"
       "\"S\n\022CDOTAMsg_WorldLine\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002"
       " \001(\005\022\t\n\001z\030\003 \001(\005\022\017\n\007initial\030\004 \001(\010\022\013\n\003end\030"
-      "\005 \001(\010\"\265\001\n\026CDOTAMsg_SendStatPopup\022D\n\005styl"
+      "\005 \001(\010\"\333\001\n\026CDOTAMsg_SendStatPopup\022D\n\005styl"
       "e\030\001 \001(\0162\037.proto.dota.EDOTAStatPopupTypes"
       ":\024k_EDOTA_SPT_Textline\022\024\n\014stat_strings\030\002"
       " \003(\t\022\023\n\013stat_images\030\003 \003(\005\022\030\n\020stat_image_"
-      "types\030\004 \003(\005\022\020\n\010duration\030\005 \001(\002\"3\n\035CDOTAMs"
-      "g_DismissAllStatPopups\022\022\n\ntime_delay\030\001 \001"
-      "(\002\">\n\025CDOTAMsg_CoachHUDPing\022\t\n\001x\030\001 \001(\r\022\t"
-      "\n\001y\030\002 \001(\r\022\017\n\007tgtpath\030\003 \001(\t\"\375\001\n\022CDOTAMsg_"
-      "UnitOrder\022\022\n\006issuer\030\001 \001(\021:\002-1\022E\n\norder_t"
-      "ype\030\002 \001(\0162\033.proto.dota.dotaunitorder_t:\024"
-      "DOTA_UNIT_ORDER_NONE\022\r\n\005units\030\003 \003(\005\022\024\n\014t"
-      "arget_index\030\004 \001(\005\022\025\n\rability_index\030\005 \001(\005"
-      "\022(\n\010position\030\006 \001(\0132\026.proto.dota.CMsgVect"
-      "or\022\r\n\005queue\030\007 \001(\010\022\027\n\017sequence_number\030\010 \001"
-      "(\005*\215\001\n\023EDOTAStatPopupTypes\022\030\n\024k_EDOTA_SP"
-      "T_Textline\020\000\022\025\n\021k_EDOTA_SPT_Basic\020\001\022\024\n\020k"
-      "_EDOTA_SPT_Poll\020\002\022\024\n\020k_EDOTA_SPT_Grid\020\003\022"
-      "\031\n\025k_EDOTA_SPT_DualImage\020\004*\331\t\n\017dotaunito"
-      "rder_t\022\030\n\024DOTA_UNIT_ORDER_NONE\020\000\022$\n DOTA"
-      "_UNIT_ORDER_MOVE_TO_POSITION\020\001\022\"\n\036DOTA_U"
-      "NIT_ORDER_MOVE_TO_TARGET\020\002\022\037\n\033DOTA_UNIT_"
-      "ORDER_ATTACK_MOVE\020\003\022!\n\035DOTA_UNIT_ORDER_A"
-      "TTACK_TARGET\020\004\022!\n\035DOTA_UNIT_ORDER_CAST_P"
-      "OSITION\020\005\022\037\n\033DOTA_UNIT_ORDER_CAST_TARGET"
-      "\020\006\022$\n DOTA_UNIT_ORDER_CAST_TARGET_TREE\020\007"
-      "\022\"\n\036DOTA_UNIT_ORDER_CAST_NO_TARGET\020\010\022\037\n\033"
-      "DOTA_UNIT_ORDER_CAST_TOGGLE\020\t\022!\n\035DOTA_UN"
-      "IT_ORDER_HOLD_POSITION\020\n\022!\n\035DOTA_UNIT_OR"
-      "DER_TRAIN_ABILITY\020\013\022\035\n\031DOTA_UNIT_ORDER_D"
-      "ROP_ITEM\020\014\022\035\n\031DOTA_UNIT_ORDER_GIVE_ITEM\020"
-      "\r\022\037\n\033DOTA_UNIT_ORDER_PICKUP_ITEM\020\016\022\037\n\033DO"
-      "TA_UNIT_ORDER_PICKUP_RUNE\020\017\022!\n\035DOTA_UNIT"
-      "_ORDER_PURCHASE_ITEM\020\020\022\035\n\031DOTA_UNIT_ORDE"
-      "R_SELL_ITEM\020\021\022$\n DOTA_UNIT_ORDER_DISASSE"
-      "MBLE_ITEM\020\022\022\035\n\031DOTA_UNIT_ORDER_MOVE_ITEM"
-      "\020\023\022$\n DOTA_UNIT_ORDER_CAST_TOGGLE_AUTO\020\024"
-      "\022\030\n\024DOTA_UNIT_ORDER_STOP\020\025\022\031\n\025DOTA_UNIT_"
-      "ORDER_TAUNT\020\026\022\033\n\027DOTA_UNIT_ORDER_BUYBACK"
-      "\020\027\022\031\n\025DOTA_UNIT_ORDER_GLYPH\020\030\022)\n%DOTA_UN"
-      "IT_ORDER_EJECT_ITEM_FROM_STASH\020\031\022\035\n\031DOTA"
-      "_UNIT_ORDER_CAST_RUNE\020\032\022 \n\034DOTA_UNIT_ORD"
-      "ER_PING_ABILITY\020\033\022%\n!DOTA_UNIT_ORDER_MOV"
-      "E_TO_DIRECTION\020\034\022\032\n\026DOTA_UNIT_ORDER_PATR"
-      "OL\020\035\022*\n&DOTA_UNIT_ORDER_VECTOR_TARGET_PO"
-      "SITION\020\036\022\031\n\025DOTA_UNIT_ORDER_RADAR\020\037\022)\n%D"
-      "OTA_UNIT_ORDER_SET_ITEM_COMBINE_LOCK\020 \022\034"
-      "\n\030DOTA_UNIT_ORDER_CONTINUE\020!\022*\n&DOTA_UNI"
-      "T_ORDER_VECTOR_TARGET_CANCELED\020\"\022$\n DOTA"
-      "_UNIT_ORDER_CAST_RIVER_PAINT\020#B\005H\001\200\001\000"
+      "types\030\004 \003(\005\022\020\n\010duration\030\005 \001(\002\022\020\n\010use_htm"
+      "l\030\006 \001(\010\022\022\n\nmovie_name\030\007 \001(\t\"3\n\035CDOTAMsg_"
+      "DismissAllStatPopups\022\022\n\ntime_delay\030\001 \001(\002"
+      "\">\n\025CDOTAMsg_CoachHUDPing\022\t\n\001x\030\001 \001(\r\022\t\n\001"
+      "y\030\002 \001(\r\022\017\n\007tgtpath\030\003 \001(\t\"\375\001\n\022CDOTAMsg_Un"
+      "itOrder\022\022\n\006issuer\030\001 \001(\021:\002-1\022E\n\norder_typ"
+      "e\030\002 \001(\0162\033.proto.dota.dotaunitorder_t:\024DO"
+      "TA_UNIT_ORDER_NONE\022\r\n\005units\030\003 \003(\005\022\024\n\014tar"
+      "get_index\030\004 \001(\005\022\025\n\rability_index\030\005 \001(\005\022("
+      "\n\010position\030\006 \001(\0132\026.proto.dota.CMsgVector"
+      "\022\r\n\005queue\030\007 \001(\010\022\027\n\017sequence_number\030\010 \001(\005"
+      "*\244\001\n\023EDOTAStatPopupTypes\022\030\n\024k_EDOTA_SPT_"
+      "Textline\020\000\022\025\n\021k_EDOTA_SPT_Basic\020\001\022\024\n\020k_E"
+      "DOTA_SPT_Poll\020\002\022\024\n\020k_EDOTA_SPT_Grid\020\003\022\031\n"
+      "\025k_EDOTA_SPT_DualImage\020\004\022\025\n\021k_EDOTA_SPT_"
+      "Movie\020\005*\331\t\n\017dotaunitorder_t\022\030\n\024DOTA_UNIT"
+      "_ORDER_NONE\020\000\022$\n DOTA_UNIT_ORDER_MOVE_TO"
+      "_POSITION\020\001\022\"\n\036DOTA_UNIT_ORDER_MOVE_TO_T"
+      "ARGET\020\002\022\037\n\033DOTA_UNIT_ORDER_ATTACK_MOVE\020\003"
+      "\022!\n\035DOTA_UNIT_ORDER_ATTACK_TARGET\020\004\022!\n\035D"
+      "OTA_UNIT_ORDER_CAST_POSITION\020\005\022\037\n\033DOTA_U"
+      "NIT_ORDER_CAST_TARGET\020\006\022$\n DOTA_UNIT_ORD"
+      "ER_CAST_TARGET_TREE\020\007\022\"\n\036DOTA_UNIT_ORDER"
+      "_CAST_NO_TARGET\020\010\022\037\n\033DOTA_UNIT_ORDER_CAS"
+      "T_TOGGLE\020\t\022!\n\035DOTA_UNIT_ORDER_HOLD_POSIT"
+      "ION\020\n\022!\n\035DOTA_UNIT_ORDER_TRAIN_ABILITY\020\013"
+      "\022\035\n\031DOTA_UNIT_ORDER_DROP_ITEM\020\014\022\035\n\031DOTA_"
+      "UNIT_ORDER_GIVE_ITEM\020\r\022\037\n\033DOTA_UNIT_ORDE"
+      "R_PICKUP_ITEM\020\016\022\037\n\033DOTA_UNIT_ORDER_PICKU"
+      "P_RUNE\020\017\022!\n\035DOTA_UNIT_ORDER_PURCHASE_ITE"
+      "M\020\020\022\035\n\031DOTA_UNIT_ORDER_SELL_ITEM\020\021\022$\n DO"
+      "TA_UNIT_ORDER_DISASSEMBLE_ITEM\020\022\022\035\n\031DOTA"
+      "_UNIT_ORDER_MOVE_ITEM\020\023\022$\n DOTA_UNIT_ORD"
+      "ER_CAST_TOGGLE_AUTO\020\024\022\030\n\024DOTA_UNIT_ORDER"
+      "_STOP\020\025\022\031\n\025DOTA_UNIT_ORDER_TAUNT\020\026\022\033\n\027DO"
+      "TA_UNIT_ORDER_BUYBACK\020\027\022\031\n\025DOTA_UNIT_ORD"
+      "ER_GLYPH\020\030\022)\n%DOTA_UNIT_ORDER_EJECT_ITEM"
+      "_FROM_STASH\020\031\022\035\n\031DOTA_UNIT_ORDER_CAST_RU"
+      "NE\020\032\022 \n\034DOTA_UNIT_ORDER_PING_ABILITY\020\033\022%"
+      "\n!DOTA_UNIT_ORDER_MOVE_TO_DIRECTION\020\034\022\032\n"
+      "\026DOTA_UNIT_ORDER_PATROL\020\035\022*\n&DOTA_UNIT_O"
+      "RDER_VECTOR_TARGET_POSITION\020\036\022\031\n\025DOTA_UN"
+      "IT_ORDER_RADAR\020\037\022)\n%DOTA_UNIT_ORDER_SET_"
+      "ITEM_COMBINE_LOCK\020 \022\034\n\030DOTA_UNIT_ORDER_C"
+      "ONTINUE\020!\022*\n&DOTA_UNIT_ORDER_VECTOR_TARG"
+      "ET_CANCELED\020\"\022$\n DOTA_UNIT_ORDER_CAST_RI"
+      "VER_PAINT\020#B\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2317);
+      descriptor, 2378);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dota_commonmessages.proto", &protobuf_RegisterTypes);
   ::proto::dota::protobuf_networkbasetypes_2eproto::AddDescriptors();
@@ -355,6 +361,7 @@ bool EDOTAStatPopupTypes_IsValid(int value) {
     case 2:
     case 3:
     case 4:
+    case 5:
       return true;
     default:
       return false;
@@ -2238,6 +2245,8 @@ const int CDOTAMsg_SendStatPopup::kStatStringsFieldNumber;
 const int CDOTAMsg_SendStatPopup::kStatImagesFieldNumber;
 const int CDOTAMsg_SendStatPopup::kStatImageTypesFieldNumber;
 const int CDOTAMsg_SendStatPopup::kDurationFieldNumber;
+const int CDOTAMsg_SendStatPopup::kUseHtmlFieldNumber;
+const int CDOTAMsg_SendStatPopup::kMovieNameFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CDOTAMsg_SendStatPopup::CDOTAMsg_SendStatPopup()
@@ -2257,16 +2266,21 @@ CDOTAMsg_SendStatPopup::CDOTAMsg_SendStatPopup(const CDOTAMsg_SendStatPopup& fro
       stat_images_(from.stat_images_),
       stat_image_types_(from.stat_image_types_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  movie_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_movie_name()) {
+    movie_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.movie_name_);
+  }
   ::memcpy(&style_, &from.style_,
-    reinterpret_cast<char*>(&duration_) -
-    reinterpret_cast<char*>(&style_) + sizeof(duration_));
+    reinterpret_cast<char*>(&use_html_) -
+    reinterpret_cast<char*>(&style_) + sizeof(use_html_));
   // @@protoc_insertion_point(copy_constructor:proto.dota.CDOTAMsg_SendStatPopup)
 }
 
 void CDOTAMsg_SendStatPopup::SharedCtor() {
   _cached_size_ = 0;
-  ::memset(&style_, 0, reinterpret_cast<char*>(&duration_) -
-    reinterpret_cast<char*>(&style_) + sizeof(duration_));
+  movie_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&style_, 0, reinterpret_cast<char*>(&use_html_) -
+    reinterpret_cast<char*>(&style_) + sizeof(use_html_));
 }
 
 CDOTAMsg_SendStatPopup::~CDOTAMsg_SendStatPopup() {
@@ -2275,6 +2289,7 @@ CDOTAMsg_SendStatPopup::~CDOTAMsg_SendStatPopup() {
 }
 
 void CDOTAMsg_SendStatPopup::SharedDtor() {
+  movie_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void CDOTAMsg_SendStatPopup::SetCachedSize(int size) const {
@@ -2305,9 +2320,13 @@ void CDOTAMsg_SendStatPopup::Clear() {
   stat_strings_.Clear();
   stat_images_.Clear();
   stat_image_types_.Clear();
-  if (_has_bits_[0 / 32] & 3u) {
-    ::memset(&style_, 0, reinterpret_cast<char*>(&duration_) -
-      reinterpret_cast<char*>(&style_) + sizeof(duration_));
+  if (has_movie_name()) {
+    GOOGLE_DCHECK(!movie_name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+    (*movie_name_.UnsafeRawStringPointer())->clear();
+  }
+  if (_has_bits_[0 / 32] & 14u) {
+    ::memset(&style_, 0, reinterpret_cast<char*>(&use_html_) -
+      reinterpret_cast<char*>(&style_) + sizeof(use_html_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -2409,6 +2428,36 @@ bool CDOTAMsg_SendStatPopup::MergePartialFromCodedStream(
         break;
       }
 
+      // optional bool use_html = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u)) {
+          set_has_use_html();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &use_html_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional string movie_name = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_movie_name()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->movie_name().data(), this->movie_name().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "proto.dota.CDOTAMsg_SendStatPopup.movie_name");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -2439,7 +2488,7 @@ void CDOTAMsg_SendStatPopup::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // optional .proto.dota.EDOTAStatPopupTypes style = 1 [default = k_EDOTA_SPT_Textline];
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->style(), output);
   }
@@ -2467,8 +2516,23 @@ void CDOTAMsg_SendStatPopup::SerializeWithCachedSizes(
   }
 
   // optional float duration = 5;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->duration(), output);
+  }
+
+  // optional bool use_html = 6;
+  if (cached_has_bits & 0x00000008u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->use_html(), output);
+  }
+
+  // optional string movie_name = 7;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->movie_name().data(), this->movie_name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.dota.CDOTAMsg_SendStatPopup.movie_name");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      7, this->movie_name(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2486,7 +2550,7 @@ void CDOTAMsg_SendStatPopup::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // optional .proto.dota.EDOTAStatPopupTypes style = 1 [default = k_EDOTA_SPT_Textline];
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->style(), target);
   }
@@ -2510,8 +2574,24 @@ void CDOTAMsg_SendStatPopup::SerializeWithCachedSizes(
     WriteInt32ToArray(4, this->stat_image_types_, target);
 
   // optional float duration = 5;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->duration(), target);
+  }
+
+  // optional bool use_html = 6;
+  if (cached_has_bits & 0x00000008u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->use_html(), target);
+  }
+
+  // optional string movie_name = 7;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->movie_name().data(), this->movie_name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.dota.CDOTAMsg_SendStatPopup.movie_name");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        7, this->movie_name(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2557,7 +2637,14 @@ size_t CDOTAMsg_SendStatPopup::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  if (_has_bits_[0 / 32] & 3u) {
+  if (_has_bits_[0 / 32] & 15u) {
+    // optional string movie_name = 7;
+    if (has_movie_name()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->movie_name());
+    }
+
     // optional .proto.dota.EDOTAStatPopupTypes style = 1 [default = k_EDOTA_SPT_Textline];
     if (has_style()) {
       total_size += 1 +
@@ -2567,6 +2654,11 @@ size_t CDOTAMsg_SendStatPopup::ByteSizeLong() const {
     // optional float duration = 5;
     if (has_duration()) {
       total_size += 1 + 4;
+    }
+
+    // optional bool use_html = 6;
+    if (has_use_html()) {
+      total_size += 1 + 1;
     }
 
   }
@@ -2603,12 +2695,19 @@ void CDOTAMsg_SendStatPopup::MergeFrom(const CDOTAMsg_SendStatPopup& from) {
   stat_images_.MergeFrom(from.stat_images_);
   stat_image_types_.MergeFrom(from.stat_image_types_);
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 3u) {
+  if (cached_has_bits & 15u) {
     if (cached_has_bits & 0x00000001u) {
-      style_ = from.style_;
+      set_has_movie_name();
+      movie_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.movie_name_);
     }
     if (cached_has_bits & 0x00000002u) {
+      style_ = from.style_;
+    }
+    if (cached_has_bits & 0x00000004u) {
       duration_ = from.duration_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      use_html_ = from.use_html_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -2640,8 +2739,10 @@ void CDOTAMsg_SendStatPopup::InternalSwap(CDOTAMsg_SendStatPopup* other) {
   stat_strings_.InternalSwap(&other->stat_strings_);
   stat_images_.InternalSwap(&other->stat_images_);
   stat_image_types_.InternalSwap(&other->stat_image_types_);
+  movie_name_.Swap(&other->movie_name_);
   std::swap(style_, other->style_);
   std::swap(duration_, other->duration_);
+  std::swap(use_html_, other->use_html_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -2657,13 +2758,13 @@ void CDOTAMsg_SendStatPopup::InternalSwap(CDOTAMsg_SendStatPopup* other) {
 
 // optional .proto.dota.EDOTAStatPopupTypes style = 1 [default = k_EDOTA_SPT_Textline];
 bool CDOTAMsg_SendStatPopup::has_style() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 void CDOTAMsg_SendStatPopup::set_has_style() {
-  _has_bits_[0] |= 0x00000001u;
+  _has_bits_[0] |= 0x00000002u;
 }
 void CDOTAMsg_SendStatPopup::clear_has_style() {
-  _has_bits_[0] &= ~0x00000001u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 void CDOTAMsg_SendStatPopup::clear_style() {
   style_ = 0;
@@ -2811,13 +2912,13 @@ CDOTAMsg_SendStatPopup::mutable_stat_image_types() {
 
 // optional float duration = 5;
 bool CDOTAMsg_SendStatPopup::has_duration() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 void CDOTAMsg_SendStatPopup::set_has_duration() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000004u;
 }
 void CDOTAMsg_SendStatPopup::clear_has_duration() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 void CDOTAMsg_SendStatPopup::clear_duration() {
   duration_ = 0;
@@ -2831,6 +2932,93 @@ void CDOTAMsg_SendStatPopup::set_duration(float value) {
   set_has_duration();
   duration_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CDOTAMsg_SendStatPopup.duration)
+}
+
+// optional bool use_html = 6;
+bool CDOTAMsg_SendStatPopup::has_use_html() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void CDOTAMsg_SendStatPopup::set_has_use_html() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void CDOTAMsg_SendStatPopup::clear_has_use_html() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void CDOTAMsg_SendStatPopup::clear_use_html() {
+  use_html_ = false;
+  clear_has_use_html();
+}
+bool CDOTAMsg_SendStatPopup::use_html() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMsg_SendStatPopup.use_html)
+  return use_html_;
+}
+void CDOTAMsg_SendStatPopup::set_use_html(bool value) {
+  set_has_use_html();
+  use_html_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMsg_SendStatPopup.use_html)
+}
+
+// optional string movie_name = 7;
+bool CDOTAMsg_SendStatPopup::has_movie_name() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CDOTAMsg_SendStatPopup::set_has_movie_name() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CDOTAMsg_SendStatPopup::clear_has_movie_name() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CDOTAMsg_SendStatPopup::clear_movie_name() {
+  movie_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_movie_name();
+}
+const ::std::string& CDOTAMsg_SendStatPopup::movie_name() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+  return movie_name_.GetNoArena();
+}
+void CDOTAMsg_SendStatPopup::set_movie_name(const ::std::string& value) {
+  set_has_movie_name();
+  movie_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+}
+#if LANG_CXX11
+void CDOTAMsg_SendStatPopup::set_movie_name(::std::string&& value) {
+  set_has_movie_name();
+  movie_name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+}
+#endif
+void CDOTAMsg_SendStatPopup::set_movie_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_movie_name();
+  movie_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+}
+void CDOTAMsg_SendStatPopup::set_movie_name(const char* value, size_t size) {
+  set_has_movie_name();
+  movie_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+}
+::std::string* CDOTAMsg_SendStatPopup::mutable_movie_name() {
+  set_has_movie_name();
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+  return movie_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* CDOTAMsg_SendStatPopup::release_movie_name() {
+  // @@protoc_insertion_point(field_release:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
+  clear_has_movie_name();
+  return movie_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void CDOTAMsg_SendStatPopup::set_allocated_movie_name(::std::string* movie_name) {
+  if (movie_name != NULL) {
+    set_has_movie_name();
+  } else {
+    clear_has_movie_name();
+  }
+  movie_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), movie_name);
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CDOTAMsg_SendStatPopup.movie_name)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

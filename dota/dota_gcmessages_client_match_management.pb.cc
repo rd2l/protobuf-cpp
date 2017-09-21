@@ -249,13 +249,14 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgStartFindingMatch, ping_data_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgStartFindingMatch, region_select_flags_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgStartFindingMatch, solo_queue_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgStartFindingMatch, bot_script_index_),
   0,
-  10,
-  3,
   11,
+  3,
   12,
-  4,
   13,
+  4,
+  14,
   6,
   5,
   7,
@@ -263,6 +264,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   2,
   8,
   9,
+  10,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgStartFindingMatchResult, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgStartFindingMatchResult, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -366,13 +368,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, league_game_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, custom_game_timestamp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, previous_match_override_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, league_selection_priority_team_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, league_selection_priority_choice_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, league_non_selection_priority_choice_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, pause_setting_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, bot_difficulty_dire_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, bot_radiant_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, bot_dire_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbySetDetails, selection_priority_rules_),
   4,
   0,
   ~0u,
@@ -394,7 +394,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   19,
   20,
   21,
-  41,
+  39,
   22,
   2,
   3,
@@ -409,13 +409,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   31,
   32,
   33,
-  34,
   35,
   36,
   37,
-  39,
   38,
-  40,
+  34,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbyCreate_SaveGame, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgPracticeLobbyCreate_SaveGame, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1001,68 +999,68 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
-  { 0, 19, sizeof(CMsgStartFindingMatch)},
-  { 33, 43, sizeof(CMsgStartFindingMatchResult)},
-  { 48, 53, sizeof(CMsgStopFindingMatch)},
-  { 53, 63, sizeof(CMsgPartyBuilderOptions)},
-  { 68, 76, sizeof(CMsgReadyUp)},
-  { 79, 87, sizeof(CMsgReadyUpStatus)},
-  { 90, 95, sizeof(CMsgAbandonCurrentGame)},
-  { 95, 143, sizeof(CMsgPracticeLobbySetDetails)},
-  { 186, 195, sizeof(CMsgPracticeLobbyCreate_SaveGame)},
-  { 199, 209, sizeof(CMsgPracticeLobbyCreate)},
-  { 214, 222, sizeof(CMsgPracticeLobbySetTeamSlot)},
-  { 225, 231, sizeof(CMsgPracticeLobbySetCoach)},
-  { 232, 241, sizeof(CMsgPracticeLobbyJoinBroadcastChannel)},
-  { 245, 251, sizeof(CMsgPracticeLobbyCloseBroadcastChannel)},
-  { 252, 257, sizeof(CMsgPracticeLobbyToggleBroadcastChannelCameramanStatus)},
-  { 257, 263, sizeof(CMsgPracticeLobbyKick)},
-  { 264, 270, sizeof(CMsgPracticeLobbyKickFromTeam)},
-  { 271, 276, sizeof(CMsgPracticeLobbyLeave)},
-  { 276, 282, sizeof(CMsgPracticeLobbyLaunch)},
-  { 283, 289, sizeof(CMsgApplyTeamToPracticeLobby)},
-  { 290, 295, sizeof(CMsgClearPracticeLobbyTeam)},
-  { 295, 304, sizeof(CMsgPracticeLobbyList)},
-  { 308, 315, sizeof(CMsgPracticeLobbyListResponseEntry_CLobbyMember)},
-  { 317, 340, sizeof(CMsgPracticeLobbyListResponseEntry)},
-  { 358, 365, sizeof(CMsgPracticeLobbyListResponse)},
-  { 367, 374, sizeof(CMsgLobbyList)},
-  { 376, 382, sizeof(CMsgLobbyListResponse)},
-  { 383, 393, sizeof(CMsgPracticeLobbyJoin)},
-  { 398, 404, sizeof(CMsgPracticeLobbyJoinResponse)},
-  { 405, 411, sizeof(CMsgFriendPracticeLobbyListRequest)},
-  { 412, 418, sizeof(CMsgFriendPracticeLobbyListResponse)},
-  { 419, 425, sizeof(CMsgGuildmatePracticeLobbyListRequest)},
-  { 426, 432, sizeof(CMsgGuildmatePracticeLobbyListResponse)},
-  { 433, 439, sizeof(CMsgJoinableCustomGameModesRequest)},
-  { 440, 448, sizeof(CMsgJoinableCustomGameModesResponseEntry)},
-  { 451, 457, sizeof(CMsgJoinableCustomGameModesResponse)},
-  { 458, 465, sizeof(CMsgJoinableCustomLobbiesRequest)},
-  { 467, 483, sizeof(CMsgJoinableCustomLobbiesResponseEntry)},
-  { 494, 500, sizeof(CMsgJoinableCustomLobbiesResponse)},
-  { 501, 509, sizeof(CMsgQuickJoinCustomLobby_LegacyRegionPing)},
-  { 512, 524, sizeof(CMsgQuickJoinCustomLobby)},
-  { 531, 537, sizeof(CMsgQuickJoinCustomLobbyResponse)},
-  { 538, 549, sizeof(CMsgBotGameCreate)},
-  { 555, 566, sizeof(CMsgCustomGameCreate)},
-  { 572, 583, sizeof(CMsgEventGameCreate)},
-  { 589, 595, sizeof(CMsgDOTAPartyMemberSetCoach)},
-  { 596, 602, sizeof(CMsgDOTASetGroupLeader)},
-  { 603, 610, sizeof(CMsgDOTACancelGroupInvites)},
-  { 612, 618, sizeof(CMsgDOTASetGroupOpenStatus)},
-  { 619, 625, sizeof(CMsgDOTAGroupMergeInvite)},
-  { 626, 633, sizeof(CMsgDOTAGroupMergeResponse)},
-  { 635, 641, sizeof(CMsgDOTAGroupMergeReply)},
-  { 642, 650, sizeof(CMsgSpectatorLobbyGameDetails_Team)},
-  { 653, 668, sizeof(CMsgSpectatorLobbyGameDetails)},
-  { 678, 687, sizeof(CMsgSetSpectatorLobbyDetails)},
-  { 691, 698, sizeof(CMsgCreateSpectatorLobby)},
-  { 700, 705, sizeof(CMsgSpectatorLobbyList)},
-  { 705, 716, sizeof(CMsgSpectatorLobbyListResponse_SpectatorLobby)},
-  { 722, 728, sizeof(CMsgSpectatorLobbyListResponse)},
-  { 729, 735, sizeof(CMsgClientToGCRequestSteamDatagramTicket)},
-  { 736, 743, sizeof(CMsgClientToGCRequestSteamDatagramTicketResponse)},
-  { 745, 759, sizeof(CMsgGCToClientSteamDatagramTicket)},
+  { 0, 20, sizeof(CMsgStartFindingMatch)},
+  { 35, 45, sizeof(CMsgStartFindingMatchResult)},
+  { 50, 55, sizeof(CMsgStopFindingMatch)},
+  { 55, 65, sizeof(CMsgPartyBuilderOptions)},
+  { 70, 78, sizeof(CMsgReadyUp)},
+  { 81, 89, sizeof(CMsgReadyUpStatus)},
+  { 92, 97, sizeof(CMsgAbandonCurrentGame)},
+  { 97, 143, sizeof(CMsgPracticeLobbySetDetails)},
+  { 184, 193, sizeof(CMsgPracticeLobbyCreate_SaveGame)},
+  { 197, 207, sizeof(CMsgPracticeLobbyCreate)},
+  { 212, 220, sizeof(CMsgPracticeLobbySetTeamSlot)},
+  { 223, 229, sizeof(CMsgPracticeLobbySetCoach)},
+  { 230, 239, sizeof(CMsgPracticeLobbyJoinBroadcastChannel)},
+  { 243, 249, sizeof(CMsgPracticeLobbyCloseBroadcastChannel)},
+  { 250, 255, sizeof(CMsgPracticeLobbyToggleBroadcastChannelCameramanStatus)},
+  { 255, 261, sizeof(CMsgPracticeLobbyKick)},
+  { 262, 268, sizeof(CMsgPracticeLobbyKickFromTeam)},
+  { 269, 274, sizeof(CMsgPracticeLobbyLeave)},
+  { 274, 280, sizeof(CMsgPracticeLobbyLaunch)},
+  { 281, 287, sizeof(CMsgApplyTeamToPracticeLobby)},
+  { 288, 293, sizeof(CMsgClearPracticeLobbyTeam)},
+  { 293, 302, sizeof(CMsgPracticeLobbyList)},
+  { 306, 313, sizeof(CMsgPracticeLobbyListResponseEntry_CLobbyMember)},
+  { 315, 338, sizeof(CMsgPracticeLobbyListResponseEntry)},
+  { 356, 363, sizeof(CMsgPracticeLobbyListResponse)},
+  { 365, 372, sizeof(CMsgLobbyList)},
+  { 374, 380, sizeof(CMsgLobbyListResponse)},
+  { 381, 391, sizeof(CMsgPracticeLobbyJoin)},
+  { 396, 402, sizeof(CMsgPracticeLobbyJoinResponse)},
+  { 403, 409, sizeof(CMsgFriendPracticeLobbyListRequest)},
+  { 410, 416, sizeof(CMsgFriendPracticeLobbyListResponse)},
+  { 417, 423, sizeof(CMsgGuildmatePracticeLobbyListRequest)},
+  { 424, 430, sizeof(CMsgGuildmatePracticeLobbyListResponse)},
+  { 431, 437, sizeof(CMsgJoinableCustomGameModesRequest)},
+  { 438, 446, sizeof(CMsgJoinableCustomGameModesResponseEntry)},
+  { 449, 455, sizeof(CMsgJoinableCustomGameModesResponse)},
+  { 456, 463, sizeof(CMsgJoinableCustomLobbiesRequest)},
+  { 465, 481, sizeof(CMsgJoinableCustomLobbiesResponseEntry)},
+  { 492, 498, sizeof(CMsgJoinableCustomLobbiesResponse)},
+  { 499, 507, sizeof(CMsgQuickJoinCustomLobby_LegacyRegionPing)},
+  { 510, 522, sizeof(CMsgQuickJoinCustomLobby)},
+  { 529, 535, sizeof(CMsgQuickJoinCustomLobbyResponse)},
+  { 536, 547, sizeof(CMsgBotGameCreate)},
+  { 553, 564, sizeof(CMsgCustomGameCreate)},
+  { 570, 581, sizeof(CMsgEventGameCreate)},
+  { 587, 593, sizeof(CMsgDOTAPartyMemberSetCoach)},
+  { 594, 600, sizeof(CMsgDOTASetGroupLeader)},
+  { 601, 608, sizeof(CMsgDOTACancelGroupInvites)},
+  { 610, 616, sizeof(CMsgDOTASetGroupOpenStatus)},
+  { 617, 623, sizeof(CMsgDOTAGroupMergeInvite)},
+  { 624, 631, sizeof(CMsgDOTAGroupMergeResponse)},
+  { 633, 639, sizeof(CMsgDOTAGroupMergeReply)},
+  { 640, 648, sizeof(CMsgSpectatorLobbyGameDetails_Team)},
+  { 651, 666, sizeof(CMsgSpectatorLobbyGameDetails)},
+  { 676, 685, sizeof(CMsgSetSpectatorLobbyDetails)},
+  { 689, 696, sizeof(CMsgCreateSpectatorLobby)},
+  { 698, 703, sizeof(CMsgSpectatorLobbyList)},
+  { 703, 714, sizeof(CMsgSpectatorLobbyListResponse_SpectatorLobby)},
+  { 720, 726, sizeof(CMsgSpectatorLobbyListResponse)},
+  { 727, 733, sizeof(CMsgClientToGCRequestSteamDatagramTicket)},
+  { 734, 741, sizeof(CMsgClientToGCRequestSteamDatagramTicketResponse)},
+  { 743, 757, sizeof(CMsgGCToClientSteamDatagramTicket)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -1387,7 +1385,7 @@ void AddDescriptorsImpl() {
       "\032\027dota_shared_enums.proto\032\027dota_client_e"
       "nums.proto\032\025base_gcmessages.proto\032-dota_"
       "gcmessages_common_match_management.proto"
-      "\"\244\004\n\025CMsgStartFindingMatch\022\013\n\003key\030\001 \001(\t\022"
+      "\"\276\004\n\025CMsgStartFindingMatch\022\013\n\003key\030\001 \001(\t\022"
       "\037\n\013matchgroups\030\002 \001(\r:\n4294967295\022\026\n\016clie"
       "nt_version\030\003 \001(\r\022\036\n\ngame_modes\030\004 \001(\r:\n42"
       "94967295\022J\n\016bot_difficulty\030\005 \001(\0162\035.proto"
@@ -1400,271 +1398,269 @@ void AddDescriptorsImpl() {
       "\026MATCH_LANGUAGE_INVALID\022\032\n\022game_language"
       "_name\030\013 \001(\t\0221\n\tping_data\030\014 \001(\0132\036.proto.d"
       "ota.CMsgClientPingData\022\033\n\023region_select_"
-      "flags\030\r \001(\r\022\022\n\nsolo_queue\030\016 \001(\010\"\351\001\n\033CMsg"
-      "StartFindingMatchResult\022!\n\026legacy_generi"
-      "c_eresult\030\001 \001(\r:\0012\022X\n\006result\030\002 \001(\0162$.pro"
-      "to.dota.EStartFindingMatchResult:\"k_ESta"
-      "rtFindingMatchResult_Invalid\022\023\n\013error_to"
-      "ken\030\003 \001(\t\022\025\n\rdebug_message\030\004 \001(\t\022!\n\031resp"
-      "onsible_party_members\030\005 \003(\006\"\026\n\024CMsgStopF"
-      "indingMatch\"\344\001\n\027CMsgPartyBuilderOptions\022"
-      "\030\n\020additional_slots\030\001 \001(\r\022<\n\nmatch_type\030"
-      "\002 \001(\0162\025.proto.dota.MatchType:\021MATCH_TYPE"
-      "_CASUAL\022\023\n\013matchgroups\030\003 \001(\r\022\026\n\016client_v"
-      "ersion\030\004 \001(\r\022D\n\010language\030\005 \001(\0162\032.proto.d"
-      "ota.MatchLanguages:\026MATCH_LANGUAGE_INVAL"
-      "ID\"\261\001\n\013CMsgReadyUp\022N\n\005state\030\001 \001(\0162\037.prot"
-      "o.dota.DOTALobbyReadyState:\036DOTALobbyRea"
-      "dyState_UNDECLARED\022\024\n\014ready_up_key\030\002 \001(\006"
-      "\022<\n\016hardware_specs\030\003 \001(\0132$.proto.dota.CD"
-      "OTAClientHardwareSpecs\"Q\n\021CMsgReadyUpSta"
-      "tus\022\020\n\010lobby_id\030\001 \001(\006\022\024\n\014accepted_ids\030\002 "
-      "\003(\r\022\024\n\014declined_ids\030\003 \003(\r\"\030\n\026CMsgAbandon"
-      "CurrentGame\"\330\014\n\033CMsgPracticeLobbySetDeta"
-      "ils\022\020\n\010lobby_id\030\001 \001(\004\022\021\n\tgame_name\030\002 \001(\t"
-      "\0223\n\014team_details\030\003 \003(\0132\035.proto.dota.CLob"
-      "byTeamDetails\022\025\n\rserver_region\030\004 \001(\r\022\021\n\t"
-      "game_mode\030\005 \001(\r\0229\n\007cm_pick\030\006 \001(\0162\030.proto"
-      ".dota.DOTA_CM_PICK:\016DOTA_CM_RANDOM\022U\n\026bo"
-      "t_difficulty_radiant\030\t \001(\0162\035.proto.dota."
-      "DOTABotDifficulty:\026BOT_DIFFICULTY_PASSIV"
-      "E\022\024\n\014allow_cheats\030\n \001(\010\022\026\n\016fill_with_bot"
-      "s\030\013 \001(\010\022\022\n\nintro_mode\030\014 \001(\010\022\030\n\020allow_spe"
-      "ctating\030\r \001(\010\022G\n\014game_version\030\016 \001(\0162\033.pr"
-      "oto.dota.DOTAGameVersion:\024GAME_VERSION_C"
-      "URRENT\022\020\n\010pass_key\030\017 \001(\t\022\020\n\010leagueid\030\020 \001"
-      "(\r\022\035\n\025penalty_level_radiant\030\021 \001(\r\022\032\n\022pen"
-      "alty_level_dire\030\022 \001(\r\022\024\n\014load_game_id\030\023 "
-      "\001(\r\022\023\n\013series_type\030\024 \001(\r\022\033\n\023radiant_seri"
-      "es_wins\030\025 \001(\r\022\030\n\020dire_series_wins\030\026 \001(\r\022"
-      "\026\n\007allchat\030\027 \001(\010:\005false\022D\n\rdota_tv_delay"
-      "\030\030 \001(\0162\034.proto.dota.LobbyDotaTVDelay:\017Lo"
-      "bbyDotaTV_120\022\013\n\003lan\030\031 \001(\010\022\030\n\020custom_gam"
-      "e_mode\030\032 \001(\t\022\027\n\017custom_map_name\030\033 \001(\t\022\031\n"
-      "\021custom_difficulty\030\034 \001(\r\022\026\n\016custom_game_"
-      "id\030\035 \001(\004\022\032\n\022custom_min_players\030\036 \001(\r\022\032\n\022"
-      "custom_max_players\030\037 \001(\r\022&\n\036lan_host_pin"
-      "g_to_server_region\030  \001(\r\022O\n\nvisibility\030!"
-      " \001(\0162\037.proto.dota.DOTALobbyVisibility:\032D"
-      "OTALobbyVisibility_Public\022\027\n\017custom_game"
-      "_crc\030\" \001(\006\022\030\n\020league_series_id\030# \001(\r\022\026\n\016"
-      "league_game_id\030$ \001(\r\022\035\n\025custom_game_time"
-      "stamp\030% \001(\007\022\037\n\027previous_match_override\030&"
-      " \001(\004\022&\n\036league_selection_priority_team\030\'"
-      " \001(\r\022V\n league_selection_priority_choice"
-      "\030( \001(\0162!.proto.dota.SelectionPriorityTyp"
-      "e:\tUNDEFINED\022Z\n$league_non_selection_pri"
-      "ority_choice\030) \001(\0162!.proto.dota.Selectio"
-      "nPriorityType:\tUNDEFINED\022Y\n\rpause_settin"
-      "g\030* \001(\0162!.proto.dota.LobbyDotaPauseSetti"
-      "ng:\037LobbyDotaPauseSetting_Unlimited\022R\n\023b"
-      "ot_difficulty_dire\030+ \001(\0162\035.proto.dota.DO"
-      "TABotDifficulty:\026BOT_DIFFICULTY_PASSIVE\022"
-      "\023\n\013bot_radiant\030, \001(\004\022\020\n\010bot_dire\030- \001(\004\"\250"
-      "\002\n\027CMsgPracticeLobbyCreate\022\022\n\nsearch_key"
-      "\030\001 \001(\t\022\020\n\010pass_key\030\005 \001(\t\022\026\n\016client_versi"
-      "on\030\006 \001(\r\022>\n\rlobby_details\030\007 \001(\0132\'.proto."
-      "dota.CMsgPracticeLobbySetDetails\022\?\n\tsave"
-      "_game\030\010 \001(\0132,.proto.dota.CMsgPracticeLob"
-      "byCreate.SaveGame\032N\n\010SaveGame\022\014\n\004data\030\001 "
-      "\001(\014\022\017\n\007version\030\002 \001(\005\022\020\n\010steam_id\030\003 \001(\006\022\021"
-      "\n\tsignature\030\004 \001(\006\"\273\001\n\034CMsgPracticeLobbyS"
-      "etTeamSlot\022>\n\004team\030\001 \001(\0162\030.proto.dota.DO"
-      "TA_GC_TEAM:\026DOTA_GC_TEAM_GOOD_GUYS\022\014\n\004sl"
-      "ot\030\002 \001(\r\022M\n\016bot_difficulty\030\003 \001(\0162\035.proto"
-      ".dota.DOTABotDifficulty:\026BOT_DIFFICULTY_"
-      "PASSIVE\"[\n\031CMsgPracticeLobbySetCoach\022>\n\004"
-      "team\030\001 \001(\0162\030.proto.dota.DOTA_GC_TEAM:\026DO"
-      "TA_GC_TEAM_GOOD_GUYS\"\230\001\n%CMsgPracticeLob"
-      "byJoinBroadcastChannel\022\017\n\007channel\030\001 \001(\r\022"
-      "\035\n\025preferred_description\030\002 \001(\t\022\036\n\026prefer"
-      "red_country_code\030\003 \001(\t\022\037\n\027preferred_lang"
-      "uage_code\030\004 \001(\t\"9\n&CMsgPracticeLobbyClos"
-      "eBroadcastChannel\022\017\n\007channel\030\001 \001(\r\"8\n6CM"
-      "sgPracticeLobbyToggleBroadcastChannelCam"
-      "eramanStatus\"+\n\025CMsgPracticeLobbyKick\022\022\n"
-      "\naccount_id\030\003 \001(\r\"3\n\035CMsgPracticeLobbyKi"
-      "ckFromTeam\022\022\n\naccount_id\030\001 \001(\r\"\030\n\026CMsgPr"
-      "acticeLobbyLeave\"1\n\027CMsgPracticeLobbyLau"
-      "nch\022\026\n\016client_version\030\005 \001(\r\"/\n\034CMsgApply"
-      "TeamToPracticeLobby\022\017\n\007team_id\030\001 \001(\r\"\034\n\032"
-      "CMsgClearPracticeLobbyTeam\"\225\001\n\025CMsgPract"
-      "iceLobbyList\022\030\n\020tournament_games\030\001 \001(\010\022\020"
-      "\n\010pass_key\030\002 \001(\t\022\016\n\006region\030\003 \001(\r\022@\n\tgame"
-      "_mode\030\004 \001(\0162\031.proto.dota.DOTA_GameMode:\022"
-      "DOTA_GAMEMODE_NONE\"\344\004\n\"CMsgPracticeLobby"
-      "ListResponseEntry\022\020\n\002id\030\001 \001(\004B\004\200\246\035\001\022\025\n\rt"
-      "ournament_id\030\003 \001(\r\022\032\n\022tournament_game_id"
-      "\030\004 \001(\r\022L\n\007members\030\005 \003(\0132;.proto.dota.CMs"
-      "gPracticeLobbyListResponseEntry.CLobbyMe"
-      "mber\022\031\n\021requires_pass_key\030\006 \001(\010\022\031\n\021leade"
-      "r_account_id\030\007 \001(\r\022\020\n\010guild_id\030\010 \001(\r\022\022\n\n"
-      "guild_logo\030\t \001(\004\022\014\n\004name\030\n \001(\t\022\030\n\020custom"
-      "_game_mode\030\013 \001(\t\022@\n\tgame_mode\030\014 \001(\0162\031.pr"
-      "oto.dota.DOTA_GameMode:\022DOTA_GAMEMODE_NO"
-      "NE\022\026\n\016friend_present\030\r \001(\010\022\017\n\007players\030\016 "
-      "\001(\r\022\027\n\017custom_map_name\030\017 \001(\t\022\030\n\020max_play"
-      "er_count\030\020 \001(\r\022\025\n\rserver_region\030\021 \001(\r\022&\n"
-      "\036lan_host_ping_to_server_region\030\022 \001(\r\022\021\n"
-      "\tleague_id\030\023 \001(\r\0327\n\014CLobbyMember\022\022\n\nacco"
-      "unt_id\030\001 \001(\r\022\023\n\013player_name\030\002 \001(\t\"z\n\035CMs"
-      "gPracticeLobbyListResponse\022\030\n\020tournament"
-      "_games\030\001 \001(\010\022\?\n\007lobbies\030\002 \003(\0132..proto.do"
-      "ta.CMsgPracticeLobbyListResponseEntry\"k\n"
-      "\rCMsgLobbyList\022\030\n\rserver_region\030\001 \001(\r:\0010"
-      "\022@\n\tgame_mode\030\002 \001(\0162\031.proto.dota.DOTA_Ga"
-      "meMode:\022DOTA_GAMEMODE_NONE\"X\n\025CMsgLobbyL"
-      "istResponse\022\?\n\007lobbies\030\001 \003(\0132..proto.dot"
-      "a.CMsgPracticeLobbyListResponseEntry\"\213\001\n"
-      "\025CMsgPracticeLobbyJoin\022\020\n\010lobby_id\030\001 \001(\004"
-      "\022\026\n\016client_version\030\002 \001(\r\022\020\n\010pass_key\030\003 \001"
-      "(\t\022\027\n\017custom_game_crc\030\004 \001(\006\022\035\n\025custom_ga"
-      "me_timestamp\030\005 \001(\007\"j\n\035CMsgPracticeLobbyJ"
-      "oinResponse\022I\n\006result\030\001 \001(\0162\037.proto.dota"
-      ".DOTAJoinLobbyResult:\030DOTA_JOIN_RESULT_S"
-      "UCCESS\"5\n\"CMsgFriendPracticeLobbyListReq"
-      "uest\022\017\n\007friends\030\001 \003(\r\"f\n#CMsgFriendPract"
-      "iceLobbyListResponse\022\?\n\007lobbies\030\001 \003(\0132.."
-      "proto.dota.CMsgPracticeLobbyListResponse"
-      "Entry\"7\n%CMsgGuildmatePracticeLobbyListR"
-      "equest\022\016\n\006guilds\030\001 \003(\r\"i\n&CMsgGuildmateP"
-      "racticeLobbyListResponse\022\?\n\007lobbies\030\001 \003("
-      "\0132..proto.dota.CMsgPracticeLobbyListResp"
-      "onseEntry\";\n\"CMsgJoinableCustomGameModes"
-      "Request\022\025\n\rserver_region\030\001 \001(\r\"m\n(CMsgJo"
-      "inableCustomGameModesResponseEntry\022\026\n\016cu"
-      "stom_game_id\030\001 \001(\004\022\023\n\013lobby_count\030\002 \001(\r\022"
-      "\024\n\014player_count\030\003 \001(\r\"o\n#CMsgJoinableCus"
-      "tomGameModesResponse\022H\n\ngame_modes\030\001 \003(\013"
-      "24.proto.dota.CMsgJoinableCustomGameMode"
-      "sResponseEntry\"Q\n CMsgJoinableCustomLobb"
-      "iesRequest\022\025\n\rserver_region\030\001 \001(\r\022\026\n\016cus"
-      "tom_game_id\030\002 \001(\004\"\264\002\n&CMsgJoinableCustom"
-      "LobbiesResponseEntry\022\020\n\010lobby_id\030\001 \001(\006\022\026"
-      "\n\016custom_game_id\030\002 \001(\004\022\022\n\nlobby_name\030\003 \001"
-      "(\t\022\024\n\014member_count\030\004 \001(\r\022\031\n\021leader_accou"
-      "nt_id\030\005 \001(\r\022\023\n\013leader_name\030\006 \001(\t\022\027\n\017cust"
-      "om_map_name\030\007 \001(\t\022\030\n\020max_player_count\030\010 "
-      "\001(\r\022\025\n\rserver_region\030\t \001(\r\022&\n\036lan_host_p"
-      "ing_to_server_region\030\n \001(\r\022\024\n\014has_pass_k"
-      "ey\030\013 \001(\010\"h\n!CMsgJoinableCustomLobbiesRes"
-      "ponse\022C\n\007lobbies\030\001 \003(\01322.proto.dota.CMsg"
-      "JoinableCustomLobbiesResponseEntry\"\233\003\n\030C"
-      "MsgQuickJoinCustomLobby\022\034\n\024legacy_server"
-      "_region\030\001 \001(\r\022\026\n\016custom_game_id\030\002 \001(\004\022\026\n"
-      "\016client_version\030\003 \001(\r\022E\n\024create_lobby_de"
-      "tails\030\004 \001(\0132\'.proto.dota.CMsgPracticeLob"
-      "bySetDetails\022\025\n\rallow_any_map\030\005 \001(\010\022R\n\023l"
-      "egacy_region_pings\030\006 \003(\01325.proto.dota.CM"
-      "sgQuickJoinCustomLobby.LegacyRegionPing\022"
-      "1\n\tping_data\030\007 \001(\0132\036.proto.dota.CMsgClie"
-      "ntPingData\032L\n\020LegacyRegionPing\022\025\n\rserver"
-      "_region\030\001 \001(\r\022\014\n\004ping\030\002 \001(\r\022\023\n\013region_co"
-      "de\030\003 \001(\007\"m\n CMsgQuickJoinCustomLobbyResp"
-      "onse\022I\n\006result\030\001 \001(\0162\037.proto.dota.DOTAJo"
-      "inLobbyResult:\030DOTA_JOIN_RESULT_SUCCESS\""
-      "\265\002\n\021CMsgBotGameCreate\022\022\n\nsearch_key\030\001 \001("
-      "\t\022\026\n\016client_version\030\002 \001(\r\022Q\n\022difficulty_"
-      "radiant\030\003 \001(\0162\035.proto.dota.DOTABotDiffic"
-      "ulty:\026BOT_DIFFICULTY_PASSIVE\022>\n\004team\030\004 \001"
-      "(\0162\030.proto.dota.DOTA_GC_TEAM:\026DOTA_GC_TE"
-      "AM_GOOD_GUYS\022\021\n\tgame_mode\030\005 \001(\r\022N\n\017diffi"
-      "culty_dire\030\006 \001(\0162\035.proto.dota.DOTABotDif"
-      "ficulty:\026BOT_DIFFICULTY_PASSIVE\"\216\001\n\024CMsg"
-      "CustomGameCreate\022\022\n\nsearch_key\030\001 \001(\t\022\026\n\016"
-      "client_version\030\002 \001(\r\022\022\n\ndifficulty\030\003 \001(\r"
-      "\022\021\n\tgame_mode\030\004 \001(\t\022\013\n\003map\030\005 \001(\t\022\026\n\016cust"
-      "om_game_id\030\007 \001(\004\"\215\001\n\023CMsgEventGameCreate"
-      "\022\022\n\nsearch_key\030\001 \001(\t\022\026\n\016client_version\030\002"
-      " \001(\r\022\022\n\ndifficulty\030\003 \001(\r\022\021\n\tgame_mode\030\004 "
-      "\001(\t\022\013\n\003map\030\005 \001(\t\022\026\n\016custom_game_id\030\007 \001(\004"
-      "\"2\n\033CMsgDOTAPartyMemberSetCoach\022\023\n\013wants"
-      "_coach\030\001 \001(\010\"4\n\026CMsgDOTASetGroupLeader\022\032"
-      "\n\022new_leader_steamid\030\001 \001(\006\"P\n\032CMsgDOTACa"
-      "ncelGroupInvites\022\030\n\020invited_steamids\030\001 \003"
-      "(\006\022\030\n\020invited_groupids\030\002 \003(\006\"*\n\032CMsgDOTA"
-      "SetGroupOpenStatus\022\014\n\004open\030\001 \001(\010\"2\n\030CMsg"
-      "DOTAGroupMergeInvite\022\026\n\016other_group_id\030\001"
-      " \001(\006\"H\n\032CMsgDOTAGroupMergeResponse\022\032\n\022in"
-      "itiator_group_id\030\001 \001(\006\022\016\n\006accept\030\002 \001(\010\"h"
-      "\n\027CMsgDOTAGroupMergeReply\022M\n\006result\030\001 \001("
-      "\0162!.proto.dota.EDOTAGroupMergeResult:\032k_"
-      "EDOTAGroupMergeResult_OK\"\212\003\n\035CMsgSpectat"
-      "orLobbyGameDetails\022\020\n\010language\030\001 \001(\r\022\020\n\010"
-      "match_id\030\002 \001(\004\022\027\n\017server_steam_id\030\003 \001(\006\022"
-      "\022\n\nstream_url\030\004 \001(\t\022\023\n\013stream_name\030\005 \001(\t"
-      "\022\021\n\tleague_id\030\006 \001(\r\022\023\n\013series_type\030\007 \001(\r"
-      "\022\023\n\013series_game\030\010 \001(\r\022D\n\014radiant_team\030\t "
-      "\001(\0132..proto.dota.CMsgSpectatorLobbyGameD"
-      "etails.Team\022A\n\tdire_team\030\n \001(\0132..proto.d"
-      "ota.CMsgSpectatorLobbyGameDetails.Team\032="
-      "\n\004Team\022\017\n\007team_id\030\001 \001(\r\022\021\n\tteam_name\030\002 \001"
-      "(\t\022\021\n\tteam_logo\030\003 \001(\006\"\227\001\n\034CMsgSetSpectat"
-      "orLobbyDetails\022\020\n\010lobby_id\030\001 \001(\004\022\022\n\nlobb"
-      "y_name\030\002 \001(\t\022\020\n\010pass_key\030\003 \001(\t\022\?\n\014game_d"
-      "etails\030\004 \001(\0132).proto.dota.CMsgSpectatorL"
-      "obbyGameDetails\"m\n\030CMsgCreateSpectatorLo"
-      "bby\022\026\n\016client_version\030\001 \001(\r\0229\n\007details\030\002"
-      " \001(\0132(.proto.dota.CMsgSetSpectatorLobbyD"
-      "etails\"\030\n\026CMsgSpectatorLobbyList\"\261\002\n\036CMs"
-      "gSpectatorLobbyListResponse\022J\n\007lobbies\030\001"
-      " \003(\01329.proto.dota.CMsgSpectatorLobbyList"
-      "Response.SpectatorLobby\032\302\001\n\016SpectatorLob"
-      "by\022\020\n\010lobby_id\030\001 \001(\004\022\021\n\tgame_name\030\002 \001(\t\022"
-      "\031\n\021requires_pass_key\030\003 \001(\010\022\031\n\021leader_acc"
-      "ount_id\030\004 \001(\r\022\024\n\014member_count\030\005 \001(\r\022\?\n\014g"
-      "ame_details\030\007 \001(\0132).proto.dota.CMsgSpect"
-      "atorLobbyGameDetails\"C\n(CMsgClientToGCRe"
-      "questSteamDatagramTicket\022\027\n\017server_steam"
-      "_id\030\001 \001(\006\"^\n0CMsgClientToGCRequestSteamD"
-      "atagramTicketResponse\022\031\n\021serialized_tick"
-      "et\030\001 \001(\014\022\017\n\007message\030\002 \001(\t\"\267\002\n!CMsgGCToCl"
-      "ientSteamDatagramTicket\022\032\n\022legacy_time_e"
-      "xpiry\030\001 \001(\007\022\"\n\032legacy_authorized_steam_i"
-      "d\030\002 \001(\006\022#\n\033legacy_authorized_public_ip\030\003"
-      " \001(\007\022\"\n\032legacy_gameserver_steam_id\030\004 \001(\006"
-      "\022 \n\030legacy_gameserver_net_id\030\005 \001(\006\022\030\n\020le"
-      "gacy_signature\030\006 \001(\014\022\025\n\rlegacy_app_id\030\007 "
-      "\001(\r\022\033\n\023legacy_extra_fields\030\010 \003(\014\022\031\n\021seri"
-      "alized_ticket\030\020 \001(\014*\355\n\n\030EStartFindingMat"
-      "chResult\022&\n\"k_EStartFindingMatchResult_I"
-      "nvalid\020\000\022!\n\035k_EStartFindingMatchResult_O"
-      "K\020\001\022/\n+k_EStartFindingMatchResult_Alread"
-      "ySearching\020\002\022*\n&k_EStartFindingMatchResu"
-      "lt_FailGeneric\020d\022+\n\'k_EStartFindingMatch"
-      "Result_FailedIgnore\020e\0222\n.k_EStartFinding"
-      "MatchResult_MatchmakingDisabled\020f\022,\n(k_E"
-      "StartFindingMatchResult_RegionOffline\020g\022"
-      "2\n.k_EStartFindingMatchResult_Matchmakin"
-      "gCooldown\020h\022.\n*k_EStartFindingMatchResul"
-      "t_ClientOutOfDate\020i\0227\n3k_EStartFindingMa"
-      "tchResult_CompetitiveNoLowPriority\020j\0225\n1"
-      "k_EStartFindingMatchResult_CompetitiveNo"
-      "tUnlocked\020k\0222\n.k_EStartFindingMatchResul"
-      "t_GameModeNotUnlocked\020l\022<\n8k_EStartFindi"
-      "ngMatchResult_CompetitiveNotEnoughSkillD"
-      "ata\020m\0222\n.k_EStartFindingMatchResult_Miss"
-      "ingInitialSkill\020n\022<\n8k_EStartFindingMatc"
-      "hResult_CompetitiveRankSpreadTooLarge\020o\022"
-      "3\n/k_EStartFindingMatchResult_MemberAlre"
-      "adyInLobby\020p\0223\n/k_EStartFindingMatchResu"
-      "lt_MemberNotVACVerified\020q\0229\n5k_EStartFin"
-      "dingMatchResult_WeekendTourneyBadPartySi"
-      "ze\020r\022>\n:k_EStartFindingMatchResult_Weeke"
-      "ndTourneyTeamBuyInTooSmall\020s\022D\n@k_EStart"
-      "FindingMatchResult_WeekendTourneyIndivid"
-      "ualBuyInTooLarge\020t\022>\n:k_EStartFindingMat"
-      "chResult_WeekendTourneyTeamBuyInTooLarge"
-      "\020u\022:\n6k_EStartFindingMatchResult_MemberM"
-      "issingEventOwnership\020v\0228\n4k_EStartFindin"
-      "gMatchResult_WeekendTourneyNotUnlocked\020w"
-      "\022@\n<k_EStartFindingMatchResult_WeekendTo"
-      "urneyRecentParticipation\020x\022\?\n;k_EStartFi"
-      "ndingMatchResult_MemberMissingAnchoredPh"
-      "oneNumber\020yB\005H\001\200\001\000"
+      "flags\030\r \001(\r\022\022\n\nsolo_queue\030\016 \001(\010\022\030\n\020bot_s"
+      "cript_index\030\017 \001(\r\"\351\001\n\033CMsgStartFindingMa"
+      "tchResult\022!\n\026legacy_generic_eresult\030\001 \001("
+      "\r:\0012\022X\n\006result\030\002 \001(\0162$.proto.dota.EStart"
+      "FindingMatchResult:\"k_EStartFindingMatch"
+      "Result_Invalid\022\023\n\013error_token\030\003 \001(\t\022\025\n\rd"
+      "ebug_message\030\004 \001(\t\022!\n\031responsible_party_"
+      "members\030\005 \003(\006\"\026\n\024CMsgStopFindingMatch\"\344\001"
+      "\n\027CMsgPartyBuilderOptions\022\030\n\020additional_"
+      "slots\030\001 \001(\r\022<\n\nmatch_type\030\002 \001(\0162\025.proto."
+      "dota.MatchType:\021MATCH_TYPE_CASUAL\022\023\n\013mat"
+      "chgroups\030\003 \001(\r\022\026\n\016client_version\030\004 \001(\r\022D"
+      "\n\010language\030\005 \001(\0162\032.proto.dota.MatchLangu"
+      "ages:\026MATCH_LANGUAGE_INVALID\"\261\001\n\013CMsgRea"
+      "dyUp\022N\n\005state\030\001 \001(\0162\037.proto.dota.DOTALob"
+      "byReadyState:\036DOTALobbyReadyState_UNDECL"
+      "ARED\022\024\n\014ready_up_key\030\002 \001(\006\022<\n\016hardware_s"
+      "pecs\030\003 \001(\0132$.proto.dota.CDOTAClientHardw"
+      "areSpecs\"Q\n\021CMsgReadyUpStatus\022\020\n\010lobby_i"
+      "d\030\001 \001(\006\022\024\n\014accepted_ids\030\002 \003(\r\022\024\n\014decline"
+      "d_ids\030\003 \003(\r\"\030\n\026CMsgAbandonCurrentGame\"\353\013"
+      "\n\033CMsgPracticeLobbySetDetails\022\020\n\010lobby_i"
+      "d\030\001 \001(\004\022\021\n\tgame_name\030\002 \001(\t\0223\n\014team_detai"
+      "ls\030\003 \003(\0132\035.proto.dota.CLobbyTeamDetails\022"
+      "\025\n\rserver_region\030\004 \001(\r\022\021\n\tgame_mode\030\005 \001("
+      "\r\0229\n\007cm_pick\030\006 \001(\0162\030.proto.dota.DOTA_CM_"
+      "PICK:\016DOTA_CM_RANDOM\022U\n\026bot_difficulty_r"
+      "adiant\030\t \001(\0162\035.proto.dota.DOTABotDifficu"
+      "lty:\026BOT_DIFFICULTY_PASSIVE\022\024\n\014allow_che"
+      "ats\030\n \001(\010\022\026\n\016fill_with_bots\030\013 \001(\010\022\022\n\nint"
+      "ro_mode\030\014 \001(\010\022\030\n\020allow_spectating\030\r \001(\010\022"
+      "G\n\014game_version\030\016 \001(\0162\033.proto.dota.DOTAG"
+      "ameVersion:\024GAME_VERSION_CURRENT\022\020\n\010pass"
+      "_key\030\017 \001(\t\022\020\n\010leagueid\030\020 \001(\r\022\035\n\025penalty_"
+      "level_radiant\030\021 \001(\r\022\032\n\022penalty_level_dir"
+      "e\030\022 \001(\r\022\024\n\014load_game_id\030\023 \001(\r\022\023\n\013series_"
+      "type\030\024 \001(\r\022\033\n\023radiant_series_wins\030\025 \001(\r\022"
+      "\030\n\020dire_series_wins\030\026 \001(\r\022\026\n\007allchat\030\027 \001"
+      "(\010:\005false\022D\n\rdota_tv_delay\030\030 \001(\0162\034.proto"
+      ".dota.LobbyDotaTVDelay:\017LobbyDotaTV_120\022"
+      "\013\n\003lan\030\031 \001(\010\022\030\n\020custom_game_mode\030\032 \001(\t\022\027"
+      "\n\017custom_map_name\030\033 \001(\t\022\031\n\021custom_diffic"
+      "ulty\030\034 \001(\r\022\026\n\016custom_game_id\030\035 \001(\004\022\032\n\022cu"
+      "stom_min_players\030\036 \001(\r\022\032\n\022custom_max_pla"
+      "yers\030\037 \001(\r\022&\n\036lan_host_ping_to_server_re"
+      "gion\030  \001(\r\022O\n\nvisibility\030! \001(\0162\037.proto.d"
+      "ota.DOTALobbyVisibility:\032DOTALobbyVisibi"
+      "lity_Public\022\027\n\017custom_game_crc\030\" \001(\006\022\030\n\020"
+      "league_series_id\030# \001(\r\022\026\n\016league_game_id"
+      "\030$ \001(\r\022\035\n\025custom_game_timestamp\030% \001(\007\022\037\n"
+      "\027previous_match_override\030& \001(\004\022Y\n\rpause_"
+      "setting\030* \001(\0162!.proto.dota.LobbyDotaPaus"
+      "eSetting:\037LobbyDotaPauseSetting_Unlimite"
+      "d\022R\n\023bot_difficulty_dire\030+ \001(\0162\035.proto.d"
+      "ota.DOTABotDifficulty:\026BOT_DIFFICULTY_PA"
+      "SSIVE\022\023\n\013bot_radiant\030, \001(\004\022\020\n\010bot_dire\030-"
+      " \001(\004\022m\n\030selection_priority_rules\030. \001(\0162&"
+      ".proto.dota.DOTASelectionPriorityRules:#"
+      "k_DOTASelectionPriorityRules_Manual\"\250\002\n\027"
+      "CMsgPracticeLobbyCreate\022\022\n\nsearch_key\030\001 "
+      "\001(\t\022\020\n\010pass_key\030\005 \001(\t\022\026\n\016client_version\030"
+      "\006 \001(\r\022>\n\rlobby_details\030\007 \001(\0132\'.proto.dot"
+      "a.CMsgPracticeLobbySetDetails\022\?\n\tsave_ga"
+      "me\030\010 \001(\0132,.proto.dota.CMsgPracticeLobbyC"
+      "reate.SaveGame\032N\n\010SaveGame\022\014\n\004data\030\001 \001(\014"
+      "\022\017\n\007version\030\002 \001(\005\022\020\n\010steam_id\030\003 \001(\006\022\021\n\ts"
+      "ignature\030\004 \001(\006\"\273\001\n\034CMsgPracticeLobbySetT"
+      "eamSlot\022>\n\004team\030\001 \001(\0162\030.proto.dota.DOTA_"
+      "GC_TEAM:\026DOTA_GC_TEAM_GOOD_GUYS\022\014\n\004slot\030"
+      "\002 \001(\r\022M\n\016bot_difficulty\030\003 \001(\0162\035.proto.do"
+      "ta.DOTABotDifficulty:\026BOT_DIFFICULTY_PAS"
+      "SIVE\"[\n\031CMsgPracticeLobbySetCoach\022>\n\004tea"
+      "m\030\001 \001(\0162\030.proto.dota.DOTA_GC_TEAM:\026DOTA_"
+      "GC_TEAM_GOOD_GUYS\"\230\001\n%CMsgPracticeLobbyJ"
+      "oinBroadcastChannel\022\017\n\007channel\030\001 \001(\r\022\035\n\025"
+      "preferred_description\030\002 \001(\t\022\036\n\026preferred"
+      "_country_code\030\003 \001(\t\022\037\n\027preferred_languag"
+      "e_code\030\004 \001(\t\"9\n&CMsgPracticeLobbyCloseBr"
+      "oadcastChannel\022\017\n\007channel\030\001 \001(\r\"8\n6CMsgP"
+      "racticeLobbyToggleBroadcastChannelCamera"
+      "manStatus\"+\n\025CMsgPracticeLobbyKick\022\022\n\nac"
+      "count_id\030\003 \001(\r\"3\n\035CMsgPracticeLobbyKickF"
+      "romTeam\022\022\n\naccount_id\030\001 \001(\r\"\030\n\026CMsgPract"
+      "iceLobbyLeave\"1\n\027CMsgPracticeLobbyLaunch"
+      "\022\026\n\016client_version\030\005 \001(\r\"/\n\034CMsgApplyTea"
+      "mToPracticeLobby\022\017\n\007team_id\030\001 \001(\r\"\034\n\032CMs"
+      "gClearPracticeLobbyTeam\"\225\001\n\025CMsgPractice"
+      "LobbyList\022\030\n\020tournament_games\030\001 \001(\010\022\020\n\010p"
+      "ass_key\030\002 \001(\t\022\016\n\006region\030\003 \001(\r\022@\n\tgame_mo"
+      "de\030\004 \001(\0162\031.proto.dota.DOTA_GameMode:\022DOT"
+      "A_GAMEMODE_NONE\"\344\004\n\"CMsgPracticeLobbyLis"
+      "tResponseEntry\022\020\n\002id\030\001 \001(\004B\004\200\246\035\001\022\025\n\rtour"
+      "nament_id\030\003 \001(\r\022\032\n\022tournament_game_id\030\004 "
+      "\001(\r\022L\n\007members\030\005 \003(\0132;.proto.dota.CMsgPr"
+      "acticeLobbyListResponseEntry.CLobbyMembe"
+      "r\022\031\n\021requires_pass_key\030\006 \001(\010\022\031\n\021leader_a"
+      "ccount_id\030\007 \001(\r\022\020\n\010guild_id\030\010 \001(\r\022\022\n\ngui"
+      "ld_logo\030\t \001(\004\022\014\n\004name\030\n \001(\t\022\030\n\020custom_ga"
+      "me_mode\030\013 \001(\t\022@\n\tgame_mode\030\014 \001(\0162\031.proto"
+      ".dota.DOTA_GameMode:\022DOTA_GAMEMODE_NONE\022"
+      "\026\n\016friend_present\030\r \001(\010\022\017\n\007players\030\016 \001(\r"
+      "\022\027\n\017custom_map_name\030\017 \001(\t\022\030\n\020max_player_"
+      "count\030\020 \001(\r\022\025\n\rserver_region\030\021 \001(\r\022&\n\036la"
+      "n_host_ping_to_server_region\030\022 \001(\r\022\021\n\tle"
+      "ague_id\030\023 \001(\r\0327\n\014CLobbyMember\022\022\n\naccount"
+      "_id\030\001 \001(\r\022\023\n\013player_name\030\002 \001(\t\"z\n\035CMsgPr"
+      "acticeLobbyListResponse\022\030\n\020tournament_ga"
+      "mes\030\001 \001(\010\022\?\n\007lobbies\030\002 \003(\0132..proto.dota."
+      "CMsgPracticeLobbyListResponseEntry\"k\n\rCM"
+      "sgLobbyList\022\030\n\rserver_region\030\001 \001(\r:\0010\022@\n"
+      "\tgame_mode\030\002 \001(\0162\031.proto.dota.DOTA_GameM"
+      "ode:\022DOTA_GAMEMODE_NONE\"X\n\025CMsgLobbyList"
+      "Response\022\?\n\007lobbies\030\001 \003(\0132..proto.dota.C"
+      "MsgPracticeLobbyListResponseEntry\"\213\001\n\025CM"
+      "sgPracticeLobbyJoin\022\020\n\010lobby_id\030\001 \001(\004\022\026\n"
+      "\016client_version\030\002 \001(\r\022\020\n\010pass_key\030\003 \001(\t\022"
+      "\027\n\017custom_game_crc\030\004 \001(\006\022\035\n\025custom_game_"
+      "timestamp\030\005 \001(\007\"j\n\035CMsgPracticeLobbyJoin"
+      "Response\022I\n\006result\030\001 \001(\0162\037.proto.dota.DO"
+      "TAJoinLobbyResult:\030DOTA_JOIN_RESULT_SUCC"
+      "ESS\"5\n\"CMsgFriendPracticeLobbyListReques"
+      "t\022\017\n\007friends\030\001 \003(\r\"f\n#CMsgFriendPractice"
+      "LobbyListResponse\022\?\n\007lobbies\030\001 \003(\0132..pro"
+      "to.dota.CMsgPracticeLobbyListResponseEnt"
+      "ry\"7\n%CMsgGuildmatePracticeLobbyListRequ"
+      "est\022\016\n\006guilds\030\001 \003(\r\"i\n&CMsgGuildmatePrac"
+      "ticeLobbyListResponse\022\?\n\007lobbies\030\001 \003(\0132."
+      ".proto.dota.CMsgPracticeLobbyListRespons"
+      "eEntry\";\n\"CMsgJoinableCustomGameModesReq"
+      "uest\022\025\n\rserver_region\030\001 \001(\r\"m\n(CMsgJoina"
+      "bleCustomGameModesResponseEntry\022\026\n\016custo"
+      "m_game_id\030\001 \001(\004\022\023\n\013lobby_count\030\002 \001(\r\022\024\n\014"
+      "player_count\030\003 \001(\r\"o\n#CMsgJoinableCustom"
+      "GameModesResponse\022H\n\ngame_modes\030\001 \003(\01324."
+      "proto.dota.CMsgJoinableCustomGameModesRe"
+      "sponseEntry\"Q\n CMsgJoinableCustomLobbies"
+      "Request\022\025\n\rserver_region\030\001 \001(\r\022\026\n\016custom"
+      "_game_id\030\002 \001(\004\"\264\002\n&CMsgJoinableCustomLob"
+      "biesResponseEntry\022\020\n\010lobby_id\030\001 \001(\006\022\026\n\016c"
+      "ustom_game_id\030\002 \001(\004\022\022\n\nlobby_name\030\003 \001(\t\022"
+      "\024\n\014member_count\030\004 \001(\r\022\031\n\021leader_account_"
+      "id\030\005 \001(\r\022\023\n\013leader_name\030\006 \001(\t\022\027\n\017custom_"
+      "map_name\030\007 \001(\t\022\030\n\020max_player_count\030\010 \001(\r"
+      "\022\025\n\rserver_region\030\t \001(\r\022&\n\036lan_host_ping"
+      "_to_server_region\030\n \001(\r\022\024\n\014has_pass_key\030"
+      "\013 \001(\010\"h\n!CMsgJoinableCustomLobbiesRespon"
+      "se\022C\n\007lobbies\030\001 \003(\01322.proto.dota.CMsgJoi"
+      "nableCustomLobbiesResponseEntry\"\233\003\n\030CMsg"
+      "QuickJoinCustomLobby\022\034\n\024legacy_server_re"
+      "gion\030\001 \001(\r\022\026\n\016custom_game_id\030\002 \001(\004\022\026\n\016cl"
+      "ient_version\030\003 \001(\r\022E\n\024create_lobby_detai"
+      "ls\030\004 \001(\0132\'.proto.dota.CMsgPracticeLobbyS"
+      "etDetails\022\025\n\rallow_any_map\030\005 \001(\010\022R\n\023lega"
+      "cy_region_pings\030\006 \003(\01325.proto.dota.CMsgQ"
+      "uickJoinCustomLobby.LegacyRegionPing\0221\n\t"
+      "ping_data\030\007 \001(\0132\036.proto.dota.CMsgClientP"
+      "ingData\032L\n\020LegacyRegionPing\022\025\n\rserver_re"
+      "gion\030\001 \001(\r\022\014\n\004ping\030\002 \001(\r\022\023\n\013region_code\030"
+      "\003 \001(\007\"m\n CMsgQuickJoinCustomLobbyRespons"
+      "e\022I\n\006result\030\001 \001(\0162\037.proto.dota.DOTAJoinL"
+      "obbyResult:\030DOTA_JOIN_RESULT_SUCCESS\"\265\002\n"
+      "\021CMsgBotGameCreate\022\022\n\nsearch_key\030\001 \001(\t\022\026"
+      "\n\016client_version\030\002 \001(\r\022Q\n\022difficulty_rad"
+      "iant\030\003 \001(\0162\035.proto.dota.DOTABotDifficult"
+      "y:\026BOT_DIFFICULTY_PASSIVE\022>\n\004team\030\004 \001(\0162"
+      "\030.proto.dota.DOTA_GC_TEAM:\026DOTA_GC_TEAM_"
+      "GOOD_GUYS\022\021\n\tgame_mode\030\005 \001(\r\022N\n\017difficul"
+      "ty_dire\030\006 \001(\0162\035.proto.dota.DOTABotDiffic"
+      "ulty:\026BOT_DIFFICULTY_PASSIVE\"\216\001\n\024CMsgCus"
+      "tomGameCreate\022\022\n\nsearch_key\030\001 \001(\t\022\026\n\016cli"
+      "ent_version\030\002 \001(\r\022\022\n\ndifficulty\030\003 \001(\r\022\021\n"
+      "\tgame_mode\030\004 \001(\t\022\013\n\003map\030\005 \001(\t\022\026\n\016custom_"
+      "game_id\030\007 \001(\004\"\215\001\n\023CMsgEventGameCreate\022\022\n"
+      "\nsearch_key\030\001 \001(\t\022\026\n\016client_version\030\002 \001("
+      "\r\022\022\n\ndifficulty\030\003 \001(\r\022\021\n\tgame_mode\030\004 \001(\t"
+      "\022\013\n\003map\030\005 \001(\t\022\026\n\016custom_game_id\030\007 \001(\004\"2\n"
+      "\033CMsgDOTAPartyMemberSetCoach\022\023\n\013wants_co"
+      "ach\030\001 \001(\010\"4\n\026CMsgDOTASetGroupLeader\022\032\n\022n"
+      "ew_leader_steamid\030\001 \001(\006\"P\n\032CMsgDOTACance"
+      "lGroupInvites\022\030\n\020invited_steamids\030\001 \003(\006\022"
+      "\030\n\020invited_groupids\030\002 \003(\006\"*\n\032CMsgDOTASet"
+      "GroupOpenStatus\022\014\n\004open\030\001 \001(\010\"2\n\030CMsgDOT"
+      "AGroupMergeInvite\022\026\n\016other_group_id\030\001 \001("
+      "\006\"H\n\032CMsgDOTAGroupMergeResponse\022\032\n\022initi"
+      "ator_group_id\030\001 \001(\006\022\016\n\006accept\030\002 \001(\010\"h\n\027C"
+      "MsgDOTAGroupMergeReply\022M\n\006result\030\001 \001(\0162!"
+      ".proto.dota.EDOTAGroupMergeResult:\032k_EDO"
+      "TAGroupMergeResult_OK\"\212\003\n\035CMsgSpectatorL"
+      "obbyGameDetails\022\020\n\010language\030\001 \001(\r\022\020\n\010mat"
+      "ch_id\030\002 \001(\004\022\027\n\017server_steam_id\030\003 \001(\006\022\022\n\n"
+      "stream_url\030\004 \001(\t\022\023\n\013stream_name\030\005 \001(\t\022\021\n"
+      "\tleague_id\030\006 \001(\r\022\023\n\013series_type\030\007 \001(\r\022\023\n"
+      "\013series_game\030\010 \001(\r\022D\n\014radiant_team\030\t \001(\013"
+      "2..proto.dota.CMsgSpectatorLobbyGameDeta"
+      "ils.Team\022A\n\tdire_team\030\n \001(\0132..proto.dota"
+      ".CMsgSpectatorLobbyGameDetails.Team\032=\n\004T"
+      "eam\022\017\n\007team_id\030\001 \001(\r\022\021\n\tteam_name\030\002 \001(\t\022"
+      "\021\n\tteam_logo\030\003 \001(\006\"\227\001\n\034CMsgSetSpectatorL"
+      "obbyDetails\022\020\n\010lobby_id\030\001 \001(\004\022\022\n\nlobby_n"
+      "ame\030\002 \001(\t\022\020\n\010pass_key\030\003 \001(\t\022\?\n\014game_deta"
+      "ils\030\004 \001(\0132).proto.dota.CMsgSpectatorLobb"
+      "yGameDetails\"m\n\030CMsgCreateSpectatorLobby"
+      "\022\026\n\016client_version\030\001 \001(\r\0229\n\007details\030\002 \001("
+      "\0132(.proto.dota.CMsgSetSpectatorLobbyDeta"
+      "ils\"\030\n\026CMsgSpectatorLobbyList\"\261\002\n\036CMsgSp"
+      "ectatorLobbyListResponse\022J\n\007lobbies\030\001 \003("
+      "\01329.proto.dota.CMsgSpectatorLobbyListRes"
+      "ponse.SpectatorLobby\032\302\001\n\016SpectatorLobby\022"
+      "\020\n\010lobby_id\030\001 \001(\004\022\021\n\tgame_name\030\002 \001(\t\022\031\n\021"
+      "requires_pass_key\030\003 \001(\010\022\031\n\021leader_accoun"
+      "t_id\030\004 \001(\r\022\024\n\014member_count\030\005 \001(\r\022\?\n\014game"
+      "_details\030\007 \001(\0132).proto.dota.CMsgSpectato"
+      "rLobbyGameDetails\"C\n(CMsgClientToGCReque"
+      "stSteamDatagramTicket\022\027\n\017server_steam_id"
+      "\030\001 \001(\006\"^\n0CMsgClientToGCRequestSteamData"
+      "gramTicketResponse\022\031\n\021serialized_ticket\030"
+      "\001 \001(\014\022\017\n\007message\030\002 \001(\t\"\267\002\n!CMsgGCToClien"
+      "tSteamDatagramTicket\022\032\n\022legacy_time_expi"
+      "ry\030\001 \001(\007\022\"\n\032legacy_authorized_steam_id\030\002"
+      " \001(\006\022#\n\033legacy_authorized_public_ip\030\003 \001("
+      "\007\022\"\n\032legacy_gameserver_steam_id\030\004 \001(\006\022 \n"
+      "\030legacy_gameserver_net_id\030\005 \001(\006\022\030\n\020legac"
+      "y_signature\030\006 \001(\014\022\025\n\rlegacy_app_id\030\007 \001(\r"
+      "\022\033\n\023legacy_extra_fields\030\010 \003(\014\022\031\n\021seriali"
+      "zed_ticket\030\020 \001(\014*\355\n\n\030EStartFindingMatchR"
+      "esult\022&\n\"k_EStartFindingMatchResult_Inva"
+      "lid\020\000\022!\n\035k_EStartFindingMatchResult_OK\020\001"
+      "\022/\n+k_EStartFindingMatchResult_AlreadySe"
+      "arching\020\002\022*\n&k_EStartFindingMatchResult_"
+      "FailGeneric\020d\022+\n\'k_EStartFindingMatchRes"
+      "ult_FailedIgnore\020e\0222\n.k_EStartFindingMat"
+      "chResult_MatchmakingDisabled\020f\022,\n(k_ESta"
+      "rtFindingMatchResult_RegionOffline\020g\0222\n."
+      "k_EStartFindingMatchResult_MatchmakingCo"
+      "oldown\020h\022.\n*k_EStartFindingMatchResult_C"
+      "lientOutOfDate\020i\0227\n3k_EStartFindingMatch"
+      "Result_CompetitiveNoLowPriority\020j\0225\n1k_E"
+      "StartFindingMatchResult_CompetitiveNotUn"
+      "locked\020k\0222\n.k_EStartFindingMatchResult_G"
+      "ameModeNotUnlocked\020l\022<\n8k_EStartFindingM"
+      "atchResult_CompetitiveNotEnoughSkillData"
+      "\020m\0222\n.k_EStartFindingMatchResult_Missing"
+      "InitialSkill\020n\022<\n8k_EStartFindingMatchRe"
+      "sult_CompetitiveRankSpreadTooLarge\020o\0223\n/"
+      "k_EStartFindingMatchResult_MemberAlready"
+      "InLobby\020p\0223\n/k_EStartFindingMatchResult_"
+      "MemberNotVACVerified\020q\0229\n5k_EStartFindin"
+      "gMatchResult_WeekendTourneyBadPartySize\020"
+      "r\022>\n:k_EStartFindingMatchResult_WeekendT"
+      "ourneyTeamBuyInTooSmall\020s\022D\n@k_EStartFin"
+      "dingMatchResult_WeekendTourneyIndividual"
+      "BuyInTooLarge\020t\022>\n:k_EStartFindingMatchR"
+      "esult_WeekendTourneyTeamBuyInTooLarge\020u\022"
+      ":\n6k_EStartFindingMatchResult_MemberMiss"
+      "ingEventOwnership\020v\0228\n4k_EStartFindingMa"
+      "tchResult_WeekendTourneyNotUnlocked\020w\022@\n"
+      "<k_EStartFindingMatchResult_WeekendTourn"
+      "eyRecentParticipation\020x\022\?\n;k_EStartFindi"
+      "ngMatchResult_MemberMissingAnchoredPhone"
+      "Number\020yB\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 11178);
+      descriptor, 11095);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dota_gcmessages_client_match_management.proto", &protobuf_RegisterTypes);
   ::proto::dota::protobuf_steammessages_2eproto::AddDescriptors();
@@ -1743,6 +1739,7 @@ const int CMsgStartFindingMatch::kGameLanguageNameFieldNumber;
 const int CMsgStartFindingMatch::kPingDataFieldNumber;
 const int CMsgStartFindingMatch::kRegionSelectFlagsFieldNumber;
 const int CMsgStartFindingMatch::kSoloQueueFieldNumber;
+const int CMsgStartFindingMatch::kBotScriptIndexFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CMsgStartFindingMatch::CMsgStartFindingMatch()
@@ -1782,8 +1779,8 @@ void CMsgStartFindingMatch::SharedCtor() {
   _cached_size_ = 0;
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   game_language_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&ping_data_, 0, reinterpret_cast<char*>(&solo_queue_) -
-    reinterpret_cast<char*>(&ping_data_) + sizeof(solo_queue_));
+  ::memset(&ping_data_, 0, reinterpret_cast<char*>(&bot_script_index_) -
+    reinterpret_cast<char*>(&ping_data_) + sizeof(bot_script_index_));
   matchgroups_ = 4294967295u;
   game_modes_ = 4294967295u;
   bot_difficulty_ = 3;
@@ -1846,9 +1843,9 @@ void CMsgStartFindingMatch::Clear() {
     ::memset(&client_version_, 0, reinterpret_cast<char*>(&game_language_enum_) -
       reinterpret_cast<char*>(&client_version_) + sizeof(game_language_enum_));
   }
-  if (_has_bits_[8 / 32] & 16128u) {
-    ::memset(&region_select_flags_, 0, reinterpret_cast<char*>(&solo_queue_) -
-      reinterpret_cast<char*>(&region_select_flags_) + sizeof(solo_queue_));
+  if (_has_bits_[8 / 32] & 32512u) {
+    ::memset(&region_select_flags_, 0, reinterpret_cast<char*>(&bot_script_index_) -
+      reinterpret_cast<char*>(&region_select_flags_) + sizeof(bot_script_index_));
     matchgroups_ = 4294967295u;
     game_modes_ = 4294967295u;
     bot_difficulty_ = 3;
@@ -2081,6 +2078,20 @@ bool CMsgStartFindingMatch::MergePartialFromCodedStream(
         break;
       }
 
+      // optional uint32 bot_script_index = 15;
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(120u)) {
+          set_has_bot_script_index();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &bot_script_index_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -2121,7 +2132,7 @@ void CMsgStartFindingMatch::SerializeWithCachedSizes(
   }
 
   // optional uint32 matchgroups = 2 [default = 4294967295];
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000800u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->matchgroups(), output);
   }
 
@@ -2131,12 +2142,12 @@ void CMsgStartFindingMatch::SerializeWithCachedSizes(
   }
 
   // optional uint32 game_modes = 4 [default = 4294967295];
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00001000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->game_modes(), output);
   }
 
   // optional .proto.dota.DOTABotDifficulty bot_difficulty = 5 [default = BOT_DIFFICULTY_HARD];
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00002000u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       5, this->bot_difficulty(), output);
   }
@@ -2148,7 +2159,7 @@ void CMsgStartFindingMatch::SerializeWithCachedSizes(
   }
 
   // optional uint32 matchlanguages = 7 [default = 4294967295];
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00004000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(7, this->matchlanguages(), output);
   }
 
@@ -2194,6 +2205,11 @@ void CMsgStartFindingMatch::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(14, this->solo_queue(), output);
   }
 
+  // optional uint32 bot_script_index = 15;
+  if (cached_has_bits & 0x00000400u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(15, this->bot_script_index(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -2220,7 +2236,7 @@ void CMsgStartFindingMatch::SerializeWithCachedSizes(
   }
 
   // optional uint32 matchgroups = 2 [default = 4294967295];
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000800u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->matchgroups(), target);
   }
 
@@ -2230,12 +2246,12 @@ void CMsgStartFindingMatch::SerializeWithCachedSizes(
   }
 
   // optional uint32 game_modes = 4 [default = 4294967295];
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00001000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->game_modes(), target);
   }
 
   // optional .proto.dota.DOTABotDifficulty bot_difficulty = 5 [default = BOT_DIFFICULTY_HARD];
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00002000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       5, this->bot_difficulty(), target);
   }
@@ -2247,7 +2263,7 @@ void CMsgStartFindingMatch::SerializeWithCachedSizes(
   }
 
   // optional uint32 matchlanguages = 7 [default = 4294967295];
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00004000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(7, this->matchlanguages(), target);
   }
 
@@ -2293,6 +2309,11 @@ void CMsgStartFindingMatch::SerializeWithCachedSizes(
   // optional bool solo_queue = 14;
   if (cached_has_bits & 0x00000200u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(14, this->solo_queue(), target);
+  }
+
+  // optional uint32 bot_script_index = 15;
+  if (cached_has_bits & 0x00000400u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(15, this->bot_script_index(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2368,7 +2389,7 @@ size_t CMsgStartFindingMatch::ByteSizeLong() const {
     }
 
   }
-  if (_has_bits_[8 / 32] & 16128u) {
+  if (_has_bits_[8 / 32] & 32512u) {
     // optional uint32 region_select_flags = 13;
     if (has_region_select_flags()) {
       total_size += 1 +
@@ -2379,6 +2400,13 @@ size_t CMsgStartFindingMatch::ByteSizeLong() const {
     // optional bool solo_queue = 14;
     if (has_solo_queue()) {
       total_size += 1 + 1;
+    }
+
+    // optional uint32 bot_script_index = 15;
+    if (has_bot_script_index()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->bot_script_index());
     }
 
     // optional uint32 matchgroups = 2 [default = 4294967295];
@@ -2468,7 +2496,7 @@ void CMsgStartFindingMatch::MergeFrom(const CMsgStartFindingMatch& from) {
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 16128u) {
+  if (cached_has_bits & 32512u) {
     if (cached_has_bits & 0x00000100u) {
       region_select_flags_ = from.region_select_flags_;
     }
@@ -2476,15 +2504,18 @@ void CMsgStartFindingMatch::MergeFrom(const CMsgStartFindingMatch& from) {
       solo_queue_ = from.solo_queue_;
     }
     if (cached_has_bits & 0x00000400u) {
-      matchgroups_ = from.matchgroups_;
+      bot_script_index_ = from.bot_script_index_;
     }
     if (cached_has_bits & 0x00000800u) {
-      game_modes_ = from.game_modes_;
+      matchgroups_ = from.matchgroups_;
     }
     if (cached_has_bits & 0x00001000u) {
-      bot_difficulty_ = from.bot_difficulty_;
+      game_modes_ = from.game_modes_;
     }
     if (cached_has_bits & 0x00002000u) {
+      bot_difficulty_ = from.bot_difficulty_;
+    }
+    if (cached_has_bits & 0x00004000u) {
       matchlanguages_ = from.matchlanguages_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -2524,6 +2555,7 @@ void CMsgStartFindingMatch::InternalSwap(CMsgStartFindingMatch* other) {
   std::swap(game_language_enum_, other->game_language_enum_);
   std::swap(region_select_flags_, other->region_select_flags_);
   std::swap(solo_queue_, other->solo_queue_);
+  std::swap(bot_script_index_, other->bot_script_index_);
   std::swap(matchgroups_, other->matchgroups_);
   std::swap(game_modes_, other->game_modes_);
   std::swap(bot_difficulty_, other->bot_difficulty_);
@@ -2606,13 +2638,13 @@ void CMsgStartFindingMatch::set_allocated_key(::std::string* key) {
 
 // optional uint32 matchgroups = 2 [default = 4294967295];
 bool CMsgStartFindingMatch::has_matchgroups() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 void CMsgStartFindingMatch::set_has_matchgroups() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
 }
 void CMsgStartFindingMatch::clear_has_matchgroups() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 void CMsgStartFindingMatch::clear_matchgroups() {
   matchgroups_ = 4294967295u;
@@ -2654,13 +2686,13 @@ void CMsgStartFindingMatch::set_client_version(::google::protobuf::uint32 value)
 
 // optional uint32 game_modes = 4 [default = 4294967295];
 bool CMsgStartFindingMatch::has_game_modes() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 void CMsgStartFindingMatch::set_has_game_modes() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 void CMsgStartFindingMatch::clear_has_game_modes() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 void CMsgStartFindingMatch::clear_game_modes() {
   game_modes_ = 4294967295u;
@@ -2678,13 +2710,13 @@ void CMsgStartFindingMatch::set_game_modes(::google::protobuf::uint32 value) {
 
 // optional .proto.dota.DOTABotDifficulty bot_difficulty = 5 [default = BOT_DIFFICULTY_HARD];
 bool CMsgStartFindingMatch::has_bot_difficulty() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 void CMsgStartFindingMatch::set_has_bot_difficulty() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 void CMsgStartFindingMatch::clear_has_bot_difficulty() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 void CMsgStartFindingMatch::clear_bot_difficulty() {
   bot_difficulty_ = 3;
@@ -2728,13 +2760,13 @@ void CMsgStartFindingMatch::set_match_type(::proto::dota::MatchType value) {
 
 // optional uint32 matchlanguages = 7 [default = 4294967295];
 bool CMsgStartFindingMatch::has_matchlanguages() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 void CMsgStartFindingMatch::set_has_matchlanguages() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
 }
 void CMsgStartFindingMatch::clear_has_matchlanguages() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 void CMsgStartFindingMatch::clear_matchlanguages() {
   matchlanguages_ = 4294967295u;
@@ -2977,6 +3009,30 @@ void CMsgStartFindingMatch::set_solo_queue(bool value) {
   set_has_solo_queue();
   solo_queue_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgStartFindingMatch.solo_queue)
+}
+
+// optional uint32 bot_script_index = 15;
+bool CMsgStartFindingMatch::has_bot_script_index() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+void CMsgStartFindingMatch::set_has_bot_script_index() {
+  _has_bits_[0] |= 0x00000400u;
+}
+void CMsgStartFindingMatch::clear_has_bot_script_index() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+void CMsgStartFindingMatch::clear_bot_script_index() {
+  bot_script_index_ = 0u;
+  clear_has_bot_script_index();
+}
+::google::protobuf::uint32 CMsgStartFindingMatch::bot_script_index() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgStartFindingMatch.bot_script_index)
+  return bot_script_index_;
+}
+void CMsgStartFindingMatch::set_bot_script_index(::google::protobuf::uint32 value) {
+  set_has_bot_script_index();
+  bot_script_index_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgStartFindingMatch.bot_script_index)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5448,13 +5504,11 @@ const int CMsgPracticeLobbySetDetails::kLeagueSeriesIdFieldNumber;
 const int CMsgPracticeLobbySetDetails::kLeagueGameIdFieldNumber;
 const int CMsgPracticeLobbySetDetails::kCustomGameTimestampFieldNumber;
 const int CMsgPracticeLobbySetDetails::kPreviousMatchOverrideFieldNumber;
-const int CMsgPracticeLobbySetDetails::kLeagueSelectionPriorityTeamFieldNumber;
-const int CMsgPracticeLobbySetDetails::kLeagueSelectionPriorityChoiceFieldNumber;
-const int CMsgPracticeLobbySetDetails::kLeagueNonSelectionPriorityChoiceFieldNumber;
 const int CMsgPracticeLobbySetDetails::kPauseSettingFieldNumber;
 const int CMsgPracticeLobbySetDetails::kBotDifficultyDireFieldNumber;
 const int CMsgPracticeLobbySetDetails::kBotRadiantFieldNumber;
 const int CMsgPracticeLobbySetDetails::kBotDireFieldNumber;
+const int CMsgPracticeLobbySetDetails::kSelectionPriorityRulesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CMsgPracticeLobbySetDetails::CMsgPracticeLobbySetDetails()
@@ -5578,11 +5632,8 @@ void CMsgPracticeLobbySetDetails::Clear() {
       reinterpret_cast<char*>(&custom_difficulty_) + sizeof(league_game_id_));
   }
   if (_has_bits_[32 / 32] & 255u) {
-    ::memset(&custom_game_timestamp_, 0, reinterpret_cast<char*>(&bot_difficulty_dire_) -
-      reinterpret_cast<char*>(&custom_game_timestamp_) + sizeof(bot_difficulty_dire_));
-  }
-  if (_has_bits_[40 / 32] & 768u) {
-    bot_dire_ = GOOGLE_ULONGLONG(0);
+    ::memset(&custom_game_timestamp_, 0, reinterpret_cast<char*>(&bot_dire_) -
+      reinterpret_cast<char*>(&custom_game_timestamp_) + sizeof(bot_dire_));
     dota_tv_delay_ = 1;
   }
   _has_bits_.Clear();
@@ -6134,58 +6185,6 @@ bool CMsgPracticeLobbySetDetails::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 league_selection_priority_team = 39;
-      case 39: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(312u)) {
-          set_has_league_selection_priority_team();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &league_selection_priority_team_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 40 [default = UNDEFINED];
-      case 40: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(320u)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          if (::proto::dota::SelectionPriorityType_IsValid(value)) {
-            set_league_selection_priority_choice(static_cast< ::proto::dota::SelectionPriorityType >(value));
-          } else {
-            mutable_unknown_fields()->AddVarint(40, value);
-          }
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 41 [default = UNDEFINED];
-      case 41: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(328u)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          if (::proto::dota::SelectionPriorityType_IsValid(value)) {
-            set_league_non_selection_priority_choice(static_cast< ::proto::dota::SelectionPriorityType >(value));
-          } else {
-            mutable_unknown_fields()->AddVarint(41, value);
-          }
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
       case 42: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
@@ -6246,6 +6245,25 @@ bool CMsgPracticeLobbySetDetails::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
                  input, &bot_dire_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 46 [default = k_DOTASelectionPriorityRules_Manual];
+      case 46: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(368u)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::proto::dota::DOTASelectionPriorityRules_IsValid(value)) {
+            set_selection_priority_rules(static_cast< ::proto::dota::DOTASelectionPriorityRules >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(46, value);
+          }
         } else {
           goto handle_unusual;
         }
@@ -6402,7 +6420,7 @@ void CMsgPracticeLobbySetDetails::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[1];
   // optional .proto.dota.LobbyDotaTVDelay dota_tv_delay = 24 [default = LobbyDotaTV_120];
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       24, this->dota_tv_delay(), output);
   }
@@ -6490,43 +6508,32 @@ void CMsgPracticeLobbySetDetails::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(38, this->previous_match_override(), output);
   }
 
-  // optional uint32 league_selection_priority_team = 39;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(39, this->league_selection_priority_team(), output);
-  }
-
-  // optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 40 [default = UNDEFINED];
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      40, this->league_selection_priority_choice(), output);
-  }
-
-  // optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 41 [default = UNDEFINED];
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      41, this->league_non_selection_priority_choice(), output);
-  }
-
   // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       42, this->pause_setting(), output);
   }
 
   // optional .proto.dota.DOTABotDifficulty bot_difficulty_dire = 43 [default = BOT_DIFFICULTY_PASSIVE];
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       43, this->bot_difficulty_dire(), output);
   }
 
   // optional uint64 bot_radiant = 44;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(44, this->bot_radiant(), output);
   }
 
   // optional uint64 bot_dire = 45;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000040u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(45, this->bot_dire(), output);
+  }
+
+  // optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 46 [default = k_DOTASelectionPriorityRules_Manual];
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      46, this->selection_priority_rules(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -6667,7 +6674,7 @@ void CMsgPracticeLobbySetDetails::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[1];
   // optional .proto.dota.LobbyDotaTVDelay dota_tv_delay = 24 [default = LobbyDotaTV_120];
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       24, this->dota_tv_delay(), target);
   }
@@ -6757,43 +6764,32 @@ void CMsgPracticeLobbySetDetails::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(38, this->previous_match_override(), target);
   }
 
-  // optional uint32 league_selection_priority_team = 39;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(39, this->league_selection_priority_team(), target);
-  }
-
-  // optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 40 [default = UNDEFINED];
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      40, this->league_selection_priority_choice(), target);
-  }
-
-  // optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 41 [default = UNDEFINED];
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      41, this->league_non_selection_priority_choice(), target);
-  }
-
   // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       42, this->pause_setting(), target);
   }
 
   // optional .proto.dota.DOTABotDifficulty bot_difficulty_dire = 43 [default = BOT_DIFFICULTY_PASSIVE];
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       43, this->bot_difficulty_dire(), target);
   }
 
   // optional uint64 bot_radiant = 44;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000020u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(44, this->bot_radiant(), target);
   }
 
   // optional uint64 bot_dire = 45;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000040u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(45, this->bot_dire(), target);
+  }
+
+  // optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 46 [default = k_DOTASelectionPriorityRules_Manual];
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      46, this->selection_priority_rules(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -7051,29 +7047,22 @@ size_t CMsgPracticeLobbySetDetails::ByteSizeLong() const {
           this->previous_match_override());
     }
 
-    // optional uint32 league_selection_priority_team = 39;
-    if (has_league_selection_priority_team()) {
+    // optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 46 [default = k_DOTASelectionPriorityRules_Manual];
+    if (has_selection_priority_rules()) {
       total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->league_selection_priority_team());
-    }
-
-    // optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 40 [default = UNDEFINED];
-    if (has_league_selection_priority_choice()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::EnumSize(this->league_selection_priority_choice());
-    }
-
-    // optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 41 [default = UNDEFINED];
-    if (has_league_non_selection_priority_choice()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::EnumSize(this->league_non_selection_priority_choice());
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->selection_priority_rules());
     }
 
     // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
     if (has_pause_setting()) {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->pause_setting());
+    }
+
+    // optional .proto.dota.DOTABotDifficulty bot_difficulty_dire = 43 [default = BOT_DIFFICULTY_PASSIVE];
+    if (has_bot_difficulty_dire()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->bot_difficulty_dire());
     }
 
     // optional uint64 bot_radiant = 44;
@@ -7083,14 +7072,6 @@ size_t CMsgPracticeLobbySetDetails::ByteSizeLong() const {
           this->bot_radiant());
     }
 
-    // optional .proto.dota.DOTABotDifficulty bot_difficulty_dire = 43 [default = BOT_DIFFICULTY_PASSIVE];
-    if (has_bot_difficulty_dire()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::EnumSize(this->bot_difficulty_dire());
-    }
-
-  }
-  if (_has_bits_[40 / 32] & 768u) {
     // optional uint64 bot_dire = 45;
     if (has_bot_dire()) {
       total_size += 2 +
@@ -7257,30 +7238,21 @@ void CMsgPracticeLobbySetDetails::MergeFrom(const CMsgPracticeLobbySetDetails& f
       previous_match_override_ = from.previous_match_override_;
     }
     if (cached_has_bits & 0x00000004u) {
-      league_selection_priority_team_ = from.league_selection_priority_team_;
+      selection_priority_rules_ = from.selection_priority_rules_;
     }
     if (cached_has_bits & 0x00000008u) {
-      league_selection_priority_choice_ = from.league_selection_priority_choice_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      league_non_selection_priority_choice_ = from.league_non_selection_priority_choice_;
-    }
-    if (cached_has_bits & 0x00000020u) {
       pause_setting_ = from.pause_setting_;
     }
-    if (cached_has_bits & 0x00000040u) {
-      bot_radiant_ = from.bot_radiant_;
-    }
-    if (cached_has_bits & 0x00000080u) {
+    if (cached_has_bits & 0x00000010u) {
       bot_difficulty_dire_ = from.bot_difficulty_dire_;
     }
-    _has_bits_[1] |= cached_has_bits;
-  }
-  if (cached_has_bits & 768u) {
-    if (cached_has_bits & 0x00000100u) {
+    if (cached_has_bits & 0x00000020u) {
+      bot_radiant_ = from.bot_radiant_;
+    }
+    if (cached_has_bits & 0x00000040u) {
       bot_dire_ = from.bot_dire_;
     }
-    if (cached_has_bits & 0x00000200u) {
+    if (cached_has_bits & 0x00000080u) {
       dota_tv_delay_ = from.dota_tv_delay_;
     }
     _has_bits_[1] |= cached_has_bits;
@@ -7345,12 +7317,10 @@ void CMsgPracticeLobbySetDetails::InternalSwap(CMsgPracticeLobbySetDetails* othe
   std::swap(league_game_id_, other->league_game_id_);
   std::swap(custom_game_timestamp_, other->custom_game_timestamp_);
   std::swap(previous_match_override_, other->previous_match_override_);
-  std::swap(league_selection_priority_team_, other->league_selection_priority_team_);
-  std::swap(league_selection_priority_choice_, other->league_selection_priority_choice_);
-  std::swap(league_non_selection_priority_choice_, other->league_non_selection_priority_choice_);
+  std::swap(selection_priority_rules_, other->selection_priority_rules_);
   std::swap(pause_setting_, other->pause_setting_);
-  std::swap(bot_radiant_, other->bot_radiant_);
   std::swap(bot_difficulty_dire_, other->bot_difficulty_dire_);
+  std::swap(bot_radiant_, other->bot_radiant_);
   std::swap(bot_dire_, other->bot_dire_);
   std::swap(dota_tv_delay_, other->dota_tv_delay_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
@@ -7960,13 +7930,13 @@ void CMsgPracticeLobbySetDetails::set_allchat(bool value) {
 
 // optional .proto.dota.LobbyDotaTVDelay dota_tv_delay = 24 [default = LobbyDotaTV_120];
 bool CMsgPracticeLobbySetDetails::has_dota_tv_delay() const {
-  return (_has_bits_[1] & 0x00000200u) != 0;
+  return (_has_bits_[1] & 0x00000080u) != 0;
 }
 void CMsgPracticeLobbySetDetails::set_has_dota_tv_delay() {
-  _has_bits_[1] |= 0x00000200u;
+  _has_bits_[1] |= 0x00000080u;
 }
 void CMsgPracticeLobbySetDetails::clear_has_dota_tv_delay() {
-  _has_bits_[1] &= ~0x00000200u;
+  _has_bits_[1] &= ~0x00000080u;
 }
 void CMsgPracticeLobbySetDetails::clear_dota_tv_delay() {
   dota_tv_delay_ = 1;
@@ -8398,89 +8368,15 @@ void CMsgPracticeLobbySetDetails::set_previous_match_override(::google::protobuf
   // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.previous_match_override)
 }
 
-// optional uint32 league_selection_priority_team = 39;
-bool CMsgPracticeLobbySetDetails::has_league_selection_priority_team() const {
-  return (_has_bits_[1] & 0x00000004u) != 0;
-}
-void CMsgPracticeLobbySetDetails::set_has_league_selection_priority_team() {
-  _has_bits_[1] |= 0x00000004u;
-}
-void CMsgPracticeLobbySetDetails::clear_has_league_selection_priority_team() {
-  _has_bits_[1] &= ~0x00000004u;
-}
-void CMsgPracticeLobbySetDetails::clear_league_selection_priority_team() {
-  league_selection_priority_team_ = 0u;
-  clear_has_league_selection_priority_team();
-}
-::google::protobuf::uint32 CMsgPracticeLobbySetDetails::league_selection_priority_team() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgPracticeLobbySetDetails.league_selection_priority_team)
-  return league_selection_priority_team_;
-}
-void CMsgPracticeLobbySetDetails::set_league_selection_priority_team(::google::protobuf::uint32 value) {
-  set_has_league_selection_priority_team();
-  league_selection_priority_team_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.league_selection_priority_team)
-}
-
-// optional .proto.dota.SelectionPriorityType league_selection_priority_choice = 40 [default = UNDEFINED];
-bool CMsgPracticeLobbySetDetails::has_league_selection_priority_choice() const {
-  return (_has_bits_[1] & 0x00000008u) != 0;
-}
-void CMsgPracticeLobbySetDetails::set_has_league_selection_priority_choice() {
-  _has_bits_[1] |= 0x00000008u;
-}
-void CMsgPracticeLobbySetDetails::clear_has_league_selection_priority_choice() {
-  _has_bits_[1] &= ~0x00000008u;
-}
-void CMsgPracticeLobbySetDetails::clear_league_selection_priority_choice() {
-  league_selection_priority_choice_ = 0;
-  clear_has_league_selection_priority_choice();
-}
-::proto::dota::SelectionPriorityType CMsgPracticeLobbySetDetails::league_selection_priority_choice() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgPracticeLobbySetDetails.league_selection_priority_choice)
-  return static_cast< ::proto::dota::SelectionPriorityType >(league_selection_priority_choice_);
-}
-void CMsgPracticeLobbySetDetails::set_league_selection_priority_choice(::proto::dota::SelectionPriorityType value) {
-  assert(::proto::dota::SelectionPriorityType_IsValid(value));
-  set_has_league_selection_priority_choice();
-  league_selection_priority_choice_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.league_selection_priority_choice)
-}
-
-// optional .proto.dota.SelectionPriorityType league_non_selection_priority_choice = 41 [default = UNDEFINED];
-bool CMsgPracticeLobbySetDetails::has_league_non_selection_priority_choice() const {
-  return (_has_bits_[1] & 0x00000010u) != 0;
-}
-void CMsgPracticeLobbySetDetails::set_has_league_non_selection_priority_choice() {
-  _has_bits_[1] |= 0x00000010u;
-}
-void CMsgPracticeLobbySetDetails::clear_has_league_non_selection_priority_choice() {
-  _has_bits_[1] &= ~0x00000010u;
-}
-void CMsgPracticeLobbySetDetails::clear_league_non_selection_priority_choice() {
-  league_non_selection_priority_choice_ = 0;
-  clear_has_league_non_selection_priority_choice();
-}
-::proto::dota::SelectionPriorityType CMsgPracticeLobbySetDetails::league_non_selection_priority_choice() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgPracticeLobbySetDetails.league_non_selection_priority_choice)
-  return static_cast< ::proto::dota::SelectionPriorityType >(league_non_selection_priority_choice_);
-}
-void CMsgPracticeLobbySetDetails::set_league_non_selection_priority_choice(::proto::dota::SelectionPriorityType value) {
-  assert(::proto::dota::SelectionPriorityType_IsValid(value));
-  set_has_league_non_selection_priority_choice();
-  league_non_selection_priority_choice_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.league_non_selection_priority_choice)
-}
-
 // optional .proto.dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
 bool CMsgPracticeLobbySetDetails::has_pause_setting() const {
-  return (_has_bits_[1] & 0x00000020u) != 0;
+  return (_has_bits_[1] & 0x00000008u) != 0;
 }
 void CMsgPracticeLobbySetDetails::set_has_pause_setting() {
-  _has_bits_[1] |= 0x00000020u;
+  _has_bits_[1] |= 0x00000008u;
 }
 void CMsgPracticeLobbySetDetails::clear_has_pause_setting() {
-  _has_bits_[1] &= ~0x00000020u;
+  _has_bits_[1] &= ~0x00000008u;
 }
 void CMsgPracticeLobbySetDetails::clear_pause_setting() {
   pause_setting_ = 0;
@@ -8499,13 +8395,13 @@ void CMsgPracticeLobbySetDetails::set_pause_setting(::proto::dota::LobbyDotaPaus
 
 // optional .proto.dota.DOTABotDifficulty bot_difficulty_dire = 43 [default = BOT_DIFFICULTY_PASSIVE];
 bool CMsgPracticeLobbySetDetails::has_bot_difficulty_dire() const {
-  return (_has_bits_[1] & 0x00000080u) != 0;
+  return (_has_bits_[1] & 0x00000010u) != 0;
 }
 void CMsgPracticeLobbySetDetails::set_has_bot_difficulty_dire() {
-  _has_bits_[1] |= 0x00000080u;
+  _has_bits_[1] |= 0x00000010u;
 }
 void CMsgPracticeLobbySetDetails::clear_has_bot_difficulty_dire() {
-  _has_bits_[1] &= ~0x00000080u;
+  _has_bits_[1] &= ~0x00000010u;
 }
 void CMsgPracticeLobbySetDetails::clear_bot_difficulty_dire() {
   bot_difficulty_dire_ = 0;
@@ -8524,13 +8420,13 @@ void CMsgPracticeLobbySetDetails::set_bot_difficulty_dire(::proto::dota::DOTABot
 
 // optional uint64 bot_radiant = 44;
 bool CMsgPracticeLobbySetDetails::has_bot_radiant() const {
-  return (_has_bits_[1] & 0x00000040u) != 0;
+  return (_has_bits_[1] & 0x00000020u) != 0;
 }
 void CMsgPracticeLobbySetDetails::set_has_bot_radiant() {
-  _has_bits_[1] |= 0x00000040u;
+  _has_bits_[1] |= 0x00000020u;
 }
 void CMsgPracticeLobbySetDetails::clear_has_bot_radiant() {
-  _has_bits_[1] &= ~0x00000040u;
+  _has_bits_[1] &= ~0x00000020u;
 }
 void CMsgPracticeLobbySetDetails::clear_bot_radiant() {
   bot_radiant_ = GOOGLE_ULONGLONG(0);
@@ -8548,13 +8444,13 @@ void CMsgPracticeLobbySetDetails::set_bot_radiant(::google::protobuf::uint64 val
 
 // optional uint64 bot_dire = 45;
 bool CMsgPracticeLobbySetDetails::has_bot_dire() const {
-  return (_has_bits_[1] & 0x00000100u) != 0;
+  return (_has_bits_[1] & 0x00000040u) != 0;
 }
 void CMsgPracticeLobbySetDetails::set_has_bot_dire() {
-  _has_bits_[1] |= 0x00000100u;
+  _has_bits_[1] |= 0x00000040u;
 }
 void CMsgPracticeLobbySetDetails::clear_has_bot_dire() {
-  _has_bits_[1] &= ~0x00000100u;
+  _has_bits_[1] &= ~0x00000040u;
 }
 void CMsgPracticeLobbySetDetails::clear_bot_dire() {
   bot_dire_ = GOOGLE_ULONGLONG(0);
@@ -8568,6 +8464,31 @@ void CMsgPracticeLobbySetDetails::set_bot_dire(::google::protobuf::uint64 value)
   set_has_bot_dire();
   bot_dire_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.bot_dire)
+}
+
+// optional .proto.dota.DOTASelectionPriorityRules selection_priority_rules = 46 [default = k_DOTASelectionPriorityRules_Manual];
+bool CMsgPracticeLobbySetDetails::has_selection_priority_rules() const {
+  return (_has_bits_[1] & 0x00000004u) != 0;
+}
+void CMsgPracticeLobbySetDetails::set_has_selection_priority_rules() {
+  _has_bits_[1] |= 0x00000004u;
+}
+void CMsgPracticeLobbySetDetails::clear_has_selection_priority_rules() {
+  _has_bits_[1] &= ~0x00000004u;
+}
+void CMsgPracticeLobbySetDetails::clear_selection_priority_rules() {
+  selection_priority_rules_ = 0;
+  clear_has_selection_priority_rules();
+}
+::proto::dota::DOTASelectionPriorityRules CMsgPracticeLobbySetDetails::selection_priority_rules() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgPracticeLobbySetDetails.selection_priority_rules)
+  return static_cast< ::proto::dota::DOTASelectionPriorityRules >(selection_priority_rules_);
+}
+void CMsgPracticeLobbySetDetails::set_selection_priority_rules(::proto::dota::DOTASelectionPriorityRules value) {
+  assert(::proto::dota::DOTASelectionPriorityRules_IsValid(value));
+  set_has_selection_priority_rules();
+  selection_priority_rules_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgPracticeLobbySetDetails.selection_priority_rules)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

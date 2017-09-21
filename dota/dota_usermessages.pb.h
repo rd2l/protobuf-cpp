@@ -257,6 +257,9 @@ extern CDOTAUserMsg_ParticleManager_ReleaseParticleIndexDefaultTypeInternal _CDO
 class CDOTAUserMsg_ParticleManager_SetParticleFoWProperties;
 class CDOTAUserMsg_ParticleManager_SetParticleFoWPropertiesDefaultTypeInternal;
 extern CDOTAUserMsg_ParticleManager_SetParticleFoWPropertiesDefaultTypeInternal _CDOTAUserMsg_ParticleManager_SetParticleFoWProperties_default_instance_;
+class CDOTAUserMsg_ParticleManager_SetParticleText;
+class CDOTAUserMsg_ParticleManager_SetParticleTextDefaultTypeInternal;
+extern CDOTAUserMsg_ParticleManager_SetParticleTextDefaultTypeInternal _CDOTAUserMsg_ParticleManager_SetParticleText_default_instance_;
 class CDOTAUserMsg_ParticleManager_UpdateEntityPosition;
 class CDOTAUserMsg_ParticleManager_UpdateEntityPositionDefaultTypeInternal;
 extern CDOTAUserMsg_ParticleManager_UpdateEntityPositionDefaultTypeInternal _CDOTAUserMsg_ParticleManager_UpdateEntityPosition_default_instance_;
@@ -980,11 +983,12 @@ enum DOTA_PARTICLE_MESSAGE {
   DOTA_PARTICLE_MANAGER_EVENT_FROZEN = 12,
   DOTA_PARTICLE_MANAGER_EVENT_CHANGE_CONTROL_POINT_ATTACHMENT = 13,
   DOTA_PARTICLE_MANAGER_EVENT_UPDATE_ENTITY_POSITION = 14,
-  DOTA_PARTICLE_MANAGER_EVENT_SET_FOW_PROPERTIES = 15
+  DOTA_PARTICLE_MANAGER_EVENT_SET_FOW_PROPERTIES = 15,
+  DOTA_PARTICLE_MANAGER_EVENT_SET_TEXT = 16
 };
 bool DOTA_PARTICLE_MESSAGE_IsValid(int value);
 const DOTA_PARTICLE_MESSAGE DOTA_PARTICLE_MESSAGE_MIN = DOTA_PARTICLE_MANAGER_EVENT_CREATE;
-const DOTA_PARTICLE_MESSAGE DOTA_PARTICLE_MESSAGE_MAX = DOTA_PARTICLE_MANAGER_EVENT_SET_FOW_PROPERTIES;
+const DOTA_PARTICLE_MESSAGE DOTA_PARTICLE_MESSAGE_MAX = DOTA_PARTICLE_MANAGER_EVENT_SET_TEXT;
 const int DOTA_PARTICLE_MESSAGE_ARRAYSIZE = DOTA_PARTICLE_MESSAGE_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* DOTA_PARTICLE_MESSAGE_descriptor();
@@ -1017,11 +1021,12 @@ enum DOTA_OVERHEAD_ALERT {
   OVERHEAD_ALERT_MAGICAL_BLOCK = 16,
   OVERHEAD_ALERT_INCOMING_DAMAGE = 17,
   OVERHEAD_ALERT_OUTGOING_DAMAGE = 18,
-  OVERHEAD_ALERT_DISABLE_RESIST = 19
+  OVERHEAD_ALERT_DISABLE_RESIST = 19,
+  OVERHEAD_ALERT_DEATH = 20
 };
 bool DOTA_OVERHEAD_ALERT_IsValid(int value);
 const DOTA_OVERHEAD_ALERT DOTA_OVERHEAD_ALERT_MIN = OVERHEAD_ALERT_GOLD;
-const DOTA_OVERHEAD_ALERT DOTA_OVERHEAD_ALERT_MAX = OVERHEAD_ALERT_DISABLE_RESIST;
+const DOTA_OVERHEAD_ALERT DOTA_OVERHEAD_ALERT_MAX = OVERHEAD_ALERT_DEATH;
 const int DOTA_OVERHEAD_ALERT_ARRAYSIZE = DOTA_OVERHEAD_ALERT_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* DOTA_OVERHEAD_ALERT_descriptor();
@@ -8855,6 +8860,106 @@ class CDOTAUserMsg_ParticleManager_SetParticleFoWProperties : public ::google::p
 };
 // -------------------------------------------------------------------
 
+class CDOTAUserMsg_ParticleManager_SetParticleText : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText) */ {
+ public:
+  CDOTAUserMsg_ParticleManager_SetParticleText();
+  virtual ~CDOTAUserMsg_ParticleManager_SetParticleText();
+
+  CDOTAUserMsg_ParticleManager_SetParticleText(const CDOTAUserMsg_ParticleManager_SetParticleText& from);
+
+  inline CDOTAUserMsg_ParticleManager_SetParticleText& operator=(const CDOTAUserMsg_ParticleManager_SetParticleText& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CDOTAUserMsg_ParticleManager_SetParticleText& default_instance();
+
+  static inline const CDOTAUserMsg_ParticleManager_SetParticleText* internal_default_instance() {
+    return reinterpret_cast<const CDOTAUserMsg_ParticleManager_SetParticleText*>(
+               &_CDOTAUserMsg_ParticleManager_SetParticleText_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    66;
+
+  void Swap(CDOTAUserMsg_ParticleManager_SetParticleText* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CDOTAUserMsg_ParticleManager_SetParticleText* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CDOTAUserMsg_ParticleManager_SetParticleText* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CDOTAUserMsg_ParticleManager_SetParticleText& from);
+  void MergeFrom(const CDOTAUserMsg_ParticleManager_SetParticleText& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CDOTAUserMsg_ParticleManager_SetParticleText* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string text = 1;
+  bool has_text() const;
+  void clear_text();
+  static const int kTextFieldNumber = 1;
+  const ::std::string& text() const;
+  void set_text(const ::std::string& value);
+  #if LANG_CXX11
+  void set_text(::std::string&& value);
+  #endif
+  void set_text(const char* value);
+  void set_text(const char* value, size_t size);
+  ::std::string* mutable_text();
+  ::std::string* release_text();
+  void set_allocated_text(::std::string* text);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText)
+ private:
+  void set_has_text();
+  void clear_has_text();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr text_;
+  friend struct protobuf_dota_5fusermessages_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class CDOTAUserMsg_ParticleManager : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAUserMsg_ParticleManager) */ {
  public:
   CDOTAUserMsg_ParticleManager();
@@ -8883,7 +8988,7 @@ class CDOTAUserMsg_ParticleManager : public ::google::protobuf::Message /* @@pro
                &_CDOTAUserMsg_ParticleManager_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    66;
+    67;
 
   void Swap(CDOTAUserMsg_ParticleManager* other);
 
@@ -8940,6 +9045,7 @@ class CDOTAUserMsg_ParticleManager : public ::google::protobuf::Message /* @@pro
   typedef CDOTAUserMsg_ParticleManager_ChangeControlPointAttachment ChangeControlPointAttachment;
   typedef CDOTAUserMsg_ParticleManager_UpdateEntityPosition UpdateEntityPosition;
   typedef CDOTAUserMsg_ParticleManager_SetParticleFoWProperties SetParticleFoWProperties;
+  typedef CDOTAUserMsg_ParticleManager_SetParticleText SetParticleText;
 
   // accessors -------------------------------------------------------
 
@@ -9078,6 +9184,15 @@ class CDOTAUserMsg_ParticleManager : public ::google::protobuf::Message /* @@pro
   ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleFoWProperties* release_set_particle_fow_properties();
   void set_allocated_set_particle_fow_properties(::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleFoWProperties* set_particle_fow_properties);
 
+  // optional .proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText set_particle_text = 19;
+  bool has_set_particle_text() const;
+  void clear_set_particle_text();
+  static const int kSetParticleTextFieldNumber = 19;
+  const ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText& set_particle_text() const;
+  ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText* mutable_set_particle_text();
+  ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText* release_set_particle_text();
+  void set_allocated_set_particle_text(::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText* set_particle_text);
+
   // required .proto.dota.DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];
   bool has_type() const;
   void clear_type();
@@ -9128,6 +9243,8 @@ class CDOTAUserMsg_ParticleManager : public ::google::protobuf::Message /* @@pro
   void clear_has_update_entity_position();
   void set_has_set_particle_fow_properties();
   void clear_has_set_particle_fow_properties();
+  void set_has_set_particle_text();
+  void clear_has_set_particle_text();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -9150,6 +9267,7 @@ class CDOTAUserMsg_ParticleManager : public ::google::protobuf::Message /* @@pro
   ::proto::dota::CDOTAUserMsg_ParticleManager_ChangeControlPointAttachment* change_control_point_attachment_;
   ::proto::dota::CDOTAUserMsg_ParticleManager_UpdateEntityPosition* update_entity_position_;
   ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleFoWProperties* set_particle_fow_properties_;
+  ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText* set_particle_text_;
   int type_;
   ::google::protobuf::uint32 index_;
   friend struct protobuf_dota_5fusermessages_2eproto::TableStruct;
@@ -9184,7 +9302,7 @@ class CDOTAUserMsg_OverheadEvent : public ::google::protobuf::Message /* @@proto
                &_CDOTAUserMsg_OverheadEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    67;
+    68;
 
   void Swap(CDOTAUserMsg_OverheadEvent* other);
 
@@ -9316,7 +9434,7 @@ class CDOTAUserMsg_TutorialTipInfo : public ::google::protobuf::Message /* @@pro
                &_CDOTAUserMsg_TutorialTipInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    68;
+    69;
 
   void Swap(CDOTAUserMsg_TutorialTipInfo* other);
 
@@ -9426,7 +9544,7 @@ class CDOTAUserMsg_TutorialFinish : public ::google::protobuf::Message /* @@prot
                &_CDOTAUserMsg_TutorialFinish_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    69;
+    70;
 
   void Swap(CDOTAUserMsg_TutorialFinish* other);
 
@@ -9572,7 +9690,7 @@ class CDOTAUserMsg_TutorialMinimapPosition : public ::google::protobuf::Message 
                &_CDOTAUserMsg_TutorialMinimapPosition_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    70;
+    71;
 
   void Swap(CDOTAUserMsg_TutorialMinimapPosition* other);
 
@@ -9654,7 +9772,7 @@ class CDOTAUserMsg_SendGenericToolTip : public ::google::protobuf::Message /* @@
                &_CDOTAUserMsg_SendGenericToolTip_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    71;
+    72;
 
   void Swap(CDOTAUserMsg_SendGenericToolTip* other);
 
@@ -9792,7 +9910,7 @@ class CDOTAUserMsg_WorldLine : public ::google::protobuf::Message /* @@protoc_in
                &_CDOTAUserMsg_WorldLine_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    72;
+    73;
 
   void Swap(CDOTAUserMsg_WorldLine* other);
 
@@ -9896,7 +10014,7 @@ class CDOTAUserMsg_ChatWheel : public ::google::protobuf::Message /* @@protoc_in
                &_CDOTAUserMsg_ChatWheel_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    73;
+    74;
 
   void Swap(CDOTAUserMsg_ChatWheel* other);
 
@@ -10018,7 +10136,7 @@ class CDOTAUserMsg_ReceivedXmasGift : public ::google::protobuf::Message /* @@pr
                &_CDOTAUserMsg_ReceivedXmasGift_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    74;
+    75;
 
   void Swap(CDOTAUserMsg_ReceivedXmasGift* other);
 
@@ -10138,7 +10256,7 @@ class CDOTAUserMsg_ShowSurvey : public ::google::protobuf::Message /* @@protoc_i
                &_CDOTAUserMsg_ShowSurvey_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    75;
+    76;
 
   void Swap(CDOTAUserMsg_ShowSurvey* other);
 
@@ -10296,7 +10414,7 @@ class CDOTAUserMsg_UpdateSharedContent : public ::google::protobuf::Message /* @
                &_CDOTAUserMsg_UpdateSharedContent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    76;
+    77;
 
   void Swap(CDOTAUserMsg_UpdateSharedContent* other);
 
@@ -10388,7 +10506,7 @@ class CDOTAUserMsg_TutorialRequestExp : public ::google::protobuf::Message /* @@
                &_CDOTAUserMsg_TutorialRequestExp_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    77;
+    78;
 
   void Swap(CDOTAUserMsg_TutorialRequestExp* other);
 
@@ -10470,7 +10588,7 @@ class CDOTAUserMsg_TutorialFade : public ::google::protobuf::Message /* @@protoc
                &_CDOTAUserMsg_TutorialFade_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    78;
+    79;
 
   void Swap(CDOTAUserMsg_TutorialFade* other);
 
@@ -10562,7 +10680,7 @@ class CDOTAUserMsg_TutorialPingMinimap : public ::google::protobuf::Message /* @
                &_CDOTAUserMsg_TutorialPingMinimap_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    79;
+    80;
 
   void Swap(CDOTAUserMsg_TutorialPingMinimap* other);
 
@@ -10694,7 +10812,7 @@ class CDOTAUserMsg_GamerulesStateChanged : public ::google::protobuf::Message /*
                &_CDOTAUserMsg_GamerulesStateChanged_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    80;
+    81;
 
   void Swap(CDOTAUserMsg_GamerulesStateChanged* other);
 
@@ -10786,7 +10904,7 @@ class CDOTAUserMsg_AddQuestLogEntry : public ::google::protobuf::Message /* @@pr
                &_CDOTAUserMsg_AddQuestLogEntry_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    81;
+    82;
 
   void Swap(CDOTAUserMsg_AddQuestLogEntry* other);
 
@@ -10904,7 +11022,7 @@ class CDOTAUserMsg_SendStatPopup : public ::google::protobuf::Message /* @@proto
                &_CDOTAUserMsg_SendStatPopup_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    82;
+    83;
 
   void Swap(CDOTAUserMsg_SendStatPopup* other);
 
@@ -11008,7 +11126,7 @@ class CDOTAUserMsg_DismissAllStatPopups : public ::google::protobuf::Message /* 
                &_CDOTAUserMsg_DismissAllStatPopups_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    83;
+    84;
 
   void Swap(CDOTAUserMsg_DismissAllStatPopups* other);
 
@@ -11102,7 +11220,7 @@ class CDOTAUserMsg_SendRoshanSpectatorPhase : public ::google::protobuf::Message
                &_CDOTAUserMsg_SendRoshanSpectatorPhase_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    84;
+    85;
 
   void Swap(CDOTAUserMsg_SendRoshanSpectatorPhase* other);
 
@@ -11214,7 +11332,7 @@ class CDOTAUserMsg_SendRoshanPopup : public ::google::protobuf::Message /* @@pro
                &_CDOTAUserMsg_SendRoshanPopup_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    85;
+    86;
 
   void Swap(CDOTAUserMsg_SendRoshanPopup* other);
 
@@ -11316,7 +11434,7 @@ class CDOTAUserMsg_SendFinalGold : public ::google::protobuf::Message /* @@proto
                &_CDOTAUserMsg_SendFinalGold_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    86;
+    87;
 
   void Swap(CDOTAUserMsg_SendFinalGold* other);
 
@@ -11424,7 +11542,7 @@ class CDOTAUserMsg_CustomMsg : public ::google::protobuf::Message /* @@protoc_in
                &_CDOTAUserMsg_CustomMsg_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    87;
+    88;
 
   void Swap(CDOTAUserMsg_CustomMsg* other);
 
@@ -11544,7 +11662,7 @@ class CDOTAUserMsg_CoachHUDPing : public ::google::protobuf::Message /* @@protoc
                &_CDOTAUserMsg_CoachHUDPing_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    88;
+    89;
 
   void Swap(CDOTAUserMsg_CoachHUDPing* other);
 
@@ -11648,7 +11766,7 @@ class CDOTAUserMsg_ClientLoadGridNav : public ::google::protobuf::Message /* @@p
                &_CDOTAUserMsg_ClientLoadGridNav_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    89;
+    90;
 
   void Swap(CDOTAUserMsg_ClientLoadGridNav* other);
 
@@ -11730,7 +11848,7 @@ class CDOTAUserMsg_TE_Projectile : public ::google::protobuf::Message /* @@proto
                &_CDOTAUserMsg_TE_Projectile_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    90;
+    91;
 
   void Swap(CDOTAUserMsg_TE_Projectile* other);
 
@@ -11932,7 +12050,7 @@ class CDOTAUserMsg_TE_ProjectileLoc : public ::google::protobuf::Message /* @@pr
                &_CDOTAUserMsg_TE_ProjectileLoc_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    91;
+    92;
 
   void Swap(CDOTAUserMsg_TE_ProjectileLoc* other);
 
@@ -12128,7 +12246,7 @@ class CDOTAUserMsg_TE_DotaBloodImpact : public ::google::protobuf::Message /* @@
                &_CDOTAUserMsg_TE_DotaBloodImpact_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    92;
+    93;
 
   void Swap(CDOTAUserMsg_TE_DotaBloodImpact* other);
 
@@ -12250,7 +12368,7 @@ class CDOTAUserMsg_AbilityPing : public ::google::protobuf::Message /* @@protoc_
                &_CDOTAUserMsg_AbilityPing_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    93;
+    94;
 
   void Swap(CDOTAUserMsg_AbilityPing* other);
 
@@ -12402,7 +12520,7 @@ class CDOTAUserMsg_TE_UnitAnimation : public ::google::protobuf::Message /* @@pr
                &_CDOTAUserMsg_TE_UnitAnimation_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    94;
+    95;
 
   void Swap(CDOTAUserMsg_TE_UnitAnimation* other);
 
@@ -12544,7 +12662,7 @@ class CDOTAUserMsg_TE_UnitAnimationEnd : public ::google::protobuf::Message /* @
                &_CDOTAUserMsg_TE_UnitAnimationEnd_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    95;
+    96;
 
   void Swap(CDOTAUserMsg_TE_UnitAnimationEnd* other);
 
@@ -12646,7 +12764,7 @@ class CDOTAUserMsg_ShowGenericPopup : public ::google::protobuf::Message /* @@pr
                &_CDOTAUserMsg_ShowGenericPopup_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    96;
+    97;
 
   void Swap(CDOTAUserMsg_ShowGenericPopup* other);
 
@@ -12823,7 +12941,7 @@ class CDOTAUserMsg_VoteStart : public ::google::protobuf::Message /* @@protoc_in
                &_CDOTAUserMsg_VoteStart_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    97;
+    98;
 
   void Swap(CDOTAUserMsg_VoteStart* other);
 
@@ -12966,7 +13084,7 @@ class CDOTAUserMsg_VoteUpdate : public ::google::protobuf::Message /* @@protoc_i
                &_CDOTAUserMsg_VoteUpdate_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    98;
+    99;
 
   void Swap(CDOTAUserMsg_VoteUpdate* other);
 
@@ -13061,7 +13179,7 @@ class CDOTAUserMsg_VoteEnd : public ::google::protobuf::Message /* @@protoc_inse
                &_CDOTAUserMsg_VoteEnd_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    99;
+    100;
 
   void Swap(CDOTAUserMsg_VoteEnd* other);
 
@@ -13153,7 +13271,7 @@ class CDOTAUserMsg_BoosterStatePlayer : public ::google::protobuf::Message /* @@
                &_CDOTAUserMsg_BoosterStatePlayer_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    100;
+    101;
 
   void Swap(CDOTAUserMsg_BoosterStatePlayer* other);
 
@@ -13285,7 +13403,7 @@ class CDOTAUserMsg_BoosterState : public ::google::protobuf::Message /* @@protoc
                &_CDOTAUserMsg_BoosterState_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    101;
+    102;
 
   void Swap(CDOTAUserMsg_BoosterState* other);
 
@@ -13380,7 +13498,7 @@ class CDOTAUserMsg_PlayerMMR : public ::google::protobuf::Message /* @@protoc_in
                &_CDOTAUserMsg_PlayerMMR_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    102;
+    103;
 
   void Swap(CDOTAUserMsg_PlayerMMR* other);
 
@@ -13476,7 +13594,7 @@ class CDOTAUserMsg_AbilitySteal : public ::google::protobuf::Message /* @@protoc
                &_CDOTAUserMsg_AbilitySteal_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    103;
+    104;
 
   void Swap(CDOTAUserMsg_AbilitySteal* other);
 
@@ -13588,7 +13706,7 @@ class CDOTAUserMsg_StatsHeroLookup : public ::google::protobuf::Message /* @@pro
                &_CDOTAUserMsg_StatsHeroLookup_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    104;
+    105;
 
   void Swap(CDOTAUserMsg_StatsHeroLookup* other);
 
@@ -13726,7 +13844,7 @@ class CDOTAUserMsg_StatsHeroPositionInfo_PositionPair : public ::google::protobu
                &_CDOTAUserMsg_StatsHeroPositionInfo_PositionPair_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    105;
+    106;
 
   void Swap(CDOTAUserMsg_StatsHeroPositionInfo_PositionPair* other);
 
@@ -13828,7 +13946,7 @@ class CDOTAUserMsg_StatsHeroPositionInfo : public ::google::protobuf::Message /*
                &_CDOTAUserMsg_StatsHeroPositionInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    106;
+    107;
 
   void Swap(CDOTAUserMsg_StatsHeroPositionInfo* other);
 
@@ -13935,7 +14053,7 @@ class CDOTAUserMsg_StatsHeroMinuteDetails : public ::google::protobuf::Message /
                &_CDOTAUserMsg_StatsHeroMinuteDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    107;
+    108;
 
   void Swap(CDOTAUserMsg_StatsHeroMinuteDetails* other);
 
@@ -14178,7 +14296,7 @@ class CDOTAUserMsg_StatsTeamMinuteDetails_LocationPerformance : public ::google:
                &_CDOTAUserMsg_StatsTeamMinuteDetails_LocationPerformance_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    108;
+    109;
 
   void Swap(CDOTAUserMsg_StatsTeamMinuteDetails_LocationPerformance* other);
 
@@ -14290,7 +14408,7 @@ class CDOTAUserMsg_StatsTeamMinuteDetails : public ::google::protobuf::Message /
                &_CDOTAUserMsg_StatsTeamMinuteDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    109;
+    110;
 
   void Swap(CDOTAUserMsg_StatsTeamMinuteDetails* other);
 
@@ -14480,7 +14598,7 @@ class CDOTAUserMsg_StatsPlayerKillShare : public ::google::protobuf::Message /* 
                &_CDOTAUserMsg_StatsPlayerKillShare_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    110;
+    111;
 
   void Swap(CDOTAUserMsg_StatsPlayerKillShare* other);
 
@@ -14622,7 +14740,7 @@ class CDOTAUserMsg_StatsKillDetails : public ::google::protobuf::Message /* @@pr
                &_CDOTAUserMsg_StatsKillDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    111;
+    112;
 
   void Swap(CDOTAUserMsg_StatsKillDetails* other);
 
@@ -14767,7 +14885,7 @@ class CDOTAUserMsg_StatsMatchDetails_CDOTAUserMsg_StatsFightTeamDetails : public
                &_CDOTAUserMsg_StatsMatchDetails_CDOTAUserMsg_StatsFightTeamDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    112;
+    113;
 
   void Swap(CDOTAUserMsg_StatsMatchDetails_CDOTAUserMsg_StatsFightTeamDetails* other);
 
@@ -14895,7 +15013,7 @@ class CDOTAUserMsg_StatsMatchDetails_CDOTAUserMsg_StatsFightDetails : public ::g
                &_CDOTAUserMsg_StatsMatchDetails_CDOTAUserMsg_StatsFightDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    113;
+    114;
 
   void Swap(CDOTAUserMsg_StatsMatchDetails_CDOTAUserMsg_StatsFightDetails* other);
 
@@ -15021,7 +15139,7 @@ class CDOTAUserMsg_StatsMatchDetails : public ::google::protobuf::Message /* @@p
                &_CDOTAUserMsg_StatsMatchDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    114;
+    115;
 
   void Swap(CDOTAUserMsg_StatsMatchDetails* other);
 
@@ -15184,7 +15302,7 @@ class CDOTAUserMsg_MiniTaunt : public ::google::protobuf::Message /* @@protoc_in
                &_CDOTAUserMsg_MiniTaunt_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    115;
+    116;
 
   void Swap(CDOTAUserMsg_MiniTaunt* other);
 
@@ -15276,7 +15394,7 @@ class CDOTAUserMsg_SpeechBubble : public ::google::protobuf::Message /* @@protoc
                &_CDOTAUserMsg_SpeechBubble_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    116;
+    117;
 
   void Swap(CDOTAUserMsg_SpeechBubble* other);
 
@@ -15368,7 +15486,7 @@ class CDOTAUserMsg_CustomHeaderMessage : public ::google::protobuf::Message /* @
                &_CDOTAUserMsg_CustomHeaderMessage_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    117;
+    118;
 
   void Swap(CDOTAUserMsg_CustomHeaderMessage* other);
 
@@ -15498,7 +15616,7 @@ class CMsgHeroAbilityStat : public ::google::protobuf::Message /* @@protoc_inser
                &_CMsgHeroAbilityStat_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    118;
+    119;
 
   void Swap(CMsgHeroAbilityStat* other);
 
@@ -15610,7 +15728,7 @@ class CMsgCombatAnalyzerPlayerStat : public ::google::protobuf::Message /* @@pro
                &_CMsgCombatAnalyzerPlayerStat_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    119;
+    120;
 
   void Swap(CMsgCombatAnalyzerPlayerStat* other);
 
@@ -15715,7 +15833,7 @@ class CMsgCombatAnalyzerStats : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgCombatAnalyzerStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    120;
+    121;
 
   void Swap(CMsgCombatAnalyzerStats* other);
 
@@ -15820,7 +15938,7 @@ class CDOTAUserMsg_BeastChat : public ::google::protobuf::Message /* @@protoc_in
                &_CDOTAUserMsg_BeastChat_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    121;
+    122;
 
   void Swap(CDOTAUserMsg_BeastChat* other);
 
@@ -15966,7 +16084,7 @@ class CDOTAUserMsg_CustomHudElement_Create : public ::google::protobuf::Message 
                &_CDOTAUserMsg_CustomHudElement_Create_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    122;
+    123;
 
   void Swap(CDOTAUserMsg_CustomHudElement_Create* other);
 
@@ -16102,7 +16220,7 @@ class CDOTAUserMsg_CustomHudElement_Modify : public ::google::protobuf::Message 
                &_CDOTAUserMsg_CustomHudElement_Modify_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    123;
+    124;
 
   void Swap(CDOTAUserMsg_CustomHudElement_Modify* other);
 
@@ -16230,7 +16348,7 @@ class CDOTAUserMsg_CustomHudElement_Destroy : public ::google::protobuf::Message
                &_CDOTAUserMsg_CustomHudElement_Destroy_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    124;
+    125;
 
   void Swap(CDOTAUserMsg_CustomHudElement_Destroy* other);
 
@@ -16330,7 +16448,7 @@ class CDOTAUserMsg_CompendiumStatePlayer : public ::google::protobuf::Message /*
                &_CDOTAUserMsg_CompendiumStatePlayer_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    125;
+    126;
 
   void Swap(CDOTAUserMsg_CompendiumStatePlayer* other);
 
@@ -16432,7 +16550,7 @@ class CDOTAUserMsg_CompendiumState : public ::google::protobuf::Message /* @@pro
                &_CDOTAUserMsg_CompendiumState_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    126;
+    127;
 
   void Swap(CDOTAUserMsg_CompendiumState* other);
 
@@ -16527,7 +16645,7 @@ class CDOTAUserMsg_ProjectionAbility : public ::google::protobuf::Message /* @@p
                &_CDOTAUserMsg_ProjectionAbility_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    127;
+    128;
 
   void Swap(CDOTAUserMsg_ProjectionAbility* other);
 
@@ -16691,7 +16809,7 @@ class CDOTAUserMsg_ProjectionEvent : public ::google::protobuf::Message /* @@pro
                &_CDOTAUserMsg_ProjectionEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    128;
+    129;
 
   void Swap(CDOTAUserMsg_ProjectionEvent* other);
 
@@ -16793,7 +16911,7 @@ class CDOTAUserMsg_XPAlert : public ::google::protobuf::Message /* @@protoc_inse
                &_CDOTAUserMsg_XPAlert_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    129;
+    130;
 
   void Swap(CDOTAUserMsg_XPAlert* other);
 
@@ -16895,7 +17013,7 @@ class CDOTAUserMsg_UpdateQuestProgress : public ::google::protobuf::Message /* @
                &_CDOTAUserMsg_UpdateQuestProgress_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    130;
+    131;
 
   void Swap(CDOTAUserMsg_UpdateQuestProgress* other);
 
@@ -16977,7 +17095,7 @@ class CDOTAUserMsg_QuestStatus : public ::google::protobuf::Message /* @@protoc_
                &_CDOTAUserMsg_QuestStatus_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    131;
+    132;
 
   void Swap(CDOTAUserMsg_QuestStatus* other);
 
@@ -17139,7 +17257,7 @@ class CDOTAUserMsg_SuggestHeroPick : public ::google::protobuf::Message /* @@pro
                &_CDOTAUserMsg_SuggestHeroPick_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    132;
+    133;
 
   void Swap(CDOTAUserMsg_SuggestHeroPick* other);
 
@@ -17251,7 +17369,7 @@ class CDOTAUserMsg_SuggestHeroRole : public ::google::protobuf::Message /* @@pro
                &_CDOTAUserMsg_SuggestHeroRole_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    133;
+    134;
 
   void Swap(CDOTAUserMsg_SuggestHeroRole* other);
 
@@ -17361,7 +17479,7 @@ class CDOTAUserMsg_KillcamDamageTaken : public ::google::protobuf::Message /* @@
                &_CDOTAUserMsg_KillcamDamageTaken_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    134;
+    135;
 
   void Swap(CDOTAUserMsg_KillcamDamageTaken* other);
 
@@ -17519,7 +17637,7 @@ class CDOTAUserMsg_SelectPenaltyGold : public ::google::protobuf::Message /* @@p
                &_CDOTAUserMsg_SelectPenaltyGold_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    135;
+    136;
 
   void Swap(CDOTAUserMsg_SelectPenaltyGold* other);
 
@@ -17621,7 +17739,7 @@ class CDOTAUserMsg_RollDiceResult : public ::google::protobuf::Message /* @@prot
                &_CDOTAUserMsg_RollDiceResult_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    136;
+    137;
 
   void Swap(CDOTAUserMsg_RollDiceResult* other);
 
@@ -17753,7 +17871,7 @@ class CDOTAUserMsg_FlipCoinResult : public ::google::protobuf::Message /* @@prot
                &_CDOTAUserMsg_FlipCoinResult_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    137;
+    138;
 
   void Swap(CDOTAUserMsg_FlipCoinResult* other);
 
@@ -17865,7 +17983,7 @@ class CDOTAUserMessage_RequestItemSuggestions : public ::google::protobuf::Messa
                &_CDOTAUserMessage_RequestItemSuggestions_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    138;
+    139;
 
   void Swap(CDOTAUserMessage_RequestItemSuggestions* other);
 
@@ -17957,7 +18075,7 @@ class CDOTAUserMessage_TeamCaptainChanged : public ::google::protobuf::Message /
                &_CDOTAUserMessage_TeamCaptainChanged_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    139;
+    140;
 
   void Swap(CDOTAUserMessage_TeamCaptainChanged* other);
 
@@ -18059,7 +18177,7 @@ class CDOTAUserMsg_ChatWheelCooldown : public ::google::protobuf::Message /* @@p
                &_CDOTAUserMsg_ChatWheelCooldown_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    140;
+    141;
 
   void Swap(CDOTAUserMsg_ChatWheelCooldown* other);
 
@@ -24237,17 +24355,84 @@ inline void CDOTAUserMsg_ParticleManager_SetParticleFoWProperties::set_fow_radiu
 
 // -------------------------------------------------------------------
 
+// CDOTAUserMsg_ParticleManager_SetParticleText
+
+// optional string text = 1;
+inline bool CDOTAUserMsg_ParticleManager_SetParticleText::has_text() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CDOTAUserMsg_ParticleManager_SetParticleText::set_has_text() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CDOTAUserMsg_ParticleManager_SetParticleText::clear_has_text() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CDOTAUserMsg_ParticleManager_SetParticleText::clear_text() {
+  text_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_text();
+}
+inline const ::std::string& CDOTAUserMsg_ParticleManager_SetParticleText::text() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText.text)
+  return text_.GetNoArena();
+}
+inline void CDOTAUserMsg_ParticleManager_SetParticleText::set_text(const ::std::string& value) {
+  set_has_text();
+  text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText.text)
+}
+#if LANG_CXX11
+inline void CDOTAUserMsg_ParticleManager_SetParticleText::set_text(::std::string&& value) {
+  set_has_text();
+  text_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText.text)
+}
+#endif
+inline void CDOTAUserMsg_ParticleManager_SetParticleText::set_text(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_text();
+  text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText.text)
+}
+inline void CDOTAUserMsg_ParticleManager_SetParticleText::set_text(const char* value, size_t size) {
+  set_has_text();
+  text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText.text)
+}
+inline ::std::string* CDOTAUserMsg_ParticleManager_SetParticleText::mutable_text() {
+  set_has_text();
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText.text)
+  return text_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CDOTAUserMsg_ParticleManager_SetParticleText::release_text() {
+  // @@protoc_insertion_point(field_release:proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText.text)
+  clear_has_text();
+  return text_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CDOTAUserMsg_ParticleManager_SetParticleText::set_allocated_text(::std::string* text) {
+  if (text != NULL) {
+    set_has_text();
+  } else {
+    clear_has_text();
+  }
+  text_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), text);
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText.text)
+}
+
+// -------------------------------------------------------------------
+
 // CDOTAUserMsg_ParticleManager
 
 // required .proto.dota.DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];
 inline bool CDOTAUserMsg_ParticleManager::has_type() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
+  return (_has_bits_[0] & 0x00010000u) != 0;
 }
 inline void CDOTAUserMsg_ParticleManager::set_has_type() {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00010000u;
 }
 inline void CDOTAUserMsg_ParticleManager::clear_has_type() {
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline void CDOTAUserMsg_ParticleManager::clear_type() {
   type_ = 0;
@@ -24266,13 +24451,13 @@ inline void CDOTAUserMsg_ParticleManager::set_type(::proto::dota::DOTA_PARTICLE_
 
 // required uint32 index = 2;
 inline bool CDOTAUserMsg_ParticleManager::has_index() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
+  return (_has_bits_[0] & 0x00020000u) != 0;
 }
 inline void CDOTAUserMsg_ParticleManager::set_has_index() {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00020000u;
 }
 inline void CDOTAUserMsg_ParticleManager::clear_has_index() {
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline void CDOTAUserMsg_ParticleManager::clear_index() {
   index_ = 0u;
@@ -24961,6 +25146,51 @@ inline void CDOTAUserMsg_ParticleManager::set_allocated_set_particle_fow_propert
     clear_has_set_particle_fow_properties();
   }
   // @@protoc_insertion_point(field_set_allocated:proto.dota.CDOTAUserMsg_ParticleManager.set_particle_fow_properties)
+}
+
+// optional .proto.dota.CDOTAUserMsg_ParticleManager.SetParticleText set_particle_text = 19;
+inline bool CDOTAUserMsg_ParticleManager::has_set_particle_text() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void CDOTAUserMsg_ParticleManager::set_has_set_particle_text() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void CDOTAUserMsg_ParticleManager::clear_has_set_particle_text() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void CDOTAUserMsg_ParticleManager::clear_set_particle_text() {
+  if (set_particle_text_ != NULL) set_particle_text_->::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText::Clear();
+  clear_has_set_particle_text();
+}
+inline const ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText& CDOTAUserMsg_ParticleManager::set_particle_text() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAUserMsg_ParticleManager.set_particle_text)
+  return set_particle_text_ != NULL ? *set_particle_text_
+                         : *::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText::internal_default_instance();
+}
+inline ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText* CDOTAUserMsg_ParticleManager::mutable_set_particle_text() {
+  set_has_set_particle_text();
+  if (set_particle_text_ == NULL) {
+    set_particle_text_ = new ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAUserMsg_ParticleManager.set_particle_text)
+  return set_particle_text_;
+}
+inline ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText* CDOTAUserMsg_ParticleManager::release_set_particle_text() {
+  // @@protoc_insertion_point(field_release:proto.dota.CDOTAUserMsg_ParticleManager.set_particle_text)
+  clear_has_set_particle_text();
+  ::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText* temp = set_particle_text_;
+  set_particle_text_ = NULL;
+  return temp;
+}
+inline void CDOTAUserMsg_ParticleManager::set_allocated_set_particle_text(::proto::dota::CDOTAUserMsg_ParticleManager_SetParticleText* set_particle_text) {
+  delete set_particle_text_;
+  set_particle_text_ = set_particle_text;
+  if (set_particle_text) {
+    set_has_set_particle_text();
+  } else {
+    clear_has_set_particle_text();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CDOTAUserMsg_ParticleManager.set_particle_text)
 }
 
 // -------------------------------------------------------------------
@@ -33003,6 +33233,8 @@ inline void CDOTAUserMsg_ChatWheelCooldown::set_cooldown_remaining(float value) 
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
