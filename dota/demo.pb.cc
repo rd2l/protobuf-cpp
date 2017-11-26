@@ -213,11 +213,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDemoPacket, sequence_in_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDemoPacket, sequence_out_ack_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDemoPacket, data_),
-  1,
-  2,
   0,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDemoFullPacket, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDemoFullPacket, _internal_metadata_),
@@ -353,22 +349,22 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 51, 67, sizeof(CGameInfo_CDotaGameInfo)},
   { 78, 84, sizeof(CGameInfo)},
   { 85, 94, sizeof(CDemoFileInfo)},
-  { 98, 106, sizeof(CDemoPacket)},
-  { 109, 116, sizeof(CDemoFullPacket)},
-  { 118, 127, sizeof(CDemoSaveGame)},
-  { 131, 136, sizeof(CDemoSyncTick)},
-  { 136, 142, sizeof(CDemoConsoleCmd)},
-  { 143, 149, sizeof(CDemoSendTables)},
-  { 150, 158, sizeof(CDemoClassInfo_class_t)},
-  { 161, 167, sizeof(CDemoClassInfo)},
-  { 168, 175, sizeof(CDemoCustomData)},
-  { 177, 183, sizeof(CDemoCustomDataCallbacks)},
-  { 184, 191, sizeof(CDemoStringTables_items_t)},
-  { 193, 202, sizeof(CDemoStringTables_table_t)},
-  { 206, 212, sizeof(CDemoStringTables)},
-  { 213, 218, sizeof(CDemoStop)},
-  { 218, 225, sizeof(CDemoUserCmd)},
-  { 227, 233, sizeof(CDemoSpawnGroups)},
+  { 98, 104, sizeof(CDemoPacket)},
+  { 105, 112, sizeof(CDemoFullPacket)},
+  { 114, 123, sizeof(CDemoSaveGame)},
+  { 127, 132, sizeof(CDemoSyncTick)},
+  { 132, 138, sizeof(CDemoConsoleCmd)},
+  { 139, 145, sizeof(CDemoSendTables)},
+  { 146, 154, sizeof(CDemoClassInfo_class_t)},
+  { 157, 163, sizeof(CDemoClassInfo)},
+  { 164, 171, sizeof(CDemoCustomData)},
+  { 173, 179, sizeof(CDemoCustomDataCallbacks)},
+  { 180, 187, sizeof(CDemoStringTables_items_t)},
+  { 189, 198, sizeof(CDemoStringTables_table_t)},
+  { 202, 208, sizeof(CDemoStringTables)},
+  { 209, 214, sizeof(CDemoStop)},
+  { 214, 221, sizeof(CDemoUserCmd)},
+  { 223, 229, sizeof(CDemoSpawnGroups)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -534,45 +530,44 @@ void AddDescriptorsImpl() {
       "\n\007hero_id\030\003 \001(\r\"\201\001\n\rCDemoFileInfo\022\025\n\rpla"
       "yback_time\030\001 \001(\002\022\026\n\016playback_ticks\030\002 \001(\005"
       "\022\027\n\017playback_frames\030\003 \001(\005\022(\n\tgame_info\030\004"
-      " \001(\0132\025.proto.dota.CGameInfo\"J\n\013CDemoPack"
-      "et\022\023\n\013sequence_in\030\001 \001(\005\022\030\n\020sequence_out_"
-      "ack\030\002 \001(\005\022\014\n\004data\030\003 \001(\014\"o\n\017CDemoFullPack"
-      "et\0223\n\014string_table\030\001 \001(\0132\035.proto.dota.CD"
-      "emoStringTables\022\'\n\006packet\030\002 \001(\0132\027.proto."
-      "dota.CDemoPacket\"S\n\rCDemoSaveGame\022\014\n\004dat"
-      "a\030\001 \001(\014\022\020\n\010steam_id\030\002 \001(\006\022\021\n\tsignature\030\003"
-      " \001(\006\022\017\n\007version\030\004 \001(\005\"\017\n\rCDemoSyncTick\"$"
-      "\n\017CDemoConsoleCmd\022\021\n\tcmdstring\030\001 \001(\t\"\037\n\017"
-      "CDemoSendTables\022\014\n\004data\030\001 \001(\014\"\214\001\n\016CDemoC"
-      "lassInfo\0223\n\007classes\030\001 \003(\0132\".proto.dota.C"
-      "DemoClassInfo.class_t\032E\n\007class_t\022\020\n\010clas"
-      "s_id\030\001 \001(\005\022\024\n\014network_name\030\002 \001(\t\022\022\n\ntabl"
-      "e_name\030\003 \001(\t\"7\n\017CDemoCustomData\022\026\n\016callb"
-      "ack_index\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"+\n\030CDemoCu"
-      "stomDataCallbacks\022\017\n\007save_id\030\001 \003(\t\"\234\002\n\021C"
-      "DemoStringTables\0225\n\006tables\030\001 \003(\0132%.proto"
-      ".dota.CDemoStringTables.table_t\032$\n\007items"
-      "_t\022\013\n\003str\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\032\251\001\n\007table_"
-      "t\022\022\n\ntable_name\030\001 \001(\t\0224\n\005items\030\002 \003(\0132%.p"
-      "roto.dota.CDemoStringTables.items_t\022\?\n\020i"
-      "tems_clientside\030\003 \003(\0132%.proto.dota.CDemo"
-      "StringTables.items_t\022\023\n\013table_flags\030\004 \001("
-      "\005\"\013\n\tCDemoStop\"0\n\014CDemoUserCmd\022\022\n\ncmd_nu"
-      "mber\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\" \n\020CDemoSpawnGr"
-      "oups\022\014\n\004msgs\030\003 \003(\014*\204\003\n\rEDemoCommands\022\026\n\t"
-      "DEM_Error\020\377\377\377\377\377\377\377\377\377\001\022\014\n\010DEM_Stop\020\000\022\022\n\016DE"
-      "M_FileHeader\020\001\022\020\n\014DEM_FileInfo\020\002\022\020\n\014DEM_"
-      "SyncTick\020\003\022\022\n\016DEM_SendTables\020\004\022\021\n\rDEM_Cl"
-      "assInfo\020\005\022\024\n\020DEM_StringTables\020\006\022\016\n\nDEM_P"
-      "acket\020\007\022\024\n\020DEM_SignonPacket\020\010\022\022\n\016DEM_Con"
-      "soleCmd\020\t\022\022\n\016DEM_CustomData\020\n\022\033\n\027DEM_Cus"
-      "tomDataCallbacks\020\013\022\017\n\013DEM_UserCmd\020\014\022\022\n\016D"
-      "EM_FullPacket\020\r\022\020\n\014DEM_SaveGame\020\016\022\023\n\017DEM"
-      "_SpawnGroups\020\017\022\013\n\007DEM_Max\020\020\022\024\n\020DEM_IsCom"
-      "pressed\020@B\003\200\001\000"
+      " \001(\0132\025.proto.dota.CGameInfo\"\033\n\013CDemoPack"
+      "et\022\014\n\004data\030\003 \001(\014\"o\n\017CDemoFullPacket\0223\n\014s"
+      "tring_table\030\001 \001(\0132\035.proto.dota.CDemoStri"
+      "ngTables\022\'\n\006packet\030\002 \001(\0132\027.proto.dota.CD"
+      "emoPacket\"S\n\rCDemoSaveGame\022\014\n\004data\030\001 \001(\014"
+      "\022\020\n\010steam_id\030\002 \001(\006\022\021\n\tsignature\030\003 \001(\006\022\017\n"
+      "\007version\030\004 \001(\005\"\017\n\rCDemoSyncTick\"$\n\017CDemo"
+      "ConsoleCmd\022\021\n\tcmdstring\030\001 \001(\t\"\037\n\017CDemoSe"
+      "ndTables\022\014\n\004data\030\001 \001(\014\"\214\001\n\016CDemoClassInf"
+      "o\0223\n\007classes\030\001 \003(\0132\".proto.dota.CDemoCla"
+      "ssInfo.class_t\032E\n\007class_t\022\020\n\010class_id\030\001 "
+      "\001(\005\022\024\n\014network_name\030\002 \001(\t\022\022\n\ntable_name\030"
+      "\003 \001(\t\"7\n\017CDemoCustomData\022\026\n\016callback_ind"
+      "ex\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"+\n\030CDemoCustomDat"
+      "aCallbacks\022\017\n\007save_id\030\001 \003(\t\"\234\002\n\021CDemoStr"
+      "ingTables\0225\n\006tables\030\001 \003(\0132%.proto.dota.C"
+      "DemoStringTables.table_t\032$\n\007items_t\022\013\n\003s"
+      "tr\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\032\251\001\n\007table_t\022\022\n\nta"
+      "ble_name\030\001 \001(\t\0224\n\005items\030\002 \003(\0132%.proto.do"
+      "ta.CDemoStringTables.items_t\022\?\n\020items_cl"
+      "ientside\030\003 \003(\0132%.proto.dota.CDemoStringT"
+      "ables.items_t\022\023\n\013table_flags\030\004 \001(\005\"\013\n\tCD"
+      "emoStop\"0\n\014CDemoUserCmd\022\022\n\ncmd_number\030\001 "
+      "\001(\005\022\014\n\004data\030\002 \001(\014\" \n\020CDemoSpawnGroups\022\014\n"
+      "\004msgs\030\003 \003(\014*\204\003\n\rEDemoCommands\022\026\n\tDEM_Err"
+      "or\020\377\377\377\377\377\377\377\377\377\001\022\014\n\010DEM_Stop\020\000\022\022\n\016DEM_FileH"
+      "eader\020\001\022\020\n\014DEM_FileInfo\020\002\022\020\n\014DEM_SyncTic"
+      "k\020\003\022\022\n\016DEM_SendTables\020\004\022\021\n\rDEM_ClassInfo"
+      "\020\005\022\024\n\020DEM_StringTables\020\006\022\016\n\nDEM_Packet\020\007"
+      "\022\024\n\020DEM_SignonPacket\020\010\022\022\n\016DEM_ConsoleCmd"
+      "\020\t\022\022\n\016DEM_CustomData\020\n\022\033\n\027DEM_CustomData"
+      "Callbacks\020\013\022\017\n\013DEM_UserCmd\020\014\022\022\n\016DEM_Full"
+      "Packet\020\r\022\020\n\014DEM_SaveGame\020\016\022\023\n\017DEM_SpawnG"
+      "roups\020\017\022\013\n\007DEM_Max\020\020\022\024\n\020DEM_IsCompressed"
+      "\020@B\003\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2414);
+      descriptor, 2367);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "demo.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -4680,8 +4675,6 @@ void CDemoFileInfo::set_allocated_game_info(::proto::dota::CGameInfo* game_info)
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CDemoPacket::kSequenceInFieldNumber;
-const int CDemoPacket::kSequenceOutAckFieldNumber;
 const int CDemoPacket::kDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -4703,17 +4696,12 @@ CDemoPacket::CDemoPacket(const CDemoPacket& from)
   if (from.has_data()) {
     data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
-  ::memcpy(&sequence_in_, &from.sequence_in_,
-    reinterpret_cast<char*>(&sequence_out_ack_) -
-    reinterpret_cast<char*>(&sequence_in_) + sizeof(sequence_out_ack_));
   // @@protoc_insertion_point(copy_constructor:proto.dota.CDemoPacket)
 }
 
 void CDemoPacket::SharedCtor() {
   _cached_size_ = 0;
   data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&sequence_in_, 0, reinterpret_cast<char*>(&sequence_out_ack_) -
-    reinterpret_cast<char*>(&sequence_in_) + sizeof(sequence_out_ack_));
 }
 
 CDemoPacket::~CDemoPacket() {
@@ -4754,10 +4742,6 @@ void CDemoPacket::Clear() {
     GOOGLE_DCHECK(!data_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
     (*data_.UnsafeRawStringPointer())->clear();
   }
-  if (_has_bits_[0 / 32] & 6u) {
-    ::memset(&sequence_in_, 0, reinterpret_cast<char*>(&sequence_out_ack_) -
-      reinterpret_cast<char*>(&sequence_in_) + sizeof(sequence_out_ack_));
-  }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -4772,34 +4756,6 @@ bool CDemoPacket::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int32 sequence_in = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
-          set_has_sequence_in();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &sequence_in_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 sequence_out_ack = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
-          set_has_sequence_out_ack();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &sequence_out_ack_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       // optional bytes data = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
@@ -4841,16 +4797,6 @@ void CDemoPacket::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional int32 sequence_in = 1;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->sequence_in(), output);
-  }
-
-  // optional int32 sequence_out_ack = 2;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->sequence_out_ack(), output);
-  }
-
   // optional bytes data = 3;
   if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
@@ -4871,16 +4817,6 @@ void CDemoPacket::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional int32 sequence_in = 1;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->sequence_in(), target);
-  }
-
-  // optional int32 sequence_out_ack = 2;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->sequence_out_ack(), target);
-  }
-
   // optional bytes data = 3;
   if (cached_has_bits & 0x00000001u) {
     target =
@@ -4905,29 +4841,13 @@ size_t CDemoPacket::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         unknown_fields());
   }
-  if (_has_bits_[0 / 32] & 7u) {
-    // optional bytes data = 3;
-    if (has_data()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::BytesSize(
-          this->data());
-    }
-
-    // optional int32 sequence_in = 1;
-    if (has_sequence_in()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->sequence_in());
-    }
-
-    // optional int32 sequence_out_ack = 2;
-    if (has_sequence_out_ack()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->sequence_out_ack());
-    }
-
+  // optional bytes data = 3;
+  if (has_data()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->data());
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -4957,19 +4877,9 @@ void CDemoPacket::MergeFrom(const CDemoPacket& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_data();
-      data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      sequence_in_ = from.sequence_in_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      sequence_out_ack_ = from.sequence_out_ack_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  if (from.has_data()) {
+    set_has_data();
+    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
 }
 
@@ -4997,8 +4907,6 @@ void CDemoPacket::Swap(CDemoPacket* other) {
 }
 void CDemoPacket::InternalSwap(CDemoPacket* other) {
   data_.Swap(&other->data_);
-  std::swap(sequence_in_, other->sequence_in_);
-  std::swap(sequence_out_ack_, other->sequence_out_ack_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -5011,54 +4919,6 @@ void CDemoPacket::InternalSwap(CDemoPacket* other) {
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CDemoPacket
-
-// optional int32 sequence_in = 1;
-bool CDemoPacket::has_sequence_in() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-void CDemoPacket::set_has_sequence_in() {
-  _has_bits_[0] |= 0x00000002u;
-}
-void CDemoPacket::clear_has_sequence_in() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-void CDemoPacket::clear_sequence_in() {
-  sequence_in_ = 0;
-  clear_has_sequence_in();
-}
-::google::protobuf::int32 CDemoPacket::sequence_in() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CDemoPacket.sequence_in)
-  return sequence_in_;
-}
-void CDemoPacket::set_sequence_in(::google::protobuf::int32 value) {
-  set_has_sequence_in();
-  sequence_in_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CDemoPacket.sequence_in)
-}
-
-// optional int32 sequence_out_ack = 2;
-bool CDemoPacket::has_sequence_out_ack() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-void CDemoPacket::set_has_sequence_out_ack() {
-  _has_bits_[0] |= 0x00000004u;
-}
-void CDemoPacket::clear_has_sequence_out_ack() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-void CDemoPacket::clear_sequence_out_ack() {
-  sequence_out_ack_ = 0;
-  clear_has_sequence_out_ack();
-}
-::google::protobuf::int32 CDemoPacket::sequence_out_ack() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CDemoPacket.sequence_out_ack)
-  return sequence_out_ack_;
-}
-void CDemoPacket::set_sequence_out_ack(::google::protobuf::int32 value) {
-  set_has_sequence_out_ack();
-  sequence_out_ack_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CDemoPacket.sequence_out_ack)
-}
 
 // optional bytes data = 3;
 bool CDemoPacket::has_data() const {

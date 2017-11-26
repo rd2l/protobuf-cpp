@@ -151,6 +151,10 @@ class CMsgNeedsPaintDefaultTypeInternal : public ::google::protobuf::internal::E
 } _CMsgNeedsPaint_default_instance_;
 class CMsgComboNeedsPaintDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgComboNeedsPaint> {
 } _CMsgComboNeedsPaint_default_instance_;
+class CMsgNeedsSharedTexturePaintDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgNeedsSharedTexturePaint> {
+} _CMsgNeedsSharedTexturePaint_default_instance_;
+class CMsgGameOverlayTexturePaintDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgGameOverlayTexturePaint> {
+} _CMsgGameOverlayTexturePaint_default_instance_;
 class CMsgGetZoomDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgGetZoom> {
 } _CMsgGetZoom_default_instance_;
 class CMsgGetZoomResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgGetZoomResponse> {
@@ -259,13 +263,17 @@ class CMSgJumpListMRUAppDefaultTypeInternal : public ::google::protobuf::interna
 } _CMSgJumpListMRUApp_default_instance_;
 class CMsgSetJumpListDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgSetJumpList> {
 } _CMsgSetJumpList_default_instance_;
+class CMsgSetGameOverlayTargetPIDsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgSetGameOverlayTargetPIDs> {
+} _CMsgSetGameOverlayTargetPIDs_default_instance_;
+class CMsgGameOverlayTargetTextureIDDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CMsgGameOverlayTargetTextureID> {
+} _CMsgGameOverlayTargetTextureID_default_instance_;
 
 namespace protobuf_htmlmessages_2eproto {
 
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[120];
+::google::protobuf::Metadata file_level_metadata[124];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 }  // namespace
@@ -281,6 +289,10 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
     TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
@@ -1138,6 +1150,46 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   5,
   3,
   4,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgNeedsSharedTexturePaint, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgNeedsSharedTexturePaint, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgNeedsSharedTexturePaint, browser_handle_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgNeedsSharedTexturePaint, share_handle_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgNeedsSharedTexturePaint, width_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgNeedsSharedTexturePaint, height_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgNeedsSharedTexturePaint, scrollx_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgNeedsSharedTexturePaint, scrolly_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgNeedsSharedTexturePaint, pagescale_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgNeedsSharedTexturePaint, pageserial_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTexturePaint, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTexturePaint, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTexturePaint, browser_handle_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTexturePaint, width_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTexturePaint, height_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTexturePaint, scrollx_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTexturePaint, scrolly_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTexturePaint, pagescale_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTexturePaint, pageserial_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGetZoom, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGetZoom, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1680,6 +1732,26 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   1,
   ~0u,
   ~0u,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgSetGameOverlayTargetPIDs, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgSetGameOverlayTargetPIDs, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgSetGameOverlayTargetPIDs, browser_handle_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgSetGameOverlayTargetPIDs, target_pid_),
+  0,
+  ~0u,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTargetTextureID, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTargetTextureID, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTargetTextureID, browser_handle_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTargetTextureID, target_pid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGameOverlayTargetTextureID, texture_handle_),
+  0,
+  1,
+  2,
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
@@ -1749,60 +1821,64 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 685, 696, sizeof(CMsgSetSharedPaintBuffers)},
   { 702, 712, sizeof(CMsgNeedsPaint)},
   { 717, 728, sizeof(CMsgComboNeedsPaint)},
-  { 734, 740, sizeof(CMsgGetZoom)},
-  { 741, 748, sizeof(CMsgGetZoomResponse)},
-  { 750, 758, sizeof(CMsgLinkAtPosition)},
-  { 761, 772, sizeof(CMsgLinkAtPositionResponse)},
-  { 778, 786, sizeof(CMsgZoomToElementAtPosition)},
-  { 789, 797, sizeof(CMsgZoomToElementAtPositionResponse)},
-  { 800, 809, sizeof(CMsgScalePageToValue)},
-  { 813, 820, sizeof(CMsgScalePageToValueResponse)},
-  { 822, 832, sizeof(CMsgSavePageToJPEG)},
-  { 837, 845, sizeof(CMsgSavePageToJPEGResponse)},
-  { 848, 855, sizeof(CMsgJSAlert)},
-  { 857, 864, sizeof(CMsgJSConfirm)},
-  { 866, 873, sizeof(CMsgJSDialogResponse)},
-  { 875, 883, sizeof(CMsgCanGoBackAndForward)},
-  { 886, 893, sizeof(CMsgOpenSteamURL)},
-  { 895, 907, sizeof(CMsgSetCookie)},
-  { 914, 921, sizeof(CMsgSetTargetFrameRate)},
-  { 923, 929, sizeof(CMsgPauseRepaint)},
-  { 930, 936, sizeof(CMsgFullRepaint)},
-  { 937, 943, sizeof(CMsgRequestFullScreen)},
-  { 944, 951, sizeof(CMsgRequestFullScreenResponse)},
-  { 953, 959, sizeof(CMsgExitFullScreen)},
-  { 960, 967, sizeof(CMsgGetCookiesForURL)},
-  { 969, 978, sizeof(CCookie)},
-  { 982, 990, sizeof(CMsgGetCookiesForURLResponse)},
-  { 993, 1005, sizeof(CMsgNodeHasFocus)},
-  { 1012, 1018, sizeof(CMsgZoomToFocusedElement)},
-  { 1019, 1025, sizeof(CMsgCloseFullScreenFlashIfOpen)},
-  { 1026, 1032, sizeof(CMsgPauseFullScreenFlashMovieIfOpen)},
-  { 1033, 1039, sizeof(CMsgFocusedNodeText)},
-  { 1040, 1047, sizeof(CMsgFocusedNodeTextResponse)},
-  { 1049, 1055, sizeof(CMsgBuildID)},
-  { 1056, 1062, sizeof(CMsgOpenDevTools)},
-  { 1063, 1069, sizeof(CMsgCloseDevTools)},
-  { 1070, 1077, sizeof(CMsgUnlockH264)},
-  { 1079, 1087, sizeof(CMsgScreenInformationChanged)},
-  { 1090, 1096, sizeof(CMsgClearAllCookies)},
-  { 1097, 1104, sizeof(CMsgScreenDPI)},
-  { 1106, 1112, sizeof(CMsgAuthedSteamDomains)},
-  { 1113, 1119, sizeof(CMsgSteamAuthNeeded)},
-  { 1120, 1126, sizeof(CMsgSteamAuthCookiesSet)},
-  { 1127, 1135, sizeof(CMsgJSRegisterMethod)},
-  { 1138, 1145, sizeof(CJSMethodArgument)},
-  { 1147, 1154, sizeof(CMsgJSValue_JSObjectProperty)},
-  { 1156, 1171, sizeof(CMsgJSValue)},
-  { 1181, 1189, sizeof(CMsgJSMethodCall)},
-  { 1192, 1200, sizeof(CMsgJSExecuteCallback)},
-  { 1203, 1210, sizeof(CMsgJSReleaseCallback)},
-  { 1212, 1219, sizeof(CMsgJSRaiseException)},
-  { 1221, 1229, sizeof(CMsgLoadLocalization)},
-  { 1232, 1238, sizeof(CMsgEnableSteamClientAPI)},
-  { 1239, 1247, sizeof(CMsgJumpListLink)},
-  { 1250, 1259, sizeof(CMSgJumpListMRUApp)},
-  { 1263, 1272, sizeof(CMsgSetJumpList)},
+  { 734, 747, sizeof(CMsgNeedsSharedTexturePaint)},
+  { 755, 767, sizeof(CMsgGameOverlayTexturePaint)},
+  { 774, 780, sizeof(CMsgGetZoom)},
+  { 781, 788, sizeof(CMsgGetZoomResponse)},
+  { 790, 798, sizeof(CMsgLinkAtPosition)},
+  { 801, 812, sizeof(CMsgLinkAtPositionResponse)},
+  { 818, 826, sizeof(CMsgZoomToElementAtPosition)},
+  { 829, 837, sizeof(CMsgZoomToElementAtPositionResponse)},
+  { 840, 849, sizeof(CMsgScalePageToValue)},
+  { 853, 860, sizeof(CMsgScalePageToValueResponse)},
+  { 862, 872, sizeof(CMsgSavePageToJPEG)},
+  { 877, 885, sizeof(CMsgSavePageToJPEGResponse)},
+  { 888, 895, sizeof(CMsgJSAlert)},
+  { 897, 904, sizeof(CMsgJSConfirm)},
+  { 906, 913, sizeof(CMsgJSDialogResponse)},
+  { 915, 923, sizeof(CMsgCanGoBackAndForward)},
+  { 926, 933, sizeof(CMsgOpenSteamURL)},
+  { 935, 947, sizeof(CMsgSetCookie)},
+  { 954, 961, sizeof(CMsgSetTargetFrameRate)},
+  { 963, 969, sizeof(CMsgPauseRepaint)},
+  { 970, 976, sizeof(CMsgFullRepaint)},
+  { 977, 983, sizeof(CMsgRequestFullScreen)},
+  { 984, 991, sizeof(CMsgRequestFullScreenResponse)},
+  { 993, 999, sizeof(CMsgExitFullScreen)},
+  { 1000, 1007, sizeof(CMsgGetCookiesForURL)},
+  { 1009, 1018, sizeof(CCookie)},
+  { 1022, 1030, sizeof(CMsgGetCookiesForURLResponse)},
+  { 1033, 1045, sizeof(CMsgNodeHasFocus)},
+  { 1052, 1058, sizeof(CMsgZoomToFocusedElement)},
+  { 1059, 1065, sizeof(CMsgCloseFullScreenFlashIfOpen)},
+  { 1066, 1072, sizeof(CMsgPauseFullScreenFlashMovieIfOpen)},
+  { 1073, 1079, sizeof(CMsgFocusedNodeText)},
+  { 1080, 1087, sizeof(CMsgFocusedNodeTextResponse)},
+  { 1089, 1095, sizeof(CMsgBuildID)},
+  { 1096, 1102, sizeof(CMsgOpenDevTools)},
+  { 1103, 1109, sizeof(CMsgCloseDevTools)},
+  { 1110, 1117, sizeof(CMsgUnlockH264)},
+  { 1119, 1127, sizeof(CMsgScreenInformationChanged)},
+  { 1130, 1136, sizeof(CMsgClearAllCookies)},
+  { 1137, 1144, sizeof(CMsgScreenDPI)},
+  { 1146, 1152, sizeof(CMsgAuthedSteamDomains)},
+  { 1153, 1159, sizeof(CMsgSteamAuthNeeded)},
+  { 1160, 1166, sizeof(CMsgSteamAuthCookiesSet)},
+  { 1167, 1175, sizeof(CMsgJSRegisterMethod)},
+  { 1178, 1185, sizeof(CJSMethodArgument)},
+  { 1187, 1194, sizeof(CMsgJSValue_JSObjectProperty)},
+  { 1196, 1211, sizeof(CMsgJSValue)},
+  { 1221, 1229, sizeof(CMsgJSMethodCall)},
+  { 1232, 1240, sizeof(CMsgJSExecuteCallback)},
+  { 1243, 1250, sizeof(CMsgJSReleaseCallback)},
+  { 1252, 1259, sizeof(CMsgJSRaiseException)},
+  { 1261, 1269, sizeof(CMsgLoadLocalization)},
+  { 1272, 1278, sizeof(CMsgEnableSteamClientAPI)},
+  { 1279, 1287, sizeof(CMsgJumpListLink)},
+  { 1290, 1299, sizeof(CMSgJumpListMRUApp)},
+  { 1303, 1312, sizeof(CMsgSetJumpList)},
+  { 1316, 1323, sizeof(CMsgSetGameOverlayTargetPIDs)},
+  { 1325, 1333, sizeof(CMsgGameOverlayTargetTextureID)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -1872,6 +1948,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgSetSharedPaintBuffers_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgNeedsPaint_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgComboNeedsPaint_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgNeedsSharedTexturePaint_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgGameOverlayTexturePaint_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgGetZoom_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgGetZoomResponse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgLinkAtPosition_default_instance_),
@@ -1926,6 +2004,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgJumpListLink_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMSgJumpListMRUApp_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgSetJumpList_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgSetGameOverlayTargetPIDs_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CMsgGameOverlayTargetTextureID_default_instance_),
 };
 
 namespace {
@@ -1946,7 +2026,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 120);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 124);
 }
 
 }  // namespace
@@ -2084,114 +2164,122 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[64].reflection;
   _CMsgComboNeedsPaint_default_instance_.Shutdown();
   delete file_level_metadata[65].reflection;
-  _CMsgGetZoom_default_instance_.Shutdown();
+  _CMsgNeedsSharedTexturePaint_default_instance_.Shutdown();
   delete file_level_metadata[66].reflection;
-  _CMsgGetZoomResponse_default_instance_.Shutdown();
+  _CMsgGameOverlayTexturePaint_default_instance_.Shutdown();
   delete file_level_metadata[67].reflection;
-  _CMsgLinkAtPosition_default_instance_.Shutdown();
+  _CMsgGetZoom_default_instance_.Shutdown();
   delete file_level_metadata[68].reflection;
-  _CMsgLinkAtPositionResponse_default_instance_.Shutdown();
+  _CMsgGetZoomResponse_default_instance_.Shutdown();
   delete file_level_metadata[69].reflection;
-  _CMsgZoomToElementAtPosition_default_instance_.Shutdown();
+  _CMsgLinkAtPosition_default_instance_.Shutdown();
   delete file_level_metadata[70].reflection;
-  _CMsgZoomToElementAtPositionResponse_default_instance_.Shutdown();
+  _CMsgLinkAtPositionResponse_default_instance_.Shutdown();
   delete file_level_metadata[71].reflection;
-  _CMsgScalePageToValue_default_instance_.Shutdown();
+  _CMsgZoomToElementAtPosition_default_instance_.Shutdown();
   delete file_level_metadata[72].reflection;
-  _CMsgScalePageToValueResponse_default_instance_.Shutdown();
+  _CMsgZoomToElementAtPositionResponse_default_instance_.Shutdown();
   delete file_level_metadata[73].reflection;
-  _CMsgSavePageToJPEG_default_instance_.Shutdown();
+  _CMsgScalePageToValue_default_instance_.Shutdown();
   delete file_level_metadata[74].reflection;
-  _CMsgSavePageToJPEGResponse_default_instance_.Shutdown();
+  _CMsgScalePageToValueResponse_default_instance_.Shutdown();
   delete file_level_metadata[75].reflection;
-  _CMsgJSAlert_default_instance_.Shutdown();
+  _CMsgSavePageToJPEG_default_instance_.Shutdown();
   delete file_level_metadata[76].reflection;
-  _CMsgJSConfirm_default_instance_.Shutdown();
+  _CMsgSavePageToJPEGResponse_default_instance_.Shutdown();
   delete file_level_metadata[77].reflection;
-  _CMsgJSDialogResponse_default_instance_.Shutdown();
+  _CMsgJSAlert_default_instance_.Shutdown();
   delete file_level_metadata[78].reflection;
-  _CMsgCanGoBackAndForward_default_instance_.Shutdown();
+  _CMsgJSConfirm_default_instance_.Shutdown();
   delete file_level_metadata[79].reflection;
-  _CMsgOpenSteamURL_default_instance_.Shutdown();
+  _CMsgJSDialogResponse_default_instance_.Shutdown();
   delete file_level_metadata[80].reflection;
-  _CMsgSetCookie_default_instance_.Shutdown();
+  _CMsgCanGoBackAndForward_default_instance_.Shutdown();
   delete file_level_metadata[81].reflection;
-  _CMsgSetTargetFrameRate_default_instance_.Shutdown();
+  _CMsgOpenSteamURL_default_instance_.Shutdown();
   delete file_level_metadata[82].reflection;
-  _CMsgPauseRepaint_default_instance_.Shutdown();
+  _CMsgSetCookie_default_instance_.Shutdown();
   delete file_level_metadata[83].reflection;
-  _CMsgFullRepaint_default_instance_.Shutdown();
+  _CMsgSetTargetFrameRate_default_instance_.Shutdown();
   delete file_level_metadata[84].reflection;
-  _CMsgRequestFullScreen_default_instance_.Shutdown();
+  _CMsgPauseRepaint_default_instance_.Shutdown();
   delete file_level_metadata[85].reflection;
-  _CMsgRequestFullScreenResponse_default_instance_.Shutdown();
+  _CMsgFullRepaint_default_instance_.Shutdown();
   delete file_level_metadata[86].reflection;
-  _CMsgExitFullScreen_default_instance_.Shutdown();
+  _CMsgRequestFullScreen_default_instance_.Shutdown();
   delete file_level_metadata[87].reflection;
-  _CMsgGetCookiesForURL_default_instance_.Shutdown();
+  _CMsgRequestFullScreenResponse_default_instance_.Shutdown();
   delete file_level_metadata[88].reflection;
-  _CCookie_default_instance_.Shutdown();
+  _CMsgExitFullScreen_default_instance_.Shutdown();
   delete file_level_metadata[89].reflection;
-  _CMsgGetCookiesForURLResponse_default_instance_.Shutdown();
+  _CMsgGetCookiesForURL_default_instance_.Shutdown();
   delete file_level_metadata[90].reflection;
-  _CMsgNodeHasFocus_default_instance_.Shutdown();
+  _CCookie_default_instance_.Shutdown();
   delete file_level_metadata[91].reflection;
-  _CMsgZoomToFocusedElement_default_instance_.Shutdown();
+  _CMsgGetCookiesForURLResponse_default_instance_.Shutdown();
   delete file_level_metadata[92].reflection;
-  _CMsgCloseFullScreenFlashIfOpen_default_instance_.Shutdown();
+  _CMsgNodeHasFocus_default_instance_.Shutdown();
   delete file_level_metadata[93].reflection;
-  _CMsgPauseFullScreenFlashMovieIfOpen_default_instance_.Shutdown();
+  _CMsgZoomToFocusedElement_default_instance_.Shutdown();
   delete file_level_metadata[94].reflection;
-  _CMsgFocusedNodeText_default_instance_.Shutdown();
+  _CMsgCloseFullScreenFlashIfOpen_default_instance_.Shutdown();
   delete file_level_metadata[95].reflection;
-  _CMsgFocusedNodeTextResponse_default_instance_.Shutdown();
+  _CMsgPauseFullScreenFlashMovieIfOpen_default_instance_.Shutdown();
   delete file_level_metadata[96].reflection;
-  _CMsgBuildID_default_instance_.Shutdown();
+  _CMsgFocusedNodeText_default_instance_.Shutdown();
   delete file_level_metadata[97].reflection;
-  _CMsgOpenDevTools_default_instance_.Shutdown();
+  _CMsgFocusedNodeTextResponse_default_instance_.Shutdown();
   delete file_level_metadata[98].reflection;
-  _CMsgCloseDevTools_default_instance_.Shutdown();
+  _CMsgBuildID_default_instance_.Shutdown();
   delete file_level_metadata[99].reflection;
-  _CMsgUnlockH264_default_instance_.Shutdown();
+  _CMsgOpenDevTools_default_instance_.Shutdown();
   delete file_level_metadata[100].reflection;
-  _CMsgScreenInformationChanged_default_instance_.Shutdown();
+  _CMsgCloseDevTools_default_instance_.Shutdown();
   delete file_level_metadata[101].reflection;
-  _CMsgClearAllCookies_default_instance_.Shutdown();
+  _CMsgUnlockH264_default_instance_.Shutdown();
   delete file_level_metadata[102].reflection;
-  _CMsgScreenDPI_default_instance_.Shutdown();
+  _CMsgScreenInformationChanged_default_instance_.Shutdown();
   delete file_level_metadata[103].reflection;
-  _CMsgAuthedSteamDomains_default_instance_.Shutdown();
+  _CMsgClearAllCookies_default_instance_.Shutdown();
   delete file_level_metadata[104].reflection;
-  _CMsgSteamAuthNeeded_default_instance_.Shutdown();
+  _CMsgScreenDPI_default_instance_.Shutdown();
   delete file_level_metadata[105].reflection;
-  _CMsgSteamAuthCookiesSet_default_instance_.Shutdown();
+  _CMsgAuthedSteamDomains_default_instance_.Shutdown();
   delete file_level_metadata[106].reflection;
-  _CMsgJSRegisterMethod_default_instance_.Shutdown();
+  _CMsgSteamAuthNeeded_default_instance_.Shutdown();
   delete file_level_metadata[107].reflection;
-  _CJSMethodArgument_default_instance_.Shutdown();
+  _CMsgSteamAuthCookiesSet_default_instance_.Shutdown();
   delete file_level_metadata[108].reflection;
-  _CMsgJSValue_JSObjectProperty_default_instance_.Shutdown();
+  _CMsgJSRegisterMethod_default_instance_.Shutdown();
   delete file_level_metadata[109].reflection;
-  _CMsgJSValue_default_instance_.Shutdown();
+  _CJSMethodArgument_default_instance_.Shutdown();
   delete file_level_metadata[110].reflection;
-  _CMsgJSMethodCall_default_instance_.Shutdown();
+  _CMsgJSValue_JSObjectProperty_default_instance_.Shutdown();
   delete file_level_metadata[111].reflection;
-  _CMsgJSExecuteCallback_default_instance_.Shutdown();
+  _CMsgJSValue_default_instance_.Shutdown();
   delete file_level_metadata[112].reflection;
-  _CMsgJSReleaseCallback_default_instance_.Shutdown();
+  _CMsgJSMethodCall_default_instance_.Shutdown();
   delete file_level_metadata[113].reflection;
-  _CMsgJSRaiseException_default_instance_.Shutdown();
+  _CMsgJSExecuteCallback_default_instance_.Shutdown();
   delete file_level_metadata[114].reflection;
-  _CMsgLoadLocalization_default_instance_.Shutdown();
+  _CMsgJSReleaseCallback_default_instance_.Shutdown();
   delete file_level_metadata[115].reflection;
-  _CMsgEnableSteamClientAPI_default_instance_.Shutdown();
+  _CMsgJSRaiseException_default_instance_.Shutdown();
   delete file_level_metadata[116].reflection;
-  _CMsgJumpListLink_default_instance_.Shutdown();
+  _CMsgLoadLocalization_default_instance_.Shutdown();
   delete file_level_metadata[117].reflection;
-  _CMSgJumpListMRUApp_default_instance_.Shutdown();
+  _CMsgEnableSteamClientAPI_default_instance_.Shutdown();
   delete file_level_metadata[118].reflection;
-  _CMsgSetJumpList_default_instance_.Shutdown();
+  _CMsgJumpListLink_default_instance_.Shutdown();
   delete file_level_metadata[119].reflection;
+  _CMSgJumpListMRUApp_default_instance_.Shutdown();
+  delete file_level_metadata[120].reflection;
+  _CMsgSetJumpList_default_instance_.Shutdown();
+  delete file_level_metadata[121].reflection;
+  _CMsgSetGameOverlayTargetPIDs_default_instance_.Shutdown();
+  delete file_level_metadata[122].reflection;
+  _CMsgGameOverlayTargetTextureID_default_instance_.Shutdown();
+  delete file_level_metadata[123].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -2264,6 +2352,8 @@ void TableStruct::InitDefaultsImpl() {
   _CMsgSetSharedPaintBuffers_default_instance_.DefaultConstruct();
   _CMsgNeedsPaint_default_instance_.DefaultConstruct();
   _CMsgComboNeedsPaint_default_instance_.DefaultConstruct();
+  _CMsgNeedsSharedTexturePaint_default_instance_.DefaultConstruct();
+  _CMsgGameOverlayTexturePaint_default_instance_.DefaultConstruct();
   _CMsgGetZoom_default_instance_.DefaultConstruct();
   _CMsgGetZoomResponse_default_instance_.DefaultConstruct();
   _CMsgLinkAtPosition_default_instance_.DefaultConstruct();
@@ -2318,6 +2408,8 @@ void TableStruct::InitDefaultsImpl() {
   _CMsgJumpListLink_default_instance_.DefaultConstruct();
   _CMSgJumpListMRUApp_default_instance_.DefaultConstruct();
   _CMsgSetJumpList_default_instance_.DefaultConstruct();
+  _CMsgSetGameOverlayTargetPIDs_default_instance_.DefaultConstruct();
+  _CMsgGameOverlayTargetTextureID_default_instance_.DefaultConstruct();
   _CMsgPageSecurity_default_instance_.get_mutable()->security_info_ = const_cast< ::proto::steam::CHTMLPageSecurityInfo*>(
       ::proto::steam::CHTMLPageSecurityInfo::internal_default_instance());
   _CMsgJSValue_JSObjectProperty_default_instance_.get_mutable()->value_ = const_cast< ::proto::steam::CMsgJSValue*>(
@@ -2470,113 +2562,126 @@ void AddDescriptorsImpl() {
       "t\022\026\n\016browser_handle\030\001 \001(\r\022\014\n\004rgba\030\002 \001(\004\022"
       "\030\n\rcombobox_wide\030\003 \001(\r:\0010\022\030\n\rcombobox_ta"
       "ll\030\004 \001(\r:\0010\022\037\n\024shared_memory_handle\030\005 \001("
-      "\004:\0010\022\035\n\022shared_memory_size\030\007 \001(\004:\0010\"%\n\013C"
-      "MsgGetZoom\022\026\n\016browser_handle\030\001 \001(\r\";\n\023CM"
-      "sgGetZoomResponse\022\026\n\016browser_handle\030\001 \001("
-      "\r\022\014\n\004zoom\030\002 \001(\002\"B\n\022CMsgLinkAtPosition\022\026\n"
-      "\016browser_handle\030\001 \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 "
-      "\001(\r\"z\n\032CMsgLinkAtPositionResponse\022\026\n\016bro"
-      "wser_handle\030\001 \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 \001(\r\022"
-      "\013\n\003url\030\004 \001(\t\022\021\n\tblivelink\030\005 \001(\010\022\016\n\006binpu"
-      "t\030\006 \001(\010\"K\n\033CMsgZoomToElementAtPosition\022\026"
-      "\n\016browser_handle\030\001 \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003"
-      " \001(\r\"^\n#CMsgZoomToElementAtPositionRespo"
-      "nse\022\026\n\016browser_handle\030\001 \001(\r\022\r\n\005scale\030\002 \001"
-      "(\002\022\020\n\010duration\030\003 \001(\002\"S\n\024CMsgScalePageToV"
-      "alue\022\026\n\016browser_handle\030\001 \001(\r\022\r\n\005scale\030\002 "
-      "\001(\002\022\t\n\001x\030\003 \001(\002\022\t\n\001y\030\004 \001(\002\"D\n\034CMsgScalePa"
-      "geToValueResponse\022\026\n\016browser_handle\030\001 \001("
-      "\r\022\014\n\004zoom\030\002 \001(\002\"j\n\022CMsgSavePageToJPEG\022\026\n"
-      "\016browser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\020\n\010fi"
-      "lename\030\003 \001(\t\022\r\n\005width\030\004 \001(\r\022\016\n\006height\030\005 "
-      "\001(\r\"S\n\032CMsgSavePageToJPEGResponse\022\026\n\016bro"
-      "wser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022\020\n\010filena"
-      "me\030\003 \001(\t\"6\n\013CMsgJSAlert\022\026\n\016browser_handl"
-      "e\030\001 \001(\r\022\017\n\007message\030\002 \001(\t\"8\n\rCMsgJSConfir"
-      "m\022\026\n\016browser_handle\030\001 \001(\r\022\017\n\007message\030\002 \001"
-      "(\t\">\n\024CMsgJSDialogResponse\022\026\n\016browser_ha"
-      "ndle\030\001 \001(\r\022\016\n\006result\030\002 \001(\010\"V\n\027CMsgCanGoB"
-      "ackAndForward\022\026\n\016browser_handle\030\001 \001(\r\022\017\n"
-      "\007bgoback\030\002 \001(\010\022\022\n\nbgoforward\030\003 \001(\010\"7\n\020CM"
-      "sgOpenSteamURL\022\026\n\016browser_handle\030\001 \001(\r\022\013"
-      "\n\003url\030\002 \001(\t\"z\n\rCMsgSetCookie\022\013\n\003key\030\001 \001("
-      "\t\022\r\n\005value\030\002 \001(\t\022\014\n\004path\030\003 \001(\t\022\014\n\004host\030\004"
-      " \001(\t\022\017\n\007expires\030\005 \001(\r\022\016\n\006secure\030\006 \001(\010\022\020\n"
-      "\010httponly\030\007 \001(\010\"J\n\026CMsgSetTargetFrameRat"
-      "e\022\026\n\016browser_handle\030\001 \001(\r\022\030\n\020nTargetFram"
-      "eRate\030\002 \001(\r\"*\n\020CMsgPauseRepaint\022\026\n\016brows"
-      "er_handle\030\001 \001(\r\")\n\017CMsgFullRepaint\022\026\n\016br"
-      "owser_handle\030\001 \001(\r\"/\n\025CMsgRequestFullScr"
-      "een\022\026\n\016browser_handle\030\001 \001(\r\"G\n\035CMsgReque"
-      "stFullScreenResponse\022\026\n\016browser_handle\030\001"
-      " \001(\r\022\016\n\006ballow\030\002 \001(\010\",\n\022CMsgExitFullScre"
-      "en\022\026\n\016browser_handle\030\001 \001(\r\";\n\024CMsgGetCoo"
-      "kiesForURL\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003ur"
-      "l\030\002 \001(\t\"D\n\007CCookie\022\014\n\004name\030\001 \001(\t\022\r\n\005valu"
-      "e\030\002 \001(\t\022\016\n\006domain\030\003 \001(\t\022\014\n\004path\030\004 \001(\t\"j\n"
-      "\034CMsgGetCookiesForURLResponse\022\026\n\016browser"
-      "_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\022%\n\007cookies\030\003 "
-      "\003(\0132\024.proto.steam.CCookie\"\252\001\n\020CMsgNodeHa"
-      "sFocus\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006bInput"
-      "\030\002 \001(\010\022\014\n\004name\030\003 \001(\t\022\026\n\016elementtagname\030\004"
-      " \001(\t\022\030\n\020searchbuttontext\030\005 \001(\t\022\032\n\022bHasMu"
-      "ltipleInputs\030\006 \001(\010\022\022\n\ninput_type\030\007 \001(\t\"2"
-      "\n\030CMsgZoomToFocusedElement\022\026\n\016browser_ha"
-      "ndle\030\001 \001(\r\"8\n\036CMsgCloseFullScreenFlashIf"
-      "Open\022\026\n\016browser_handle\030\001 \001(\r\"=\n#CMsgPaus"
-      "eFullScreenFlashMovieIfOpen\022\026\n\016browser_h"
-      "andle\030\001 \001(\r\"-\n\023CMsgFocusedNodeText\022\026\n\016br"
-      "owser_handle\030\001 \001(\r\"D\n\033CMsgFocusedNodeTex"
-      "tResponse\022\026\n\016browser_handle\030\001 \001(\r\022\r\n\005val"
-      "ue\030\002 \001(\t\"\037\n\013CMsgBuildID\022\020\n\010build_id\030\001 \001("
-      "\004\"*\n\020CMsgOpenDevTools\022\026\n\016browser_handle\030"
-      "\001 \001(\r\"+\n\021CMsgCloseDevTools\022\026\n\016browser_ha"
-      "ndle\030\001 \001(\r\"=\n\016CMsgUnlockH264\022\026\n\016browser_"
-      "handle\030\001 \001(\r\022\023\n\013unlock_code\030\002 \001(\t\"g\n\034CMs"
-      "gScreenInformationChanged\022\026\n\016browser_han"
-      "dle\030\001 \001(\r\022\026\n\016override_width\030\002 \001(\r\022\027\n\017ove"
-      "rride_height\030\003 \001(\r\"-\n\023CMsgClearAllCookie"
-      "s\022\026\n\016browser_handle\030\001 \001(\r\"<\n\rCMsgScreenD"
-      "PI\022\026\n\016browser_handle\030\001 \001(\r\022\023\n\013dpi_scalin"
-      "g\030\002 \001(\002\")\n\026CMsgAuthedSteamDomains\022\017\n\007dom"
-      "ains\030\001 \003(\t\"%\n\023CMsgSteamAuthNeeded\022\016\n\006fil"
-      "ler\030\001 \001(\010\"*\n\027CMsgSteamAuthCookiesSet\022\017\n\007"
-      "success\030\001 \001(\010\"\226\001\n\024CMsgJSRegisterMethod\022\026"
-      "\n\016browser_handle\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022X\n\013"
-      "method_type\030\003 \001(\0162\".proto.steam.EJSRegis"
-      "terMethodType:\037k_EJSRegisterMethodType_I"
-      "nvalid\"\?\n\021CJSMethodArgument\022\021\n\tjson_data"
-      "\030\001 \001(\t\022\027\n\017function_handle\030\002 \001(\004\"\362\002\n\013CMsg"
-      "JSValue\022\022\n\nbool_value\030\001 \001(\010\022\021\n\tint_value"
-      "\030\002 \001(\005\022\022\n\nuint_value\030\003 \001(\r\022\023\n\013float_valu"
-      "e\030\004 \001(\002\022\024\n\014string_value\030\005 \001(\t\022\027\n\017functio"
-      "n_handle\030\006 \001(\004\022\020\n\010is_array\030\010 \001(\010\022.\n\014arra"
-      "y_values\030\t \003(\0132\030.proto.steam.CMsgJSValue"
-      "\022\021\n\tis_object\030\n \001(\010\022D\n\021object_properties"
-      "\030\013 \003(\0132).proto.steam.CMsgJSValue.JSObjec"
-      "tProperty\032I\n\020JSObjectProperty\022\014\n\004name\030\001 "
-      "\001(\t\022\'\n\005value\030\002 \001(\0132\030.proto.steam.CMsgJSV"
-      "alue\"e\n\020CMsgJSMethodCall\022\026\n\016browser_hand"
-      "le\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022+\n\targuments\030\003 \003("
-      "\0132\030.proto.steam.CMsgJSValue\"u\n\025CMsgJSExe"
-      "cuteCallback\022\026\n\016browser_handle\030\001 \001(\r\022\027\n\017"
-      "function_handle\030\002 \001(\004\022+\n\targuments\030\003 \003(\013"
-      "2\030.proto.steam.CMsgJSValue\"H\n\025CMsgJSRele"
-      "aseCallback\022\026\n\016browser_handle\030\001 \001(\r\022\027\n\017f"
-      "unction_handle\030\002 \001(\004\"A\n\024CMsgJSRaiseExcep"
-      "tion\022\026\n\016browser_handle\030\001 \001(\r\022\021\n\texceptio"
-      "n\030\002 \001(\t\"[\n\024CMsgLoadLocalization\022\026\n\016brows"
-      "er_handle\030\001 \001(\r\022\031\n\021localization_path\030\002 \001"
-      "(\t\022\020\n\010language\030\003 \001(\t\"2\n\030CMsgEnableSteamC"
-      "lientAPI\022\026\n\016browser_handle\030\001 \001(\r\"M\n\020CMsg"
-      "JumpListLink\022\024\n\014display_name\030\001 \001(\t\022\020\n\010ur"
-      "l_link\030\002 \001(\t\022\021\n\ticon_path\030\003 \001(\t\"^\n\022CMSgJ"
-      "umpListMRUApp\022\r\n\005appid\030\001 \001(\r\022\024\n\014display_"
-      "name\030\002 \001(\t\022\020\n\010url_link\030\003 \001(\t\022\021\n\ticon_pat"
-      "h\030\004 \001(\t\"\225\001\n\017CMsgSetJumpList\022\022\n\nsteam_pat"
-      "h\030\001 \001(\t\022\021\n\tmru_title\030\002 \001(\t\022-\n\004apps\030\003 \003(\013"
-      "2\037.proto.steam.CMSgJumpListMRUApp\022,\n\005lin"
-      "ks\030\004 \003(\0132\035.proto.steam.CMsgJumpListLink*"
+      "\004:\0010\022\035\n\022shared_memory_size\030\007 \001(\004:\0010\"\263\001\n\033"
+      "CMsgNeedsSharedTexturePaint\022\026\n\016browser_h"
+      "andle\030\001 \001(\r\022\024\n\014share_handle\030\002 \001(\r\022\r\n\005wid"
+      "th\030\003 \001(\r\022\016\n\006height\030\004 \001(\r\022\017\n\007scrollx\030\005 \001("
+      "\r\022\017\n\007scrolly\030\006 \001(\r\022\021\n\tpagescale\030\007 \001(\002\022\022\n"
+      "\npageserial\030\010 \001(\r\"\235\001\n\033CMsgGameOverlayTex"
+      "turePaint\022\026\n\016browser_handle\030\001 \001(\r\022\r\n\005wid"
+      "th\030\003 \001(\r\022\016\n\006height\030\004 \001(\r\022\017\n\007scrollx\030\005 \001("
+      "\r\022\017\n\007scrolly\030\006 \001(\r\022\021\n\tpagescale\030\007 \001(\002\022\022\n"
+      "\npageserial\030\010 \001(\r\"%\n\013CMsgGetZoom\022\026\n\016brow"
+      "ser_handle\030\001 \001(\r\";\n\023CMsgGetZoomResponse\022"
+      "\026\n\016browser_handle\030\001 \001(\r\022\014\n\004zoom\030\002 \001(\002\"B\n"
+      "\022CMsgLinkAtPosition\022\026\n\016browser_handle\030\001 "
+      "\001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 \001(\r\"z\n\032CMsgLinkAtP"
+      "ositionResponse\022\026\n\016browser_handle\030\001 \001(\r\022"
+      "\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 \001(\r\022\013\n\003url\030\004 \001(\t\022\021\n\tbl"
+      "ivelink\030\005 \001(\010\022\016\n\006binput\030\006 \001(\010\"K\n\033CMsgZoo"
+      "mToElementAtPosition\022\026\n\016browser_handle\030\001"
+      " \001(\r\022\t\n\001x\030\002 \001(\r\022\t\n\001y\030\003 \001(\r\"^\n#CMsgZoomTo"
+      "ElementAtPositionResponse\022\026\n\016browser_han"
+      "dle\030\001 \001(\r\022\r\n\005scale\030\002 \001(\002\022\020\n\010duration\030\003 \001"
+      "(\002\"S\n\024CMsgScalePageToValue\022\026\n\016browser_ha"
+      "ndle\030\001 \001(\r\022\r\n\005scale\030\002 \001(\002\022\t\n\001x\030\003 \001(\002\022\t\n\001"
+      "y\030\004 \001(\002\"D\n\034CMsgScalePageToValueResponse\022"
+      "\026\n\016browser_handle\030\001 \001(\r\022\014\n\004zoom\030\002 \001(\002\"j\n"
+      "\022CMsgSavePageToJPEG\022\026\n\016browser_handle\030\001 "
+      "\001(\r\022\013\n\003url\030\002 \001(\t\022\020\n\010filename\030\003 \001(\t\022\r\n\005wi"
+      "dth\030\004 \001(\r\022\016\n\006height\030\005 \001(\r\"S\n\032CMsgSavePag"
+      "eToJPEGResponse\022\026\n\016browser_handle\030\001 \001(\r\022"
+      "\013\n\003url\030\002 \001(\t\022\020\n\010filename\030\003 \001(\t\"6\n\013CMsgJS"
+      "Alert\022\026\n\016browser_handle\030\001 \001(\r\022\017\n\007message"
+      "\030\002 \001(\t\"8\n\rCMsgJSConfirm\022\026\n\016browser_handl"
+      "e\030\001 \001(\r\022\017\n\007message\030\002 \001(\t\">\n\024CMsgJSDialog"
+      "Response\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006resu"
+      "lt\030\002 \001(\010\"V\n\027CMsgCanGoBackAndForward\022\026\n\016b"
+      "rowser_handle\030\001 \001(\r\022\017\n\007bgoback\030\002 \001(\010\022\022\n\n"
+      "bgoforward\030\003 \001(\010\"7\n\020CMsgOpenSteamURL\022\026\n\016"
+      "browser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\"z\n\rCMs"
+      "gSetCookie\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022\014"
+      "\n\004path\030\003 \001(\t\022\014\n\004host\030\004 \001(\t\022\017\n\007expires\030\005 "
+      "\001(\r\022\016\n\006secure\030\006 \001(\010\022\020\n\010httponly\030\007 \001(\010\"J\n"
+      "\026CMsgSetTargetFrameRate\022\026\n\016browser_handl"
+      "e\030\001 \001(\r\022\030\n\020nTargetFrameRate\030\002 \001(\r\"*\n\020CMs"
+      "gPauseRepaint\022\026\n\016browser_handle\030\001 \001(\r\")\n"
+      "\017CMsgFullRepaint\022\026\n\016browser_handle\030\001 \001(\r"
+      "\"/\n\025CMsgRequestFullScreen\022\026\n\016browser_han"
+      "dle\030\001 \001(\r\"G\n\035CMsgRequestFullScreenRespon"
+      "se\022\026\n\016browser_handle\030\001 \001(\r\022\016\n\006ballow\030\002 \001"
+      "(\010\",\n\022CMsgExitFullScreen\022\026\n\016browser_hand"
+      "le\030\001 \001(\r\";\n\024CMsgGetCookiesForURL\022\026\n\016brow"
+      "ser_handle\030\001 \001(\r\022\013\n\003url\030\002 \001(\t\"D\n\007CCookie"
+      "\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022\016\n\006domain\030"
+      "\003 \001(\t\022\014\n\004path\030\004 \001(\t\"j\n\034CMsgGetCookiesFor"
+      "URLResponse\022\026\n\016browser_handle\030\001 \001(\r\022\013\n\003u"
+      "rl\030\002 \001(\t\022%\n\007cookies\030\003 \003(\0132\024.proto.steam."
+      "CCookie\"\252\001\n\020CMsgNodeHasFocus\022\026\n\016browser_"
+      "handle\030\001 \001(\r\022\016\n\006bInput\030\002 \001(\010\022\014\n\004name\030\003 \001"
+      "(\t\022\026\n\016elementtagname\030\004 \001(\t\022\030\n\020searchbutt"
+      "ontext\030\005 \001(\t\022\032\n\022bHasMultipleInputs\030\006 \001(\010"
+      "\022\022\n\ninput_type\030\007 \001(\t\"2\n\030CMsgZoomToFocuse"
+      "dElement\022\026\n\016browser_handle\030\001 \001(\r\"8\n\036CMsg"
+      "CloseFullScreenFlashIfOpen\022\026\n\016browser_ha"
+      "ndle\030\001 \001(\r\"=\n#CMsgPauseFullScreenFlashMo"
+      "vieIfOpen\022\026\n\016browser_handle\030\001 \001(\r\"-\n\023CMs"
+      "gFocusedNodeText\022\026\n\016browser_handle\030\001 \001(\r"
+      "\"D\n\033CMsgFocusedNodeTextResponse\022\026\n\016brows"
+      "er_handle\030\001 \001(\r\022\r\n\005value\030\002 \001(\t\"\037\n\013CMsgBu"
+      "ildID\022\020\n\010build_id\030\001 \001(\004\"*\n\020CMsgOpenDevTo"
+      "ols\022\026\n\016browser_handle\030\001 \001(\r\"+\n\021CMsgClose"
+      "DevTools\022\026\n\016browser_handle\030\001 \001(\r\"=\n\016CMsg"
+      "UnlockH264\022\026\n\016browser_handle\030\001 \001(\r\022\023\n\013un"
+      "lock_code\030\002 \001(\t\"g\n\034CMsgScreenInformation"
+      "Changed\022\026\n\016browser_handle\030\001 \001(\r\022\026\n\016overr"
+      "ide_width\030\002 \001(\r\022\027\n\017override_height\030\003 \001(\r"
+      "\"-\n\023CMsgClearAllCookies\022\026\n\016browser_handl"
+      "e\030\001 \001(\r\"<\n\rCMsgScreenDPI\022\026\n\016browser_hand"
+      "le\030\001 \001(\r\022\023\n\013dpi_scaling\030\002 \001(\002\")\n\026CMsgAut"
+      "hedSteamDomains\022\017\n\007domains\030\001 \003(\t\"%\n\023CMsg"
+      "SteamAuthNeeded\022\016\n\006filler\030\001 \001(\010\"*\n\027CMsgS"
+      "teamAuthCookiesSet\022\017\n\007success\030\001 \001(\010\"\226\001\n\024"
+      "CMsgJSRegisterMethod\022\026\n\016browser_handle\030\001"
+      " \001(\r\022\014\n\004name\030\002 \001(\t\022X\n\013method_type\030\003 \001(\0162"
+      "\".proto.steam.EJSRegisterMethodType:\037k_E"
+      "JSRegisterMethodType_Invalid\"\?\n\021CJSMetho"
+      "dArgument\022\021\n\tjson_data\030\001 \001(\t\022\027\n\017function"
+      "_handle\030\002 \001(\004\"\362\002\n\013CMsgJSValue\022\022\n\nbool_va"
+      "lue\030\001 \001(\010\022\021\n\tint_value\030\002 \001(\005\022\022\n\nuint_val"
+      "ue\030\003 \001(\r\022\023\n\013float_value\030\004 \001(\002\022\024\n\014string_"
+      "value\030\005 \001(\t\022\027\n\017function_handle\030\006 \001(\004\022\020\n\010"
+      "is_array\030\010 \001(\010\022.\n\014array_values\030\t \003(\0132\030.p"
+      "roto.steam.CMsgJSValue\022\021\n\tis_object\030\n \001("
+      "\010\022D\n\021object_properties\030\013 \003(\0132).proto.ste"
+      "am.CMsgJSValue.JSObjectProperty\032I\n\020JSObj"
+      "ectProperty\022\014\n\004name\030\001 \001(\t\022\'\n\005value\030\002 \001(\013"
+      "2\030.proto.steam.CMsgJSValue\"e\n\020CMsgJSMeth"
+      "odCall\022\026\n\016browser_handle\030\001 \001(\r\022\014\n\004name\030\002"
+      " \001(\t\022+\n\targuments\030\003 \003(\0132\030.proto.steam.CM"
+      "sgJSValue\"u\n\025CMsgJSExecuteCallback\022\026\n\016br"
+      "owser_handle\030\001 \001(\r\022\027\n\017function_handle\030\002 "
+      "\001(\004\022+\n\targuments\030\003 \003(\0132\030.proto.steam.CMs"
+      "gJSValue\"H\n\025CMsgJSReleaseCallback\022\026\n\016bro"
+      "wser_handle\030\001 \001(\r\022\027\n\017function_handle\030\002 \001"
+      "(\004\"A\n\024CMsgJSRaiseException\022\026\n\016browser_ha"
+      "ndle\030\001 \001(\r\022\021\n\texception\030\002 \001(\t\"[\n\024CMsgLoa"
+      "dLocalization\022\026\n\016browser_handle\030\001 \001(\r\022\031\n"
+      "\021localization_path\030\002 \001(\t\022\020\n\010language\030\003 \001"
+      "(\t\"2\n\030CMsgEnableSteamClientAPI\022\026\n\016browse"
+      "r_handle\030\001 \001(\r\"M\n\020CMsgJumpListLink\022\024\n\014di"
+      "splay_name\030\001 \001(\t\022\020\n\010url_link\030\002 \001(\t\022\021\n\tic"
+      "on_path\030\003 \001(\t\"^\n\022CMSgJumpListMRUApp\022\r\n\005a"
+      "ppid\030\001 \001(\r\022\024\n\014display_name\030\002 \001(\t\022\020\n\010url_"
+      "link\030\003 \001(\t\022\021\n\ticon_path\030\004 \001(\t\"\225\001\n\017CMsgSe"
+      "tJumpList\022\022\n\nsteam_path\030\001 \001(\t\022\021\n\tmru_tit"
+      "le\030\002 \001(\t\022-\n\004apps\030\003 \003(\0132\037.proto.steam.CMS"
+      "gJumpListMRUApp\022,\n\005links\030\004 \003(\0132\035.proto.s"
+      "team.CMsgJumpListLink\"J\n\034CMsgSetGameOver"
+      "layTargetPIDs\022\026\n\016browser_handle\030\001 \001(\r\022\022\n"
+      "\ntarget_pid\030\002 \003(\r\"d\n\036CMsgGameOverlayTarg"
+      "etTextureID\022\026\n\016browser_handle\030\001 \001(\r\022\022\n\nt"
+      "arget_pid\030\002 \001(\r\022\026\n\016texture_handle\030\003 \001(\r*"
       "\255\001\n\025EJSRegisterMethodType\022#\n\037k_EJSRegist"
       "erMethodType_Invalid\020\000\022$\n k_EJSRegisterM"
       "ethodType_Function\020\001\022$\n k_EJSRegisterMet"
@@ -2584,7 +2689,7 @@ void AddDescriptorsImpl() {
       "dType_Promise\020\003B\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 10022);
+      descriptor, 10542);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "htmlmessages.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -31874,6 +31979,1336 @@ void CMsgComboNeedsPaint::set_shared_memory_size(::google::protobuf::uint64 valu
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CMsgNeedsSharedTexturePaint::kBrowserHandleFieldNumber;
+const int CMsgNeedsSharedTexturePaint::kShareHandleFieldNumber;
+const int CMsgNeedsSharedTexturePaint::kWidthFieldNumber;
+const int CMsgNeedsSharedTexturePaint::kHeightFieldNumber;
+const int CMsgNeedsSharedTexturePaint::kScrollxFieldNumber;
+const int CMsgNeedsSharedTexturePaint::kScrollyFieldNumber;
+const int CMsgNeedsSharedTexturePaint::kPagescaleFieldNumber;
+const int CMsgNeedsSharedTexturePaint::kPageserialFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CMsgNeedsSharedTexturePaint::CMsgNeedsSharedTexturePaint()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_htmlmessages_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CMsgNeedsSharedTexturePaint)
+}
+CMsgNeedsSharedTexturePaint::CMsgNeedsSharedTexturePaint(const CMsgNeedsSharedTexturePaint& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&browser_handle_, &from.browser_handle_,
+    reinterpret_cast<char*>(&pageserial_) -
+    reinterpret_cast<char*>(&browser_handle_) + sizeof(pageserial_));
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CMsgNeedsSharedTexturePaint)
+}
+
+void CMsgNeedsSharedTexturePaint::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&browser_handle_, 0, reinterpret_cast<char*>(&pageserial_) -
+    reinterpret_cast<char*>(&browser_handle_) + sizeof(pageserial_));
+}
+
+CMsgNeedsSharedTexturePaint::~CMsgNeedsSharedTexturePaint() {
+  // @@protoc_insertion_point(destructor:proto.steam.CMsgNeedsSharedTexturePaint)
+  SharedDtor();
+}
+
+void CMsgNeedsSharedTexturePaint::SharedDtor() {
+}
+
+void CMsgNeedsSharedTexturePaint::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CMsgNeedsSharedTexturePaint::descriptor() {
+  protobuf_htmlmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_htmlmessages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CMsgNeedsSharedTexturePaint& CMsgNeedsSharedTexturePaint::default_instance() {
+  protobuf_htmlmessages_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CMsgNeedsSharedTexturePaint* CMsgNeedsSharedTexturePaint::New(::google::protobuf::Arena* arena) const {
+  CMsgNeedsSharedTexturePaint* n = new CMsgNeedsSharedTexturePaint;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CMsgNeedsSharedTexturePaint::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CMsgNeedsSharedTexturePaint)
+  if (_has_bits_[0 / 32] & 255u) {
+    ::memset(&browser_handle_, 0, reinterpret_cast<char*>(&pageserial_) -
+      reinterpret_cast<char*>(&browser_handle_) + sizeof(pageserial_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CMsgNeedsSharedTexturePaint::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CMsgNeedsSharedTexturePaint)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 browser_handle = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_browser_handle();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &browser_handle_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 share_handle = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
+          set_has_share_handle();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &share_handle_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 width = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
+          set_has_width();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &width_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 height = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
+          set_has_height();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &height_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 scrollx = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
+          set_has_scrollx();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &scrollx_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 scrolly = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u)) {
+          set_has_scrolly();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &scrolly_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional float pagescale = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(61u)) {
+          set_has_pagescale();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &pagescale_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 pageserial = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(64u)) {
+          set_has_pageserial();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &pageserial_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CMsgNeedsSharedTexturePaint)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CMsgNeedsSharedTexturePaint)
+  return false;
+#undef DO_
+}
+
+void CMsgNeedsSharedTexturePaint::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CMsgNeedsSharedTexturePaint)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 browser_handle = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->browser_handle(), output);
+  }
+
+  // optional uint32 share_handle = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->share_handle(), output);
+  }
+
+  // optional uint32 width = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->width(), output);
+  }
+
+  // optional uint32 height = 4;
+  if (cached_has_bits & 0x00000008u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->height(), output);
+  }
+
+  // optional uint32 scrollx = 5;
+  if (cached_has_bits & 0x00000010u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->scrollx(), output);
+  }
+
+  // optional uint32 scrolly = 6;
+  if (cached_has_bits & 0x00000020u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(6, this->scrolly(), output);
+  }
+
+  // optional float pagescale = 7;
+  if (cached_has_bits & 0x00000040u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->pagescale(), output);
+  }
+
+  // optional uint32 pageserial = 8;
+  if (cached_has_bits & 0x00000080u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(8, this->pageserial(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CMsgNeedsSharedTexturePaint)
+}
+
+::google::protobuf::uint8* CMsgNeedsSharedTexturePaint::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CMsgNeedsSharedTexturePaint)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 browser_handle = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->browser_handle(), target);
+  }
+
+  // optional uint32 share_handle = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->share_handle(), target);
+  }
+
+  // optional uint32 width = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->width(), target);
+  }
+
+  // optional uint32 height = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->height(), target);
+  }
+
+  // optional uint32 scrollx = 5;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->scrollx(), target);
+  }
+
+  // optional uint32 scrolly = 6;
+  if (cached_has_bits & 0x00000020u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(6, this->scrolly(), target);
+  }
+
+  // optional float pagescale = 7;
+  if (cached_has_bits & 0x00000040u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->pagescale(), target);
+  }
+
+  // optional uint32 pageserial = 8;
+  if (cached_has_bits & 0x00000080u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(8, this->pageserial(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CMsgNeedsSharedTexturePaint)
+  return target;
+}
+
+size_t CMsgNeedsSharedTexturePaint::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CMsgNeedsSharedTexturePaint)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 255u) {
+    // optional uint32 browser_handle = 1;
+    if (has_browser_handle()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->browser_handle());
+    }
+
+    // optional uint32 share_handle = 2;
+    if (has_share_handle()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->share_handle());
+    }
+
+    // optional uint32 width = 3;
+    if (has_width()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->width());
+    }
+
+    // optional uint32 height = 4;
+    if (has_height()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->height());
+    }
+
+    // optional uint32 scrollx = 5;
+    if (has_scrollx()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->scrollx());
+    }
+
+    // optional uint32 scrolly = 6;
+    if (has_scrolly()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->scrolly());
+    }
+
+    // optional float pagescale = 7;
+    if (has_pagescale()) {
+      total_size += 1 + 4;
+    }
+
+    // optional uint32 pageserial = 8;
+    if (has_pageserial()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->pageserial());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CMsgNeedsSharedTexturePaint::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CMsgNeedsSharedTexturePaint)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CMsgNeedsSharedTexturePaint* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CMsgNeedsSharedTexturePaint>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CMsgNeedsSharedTexturePaint)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CMsgNeedsSharedTexturePaint)
+    MergeFrom(*source);
+  }
+}
+
+void CMsgNeedsSharedTexturePaint::MergeFrom(const CMsgNeedsSharedTexturePaint& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CMsgNeedsSharedTexturePaint)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 255u) {
+    if (cached_has_bits & 0x00000001u) {
+      browser_handle_ = from.browser_handle_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      share_handle_ = from.share_handle_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      width_ = from.width_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      height_ = from.height_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      scrollx_ = from.scrollx_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      scrolly_ = from.scrolly_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      pagescale_ = from.pagescale_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      pageserial_ = from.pageserial_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CMsgNeedsSharedTexturePaint::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CMsgNeedsSharedTexturePaint)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CMsgNeedsSharedTexturePaint::CopyFrom(const CMsgNeedsSharedTexturePaint& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CMsgNeedsSharedTexturePaint)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CMsgNeedsSharedTexturePaint::IsInitialized() const {
+  return true;
+}
+
+void CMsgNeedsSharedTexturePaint::Swap(CMsgNeedsSharedTexturePaint* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CMsgNeedsSharedTexturePaint::InternalSwap(CMsgNeedsSharedTexturePaint* other) {
+  std::swap(browser_handle_, other->browser_handle_);
+  std::swap(share_handle_, other->share_handle_);
+  std::swap(width_, other->width_);
+  std::swap(height_, other->height_);
+  std::swap(scrollx_, other->scrollx_);
+  std::swap(scrolly_, other->scrolly_);
+  std::swap(pagescale_, other->pagescale_);
+  std::swap(pageserial_, other->pageserial_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CMsgNeedsSharedTexturePaint::GetMetadata() const {
+  protobuf_htmlmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_htmlmessages_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CMsgNeedsSharedTexturePaint
+
+// optional uint32 browser_handle = 1;
+bool CMsgNeedsSharedTexturePaint::has_browser_handle() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CMsgNeedsSharedTexturePaint::set_has_browser_handle() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CMsgNeedsSharedTexturePaint::clear_has_browser_handle() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CMsgNeedsSharedTexturePaint::clear_browser_handle() {
+  browser_handle_ = 0u;
+  clear_has_browser_handle();
+}
+::google::protobuf::uint32 CMsgNeedsSharedTexturePaint::browser_handle() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgNeedsSharedTexturePaint.browser_handle)
+  return browser_handle_;
+}
+void CMsgNeedsSharedTexturePaint::set_browser_handle(::google::protobuf::uint32 value) {
+  set_has_browser_handle();
+  browser_handle_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgNeedsSharedTexturePaint.browser_handle)
+}
+
+// optional uint32 share_handle = 2;
+bool CMsgNeedsSharedTexturePaint::has_share_handle() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CMsgNeedsSharedTexturePaint::set_has_share_handle() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CMsgNeedsSharedTexturePaint::clear_has_share_handle() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CMsgNeedsSharedTexturePaint::clear_share_handle() {
+  share_handle_ = 0u;
+  clear_has_share_handle();
+}
+::google::protobuf::uint32 CMsgNeedsSharedTexturePaint::share_handle() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgNeedsSharedTexturePaint.share_handle)
+  return share_handle_;
+}
+void CMsgNeedsSharedTexturePaint::set_share_handle(::google::protobuf::uint32 value) {
+  set_has_share_handle();
+  share_handle_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgNeedsSharedTexturePaint.share_handle)
+}
+
+// optional uint32 width = 3;
+bool CMsgNeedsSharedTexturePaint::has_width() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CMsgNeedsSharedTexturePaint::set_has_width() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CMsgNeedsSharedTexturePaint::clear_has_width() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CMsgNeedsSharedTexturePaint::clear_width() {
+  width_ = 0u;
+  clear_has_width();
+}
+::google::protobuf::uint32 CMsgNeedsSharedTexturePaint::width() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgNeedsSharedTexturePaint.width)
+  return width_;
+}
+void CMsgNeedsSharedTexturePaint::set_width(::google::protobuf::uint32 value) {
+  set_has_width();
+  width_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgNeedsSharedTexturePaint.width)
+}
+
+// optional uint32 height = 4;
+bool CMsgNeedsSharedTexturePaint::has_height() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void CMsgNeedsSharedTexturePaint::set_has_height() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void CMsgNeedsSharedTexturePaint::clear_has_height() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void CMsgNeedsSharedTexturePaint::clear_height() {
+  height_ = 0u;
+  clear_has_height();
+}
+::google::protobuf::uint32 CMsgNeedsSharedTexturePaint::height() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgNeedsSharedTexturePaint.height)
+  return height_;
+}
+void CMsgNeedsSharedTexturePaint::set_height(::google::protobuf::uint32 value) {
+  set_has_height();
+  height_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgNeedsSharedTexturePaint.height)
+}
+
+// optional uint32 scrollx = 5;
+bool CMsgNeedsSharedTexturePaint::has_scrollx() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void CMsgNeedsSharedTexturePaint::set_has_scrollx() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void CMsgNeedsSharedTexturePaint::clear_has_scrollx() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void CMsgNeedsSharedTexturePaint::clear_scrollx() {
+  scrollx_ = 0u;
+  clear_has_scrollx();
+}
+::google::protobuf::uint32 CMsgNeedsSharedTexturePaint::scrollx() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgNeedsSharedTexturePaint.scrollx)
+  return scrollx_;
+}
+void CMsgNeedsSharedTexturePaint::set_scrollx(::google::protobuf::uint32 value) {
+  set_has_scrollx();
+  scrollx_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgNeedsSharedTexturePaint.scrollx)
+}
+
+// optional uint32 scrolly = 6;
+bool CMsgNeedsSharedTexturePaint::has_scrolly() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+void CMsgNeedsSharedTexturePaint::set_has_scrolly() {
+  _has_bits_[0] |= 0x00000020u;
+}
+void CMsgNeedsSharedTexturePaint::clear_has_scrolly() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+void CMsgNeedsSharedTexturePaint::clear_scrolly() {
+  scrolly_ = 0u;
+  clear_has_scrolly();
+}
+::google::protobuf::uint32 CMsgNeedsSharedTexturePaint::scrolly() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgNeedsSharedTexturePaint.scrolly)
+  return scrolly_;
+}
+void CMsgNeedsSharedTexturePaint::set_scrolly(::google::protobuf::uint32 value) {
+  set_has_scrolly();
+  scrolly_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgNeedsSharedTexturePaint.scrolly)
+}
+
+// optional float pagescale = 7;
+bool CMsgNeedsSharedTexturePaint::has_pagescale() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+void CMsgNeedsSharedTexturePaint::set_has_pagescale() {
+  _has_bits_[0] |= 0x00000040u;
+}
+void CMsgNeedsSharedTexturePaint::clear_has_pagescale() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+void CMsgNeedsSharedTexturePaint::clear_pagescale() {
+  pagescale_ = 0;
+  clear_has_pagescale();
+}
+float CMsgNeedsSharedTexturePaint::pagescale() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgNeedsSharedTexturePaint.pagescale)
+  return pagescale_;
+}
+void CMsgNeedsSharedTexturePaint::set_pagescale(float value) {
+  set_has_pagescale();
+  pagescale_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgNeedsSharedTexturePaint.pagescale)
+}
+
+// optional uint32 pageserial = 8;
+bool CMsgNeedsSharedTexturePaint::has_pageserial() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+void CMsgNeedsSharedTexturePaint::set_has_pageserial() {
+  _has_bits_[0] |= 0x00000080u;
+}
+void CMsgNeedsSharedTexturePaint::clear_has_pageserial() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+void CMsgNeedsSharedTexturePaint::clear_pageserial() {
+  pageserial_ = 0u;
+  clear_has_pageserial();
+}
+::google::protobuf::uint32 CMsgNeedsSharedTexturePaint::pageserial() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgNeedsSharedTexturePaint.pageserial)
+  return pageserial_;
+}
+void CMsgNeedsSharedTexturePaint::set_pageserial(::google::protobuf::uint32 value) {
+  set_has_pageserial();
+  pageserial_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgNeedsSharedTexturePaint.pageserial)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CMsgGameOverlayTexturePaint::kBrowserHandleFieldNumber;
+const int CMsgGameOverlayTexturePaint::kWidthFieldNumber;
+const int CMsgGameOverlayTexturePaint::kHeightFieldNumber;
+const int CMsgGameOverlayTexturePaint::kScrollxFieldNumber;
+const int CMsgGameOverlayTexturePaint::kScrollyFieldNumber;
+const int CMsgGameOverlayTexturePaint::kPagescaleFieldNumber;
+const int CMsgGameOverlayTexturePaint::kPageserialFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CMsgGameOverlayTexturePaint::CMsgGameOverlayTexturePaint()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_htmlmessages_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CMsgGameOverlayTexturePaint)
+}
+CMsgGameOverlayTexturePaint::CMsgGameOverlayTexturePaint(const CMsgGameOverlayTexturePaint& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&browser_handle_, &from.browser_handle_,
+    reinterpret_cast<char*>(&pageserial_) -
+    reinterpret_cast<char*>(&browser_handle_) + sizeof(pageserial_));
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CMsgGameOverlayTexturePaint)
+}
+
+void CMsgGameOverlayTexturePaint::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&browser_handle_, 0, reinterpret_cast<char*>(&pageserial_) -
+    reinterpret_cast<char*>(&browser_handle_) + sizeof(pageserial_));
+}
+
+CMsgGameOverlayTexturePaint::~CMsgGameOverlayTexturePaint() {
+  // @@protoc_insertion_point(destructor:proto.steam.CMsgGameOverlayTexturePaint)
+  SharedDtor();
+}
+
+void CMsgGameOverlayTexturePaint::SharedDtor() {
+}
+
+void CMsgGameOverlayTexturePaint::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CMsgGameOverlayTexturePaint::descriptor() {
+  protobuf_htmlmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_htmlmessages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CMsgGameOverlayTexturePaint& CMsgGameOverlayTexturePaint::default_instance() {
+  protobuf_htmlmessages_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CMsgGameOverlayTexturePaint* CMsgGameOverlayTexturePaint::New(::google::protobuf::Arena* arena) const {
+  CMsgGameOverlayTexturePaint* n = new CMsgGameOverlayTexturePaint;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CMsgGameOverlayTexturePaint::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CMsgGameOverlayTexturePaint)
+  if (_has_bits_[0 / 32] & 127u) {
+    ::memset(&browser_handle_, 0, reinterpret_cast<char*>(&pageserial_) -
+      reinterpret_cast<char*>(&browser_handle_) + sizeof(pageserial_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CMsgGameOverlayTexturePaint::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CMsgGameOverlayTexturePaint)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 browser_handle = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_browser_handle();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &browser_handle_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 width = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
+          set_has_width();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &width_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 height = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
+          set_has_height();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &height_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 scrollx = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
+          set_has_scrollx();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &scrollx_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 scrolly = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u)) {
+          set_has_scrolly();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &scrolly_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional float pagescale = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(61u)) {
+          set_has_pagescale();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &pagescale_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 pageserial = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(64u)) {
+          set_has_pageserial();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &pageserial_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CMsgGameOverlayTexturePaint)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CMsgGameOverlayTexturePaint)
+  return false;
+#undef DO_
+}
+
+void CMsgGameOverlayTexturePaint::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CMsgGameOverlayTexturePaint)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 browser_handle = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->browser_handle(), output);
+  }
+
+  // optional uint32 width = 3;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->width(), output);
+  }
+
+  // optional uint32 height = 4;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->height(), output);
+  }
+
+  // optional uint32 scrollx = 5;
+  if (cached_has_bits & 0x00000008u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->scrollx(), output);
+  }
+
+  // optional uint32 scrolly = 6;
+  if (cached_has_bits & 0x00000010u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(6, this->scrolly(), output);
+  }
+
+  // optional float pagescale = 7;
+  if (cached_has_bits & 0x00000020u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->pagescale(), output);
+  }
+
+  // optional uint32 pageserial = 8;
+  if (cached_has_bits & 0x00000040u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(8, this->pageserial(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CMsgGameOverlayTexturePaint)
+}
+
+::google::protobuf::uint8* CMsgGameOverlayTexturePaint::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CMsgGameOverlayTexturePaint)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 browser_handle = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->browser_handle(), target);
+  }
+
+  // optional uint32 width = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->width(), target);
+  }
+
+  // optional uint32 height = 4;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->height(), target);
+  }
+
+  // optional uint32 scrollx = 5;
+  if (cached_has_bits & 0x00000008u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->scrollx(), target);
+  }
+
+  // optional uint32 scrolly = 6;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(6, this->scrolly(), target);
+  }
+
+  // optional float pagescale = 7;
+  if (cached_has_bits & 0x00000020u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->pagescale(), target);
+  }
+
+  // optional uint32 pageserial = 8;
+  if (cached_has_bits & 0x00000040u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(8, this->pageserial(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CMsgGameOverlayTexturePaint)
+  return target;
+}
+
+size_t CMsgGameOverlayTexturePaint::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CMsgGameOverlayTexturePaint)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 127u) {
+    // optional uint32 browser_handle = 1;
+    if (has_browser_handle()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->browser_handle());
+    }
+
+    // optional uint32 width = 3;
+    if (has_width()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->width());
+    }
+
+    // optional uint32 height = 4;
+    if (has_height()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->height());
+    }
+
+    // optional uint32 scrollx = 5;
+    if (has_scrollx()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->scrollx());
+    }
+
+    // optional uint32 scrolly = 6;
+    if (has_scrolly()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->scrolly());
+    }
+
+    // optional float pagescale = 7;
+    if (has_pagescale()) {
+      total_size += 1 + 4;
+    }
+
+    // optional uint32 pageserial = 8;
+    if (has_pageserial()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->pageserial());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CMsgGameOverlayTexturePaint::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CMsgGameOverlayTexturePaint)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CMsgGameOverlayTexturePaint* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CMsgGameOverlayTexturePaint>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CMsgGameOverlayTexturePaint)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CMsgGameOverlayTexturePaint)
+    MergeFrom(*source);
+  }
+}
+
+void CMsgGameOverlayTexturePaint::MergeFrom(const CMsgGameOverlayTexturePaint& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CMsgGameOverlayTexturePaint)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 127u) {
+    if (cached_has_bits & 0x00000001u) {
+      browser_handle_ = from.browser_handle_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      width_ = from.width_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      height_ = from.height_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      scrollx_ = from.scrollx_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      scrolly_ = from.scrolly_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      pagescale_ = from.pagescale_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      pageserial_ = from.pageserial_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CMsgGameOverlayTexturePaint::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CMsgGameOverlayTexturePaint)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CMsgGameOverlayTexturePaint::CopyFrom(const CMsgGameOverlayTexturePaint& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CMsgGameOverlayTexturePaint)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CMsgGameOverlayTexturePaint::IsInitialized() const {
+  return true;
+}
+
+void CMsgGameOverlayTexturePaint::Swap(CMsgGameOverlayTexturePaint* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CMsgGameOverlayTexturePaint::InternalSwap(CMsgGameOverlayTexturePaint* other) {
+  std::swap(browser_handle_, other->browser_handle_);
+  std::swap(width_, other->width_);
+  std::swap(height_, other->height_);
+  std::swap(scrollx_, other->scrollx_);
+  std::swap(scrolly_, other->scrolly_);
+  std::swap(pagescale_, other->pagescale_);
+  std::swap(pageserial_, other->pageserial_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CMsgGameOverlayTexturePaint::GetMetadata() const {
+  protobuf_htmlmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_htmlmessages_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CMsgGameOverlayTexturePaint
+
+// optional uint32 browser_handle = 1;
+bool CMsgGameOverlayTexturePaint::has_browser_handle() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CMsgGameOverlayTexturePaint::set_has_browser_handle() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CMsgGameOverlayTexturePaint::clear_has_browser_handle() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CMsgGameOverlayTexturePaint::clear_browser_handle() {
+  browser_handle_ = 0u;
+  clear_has_browser_handle();
+}
+::google::protobuf::uint32 CMsgGameOverlayTexturePaint::browser_handle() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgGameOverlayTexturePaint.browser_handle)
+  return browser_handle_;
+}
+void CMsgGameOverlayTexturePaint::set_browser_handle(::google::protobuf::uint32 value) {
+  set_has_browser_handle();
+  browser_handle_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgGameOverlayTexturePaint.browser_handle)
+}
+
+// optional uint32 width = 3;
+bool CMsgGameOverlayTexturePaint::has_width() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CMsgGameOverlayTexturePaint::set_has_width() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CMsgGameOverlayTexturePaint::clear_has_width() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CMsgGameOverlayTexturePaint::clear_width() {
+  width_ = 0u;
+  clear_has_width();
+}
+::google::protobuf::uint32 CMsgGameOverlayTexturePaint::width() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgGameOverlayTexturePaint.width)
+  return width_;
+}
+void CMsgGameOverlayTexturePaint::set_width(::google::protobuf::uint32 value) {
+  set_has_width();
+  width_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgGameOverlayTexturePaint.width)
+}
+
+// optional uint32 height = 4;
+bool CMsgGameOverlayTexturePaint::has_height() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CMsgGameOverlayTexturePaint::set_has_height() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CMsgGameOverlayTexturePaint::clear_has_height() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CMsgGameOverlayTexturePaint::clear_height() {
+  height_ = 0u;
+  clear_has_height();
+}
+::google::protobuf::uint32 CMsgGameOverlayTexturePaint::height() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgGameOverlayTexturePaint.height)
+  return height_;
+}
+void CMsgGameOverlayTexturePaint::set_height(::google::protobuf::uint32 value) {
+  set_has_height();
+  height_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgGameOverlayTexturePaint.height)
+}
+
+// optional uint32 scrollx = 5;
+bool CMsgGameOverlayTexturePaint::has_scrollx() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void CMsgGameOverlayTexturePaint::set_has_scrollx() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void CMsgGameOverlayTexturePaint::clear_has_scrollx() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void CMsgGameOverlayTexturePaint::clear_scrollx() {
+  scrollx_ = 0u;
+  clear_has_scrollx();
+}
+::google::protobuf::uint32 CMsgGameOverlayTexturePaint::scrollx() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgGameOverlayTexturePaint.scrollx)
+  return scrollx_;
+}
+void CMsgGameOverlayTexturePaint::set_scrollx(::google::protobuf::uint32 value) {
+  set_has_scrollx();
+  scrollx_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgGameOverlayTexturePaint.scrollx)
+}
+
+// optional uint32 scrolly = 6;
+bool CMsgGameOverlayTexturePaint::has_scrolly() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void CMsgGameOverlayTexturePaint::set_has_scrolly() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void CMsgGameOverlayTexturePaint::clear_has_scrolly() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void CMsgGameOverlayTexturePaint::clear_scrolly() {
+  scrolly_ = 0u;
+  clear_has_scrolly();
+}
+::google::protobuf::uint32 CMsgGameOverlayTexturePaint::scrolly() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgGameOverlayTexturePaint.scrolly)
+  return scrolly_;
+}
+void CMsgGameOverlayTexturePaint::set_scrolly(::google::protobuf::uint32 value) {
+  set_has_scrolly();
+  scrolly_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgGameOverlayTexturePaint.scrolly)
+}
+
+// optional float pagescale = 7;
+bool CMsgGameOverlayTexturePaint::has_pagescale() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+void CMsgGameOverlayTexturePaint::set_has_pagescale() {
+  _has_bits_[0] |= 0x00000020u;
+}
+void CMsgGameOverlayTexturePaint::clear_has_pagescale() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+void CMsgGameOverlayTexturePaint::clear_pagescale() {
+  pagescale_ = 0;
+  clear_has_pagescale();
+}
+float CMsgGameOverlayTexturePaint::pagescale() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgGameOverlayTexturePaint.pagescale)
+  return pagescale_;
+}
+void CMsgGameOverlayTexturePaint::set_pagescale(float value) {
+  set_has_pagescale();
+  pagescale_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgGameOverlayTexturePaint.pagescale)
+}
+
+// optional uint32 pageserial = 8;
+bool CMsgGameOverlayTexturePaint::has_pageserial() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+void CMsgGameOverlayTexturePaint::set_has_pageserial() {
+  _has_bits_[0] |= 0x00000040u;
+}
+void CMsgGameOverlayTexturePaint::clear_has_pageserial() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+void CMsgGameOverlayTexturePaint::clear_pageserial() {
+  pageserial_ = 0u;
+  clear_has_pageserial();
+}
+::google::protobuf::uint32 CMsgGameOverlayTexturePaint::pageserial() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgGameOverlayTexturePaint.pageserial)
+  return pageserial_;
+}
+void CMsgGameOverlayTexturePaint::set_pageserial(::google::protobuf::uint32 value) {
+  set_has_pageserial();
+  pageserial_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgGameOverlayTexturePaint.pageserial)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CMsgGetZoom::kBrowserHandleFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -54088,6 +55523,740 @@ const ::google::protobuf::RepeatedPtrField< ::proto::steam::CMsgJumpListLink >&
 CMsgSetJumpList::links() const {
   // @@protoc_insertion_point(field_list:proto.steam.CMsgSetJumpList.links)
   return links_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CMsgSetGameOverlayTargetPIDs::kBrowserHandleFieldNumber;
+const int CMsgSetGameOverlayTargetPIDs::kTargetPidFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CMsgSetGameOverlayTargetPIDs::CMsgSetGameOverlayTargetPIDs()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_htmlmessages_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CMsgSetGameOverlayTargetPIDs)
+}
+CMsgSetGameOverlayTargetPIDs::CMsgSetGameOverlayTargetPIDs(const CMsgSetGameOverlayTargetPIDs& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0),
+      target_pid_(from.target_pid_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  browser_handle_ = from.browser_handle_;
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CMsgSetGameOverlayTargetPIDs)
+}
+
+void CMsgSetGameOverlayTargetPIDs::SharedCtor() {
+  _cached_size_ = 0;
+  browser_handle_ = 0u;
+}
+
+CMsgSetGameOverlayTargetPIDs::~CMsgSetGameOverlayTargetPIDs() {
+  // @@protoc_insertion_point(destructor:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  SharedDtor();
+}
+
+void CMsgSetGameOverlayTargetPIDs::SharedDtor() {
+}
+
+void CMsgSetGameOverlayTargetPIDs::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CMsgSetGameOverlayTargetPIDs::descriptor() {
+  protobuf_htmlmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_htmlmessages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CMsgSetGameOverlayTargetPIDs& CMsgSetGameOverlayTargetPIDs::default_instance() {
+  protobuf_htmlmessages_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CMsgSetGameOverlayTargetPIDs* CMsgSetGameOverlayTargetPIDs::New(::google::protobuf::Arena* arena) const {
+  CMsgSetGameOverlayTargetPIDs* n = new CMsgSetGameOverlayTargetPIDs;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CMsgSetGameOverlayTargetPIDs::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  target_pid_.Clear();
+  browser_handle_ = 0u;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CMsgSetGameOverlayTargetPIDs::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 browser_handle = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_browser_handle();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &browser_handle_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated uint32 target_pid = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 1, 16u, input, this->mutable_target_pid())));
+        } else if (static_cast< ::google::protobuf::uint8>(tag) ==
+                   static_cast< ::google::protobuf::uint8>(18u)) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, this->mutable_target_pid())));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  return false;
+#undef DO_
+}
+
+void CMsgSetGameOverlayTargetPIDs::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 browser_handle = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->browser_handle(), output);
+  }
+
+  // repeated uint32 target_pid = 2;
+  for (int i = 0, n = this->target_pid_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(
+      2, this->target_pid(i), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CMsgSetGameOverlayTargetPIDs)
+}
+
+::google::protobuf::uint8* CMsgSetGameOverlayTargetPIDs::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 browser_handle = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->browser_handle(), target);
+  }
+
+  // repeated uint32 target_pid = 2;
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteUInt32ToArray(2, this->target_pid_, target);
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  return target;
+}
+
+size_t CMsgSetGameOverlayTargetPIDs::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  // repeated uint32 target_pid = 2;
+  {
+    size_t data_size = ::google::protobuf::internal::WireFormatLite::
+      UInt32Size(this->target_pid_);
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->target_pid_size());
+    total_size += data_size;
+  }
+
+  // optional uint32 browser_handle = 1;
+  if (has_browser_handle()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->browser_handle());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CMsgSetGameOverlayTargetPIDs::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CMsgSetGameOverlayTargetPIDs* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CMsgSetGameOverlayTargetPIDs>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CMsgSetGameOverlayTargetPIDs)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CMsgSetGameOverlayTargetPIDs)
+    MergeFrom(*source);
+  }
+}
+
+void CMsgSetGameOverlayTargetPIDs::MergeFrom(const CMsgSetGameOverlayTargetPIDs& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  target_pid_.MergeFrom(from.target_pid_);
+  if (from.has_browser_handle()) {
+    set_browser_handle(from.browser_handle());
+  }
+}
+
+void CMsgSetGameOverlayTargetPIDs::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CMsgSetGameOverlayTargetPIDs::CopyFrom(const CMsgSetGameOverlayTargetPIDs& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CMsgSetGameOverlayTargetPIDs)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CMsgSetGameOverlayTargetPIDs::IsInitialized() const {
+  return true;
+}
+
+void CMsgSetGameOverlayTargetPIDs::Swap(CMsgSetGameOverlayTargetPIDs* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CMsgSetGameOverlayTargetPIDs::InternalSwap(CMsgSetGameOverlayTargetPIDs* other) {
+  target_pid_.InternalSwap(&other->target_pid_);
+  std::swap(browser_handle_, other->browser_handle_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CMsgSetGameOverlayTargetPIDs::GetMetadata() const {
+  protobuf_htmlmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_htmlmessages_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CMsgSetGameOverlayTargetPIDs
+
+// optional uint32 browser_handle = 1;
+bool CMsgSetGameOverlayTargetPIDs::has_browser_handle() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CMsgSetGameOverlayTargetPIDs::set_has_browser_handle() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CMsgSetGameOverlayTargetPIDs::clear_has_browser_handle() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CMsgSetGameOverlayTargetPIDs::clear_browser_handle() {
+  browser_handle_ = 0u;
+  clear_has_browser_handle();
+}
+::google::protobuf::uint32 CMsgSetGameOverlayTargetPIDs::browser_handle() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgSetGameOverlayTargetPIDs.browser_handle)
+  return browser_handle_;
+}
+void CMsgSetGameOverlayTargetPIDs::set_browser_handle(::google::protobuf::uint32 value) {
+  set_has_browser_handle();
+  browser_handle_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgSetGameOverlayTargetPIDs.browser_handle)
+}
+
+// repeated uint32 target_pid = 2;
+int CMsgSetGameOverlayTargetPIDs::target_pid_size() const {
+  return target_pid_.size();
+}
+void CMsgSetGameOverlayTargetPIDs::clear_target_pid() {
+  target_pid_.Clear();
+}
+::google::protobuf::uint32 CMsgSetGameOverlayTargetPIDs::target_pid(int index) const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgSetGameOverlayTargetPIDs.target_pid)
+  return target_pid_.Get(index);
+}
+void CMsgSetGameOverlayTargetPIDs::set_target_pid(int index, ::google::protobuf::uint32 value) {
+  target_pid_.Set(index, value);
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgSetGameOverlayTargetPIDs.target_pid)
+}
+void CMsgSetGameOverlayTargetPIDs::add_target_pid(::google::protobuf::uint32 value) {
+  target_pid_.Add(value);
+  // @@protoc_insertion_point(field_add:proto.steam.CMsgSetGameOverlayTargetPIDs.target_pid)
+}
+const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+CMsgSetGameOverlayTargetPIDs::target_pid() const {
+  // @@protoc_insertion_point(field_list:proto.steam.CMsgSetGameOverlayTargetPIDs.target_pid)
+  return target_pid_;
+}
+::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+CMsgSetGameOverlayTargetPIDs::mutable_target_pid() {
+  // @@protoc_insertion_point(field_mutable_list:proto.steam.CMsgSetGameOverlayTargetPIDs.target_pid)
+  return &target_pid_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CMsgGameOverlayTargetTextureID::kBrowserHandleFieldNumber;
+const int CMsgGameOverlayTargetTextureID::kTargetPidFieldNumber;
+const int CMsgGameOverlayTargetTextureID::kTextureHandleFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CMsgGameOverlayTargetTextureID::CMsgGameOverlayTargetTextureID()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_htmlmessages_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CMsgGameOverlayTargetTextureID)
+}
+CMsgGameOverlayTargetTextureID::CMsgGameOverlayTargetTextureID(const CMsgGameOverlayTargetTextureID& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&browser_handle_, &from.browser_handle_,
+    reinterpret_cast<char*>(&texture_handle_) -
+    reinterpret_cast<char*>(&browser_handle_) + sizeof(texture_handle_));
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CMsgGameOverlayTargetTextureID)
+}
+
+void CMsgGameOverlayTargetTextureID::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&browser_handle_, 0, reinterpret_cast<char*>(&texture_handle_) -
+    reinterpret_cast<char*>(&browser_handle_) + sizeof(texture_handle_));
+}
+
+CMsgGameOverlayTargetTextureID::~CMsgGameOverlayTargetTextureID() {
+  // @@protoc_insertion_point(destructor:proto.steam.CMsgGameOverlayTargetTextureID)
+  SharedDtor();
+}
+
+void CMsgGameOverlayTargetTextureID::SharedDtor() {
+}
+
+void CMsgGameOverlayTargetTextureID::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CMsgGameOverlayTargetTextureID::descriptor() {
+  protobuf_htmlmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_htmlmessages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CMsgGameOverlayTargetTextureID& CMsgGameOverlayTargetTextureID::default_instance() {
+  protobuf_htmlmessages_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CMsgGameOverlayTargetTextureID* CMsgGameOverlayTargetTextureID::New(::google::protobuf::Arena* arena) const {
+  CMsgGameOverlayTargetTextureID* n = new CMsgGameOverlayTargetTextureID;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CMsgGameOverlayTargetTextureID::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CMsgGameOverlayTargetTextureID)
+  if (_has_bits_[0 / 32] & 7u) {
+    ::memset(&browser_handle_, 0, reinterpret_cast<char*>(&texture_handle_) -
+      reinterpret_cast<char*>(&browser_handle_) + sizeof(texture_handle_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CMsgGameOverlayTargetTextureID::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CMsgGameOverlayTargetTextureID)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 browser_handle = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_browser_handle();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &browser_handle_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 target_pid = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
+          set_has_target_pid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &target_pid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 texture_handle = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
+          set_has_texture_handle();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &texture_handle_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CMsgGameOverlayTargetTextureID)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CMsgGameOverlayTargetTextureID)
+  return false;
+#undef DO_
+}
+
+void CMsgGameOverlayTargetTextureID::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CMsgGameOverlayTargetTextureID)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 browser_handle = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->browser_handle(), output);
+  }
+
+  // optional uint32 target_pid = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->target_pid(), output);
+  }
+
+  // optional uint32 texture_handle = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->texture_handle(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CMsgGameOverlayTargetTextureID)
+}
+
+::google::protobuf::uint8* CMsgGameOverlayTargetTextureID::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CMsgGameOverlayTargetTextureID)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 browser_handle = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->browser_handle(), target);
+  }
+
+  // optional uint32 target_pid = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->target_pid(), target);
+  }
+
+  // optional uint32 texture_handle = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->texture_handle(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CMsgGameOverlayTargetTextureID)
+  return target;
+}
+
+size_t CMsgGameOverlayTargetTextureID::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CMsgGameOverlayTargetTextureID)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 7u) {
+    // optional uint32 browser_handle = 1;
+    if (has_browser_handle()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->browser_handle());
+    }
+
+    // optional uint32 target_pid = 2;
+    if (has_target_pid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->target_pid());
+    }
+
+    // optional uint32 texture_handle = 3;
+    if (has_texture_handle()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->texture_handle());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CMsgGameOverlayTargetTextureID::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CMsgGameOverlayTargetTextureID)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CMsgGameOverlayTargetTextureID* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CMsgGameOverlayTargetTextureID>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CMsgGameOverlayTargetTextureID)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CMsgGameOverlayTargetTextureID)
+    MergeFrom(*source);
+  }
+}
+
+void CMsgGameOverlayTargetTextureID::MergeFrom(const CMsgGameOverlayTargetTextureID& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CMsgGameOverlayTargetTextureID)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 7u) {
+    if (cached_has_bits & 0x00000001u) {
+      browser_handle_ = from.browser_handle_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      target_pid_ = from.target_pid_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      texture_handle_ = from.texture_handle_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CMsgGameOverlayTargetTextureID::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CMsgGameOverlayTargetTextureID)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CMsgGameOverlayTargetTextureID::CopyFrom(const CMsgGameOverlayTargetTextureID& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CMsgGameOverlayTargetTextureID)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CMsgGameOverlayTargetTextureID::IsInitialized() const {
+  return true;
+}
+
+void CMsgGameOverlayTargetTextureID::Swap(CMsgGameOverlayTargetTextureID* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CMsgGameOverlayTargetTextureID::InternalSwap(CMsgGameOverlayTargetTextureID* other) {
+  std::swap(browser_handle_, other->browser_handle_);
+  std::swap(target_pid_, other->target_pid_);
+  std::swap(texture_handle_, other->texture_handle_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CMsgGameOverlayTargetTextureID::GetMetadata() const {
+  protobuf_htmlmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_htmlmessages_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CMsgGameOverlayTargetTextureID
+
+// optional uint32 browser_handle = 1;
+bool CMsgGameOverlayTargetTextureID::has_browser_handle() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CMsgGameOverlayTargetTextureID::set_has_browser_handle() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CMsgGameOverlayTargetTextureID::clear_has_browser_handle() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CMsgGameOverlayTargetTextureID::clear_browser_handle() {
+  browser_handle_ = 0u;
+  clear_has_browser_handle();
+}
+::google::protobuf::uint32 CMsgGameOverlayTargetTextureID::browser_handle() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgGameOverlayTargetTextureID.browser_handle)
+  return browser_handle_;
+}
+void CMsgGameOverlayTargetTextureID::set_browser_handle(::google::protobuf::uint32 value) {
+  set_has_browser_handle();
+  browser_handle_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgGameOverlayTargetTextureID.browser_handle)
+}
+
+// optional uint32 target_pid = 2;
+bool CMsgGameOverlayTargetTextureID::has_target_pid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CMsgGameOverlayTargetTextureID::set_has_target_pid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CMsgGameOverlayTargetTextureID::clear_has_target_pid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CMsgGameOverlayTargetTextureID::clear_target_pid() {
+  target_pid_ = 0u;
+  clear_has_target_pid();
+}
+::google::protobuf::uint32 CMsgGameOverlayTargetTextureID::target_pid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgGameOverlayTargetTextureID.target_pid)
+  return target_pid_;
+}
+void CMsgGameOverlayTargetTextureID::set_target_pid(::google::protobuf::uint32 value) {
+  set_has_target_pid();
+  target_pid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgGameOverlayTargetTextureID.target_pid)
+}
+
+// optional uint32 texture_handle = 3;
+bool CMsgGameOverlayTargetTextureID::has_texture_handle() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CMsgGameOverlayTargetTextureID::set_has_texture_handle() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CMsgGameOverlayTargetTextureID::clear_has_texture_handle() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CMsgGameOverlayTargetTextureID::clear_texture_handle() {
+  texture_handle_ = 0u;
+  clear_has_texture_handle();
+}
+::google::protobuf::uint32 CMsgGameOverlayTargetTextureID::texture_handle() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CMsgGameOverlayTargetTextureID.texture_handle)
+  return texture_handle_;
+}
+void CMsgGameOverlayTargetTextureID::set_texture_handle(::google::protobuf::uint32 value) {
+  set_has_texture_handle();
+  texture_handle_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CMsgGameOverlayTargetTextureID.texture_handle)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

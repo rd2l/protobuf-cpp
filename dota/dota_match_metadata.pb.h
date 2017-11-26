@@ -76,6 +76,21 @@ extern CDOTAMatchPrivateMetadata_Team_BuildingDefaultTypeInternal _CDOTAMatchPri
 class CDOTAMatchPrivateMetadata_Team_Player;
 class CDOTAMatchPrivateMetadata_Team_PlayerDefaultTypeInternal;
 extern CDOTAMatchPrivateMetadata_Team_PlayerDefaultTypeInternal _CDOTAMatchPrivateMetadata_Team_Player_default_instance_;
+class CDOTAMatchPrivateMetadata_Team_Player_BuffRecord;
+class CDOTAMatchPrivateMetadata_Team_Player_BuffRecordDefaultTypeInternal;
+extern CDOTAMatchPrivateMetadata_Team_Player_BuffRecordDefaultTypeInternal _CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_default_instance_;
+class CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget;
+class CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTargetDefaultTypeInternal;
+extern CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTargetDefaultTypeInternal _CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget_default_instance_;
+class CDOTAMatchPrivateMetadata_Team_Player_CombatSegment;
+class CDOTAMatchPrivateMetadata_Team_Player_CombatSegmentDefaultTypeInternal;
+extern CDOTAMatchPrivateMetadata_Team_Player_CombatSegmentDefaultTypeInternal _CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_default_instance_;
+class CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility;
+class CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbilityDefaultTypeInternal;
+extern CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbilityDefaultTypeInternal _CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_default_instance_;
+class CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget;
+class CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTargetDefaultTypeInternal;
+extern CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTargetDefaultTypeInternal _CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget_default_instance_;
 class CGCStorePurchaseInit_LineItem;
 class CGCStorePurchaseInit_LineItemDefaultTypeInternal;
 extern CGCStorePurchaseInit_LineItemDefaultTypeInternal _CGCStorePurchaseInit_LineItem_default_instance_;
@@ -118,9 +133,6 @@ extern CMsgClientPingDataDefaultTypeInternal _CMsgClientPingData_default_instanc
 class CMsgConVarValue;
 class CMsgConVarValueDefaultTypeInternal;
 extern CMsgConVarValueDefaultTypeInternal _CMsgConVarValue_default_instance_;
-class CMsgConsumableExhausted;
-class CMsgConsumableExhaustedDefaultTypeInternal;
-extern CMsgConsumableExhaustedDefaultTypeInternal _CMsgConsumableExhausted_default_instance_;
 class CMsgCustomGameInstallStatus;
 class CMsgCustomGameInstallStatusDefaultTypeInternal;
 extern CMsgCustomGameInstallStatusDefaultTypeInternal _CMsgCustomGameInstallStatus_default_instance_;
@@ -1706,6 +1718,569 @@ class CDOTAMatchMetadata : public ::google::protobuf::Message /* @@protoc_insert
 };
 // -------------------------------------------------------------------
 
+class CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ByHeroTarget) */ {
+ public:
+  CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget();
+  virtual ~CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget();
+
+  CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget& from);
+
+  inline CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget& operator=(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget& default_instance();
+
+  static inline const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget* internal_default_instance() {
+    return reinterpret_cast<const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget*>(
+               &_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    8;
+
+  void Swap(CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget& from);
+  void MergeFrom(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 hero_id = 1;
+  bool has_hero_id() const;
+  void clear_hero_id();
+  static const int kHeroIdFieldNumber = 1;
+  ::google::protobuf::uint32 hero_id() const;
+  void set_hero_id(::google::protobuf::uint32 value);
+
+  // optional uint32 damage = 2;
+  bool has_damage() const;
+  void clear_damage();
+  static const int kDamageFieldNumber = 2;
+  ::google::protobuf::uint32 damage() const;
+  void set_damage(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ByHeroTarget)
+ private:
+  void set_has_hero_id();
+  void clear_has_hero_id();
+  void set_has_damage();
+  void clear_has_damage();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 hero_id_;
+  ::google::protobuf::uint32 damage_;
+  friend struct protobuf_dota_5fmatch_5fmetadata_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility) */ {
+ public:
+  CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility();
+  virtual ~CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility();
+
+  CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility& from);
+
+  inline CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility& operator=(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility& default_instance();
+
+  static inline const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility* internal_default_instance() {
+    return reinterpret_cast<const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility*>(
+               &_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    9;
+
+  void Swap(CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility& from);
+  void MergeFrom(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget ByHeroTarget;
+
+  // accessors -------------------------------------------------------
+
+  // repeated .proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ByHeroTarget by_hero_targets = 2;
+  int by_hero_targets_size() const;
+  void clear_by_hero_targets();
+  static const int kByHeroTargetsFieldNumber = 2;
+  const ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget& by_hero_targets(int index) const;
+  ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget* mutable_by_hero_targets(int index);
+  ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget* add_by_hero_targets();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget >*
+      mutable_by_hero_targets();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget >&
+      by_hero_targets() const;
+
+  // optional uint32 ability_id = 1;
+  bool has_ability_id() const;
+  void clear_ability_id();
+  static const int kAbilityIdFieldNumber = 1;
+  ::google::protobuf::uint32 ability_id() const;
+  void set_ability_id(::google::protobuf::uint32 value);
+
+  // optional uint32 source_unit_index = 3;
+  bool has_source_unit_index() const;
+  void clear_source_unit_index();
+  static const int kSourceUnitIndexFieldNumber = 3;
+  ::google::protobuf::uint32 source_unit_index() const;
+  void set_source_unit_index(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility)
+ private:
+  void set_has_source_unit_index();
+  void clear_has_source_unit_index();
+  void set_has_ability_id();
+  void clear_has_ability_id();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget > by_hero_targets_;
+  ::google::protobuf::uint32 ability_id_;
+  ::google::protobuf::uint32 source_unit_index_;
+  friend struct protobuf_dota_5fmatch_5fmetadata_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CDOTAMatchPrivateMetadata_Team_Player_CombatSegment : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment) */ {
+ public:
+  CDOTAMatchPrivateMetadata_Team_Player_CombatSegment();
+  virtual ~CDOTAMatchPrivateMetadata_Team_Player_CombatSegment();
+
+  CDOTAMatchPrivateMetadata_Team_Player_CombatSegment(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment& from);
+
+  inline CDOTAMatchPrivateMetadata_Team_Player_CombatSegment& operator=(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment& default_instance();
+
+  static inline const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment* internal_default_instance() {
+    return reinterpret_cast<const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment*>(
+               &_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    10;
+
+  void Swap(CDOTAMatchPrivateMetadata_Team_Player_CombatSegment* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CDOTAMatchPrivateMetadata_Team_Player_CombatSegment* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CDOTAMatchPrivateMetadata_Team_Player_CombatSegment* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment& from);
+  void MergeFrom(const CDOTAMatchPrivateMetadata_Team_Player_CombatSegment& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CDOTAMatchPrivateMetadata_Team_Player_CombatSegment* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility DamageByAbility;
+
+  // accessors -------------------------------------------------------
+
+  // repeated .proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility damage_by_ability = 2;
+  int damage_by_ability_size() const;
+  void clear_damage_by_ability();
+  static const int kDamageByAbilityFieldNumber = 2;
+  const ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility& damage_by_ability(int index) const;
+  ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility* mutable_damage_by_ability(int index);
+  ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility* add_damage_by_ability();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility >*
+      mutable_damage_by_ability();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility >&
+      damage_by_ability() const;
+
+  // optional int32 game_time = 1;
+  bool has_game_time() const;
+  void clear_game_time();
+  static const int kGameTimeFieldNumber = 1;
+  ::google::protobuf::int32 game_time() const;
+  void set_game_time(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment)
+ private:
+  void set_has_game_time();
+  void clear_has_game_time();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility > damage_by_ability_;
+  ::google::protobuf::int32 game_time_;
+  friend struct protobuf_dota_5fmatch_5fmetadata_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget) */ {
+ public:
+  CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget();
+  virtual ~CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget();
+
+  CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget(const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget& from);
+
+  inline CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget& operator=(const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget& default_instance();
+
+  static inline const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget* internal_default_instance() {
+    return reinterpret_cast<const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget*>(
+               &_CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    11;
+
+  void Swap(CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget& from);
+  void MergeFrom(const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 hero_id = 1;
+  bool has_hero_id() const;
+  void clear_hero_id();
+  static const int kHeroIdFieldNumber = 1;
+  ::google::protobuf::uint32 hero_id() const;
+  void set_hero_id(::google::protobuf::uint32 value);
+
+  // optional float elapsed_duration = 2;
+  bool has_elapsed_duration() const;
+  void clear_elapsed_duration();
+  static const int kElapsedDurationFieldNumber = 2;
+  float elapsed_duration() const;
+  void set_elapsed_duration(float value);
+
+  // optional bool is_hidden = 3;
+  bool has_is_hidden() const;
+  void clear_is_hidden();
+  static const int kIsHiddenFieldNumber = 3;
+  bool is_hidden() const;
+  void set_is_hidden(bool value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget)
+ private:
+  void set_has_hero_id();
+  void clear_has_hero_id();
+  void set_has_elapsed_duration();
+  void clear_has_elapsed_duration();
+  void set_has_is_hidden();
+  void clear_has_is_hidden();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 hero_id_;
+  float elapsed_duration_;
+  bool is_hidden_;
+  friend struct protobuf_dota_5fmatch_5fmetadata_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CDOTAMatchPrivateMetadata_Team_Player_BuffRecord : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord) */ {
+ public:
+  CDOTAMatchPrivateMetadata_Team_Player_BuffRecord();
+  virtual ~CDOTAMatchPrivateMetadata_Team_Player_BuffRecord();
+
+  CDOTAMatchPrivateMetadata_Team_Player_BuffRecord(const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord& from);
+
+  inline CDOTAMatchPrivateMetadata_Team_Player_BuffRecord& operator=(const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord& default_instance();
+
+  static inline const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord* internal_default_instance() {
+    return reinterpret_cast<const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord*>(
+               &_CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    12;
+
+  void Swap(CDOTAMatchPrivateMetadata_Team_Player_BuffRecord* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CDOTAMatchPrivateMetadata_Team_Player_BuffRecord* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CDOTAMatchPrivateMetadata_Team_Player_BuffRecord* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord& from);
+  void MergeFrom(const CDOTAMatchPrivateMetadata_Team_Player_BuffRecord& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CDOTAMatchPrivateMetadata_Team_Player_BuffRecord* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget ByHeroTarget;
+
+  // accessors -------------------------------------------------------
+
+  // repeated .proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget by_hero_targets = 2;
+  int by_hero_targets_size() const;
+  void clear_by_hero_targets();
+  static const int kByHeroTargetsFieldNumber = 2;
+  const ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget& by_hero_targets(int index) const;
+  ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget* mutable_by_hero_targets(int index);
+  ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget* add_by_hero_targets();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget >*
+      mutable_by_hero_targets();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget >&
+      by_hero_targets() const;
+
+  // optional string buff_modifier_name = 3;
+  bool has_buff_modifier_name() const;
+  void clear_buff_modifier_name();
+  static const int kBuffModifierNameFieldNumber = 3;
+  const ::std::string& buff_modifier_name() const;
+  void set_buff_modifier_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_buff_modifier_name(::std::string&& value);
+  #endif
+  void set_buff_modifier_name(const char* value);
+  void set_buff_modifier_name(const char* value, size_t size);
+  ::std::string* mutable_buff_modifier_name();
+  ::std::string* release_buff_modifier_name();
+  void set_allocated_buff_modifier_name(::std::string* buff_modifier_name);
+
+  // optional uint32 buff_ability_id = 1;
+  bool has_buff_ability_id() const;
+  void clear_buff_ability_id();
+  static const int kBuffAbilityIdFieldNumber = 1;
+  ::google::protobuf::uint32 buff_ability_id() const;
+  void set_buff_ability_id(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord)
+ private:
+  void set_has_buff_ability_id();
+  void clear_has_buff_ability_id();
+  void set_has_buff_modifier_name();
+  void clear_has_buff_modifier_name();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget > by_hero_targets_;
+  ::google::protobuf::internal::ArenaStringPtr buff_modifier_name_;
+  ::google::protobuf::uint32 buff_ability_id_;
+  friend struct protobuf_dota_5fmatch_5fmetadata_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class CDOTAMatchPrivateMetadata_Team_Player : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAMatchPrivateMetadata.Team.Player) */ {
  public:
   CDOTAMatchPrivateMetadata_Team_Player();
@@ -1734,7 +2309,7 @@ class CDOTAMatchPrivateMetadata_Team_Player : public ::google::protobuf::Message
                &_CDOTAMatchPrivateMetadata_Team_Player_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    13;
 
   void Swap(CDOTAMatchPrivateMetadata_Team_Player* other);
 
@@ -1776,7 +2351,56 @@ class CDOTAMatchPrivateMetadata_Team_Player : public ::google::protobuf::Message
 
   // nested types ----------------------------------------------------
 
+  typedef CDOTAMatchPrivateMetadata_Team_Player_CombatSegment CombatSegment;
+  typedef CDOTAMatchPrivateMetadata_Team_Player_BuffRecord BuffRecord;
+
   // accessors -------------------------------------------------------
+
+  // repeated .proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment combat_segments = 4;
+  int combat_segments_size() const;
+  void clear_combat_segments();
+  static const int kCombatSegmentsFieldNumber = 4;
+  const ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment& combat_segments(int index) const;
+  ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment* mutable_combat_segments(int index);
+  ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment* add_combat_segments();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment >*
+      mutable_combat_segments();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment >&
+      combat_segments() const;
+
+  // repeated string damage_unit_names = 5;
+  int damage_unit_names_size() const;
+  void clear_damage_unit_names();
+  static const int kDamageUnitNamesFieldNumber = 5;
+  const ::std::string& damage_unit_names(int index) const;
+  ::std::string* mutable_damage_unit_names(int index);
+  void set_damage_unit_names(int index, const ::std::string& value);
+  #if LANG_CXX11
+  void set_damage_unit_names(int index, ::std::string&& value);
+  #endif
+  void set_damage_unit_names(int index, const char* value);
+  void set_damage_unit_names(int index, const char* value, size_t size);
+  ::std::string* add_damage_unit_names();
+  void add_damage_unit_names(const ::std::string& value);
+  #if LANG_CXX11
+  void add_damage_unit_names(::std::string&& value);
+  #endif
+  void add_damage_unit_names(const char* value);
+  void add_damage_unit_names(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& damage_unit_names() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_damage_unit_names();
+
+  // repeated .proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord buff_records = 6;
+  int buff_records_size() const;
+  void clear_buff_records();
+  static const int kBuffRecordsFieldNumber = 6;
+  const ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord& buff_records(int index) const;
+  ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord* mutable_buff_records(int index);
+  ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord* add_buff_records();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord >*
+      mutable_buff_records();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord >&
+      buff_records() const;
 
   // optional bytes position_stream = 3;
   bool has_position_stream() const;
@@ -1819,6 +2443,9 @@ class CDOTAMatchPrivateMetadata_Team_Player : public ::google::protobuf::Message
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment > combat_segments_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> damage_unit_names_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord > buff_records_;
   ::google::protobuf::internal::ArenaStringPtr position_stream_;
   ::google::protobuf::uint32 account_id_;
   ::google::protobuf::uint32 player_slot_;
@@ -1854,7 +2481,7 @@ class CDOTAMatchPrivateMetadata_Team_Building : public ::google::protobuf::Messa
                &_CDOTAMatchPrivateMetadata_Team_Building_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    9;
+    14;
 
   void Swap(CDOTAMatchPrivateMetadata_Team_Building* other);
 
@@ -1984,7 +2611,7 @@ class CDOTAMatchPrivateMetadata_Team : public ::google::protobuf::Message /* @@p
                &_CDOTAMatchPrivateMetadata_Team_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    10;
+    15;
 
   void Swap(CDOTAMatchPrivateMetadata_Team* other);
 
@@ -2105,7 +2732,7 @@ class CDOTAMatchPrivateMetadata : public ::google::protobuf::Message /* @@protoc
                &_CDOTAMatchPrivateMetadata_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    11;
+    16;
 
   void Swap(CDOTAMatchPrivateMetadata* other);
 
@@ -3827,6 +4454,395 @@ inline void CDOTAMatchMetadata::set_allocated_event_game_custom_table(::std::str
 
 // -------------------------------------------------------------------
 
+// CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget
+
+// optional uint32 hero_id = 1;
+inline bool CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::has_hero_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::set_has_hero_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::clear_has_hero_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::clear_hero_id() {
+  hero_id_ = 0u;
+  clear_has_hero_id();
+}
+inline ::google::protobuf::uint32 CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::hero_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ByHeroTarget.hero_id)
+  return hero_id_;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::set_hero_id(::google::protobuf::uint32 value) {
+  set_has_hero_id();
+  hero_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ByHeroTarget.hero_id)
+}
+
+// optional uint32 damage = 2;
+inline bool CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::has_damage() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::set_has_damage() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::clear_has_damage() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::clear_damage() {
+  damage_ = 0u;
+  clear_has_damage();
+}
+inline ::google::protobuf::uint32 CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::damage() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ByHeroTarget.damage)
+  return damage_;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget::set_damage(::google::protobuf::uint32 value) {
+  set_has_damage();
+  damage_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ByHeroTarget.damage)
+}
+
+// -------------------------------------------------------------------
+
+// CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility
+
+// optional uint32 source_unit_index = 3;
+inline bool CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::has_source_unit_index() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::set_has_source_unit_index() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::clear_has_source_unit_index() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::clear_source_unit_index() {
+  source_unit_index_ = 0u;
+  clear_has_source_unit_index();
+}
+inline ::google::protobuf::uint32 CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::source_unit_index() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.source_unit_index)
+  return source_unit_index_;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::set_source_unit_index(::google::protobuf::uint32 value) {
+  set_has_source_unit_index();
+  source_unit_index_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.source_unit_index)
+}
+
+// optional uint32 ability_id = 1;
+inline bool CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::has_ability_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::set_has_ability_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::clear_has_ability_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::clear_ability_id() {
+  ability_id_ = 0u;
+  clear_has_ability_id();
+}
+inline ::google::protobuf::uint32 CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::ability_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ability_id)
+  return ability_id_;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::set_ability_id(::google::protobuf::uint32 value) {
+  set_has_ability_id();
+  ability_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ability_id)
+}
+
+// repeated .proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ByHeroTarget by_hero_targets = 2;
+inline int CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::by_hero_targets_size() const {
+  return by_hero_targets_.size();
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::clear_by_hero_targets() {
+  by_hero_targets_.Clear();
+}
+inline const ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget& CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::by_hero_targets(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.by_hero_targets)
+  return by_hero_targets_.Get(index);
+}
+inline ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget* CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::mutable_by_hero_targets(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.by_hero_targets)
+  return by_hero_targets_.Mutable(index);
+}
+inline ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget* CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::add_by_hero_targets() {
+  // @@protoc_insertion_point(field_add:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.by_hero_targets)
+  return by_hero_targets_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget >*
+CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::mutable_by_hero_targets() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.by_hero_targets)
+  return &by_hero_targets_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget >&
+CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility::by_hero_targets() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.by_hero_targets)
+  return by_hero_targets_;
+}
+
+// -------------------------------------------------------------------
+
+// CDOTAMatchPrivateMetadata_Team_Player_CombatSegment
+
+// optional int32 game_time = 1;
+inline bool CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::has_game_time() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::set_has_game_time() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::clear_has_game_time() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::clear_game_time() {
+  game_time_ = 0;
+  clear_has_game_time();
+}
+inline ::google::protobuf::int32 CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::game_time() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.game_time)
+  return game_time_;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::set_game_time(::google::protobuf::int32 value) {
+  set_has_game_time();
+  game_time_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.game_time)
+}
+
+// repeated .proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility damage_by_ability = 2;
+inline int CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::damage_by_ability_size() const {
+  return damage_by_ability_.size();
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::clear_damage_by_ability() {
+  damage_by_ability_.Clear();
+}
+inline const ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility& CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::damage_by_ability(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.damage_by_ability)
+  return damage_by_ability_.Get(index);
+}
+inline ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility* CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::mutable_damage_by_ability(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.damage_by_ability)
+  return damage_by_ability_.Mutable(index);
+}
+inline ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility* CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::add_damage_by_ability() {
+  // @@protoc_insertion_point(field_add:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.damage_by_ability)
+  return damage_by_ability_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility >*
+CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::mutable_damage_by_ability() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.damage_by_ability)
+  return &damage_by_ability_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility >&
+CDOTAMatchPrivateMetadata_Team_Player_CombatSegment::damage_by_ability() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.damage_by_ability)
+  return damage_by_ability_;
+}
+
+// -------------------------------------------------------------------
+
+// CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget
+
+// optional uint32 hero_id = 1;
+inline bool CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::has_hero_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::set_has_hero_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::clear_has_hero_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::clear_hero_id() {
+  hero_id_ = 0u;
+  clear_has_hero_id();
+}
+inline ::google::protobuf::uint32 CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::hero_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget.hero_id)
+  return hero_id_;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::set_hero_id(::google::protobuf::uint32 value) {
+  set_has_hero_id();
+  hero_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget.hero_id)
+}
+
+// optional float elapsed_duration = 2;
+inline bool CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::has_elapsed_duration() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::set_has_elapsed_duration() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::clear_has_elapsed_duration() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::clear_elapsed_duration() {
+  elapsed_duration_ = 0;
+  clear_has_elapsed_duration();
+}
+inline float CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::elapsed_duration() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget.elapsed_duration)
+  return elapsed_duration_;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::set_elapsed_duration(float value) {
+  set_has_elapsed_duration();
+  elapsed_duration_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget.elapsed_duration)
+}
+
+// optional bool is_hidden = 3;
+inline bool CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::has_is_hidden() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::set_has_is_hidden() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::clear_has_is_hidden() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::clear_is_hidden() {
+  is_hidden_ = false;
+  clear_has_is_hidden();
+}
+inline bool CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::is_hidden() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget.is_hidden)
+  return is_hidden_;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget::set_is_hidden(bool value) {
+  set_has_is_hidden();
+  is_hidden_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget.is_hidden)
+}
+
+// -------------------------------------------------------------------
+
+// CDOTAMatchPrivateMetadata_Team_Player_BuffRecord
+
+// optional uint32 buff_ability_id = 1;
+inline bool CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::has_buff_ability_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::set_has_buff_ability_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::clear_has_buff_ability_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::clear_buff_ability_id() {
+  buff_ability_id_ = 0u;
+  clear_has_buff_ability_id();
+}
+inline ::google::protobuf::uint32 CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::buff_ability_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.buff_ability_id)
+  return buff_ability_id_;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::set_buff_ability_id(::google::protobuf::uint32 value) {
+  set_has_buff_ability_id();
+  buff_ability_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.buff_ability_id)
+}
+
+// optional string buff_modifier_name = 3;
+inline bool CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::has_buff_modifier_name() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::set_has_buff_modifier_name() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::clear_has_buff_modifier_name() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::clear_buff_modifier_name() {
+  buff_modifier_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_buff_modifier_name();
+}
+inline const ::std::string& CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::buff_modifier_name() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.buff_modifier_name)
+  return buff_modifier_name_.GetNoArena();
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::set_buff_modifier_name(const ::std::string& value) {
+  set_has_buff_modifier_name();
+  buff_modifier_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.buff_modifier_name)
+}
+#if LANG_CXX11
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::set_buff_modifier_name(::std::string&& value) {
+  set_has_buff_modifier_name();
+  buff_modifier_name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.buff_modifier_name)
+}
+#endif
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::set_buff_modifier_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_buff_modifier_name();
+  buff_modifier_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.buff_modifier_name)
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::set_buff_modifier_name(const char* value, size_t size) {
+  set_has_buff_modifier_name();
+  buff_modifier_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.buff_modifier_name)
+}
+inline ::std::string* CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::mutable_buff_modifier_name() {
+  set_has_buff_modifier_name();
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.buff_modifier_name)
+  return buff_modifier_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::release_buff_modifier_name() {
+  // @@protoc_insertion_point(field_release:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.buff_modifier_name)
+  clear_has_buff_modifier_name();
+  return buff_modifier_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::set_allocated_buff_modifier_name(::std::string* buff_modifier_name) {
+  if (buff_modifier_name != NULL) {
+    set_has_buff_modifier_name();
+  } else {
+    clear_has_buff_modifier_name();
+  }
+  buff_modifier_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), buff_modifier_name);
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.buff_modifier_name)
+}
+
+// repeated .proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget by_hero_targets = 2;
+inline int CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::by_hero_targets_size() const {
+  return by_hero_targets_.size();
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::clear_by_hero_targets() {
+  by_hero_targets_.Clear();
+}
+inline const ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget& CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::by_hero_targets(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.by_hero_targets)
+  return by_hero_targets_.Get(index);
+}
+inline ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget* CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::mutable_by_hero_targets(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.by_hero_targets)
+  return by_hero_targets_.Mutable(index);
+}
+inline ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget* CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::add_by_hero_targets() {
+  // @@protoc_insertion_point(field_add:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.by_hero_targets)
+  return by_hero_targets_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget >*
+CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::mutable_by_hero_targets() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.by_hero_targets)
+  return &by_hero_targets_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget >&
+CDOTAMatchPrivateMetadata_Team_Player_BuffRecord::by_hero_targets() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.by_hero_targets)
+  return by_hero_targets_;
+}
+
+// -------------------------------------------------------------------
+
 // CDOTAMatchPrivateMetadata_Team_Player
 
 // optional uint32 account_id = 1;
@@ -3938,6 +4954,135 @@ inline void CDOTAMatchPrivateMetadata_Team_Player::set_allocated_position_stream
   }
   position_stream_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), position_stream);
   // @@protoc_insertion_point(field_set_allocated:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.position_stream)
+}
+
+// repeated .proto.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment combat_segments = 4;
+inline int CDOTAMatchPrivateMetadata_Team_Player::combat_segments_size() const {
+  return combat_segments_.size();
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player::clear_combat_segments() {
+  combat_segments_.Clear();
+}
+inline const ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment& CDOTAMatchPrivateMetadata_Team_Player::combat_segments(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.combat_segments)
+  return combat_segments_.Get(index);
+}
+inline ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment* CDOTAMatchPrivateMetadata_Team_Player::mutable_combat_segments(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.combat_segments)
+  return combat_segments_.Mutable(index);
+}
+inline ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment* CDOTAMatchPrivateMetadata_Team_Player::add_combat_segments() {
+  // @@protoc_insertion_point(field_add:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.combat_segments)
+  return combat_segments_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment >*
+CDOTAMatchPrivateMetadata_Team_Player::mutable_combat_segments() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.combat_segments)
+  return &combat_segments_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_CombatSegment >&
+CDOTAMatchPrivateMetadata_Team_Player::combat_segments() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.combat_segments)
+  return combat_segments_;
+}
+
+// repeated string damage_unit_names = 5;
+inline int CDOTAMatchPrivateMetadata_Team_Player::damage_unit_names_size() const {
+  return damage_unit_names_.size();
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player::clear_damage_unit_names() {
+  damage_unit_names_.Clear();
+}
+inline const ::std::string& CDOTAMatchPrivateMetadata_Team_Player::damage_unit_names(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+  return damage_unit_names_.Get(index);
+}
+inline ::std::string* CDOTAMatchPrivateMetadata_Team_Player::mutable_damage_unit_names(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+  return damage_unit_names_.Mutable(index);
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player::set_damage_unit_names(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+  damage_unit_names_.Mutable(index)->assign(value);
+}
+#if LANG_CXX11
+inline void CDOTAMatchPrivateMetadata_Team_Player::set_damage_unit_names(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+  damage_unit_names_.Mutable(index)->assign(std::move(value));
+}
+#endif
+inline void CDOTAMatchPrivateMetadata_Team_Player::set_damage_unit_names(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  damage_unit_names_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player::set_damage_unit_names(int index, const char* value, size_t size) {
+  damage_unit_names_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+}
+inline ::std::string* CDOTAMatchPrivateMetadata_Team_Player::add_damage_unit_names() {
+  // @@protoc_insertion_point(field_add_mutable:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+  return damage_unit_names_.Add();
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player::add_damage_unit_names(const ::std::string& value) {
+  damage_unit_names_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+}
+#if LANG_CXX11
+inline void CDOTAMatchPrivateMetadata_Team_Player::add_damage_unit_names(::std::string&& value) {
+  damage_unit_names_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+}
+#endif
+inline void CDOTAMatchPrivateMetadata_Team_Player::add_damage_unit_names(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  damage_unit_names_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player::add_damage_unit_names(const char* value, size_t size) {
+  damage_unit_names_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CDOTAMatchPrivateMetadata_Team_Player::damage_unit_names() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+  return damage_unit_names_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CDOTAMatchPrivateMetadata_Team_Player::mutable_damage_unit_names() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.damage_unit_names)
+  return &damage_unit_names_;
+}
+
+// repeated .proto.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord buff_records = 6;
+inline int CDOTAMatchPrivateMetadata_Team_Player::buff_records_size() const {
+  return buff_records_.size();
+}
+inline void CDOTAMatchPrivateMetadata_Team_Player::clear_buff_records() {
+  buff_records_.Clear();
+}
+inline const ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord& CDOTAMatchPrivateMetadata_Team_Player::buff_records(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.buff_records)
+  return buff_records_.Get(index);
+}
+inline ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord* CDOTAMatchPrivateMetadata_Team_Player::mutable_buff_records(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.buff_records)
+  return buff_records_.Mutable(index);
+}
+inline ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord* CDOTAMatchPrivateMetadata_Team_Player::add_buff_records() {
+  // @@protoc_insertion_point(field_add:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.buff_records)
+  return buff_records_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord >*
+CDOTAMatchPrivateMetadata_Team_Player::mutable_buff_records() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.buff_records)
+  return &buff_records_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CDOTAMatchPrivateMetadata_Team_Player_BuffRecord >&
+CDOTAMatchPrivateMetadata_Team_Player::buff_records() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CDOTAMatchPrivateMetadata.Team.Player.buff_records)
+  return buff_records_;
 }
 
 // -------------------------------------------------------------------
@@ -4202,6 +5347,16 @@ CDOTAMatchPrivateMetadata::teams() const {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

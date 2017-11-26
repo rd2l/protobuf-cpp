@@ -1171,26 +1171,8 @@ class CDemoPacket : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* release_data();
   void set_allocated_data(::std::string* data);
 
-  // optional int32 sequence_in = 1;
-  bool has_sequence_in() const;
-  void clear_sequence_in();
-  static const int kSequenceInFieldNumber = 1;
-  ::google::protobuf::int32 sequence_in() const;
-  void set_sequence_in(::google::protobuf::int32 value);
-
-  // optional int32 sequence_out_ack = 2;
-  bool has_sequence_out_ack() const;
-  void clear_sequence_out_ack();
-  static const int kSequenceOutAckFieldNumber = 2;
-  ::google::protobuf::int32 sequence_out_ack() const;
-  void set_sequence_out_ack(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:proto.dota.CDemoPacket)
  private:
-  void set_has_sequence_in();
-  void clear_has_sequence_in();
-  void set_has_sequence_out_ack();
-  void clear_has_sequence_out_ack();
   void set_has_data();
   void clear_has_data();
 
@@ -1198,8 +1180,6 @@ class CDemoPacket : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr data_;
-  ::google::protobuf::int32 sequence_in_;
-  ::google::protobuf::int32 sequence_out_ack_;
   friend struct protobuf_demo_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -4100,54 +4080,6 @@ inline void CDemoFileInfo::set_allocated_game_info(::proto::dota::CGameInfo* gam
 // -------------------------------------------------------------------
 
 // CDemoPacket
-
-// optional int32 sequence_in = 1;
-inline bool CDemoPacket::has_sequence_in() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void CDemoPacket::set_has_sequence_in() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void CDemoPacket::clear_has_sequence_in() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void CDemoPacket::clear_sequence_in() {
-  sequence_in_ = 0;
-  clear_has_sequence_in();
-}
-inline ::google::protobuf::int32 CDemoPacket::sequence_in() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CDemoPacket.sequence_in)
-  return sequence_in_;
-}
-inline void CDemoPacket::set_sequence_in(::google::protobuf::int32 value) {
-  set_has_sequence_in();
-  sequence_in_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CDemoPacket.sequence_in)
-}
-
-// optional int32 sequence_out_ack = 2;
-inline bool CDemoPacket::has_sequence_out_ack() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void CDemoPacket::set_has_sequence_out_ack() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void CDemoPacket::clear_has_sequence_out_ack() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void CDemoPacket::clear_sequence_out_ack() {
-  sequence_out_ack_ = 0;
-  clear_has_sequence_out_ack();
-}
-inline ::google::protobuf::int32 CDemoPacket::sequence_out_ack() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CDemoPacket.sequence_out_ack)
-  return sequence_out_ack_;
-}
-inline void CDemoPacket::set_sequence_out_ack(::google::protobuf::int32 value) {
-  set_has_sequence_out_ack();
-  sequence_out_ack_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CDemoPacket.sequence_out_ack)
-}
 
 // optional bytes data = 3;
 inline bool CDemoPacket::has_data() const {

@@ -230,6 +230,12 @@ extern CMsgDPPartnerMicroTxns_PartnerInfoDefaultTypeInternal _CMsgDPPartnerMicro
 class CMsgDPPartnerMicroTxns_PartnerMicroTxn;
 class CMsgDPPartnerMicroTxns_PartnerMicroTxnDefaultTypeInternal;
 extern CMsgDPPartnerMicroTxns_PartnerMicroTxnDefaultTypeInternal _CMsgDPPartnerMicroTxns_PartnerMicroTxn_default_instance_;
+class CMsgGCCheckClanMembership;
+class CMsgGCCheckClanMembershipDefaultTypeInternal;
+extern CMsgGCCheckClanMembershipDefaultTypeInternal _CMsgGCCheckClanMembership_default_instance_;
+class CMsgGCCheckClanMembership_Response;
+class CMsgGCCheckClanMembership_ResponseDefaultTypeInternal;
+extern CMsgGCCheckClanMembership_ResponseDefaultTypeInternal _CMsgGCCheckClanMembership_Response_default_instance_;
 class CMsgGCCheckFriendship;
 class CMsgGCCheckFriendshipDefaultTypeInternal;
 extern CMsgGCCheckFriendshipDefaultTypeInternal _CMsgGCCheckFriendship_default_instance_;
@@ -269,6 +275,9 @@ extern CMsgGCGetPersonaNames_ResponseDefaultTypeInternal _CMsgGCGetPersonaNames_
 class CMsgGCGetPersonaNames_Response_PersonaName;
 class CMsgGCGetPersonaNames_Response_PersonaNameDefaultTypeInternal;
 extern CMsgGCGetPersonaNames_Response_PersonaNameDefaultTypeInternal _CMsgGCGetPersonaNames_Response_PersonaName_default_instance_;
+class CMsgGCHAccountTwoFactorChange;
+class CMsgGCHAccountTwoFactorChangeDefaultTypeInternal;
+extern CMsgGCHAccountTwoFactorChangeDefaultTypeInternal _CMsgGCHAccountTwoFactorChange_default_instance_;
 class CMsgGCHAccountVacStatusChange;
 class CMsgGCHAccountVacStatusChangeDefaultTypeInternal;
 extern CMsgGCHAccountVacStatusChangeDefaultTypeInternal _CMsgGCHAccountVacStatusChange_default_instance_;
@@ -10509,6 +10518,20 @@ class CMsgDPPartnerMicroTxns_PartnerMicroTxn : public ::google::protobuf::Messag
   ::google::protobuf::uint64 item_id() const;
   void set_item_id(::google::protobuf::uint64 value);
 
+  // optional uint64 price = 8;
+  bool has_price() const;
+  void clear_price();
+  static const int kPriceFieldNumber = 8;
+  ::google::protobuf::uint64 price() const;
+  void set_price(::google::protobuf::uint64 value);
+
+  // optional uint64 tax = 9;
+  bool has_tax() const;
+  void clear_tax();
+  static const int kTaxFieldNumber = 9;
+  ::google::protobuf::uint64 tax() const;
+  void set_tax(::google::protobuf::uint64 value);
+
   // optional uint32 def_index = 7;
   bool has_def_index() const;
   void clear_def_index();
@@ -10516,40 +10539,26 @@ class CMsgDPPartnerMicroTxns_PartnerMicroTxn : public ::google::protobuf::Messag
   ::google::protobuf::uint32 def_index() const;
   void set_def_index(::google::protobuf::uint32 value);
 
-  // optional uint32 price = 8;
-  bool has_price() const;
-  void clear_price();
-  static const int kPriceFieldNumber = 8;
-  ::google::protobuf::uint32 price() const;
-  void set_price(::google::protobuf::uint32 value);
-
-  // optional uint32 tax = 9;
-  bool has_tax() const;
-  void clear_tax();
-  static const int kTaxFieldNumber = 9;
-  ::google::protobuf::uint32 tax() const;
-  void set_tax(::google::protobuf::uint32 value);
-
-  // optional uint32 price_usd = 10;
-  bool has_price_usd() const;
-  void clear_price_usd();
-  static const int kPriceUsdFieldNumber = 10;
-  ::google::protobuf::uint32 price_usd() const;
-  void set_price_usd(::google::protobuf::uint32 value);
-
-  // optional uint32 tax_usd = 11;
-  bool has_tax_usd() const;
-  void clear_tax_usd();
-  static const int kTaxUsdFieldNumber = 11;
-  ::google::protobuf::uint32 tax_usd() const;
-  void set_tax_usd(::google::protobuf::uint32 value);
-
   // optional uint32 purchase_type = 12;
   bool has_purchase_type() const;
   void clear_purchase_type();
   static const int kPurchaseTypeFieldNumber = 12;
   ::google::protobuf::uint32 purchase_type() const;
   void set_purchase_type(::google::protobuf::uint32 value);
+
+  // optional uint64 price_usd = 10;
+  bool has_price_usd() const;
+  void clear_price_usd();
+  static const int kPriceUsdFieldNumber = 10;
+  ::google::protobuf::uint64 price_usd() const;
+  void set_price_usd(::google::protobuf::uint64 value);
+
+  // optional uint64 tax_usd = 11;
+  bool has_tax_usd() const;
+  void clear_tax_usd();
+  static const int kTaxUsdFieldNumber = 11;
+  ::google::protobuf::uint64 tax_usd() const;
+  void set_tax_usd(::google::protobuf::uint64 value);
 
   // optional uint32 steam_txn_type = 13;
   bool has_steam_txn_type() const;
@@ -10620,12 +10629,12 @@ class CMsgDPPartnerMicroTxns_PartnerMicroTxn : public ::google::protobuf::Messag
   ::google::protobuf::uint32 account_id_;
   ::google::protobuf::uint32 line_item_;
   ::google::protobuf::uint64 item_id_;
+  ::google::protobuf::uint64 price_;
+  ::google::protobuf::uint64 tax_;
   ::google::protobuf::uint32 def_index_;
-  ::google::protobuf::uint32 price_;
-  ::google::protobuf::uint32 tax_;
-  ::google::protobuf::uint32 price_usd_;
-  ::google::protobuf::uint32 tax_usd_;
   ::google::protobuf::uint32 purchase_type_;
+  ::google::protobuf::uint64 price_usd_;
+  ::google::protobuf::uint64 tax_usd_;
   ::google::protobuf::uint32 steam_txn_type_;
   ::google::protobuf::int32 quantity_;
   ::google::protobuf::uint64 ref_trans_id_;
@@ -11167,6 +11176,312 @@ class CMsgGCHVacVerificationChange : public ::google::protobuf::Message /* @@pro
   ::google::protobuf::uint64 steamid_;
   ::google::protobuf::uint32 appid_;
   bool is_verified_;
+  friend struct protobuf_steammessages_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCHAccountTwoFactorChange : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCHAccountTwoFactorChange) */ {
+ public:
+  CMsgGCHAccountTwoFactorChange();
+  virtual ~CMsgGCHAccountTwoFactorChange();
+
+  CMsgGCHAccountTwoFactorChange(const CMsgGCHAccountTwoFactorChange& from);
+
+  inline CMsgGCHAccountTwoFactorChange& operator=(const CMsgGCHAccountTwoFactorChange& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCHAccountTwoFactorChange& default_instance();
+
+  static inline const CMsgGCHAccountTwoFactorChange* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCHAccountTwoFactorChange*>(
+               &_CMsgGCHAccountTwoFactorChange_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    85;
+
+  void Swap(CMsgGCHAccountTwoFactorChange* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCHAccountTwoFactorChange* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCHAccountTwoFactorChange* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCHAccountTwoFactorChange& from);
+  void MergeFrom(const CMsgGCHAccountTwoFactorChange& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCHAccountTwoFactorChange* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional fixed64 steamid = 1;
+  bool has_steamid() const;
+  void clear_steamid();
+  static const int kSteamidFieldNumber = 1;
+  ::google::protobuf::uint64 steamid() const;
+  void set_steamid(::google::protobuf::uint64 value);
+
+  // optional uint32 appid = 2;
+  bool has_appid() const;
+  void clear_appid();
+  static const int kAppidFieldNumber = 2;
+  ::google::protobuf::uint32 appid() const;
+  void set_appid(::google::protobuf::uint32 value);
+
+  // optional bool twofactor_enabled = 3;
+  bool has_twofactor_enabled() const;
+  void clear_twofactor_enabled();
+  static const int kTwofactorEnabledFieldNumber = 3;
+  bool twofactor_enabled() const;
+  void set_twofactor_enabled(bool value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCHAccountTwoFactorChange)
+ private:
+  void set_has_steamid();
+  void clear_has_steamid();
+  void set_has_appid();
+  void clear_has_appid();
+  void set_has_twofactor_enabled();
+  void clear_has_twofactor_enabled();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint64 steamid_;
+  ::google::protobuf::uint32 appid_;
+  bool twofactor_enabled_;
+  friend struct protobuf_steammessages_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCCheckClanMembership : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCCheckClanMembership) */ {
+ public:
+  CMsgGCCheckClanMembership();
+  virtual ~CMsgGCCheckClanMembership();
+
+  CMsgGCCheckClanMembership(const CMsgGCCheckClanMembership& from);
+
+  inline CMsgGCCheckClanMembership& operator=(const CMsgGCCheckClanMembership& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCCheckClanMembership& default_instance();
+
+  static inline const CMsgGCCheckClanMembership* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCCheckClanMembership*>(
+               &_CMsgGCCheckClanMembership_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    86;
+
+  void Swap(CMsgGCCheckClanMembership* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCCheckClanMembership* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCCheckClanMembership* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCCheckClanMembership& from);
+  void MergeFrom(const CMsgGCCheckClanMembership& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCCheckClanMembership* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional fixed64 steamid = 1;
+  bool has_steamid() const;
+  void clear_steamid();
+  static const int kSteamidFieldNumber = 1;
+  ::google::protobuf::uint64 steamid() const;
+  void set_steamid(::google::protobuf::uint64 value);
+
+  // optional uint32 clanid = 2;
+  bool has_clanid() const;
+  void clear_clanid();
+  static const int kClanidFieldNumber = 2;
+  ::google::protobuf::uint32 clanid() const;
+  void set_clanid(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCCheckClanMembership)
+ private:
+  void set_has_steamid();
+  void clear_has_steamid();
+  void set_has_clanid();
+  void clear_has_clanid();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint64 steamid_;
+  ::google::protobuf::uint32 clanid_;
+  friend struct protobuf_steammessages_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgGCCheckClanMembership_Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCCheckClanMembership_Response) */ {
+ public:
+  CMsgGCCheckClanMembership_Response();
+  virtual ~CMsgGCCheckClanMembership_Response();
+
+  CMsgGCCheckClanMembership_Response(const CMsgGCCheckClanMembership_Response& from);
+
+  inline CMsgGCCheckClanMembership_Response& operator=(const CMsgGCCheckClanMembership_Response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCCheckClanMembership_Response& default_instance();
+
+  static inline const CMsgGCCheckClanMembership_Response* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCCheckClanMembership_Response*>(
+               &_CMsgGCCheckClanMembership_Response_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    87;
+
+  void Swap(CMsgGCCheckClanMembership_Response* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCCheckClanMembership_Response* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCCheckClanMembership_Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCCheckClanMembership_Response& from);
+  void MergeFrom(const CMsgGCCheckClanMembership_Response& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCCheckClanMembership_Response* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bool ismember = 1;
+  bool has_ismember() const;
+  void clear_ismember();
+  static const int kIsmemberFieldNumber = 1;
+  bool ismember() const;
+  void set_ismember(bool value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCCheckClanMembership_Response)
+ private:
+  void set_has_ismember();
+  void clear_has_ismember();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  bool ismember_;
   friend struct protobuf_steammessages_2eproto::TableStruct;
 };
 // ===================================================================
@@ -20346,13 +20661,13 @@ inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_item_id(::google::protob
 
 // optional uint32 def_index = 7;
 inline bool CMsgDPPartnerMicroTxns_PartnerMicroTxn::has_def_index() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_has_def_index() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000400u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_has_def_index() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_def_index() {
   def_index_ = 0u;
@@ -20368,97 +20683,97 @@ inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_def_index(::google::prot
   // @@protoc_insertion_point(field_set:proto.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn.def_index)
 }
 
-// optional uint32 price = 8;
+// optional uint64 price = 8;
 inline bool CMsgDPPartnerMicroTxns_PartnerMicroTxn::has_price() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_has_price() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_has_price() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_price() {
-  price_ = 0u;
+  price_ = GOOGLE_ULONGLONG(0);
   clear_has_price();
 }
-inline ::google::protobuf::uint32 CMsgDPPartnerMicroTxns_PartnerMicroTxn::price() const {
+inline ::google::protobuf::uint64 CMsgDPPartnerMicroTxns_PartnerMicroTxn::price() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn.price)
   return price_;
 }
-inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_price(::google::protobuf::uint32 value) {
+inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_price(::google::protobuf::uint64 value) {
   set_has_price();
   price_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn.price)
 }
 
-// optional uint32 tax = 9;
+// optional uint64 tax = 9;
 inline bool CMsgDPPartnerMicroTxns_PartnerMicroTxn::has_tax() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_has_tax() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000200u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_has_tax() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_tax() {
-  tax_ = 0u;
+  tax_ = GOOGLE_ULONGLONG(0);
   clear_has_tax();
 }
-inline ::google::protobuf::uint32 CMsgDPPartnerMicroTxns_PartnerMicroTxn::tax() const {
+inline ::google::protobuf::uint64 CMsgDPPartnerMicroTxns_PartnerMicroTxn::tax() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn.tax)
   return tax_;
 }
-inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_tax(::google::protobuf::uint32 value) {
+inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_tax(::google::protobuf::uint64 value) {
   set_has_tax();
   tax_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn.tax)
 }
 
-// optional uint32 price_usd = 10;
+// optional uint64 price_usd = 10;
 inline bool CMsgDPPartnerMicroTxns_PartnerMicroTxn::has_price_usd() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_has_price_usd() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_has_price_usd() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_price_usd() {
-  price_usd_ = 0u;
+  price_usd_ = GOOGLE_ULONGLONG(0);
   clear_has_price_usd();
 }
-inline ::google::protobuf::uint32 CMsgDPPartnerMicroTxns_PartnerMicroTxn::price_usd() const {
+inline ::google::protobuf::uint64 CMsgDPPartnerMicroTxns_PartnerMicroTxn::price_usd() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn.price_usd)
   return price_usd_;
 }
-inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_price_usd(::google::protobuf::uint32 value) {
+inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_price_usd(::google::protobuf::uint64 value) {
   set_has_price_usd();
   price_usd_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn.price_usd)
 }
 
-// optional uint32 tax_usd = 11;
+// optional uint64 tax_usd = 11;
 inline bool CMsgDPPartnerMicroTxns_PartnerMicroTxn::has_tax_usd() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_has_tax_usd() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_has_tax_usd() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_tax_usd() {
-  tax_usd_ = 0u;
+  tax_usd_ = GOOGLE_ULONGLONG(0);
   clear_has_tax_usd();
 }
-inline ::google::protobuf::uint32 CMsgDPPartnerMicroTxns_PartnerMicroTxn::tax_usd() const {
+inline ::google::protobuf::uint64 CMsgDPPartnerMicroTxns_PartnerMicroTxn::tax_usd() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn.tax_usd)
   return tax_usd_;
 }
-inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_tax_usd(::google::protobuf::uint32 value) {
+inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_tax_usd(::google::protobuf::uint64 value) {
   set_has_tax_usd();
   tax_usd_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn.tax_usd)
@@ -20466,13 +20781,13 @@ inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_tax_usd(::google::protob
 
 // optional uint32 purchase_type = 12;
 inline bool CMsgDPPartnerMicroTxns_PartnerMicroTxn::has_purchase_type() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::set_has_purchase_type() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_has_purchase_type() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void CMsgDPPartnerMicroTxns_PartnerMicroTxn::clear_purchase_type() {
   purchase_type_ = 0u;
@@ -21198,7 +21513,169 @@ inline void CMsgGCHVacVerificationChange::set_is_verified(bool value) {
   // @@protoc_insertion_point(field_set:proto.dota.CMsgGCHVacVerificationChange.is_verified)
 }
 
+// -------------------------------------------------------------------
+
+// CMsgGCHAccountTwoFactorChange
+
+// optional fixed64 steamid = 1;
+inline bool CMsgGCHAccountTwoFactorChange::has_steamid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCHAccountTwoFactorChange::set_has_steamid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCHAccountTwoFactorChange::clear_has_steamid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCHAccountTwoFactorChange::clear_steamid() {
+  steamid_ = GOOGLE_ULONGLONG(0);
+  clear_has_steamid();
+}
+inline ::google::protobuf::uint64 CMsgGCHAccountTwoFactorChange::steamid() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCHAccountTwoFactorChange.steamid)
+  return steamid_;
+}
+inline void CMsgGCHAccountTwoFactorChange::set_steamid(::google::protobuf::uint64 value) {
+  set_has_steamid();
+  steamid_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCHAccountTwoFactorChange.steamid)
+}
+
+// optional uint32 appid = 2;
+inline bool CMsgGCHAccountTwoFactorChange::has_appid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCHAccountTwoFactorChange::set_has_appid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCHAccountTwoFactorChange::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCHAccountTwoFactorChange::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+inline ::google::protobuf::uint32 CMsgGCHAccountTwoFactorChange::appid() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCHAccountTwoFactorChange.appid)
+  return appid_;
+}
+inline void CMsgGCHAccountTwoFactorChange::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCHAccountTwoFactorChange.appid)
+}
+
+// optional bool twofactor_enabled = 3;
+inline bool CMsgGCHAccountTwoFactorChange::has_twofactor_enabled() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgGCHAccountTwoFactorChange::set_has_twofactor_enabled() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgGCHAccountTwoFactorChange::clear_has_twofactor_enabled() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgGCHAccountTwoFactorChange::clear_twofactor_enabled() {
+  twofactor_enabled_ = false;
+  clear_has_twofactor_enabled();
+}
+inline bool CMsgGCHAccountTwoFactorChange::twofactor_enabled() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCHAccountTwoFactorChange.twofactor_enabled)
+  return twofactor_enabled_;
+}
+inline void CMsgGCHAccountTwoFactorChange::set_twofactor_enabled(bool value) {
+  set_has_twofactor_enabled();
+  twofactor_enabled_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCHAccountTwoFactorChange.twofactor_enabled)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCCheckClanMembership
+
+// optional fixed64 steamid = 1;
+inline bool CMsgGCCheckClanMembership::has_steamid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCCheckClanMembership::set_has_steamid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCCheckClanMembership::clear_has_steamid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCCheckClanMembership::clear_steamid() {
+  steamid_ = GOOGLE_ULONGLONG(0);
+  clear_has_steamid();
+}
+inline ::google::protobuf::uint64 CMsgGCCheckClanMembership::steamid() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCCheckClanMembership.steamid)
+  return steamid_;
+}
+inline void CMsgGCCheckClanMembership::set_steamid(::google::protobuf::uint64 value) {
+  set_has_steamid();
+  steamid_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCCheckClanMembership.steamid)
+}
+
+// optional uint32 clanid = 2;
+inline bool CMsgGCCheckClanMembership::has_clanid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCCheckClanMembership::set_has_clanid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCCheckClanMembership::clear_has_clanid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCCheckClanMembership::clear_clanid() {
+  clanid_ = 0u;
+  clear_has_clanid();
+}
+inline ::google::protobuf::uint32 CMsgGCCheckClanMembership::clanid() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCCheckClanMembership.clanid)
+  return clanid_;
+}
+inline void CMsgGCCheckClanMembership::set_clanid(::google::protobuf::uint32 value) {
+  set_has_clanid();
+  clanid_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCCheckClanMembership.clanid)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCCheckClanMembership_Response
+
+// optional bool ismember = 1;
+inline bool CMsgGCCheckClanMembership_Response::has_ismember() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCCheckClanMembership_Response::set_has_ismember() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCCheckClanMembership_Response::clear_has_ismember() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCCheckClanMembership_Response::clear_ismember() {
+  ismember_ = false;
+  clear_has_ismember();
+}
+inline bool CMsgGCCheckClanMembership_Response::ismember() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCCheckClanMembership_Response.ismember)
+  return ismember_;
+}
+inline void CMsgGCCheckClanMembership_Response::set_ismember(bool value) {
+  set_has_ismember();
+  ismember_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCCheckClanMembership_Response.ismember)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

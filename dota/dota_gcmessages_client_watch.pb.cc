@@ -218,14 +218,16 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCToClientFindTopSourceTVGamesResponse, game_list_index_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCToClientFindTopSourceTVGamesResponse, game_list_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCToClientFindTopSourceTVGamesResponse, specific_games_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCToClientFindTopSourceTVGamesResponse, bot_game_),
   0,
-  1,
   2,
   3,
   4,
   5,
-  ~0u,
   6,
+  ~0u,
+  7,
+  1,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCToClientTopWeekendTourneyGames, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCToClientTopWeekendTourneyGames, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -502,29 +504,29 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, 7, sizeof(CSourceTVGameSmall_Player)},
   { 9, 40, sizeof(CSourceTVGameSmall)},
   { 66, 77, sizeof(CMsgClientToGCFindTopSourceTVGames)},
-  { 83, 96, sizeof(CMsgGCToClientFindTopSourceTVGamesResponse)},
-  { 104, 110, sizeof(CMsgGCToClientTopWeekendTourneyGames)},
-  { 111, 119, sizeof(CMsgClientToGCTopMatchesRequest)},
-  { 122, 127, sizeof(CMsgClientToGCTopLeagueMatchesRequest)},
-  { 127, 132, sizeof(CMsgClientToGCTopFriendMatchesRequest)},
-  { 132, 138, sizeof(CMsgClientToGCMatchesMinimalRequest)},
-  { 139, 146, sizeof(CMsgClientToGCMatchesMinimalResponse)},
-  { 148, 154, sizeof(CMsgGCToClientTopLeagueMatchesResponse)},
-  { 155, 161, sizeof(CMsgGCToClientTopFriendMatchesResponse)},
-  { 162, 173, sizeof(CMsgClientToGCFindTopMatches)},
-  { 179, 189, sizeof(CMsgGCToClientFindTopLeagueMatchesResponse)},
-  { 194, 200, sizeof(CMsgSpectateFriendGame)},
-  { 201, 207, sizeof(CMsgSpectateFriendGameResponse)},
-  { 208, 220, sizeof(CMsgDOTAMatchMinimal_Player)},
-  { 227, 245, sizeof(CMsgDOTAMatchMinimal_Tourney)},
-  { 258, 270, sizeof(CMsgDOTAMatchMinimal)},
-  { 277, 284, sizeof(CDOTAReplayDownloadInfo_Highlight)},
-  { 286, 297, sizeof(CDOTAReplayDownloadInfo)},
-  { 303, 313, sizeof(CMsgWatchGame)},
-  { 318, 323, sizeof(CMsgCancelWatchGame)},
-  { 323, 335, sizeof(CMsgWatchGameResponse)},
-  { 342, 348, sizeof(CMsgPartyLeaderWatchGamePrompt)},
-  { 349, 364, sizeof(CDOTABroadcasterInfo)},
+  { 83, 97, sizeof(CMsgGCToClientFindTopSourceTVGamesResponse)},
+  { 106, 112, sizeof(CMsgGCToClientTopWeekendTourneyGames)},
+  { 113, 121, sizeof(CMsgClientToGCTopMatchesRequest)},
+  { 124, 129, sizeof(CMsgClientToGCTopLeagueMatchesRequest)},
+  { 129, 134, sizeof(CMsgClientToGCTopFriendMatchesRequest)},
+  { 134, 140, sizeof(CMsgClientToGCMatchesMinimalRequest)},
+  { 141, 148, sizeof(CMsgClientToGCMatchesMinimalResponse)},
+  { 150, 156, sizeof(CMsgGCToClientTopLeagueMatchesResponse)},
+  { 157, 163, sizeof(CMsgGCToClientTopFriendMatchesResponse)},
+  { 164, 175, sizeof(CMsgClientToGCFindTopMatches)},
+  { 181, 191, sizeof(CMsgGCToClientFindTopLeagueMatchesResponse)},
+  { 196, 202, sizeof(CMsgSpectateFriendGame)},
+  { 203, 209, sizeof(CMsgSpectateFriendGameResponse)},
+  { 210, 222, sizeof(CMsgDOTAMatchMinimal_Player)},
+  { 229, 247, sizeof(CMsgDOTAMatchMinimal_Tourney)},
+  { 260, 272, sizeof(CMsgDOTAMatchMinimal)},
+  { 279, 286, sizeof(CDOTAReplayDownloadInfo_Highlight)},
+  { 288, 299, sizeof(CDOTAReplayDownloadInfo)},
+  { 305, 315, sizeof(CMsgWatchGame)},
+  { 320, 325, sizeof(CMsgCancelWatchGame)},
+  { 325, 337, sizeof(CMsgWatchGameResponse)},
+  { 344, 350, sizeof(CMsgPartyLeaderWatchGamePrompt)},
+  { 351, 366, sizeof(CDOTABroadcasterInfo)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -666,6 +668,8 @@ void TableStruct::InitDefaultsImpl() {
   _CMsgWatchGameResponse_default_instance_.DefaultConstruct();
   _CMsgPartyLeaderWatchGamePrompt_default_instance_.DefaultConstruct();
   _CDOTABroadcasterInfo_default_instance_.DefaultConstruct();
+  _CMsgGCToClientFindTopSourceTVGamesResponse_default_instance_.get_mutable()->bot_game_ = const_cast< ::proto::dota::CSourceTVGameSmall*>(
+      ::proto::dota::CSourceTVGameSmall::internal_default_instance());
   _CMsgDOTAMatchMinimal_default_instance_.get_mutable()->tourney_ = const_cast< ::proto::dota::CMsgDOTAMatchMinimal_Tourney*>(
       ::proto::dota::CMsgDOTAMatchMinimal_Tourney::internal_default_instance());
   _CDOTAReplayDownloadInfo_default_instance_.get_mutable()->match_ = const_cast< ::proto::dota::CMsgDOTAMatchMinimal*>(
@@ -703,93 +707,94 @@ void AddDescriptorsImpl() {
       "\234\001\n\"CMsgClientToGCFindTopSourceTVGames\022\022"
       "\n\nsearch_key\030\001 \001(\t\022\021\n\tleague_id\030\002 \001(\r\022\017\n"
       "\007hero_id\030\003 \001(\r\022\022\n\nstart_game\030\004 \001(\r\022\027\n\017ga"
-      "me_list_index\030\005 \001(\r\022\021\n\tlobby_ids\030\006 \003(\004\"\357"
-      "\001\n*CMsgGCToClientFindTopSourceTVGamesRes"
+      "me_list_index\030\005 \001(\r\022\021\n\tlobby_ids\030\006 \003(\004\"\241"
+      "\002\n*CMsgGCToClientFindTopSourceTVGamesRes"
       "ponse\022\022\n\nsearch_key\030\001 \001(\t\022\021\n\tleague_id\030\002"
       " \001(\r\022\017\n\007hero_id\030\003 \001(\r\022\022\n\nstart_game\030\004 \001("
       "\r\022\021\n\tnum_games\030\005 \001(\r\022\027\n\017game_list_index\030"
       "\006 \001(\r\0221\n\tgame_list\030\007 \003(\0132\036.proto.dota.CS"
       "ourceTVGameSmall\022\026\n\016specific_games\030\010 \001(\010"
-      "\"Z\n$CMsgGCToClientTopWeekendTourneyGames"
-      "\0222\n\nlive_games\030\001 \003(\0132\036.proto.dota.CSourc"
-      "eTVGameSmall\"^\n\037CMsgClientToGCTopMatches"
-      "Request\022\017\n\007hero_id\030\001 \001(\r\022\031\n\021player_accou"
-      "nt_id\030\002 \001(\r\022\017\n\007team_id\030\003 \001(\r\"\'\n%CMsgClie"
-      "ntToGCTopLeagueMatchesRequest\"\'\n%CMsgCli"
-      "entToGCTopFriendMatchesRequest\"8\n#CMsgCl"
-      "ientToGCMatchesMinimalRequest\022\021\n\tmatch_i"
-      "ds\030\001 \003(\004\"m\n$CMsgClientToGCMatchesMinimal"
-      "Response\0221\n\007matches\030\001 \003(\0132 .proto.dota.C"
-      "MsgDOTAMatchMinimal\022\022\n\nlast_match\030\002 \001(\010\""
-      "[\n&CMsgGCToClientTopLeagueMatchesRespons"
-      "e\0221\n\007matches\030\002 \003(\0132 .proto.dota.CMsgDOTA"
-      "MatchMinimal\"[\n&CMsgGCToClientTopFriendM"
-      "atchesResponse\0221\n\007matches\030\001 \003(\0132 .proto."
-      "dota.CMsgDOTAMatchMinimal\"\223\001\n\034CMsgClient"
-      "ToGCFindTopMatches\022\022\n\nstart_game\030\001 \001(\r\022\021"
-      "\n\tleague_id\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\r\022\021\n\tfr"
-      "iend_id\030\004 \001(\r\022\023\n\013friend_list\030\005 \001(\010\022\023\n\013le"
-      "ague_list\030\006 \001(\010\"\243\001\n*CMsgGCToClientFindTo"
-      "pLeagueMatchesResponse\022\022\n\nstart_game\030\001 \001"
-      "(\r\022\021\n\tleague_id\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\r\022\021"
-      "\n\tmatch_ids\030\004 \003(\r\022*\n\007matches\030\005 \003(\0132\031.pro"
-      "to.dota.CMsgDOTAMatch\"*\n\026CMsgSpectateFri"
-      "endGame\022\020\n\010steam_id\030\001 \001(\006\"8\n\036CMsgSpectat"
-      "eFriendGameResponse\022\026\n\016server_steamid\030\004 "
-      "\001(\006\"\312\006\n\024CMsgDOTAMatchMinimal\022\020\n\010match_id"
-      "\030\001 \001(\004\022\022\n\nstart_time\030\002 \001(\007\022\020\n\010duration\030\003"
-      " \001(\r\022@\n\tgame_mode\030\004 \001(\0162\031.proto.dota.DOT"
-      "A_GameMode:\022DOTA_GAMEMODE_NONE\0228\n\007player"
-      "s\030\006 \003(\0132\'.proto.dota.CMsgDOTAMatchMinima"
-      "l.Player\0229\n\007tourney\030\007 \001(\0132(.proto.dota.C"
-      "MsgDOTAMatchMinimal.Tourney\022I\n\rmatch_out"
-      "come\030\010 \001(\0162\031.proto.dota.EMatchOutcome:\027k"
-      "_EMatchOutcome_Unknown\032\201\001\n\006Player\022\022\n\nacc"
-      "ount_id\030\001 \001(\r\022\017\n\007hero_id\030\002 \001(\r\022\r\n\005kills\030"
-      "\003 \001(\r\022\016\n\006deaths\030\004 \001(\r\022\017\n\007assists\030\005 \001(\r\022\r"
-      "\n\005items\030\006 \003(\r\022\023\n\013player_slot\030\007 \001(\r\032\363\002\n\007T"
-      "ourney\022\021\n\tleague_id\030\001 \001(\r\022\023\n\013series_type"
-      "\030\010 \001(\r\022\023\n\013series_game\030\t \001(\r\022%\n\035weekend_t"
-      "ourney_tournament_id\030\n \001(\r\022(\n weekend_to"
-      "urney_season_trophy_id\030\013 \001(\r\022 \n\030weekend_"
-      "tourney_division\030\014 \001(\r\022#\n\033weekend_tourne"
-      "y_skill_level\030\r \001(\r\022\027\n\017radiant_team_id\030\002"
-      " \001(\r\022\031\n\021radiant_team_name\030\003 \001(\t\022\031\n\021radia"
-      "nt_team_logo\030\004 \001(\006\022\024\n\014dire_team_id\030\005 \001(\r"
-      "\022\026\n\016dire_team_name\030\006 \001(\t\022\026\n\016dire_team_lo"
-      "go\030\007 \001(\006\"\327\001\n\027CDOTAReplayDownloadInfo\022/\n\005"
-      "match\030\001 \001(\0132 .proto.dota.CMsgDOTAMatchMi"
-      "nimal\022\r\n\005title\030\002 \001(\t\022\023\n\013description\030\003 \001("
-      "\t\022\014\n\004size\030\004 \001(\r\022\014\n\004tags\030\005 \003(\t\022\026\n\016exists_"
-      "on_disk\030\006 \001(\010\0323\n\tHighlight\022\021\n\ttimestamp\030"
-      "\001 \001(\r\022\023\n\013description\030\002 \001(\t\"\200\001\n\rCMsgWatch"
-      "Game\022\026\n\016server_steamid\030\001 \001(\006\022\026\n\016client_v"
-      "ersion\030\002 \001(\r\022\034\n\024watch_server_steamid\030\003 \001"
-      "(\006\022\020\n\010lobby_id\030\004 \001(\004\022\017\n\007regions\030\005 \003(\r\"\025\n"
-      "\023CMsgCancelWatchGame\"\324\003\n\025CMsgWatchGameRe"
-      "sponse\022U\n\021watch_game_result\030\001 \001(\01621.prot"
-      "o.dota.CMsgWatchGameResponse.WatchGameRe"
-      "sult:\007PENDING\022\035\n\025source_tv_public_addr\030\002"
-      " \001(\r\022\036\n\026source_tv_private_addr\030\003 \001(\r\022\026\n\016"
-      "source_tv_port\030\004 \001(\r\022\033\n\023game_server_stea"
-      "mid\030\005 \001(\006\022\034\n\024watch_server_steamid\030\006 \001(\006\022"
-      "#\n\033watch_tv_unique_secret_code\030\007 \001(\006\"\254\001\n"
-      "\017WatchGameResult\022\013\n\007PENDING\020\000\022\t\n\005READY\020\001"
-      "\022\026\n\022GAMESERVERNOTFOUND\020\002\022\017\n\013UNAVAILABLE\020"
-      "\003\022\r\n\tCANCELLED\020\004\022\027\n\023INCOMPATIBLEVERSION\020"
-      "\005\022\035\n\031MISSINGLEAGUESUBSCRIPTION\020\006\022\021\n\rLOBB"
-      "YNOTFOUND\020\007\"=\n\036CMsgPartyLeaderWatchGameP"
-      "rompt\022\033\n\023game_server_steamid\030\005 \001(\006\"\202\002\n\024C"
-      "DOTABroadcasterInfo\022\022\n\naccount_id\030\001 \001(\r\022"
-      "\027\n\017server_steam_id\030\002 \001(\006\022\014\n\004live\030\003 \001(\010\022\031"
-      "\n\021team_name_radiant\030\004 \001(\t\022\026\n\016team_name_d"
-      "ire\030\005 \001(\t\022\022\n\nstage_name\030\006 \001(\t\022\023\n\013series_"
-      "game\030\007 \001(\r\022\023\n\013series_type\030\010 \001(\r\022$\n\034upcom"
-      "ing_broadcast_timestamp\030\t \001(\r\022\030\n\020allow_l"
-      "ive_video\030\n \001(\010B\005H\001\200\001\000"
+      "\0220\n\010bot_game\030\t \001(\0132\036.proto.dota.CSourceT"
+      "VGameSmall\"Z\n$CMsgGCToClientTopWeekendTo"
+      "urneyGames\0222\n\nlive_games\030\001 \003(\0132\036.proto.d"
+      "ota.CSourceTVGameSmall\"^\n\037CMsgClientToGC"
+      "TopMatchesRequest\022\017\n\007hero_id\030\001 \001(\r\022\031\n\021pl"
+      "ayer_account_id\030\002 \001(\r\022\017\n\007team_id\030\003 \001(\r\"\'"
+      "\n%CMsgClientToGCTopLeagueMatchesRequest\""
+      "\'\n%CMsgClientToGCTopFriendMatchesRequest"
+      "\"8\n#CMsgClientToGCMatchesMinimalRequest\022"
+      "\021\n\tmatch_ids\030\001 \003(\004\"m\n$CMsgClientToGCMatc"
+      "hesMinimalResponse\0221\n\007matches\030\001 \003(\0132 .pr"
+      "oto.dota.CMsgDOTAMatchMinimal\022\022\n\nlast_ma"
+      "tch\030\002 \001(\010\"[\n&CMsgGCToClientTopLeagueMatc"
+      "hesResponse\0221\n\007matches\030\002 \003(\0132 .proto.dot"
+      "a.CMsgDOTAMatchMinimal\"[\n&CMsgGCToClient"
+      "TopFriendMatchesResponse\0221\n\007matches\030\001 \003("
+      "\0132 .proto.dota.CMsgDOTAMatchMinimal\"\223\001\n\034"
+      "CMsgClientToGCFindTopMatches\022\022\n\nstart_ga"
+      "me\030\001 \001(\r\022\021\n\tleague_id\030\002 \001(\r\022\017\n\007hero_id\030\003"
+      " \001(\r\022\021\n\tfriend_id\030\004 \001(\r\022\023\n\013friend_list\030\005"
+      " \001(\010\022\023\n\013league_list\030\006 \001(\010\"\243\001\n*CMsgGCToCl"
+      "ientFindTopLeagueMatchesResponse\022\022\n\nstar"
+      "t_game\030\001 \001(\r\022\021\n\tleague_id\030\002 \001(\r\022\017\n\007hero_"
+      "id\030\003 \001(\r\022\021\n\tmatch_ids\030\004 \003(\r\022*\n\007matches\030\005"
+      " \003(\0132\031.proto.dota.CMsgDOTAMatch\"*\n\026CMsgS"
+      "pectateFriendGame\022\020\n\010steam_id\030\001 \001(\006\"8\n\036C"
+      "MsgSpectateFriendGameResponse\022\026\n\016server_"
+      "steamid\030\004 \001(\006\"\312\006\n\024CMsgDOTAMatchMinimal\022\020"
+      "\n\010match_id\030\001 \001(\004\022\022\n\nstart_time\030\002 \001(\007\022\020\n\010"
+      "duration\030\003 \001(\r\022@\n\tgame_mode\030\004 \001(\0162\031.prot"
+      "o.dota.DOTA_GameMode:\022DOTA_GAMEMODE_NONE"
+      "\0228\n\007players\030\006 \003(\0132\'.proto.dota.CMsgDOTAM"
+      "atchMinimal.Player\0229\n\007tourney\030\007 \001(\0132(.pr"
+      "oto.dota.CMsgDOTAMatchMinimal.Tourney\022I\n"
+      "\rmatch_outcome\030\010 \001(\0162\031.proto.dota.EMatch"
+      "Outcome:\027k_EMatchOutcome_Unknown\032\201\001\n\006Pla"
+      "yer\022\022\n\naccount_id\030\001 \001(\r\022\017\n\007hero_id\030\002 \001(\r"
+      "\022\r\n\005kills\030\003 \001(\r\022\016\n\006deaths\030\004 \001(\r\022\017\n\007assis"
+      "ts\030\005 \001(\r\022\r\n\005items\030\006 \003(\r\022\023\n\013player_slot\030\007"
+      " \001(\r\032\363\002\n\007Tourney\022\021\n\tleague_id\030\001 \001(\r\022\023\n\013s"
+      "eries_type\030\010 \001(\r\022\023\n\013series_game\030\t \001(\r\022%\n"
+      "\035weekend_tourney_tournament_id\030\n \001(\r\022(\n "
+      "weekend_tourney_season_trophy_id\030\013 \001(\r\022 "
+      "\n\030weekend_tourney_division\030\014 \001(\r\022#\n\033week"
+      "end_tourney_skill_level\030\r \001(\r\022\027\n\017radiant"
+      "_team_id\030\002 \001(\r\022\031\n\021radiant_team_name\030\003 \001("
+      "\t\022\031\n\021radiant_team_logo\030\004 \001(\006\022\024\n\014dire_tea"
+      "m_id\030\005 \001(\r\022\026\n\016dire_team_name\030\006 \001(\t\022\026\n\016di"
+      "re_team_logo\030\007 \001(\006\"\327\001\n\027CDOTAReplayDownlo"
+      "adInfo\022/\n\005match\030\001 \001(\0132 .proto.dota.CMsgD"
+      "OTAMatchMinimal\022\r\n\005title\030\002 \001(\t\022\023\n\013descri"
+      "ption\030\003 \001(\t\022\014\n\004size\030\004 \001(\r\022\014\n\004tags\030\005 \003(\t\022"
+      "\026\n\016exists_on_disk\030\006 \001(\010\0323\n\tHighlight\022\021\n\t"
+      "timestamp\030\001 \001(\r\022\023\n\013description\030\002 \001(\t\"\200\001\n"
+      "\rCMsgWatchGame\022\026\n\016server_steamid\030\001 \001(\006\022\026"
+      "\n\016client_version\030\002 \001(\r\022\034\n\024watch_server_s"
+      "teamid\030\003 \001(\006\022\020\n\010lobby_id\030\004 \001(\004\022\017\n\007region"
+      "s\030\005 \003(\r\"\025\n\023CMsgCancelWatchGame\"\324\003\n\025CMsgW"
+      "atchGameResponse\022U\n\021watch_game_result\030\001 "
+      "\001(\01621.proto.dota.CMsgWatchGameResponse.W"
+      "atchGameResult:\007PENDING\022\035\n\025source_tv_pub"
+      "lic_addr\030\002 \001(\r\022\036\n\026source_tv_private_addr"
+      "\030\003 \001(\r\022\026\n\016source_tv_port\030\004 \001(\r\022\033\n\023game_s"
+      "erver_steamid\030\005 \001(\006\022\034\n\024watch_server_stea"
+      "mid\030\006 \001(\006\022#\n\033watch_tv_unique_secret_code"
+      "\030\007 \001(\006\"\254\001\n\017WatchGameResult\022\013\n\007PENDING\020\000\022"
+      "\t\n\005READY\020\001\022\026\n\022GAMESERVERNOTFOUND\020\002\022\017\n\013UN"
+      "AVAILABLE\020\003\022\r\n\tCANCELLED\020\004\022\027\n\023INCOMPATIB"
+      "LEVERSION\020\005\022\035\n\031MISSINGLEAGUESUBSCRIPTION"
+      "\020\006\022\021\n\rLOBBYNOTFOUND\020\007\"=\n\036CMsgPartyLeader"
+      "WatchGamePrompt\022\033\n\023game_server_steamid\030\005"
+      " \001(\006\"\202\002\n\024CDOTABroadcasterInfo\022\022\n\naccount"
+      "_id\030\001 \001(\r\022\027\n\017server_steam_id\030\002 \001(\006\022\014\n\004li"
+      "ve\030\003 \001(\010\022\031\n\021team_name_radiant\030\004 \001(\t\022\026\n\016t"
+      "eam_name_dire\030\005 \001(\t\022\022\n\nstage_name\030\006 \001(\t\022"
+      "\023\n\013series_game\030\007 \001(\r\022\023\n\013series_type\030\010 \001("
+      "\r\022$\n\034upcoming_broadcast_timestamp\030\t \001(\r\022"
+      "\030\n\020allow_live_video\030\n \001(\010B\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 4302);
+      descriptor, 4352);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dota_gcmessages_client_watch.proto", &protobuf_RegisterTypes);
   ::proto::dota::protobuf_dota_5fshared_5fenums_2eproto::AddDescriptors();
@@ -3771,6 +3776,7 @@ const int CMsgGCToClientFindTopSourceTVGamesResponse::kNumGamesFieldNumber;
 const int CMsgGCToClientFindTopSourceTVGamesResponse::kGameListIndexFieldNumber;
 const int CMsgGCToClientFindTopSourceTVGamesResponse::kGameListFieldNumber;
 const int CMsgGCToClientFindTopSourceTVGamesResponse::kSpecificGamesFieldNumber;
+const int CMsgGCToClientFindTopSourceTVGamesResponse::kBotGameFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CMsgGCToClientFindTopSourceTVGamesResponse::CMsgGCToClientFindTopSourceTVGamesResponse()
@@ -3792,6 +3798,11 @@ CMsgGCToClientFindTopSourceTVGamesResponse::CMsgGCToClientFindTopSourceTVGamesRe
   if (from.has_search_key()) {
     search_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.search_key_);
   }
+  if (from.has_bot_game()) {
+    bot_game_ = new ::proto::dota::CSourceTVGameSmall(*from.bot_game_);
+  } else {
+    bot_game_ = NULL;
+  }
   ::memcpy(&league_id_, &from.league_id_,
     reinterpret_cast<char*>(&specific_games_) -
     reinterpret_cast<char*>(&league_id_) + sizeof(specific_games_));
@@ -3801,8 +3812,8 @@ CMsgGCToClientFindTopSourceTVGamesResponse::CMsgGCToClientFindTopSourceTVGamesRe
 void CMsgGCToClientFindTopSourceTVGamesResponse::SharedCtor() {
   _cached_size_ = 0;
   search_key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&league_id_, 0, reinterpret_cast<char*>(&specific_games_) -
-    reinterpret_cast<char*>(&league_id_) + sizeof(specific_games_));
+  ::memset(&bot_game_, 0, reinterpret_cast<char*>(&specific_games_) -
+    reinterpret_cast<char*>(&bot_game_) + sizeof(specific_games_));
 }
 
 CMsgGCToClientFindTopSourceTVGamesResponse::~CMsgGCToClientFindTopSourceTVGamesResponse() {
@@ -3812,6 +3823,9 @@ CMsgGCToClientFindTopSourceTVGamesResponse::~CMsgGCToClientFindTopSourceTVGamesR
 
 void CMsgGCToClientFindTopSourceTVGamesResponse::SharedDtor() {
   search_key_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) {
+    delete bot_game_;
+  }
 }
 
 void CMsgGCToClientFindTopSourceTVGamesResponse::SetCachedSize(int size) const {
@@ -3840,11 +3854,17 @@ CMsgGCToClientFindTopSourceTVGamesResponse* CMsgGCToClientFindTopSourceTVGamesRe
 void CMsgGCToClientFindTopSourceTVGamesResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse)
   game_list_.Clear();
-  if (has_search_key()) {
-    GOOGLE_DCHECK(!search_key_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-    (*search_key_.UnsafeRawStringPointer())->clear();
+  if (_has_bits_[0 / 32] & 3u) {
+    if (has_search_key()) {
+      GOOGLE_DCHECK(!search_key_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*search_key_.UnsafeRawStringPointer())->clear();
+    }
+    if (has_bot_game()) {
+      GOOGLE_DCHECK(bot_game_ != NULL);
+      bot_game_->::proto::dota::CSourceTVGameSmall::Clear();
+    }
   }
-  if (_has_bits_[0 / 32] & 126u) {
+  if (_has_bits_[0 / 32] & 252u) {
     ::memset(&league_id_, 0, reinterpret_cast<char*>(&specific_games_) -
       reinterpret_cast<char*>(&league_id_) + sizeof(specific_games_));
   }
@@ -3974,6 +3994,18 @@ bool CMsgGCToClientFindTopSourceTVGamesResponse::MergePartialFromCodedStream(
         break;
       }
 
+      // optional .proto.dota.CSourceTVGameSmall bot_game = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(74u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_bot_game()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -4014,27 +4046,27 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::SerializeWithCachedSizes(
   }
 
   // optional uint32 league_id = 2;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->league_id(), output);
   }
 
   // optional uint32 hero_id = 3;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->hero_id(), output);
   }
 
   // optional uint32 start_game = 4;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->start_game(), output);
   }
 
   // optional uint32 num_games = 5;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->num_games(), output);
   }
 
   // optional uint32 game_list_index = 6;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000040u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(6, this->game_list_index(), output);
   }
 
@@ -4045,8 +4077,14 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::SerializeWithCachedSizes(
   }
 
   // optional bool specific_games = 8;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->specific_games(), output);
+  }
+
+  // optional .proto.dota.CSourceTVGameSmall bot_game = 9;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, *this->bot_game_, output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -4075,27 +4113,27 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::SerializeWithCachedSizes(
   }
 
   // optional uint32 league_id = 2;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->league_id(), target);
   }
 
   // optional uint32 hero_id = 3;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->hero_id(), target);
   }
 
   // optional uint32 start_game = 4;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->start_game(), target);
   }
 
   // optional uint32 num_games = 5;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000020u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->num_games(), target);
   }
 
   // optional uint32 game_list_index = 6;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000040u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(6, this->game_list_index(), target);
   }
 
@@ -4107,8 +4145,15 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::SerializeWithCachedSizes(
   }
 
   // optional bool specific_games = 8;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->specific_games(), target);
+  }
+
+  // optional .proto.dota.CSourceTVGameSmall bot_game = 9;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        9, *this->bot_game_, deterministic, target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -4139,12 +4184,19 @@ size_t CMsgGCToClientFindTopSourceTVGamesResponse::ByteSizeLong() const {
     }
   }
 
-  if (_has_bits_[0 / 32] & 127u) {
+  if (_has_bits_[0 / 32] & 255u) {
     // optional string search_key = 1;
     if (has_search_key()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
           this->search_key());
+    }
+
+    // optional .proto.dota.CSourceTVGameSmall bot_game = 9;
+    if (has_bot_game()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->bot_game_);
     }
 
     // optional uint32 league_id = 2;
@@ -4219,27 +4271,30 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::MergeFrom(const CMsgGCToClientF
 
   game_list_.MergeFrom(from.game_list_);
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 127u) {
+  if (cached_has_bits & 255u) {
     if (cached_has_bits & 0x00000001u) {
       set_has_search_key();
       search_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.search_key_);
     }
     if (cached_has_bits & 0x00000002u) {
-      league_id_ = from.league_id_;
+      mutable_bot_game()->::proto::dota::CSourceTVGameSmall::MergeFrom(from.bot_game());
     }
     if (cached_has_bits & 0x00000004u) {
-      hero_id_ = from.hero_id_;
+      league_id_ = from.league_id_;
     }
     if (cached_has_bits & 0x00000008u) {
-      start_game_ = from.start_game_;
+      hero_id_ = from.hero_id_;
     }
     if (cached_has_bits & 0x00000010u) {
-      num_games_ = from.num_games_;
+      start_game_ = from.start_game_;
     }
     if (cached_has_bits & 0x00000020u) {
-      game_list_index_ = from.game_list_index_;
+      num_games_ = from.num_games_;
     }
     if (cached_has_bits & 0x00000040u) {
+      game_list_index_ = from.game_list_index_;
+    }
+    if (cached_has_bits & 0x00000080u) {
       specific_games_ = from.specific_games_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -4271,6 +4326,7 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::Swap(CMsgGCToClientFindTopSourc
 void CMsgGCToClientFindTopSourceTVGamesResponse::InternalSwap(CMsgGCToClientFindTopSourceTVGamesResponse* other) {
   game_list_.InternalSwap(&other->game_list_);
   search_key_.Swap(&other->search_key_);
+  std::swap(bot_game_, other->bot_game_);
   std::swap(league_id_, other->league_id_);
   std::swap(hero_id_, other->hero_id_);
   std::swap(start_game_, other->start_game_);
@@ -4355,13 +4411,13 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::set_allocated_search_key(::std:
 
 // optional uint32 league_id = 2;
 bool CMsgGCToClientFindTopSourceTVGamesResponse::has_league_id() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_league_id() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000004u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_league_id() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_league_id() {
   league_id_ = 0u;
@@ -4379,13 +4435,13 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::set_league_id(::google::protobu
 
 // optional uint32 hero_id = 3;
 bool CMsgGCToClientFindTopSourceTVGamesResponse::has_hero_id() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_hero_id() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000008u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_hero_id() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_hero_id() {
   hero_id_ = 0u;
@@ -4403,13 +4459,13 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::set_hero_id(::google::protobuf:
 
 // optional uint32 start_game = 4;
 bool CMsgGCToClientFindTopSourceTVGamesResponse::has_start_game() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_start_game() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000010u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_start_game() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_start_game() {
   start_game_ = 0u;
@@ -4427,13 +4483,13 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::set_start_game(::google::protob
 
 // optional uint32 num_games = 5;
 bool CMsgGCToClientFindTopSourceTVGamesResponse::has_num_games() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_num_games() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000020u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_num_games() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_num_games() {
   num_games_ = 0u;
@@ -4451,13 +4507,13 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::set_num_games(::google::protobu
 
 // optional uint32 game_list_index = 6;
 bool CMsgGCToClientFindTopSourceTVGamesResponse::has_game_list_index() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_game_list_index() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_game_list_index() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_game_list_index() {
   game_list_index_ = 0u;
@@ -4505,13 +4561,13 @@ CMsgGCToClientFindTopSourceTVGamesResponse::game_list() const {
 
 // optional bool specific_games = 8;
 bool CMsgGCToClientFindTopSourceTVGamesResponse::has_specific_games() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_specific_games() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_specific_games() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 void CMsgGCToClientFindTopSourceTVGamesResponse::clear_specific_games() {
   specific_games_ = false;
@@ -4525,6 +4581,51 @@ void CMsgGCToClientFindTopSourceTVGamesResponse::set_specific_games(bool value) 
   set_has_specific_games();
   specific_games_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse.specific_games)
+}
+
+// optional .proto.dota.CSourceTVGameSmall bot_game = 9;
+bool CMsgGCToClientFindTopSourceTVGamesResponse::has_bot_game() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_bot_game() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_bot_game() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CMsgGCToClientFindTopSourceTVGamesResponse::clear_bot_game() {
+  if (bot_game_ != NULL) bot_game_->::proto::dota::CSourceTVGameSmall::Clear();
+  clear_has_bot_game();
+}
+const ::proto::dota::CSourceTVGameSmall& CMsgGCToClientFindTopSourceTVGamesResponse::bot_game() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse.bot_game)
+  return bot_game_ != NULL ? *bot_game_
+                         : *::proto::dota::CSourceTVGameSmall::internal_default_instance();
+}
+::proto::dota::CSourceTVGameSmall* CMsgGCToClientFindTopSourceTVGamesResponse::mutable_bot_game() {
+  set_has_bot_game();
+  if (bot_game_ == NULL) {
+    bot_game_ = new ::proto::dota::CSourceTVGameSmall;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse.bot_game)
+  return bot_game_;
+}
+::proto::dota::CSourceTVGameSmall* CMsgGCToClientFindTopSourceTVGamesResponse::release_bot_game() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse.bot_game)
+  clear_has_bot_game();
+  ::proto::dota::CSourceTVGameSmall* temp = bot_game_;
+  bot_game_ = NULL;
+  return temp;
+}
+void CMsgGCToClientFindTopSourceTVGamesResponse::set_allocated_bot_game(::proto::dota::CSourceTVGameSmall* bot_game) {
+  delete bot_game_;
+  bot_game_ = bot_game;
+  if (bot_game) {
+    set_has_bot_game();
+  } else {
+    clear_has_bot_game();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse.bot_game)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

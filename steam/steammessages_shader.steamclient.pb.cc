@@ -31,13 +31,17 @@ class CShader_SendShader_RequestDefaultTypeInternal : public ::google::protobuf:
 } _CShader_SendShader_Request_default_instance_;
 class CShader_SendShader_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CShader_SendShader_Response> {
 } _CShader_SendShader_Response_default_instance_;
+class CShader_GetBucketManifest_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CShader_GetBucketManifest_Request> {
+} _CShader_GetBucketManifest_Request_default_instance_;
+class CShader_GetBucketManifest_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CShader_GetBucketManifest_Response> {
+} _CShader_GetBucketManifest_Response_default_instance_;
 
 namespace protobuf_steammessages_5fshader_2esteamclient_2eproto {
 
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[6];
+::google::protobuf::Metadata file_level_metadata[8];
 const ::google::protobuf::ServiceDescriptor* file_level_service_descriptors[1];
 
 }  // namespace
@@ -53,6 +57,8 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
     TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
@@ -114,6 +120,24 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CShader_GetBucketManifest_Request, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CShader_GetBucketManifest_Request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CShader_GetBucketManifest_Request, appid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CShader_GetBucketManifest_Request, gpu_desc_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CShader_GetBucketManifest_Request, driver_desc_),
+  2,
+  0,
+  1,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CShader_GetBucketManifest_Response, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CShader_GetBucketManifest_Response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CShader_GetBucketManifest_Response, manifestid_),
+  0,
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
@@ -123,6 +147,8 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 29, 36, sizeof(CShader_SendShader_Request_ShaderCode)},
   { 38, 45, sizeof(CShader_SendShader_Request)},
   { 47, 52, sizeof(CShader_SendShader_Response)},
+  { 52, 60, sizeof(CShader_GetBucketManifest_Request)},
+  { 63, 69, sizeof(CShader_GetBucketManifest_Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -132,6 +158,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CShader_SendShader_Request_ShaderCode_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CShader_SendShader_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CShader_SendShader_Response_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CShader_GetBucketManifest_Request_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CShader_GetBucketManifest_Response_default_instance_),
 };
 
 namespace {
@@ -152,7 +180,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 6);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 8);
 }
 
 }  // namespace
@@ -170,6 +198,10 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[4].reflection;
   _CShader_SendShader_Response_default_instance_.Shutdown();
   delete file_level_metadata[5].reflection;
+  _CShader_GetBucketManifest_Request_default_instance_.Shutdown();
+  delete file_level_metadata[6].reflection;
+  _CShader_GetBucketManifest_Response_default_instance_.Shutdown();
+  delete file_level_metadata[7].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -183,6 +215,8 @@ void TableStruct::InitDefaultsImpl() {
   _CShader_SendShader_Request_ShaderCode_default_instance_.DefaultConstruct();
   _CShader_SendShader_Request_default_instance_.DefaultConstruct();
   _CShader_SendShader_Response_default_instance_.DefaultConstruct();
+  _CShader_GetBucketManifest_Request_default_instance_.DefaultConstruct();
+  _CShader_GetBucketManifest_Response_default_instance_.DefaultConstruct();
 }
 
 void InitDefaults() {
@@ -206,21 +240,29 @@ void AddDescriptorsImpl() {
       "22.proto.steam.CShader_SendShader_Reques"
       "t.ShaderCode\032:\n\nShaderCode\022\027\n\017shader_cod"
       "e_sha\030\001 \001(\014\022\023\n\013shader_code\030\002 \001(\014\"\035\n\033CSha"
-      "der_SendShader_Response2\237\003\n\006Shader\022\326\001\n\016R"
-      "egisterShader\022+.proto.steam.CShader_Regi"
-      "sterShader_Request\032,.proto.steam.CShader"
-      "_RegisterShader_Response\"i\202\265\030eClient jus"
-      "t finished playing a game, detected new "
-      "shader cache entries and is notifying us"
-      " about them\022\247\001\n\nSendShader\022\'.proto.steam"
-      ".CShader_SendShader_Request\032(.proto.stea"
-      "m.CShader_SendShader_Response\"F\202\265\030BClien"
-      "t is sending us actual compiled shader c"
-      "ode that we requested\032\022\202\265\030\016Shader method"
-      "sB\003\200\001\001"
+      "der_SendShader_Response\"Y\n!CShader_GetBu"
+      "cketManifest_Request\022\r\n\005appid\030\001 \001(\r\022\020\n\010g"
+      "pu_desc\030\002 \001(\t\022\023\n\013driver_desc\030\003 \001(\t\"8\n\"CS"
+      "hader_GetBucketManifest_Response\022\022\n\nmani"
+      "festid\030\001 \001(\0042\347\004\n\006Shader\022\326\001\n\016RegisterShad"
+      "er\022+.proto.steam.CShader_RegisterShader_"
+      "Request\032,.proto.steam.CShader_RegisterSh"
+      "ader_Response\"i\202\265\030eClient just finished "
+      "playing a game, detected new shader cach"
+      "e entries and is notifying us about them"
+      "\022\247\001\n\nSendShader\022\'.proto.steam.CShader_Se"
+      "ndShader_Request\032(.proto.steam.CShader_S"
+      "endShader_Response\"F\202\265\030BClient is sendin"
+      "g us actual compiled shader code that we"
+      " requested\022\305\001\n\021GetBucketManifest\022..proto"
+      ".steam.CShader_GetBucketManifest_Request"
+      "\032/.proto.steam.CShader_GetBucketManifest"
+      "_Response\"O\202\265\030KClient wants to know the "
+      "manifest ID to fetch (if any) for a buck"
+      "et\'s depot\032\022\202\265\030\016Shader methodsB\003\200\001\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1006);
+      descriptor, 1355);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "steammessages_shader.steamclient.proto", &protobuf_RegisterTypes);
   ::proto::steam::protobuf_steammessages_5funified_5fbase_2esteamclient_2eproto::AddDescriptors();
@@ -2498,6 +2540,790 @@ void CShader_SendShader_Response::InternalSwap(CShader_SendShader_Response* othe
 
 // ===================================================================
 
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CShader_GetBucketManifest_Request::kAppidFieldNumber;
+const int CShader_GetBucketManifest_Request::kGpuDescFieldNumber;
+const int CShader_GetBucketManifest_Request::kDriverDescFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CShader_GetBucketManifest_Request::CShader_GetBucketManifest_Request()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fshader_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CShader_GetBucketManifest_Request)
+}
+CShader_GetBucketManifest_Request::CShader_GetBucketManifest_Request(const CShader_GetBucketManifest_Request& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  gpu_desc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_gpu_desc()) {
+    gpu_desc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.gpu_desc_);
+  }
+  driver_desc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_driver_desc()) {
+    driver_desc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.driver_desc_);
+  }
+  appid_ = from.appid_;
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CShader_GetBucketManifest_Request)
+}
+
+void CShader_GetBucketManifest_Request::SharedCtor() {
+  _cached_size_ = 0;
+  gpu_desc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  driver_desc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  appid_ = 0u;
+}
+
+CShader_GetBucketManifest_Request::~CShader_GetBucketManifest_Request() {
+  // @@protoc_insertion_point(destructor:proto.steam.CShader_GetBucketManifest_Request)
+  SharedDtor();
+}
+
+void CShader_GetBucketManifest_Request::SharedDtor() {
+  gpu_desc_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  driver_desc_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void CShader_GetBucketManifest_Request::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CShader_GetBucketManifest_Request::descriptor() {
+  protobuf_steammessages_5fshader_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fshader_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CShader_GetBucketManifest_Request& CShader_GetBucketManifest_Request::default_instance() {
+  protobuf_steammessages_5fshader_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CShader_GetBucketManifest_Request* CShader_GetBucketManifest_Request::New(::google::protobuf::Arena* arena) const {
+  CShader_GetBucketManifest_Request* n = new CShader_GetBucketManifest_Request;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CShader_GetBucketManifest_Request::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CShader_GetBucketManifest_Request)
+  if (_has_bits_[0 / 32] & 3u) {
+    if (has_gpu_desc()) {
+      GOOGLE_DCHECK(!gpu_desc_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*gpu_desc_.UnsafeRawStringPointer())->clear();
+    }
+    if (has_driver_desc()) {
+      GOOGLE_DCHECK(!driver_desc_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*driver_desc_.UnsafeRawStringPointer())->clear();
+    }
+  }
+  appid_ = 0u;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CShader_GetBucketManifest_Request::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CShader_GetBucketManifest_Request)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 appid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_appid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &appid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional string gpu_desc = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_gpu_desc()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->gpu_desc().data(), this->gpu_desc().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "proto.steam.CShader_GetBucketManifest_Request.gpu_desc");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional string driver_desc = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_driver_desc()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->driver_desc().data(), this->driver_desc().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "proto.steam.CShader_GetBucketManifest_Request.driver_desc");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CShader_GetBucketManifest_Request)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CShader_GetBucketManifest_Request)
+  return false;
+#undef DO_
+}
+
+void CShader_GetBucketManifest_Request::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CShader_GetBucketManifest_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 appid = 1;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->appid(), output);
+  }
+
+  // optional string gpu_desc = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->gpu_desc().data(), this->gpu_desc().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CShader_GetBucketManifest_Request.gpu_desc");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->gpu_desc(), output);
+  }
+
+  // optional string driver_desc = 3;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->driver_desc().data(), this->driver_desc().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CShader_GetBucketManifest_Request.driver_desc");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->driver_desc(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CShader_GetBucketManifest_Request)
+}
+
+::google::protobuf::uint8* CShader_GetBucketManifest_Request::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CShader_GetBucketManifest_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 appid = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->appid(), target);
+  }
+
+  // optional string gpu_desc = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->gpu_desc().data(), this->gpu_desc().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CShader_GetBucketManifest_Request.gpu_desc");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->gpu_desc(), target);
+  }
+
+  // optional string driver_desc = 3;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->driver_desc().data(), this->driver_desc().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CShader_GetBucketManifest_Request.driver_desc");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->driver_desc(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CShader_GetBucketManifest_Request)
+  return target;
+}
+
+size_t CShader_GetBucketManifest_Request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CShader_GetBucketManifest_Request)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 7u) {
+    // optional string gpu_desc = 2;
+    if (has_gpu_desc()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->gpu_desc());
+    }
+
+    // optional string driver_desc = 3;
+    if (has_driver_desc()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->driver_desc());
+    }
+
+    // optional uint32 appid = 1;
+    if (has_appid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->appid());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CShader_GetBucketManifest_Request::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CShader_GetBucketManifest_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CShader_GetBucketManifest_Request* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CShader_GetBucketManifest_Request>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CShader_GetBucketManifest_Request)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CShader_GetBucketManifest_Request)
+    MergeFrom(*source);
+  }
+}
+
+void CShader_GetBucketManifest_Request::MergeFrom(const CShader_GetBucketManifest_Request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CShader_GetBucketManifest_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 7u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_gpu_desc();
+      gpu_desc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.gpu_desc_);
+    }
+    if (cached_has_bits & 0x00000002u) {
+      set_has_driver_desc();
+      driver_desc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.driver_desc_);
+    }
+    if (cached_has_bits & 0x00000004u) {
+      appid_ = from.appid_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CShader_GetBucketManifest_Request::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CShader_GetBucketManifest_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CShader_GetBucketManifest_Request::CopyFrom(const CShader_GetBucketManifest_Request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CShader_GetBucketManifest_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CShader_GetBucketManifest_Request::IsInitialized() const {
+  return true;
+}
+
+void CShader_GetBucketManifest_Request::Swap(CShader_GetBucketManifest_Request* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CShader_GetBucketManifest_Request::InternalSwap(CShader_GetBucketManifest_Request* other) {
+  gpu_desc_.Swap(&other->gpu_desc_);
+  driver_desc_.Swap(&other->driver_desc_);
+  std::swap(appid_, other->appid_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CShader_GetBucketManifest_Request::GetMetadata() const {
+  protobuf_steammessages_5fshader_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fshader_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CShader_GetBucketManifest_Request
+
+// optional uint32 appid = 1;
+bool CShader_GetBucketManifest_Request::has_appid() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CShader_GetBucketManifest_Request::set_has_appid() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CShader_GetBucketManifest_Request::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CShader_GetBucketManifest_Request::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+::google::protobuf::uint32 CShader_GetBucketManifest_Request::appid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CShader_GetBucketManifest_Request.appid)
+  return appid_;
+}
+void CShader_GetBucketManifest_Request::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CShader_GetBucketManifest_Request.appid)
+}
+
+// optional string gpu_desc = 2;
+bool CShader_GetBucketManifest_Request::has_gpu_desc() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CShader_GetBucketManifest_Request::set_has_gpu_desc() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CShader_GetBucketManifest_Request::clear_has_gpu_desc() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CShader_GetBucketManifest_Request::clear_gpu_desc() {
+  gpu_desc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_gpu_desc();
+}
+const ::std::string& CShader_GetBucketManifest_Request::gpu_desc() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+  return gpu_desc_.GetNoArena();
+}
+void CShader_GetBucketManifest_Request::set_gpu_desc(const ::std::string& value) {
+  set_has_gpu_desc();
+  gpu_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+}
+#if LANG_CXX11
+void CShader_GetBucketManifest_Request::set_gpu_desc(::std::string&& value) {
+  set_has_gpu_desc();
+  gpu_desc_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+}
+#endif
+void CShader_GetBucketManifest_Request::set_gpu_desc(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_gpu_desc();
+  gpu_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+}
+void CShader_GetBucketManifest_Request::set_gpu_desc(const char* value, size_t size) {
+  set_has_gpu_desc();
+  gpu_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+}
+::std::string* CShader_GetBucketManifest_Request::mutable_gpu_desc() {
+  set_has_gpu_desc();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+  return gpu_desc_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* CShader_GetBucketManifest_Request::release_gpu_desc() {
+  // @@protoc_insertion_point(field_release:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+  clear_has_gpu_desc();
+  return gpu_desc_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void CShader_GetBucketManifest_Request::set_allocated_gpu_desc(::std::string* gpu_desc) {
+  if (gpu_desc != NULL) {
+    set_has_gpu_desc();
+  } else {
+    clear_has_gpu_desc();
+  }
+  gpu_desc_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), gpu_desc);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+}
+
+// optional string driver_desc = 3;
+bool CShader_GetBucketManifest_Request::has_driver_desc() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CShader_GetBucketManifest_Request::set_has_driver_desc() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CShader_GetBucketManifest_Request::clear_has_driver_desc() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CShader_GetBucketManifest_Request::clear_driver_desc() {
+  driver_desc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_driver_desc();
+}
+const ::std::string& CShader_GetBucketManifest_Request::driver_desc() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+  return driver_desc_.GetNoArena();
+}
+void CShader_GetBucketManifest_Request::set_driver_desc(const ::std::string& value) {
+  set_has_driver_desc();
+  driver_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+}
+#if LANG_CXX11
+void CShader_GetBucketManifest_Request::set_driver_desc(::std::string&& value) {
+  set_has_driver_desc();
+  driver_desc_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+}
+#endif
+void CShader_GetBucketManifest_Request::set_driver_desc(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_driver_desc();
+  driver_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+}
+void CShader_GetBucketManifest_Request::set_driver_desc(const char* value, size_t size) {
+  set_has_driver_desc();
+  driver_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+}
+::std::string* CShader_GetBucketManifest_Request::mutable_driver_desc() {
+  set_has_driver_desc();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+  return driver_desc_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* CShader_GetBucketManifest_Request::release_driver_desc() {
+  // @@protoc_insertion_point(field_release:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+  clear_has_driver_desc();
+  return driver_desc_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void CShader_GetBucketManifest_Request::set_allocated_driver_desc(::std::string* driver_desc) {
+  if (driver_desc != NULL) {
+    set_has_driver_desc();
+  } else {
+    clear_has_driver_desc();
+  }
+  driver_desc_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), driver_desc);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CShader_GetBucketManifest_Response::kManifestidFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CShader_GetBucketManifest_Response::CShader_GetBucketManifest_Response()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fshader_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CShader_GetBucketManifest_Response)
+}
+CShader_GetBucketManifest_Response::CShader_GetBucketManifest_Response(const CShader_GetBucketManifest_Response& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  manifestid_ = from.manifestid_;
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CShader_GetBucketManifest_Response)
+}
+
+void CShader_GetBucketManifest_Response::SharedCtor() {
+  _cached_size_ = 0;
+  manifestid_ = GOOGLE_ULONGLONG(0);
+}
+
+CShader_GetBucketManifest_Response::~CShader_GetBucketManifest_Response() {
+  // @@protoc_insertion_point(destructor:proto.steam.CShader_GetBucketManifest_Response)
+  SharedDtor();
+}
+
+void CShader_GetBucketManifest_Response::SharedDtor() {
+}
+
+void CShader_GetBucketManifest_Response::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CShader_GetBucketManifest_Response::descriptor() {
+  protobuf_steammessages_5fshader_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fshader_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CShader_GetBucketManifest_Response& CShader_GetBucketManifest_Response::default_instance() {
+  protobuf_steammessages_5fshader_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CShader_GetBucketManifest_Response* CShader_GetBucketManifest_Response::New(::google::protobuf::Arena* arena) const {
+  CShader_GetBucketManifest_Response* n = new CShader_GetBucketManifest_Response;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CShader_GetBucketManifest_Response::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CShader_GetBucketManifest_Response)
+  manifestid_ = GOOGLE_ULONGLONG(0);
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CShader_GetBucketManifest_Response::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CShader_GetBucketManifest_Response)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint64 manifestid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_manifestid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &manifestid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CShader_GetBucketManifest_Response)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CShader_GetBucketManifest_Response)
+  return false;
+#undef DO_
+}
+
+void CShader_GetBucketManifest_Response::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CShader_GetBucketManifest_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 manifestid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->manifestid(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CShader_GetBucketManifest_Response)
+}
+
+::google::protobuf::uint8* CShader_GetBucketManifest_Response::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CShader_GetBucketManifest_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 manifestid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->manifestid(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CShader_GetBucketManifest_Response)
+  return target;
+}
+
+size_t CShader_GetBucketManifest_Response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CShader_GetBucketManifest_Response)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  // optional uint64 manifestid = 1;
+  if (has_manifestid()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->manifestid());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CShader_GetBucketManifest_Response::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CShader_GetBucketManifest_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CShader_GetBucketManifest_Response* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CShader_GetBucketManifest_Response>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CShader_GetBucketManifest_Response)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CShader_GetBucketManifest_Response)
+    MergeFrom(*source);
+  }
+}
+
+void CShader_GetBucketManifest_Response::MergeFrom(const CShader_GetBucketManifest_Response& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CShader_GetBucketManifest_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_manifestid()) {
+    set_manifestid(from.manifestid());
+  }
+}
+
+void CShader_GetBucketManifest_Response::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CShader_GetBucketManifest_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CShader_GetBucketManifest_Response::CopyFrom(const CShader_GetBucketManifest_Response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CShader_GetBucketManifest_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CShader_GetBucketManifest_Response::IsInitialized() const {
+  return true;
+}
+
+void CShader_GetBucketManifest_Response::Swap(CShader_GetBucketManifest_Response* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CShader_GetBucketManifest_Response::InternalSwap(CShader_GetBucketManifest_Response* other) {
+  std::swap(manifestid_, other->manifestid_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CShader_GetBucketManifest_Response::GetMetadata() const {
+  protobuf_steammessages_5fshader_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fshader_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CShader_GetBucketManifest_Response
+
+// optional uint64 manifestid = 1;
+bool CShader_GetBucketManifest_Response::has_manifestid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CShader_GetBucketManifest_Response::set_has_manifestid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CShader_GetBucketManifest_Response::clear_has_manifestid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CShader_GetBucketManifest_Response::clear_manifestid() {
+  manifestid_ = GOOGLE_ULONGLONG(0);
+  clear_has_manifestid();
+}
+::google::protobuf::uint64 CShader_GetBucketManifest_Response::manifestid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CShader_GetBucketManifest_Response.manifestid)
+  return manifestid_;
+}
+void CShader_GetBucketManifest_Response::set_manifestid(::google::protobuf::uint64 value) {
+  set_has_manifestid();
+  manifestid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CShader_GetBucketManifest_Response.manifestid)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
 Shader::~Shader() {}
 
 const ::google::protobuf::ServiceDescriptor* Shader::descriptor() {
@@ -2525,6 +3351,14 @@ void Shader::SendShader(::google::protobuf::RpcController* controller,
   done->Run();
 }
 
+void Shader::GetBucketManifest(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CShader_GetBucketManifest_Request*,
+                         ::proto::steam::CShader_GetBucketManifest_Response*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method GetBucketManifest() not implemented.");
+  done->Run();
+}
+
 void Shader::CallMethod(const ::google::protobuf::MethodDescriptor* method,
                              ::google::protobuf::RpcController* controller,
                              const ::google::protobuf::Message* request,
@@ -2544,6 +3378,12 @@ void Shader::CallMethod(const ::google::protobuf::MethodDescriptor* method,
              ::google::protobuf::down_cast< ::proto::steam::CShader_SendShader_Response*>(response),
              done);
       break;
+    case 2:
+      GetBucketManifest(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CShader_GetBucketManifest_Request*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::CShader_GetBucketManifest_Response*>(response),
+             done);
+      break;
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       break;
@@ -2558,6 +3398,8 @@ const ::google::protobuf::Message& Shader::GetRequestPrototype(
       return ::proto::steam::CShader_RegisterShader_Request::default_instance();
     case 1:
       return ::proto::steam::CShader_SendShader_Request::default_instance();
+    case 2:
+      return ::proto::steam::CShader_GetBucketManifest_Request::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::google::protobuf::MessageFactory::generated_factory()
@@ -2573,6 +3415,8 @@ const ::google::protobuf::Message& Shader::GetResponsePrototype(
       return ::proto::steam::CShader_RegisterShader_Response::default_instance();
     case 1:
       return ::proto::steam::CShader_SendShader_Response::default_instance();
+    case 2:
+      return ::proto::steam::CShader_GetBucketManifest_Response::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::google::protobuf::MessageFactory::generated_factory()
@@ -2603,6 +3447,13 @@ void Shader_Stub::SendShader(::google::protobuf::RpcController* controller,
                               ::proto::steam::CShader_SendShader_Response* response,
                               ::google::protobuf::Closure* done) {
   channel_->CallMethod(descriptor()->method(1),
+                       controller, request, response, done);
+}
+void Shader_Stub::GetBucketManifest(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CShader_GetBucketManifest_Request* request,
+                              ::proto::steam::CShader_GetBucketManifest_Response* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(2),
                        controller, request, response, done);
 }
 

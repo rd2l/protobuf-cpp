@@ -49,6 +49,12 @@ extern CPartnerApps_FindDRMUploads_RequestDefaultTypeInternal _CPartnerApps_Find
 class CPartnerApps_FindDRMUploads_Response;
 class CPartnerApps_FindDRMUploads_ResponseDefaultTypeInternal;
 extern CPartnerApps_FindDRMUploads_ResponseDefaultTypeInternal _CPartnerApps_FindDRMUploads_Response_default_instance_;
+class CPartnerApps_FinishUploadDepot_Request;
+class CPartnerApps_FinishUploadDepot_RequestDefaultTypeInternal;
+extern CPartnerApps_FinishUploadDepot_RequestDefaultTypeInternal _CPartnerApps_FinishUploadDepot_Request_default_instance_;
+class CPartnerApps_FinishUploadDepot_Response;
+class CPartnerApps_FinishUploadDepot_ResponseDefaultTypeInternal;
+extern CPartnerApps_FinishUploadDepot_ResponseDefaultTypeInternal _CPartnerApps_FinishUploadDepot_Response_default_instance_;
 class CPartnerApps_FinishUploadKVSign_Response;
 class CPartnerApps_FinishUploadKVSign_ResponseDefaultTypeInternal;
 extern CPartnerApps_FinishUploadKVSign_ResponseDefaultTypeInternal _CPartnerApps_FinishUploadKVSign_Response_default_instance_;
@@ -64,6 +70,12 @@ extern CPartnerApps_FinishUpload_RequestDefaultTypeInternal _CPartnerApps_Finish
 class CPartnerApps_FinishUpload_Response;
 class CPartnerApps_FinishUpload_ResponseDefaultTypeInternal;
 extern CPartnerApps_FinishUpload_ResponseDefaultTypeInternal _CPartnerApps_FinishUpload_Response_default_instance_;
+class CPartnerApps_GetDepotBuildResult_Request;
+class CPartnerApps_GetDepotBuildResult_RequestDefaultTypeInternal;
+extern CPartnerApps_GetDepotBuildResult_RequestDefaultTypeInternal _CPartnerApps_GetDepotBuildResult_Request_default_instance_;
+class CPartnerApps_GetDepotBuildResult_Response;
+class CPartnerApps_GetDepotBuildResult_ResponseDefaultTypeInternal;
+extern CPartnerApps_GetDepotBuildResult_ResponseDefaultTypeInternal _CPartnerApps_GetDepotBuildResult_Response_default_instance_;
 class CPartnerApps_RequestUploadToken_Request;
 class CPartnerApps_RequestUploadToken_RequestDefaultTypeInternal;
 extern CPartnerApps_RequestUploadToken_RequestDefaultTypeInternal _CPartnerApps_RequestUploadToken_Request_default_instance_;
@@ -859,6 +871,432 @@ class CPartnerApps_FinishUpload_Response : public ::google::protobuf::Message /*
 };
 // -------------------------------------------------------------------
 
+class CPartnerApps_FinishUploadDepot_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPartnerApps_FinishUploadDepot_Request) */ {
+ public:
+  CPartnerApps_FinishUploadDepot_Request();
+  virtual ~CPartnerApps_FinishUploadDepot_Request();
+
+  CPartnerApps_FinishUploadDepot_Request(const CPartnerApps_FinishUploadDepot_Request& from);
+
+  inline CPartnerApps_FinishUploadDepot_Request& operator=(const CPartnerApps_FinishUploadDepot_Request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPartnerApps_FinishUploadDepot_Request& default_instance();
+
+  static inline const CPartnerApps_FinishUploadDepot_Request* internal_default_instance() {
+    return reinterpret_cast<const CPartnerApps_FinishUploadDepot_Request*>(
+               &_CPartnerApps_FinishUploadDepot_Request_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    7;
+
+  void Swap(CPartnerApps_FinishUploadDepot_Request* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPartnerApps_FinishUploadDepot_Request* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPartnerApps_FinishUploadDepot_Request* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPartnerApps_FinishUploadDepot_Request& from);
+  void MergeFrom(const CPartnerApps_FinishUploadDepot_Request& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPartnerApps_FinishUploadDepot_Request* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 upload_token = 1;
+  bool has_upload_token() const;
+  void clear_upload_token();
+  static const int kUploadTokenFieldNumber = 1;
+  ::google::protobuf::uint64 upload_token() const;
+  void set_upload_token(::google::protobuf::uint64 value);
+
+  // optional uint64 routing_id = 2;
+  bool has_routing_id() const;
+  void clear_routing_id();
+  static const int kRoutingIdFieldNumber = 2;
+  ::google::protobuf::uint64 routing_id() const;
+  void set_routing_id(::google::protobuf::uint64 value);
+
+  // optional uint32 app_id = 3;
+  bool has_app_id() const;
+  void clear_app_id();
+  static const int kAppIdFieldNumber = 3;
+  ::google::protobuf::uint32 app_id() const;
+  void set_app_id(::google::protobuf::uint32 value);
+
+  // optional uint32 depot_id = 4;
+  bool has_depot_id() const;
+  void clear_depot_id();
+  static const int kDepotIdFieldNumber = 4;
+  ::google::protobuf::uint32 depot_id() const;
+  void set_depot_id(::google::protobuf::uint32 value);
+
+  // optional uint32 build_flags = 5;
+  bool has_build_flags() const;
+  void clear_build_flags();
+  static const int kBuildFlagsFieldNumber = 5;
+  ::google::protobuf::uint32 build_flags() const;
+  void set_build_flags(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+ private:
+  void set_has_upload_token();
+  void clear_has_upload_token();
+  void set_has_routing_id();
+  void clear_has_routing_id();
+  void set_has_app_id();
+  void clear_has_app_id();
+  void set_has_depot_id();
+  void clear_has_depot_id();
+  void set_has_build_flags();
+  void clear_has_build_flags();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint64 upload_token_;
+  ::google::protobuf::uint64 routing_id_;
+  ::google::protobuf::uint32 app_id_;
+  ::google::protobuf::uint32 depot_id_;
+  ::google::protobuf::uint32 build_flags_;
+  friend struct protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CPartnerApps_FinishUploadDepot_Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPartnerApps_FinishUploadDepot_Response) */ {
+ public:
+  CPartnerApps_FinishUploadDepot_Response();
+  virtual ~CPartnerApps_FinishUploadDepot_Response();
+
+  CPartnerApps_FinishUploadDepot_Response(const CPartnerApps_FinishUploadDepot_Response& from);
+
+  inline CPartnerApps_FinishUploadDepot_Response& operator=(const CPartnerApps_FinishUploadDepot_Response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPartnerApps_FinishUploadDepot_Response& default_instance();
+
+  static inline const CPartnerApps_FinishUploadDepot_Response* internal_default_instance() {
+    return reinterpret_cast<const CPartnerApps_FinishUploadDepot_Response*>(
+               &_CPartnerApps_FinishUploadDepot_Response_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    8;
+
+  void Swap(CPartnerApps_FinishUploadDepot_Response* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPartnerApps_FinishUploadDepot_Response* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPartnerApps_FinishUploadDepot_Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPartnerApps_FinishUploadDepot_Response& from);
+  void MergeFrom(const CPartnerApps_FinishUploadDepot_Response& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPartnerApps_FinishUploadDepot_Response* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  friend struct protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CPartnerApps_GetDepotBuildResult_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPartnerApps_GetDepotBuildResult_Request) */ {
+ public:
+  CPartnerApps_GetDepotBuildResult_Request();
+  virtual ~CPartnerApps_GetDepotBuildResult_Request();
+
+  CPartnerApps_GetDepotBuildResult_Request(const CPartnerApps_GetDepotBuildResult_Request& from);
+
+  inline CPartnerApps_GetDepotBuildResult_Request& operator=(const CPartnerApps_GetDepotBuildResult_Request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPartnerApps_GetDepotBuildResult_Request& default_instance();
+
+  static inline const CPartnerApps_GetDepotBuildResult_Request* internal_default_instance() {
+    return reinterpret_cast<const CPartnerApps_GetDepotBuildResult_Request*>(
+               &_CPartnerApps_GetDepotBuildResult_Request_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    9;
+
+  void Swap(CPartnerApps_GetDepotBuildResult_Request* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPartnerApps_GetDepotBuildResult_Request* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPartnerApps_GetDepotBuildResult_Request* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPartnerApps_GetDepotBuildResult_Request& from);
+  void MergeFrom(const CPartnerApps_GetDepotBuildResult_Request& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPartnerApps_GetDepotBuildResult_Request* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 upload_token = 1;
+  bool has_upload_token() const;
+  void clear_upload_token();
+  static const int kUploadTokenFieldNumber = 1;
+  ::google::protobuf::uint64 upload_token() const;
+  void set_upload_token(::google::protobuf::uint64 value);
+
+  // optional uint64 routing_id = 2;
+  bool has_routing_id() const;
+  void clear_routing_id();
+  static const int kRoutingIdFieldNumber = 2;
+  ::google::protobuf::uint64 routing_id() const;
+  void set_routing_id(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+ private:
+  void set_has_upload_token();
+  void clear_has_upload_token();
+  void set_has_routing_id();
+  void clear_has_routing_id();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint64 upload_token_;
+  ::google::protobuf::uint64 routing_id_;
+  friend struct protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CPartnerApps_GetDepotBuildResult_Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPartnerApps_GetDepotBuildResult_Response) */ {
+ public:
+  CPartnerApps_GetDepotBuildResult_Response();
+  virtual ~CPartnerApps_GetDepotBuildResult_Response();
+
+  CPartnerApps_GetDepotBuildResult_Response(const CPartnerApps_GetDepotBuildResult_Response& from);
+
+  inline CPartnerApps_GetDepotBuildResult_Response& operator=(const CPartnerApps_GetDepotBuildResult_Response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CPartnerApps_GetDepotBuildResult_Response& default_instance();
+
+  static inline const CPartnerApps_GetDepotBuildResult_Response* internal_default_instance() {
+    return reinterpret_cast<const CPartnerApps_GetDepotBuildResult_Response*>(
+               &_CPartnerApps_GetDepotBuildResult_Response_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    10;
+
+  void Swap(CPartnerApps_GetDepotBuildResult_Response* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CPartnerApps_GetDepotBuildResult_Response* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CPartnerApps_GetDepotBuildResult_Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CPartnerApps_GetDepotBuildResult_Response& from);
+  void MergeFrom(const CPartnerApps_GetDepotBuildResult_Response& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CPartnerApps_GetDepotBuildResult_Response* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string error_msg = 2;
+  bool has_error_msg() const;
+  void clear_error_msg();
+  static const int kErrorMsgFieldNumber = 2;
+  const ::std::string& error_msg() const;
+  void set_error_msg(const ::std::string& value);
+  #if LANG_CXX11
+  void set_error_msg(::std::string&& value);
+  #endif
+  void set_error_msg(const char* value);
+  void set_error_msg(const char* value, size_t size);
+  ::std::string* mutable_error_msg();
+  ::std::string* release_error_msg();
+  void set_allocated_error_msg(::std::string* error_msg);
+
+  // optional uint64 manifest_id = 1;
+  bool has_manifest_id() const;
+  void clear_manifest_id();
+  static const int kManifestIdFieldNumber = 1;
+  ::google::protobuf::uint64 manifest_id() const;
+  void set_manifest_id(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+ private:
+  void set_has_manifest_id();
+  void clear_has_manifest_id();
+  void set_has_error_msg();
+  void clear_has_error_msg();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr error_msg_;
+  ::google::protobuf::uint64 manifest_id_;
+  friend struct protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class CPartnerApps_FindDRMUploads_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CPartnerApps_FindDRMUploads_Request) */ {
  public:
   CPartnerApps_FindDRMUploads_Request();
@@ -887,7 +1325,7 @@ class CPartnerApps_FindDRMUploads_Request : public ::google::protobuf::Message /
                &_CPartnerApps_FindDRMUploads_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    7;
+    11;
 
   void Swap(CPartnerApps_FindDRMUploads_Request* other);
 
@@ -979,7 +1417,7 @@ class CPartnerApps_ExistingDRMUpload : public ::google::protobuf::Message /* @@p
                &_CPartnerApps_ExistingDRMUpload_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    12;
 
   void Swap(CPartnerApps_ExistingDRMUpload* other);
 
@@ -1173,7 +1611,7 @@ class CPartnerApps_FindDRMUploads_Response : public ::google::protobuf::Message 
                &_CPartnerApps_FindDRMUploads_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    9;
+    13;
 
   void Swap(CPartnerApps_FindDRMUploads_Response* other);
 
@@ -1268,7 +1706,7 @@ class CPartnerApps_Download_Request : public ::google::protobuf::Message /* @@pr
                &_CPartnerApps_Download_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    10;
+    14;
 
   void Swap(CPartnerApps_Download_Request* other);
 
@@ -1378,7 +1816,7 @@ class CPartnerApps_Download_Response : public ::google::protobuf::Message /* @@p
                &_CPartnerApps_Download_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    11;
+    15;
 
   void Swap(CPartnerApps_Download_Response* other);
 
@@ -1485,6 +1923,10 @@ class PartnerApps : public ::google::protobuf::Service {
                        const ::proto::steam::CPartnerApps_RequestUploadToken_Request* request,
                        ::proto::steam::CPartnerApps_RequestUploadToken_Response* response,
                        ::google::protobuf::Closure* done);
+  virtual void RequestDepotUploadToken(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPartnerApps_RequestUploadToken_Request* request,
+                       ::proto::steam::CPartnerApps_RequestUploadToken_Response* response,
+                       ::google::protobuf::Closure* done);
   virtual void FinishUploadKVSign(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CPartnerApps_FinishUpload_Request* request,
                        ::proto::steam::CPartnerApps_FinishUploadKVSign_Response* response,
@@ -1496,6 +1938,14 @@ class PartnerApps : public ::google::protobuf::Service {
   virtual void FinishUploadCEGUpload(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CPartnerApps_FinishUpload_Request* request,
                        ::proto::steam::CPartnerApps_FinishUpload_Response* response,
+                       ::google::protobuf::Closure* done);
+  virtual void FinishUploadDepotUpload(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPartnerApps_FinishUploadDepot_Request* request,
+                       ::proto::steam::CPartnerApps_FinishUploadDepot_Response* response,
+                       ::google::protobuf::Closure* done);
+  virtual void GetDepotBuildResult(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPartnerApps_GetDepotBuildResult_Request* request,
+                       ::proto::steam::CPartnerApps_GetDepotBuildResult_Response* response,
                        ::google::protobuf::Closure* done);
   virtual void FindDRMUploads(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CPartnerApps_FindDRMUploads_Request* request,
@@ -1546,6 +1996,10 @@ class PartnerApps_Stub : public PartnerApps {
                        const ::proto::steam::CPartnerApps_RequestUploadToken_Request* request,
                        ::proto::steam::CPartnerApps_RequestUploadToken_Response* response,
                        ::google::protobuf::Closure* done);
+  void RequestDepotUploadToken(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPartnerApps_RequestUploadToken_Request* request,
+                       ::proto::steam::CPartnerApps_RequestUploadToken_Response* response,
+                       ::google::protobuf::Closure* done);
   void FinishUploadKVSign(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CPartnerApps_FinishUpload_Request* request,
                        ::proto::steam::CPartnerApps_FinishUploadKVSign_Response* response,
@@ -1557,6 +2011,14 @@ class PartnerApps_Stub : public PartnerApps {
   void FinishUploadCEGUpload(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CPartnerApps_FinishUpload_Request* request,
                        ::proto::steam::CPartnerApps_FinishUpload_Response* response,
+                       ::google::protobuf::Closure* done);
+  void FinishUploadDepotUpload(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPartnerApps_FinishUploadDepot_Request* request,
+                       ::proto::steam::CPartnerApps_FinishUploadDepot_Response* response,
+                       ::google::protobuf::Closure* done);
+  void GetDepotBuildResult(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CPartnerApps_GetDepotBuildResult_Request* request,
+                       ::proto::steam::CPartnerApps_GetDepotBuildResult_Response* response,
                        ::google::protobuf::Closure* done);
   void FindDRMUploads(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CPartnerApps_FindDRMUploads_Request* request,
@@ -2162,6 +2624,277 @@ inline void CPartnerApps_FinishUploadLegacyDRM_Response::set_allocated_file_id(:
 
 // -------------------------------------------------------------------
 
+// CPartnerApps_FinishUploadDepot_Request
+
+// optional uint64 upload_token = 1;
+inline bool CPartnerApps_FinishUploadDepot_Request::has_upload_token() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::set_has_upload_token() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::clear_has_upload_token() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::clear_upload_token() {
+  upload_token_ = GOOGLE_ULONGLONG(0);
+  clear_has_upload_token();
+}
+inline ::google::protobuf::uint64 CPartnerApps_FinishUploadDepot_Request::upload_token() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_FinishUploadDepot_Request.upload_token)
+  return upload_token_;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::set_upload_token(::google::protobuf::uint64 value) {
+  set_has_upload_token();
+  upload_token_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_FinishUploadDepot_Request.upload_token)
+}
+
+// optional uint64 routing_id = 2;
+inline bool CPartnerApps_FinishUploadDepot_Request::has_routing_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::set_has_routing_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::clear_has_routing_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::clear_routing_id() {
+  routing_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_routing_id();
+}
+inline ::google::protobuf::uint64 CPartnerApps_FinishUploadDepot_Request::routing_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_FinishUploadDepot_Request.routing_id)
+  return routing_id_;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::set_routing_id(::google::protobuf::uint64 value) {
+  set_has_routing_id();
+  routing_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_FinishUploadDepot_Request.routing_id)
+}
+
+// optional uint32 app_id = 3;
+inline bool CPartnerApps_FinishUploadDepot_Request::has_app_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::set_has_app_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::clear_has_app_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::clear_app_id() {
+  app_id_ = 0u;
+  clear_has_app_id();
+}
+inline ::google::protobuf::uint32 CPartnerApps_FinishUploadDepot_Request::app_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_FinishUploadDepot_Request.app_id)
+  return app_id_;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::set_app_id(::google::protobuf::uint32 value) {
+  set_has_app_id();
+  app_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_FinishUploadDepot_Request.app_id)
+}
+
+// optional uint32 depot_id = 4;
+inline bool CPartnerApps_FinishUploadDepot_Request::has_depot_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::set_has_depot_id() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::clear_has_depot_id() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::clear_depot_id() {
+  depot_id_ = 0u;
+  clear_has_depot_id();
+}
+inline ::google::protobuf::uint32 CPartnerApps_FinishUploadDepot_Request::depot_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_FinishUploadDepot_Request.depot_id)
+  return depot_id_;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::set_depot_id(::google::protobuf::uint32 value) {
+  set_has_depot_id();
+  depot_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_FinishUploadDepot_Request.depot_id)
+}
+
+// optional uint32 build_flags = 5;
+inline bool CPartnerApps_FinishUploadDepot_Request::has_build_flags() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::set_has_build_flags() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::clear_has_build_flags() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::clear_build_flags() {
+  build_flags_ = 0u;
+  clear_has_build_flags();
+}
+inline ::google::protobuf::uint32 CPartnerApps_FinishUploadDepot_Request::build_flags() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_FinishUploadDepot_Request.build_flags)
+  return build_flags_;
+}
+inline void CPartnerApps_FinishUploadDepot_Request::set_build_flags(::google::protobuf::uint32 value) {
+  set_has_build_flags();
+  build_flags_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_FinishUploadDepot_Request.build_flags)
+}
+
+// -------------------------------------------------------------------
+
+// CPartnerApps_FinishUploadDepot_Response
+
+// -------------------------------------------------------------------
+
+// CPartnerApps_GetDepotBuildResult_Request
+
+// optional uint64 upload_token = 1;
+inline bool CPartnerApps_GetDepotBuildResult_Request::has_upload_token() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CPartnerApps_GetDepotBuildResult_Request::set_has_upload_token() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CPartnerApps_GetDepotBuildResult_Request::clear_has_upload_token() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CPartnerApps_GetDepotBuildResult_Request::clear_upload_token() {
+  upload_token_ = GOOGLE_ULONGLONG(0);
+  clear_has_upload_token();
+}
+inline ::google::protobuf::uint64 CPartnerApps_GetDepotBuildResult_Request::upload_token() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_GetDepotBuildResult_Request.upload_token)
+  return upload_token_;
+}
+inline void CPartnerApps_GetDepotBuildResult_Request::set_upload_token(::google::protobuf::uint64 value) {
+  set_has_upload_token();
+  upload_token_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_GetDepotBuildResult_Request.upload_token)
+}
+
+// optional uint64 routing_id = 2;
+inline bool CPartnerApps_GetDepotBuildResult_Request::has_routing_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CPartnerApps_GetDepotBuildResult_Request::set_has_routing_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CPartnerApps_GetDepotBuildResult_Request::clear_has_routing_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CPartnerApps_GetDepotBuildResult_Request::clear_routing_id() {
+  routing_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_routing_id();
+}
+inline ::google::protobuf::uint64 CPartnerApps_GetDepotBuildResult_Request::routing_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_GetDepotBuildResult_Request.routing_id)
+  return routing_id_;
+}
+inline void CPartnerApps_GetDepotBuildResult_Request::set_routing_id(::google::protobuf::uint64 value) {
+  set_has_routing_id();
+  routing_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_GetDepotBuildResult_Request.routing_id)
+}
+
+// -------------------------------------------------------------------
+
+// CPartnerApps_GetDepotBuildResult_Response
+
+// optional uint64 manifest_id = 1;
+inline bool CPartnerApps_GetDepotBuildResult_Response::has_manifest_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CPartnerApps_GetDepotBuildResult_Response::set_has_manifest_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CPartnerApps_GetDepotBuildResult_Response::clear_has_manifest_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CPartnerApps_GetDepotBuildResult_Response::clear_manifest_id() {
+  manifest_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_manifest_id();
+}
+inline ::google::protobuf::uint64 CPartnerApps_GetDepotBuildResult_Response::manifest_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_GetDepotBuildResult_Response.manifest_id)
+  return manifest_id_;
+}
+inline void CPartnerApps_GetDepotBuildResult_Response::set_manifest_id(::google::protobuf::uint64 value) {
+  set_has_manifest_id();
+  manifest_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_GetDepotBuildResult_Response.manifest_id)
+}
+
+// optional string error_msg = 2;
+inline bool CPartnerApps_GetDepotBuildResult_Response::has_error_msg() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CPartnerApps_GetDepotBuildResult_Response::set_has_error_msg() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CPartnerApps_GetDepotBuildResult_Response::clear_has_error_msg() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CPartnerApps_GetDepotBuildResult_Response::clear_error_msg() {
+  error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_error_msg();
+}
+inline const ::std::string& CPartnerApps_GetDepotBuildResult_Response::error_msg() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+  return error_msg_.GetNoArena();
+}
+inline void CPartnerApps_GetDepotBuildResult_Response::set_error_msg(const ::std::string& value) {
+  set_has_error_msg();
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+}
+#if LANG_CXX11
+inline void CPartnerApps_GetDepotBuildResult_Response::set_error_msg(::std::string&& value) {
+  set_has_error_msg();
+  error_msg_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+}
+#endif
+inline void CPartnerApps_GetDepotBuildResult_Response::set_error_msg(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_error_msg();
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+}
+inline void CPartnerApps_GetDepotBuildResult_Response::set_error_msg(const char* value, size_t size) {
+  set_has_error_msg();
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+}
+inline ::std::string* CPartnerApps_GetDepotBuildResult_Response::mutable_error_msg() {
+  set_has_error_msg();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+  return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CPartnerApps_GetDepotBuildResult_Response::release_error_msg() {
+  // @@protoc_insertion_point(field_release:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+  clear_has_error_msg();
+  return error_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CPartnerApps_GetDepotBuildResult_Response::set_allocated_error_msg(::std::string* error_msg) {
+  if (error_msg != NULL) {
+    set_has_error_msg();
+  } else {
+    clear_has_error_msg();
+  }
+  error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+}
+
+// -------------------------------------------------------------------
+
 // CPartnerApps_FindDRMUploads_Request
 
 // optional int32 app_id = 1;
@@ -2757,6 +3490,14 @@ inline void CPartnerApps_Download_Response::set_app_id(::google::protobuf::int32
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

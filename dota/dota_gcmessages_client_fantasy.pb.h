@@ -1223,6 +1223,13 @@ class CMsgGCPlayerInfo_PlayerInfo : public ::google::protobuf::Message /* @@prot
   ::google::protobuf::uint32 timestamp() const;
   void set_timestamp(::google::protobuf::uint32 value);
 
+  // optional uint32 registered_team_id = 13;
+  bool has_registered_team_id() const;
+  void clear_registered_team_id();
+  static const int kRegisteredTeamIdFieldNumber = 13;
+  ::google::protobuf::uint32 registered_team_id() const;
+  void set_registered_team_id(::google::protobuf::uint32 value);
+
   // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCPlayerInfo.PlayerInfo)
  private:
   void set_has_account_id();
@@ -1249,6 +1256,8 @@ class CMsgGCPlayerInfo_PlayerInfo : public ::google::protobuf::Message /* @@prot
   void clear_has_locked_until();
   void set_has_timestamp();
   void clear_has_timestamp();
+  void set_has_registered_team_id();
+  void clear_has_registered_team_id();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -1265,6 +1274,7 @@ class CMsgGCPlayerInfo_PlayerInfo : public ::google::protobuf::Message /* @@prot
   bool is_pro_;
   ::google::protobuf::uint32 locked_until_;
   ::google::protobuf::uint32 timestamp_;
+  ::google::protobuf::uint32 registered_team_id_;
   friend struct protobuf_dota_5fgcmessages_5fclient_5ffantasy_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -12847,6 +12857,30 @@ inline void CMsgGCPlayerInfo_PlayerInfo::set_timestamp(::google::protobuf::uint3
   set_has_timestamp();
   timestamp_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgGCPlayerInfo.PlayerInfo.timestamp)
+}
+
+// optional uint32 registered_team_id = 13;
+inline bool CMsgGCPlayerInfo_PlayerInfo::has_registered_team_id() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void CMsgGCPlayerInfo_PlayerInfo::set_has_registered_team_id() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void CMsgGCPlayerInfo_PlayerInfo::clear_has_registered_team_id() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void CMsgGCPlayerInfo_PlayerInfo::clear_registered_team_id() {
+  registered_team_id_ = 0u;
+  clear_has_registered_team_id();
+}
+inline ::google::protobuf::uint32 CMsgGCPlayerInfo_PlayerInfo::registered_team_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCPlayerInfo.PlayerInfo.registered_team_id)
+  return registered_team_id_;
+}
+inline void CMsgGCPlayerInfo_PlayerInfo::set_registered_team_id(::google::protobuf::uint32 value) {
+  set_has_registered_team_id();
+  registered_team_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCPlayerInfo.PlayerInfo.registered_team_id)
 }
 
 // -------------------------------------------------------------------

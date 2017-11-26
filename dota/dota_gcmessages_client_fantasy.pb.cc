@@ -319,6 +319,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCPlayerInfo_PlayerInfo, is_pro_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCPlayerInfo_PlayerInfo, locked_until_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCPlayerInfo_PlayerInfo, timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCPlayerInfo_PlayerInfo, registered_team_id_),
   5,
   0,
   1,
@@ -331,6 +332,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   9,
   10,
   11,
+  12,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCPlayerInfo_RegionLeaderboard, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgGCPlayerInfo_RegionLeaderboard, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1355,92 +1357,92 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
-  { 0, 17, sizeof(CMsgGCPlayerInfo_PlayerInfo)},
-  { 29, 36, sizeof(CMsgGCPlayerInfo_RegionLeaderboard)},
-  { 38, 45, sizeof(CMsgGCPlayerInfo)},
-  { 47, 56, sizeof(CMsgDOTACreateFantasyLeagueRequest)},
-  { 60, 66, sizeof(CMsgDOTACreateFantasyLeagueResponse)},
-  { 67, 86, sizeof(CMsgFantasyLeagueScoring)},
-  { 100, 108, sizeof(CMsgDOTAFantasyLeagueInfo_OwnerInfo)},
-  { 111, 140, sizeof(CMsgDOTAFantasyLeagueInfo)},
-  { 164, 171, sizeof(CMsgDOTAFantasyLeagueEditInfoRequest)},
-  { 173, 179, sizeof(CMsgDOTAFantasyLeagueEditInfoResponse)},
-  { 180, 187, sizeof(CMsgDOTAFantasyLeagueFindRequest)},
-  { 189, 197, sizeof(CMsgDOTAFantasyLeagueFindResponse)},
-  { 200, 206, sizeof(CMsgDOTAFantasyLeagueInfoRequest)},
-  { 207, 213, sizeof(CMsgDOTAFantasyLeagueInfoResponse)},
-  { 214, 220, sizeof(CMsgDOTAFantasyLeagueMatchupsRequest)},
-  { 221, 230, sizeof(CMsgDOTAFantasyLeagueMatchupsResponse_Matchup)},
-  { 234, 242, sizeof(CMsgDOTAFantasyLeagueMatchupsResponse_WeeklyMatchups)},
-  { 245, 253, sizeof(CMsgDOTAFantasyLeagueMatchupsResponse)},
-  { 256, 265, sizeof(CMsgDOTAEditFantasyTeamRequest)},
-  { 269, 275, sizeof(CMsgDOTAEditFantasyTeamResponse)},
-  { 276, 282, sizeof(CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID)},
-  { 283, 289, sizeof(CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID)},
-  { 290, 296, sizeof(CMsgDOTAFantasyTeamInfoResponse)},
-  { 297, 310, sizeof(CMsgDOTAFantasyTeamInfo)},
-  { 318, 330, sizeof(CMsgDOTAFantasyTeamScoreRequest)},
-  { 337, 344, sizeof(CMsgDOTAFantasyTeamScoreResponse_CMsgPlayerScore)},
-  { 346, 354, sizeof(CMsgDOTAFantasyTeamScoreResponse)},
-  { 357, 369, sizeof(CMsgDOTAFantasyTeamStandingsRequest)},
-  { 376, 392, sizeof(CMsgDOTAFantasyTeamStandingsResponse_CMsgTeamScore)},
-  { 403, 410, sizeof(CMsgDOTAFantasyTeamStandingsResponse)},
-  { 412, 423, sizeof(CMsgDOTAFantasyPlayerScoreRequest)},
-  { 429, 439, sizeof(CMsgDOTAFantasyPlayerScoreResponse)},
-  { 444, 456, sizeof(CMsgDOTAFantasyPlayerStandingsRequest)},
-  { 463, 471, sizeof(CMsgDOTAFantasyPlayerStandingsResponse_CMsgPlayerScore)},
-  { 474, 483, sizeof(CMsgDOTAFantasyPlayerStandingsResponse)},
-  { 487, 492, sizeof(CMsgDOTAFantasyPlayerInfoRequest)},
-  { 492, 498, sizeof(CMsgDOTAFantasyPlayerInfoResponse)},
-  { 499, 510, sizeof(CMsgDOTAFantasyLeagueCreateRequest)},
-  { 516, 523, sizeof(CMsgDOTAFantasyLeagueCreateResponse)},
-  { 525, 535, sizeof(CMsgDOTAFantasyTeamCreateRequest)},
-  { 540, 547, sizeof(CMsgDOTAFantasyTeamCreateResponse)},
-  { 549, 556, sizeof(CMsgDOTAFantasyLeagueEditInvitesRequest_InviteChange)},
-  { 558, 566, sizeof(CMsgDOTAFantasyLeagueEditInvitesRequest)},
-  { 569, 575, sizeof(CMsgDOTAFantasyLeagueEditInvitesResponse)},
-  { 576, 582, sizeof(CMsgDOTAFantasyLeagueDraftStatusRequest)},
-  { 583, 595, sizeof(CMsgDOTAFantasyLeagueDraftStatus)},
-  { 602, 610, sizeof(CMsgDOTAFantasyLeagueDraftPlayerRequest)},
-  { 613, 619, sizeof(CMsgDOTAFantasyLeagueDraftPlayerResponse)},
-  { 620, 630, sizeof(CMsgDOTAFantasyTeamRosterSwapRequest)},
-  { 635, 641, sizeof(CMsgDOTAFantasyTeamRosterSwapResponse)},
-  { 642, 651, sizeof(CMsgDOTAFantasyTeamRosterAddDropRequest)},
-  { 655, 661, sizeof(CMsgDOTAFantasyTeamRosterAddDropResponse)},
-  { 662, 668, sizeof(CMsgDOTAFantasyTeamTradesRequest)},
-  { 669, 680, sizeof(CMsgDOTAFantasyTeamTradesResponse_Trade)},
-  { 686, 693, sizeof(CMsgDOTAFantasyTeamTradesResponse)},
-  { 695, 704, sizeof(CMsgDOTAFantasyTeamTradeCancelRequest)},
-  { 708, 714, sizeof(CMsgDOTAFantasyTeamTradeCancelResponse)},
-  { 715, 724, sizeof(CMsgDOTAFantasyTeamRosterRequest)},
-  { 728, 736, sizeof(CMsgDOTAFantasyTeamRosterResponse)},
-  { 739, 745, sizeof(CMsgDOTAFantasyPlayerHisoricalStatsRequest)},
-  { 746, 765, sizeof(CMsgDOTAFantasyPlayerHisoricalStatsResponse_PlayerScoreAccumulator)},
-  { 779, 788, sizeof(CMsgDOTAFantasyPlayerHisoricalStatsResponse_PlayerStats)},
-  { 792, 799, sizeof(CMsgDOTAFantasyPlayerHisoricalStatsResponse)},
-  { 801, 808, sizeof(CMsgDOTAFantasyMessageAdd)},
-  { 810, 818, sizeof(CMsgDOTAFantasyMessagesRequest)},
-  { 821, 830, sizeof(CMsgDOTAFantasyMessagesResponse_Message)},
-  { 834, 842, sizeof(CMsgDOTAFantasyMessagesResponse)},
-  { 845, 853, sizeof(CMsgDOTAFantasyRemoveOwner)},
-  { 856, 862, sizeof(CMsgDOTAFantasyRemoveOwnerResponse)},
-  { 863, 869, sizeof(CMsgDOTAFantasyScheduledMatchesRequest)},
-  { 870, 878, sizeof(CMsgDOTAFantasyScheduledMatchesResponse_ScheduledMatchDays)},
-  { 881, 888, sizeof(CMsgDOTAFantasyScheduledMatchesResponse)},
-  { 890, 897, sizeof(CMsgDOTAFantasyLeaveLeagueRequest)},
-  { 899, 905, sizeof(CMsgDOTAFantasyLeaveLeagueResponse)},
-  { 906, 915, sizeof(CMsgDOTAFantasyPlayerScoreDetailsRequest)},
-  { 919, 935, sizeof(CMsgDOTAFantasyPlayerScoreDetailsResponse_PlayerMatchData)},
-  { 946, 953, sizeof(CMsgDOTAFantasyPlayerScoreDetailsResponse)},
-  { 955, 963, sizeof(CMsgDOTAPassportVoteTeamGuess)},
-  { 966, 973, sizeof(CMsgDOTAPassportVoteGenericSelection)},
-  { 975, 982, sizeof(CMsgDOTAPassportStampedPlayer)},
-  { 984, 990, sizeof(CMsgDOTAPassportPlayerCardChallenge)},
-  { 991, 1000, sizeof(CMsgDOTAPassportVote)},
-  { 1004, 1011, sizeof(CMsgClientToGCGetPlayerCardRosterRequest)},
-  { 1013, 1023, sizeof(CMsgClientToGCGetPlayerCardRosterResponse)},
-  { 1028, 1038, sizeof(CMsgClientToGCSetPlayerCardRosterRequest)},
-  { 1043, 1049, sizeof(CMsgClientToGCSetPlayerCardRosterResponse)},
+  { 0, 18, sizeof(CMsgGCPlayerInfo_PlayerInfo)},
+  { 31, 38, sizeof(CMsgGCPlayerInfo_RegionLeaderboard)},
+  { 40, 47, sizeof(CMsgGCPlayerInfo)},
+  { 49, 58, sizeof(CMsgDOTACreateFantasyLeagueRequest)},
+  { 62, 68, sizeof(CMsgDOTACreateFantasyLeagueResponse)},
+  { 69, 88, sizeof(CMsgFantasyLeagueScoring)},
+  { 102, 110, sizeof(CMsgDOTAFantasyLeagueInfo_OwnerInfo)},
+  { 113, 142, sizeof(CMsgDOTAFantasyLeagueInfo)},
+  { 166, 173, sizeof(CMsgDOTAFantasyLeagueEditInfoRequest)},
+  { 175, 181, sizeof(CMsgDOTAFantasyLeagueEditInfoResponse)},
+  { 182, 189, sizeof(CMsgDOTAFantasyLeagueFindRequest)},
+  { 191, 199, sizeof(CMsgDOTAFantasyLeagueFindResponse)},
+  { 202, 208, sizeof(CMsgDOTAFantasyLeagueInfoRequest)},
+  { 209, 215, sizeof(CMsgDOTAFantasyLeagueInfoResponse)},
+  { 216, 222, sizeof(CMsgDOTAFantasyLeagueMatchupsRequest)},
+  { 223, 232, sizeof(CMsgDOTAFantasyLeagueMatchupsResponse_Matchup)},
+  { 236, 244, sizeof(CMsgDOTAFantasyLeagueMatchupsResponse_WeeklyMatchups)},
+  { 247, 255, sizeof(CMsgDOTAFantasyLeagueMatchupsResponse)},
+  { 258, 267, sizeof(CMsgDOTAEditFantasyTeamRequest)},
+  { 271, 277, sizeof(CMsgDOTAEditFantasyTeamResponse)},
+  { 278, 284, sizeof(CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID)},
+  { 285, 291, sizeof(CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID)},
+  { 292, 298, sizeof(CMsgDOTAFantasyTeamInfoResponse)},
+  { 299, 312, sizeof(CMsgDOTAFantasyTeamInfo)},
+  { 320, 332, sizeof(CMsgDOTAFantasyTeamScoreRequest)},
+  { 339, 346, sizeof(CMsgDOTAFantasyTeamScoreResponse_CMsgPlayerScore)},
+  { 348, 356, sizeof(CMsgDOTAFantasyTeamScoreResponse)},
+  { 359, 371, sizeof(CMsgDOTAFantasyTeamStandingsRequest)},
+  { 378, 394, sizeof(CMsgDOTAFantasyTeamStandingsResponse_CMsgTeamScore)},
+  { 405, 412, sizeof(CMsgDOTAFantasyTeamStandingsResponse)},
+  { 414, 425, sizeof(CMsgDOTAFantasyPlayerScoreRequest)},
+  { 431, 441, sizeof(CMsgDOTAFantasyPlayerScoreResponse)},
+  { 446, 458, sizeof(CMsgDOTAFantasyPlayerStandingsRequest)},
+  { 465, 473, sizeof(CMsgDOTAFantasyPlayerStandingsResponse_CMsgPlayerScore)},
+  { 476, 485, sizeof(CMsgDOTAFantasyPlayerStandingsResponse)},
+  { 489, 494, sizeof(CMsgDOTAFantasyPlayerInfoRequest)},
+  { 494, 500, sizeof(CMsgDOTAFantasyPlayerInfoResponse)},
+  { 501, 512, sizeof(CMsgDOTAFantasyLeagueCreateRequest)},
+  { 518, 525, sizeof(CMsgDOTAFantasyLeagueCreateResponse)},
+  { 527, 537, sizeof(CMsgDOTAFantasyTeamCreateRequest)},
+  { 542, 549, sizeof(CMsgDOTAFantasyTeamCreateResponse)},
+  { 551, 558, sizeof(CMsgDOTAFantasyLeagueEditInvitesRequest_InviteChange)},
+  { 560, 568, sizeof(CMsgDOTAFantasyLeagueEditInvitesRequest)},
+  { 571, 577, sizeof(CMsgDOTAFantasyLeagueEditInvitesResponse)},
+  { 578, 584, sizeof(CMsgDOTAFantasyLeagueDraftStatusRequest)},
+  { 585, 597, sizeof(CMsgDOTAFantasyLeagueDraftStatus)},
+  { 604, 612, sizeof(CMsgDOTAFantasyLeagueDraftPlayerRequest)},
+  { 615, 621, sizeof(CMsgDOTAFantasyLeagueDraftPlayerResponse)},
+  { 622, 632, sizeof(CMsgDOTAFantasyTeamRosterSwapRequest)},
+  { 637, 643, sizeof(CMsgDOTAFantasyTeamRosterSwapResponse)},
+  { 644, 653, sizeof(CMsgDOTAFantasyTeamRosterAddDropRequest)},
+  { 657, 663, sizeof(CMsgDOTAFantasyTeamRosterAddDropResponse)},
+  { 664, 670, sizeof(CMsgDOTAFantasyTeamTradesRequest)},
+  { 671, 682, sizeof(CMsgDOTAFantasyTeamTradesResponse_Trade)},
+  { 688, 695, sizeof(CMsgDOTAFantasyTeamTradesResponse)},
+  { 697, 706, sizeof(CMsgDOTAFantasyTeamTradeCancelRequest)},
+  { 710, 716, sizeof(CMsgDOTAFantasyTeamTradeCancelResponse)},
+  { 717, 726, sizeof(CMsgDOTAFantasyTeamRosterRequest)},
+  { 730, 738, sizeof(CMsgDOTAFantasyTeamRosterResponse)},
+  { 741, 747, sizeof(CMsgDOTAFantasyPlayerHisoricalStatsRequest)},
+  { 748, 767, sizeof(CMsgDOTAFantasyPlayerHisoricalStatsResponse_PlayerScoreAccumulator)},
+  { 781, 790, sizeof(CMsgDOTAFantasyPlayerHisoricalStatsResponse_PlayerStats)},
+  { 794, 801, sizeof(CMsgDOTAFantasyPlayerHisoricalStatsResponse)},
+  { 803, 810, sizeof(CMsgDOTAFantasyMessageAdd)},
+  { 812, 820, sizeof(CMsgDOTAFantasyMessagesRequest)},
+  { 823, 832, sizeof(CMsgDOTAFantasyMessagesResponse_Message)},
+  { 836, 844, sizeof(CMsgDOTAFantasyMessagesResponse)},
+  { 847, 855, sizeof(CMsgDOTAFantasyRemoveOwner)},
+  { 858, 864, sizeof(CMsgDOTAFantasyRemoveOwnerResponse)},
+  { 865, 871, sizeof(CMsgDOTAFantasyScheduledMatchesRequest)},
+  { 872, 880, sizeof(CMsgDOTAFantasyScheduledMatchesResponse_ScheduledMatchDays)},
+  { 883, 890, sizeof(CMsgDOTAFantasyScheduledMatchesResponse)},
+  { 892, 899, sizeof(CMsgDOTAFantasyLeaveLeagueRequest)},
+  { 901, 907, sizeof(CMsgDOTAFantasyLeaveLeagueResponse)},
+  { 908, 917, sizeof(CMsgDOTAFantasyPlayerScoreDetailsRequest)},
+  { 921, 937, sizeof(CMsgDOTAFantasyPlayerScoreDetailsResponse_PlayerMatchData)},
+  { 948, 955, sizeof(CMsgDOTAFantasyPlayerScoreDetailsResponse)},
+  { 957, 965, sizeof(CMsgDOTAPassportVoteTeamGuess)},
+  { 968, 975, sizeof(CMsgDOTAPassportVoteGenericSelection)},
+  { 977, 984, sizeof(CMsgDOTAPassportStampedPlayer)},
+  { 986, 992, sizeof(CMsgDOTAPassportPlayerCardChallenge)},
+  { 993, 1002, sizeof(CMsgDOTAPassportVote)},
+  { 1006, 1013, sizeof(CMsgClientToGCGetPlayerCardRosterRequest)},
+  { 1015, 1025, sizeof(CMsgClientToGCGetPlayerCardRosterResponse)},
+  { 1030, 1040, sizeof(CMsgClientToGCSetPlayerCardRosterRequest)},
+  { 1045, 1051, sizeof(CMsgClientToGCSetPlayerCardRosterResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -1841,482 +1843,483 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n$dota_gcmessages_client_fantasy.proto\022\n"
-      "proto.dota\032\027dota_shared_enums.proto\"\303\003\n\020"
+      "proto.dota\032\027dota_shared_enums.proto\"\337\003\n\020"
       "CMsgGCPlayerInfo\022=\n\014player_infos\030\001 \003(\0132\'"
       ".proto.dota.CMsgGCPlayerInfo.PlayerInfo\022"
       "D\n\014leaderboards\030\002 \003(\0132..proto.dota.CMsgG"
-      "CPlayerInfo.RegionLeaderboard\032\355\001\n\nPlayer"
+      "CPlayerInfo.RegionLeaderboard\032\211\002\n\nPlayer"
       "Info\022\022\n\naccount_id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\024"
       "\n\014country_code\030\003 \001(\t\022\024\n\014fantasy_role\030\004 \001"
       "(\r\022\017\n\007team_id\030\005 \001(\r\022\021\n\tteam_name\030\006 \001(\t\022\020"
       "\n\010team_tag\030\007 \001(\t\022\017\n\007sponsor\030\010 \001(\t\022\021\n\tis_"
       "locked\030\t \001(\010\022\016\n\006is_pro\030\n \001(\010\022\024\n\014locked_u"
-      "ntil\030\013 \001(\r\022\021\n\ttimestamp\030\014 \001(\r\032:\n\021RegionL"
-      "eaderboard\022\020\n\010division\030\001 \001(\r\022\023\n\013account_"
-      "ids\030\002 \003(\r\"\271\001\n\"CMsgDOTACreateFantasyLeagu"
-      "eRequest\022\023\n\013league_name\030\001 \001(\t\022\023\n\013league_"
-      "logo\030\002 \001(\004\022U\n\016selection_mode\030\003 \001(\0162\".pro"
-      "to.dota.Fantasy_Selection_Mode:\031FANTASY_"
-      "SELECTION_INVALID\022\022\n\nteam_count\030\004 \001(\r\"\376\001"
-      "\n#CMsgDOTACreateFantasyLeagueResponse\022P\n"
-      "\006result\030\001 \001(\01627.proto.dota.CMsgDOTACreat"
-      "eFantasyLeagueResponse.EResult:\007SUCCESS\""
-      "\204\001\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPEC"
-      "IFIED\020\001\022\032\n\026ERROR_TOO_MANY_LEAGUES\020\002\022\034\n\030E"
-      "RROR_INVALID_TEAM_COUNT\020\003\022\033\n\027ERROR_CREAT"
-      "ION_DISABLED\020\004\"\237\002\n\030CMsgFantasyLeagueScor"
-      "ing\022\r\n\005level\030\001 \001(\002\022\r\n\005kills\030\002 \001(\002\022\016\n\006dea"
-      "ths\030\003 \001(\002\022\017\n\007assists\030\004 \001(\002\022\021\n\tlast_hits\030"
-      "\005 \001(\002\022\016\n\006denies\030\006 \001(\002\022\013\n\003gpm\030\007 \001(\002\022\014\n\004xp"
-      "pm\030\010 \001(\002\022\r\n\005stuns\030\t \001(\002\022\017\n\007healing\030\n \001(\002"
-      "\022\023\n\013tower_kills\030\013 \001(\002\022\024\n\014roshan_kills\030\014 "
-      "\001(\002\022\032\n\022multiplier_premium\030\r \001(\002\022\037\n\027multi"
-      "plier_professional\030\016 \001(\002\"\357\005\n\031CMsgDOTAFan"
-      "tasyLeagueInfo\022\031\n\021fantasy_league_id\030\001 \001("
-      "\r\022\037\n\027commissioner_account_id\030\002 \001(\r\022\033\n\023fa"
-      "ntasy_league_name\030\003 \001(\t\022U\n\016selection_mod"
-      "e\030\004 \001(\0162\".proto.dota.Fantasy_Selection_M"
-      "ode:\031FANTASY_SELECTION_INVALID\022\022\n\nteam_c"
-      "ount\030\005 \001(\r\022\014\n\004logo\030\006 \001(\004\0225\n\007scoring\030\007 \001("
-      "\0132$.proto.dota.CMsgFantasyLeagueScoring\022"
-      "\022\n\ndraft_time\030\014 \001(\r\022\027\n\017draft_pick_time\030\r"
-      " \001(\r\022\024\n\014season_start\030\017 \001(\r\022\025\n\rseason_len"
-      "gth\030\020 \001(\r\022\022\n\nveto_votes\030\021 \001(\r\022\024\n\014acquisi"
-      "tions\030\022 \001(\r\022\016\n\006slot_1\030\023 \001(\r\022\016\n\006slot_2\030\024 "
-      "\001(\r\022\016\n\006slot_3\030\025 \001(\r\022\016\n\006slot_4\030\026 \001(\r\022\016\n\006s"
-      "lot_5\030\027 \001(\r\022\023\n\013bench_slots\030\030 \001(\r\022C\n\nowne"
-      "r_info\030\031 \003(\0132/.proto.dota.CMsgDOTAFantas"
-      "yLeagueInfo.OwnerInfo\022\017\n\007players\030\032 \003(\r\022\021"
-      "\n\ttime_zone\030\033 \001(\r\022\016\n\006season\030\034 \001(\r\022\020\n\010pas"
-      "sword\030\035 \001(\t\032U\n\tOwnerInfo\022\030\n\020owner_accoun"
-      "t_id\030\001 \001(\r\022\023\n\013left_league\030\002 \001(\010\022\031\n\021playe"
-      "r_account_id\030\003 \003(\r\"{\n$CMsgDOTAFantasyLea"
-      "gueEditInfoRequest\022\031\n\021fantasy_league_id\030"
-      "\001 \001(\r\0228\n\tedit_info\030\002 \001(\0132%.proto.dota.CM"
-      "sgDOTAFantasyLeagueInfo\"\303\001\n%CMsgDOTAFant"
-      "asyLeagueEditInfoResponse\022R\n\006result\030\001 \001("
-      "\01629.proto.dota.CMsgDOTAFantasyLeagueEdit"
-      "InfoResponse.EResult:\007SUCCESS\"F\n\007EResult"
+      "ntil\030\013 \001(\r\022\021\n\ttimestamp\030\014 \001(\r\022\032\n\022registe"
+      "red_team_id\030\r \001(\r\032:\n\021RegionLeaderboard\022\020"
+      "\n\010division\030\001 \001(\r\022\023\n\013account_ids\030\002 \003(\r\"\271\001"
+      "\n\"CMsgDOTACreateFantasyLeagueRequest\022\023\n\013"
+      "league_name\030\001 \001(\t\022\023\n\013league_logo\030\002 \001(\004\022U"
+      "\n\016selection_mode\030\003 \001(\0162\".proto.dota.Fant"
+      "asy_Selection_Mode:\031FANTASY_SELECTION_IN"
+      "VALID\022\022\n\nteam_count\030\004 \001(\r\"\376\001\n#CMsgDOTACr"
+      "eateFantasyLeagueResponse\022P\n\006result\030\001 \001("
+      "\01627.proto.dota.CMsgDOTACreateFantasyLeag"
+      "ueResponse.EResult:\007SUCCESS\"\204\001\n\007EResult\022"
+      "\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\032\n\026E"
+      "RROR_TOO_MANY_LEAGUES\020\002\022\034\n\030ERROR_INVALID"
+      "_TEAM_COUNT\020\003\022\033\n\027ERROR_CREATION_DISABLED"
+      "\020\004\"\237\002\n\030CMsgFantasyLeagueScoring\022\r\n\005level"
+      "\030\001 \001(\002\022\r\n\005kills\030\002 \001(\002\022\016\n\006deaths\030\003 \001(\002\022\017\n"
+      "\007assists\030\004 \001(\002\022\021\n\tlast_hits\030\005 \001(\002\022\016\n\006den"
+      "ies\030\006 \001(\002\022\013\n\003gpm\030\007 \001(\002\022\014\n\004xppm\030\010 \001(\002\022\r\n\005"
+      "stuns\030\t \001(\002\022\017\n\007healing\030\n \001(\002\022\023\n\013tower_ki"
+      "lls\030\013 \001(\002\022\024\n\014roshan_kills\030\014 \001(\002\022\032\n\022multi"
+      "plier_premium\030\r \001(\002\022\037\n\027multiplier_profes"
+      "sional\030\016 \001(\002\"\357\005\n\031CMsgDOTAFantasyLeagueIn"
+      "fo\022\031\n\021fantasy_league_id\030\001 \001(\r\022\037\n\027commiss"
+      "ioner_account_id\030\002 \001(\r\022\033\n\023fantasy_league"
+      "_name\030\003 \001(\t\022U\n\016selection_mode\030\004 \001(\0162\".pr"
+      "oto.dota.Fantasy_Selection_Mode:\031FANTASY"
+      "_SELECTION_INVALID\022\022\n\nteam_count\030\005 \001(\r\022\014"
+      "\n\004logo\030\006 \001(\004\0225\n\007scoring\030\007 \001(\0132$.proto.do"
+      "ta.CMsgFantasyLeagueScoring\022\022\n\ndraft_tim"
+      "e\030\014 \001(\r\022\027\n\017draft_pick_time\030\r \001(\r\022\024\n\014seas"
+      "on_start\030\017 \001(\r\022\025\n\rseason_length\030\020 \001(\r\022\022\n"
+      "\nveto_votes\030\021 \001(\r\022\024\n\014acquisitions\030\022 \001(\r\022"
+      "\016\n\006slot_1\030\023 \001(\r\022\016\n\006slot_2\030\024 \001(\r\022\016\n\006slot_"
+      "3\030\025 \001(\r\022\016\n\006slot_4\030\026 \001(\r\022\016\n\006slot_5\030\027 \001(\r\022"
+      "\023\n\013bench_slots\030\030 \001(\r\022C\n\nowner_info\030\031 \003(\013"
+      "2/.proto.dota.CMsgDOTAFantasyLeagueInfo."
+      "OwnerInfo\022\017\n\007players\030\032 \003(\r\022\021\n\ttime_zone\030"
+      "\033 \001(\r\022\016\n\006season\030\034 \001(\r\022\020\n\010password\030\035 \001(\t\032"
+      "U\n\tOwnerInfo\022\030\n\020owner_account_id\030\001 \001(\r\022\023"
+      "\n\013left_league\030\002 \001(\010\022\031\n\021player_account_id"
+      "\030\003 \003(\r\"{\n$CMsgDOTAFantasyLeagueEditInfoR"
+      "equest\022\031\n\021fantasy_league_id\030\001 \001(\r\0228\n\tedi"
+      "t_info\030\002 \001(\0132%.proto.dota.CMsgDOTAFantas"
+      "yLeagueInfo\"\303\001\n%CMsgDOTAFantasyLeagueEdi"
+      "tInfoResponse\022R\n\006result\030\001 \001(\01629.proto.do"
+      "ta.CMsgDOTAFantasyLeagueEditInfoResponse"
+      ".EResult:\007SUCCESS\"F\n\007EResult\022\013\n\007SUCCESS\020"
+      "\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR_NO_PER"
+      "MISSION\020\002\"O\n CMsgDOTAFantasyLeagueFindRe"
+      "quest\022\031\n\021fantasy_league_id\030\001 \001(\r\022\020\n\010pass"
+      "word\030\002 \001(\t\"\322\002\n!CMsgDOTAFantasyLeagueFind"
+      "Response\022N\n\006result\030\001 \001(\01625.proto.dota.CM"
+      "sgDOTAFantasyLeagueFindResponse.EResult:"
+      "\007SUCCESS\022\033\n\023fantasy_league_name\030\002 \001(\t\022\031\n"
+      "\021commissioner_name\030\003 \001(\t\"\244\001\n\007EResult\022\013\n\007"
+      "SUCCESS\020\000\022\032\n\026ERROR_LEAGUE_NOT_FOUND\020\001\022\026\n"
+      "\022ERROR_BAD_PASSWORD\020\002\022\025\n\021ERROR_UNSPECIFI"
+      "ED\020\003\022\016\n\nERROR_FULL\020\004\022\030\n\024ERROR_ALREADY_ME"
+      "MBER\020\005\022\027\n\023ERROR_LEAGUE_LOCKED\020\006\"=\n CMsgD"
+      "OTAFantasyLeagueInfoRequest\022\031\n\021fantasy_l"
+      "eague_id\030\001 \001(\r\"\273\001\n!CMsgDOTAFantasyLeague"
+      "InfoResponse\022N\n\006result\030\001 \001(\01625.proto.dot"
+      "a.CMsgDOTAFantasyLeagueInfoResponse.ERes"
+      "ult:\007SUCCESS\"F\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021"
+      "ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR_BAD_LEAGUE_"
+      "ID\020\002\"A\n$CMsgDOTAFantasyLeagueMatchupsReq"
+      "uest\022\031\n\021fantasy_league_id\030\001 \001(\r\"\274\004\n%CMsg"
+      "DOTAFantasyLeagueMatchupsResponse\022R\n\006res"
+      "ult\030\001 \001(\01629.proto.dota.CMsgDOTAFantasyLe"
+      "agueMatchupsResponse.EResult:\007SUCCESS\022\031\n"
+      "\021fantasy_league_id\030\002 \001(\r\022Y\n\017weekly_match"
+      "ups\030\003 \003(\0132@.proto.dota.CMsgDOTAFantasyLe"
+      "agueMatchupsResponse.WeeklyMatchups\032c\n\007M"
+      "atchup\022\032\n\022owner_account_id_1\030\001 \001(\r\022\032\n\022ow"
+      "ner_account_id_2\030\002 \001(\r\022\017\n\007score_1\030\003 \001(\002\022"
+      "\017\n\007score_2\030\004 \001(\002\032\202\001\n\016WeeklyMatchups\022J\n\007m"
+      "atchup\030\001 \003(\01329.proto.dota.CMsgDOTAFantas"
+      "yLeagueMatchupsResponse.Matchup\022\022\n\nstart"
+      "_time\030\002 \001(\r\022\020\n\010end_time\030\003 \001(\r\"_\n\007EResult"
       "\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023"
-      "ERROR_NO_PERMISSION\020\002\"O\n CMsgDOTAFantasy"
-      "LeagueFindRequest\022\031\n\021fantasy_league_id\030\001"
-      " \001(\r\022\020\n\010password\030\002 \001(\t\"\322\002\n!CMsgDOTAFanta"
-      "syLeagueFindResponse\022N\n\006result\030\001 \001(\01625.p"
-      "roto.dota.CMsgDOTAFantasyLeagueFindRespo"
-      "nse.EResult:\007SUCCESS\022\033\n\023fantasy_league_n"
-      "ame\030\002 \001(\t\022\031\n\021commissioner_name\030\003 \001(\t\"\244\001\n"
-      "\007EResult\022\013\n\007SUCCESS\020\000\022\032\n\026ERROR_LEAGUE_NO"
-      "T_FOUND\020\001\022\026\n\022ERROR_BAD_PASSWORD\020\002\022\025\n\021ERR"
-      "OR_UNSPECIFIED\020\003\022\016\n\nERROR_FULL\020\004\022\030\n\024ERRO"
-      "R_ALREADY_MEMBER\020\005\022\027\n\023ERROR_LEAGUE_LOCKE"
-      "D\020\006\"=\n CMsgDOTAFantasyLeagueInfoRequest\022"
-      "\031\n\021fantasy_league_id\030\001 \001(\r\"\273\001\n!CMsgDOTAF"
-      "antasyLeagueInfoResponse\022N\n\006result\030\001 \001(\016"
-      "25.proto.dota.CMsgDOTAFantasyLeagueInfoR"
-      "esponse.EResult:\007SUCCESS\"F\n\007EResult\022\013\n\007S"
-      "UCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR"
-      "_BAD_LEAGUE_ID\020\002\"A\n$CMsgDOTAFantasyLeagu"
-      "eMatchupsRequest\022\031\n\021fantasy_league_id\030\001 "
-      "\001(\r\"\274\004\n%CMsgDOTAFantasyLeagueMatchupsRes"
-      "ponse\022R\n\006result\030\001 \001(\01629.proto.dota.CMsgD"
-      "OTAFantasyLeagueMatchupsResponse.EResult"
-      ":\007SUCCESS\022\031\n\021fantasy_league_id\030\002 \001(\r\022Y\n\017"
-      "weekly_matchups\030\003 \003(\0132@.proto.dota.CMsgD"
-      "OTAFantasyLeagueMatchupsResponse.WeeklyM"
-      "atchups\032c\n\007Matchup\022\032\n\022owner_account_id_1"
-      "\030\001 \001(\r\022\032\n\022owner_account_id_2\030\002 \001(\r\022\017\n\007sc"
-      "ore_1\030\003 \001(\002\022\017\n\007score_2\030\004 \001(\002\032\202\001\n\016WeeklyM"
-      "atchups\022J\n\007matchup\030\001 \003(\01329.proto.dota.CM"
-      "sgDOTAFantasyLeagueMatchupsResponse.Matc"
-      "hup\022\022\n\nstart_time\030\002 \001(\r\022\020\n\010end_time\030\003 \001("
-      "\r\"_\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPE"
-      "CIFIED\020\001\022\027\n\023ERROR_BAD_LEAGUE_ID\020\002\022\027\n\023ERR"
-      "OR_NO_PERMISSION\020\003\"u\n\036CMsgDOTAEditFantas"
-      "yTeamRequest\022\031\n\021fantasy_league_id\030\001 \001(\r\022"
-      "\022\n\nteam_index\030\002 \001(\r\022\021\n\tteam_name\030\003 \001(\t\022\021"
-      "\n\tteam_logo\030\004 \001(\004\"\363\001\n\037CMsgDOTAEditFantas"
-      "yTeamResponse\022L\n\006result\030\001 \001(\01623.proto.do"
-      "ta.CMsgDOTAEditFantasyTeamResponse.EResu"
-      "lt:\007SUCCESS\"\201\001\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021"
-      "ERROR_UNSPECIFIED\020\001\022\033\n\027ERROR_INVALID_TEA"
-      "M_INFO\020\002\022\034\n\030ERROR_NAME_ALREADY_TAKEN\020\003\022\027"
-      "\n\023ERROR_NO_PERMISSION\020\004\"L\n/CMsgDOTAFanta"
-      "syTeamInfoRequestByFantasyLeagueID\022\031\n\021fa"
-      "ntasy_league_id\030\001 \001(\r\"J\n.CMsgDOTAFantasy"
-      "TeamInfoRequestByOwnerAccountID\022\030\n\020owner"
-      "_account_id\030\001 \001(\r\"W\n\037CMsgDOTAFantasyTeam"
-      "InfoResponse\0224\n\007results\030\001 \003(\0132#.proto.do"
-      "ta.CMsgDOTAFantasyTeamInfo\"\306\001\n\027CMsgDOTAF"
-      "antasyTeamInfo\022\031\n\021fantasy_league_id\030\001 \001("
-      "\r\022\030\n\020owner_account_id\030\002 \001(\r\022\032\n\022fantasy_t"
-      "eam_index\030\003 \001(\r\022\021\n\tteam_name\030\004 \001(\t\022\021\n\tte"
-      "am_logo\030\005 \001(\004\022\014\n\004wins\030\006 \001(\r\022\016\n\006losses\030\007 "
-      "\001(\r\022\026\n\016current_roster\030\010 \003(\r\"\326\001\n\037CMsgDOTA"
-      "FantasyTeamScoreRequest\022\031\n\021fantasy_leagu"
-      "e_id\030\001 \001(\r\022\030\n\020owner_account_id\030\002 \001(\r\022\032\n\022"
-      "fantasy_team_index\030\003 \001(\r\022\027\n\017filter_match"
-      "_id\030\004 \001(\004\022\031\n\021filter_start_time\030\005 \001(\r\022\027\n\017"
-      "filter_end_time\030\006 \001(\r\022\025\n\rinclude_bench\030\007"
-      " \001(\010\"\206\003\n CMsgDOTAFantasyTeamScoreRespons"
-      "e\022M\n\006result\030\001 \001(\01624.proto.dota.CMsgDOTAF"
-      "antasyTeamScoreResponse.EResult:\007SUCCESS"
-      "\022\032\n\022fantasy_team_score\030\002 \001(\002\022Z\n\024fantasy_"
-      "player_score\030\003 \003(\0132<.proto.dota.CMsgDOTA"
-      "FantasyTeamScoreResponse.CMsgPlayerScore"
-      "\0324\n\017CMsgPlayerScore\022\022\n\naccount_id\030\001 \001(\r\022"
-      "\r\n\005score\030\002 \001(\002\"e\n\007EResult\022\013\n\007SUCCESS\020\000\022\025"
-      "\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR_NO_PERMIS"
-      "SION\020\002\022\035\n\031ERROR_OWNER_NOT_IN_LEAGUE\020\003\"\317\001"
-      "\n#CMsgDOTAFantasyTeamStandingsRequest\022\031\n"
-      "\021fantasy_league_id\030\001 \001(\r\022\r\n\005count\030\002 \001(\r\022"
-      "\031\n\021filter_start_time\030\003 \001(\r\022\027\n\017filter_end"
-      "_time\030\004 \001(\r\022\027\n\017filter_match_id\030\005 \001(\004\022\031\n\021"
-      "filter_last_match\030\006 \001(\010\022\026\n\016filter_in_hal"
-      "l\030\007 \001(\010\"\227\004\n$CMsgDOTAFantasyTeamStandings"
-      "Response\022Q\n\006result\030\001 \001(\01628.proto.dota.CM"
-      "sgDOTAFantasyTeamStandingsResponse.EResu"
-      "lt:\007SUCCESS\022S\n\013team_scores\030\003 \003(\0132>.proto"
-      ".dota.CMsgDOTAFantasyTeamStandingsRespon"
-      "se.CMsgTeamScore\032\376\001\n\rCMsgTeamScore\022\031\n\021fa"
-      "ntasy_league_id\030\001 \001(\r\022\030\n\020owner_account_i"
-      "d\030\002 \001(\r\022\032\n\022fantasy_team_index\030\003 \001(\r\022\031\n\021f"
-      "antasy_team_logo\030\004 \001(\004\022\022\n\nowner_name\030\005 \001"
-      "(\t\022\031\n\021fantasy_team_name\030\006 \001(\t\022\r\n\005score\030\007"
-      " \001(\002\022\025\n\rscore_against\030\010 \001(\002\022\014\n\004wins\030\t \001("
-      "\r\022\016\n\006losses\030\n \001(\r\022\016\n\006streak\030\013 \001(\005\"F\n\007ERe"
-      "sult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001"
-      "\022\027\n\023ERROR_NO_PERMISSION\020\002\"\301\001\n!CMsgDOTAFa"
-      "ntasyPlayerScoreRequest\022\031\n\021fantasy_leagu"
-      "e_id\030\001 \001(\r\022\031\n\021player_account_id\030\002 \001(\r\022\031\n"
-      "\021filter_start_time\030\003 \001(\r\022\027\n\017filter_end_t"
-      "ime\030\004 \001(\r\022\027\n\017filter_match_id\030\005 \001(\004\022\031\n\021fi"
-      "lter_last_match\030\006 \001(\010\"\227\002\n\"CMsgDOTAFantas"
-      "yPlayerScoreResponse\022O\n\006result\030\001 \001(\01626.p"
-      "roto.dota.CMsgDOTAFantasyPlayerScoreResp"
+      "ERROR_BAD_LEAGUE_ID\020\002\022\027\n\023ERROR_NO_PERMIS"
+      "SION\020\003\"u\n\036CMsgDOTAEditFantasyTeamRequest"
+      "\022\031\n\021fantasy_league_id\030\001 \001(\r\022\022\n\nteam_inde"
+      "x\030\002 \001(\r\022\021\n\tteam_name\030\003 \001(\t\022\021\n\tteam_logo\030"
+      "\004 \001(\004\"\363\001\n\037CMsgDOTAEditFantasyTeamRespons"
+      "e\022L\n\006result\030\001 \001(\01623.proto.dota.CMsgDOTAE"
+      "ditFantasyTeamResponse.EResult:\007SUCCESS\""
+      "\201\001\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPEC"
+      "IFIED\020\001\022\033\n\027ERROR_INVALID_TEAM_INFO\020\002\022\034\n\030"
+      "ERROR_NAME_ALREADY_TAKEN\020\003\022\027\n\023ERROR_NO_P"
+      "ERMISSION\020\004\"L\n/CMsgDOTAFantasyTeamInfoRe"
+      "questByFantasyLeagueID\022\031\n\021fantasy_league"
+      "_id\030\001 \001(\r\"J\n.CMsgDOTAFantasyTeamInfoRequ"
+      "estByOwnerAccountID\022\030\n\020owner_account_id\030"
+      "\001 \001(\r\"W\n\037CMsgDOTAFantasyTeamInfoResponse"
+      "\0224\n\007results\030\001 \003(\0132#.proto.dota.CMsgDOTAF"
+      "antasyTeamInfo\"\306\001\n\027CMsgDOTAFantasyTeamIn"
+      "fo\022\031\n\021fantasy_league_id\030\001 \001(\r\022\030\n\020owner_a"
+      "ccount_id\030\002 \001(\r\022\032\n\022fantasy_team_index\030\003 "
+      "\001(\r\022\021\n\tteam_name\030\004 \001(\t\022\021\n\tteam_logo\030\005 \001("
+      "\004\022\014\n\004wins\030\006 \001(\r\022\016\n\006losses\030\007 \001(\r\022\026\n\016curre"
+      "nt_roster\030\010 \003(\r\"\326\001\n\037CMsgDOTAFantasyTeamS"
+      "coreRequest\022\031\n\021fantasy_league_id\030\001 \001(\r\022\030"
+      "\n\020owner_account_id\030\002 \001(\r\022\032\n\022fantasy_team"
+      "_index\030\003 \001(\r\022\027\n\017filter_match_id\030\004 \001(\004\022\031\n"
+      "\021filter_start_time\030\005 \001(\r\022\027\n\017filter_end_t"
+      "ime\030\006 \001(\r\022\025\n\rinclude_bench\030\007 \001(\010\"\206\003\n CMs"
+      "gDOTAFantasyTeamScoreResponse\022M\n\006result\030"
+      "\001 \001(\01624.proto.dota.CMsgDOTAFantasyTeamSc"
+      "oreResponse.EResult:\007SUCCESS\022\032\n\022fantasy_"
+      "team_score\030\002 \001(\002\022Z\n\024fantasy_player_score"
+      "\030\003 \003(\0132<.proto.dota.CMsgDOTAFantasyTeamS"
+      "coreResponse.CMsgPlayerScore\0324\n\017CMsgPlay"
+      "erScore\022\022\n\naccount_id\030\001 \001(\r\022\r\n\005score\030\002 \001"
+      "(\002\"e\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSP"
+      "ECIFIED\020\001\022\027\n\023ERROR_NO_PERMISSION\020\002\022\035\n\031ER"
+      "ROR_OWNER_NOT_IN_LEAGUE\020\003\"\317\001\n#CMsgDOTAFa"
+      "ntasyTeamStandingsRequest\022\031\n\021fantasy_lea"
+      "gue_id\030\001 \001(\r\022\r\n\005count\030\002 \001(\r\022\031\n\021filter_st"
+      "art_time\030\003 \001(\r\022\027\n\017filter_end_time\030\004 \001(\r\022"
+      "\027\n\017filter_match_id\030\005 \001(\004\022\031\n\021filter_last_"
+      "match\030\006 \001(\010\022\026\n\016filter_in_hall\030\007 \001(\010\"\227\004\n$"
+      "CMsgDOTAFantasyTeamStandingsResponse\022Q\n\006"
+      "result\030\001 \001(\01628.proto.dota.CMsgDOTAFantas"
+      "yTeamStandingsResponse.EResult:\007SUCCESS\022"
+      "S\n\013team_scores\030\003 \003(\0132>.proto.dota.CMsgDO"
+      "TAFantasyTeamStandingsResponse.CMsgTeamS"
+      "core\032\376\001\n\rCMsgTeamScore\022\031\n\021fantasy_league"
+      "_id\030\001 \001(\r\022\030\n\020owner_account_id\030\002 \001(\r\022\032\n\022f"
+      "antasy_team_index\030\003 \001(\r\022\031\n\021fantasy_team_"
+      "logo\030\004 \001(\004\022\022\n\nowner_name\030\005 \001(\t\022\031\n\021fantas"
+      "y_team_name\030\006 \001(\t\022\r\n\005score\030\007 \001(\002\022\025\n\rscor"
+      "e_against\030\010 \001(\002\022\014\n\004wins\030\t \001(\r\022\016\n\006losses\030"
+      "\n \001(\r\022\016\n\006streak\030\013 \001(\005\"F\n\007EResult\022\013\n\007SUCC"
+      "ESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR_NO"
+      "_PERMISSION\020\002\"\301\001\n!CMsgDOTAFantasyPlayerS"
+      "coreRequest\022\031\n\021fantasy_league_id\030\001 \001(\r\022\031"
+      "\n\021player_account_id\030\002 \001(\r\022\031\n\021filter_star"
+      "t_time\030\003 \001(\r\022\027\n\017filter_end_time\030\004 \001(\r\022\027\n"
+      "\017filter_match_id\030\005 \001(\004\022\031\n\021filter_last_ma"
+      "tch\030\006 \001(\010\"\227\002\n\"CMsgDOTAFantasyPlayerScore"
+      "Response\022O\n\006result\030\001 \001(\01626.proto.dota.CM"
+      "sgDOTAFantasyPlayerScoreResponse.EResult"
+      ":\007SUCCESS\022\031\n\021fantasy_league_id\030\002 \001(\r\022\031\n\021"
+      "player_account_id\030\003 \001(\r\022\023\n\013player_name\030\004"
+      " \001(\t\022\r\n\005score\030\005 \001(\002\"F\n\007EResult\022\013\n\007SUCCES"
+      "S\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR_NO_P"
+      "ERMISSION\020\002\"\307\001\n%CMsgDOTAFantasyPlayerSta"
+      "ndingsRequest\022\031\n\021fantasy_league_id\030\001 \001(\r"
+      "\022\r\n\005count\030\002 \001(\r\022\014\n\004role\030\003 \001(\r\022\031\n\021filter_"
+      "start_time\030\004 \001(\r\022\027\n\017filter_end_time\030\005 \001("
+      "\r\022\027\n\017filter_match_id\030\006 \001(\004\022\031\n\021filter_las"
+      "t_match\030\007 \001(\010\"\233\003\n&CMsgDOTAFantasyPlayerS"
+      "tandingsResponse\022S\n\006result\030\001 \001(\0162:.proto"
+      ".dota.CMsgDOTAFantasyPlayerStandingsResp"
       "onse.EResult:\007SUCCESS\022\031\n\021fantasy_league_"
-      "id\030\002 \001(\r\022\031\n\021player_account_id\030\003 \001(\r\022\023\n\013p"
-      "layer_name\030\004 \001(\t\022\r\n\005score\030\005 \001(\002\"F\n\007EResu"
-      "lt\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027"
-      "\n\023ERROR_NO_PERMISSION\020\002\"\307\001\n%CMsgDOTAFant"
-      "asyPlayerStandingsRequest\022\031\n\021fantasy_lea"
-      "gue_id\030\001 \001(\r\022\r\n\005count\030\002 \001(\r\022\014\n\004role\030\003 \001("
-      "\r\022\031\n\021filter_start_time\030\004 \001(\r\022\027\n\017filter_e"
-      "nd_time\030\005 \001(\r\022\027\n\017filter_match_id\030\006 \001(\004\022\031"
-      "\n\021filter_last_match\030\007 \001(\010\"\233\003\n&CMsgDOTAFa"
-      "ntasyPlayerStandingsResponse\022S\n\006result\030\001"
-      " \001(\0162:.proto.dota.CMsgDOTAFantasyPlayerS"
-      "tandingsResponse.EResult:\007SUCCESS\022\031\n\021fan"
-      "tasy_league_id\030\002 \001(\r\022\014\n\004role\030\003 \001(\r\022Y\n\rpl"
-      "ayer_scores\030\004 \003(\0132B.proto.dota.CMsgDOTAF"
-      "antasyPlayerStandingsResponse.CMsgPlayer"
-      "Score\032P\n\017CMsgPlayerScore\022\031\n\021player_accou"
-      "nt_id\030\001 \001(\r\022\023\n\013player_name\030\002 \001(\t\022\r\n\005scor"
-      "e\030\003 \001(\002\"F\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR"
-      "_UNSPECIFIED\020\001\022\027\n\023ERROR_NO_PERMISSION\020\002\""
-      "\"\n CMsgDOTAFantasyPlayerInfoRequest\"N\n!C"
-      "MsgDOTAFantasyPlayerInfoResponse\022)\n\003msg\030"
-      "\001 \001(\0132\034.proto.dota.CMsgGCPlayerInfo\"\237\001\n\""
-      "CMsgDOTAFantasyLeagueCreateRequest\022\021\n\tse"
-      "ason_id\030\001 \001(\r\022\033\n\023fantasy_league_name\030\002 \001"
-      "(\t\022\020\n\010password\030\003 \001(\t\022\021\n\tteam_name\030\004 \001(\t\022"
-      "\014\n\004logo\030\005 \001(\004\022\026\n\016ticket_item_id\030\006 \001(\004\"\333\002"
-      "\n#CMsgDOTAFantasyLeagueCreateResponse\022P\n"
-      "\006result\030\001 \001(\01627.proto.dota.CMsgDOTAFanta"
-      "syLeagueCreateResponse.EResult:\007SUCCESS\022"
-      "\031\n\021fantasy_league_id\030\002 \001(\r\"\306\001\n\007EResult\022\013"
-      "\n\007SUCCESS\020\000\022\027\n\023ERROR_NO_PERMISSION\020\001\022\027\n\023"
-      "ERROR_BAD_SEASON_ID\020\002\022\031\n\025ERROR_BAD_LEAGU"
-      "E_NAME\020\003\022\027\n\023ERROR_BAD_TEAM_NAME\020\004\022\025\n\021ERR"
-      "OR_UNSPECIFIED\020\005\022\034\n\030ERROR_FAILED_LOGO_UP"
-      "LOAD\020\006\022\023\n\017ERROR_NO_TICKET\020\007\"\210\001\n CMsgDOTA"
-      "FantasyTeamCreateRequest\022\031\n\021fantasy_leag"
-      "ue_id\030\001 \001(\r\022\020\n\010password\030\002 \001(\t\022\021\n\tteam_na"
-      "me\030\003 \001(\t\022\014\n\004logo\030\004 \001(\004\022\026\n\016ticket_item_id"
-      "\030\005 \001(\004\"\233\003\n!CMsgDOTAFantasyTeamCreateResp"
-      "onse\022N\n\006result\030\001 \001(\01625.proto.dota.CMsgDO"
-      "TAFantasyTeamCreateResponse.EResult:\007SUC"
-      "CESS\022\032\n\022fantasy_team_index\030\002 \001(\r\"\211\002\n\007ERe"
-      "sult\022\013\n\007SUCCESS\020\000\022\027\n\023ERROR_NO_PERMISSION"
-      "\020\001\022\034\n\030ERROR_FAILED_LOGO_UPLOAD\020\002\022\037\n\033ERRO"
-      "R_BAD_FANTASY_LEAGUE_ID\020\003\022\022\n\016ERROR_BAD_N"
-      "AME\020\004\022\016\n\nERROR_FULL\020\005\022\030\n\024ERROR_ALREADY_M"
-      "EMBER\020\006\022\026\n\022ERROR_BAD_PASSWORD\020\007\022\025\n\021ERROR"
-      "_UNSPECIFIED\020\010\022\023\n\017ERROR_NO_TICKET\020\t\022\027\n\023E"
-      "RROR_LEAGUE_LOCKED\020\n\"\344\001\n\'CMsgDOTAFantasy"
-      "LeagueEditInvitesRequest\022\031\n\021fantasy_leag"
-      "ue_id\030\001 \001(\r\022\020\n\010password\030\002 \001(\t\022W\n\rinvite_"
-      "change\030\003 \003(\0132@.proto.dota.CMsgDOTAFantas"
-      "yLeagueEditInvitesRequest.InviteChange\0323"
-      "\n\014InviteChange\022\022\n\naccount_id\030\001 \001(\r\022\017\n\007in"
-      "vited\030\002 \001(\010\"\260\001\n(CMsgDOTAFantasyLeagueEdi"
-      "tInvitesResponse\022U\n\006result\030\001 \001(\0162<.proto"
-      ".dota.CMsgDOTAFantasyLeagueEditInvitesRe"
-      "sponse.EResult:\007SUCCESS\"-\n\007EResult\022\013\n\007SU"
-      "CCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\"D\n\'CMsgDO"
-      "TAFantasyLeagueDraftStatusRequest\022\031\n\021fan"
-      "tasy_league_id\030\001 \001(\r\"\306\001\n CMsgDOTAFantasy"
-      "LeagueDraftStatus\022\031\n\021fantasy_league_id\030\001"
-      " \001(\r\022\023\n\013draft_order\030\002 \003(\r\022\024\n\014current_pic"
-      "k\030\003 \001(\r\022\026\n\016time_remaining\030\004 \001(\r\022\026\n\016pendi"
-      "ng_resume\030\005 \001(\010\022\021\n\tcompleted\030\006 \001(\010\022\031\n\021av"
-      "ailable_players\030\007 \003(\r\"s\n\'CMsgDOTAFantasy"
-      "LeagueDraftPlayerRequest\022\031\n\021fantasy_leag"
-      "ue_id\030\001 \001(\r\022\022\n\nteam_index\030\002 \001(\r\022\031\n\021playe"
-      "r_account_id\030\003 \001(\r\"\215\003\n(CMsgDOTAFantasyLe"
-      "agueDraftPlayerResponse\022U\n\006result\030\001 \001(\0162"
-      "<.proto.dota.CMsgDOTAFantasyLeagueDraftP"
-      "layerResponse.EResult:\007SUCCESS\"\211\002\n\007EResu"
-      "lt\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022 "
-      "\n\034ERROR_INVALID_FANTASY_LEAGUE\020\002\022%\n!ERRO"
-      "R_FANTASY_LEAGUE_NOT_DRAFTING\020\003\022\035\n\031ERROR"
-      "_OWNER_NOT_IN_LEAGUE\020\004\022\031\n\025ERROR_NOT_OWNE"
-      "RS_TURN\020\005\022\030\n\024ERROR_PLAYER_INVALID\020\006\022\034\n\030E"
-      "RROR_PLAYER_UNAVAILABLE\020\007\022\037\n\033ERROR_PLAYE"
-      "R_NO_VALID_SLOTS\020\010\"\210\001\n$CMsgDOTAFantasyTe"
-      "amRosterSwapRequest\022\031\n\021fantasy_league_id"
-      "\030\001 \001(\r\022\022\n\nteam_index\030\002 \001(\r\022\021\n\ttimestamp\030"
-      "\003 \001(\r\022\016\n\006slot_1\030\004 \001(\r\022\016\n\006slot_2\030\005 \001(\r\"\371\001"
-      "\n%CMsgDOTAFantasyTeamRosterSwapResponse\022"
-      "R\n\006result\030\001 \001(\01629.proto.dota.CMsgDOTAFan"
-      "tasyTeamRosterSwapResponse.EResult:\007SUCC"
-      "ESS\"|\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNS"
-      "PECIFIED\020\001\022\035\n\031ERROR_OWNER_NOT_IN_LEAGUE\020"
-      "\002\022\027\n\023ERROR_SLOTS_INVALID\020\003\022\025\n\021ERROR_SLOT"
-      "_LOCKED\020\004\"\211\001\n\'CMsgDOTAFantasyTeamRosterA"
-      "ddDropRequest\022\031\n\021fantasy_league_id\030\001 \001(\r"
-      "\022\022\n\nteam_index\030\002 \001(\r\022\026\n\016add_account_id\030\005"
-      " \001(\r\022\027\n\017drop_account_id\030\006 \001(\r\"\257\002\n(CMsgDO"
-      "TAFantasyTeamRosterAddDropResponse\022U\n\006re"
-      "sult\030\001 \001(\0162<.proto.dota.CMsgDOTAFantasyT"
-      "eamRosterAddDropResponse.EResult:\007SUCCES"
-      "S\"\253\001\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSP"
-      "ECIFIED\020\001\022\035\n\031ERROR_OWNER_NOT_IN_LEAGUE\020\002"
-      "\022\036\n\032ERROR_PLAYER_NOT_AVAILABLE\020\003\022\034\n\030ERRO"
-      "R_PLAYER_NOT_ON_TEAM\020\004\022\037\n\033ERROR_TRADE_AL"
-      "READY_PENDING\020\005\"=\n CMsgDOTAFantasyTeamTr"
-      "adesRequest\022\031\n\021fantasy_league_id\030\001 \001(\r\"\237"
-      "\003\n!CMsgDOTAFantasyTeamTradesResponse\022N\n\006"
-      "result\030\001 \001(\01625.proto.dota.CMsgDOTAFantas"
-      "yTeamTradesResponse.EResult:\007SUCCESS\022C\n\006"
-      "trades\030\002 \003(\01323.proto.dota.CMsgDOTAFantas"
-      "yTeamTradesResponse.Trade\032\234\001\n\005Trade\022\021\n\tt"
-      "imestamp\030\001 \001(\r\022\032\n\022owner_account_id_1\030\002 \001"
-      "(\r\022\032\n\022owner_account_id_2\030\003 \001(\r\022\033\n\023player"
-      "_account_id_1\030\004 \001(\r\022\033\n\023player_account_id"
-      "_2\030\005 \001(\r\022\016\n\006status\030\006 \001(\r\"F\n\007EResult\022\013\n\007S"
-      "UCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR"
-      "_NO_PERMISSION\020\002\"\212\001\n%CMsgDOTAFantasyTeam"
-      "TradeCancelRequest\022\031\n\021fantasy_league_id\030"
-      "\001 \001(\r\022\024\n\014team_index_1\030\003 \001(\r\022\032\n\022owner_acc"
-      "ount_id_2\030\004 \001(\r\022\024\n\014team_index_2\030\005 \001(\r\"\331\001"
-      "\n&CMsgDOTAFantasyTeamTradeCancelResponse"
-      "\022S\n\006result\030\001 \001(\0162:.proto.dota.CMsgDOTAFa"
-      "ntasyTeamTradeCancelResponse.EResult:\007SU"
-      "CCESS\"Z\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_U"
-      "NSPECIFIED\020\001\022\027\n\023ERROR_NO_PERMISSION\020\002\022\022\n"
-      "\016ERROR_NO_TRADE\020\003\"~\n CMsgDOTAFantasyTeam"
-      "RosterRequest\022\031\n\021fantasy_league_id\030\001 \001(\r"
-      "\022\022\n\nteam_index\030\002 \001(\r\022\030\n\020owner_account_id"
-      "\030\003 \001(\r\022\021\n\ttimestamp\030\004 \001(\r\"\215\002\n!CMsgDOTAFa"
-      "ntasyTeamRosterResponse\022N\n\006result\030\001 \001(\0162"
-      "5.proto.dota.CMsgDOTAFantasyTeamRosterRe"
-      "sponse.EResult:\007SUCCESS\022\032\n\022player_accoun"
-      "t_ids\030\002 \003(\r\022\025\n\rplayer_locked\030\003 \003(\010\"e\n\007ER"
-      "esult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020"
-      "\001\022\027\n\023ERROR_NO_PERMISSION\020\002\022\035\n\031ERROR_OWNE"
-      "R_NOT_IN_LEAGUE\020\003\"G\n*CMsgDOTAFantasyPlay"
-      "erHisoricalStatsRequest\022\031\n\021fantasy_leagu"
-      "e_id\030\001 \001(\r\"\255\006\n+CMsgDOTAFantasyPlayerHiso"
-      "ricalStatsResponse\022X\n\006result\030\001 \001(\0162\?.pro"
+      "id\030\002 \001(\r\022\014\n\004role\030\003 \001(\r\022Y\n\rplayer_scores\030"
+      "\004 \003(\0132B.proto.dota.CMsgDOTAFantasyPlayer"
+      "StandingsResponse.CMsgPlayerScore\032P\n\017CMs"
+      "gPlayerScore\022\031\n\021player_account_id\030\001 \001(\r\022"
+      "\023\n\013player_name\030\002 \001(\t\022\r\n\005score\030\003 \001(\002\"F\n\007E"
+      "Result\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED"
+      "\020\001\022\027\n\023ERROR_NO_PERMISSION\020\002\"\"\n CMsgDOTAF"
+      "antasyPlayerInfoRequest\"N\n!CMsgDOTAFanta"
+      "syPlayerInfoResponse\022)\n\003msg\030\001 \001(\0132\034.prot"
+      "o.dota.CMsgGCPlayerInfo\"\237\001\n\"CMsgDOTAFant"
+      "asyLeagueCreateRequest\022\021\n\tseason_id\030\001 \001("
+      "\r\022\033\n\023fantasy_league_name\030\002 \001(\t\022\020\n\010passwo"
+      "rd\030\003 \001(\t\022\021\n\tteam_name\030\004 \001(\t\022\014\n\004logo\030\005 \001("
+      "\004\022\026\n\016ticket_item_id\030\006 \001(\004\"\333\002\n#CMsgDOTAFa"
+      "ntasyLeagueCreateResponse\022P\n\006result\030\001 \001("
+      "\01627.proto.dota.CMsgDOTAFantasyLeagueCrea"
+      "teResponse.EResult:\007SUCCESS\022\031\n\021fantasy_l"
+      "eague_id\030\002 \001(\r\"\306\001\n\007EResult\022\013\n\007SUCCESS\020\000\022"
+      "\027\n\023ERROR_NO_PERMISSION\020\001\022\027\n\023ERROR_BAD_SE"
+      "ASON_ID\020\002\022\031\n\025ERROR_BAD_LEAGUE_NAME\020\003\022\027\n\023"
+      "ERROR_BAD_TEAM_NAME\020\004\022\025\n\021ERROR_UNSPECIFI"
+      "ED\020\005\022\034\n\030ERROR_FAILED_LOGO_UPLOAD\020\006\022\023\n\017ER"
+      "ROR_NO_TICKET\020\007\"\210\001\n CMsgDOTAFantasyTeamC"
+      "reateRequest\022\031\n\021fantasy_league_id\030\001 \001(\r\022"
+      "\020\n\010password\030\002 \001(\t\022\021\n\tteam_name\030\003 \001(\t\022\014\n\004"
+      "logo\030\004 \001(\004\022\026\n\016ticket_item_id\030\005 \001(\004\"\233\003\n!C"
+      "MsgDOTAFantasyTeamCreateResponse\022N\n\006resu"
+      "lt\030\001 \001(\01625.proto.dota.CMsgDOTAFantasyTea"
+      "mCreateResponse.EResult:\007SUCCESS\022\032\n\022fant"
+      "asy_team_index\030\002 \001(\r\"\211\002\n\007EResult\022\013\n\007SUCC"
+      "ESS\020\000\022\027\n\023ERROR_NO_PERMISSION\020\001\022\034\n\030ERROR_"
+      "FAILED_LOGO_UPLOAD\020\002\022\037\n\033ERROR_BAD_FANTAS"
+      "Y_LEAGUE_ID\020\003\022\022\n\016ERROR_BAD_NAME\020\004\022\016\n\nERR"
+      "OR_FULL\020\005\022\030\n\024ERROR_ALREADY_MEMBER\020\006\022\026\n\022E"
+      "RROR_BAD_PASSWORD\020\007\022\025\n\021ERROR_UNSPECIFIED"
+      "\020\010\022\023\n\017ERROR_NO_TICKET\020\t\022\027\n\023ERROR_LEAGUE_"
+      "LOCKED\020\n\"\344\001\n\'CMsgDOTAFantasyLeagueEditIn"
+      "vitesRequest\022\031\n\021fantasy_league_id\030\001 \001(\r\022"
+      "\020\n\010password\030\002 \001(\t\022W\n\rinvite_change\030\003 \003(\013"
+      "2@.proto.dota.CMsgDOTAFantasyLeagueEditI"
+      "nvitesRequest.InviteChange\0323\n\014InviteChan"
+      "ge\022\022\n\naccount_id\030\001 \001(\r\022\017\n\007invited\030\002 \001(\010\""
+      "\260\001\n(CMsgDOTAFantasyLeagueEditInvitesResp"
+      "onse\022U\n\006result\030\001 \001(\0162<.proto.dota.CMsgDO"
+      "TAFantasyLeagueEditInvitesResponse.EResu"
+      "lt:\007SUCCESS\"-\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021E"
+      "RROR_UNSPECIFIED\020\001\"D\n\'CMsgDOTAFantasyLea"
+      "gueDraftStatusRequest\022\031\n\021fantasy_league_"
+      "id\030\001 \001(\r\"\306\001\n CMsgDOTAFantasyLeagueDraftS"
+      "tatus\022\031\n\021fantasy_league_id\030\001 \001(\r\022\023\n\013draf"
+      "t_order\030\002 \003(\r\022\024\n\014current_pick\030\003 \001(\r\022\026\n\016t"
+      "ime_remaining\030\004 \001(\r\022\026\n\016pending_resume\030\005 "
+      "\001(\010\022\021\n\tcompleted\030\006 \001(\010\022\031\n\021available_play"
+      "ers\030\007 \003(\r\"s\n\'CMsgDOTAFantasyLeagueDraftP"
+      "layerRequest\022\031\n\021fantasy_league_id\030\001 \001(\r\022"
+      "\022\n\nteam_index\030\002 \001(\r\022\031\n\021player_account_id"
+      "\030\003 \001(\r\"\215\003\n(CMsgDOTAFantasyLeagueDraftPla"
+      "yerResponse\022U\n\006result\030\001 \001(\0162<.proto.dota"
+      ".CMsgDOTAFantasyLeagueDraftPlayerRespons"
+      "e.EResult:\007SUCCESS\"\211\002\n\007EResult\022\013\n\007SUCCES"
+      "S\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022 \n\034ERROR_INVA"
+      "LID_FANTASY_LEAGUE\020\002\022%\n!ERROR_FANTASY_LE"
+      "AGUE_NOT_DRAFTING\020\003\022\035\n\031ERROR_OWNER_NOT_I"
+      "N_LEAGUE\020\004\022\031\n\025ERROR_NOT_OWNERS_TURN\020\005\022\030\n"
+      "\024ERROR_PLAYER_INVALID\020\006\022\034\n\030ERROR_PLAYER_"
+      "UNAVAILABLE\020\007\022\037\n\033ERROR_PLAYER_NO_VALID_S"
+      "LOTS\020\010\"\210\001\n$CMsgDOTAFantasyTeamRosterSwap"
+      "Request\022\031\n\021fantasy_league_id\030\001 \001(\r\022\022\n\nte"
+      "am_index\030\002 \001(\r\022\021\n\ttimestamp\030\003 \001(\r\022\016\n\006slo"
+      "t_1\030\004 \001(\r\022\016\n\006slot_2\030\005 \001(\r\"\371\001\n%CMsgDOTAFa"
+      "ntasyTeamRosterSwapResponse\022R\n\006result\030\001 "
+      "\001(\01629.proto.dota.CMsgDOTAFantasyTeamRost"
+      "erSwapResponse.EResult:\007SUCCESS\"|\n\007EResu"
+      "lt\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\035"
+      "\n\031ERROR_OWNER_NOT_IN_LEAGUE\020\002\022\027\n\023ERROR_S"
+      "LOTS_INVALID\020\003\022\025\n\021ERROR_SLOT_LOCKED\020\004\"\211\001"
+      "\n\'CMsgDOTAFantasyTeamRosterAddDropReques"
+      "t\022\031\n\021fantasy_league_id\030\001 \001(\r\022\022\n\nteam_ind"
+      "ex\030\002 \001(\r\022\026\n\016add_account_id\030\005 \001(\r\022\027\n\017drop"
+      "_account_id\030\006 \001(\r\"\257\002\n(CMsgDOTAFantasyTea"
+      "mRosterAddDropResponse\022U\n\006result\030\001 \001(\0162<"
+      ".proto.dota.CMsgDOTAFantasyTeamRosterAdd"
+      "DropResponse.EResult:\007SUCCESS\"\253\001\n\007EResul"
+      "t\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\035\n"
+      "\031ERROR_OWNER_NOT_IN_LEAGUE\020\002\022\036\n\032ERROR_PL"
+      "AYER_NOT_AVAILABLE\020\003\022\034\n\030ERROR_PLAYER_NOT"
+      "_ON_TEAM\020\004\022\037\n\033ERROR_TRADE_ALREADY_PENDIN"
+      "G\020\005\"=\n CMsgDOTAFantasyTeamTradesRequest\022"
+      "\031\n\021fantasy_league_id\030\001 \001(\r\"\237\003\n!CMsgDOTAF"
+      "antasyTeamTradesResponse\022N\n\006result\030\001 \001(\016"
+      "25.proto.dota.CMsgDOTAFantasyTeamTradesR"
+      "esponse.EResult:\007SUCCESS\022C\n\006trades\030\002 \003(\013"
+      "23.proto.dota.CMsgDOTAFantasyTeamTradesR"
+      "esponse.Trade\032\234\001\n\005Trade\022\021\n\ttimestamp\030\001 \001"
+      "(\r\022\032\n\022owner_account_id_1\030\002 \001(\r\022\032\n\022owner_"
+      "account_id_2\030\003 \001(\r\022\033\n\023player_account_id_"
+      "1\030\004 \001(\r\022\033\n\023player_account_id_2\030\005 \001(\r\022\016\n\006"
+      "status\030\006 \001(\r\"F\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021"
+      "ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR_NO_PERMISSI"
+      "ON\020\002\"\212\001\n%CMsgDOTAFantasyTeamTradeCancelR"
+      "equest\022\031\n\021fantasy_league_id\030\001 \001(\r\022\024\n\014tea"
+      "m_index_1\030\003 \001(\r\022\032\n\022owner_account_id_2\030\004 "
+      "\001(\r\022\024\n\014team_index_2\030\005 \001(\r\"\331\001\n&CMsgDOTAFa"
+      "ntasyTeamTradeCancelResponse\022S\n\006result\030\001"
+      " \001(\0162:.proto.dota.CMsgDOTAFantasyTeamTra"
+      "deCancelResponse.EResult:\007SUCCESS\"Z\n\007ERe"
+      "sult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001"
+      "\022\027\n\023ERROR_NO_PERMISSION\020\002\022\022\n\016ERROR_NO_TR"
+      "ADE\020\003\"~\n CMsgDOTAFantasyTeamRosterReques"
+      "t\022\031\n\021fantasy_league_id\030\001 \001(\r\022\022\n\nteam_ind"
+      "ex\030\002 \001(\r\022\030\n\020owner_account_id\030\003 \001(\r\022\021\n\tti"
+      "mestamp\030\004 \001(\r\"\215\002\n!CMsgDOTAFantasyTeamRos"
+      "terResponse\022N\n\006result\030\001 \001(\01625.proto.dota"
+      ".CMsgDOTAFantasyTeamRosterResponse.EResu"
+      "lt:\007SUCCESS\022\032\n\022player_account_ids\030\002 \003(\r\022"
+      "\025\n\rplayer_locked\030\003 \003(\010\"e\n\007EResult\022\013\n\007SUC"
+      "CESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR_N"
+      "O_PERMISSION\020\002\022\035\n\031ERROR_OWNER_NOT_IN_LEA"
+      "GUE\020\003\"G\n*CMsgDOTAFantasyPlayerHisoricalS"
+      "tatsRequest\022\031\n\021fantasy_league_id\030\001 \001(\r\"\255"
+      "\006\n+CMsgDOTAFantasyPlayerHisoricalStatsRe"
+      "sponse\022X\n\006result\030\001 \001(\0162\?.proto.dota.CMsg"
+      "DOTAFantasyPlayerHisoricalStatsResponse."
+      "EResult:\007SUCCESS\022R\n\005stats\030\002 \003(\0132C.proto."
+      "dota.CMsgDOTAFantasyPlayerHisoricalStats"
+      "Response.PlayerStats\032\201\002\n\026PlayerScoreAccu"
+      "mulator\022\017\n\007matches\030\001 \001(\r\022\016\n\006levels\030\002 \001(\002"
+      "\022\r\n\005kills\030\003 \001(\002\022\016\n\006deaths\030\004 \001(\002\022\017\n\007assis"
+      "ts\030\005 \001(\002\022\021\n\tlast_hits\030\006 \001(\002\022\016\n\006denies\030\007 "
+      "\001(\002\022\013\n\003gpm\030\010 \001(\002\022\014\n\004xppm\030\t \001(\002\022\r\n\005stuns\030"
+      "\n \001(\002\022\017\n\007healing\030\013 \001(\002\022\023\n\013tower_kills\030\014 "
+      "\001(\002\022\024\n\014roshan_kills\030\r \001(\002\022\r\n\005score\030\016 \001(\002"
+      "\032\203\002\n\013PlayerStats\022\022\n\naccount_id\030\001 \001(\r\022\r\n\005"
+      "weeks\030\002 \001(\r\022e\n\rstats_premium\030\004 \001(\0132N.pro"
       "to.dota.CMsgDOTAFantasyPlayerHisoricalSt"
-      "atsResponse.EResult:\007SUCCESS\022R\n\005stats\030\002 "
-      "\003(\0132C.proto.dota.CMsgDOTAFantasyPlayerHi"
-      "soricalStatsResponse.PlayerStats\032\201\002\n\026Pla"
-      "yerScoreAccumulator\022\017\n\007matches\030\001 \001(\r\022\016\n\006"
-      "levels\030\002 \001(\002\022\r\n\005kills\030\003 \001(\002\022\016\n\006deaths\030\004 "
-      "\001(\002\022\017\n\007assists\030\005 \001(\002\022\021\n\tlast_hits\030\006 \001(\002\022"
-      "\016\n\006denies\030\007 \001(\002\022\013\n\003gpm\030\010 \001(\002\022\014\n\004xppm\030\t \001"
-      "(\002\022\r\n\005stuns\030\n \001(\002\022\017\n\007healing\030\013 \001(\002\022\023\n\013to"
-      "wer_kills\030\014 \001(\002\022\024\n\014roshan_kills\030\r \001(\002\022\r\n"
-      "\005score\030\016 \001(\002\032\203\002\n\013PlayerStats\022\022\n\naccount_"
-      "id\030\001 \001(\r\022\r\n\005weeks\030\002 \001(\r\022e\n\rstats_premium"
-      "\030\004 \001(\0132N.proto.dota.CMsgDOTAFantasyPlaye"
-      "rHisoricalStatsResponse.PlayerScoreAccum"
-      "ulator\022j\n\022stats_professional\030\005 \001(\0132N.pro"
-      "to.dota.CMsgDOTAFantasyPlayerHisoricalSt"
-      "atsResponse.PlayerScoreAccumulator\"F\n\007ER"
-      "esult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020"
-      "\001\022\027\n\023ERROR_NO_PERMISSION\020\002\"G\n\031CMsgDOTAFa"
-      "ntasyMessageAdd\022\031\n\021fantasy_league_id\030\001 \001"
-      "(\r\022\017\n\007message\030\002 \001(\t\"g\n\036CMsgDOTAFantasyMe"
-      "ssagesRequest\022\031\n\021fantasy_league_id\030\001 \001(\r"
-      "\022\025\n\rstart_message\030\002 \001(\r\022\023\n\013end_message\030\003"
-      " \001(\r\"\363\002\n\037CMsgDOTAFantasyMessagesResponse"
-      "\022L\n\006result\030\001 \001(\01623.proto.dota.CMsgDOTAFa"
-      "ntasyMessagesResponse.EResult:\007SUCCESS\022E"
-      "\n\010messages\030\002 \003(\01323.proto.dota.CMsgDOTAFa"
-      "ntasyMessagesResponse.Message\022\032\n\022num_tot"
-      "al_messages\030\003 \001(\r\032W\n\007Message\022\022\n\nmessage_"
-      "id\030\001 \001(\r\022\017\n\007message\030\002 \001(\t\022\031\n\021author_acco"
-      "unt_id\030\003 \001(\r\022\014\n\004time\030\004 \001(\r\"F\n\007EResult\022\013\n"
-      "\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023ERR"
-      "OR_NO_PERMISSION\020\002\"e\n\032CMsgDOTAFantasyRem"
-      "oveOwner\022\031\n\021fantasy_league_id\030\001 \001(\r\022\030\n\020o"
-      "wner_account_id\030\002 \001(\r\022\022\n\nteam_index\030\003 \001("
-      "\r\"\356\001\n\"CMsgDOTAFantasyRemoveOwnerResponse"
-      "\022O\n\006result\030\001 \001(\01626.proto.dota.CMsgDOTAFa"
-      "ntasyRemoveOwnerResponse.EResult:\007SUCCES"
-      "S\"w\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPE"
-      "CIFIED\020\001\022\027\n\023ERROR_NO_PERMISSION\020\002\022\027\n\023ERR"
-      "OR_LEAGUE_LOCKED\020\003\022\026\n\022ERROR_NOT_A_MEMBER"
-      "\020\004\"C\n&CMsgDOTAFantasyScheduledMatchesReq"
-      "uest\022\031\n\021fantasy_league_id\030\001 \001(\r\"\343\002\n\'CMsg"
-      "DOTAFantasyScheduledMatchesResponse\022T\n\006r"
-      "esult\030\001 \001(\0162;.proto.dota.CMsgDOTAFantasy"
-      "ScheduledMatchesResponse.EResult:\007SUCCES"
-      "S\022d\n\024scheduled_match_days\030\002 \003(\0132F.proto."
-      "dota.CMsgDOTAFantasyScheduledMatchesResp"
-      "onse.ScheduledMatchDays\032M\n\022ScheduledMatc"
-      "hDays\022\021\n\ttimestamp\030\001 \001(\r\022\020\n\010team_ids\030\002 \003"
-      "(\r\022\022\n\nleague_ids\030\003 \003(\r\"-\n\007EResult\022\013\n\007SUC"
-      "CESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\"Z\n!CMsgDOT"
-      "AFantasyLeaveLeagueRequest\022\031\n\021fantasy_le"
-      "ague_id\030\001 \001(\r\022\032\n\022fantasy_team_index\030\002 \001("
-      "\r\"\356\001\n\"CMsgDOTAFantasyLeaveLeagueResponse"
-      "\022O\n\006result\030\001 \001(\01626.proto.dota.CMsgDOTAFa"
-      "ntasyLeaveLeagueResponse.EResult:\007SUCCES"
-      "S\"w\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPE"
-      "CIFIED\020\001\022\024\n\020ERROR_NOT_MEMBER\020\002\022\032\n\026ERROR_"
-      "LEAGUE_NOT_FOUND\020\003\022\026\n\022ERROR_DRAFT_ACTIVE"
-      "\020\004\"\206\001\n(CMsgDOTAFantasyPlayerScoreDetails"
-      "Request\022\031\n\021fantasy_league_id\030\001 \001(\r\022\031\n\021pl"
-      "ayer_account_id\030\002 \001(\r\022\022\n\nstart_time\030\003 \001("
-      "\r\022\020\n\010end_time\030\004 \001(\r\"\234\004\n)CMsgDOTAFantasyP"
-      "layerScoreDetailsResponse\022V\n\006result\030\001 \001("
-      "\0162=.proto.dota.CMsgDOTAFantasyPlayerScor"
-      "eDetailsResponse.EResult:\007SUCCESS\022S\n\004dat"
-      "a\030\002 \003(\0132E.proto.dota.CMsgDOTAFantasyPlay"
-      "erScoreDetailsResponse.PlayerMatchData\032\374"
-      "\001\n\017PlayerMatchData\022\020\n\010match_id\030\001 \001(\004\022\021\n\t"
-      "series_id\030\002 \001(\r\022\022\n\nseries_num\030\003 \001(\r\022\023\n\013s"
-      "eries_type\030\004 \001(\r\022\023\n\013league_tier\030\005 \001(\r\022\021\n"
-      "\tleague_id\030\006 \001(\r\022\030\n\020opposing_team_id\030\007 \001"
-      "(\r\022\032\n\022opposing_team_logo\030\010 \001(\004\022\032\n\022opposi"
-      "ng_team_name\030\t \001(\t\022\020\n\010owned_by\030\013 \001(\r\022\017\n\007"
-      "benched\030\014 \001(\010\"C\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n"
-      "\021ERROR_UNSPECIFIED\020\001\022\024\n\020ERROR_NOT_MEMBER"
-      "\020\002\"Z\n\035CMsgDOTAPassportVoteTeamGuess\022\021\n\tl"
-      "eague_id\030\001 \001(\r\022\021\n\twinner_id\030\002 \001(\r\022\023\n\013run"
-      "nerup_id\030\003 \001(\r\"\234\001\n$CMsgDOTAPassportVoteG"
-      "enericSelection\022a\n\017selection_index\030\001 \001(\016"
-      "2-.proto.dota.DOTA_2013PassportSelection"
-      "Indices:\031PP13_SEL_ALLSTAR_PLAYER_0\022\021\n\tse"
-      "lection\030\002 \001(\r\"F\n\035CMsgDOTAPassportStamped"
-      "Player\022\020\n\010steam_id\030\001 \001(\004\022\023\n\013stamp_level\030"
-      "\002 \001(\r\";\n#CMsgDOTAPassportPlayerCardChall"
-      "enge\022\024\n\014challenge_id\030\001 \001(\r\"\270\002\n\024CMsgDOTAP"
-      "assportVote\022=\n\nteam_votes\030\001 \003(\0132).proto."
-      "dota.CMsgDOTAPassportVoteTeamGuess\022L\n\022ge"
-      "neric_selections\030\002 \003(\01320.proto.dota.CMsg"
-      "DOTAPassportVoteGenericSelection\022B\n\017stam"
-      "ped_players\030\003 \003(\0132).proto.dota.CMsgDOTAP"
-      "assportStampedPlayer\022O\n\026player_card_chal"
-      "lenges\030\004 \003(\0132/.proto.dota.CMsgDOTAPasspo"
-      "rtPlayerCardChallenge\"P\n(CMsgClientToGCG"
-      "etPlayerCardRosterRequest\022\021\n\tleague_id\030\001"
-      " \001(\r\022\021\n\ttimestamp\030\002 \001(\r\"\275\002\n)CMsgClientTo"
-      "GCGetPlayerCardRosterResponse\022U\n\006result\030"
-      "\001 \001(\0162<.proto.dota.CMsgClientToGCGetPlay"
-      "erCardRosterResponse.Result:\007SUCCESS\022\033\n\023"
-      "player_card_item_id\030\002 \003(\004\022\r\n\005score\030\003 \001(\002"
-      "\022\021\n\tfinalized\030\004 \001(\010\022\022\n\npercentile\030\005 \001(\002\""
-      "f\n\006Result\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIF"
-      "IED\020\001\022\033\n\027ERROR_INVALID_LEAGUE_ID\020\002\022\033\n\027ER"
-      "ROR_INVALID_TIMESTAMP\020\003\"\215\001\n(CMsgClientTo"
-      "GCSetPlayerCardRosterRequest\022\021\n\tleague_i"
-      "d\030\001 \001(\r\022\021\n\ttimestamp\030\002 \001(\r\022\014\n\004slot\030\003 \001(\r"
-      "\022\033\n\023player_card_item_id\030\004 \001(\004\022\020\n\010event_i"
-      "d\030\005 \001(\r\"\371\002\n)CMsgClientToGCSetPlayerCardR"
-      "osterResponse\022U\n\006result\030\001 \001(\0162<.proto.do"
-      "ta.CMsgClientToGCSetPlayerCardRosterResp"
-      "onse.Result:\007SUCCESS\"\364\001\n\006Result\022\013\n\007SUCCE"
-      "SS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\033\n\027ERROR_INV"
-      "ALID_LEAGUE_ID\020\002\022\033\n\027ERROR_INVALID_TIMEST"
-      "AMP\020\003\022\037\n\033ERROR_PLAYER_CARD_NOT_OWNED\020\004\022\026"
-      "\n\022ERROR_INVALID_SLOT\020\005\022\032\n\026ERROR_FAILED_C"
-      "ARD_INFO\020\006\022\033\n\027ERROR_ACCOUNT_DUPLICATE\020\007\022"
-      "\032\n\026ERROR_LOCKED_TIMESTAMP\020\010*\243\025\n!DOTA_201"
-      "3PassportSelectionIndices\022\035\n\031PP13_SEL_AL"
-      "LSTAR_PLAYER_0\020\000\022\035\n\031PP13_SEL_ALLSTAR_PLA"
-      "YER_1\020\001\022\035\n\031PP13_SEL_ALLSTAR_PLAYER_2\020\002\022\035"
-      "\n\031PP13_SEL_ALLSTAR_PLAYER_3\020\003\022\035\n\031PP13_SE"
-      "L_ALLSTAR_PLAYER_4\020\004\022\035\n\031PP13_SEL_ALLSTAR"
-      "_PLAYER_5\020\005\022\035\n\031PP13_SEL_ALLSTAR_PLAYER_6"
-      "\020\006\022\035\n\031PP13_SEL_ALLSTAR_PLAYER_7\020\007\022\035\n\031PP1"
-      "3_SEL_ALLSTAR_PLAYER_8\020\010\022\035\n\031PP13_SEL_ALL"
-      "STAR_PLAYER_9\020\t\022\034\n\030PP13_SEL_QUALPRED_WES"
-      "T_0\020\n\022\034\n\030PP13_SEL_QUALPRED_WEST_1\020\013\022\034\n\030P"
-      "P13_SEL_QUALPRED_WEST_2\020\014\022\034\n\030PP13_SEL_QU"
-      "ALPRED_WEST_3\020\r\022\034\n\030PP13_SEL_QUALPRED_WES"
-      "T_4\020\016\022\034\n\030PP13_SEL_QUALPRED_WEST_5\020\017\022\034\n\030P"
-      "P13_SEL_QUALPRED_WEST_6\020\020\022\034\n\030PP13_SEL_QU"
-      "ALPRED_WEST_7\020\021\022\034\n\030PP13_SEL_QUALPRED_WES"
-      "T_8\020\022\022\034\n\030PP13_SEL_QUALPRED_WEST_9\020\023\022\035\n\031P"
-      "P13_SEL_QUALPRED_WEST_10\020\024\022\035\n\031PP13_SEL_Q"
-      "UALPRED_WEST_11\020\025\022\035\n\031PP13_SEL_QUALPRED_W"
-      "EST_12\020\026\022\035\n\031PP13_SEL_QUALPRED_WEST_13\020\027\022"
-      "\035\n\031PP13_SEL_QUALPRED_WEST_14\020\030\022\034\n\030PP13_S"
-      "EL_QUALPRED_EAST_0\020\031\022\034\n\030PP13_SEL_QUALPRE"
-      "D_EAST_1\020\032\022\034\n\030PP13_SEL_QUALPRED_EAST_2\020\033"
-      "\022\034\n\030PP13_SEL_QUALPRED_EAST_3\020\034\022\034\n\030PP13_S"
-      "EL_QUALPRED_EAST_4\020\035\022\034\n\030PP13_SEL_QUALPRE"
-      "D_EAST_5\020\036\022\034\n\030PP13_SEL_QUALPRED_EAST_6\020\037"
-      "\022\034\n\030PP13_SEL_QUALPRED_EAST_7\020 \022\034\n\030PP13_S"
-      "EL_QUALPRED_EAST_8\020!\022\034\n\030PP13_SEL_QUALPRE"
-      "D_EAST_9\020\"\022\035\n\031PP13_SEL_QUALPRED_EAST_10\020"
-      "#\022\035\n\031PP13_SEL_QUALPRED_EAST_11\020$\022\035\n\031PP13"
-      "_SEL_QUALPRED_EAST_12\020%\022\035\n\031PP13_SEL_QUAL"
-      "PRED_EAST_13\020&\022\035\n\031PP13_SEL_QUALPRED_EAST"
-      "_14\020\'\022\031\n\025PP13_SEL_TEAMCUP_TEAM\020(\022\033\n\027PP13"
-      "_SEL_TEAMCUP_PLAYER\020)\022\036\n\032PP13_SEL_TEAMCU"
-      "P_TEAM_LOCK\020*\022 \n\034PP13_SEL_TEAMCUP_PLAYER"
-      "_LOCK\020+\022\030\n\024PP13_SEL_EVENTPRED_0\020,\022\030\n\024PP1"
-      "3_SEL_EVENTPRED_1\020-\022\030\n\024PP13_SEL_EVENTPRE"
-      "D_2\020.\022\030\n\024PP13_SEL_EVENTPRED_3\020/\022\030\n\024PP13_"
-      "SEL_EVENTPRED_4\0200\022\030\n\024PP13_SEL_EVENTPRED_"
-      "5\0201\022\030\n\024PP13_SEL_EVENTPRED_6\0202\022\030\n\024PP13_SE"
-      "L_EVENTPRED_7\0203\022\030\n\024PP13_SEL_EVENTPRED_8\020"
-      "4\022\030\n\024PP13_SEL_EVENTPRED_9\0205\022\031\n\025PP13_SEL_"
-      "EVENTPRED_10\0206\022\031\n\025PP13_SEL_EVENTPRED_11\020"
-      "7\022\031\n\025PP13_SEL_EVENTPRED_12\0208\022\031\n\025PP13_SEL"
-      "_EVENTPRED_13\0209\022\031\n\025PP13_SEL_EVENTPRED_14"
-      "\020:\022\031\n\025PP13_SEL_EVENTPRED_15\020;\022\031\n\025PP13_SE"
-      "L_EVENTPRED_16\020<\022\031\n\025PP13_SEL_EVENTPRED_1"
-      "7\020=\022\031\n\025PP13_SEL_EVENTPRED_18\020>\022\031\n\025PP13_S"
-      "EL_EVENTPRED_19\020\?\022\031\n\025PP13_SEL_EVENTPRED_"
-      "20\020@\022\031\n\025PP13_SEL_EVENTPRED_21\020A\022\031\n\025PP13_"
-      "SEL_EVENTPRED_22\020B\022\031\n\025PP13_SEL_EVENTPRED"
-      "_23\020C\022\031\n\025PP13_SEL_EVENTPRED_24\020D\022\031\n\025PP13"
-      "_SEL_EVENTPRED_25\020E\022\031\n\025PP13_SEL_EVENTPRE"
-      "D_26\020F\022\031\n\025PP13_SEL_EVENTPRED_27\020G\022\031\n\025PP1"
-      "3_SEL_EVENTPRED_28\020H\022\031\n\025PP13_SEL_EVENTPR"
-      "ED_29\020I\022\031\n\025PP13_SEL_EVENTPRED_30\020J\022\031\n\025PP"
-      "13_SEL_EVENTPRED_31\020K\022\031\n\025PP13_SEL_EVENTP"
-      "RED_32\020L\022\031\n\025PP13_SEL_EVENTPRED_33\020M\022\031\n\025P"
-      "P13_SEL_EVENTPRED_34\020N\022\031\n\025PP13_SEL_EVENT"
-      "PRED_35\020O\022\031\n\025PP13_SEL_EVENTPRED_36\020P\022\031\n\025"
-      "PP13_SEL_EVENTPRED_37\020Q\022\031\n\025PP13_SEL_EVEN"
-      "TPRED_38\020R\022\031\n\025PP13_SEL_EVENTPRED_39\020S\022\031\n"
-      "\025PP13_SEL_EVENTPRED_40\020T\022\031\n\025PP13_SEL_EVE"
-      "NTPRED_41\020U\022\031\n\025PP13_SEL_EVENTPRED_42\020V\022\031"
-      "\n\025PP13_SEL_EVENTPRED_43\020W\022\023\n\017PP13_SEL_SO"
-      "LO_0\020X\022\023\n\017PP13_SEL_SOLO_1\020Y\022\023\n\017PP13_SEL_"
-      "SOLO_2\020Z\022\023\n\017PP13_SEL_SOLO_3\020[\022\023\n\017PP13_SE"
-      "L_SOLO_4\020\\\022\023\n\017PP13_SEL_SOLO_5\020]\022\023\n\017PP13_"
-      "SEL_SOLO_6\020^\022\023\n\017PP13_SEL_SOLO_7\020_B\005H\001\200\001\000"
+      "atsResponse.PlayerScoreAccumulator\022j\n\022st"
+      "ats_professional\030\005 \001(\0132N.proto.dota.CMsg"
+      "DOTAFantasyPlayerHisoricalStatsResponse."
+      "PlayerScoreAccumulator\"F\n\007EResult\022\013\n\007SUC"
+      "CESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR_N"
+      "O_PERMISSION\020\002\"G\n\031CMsgDOTAFantasyMessage"
+      "Add\022\031\n\021fantasy_league_id\030\001 \001(\r\022\017\n\007messag"
+      "e\030\002 \001(\t\"g\n\036CMsgDOTAFantasyMessagesReques"
+      "t\022\031\n\021fantasy_league_id\030\001 \001(\r\022\025\n\rstart_me"
+      "ssage\030\002 \001(\r\022\023\n\013end_message\030\003 \001(\r\"\363\002\n\037CMs"
+      "gDOTAFantasyMessagesResponse\022L\n\006result\030\001"
+      " \001(\01623.proto.dota.CMsgDOTAFantasyMessage"
+      "sResponse.EResult:\007SUCCESS\022E\n\010messages\030\002"
+      " \003(\01323.proto.dota.CMsgDOTAFantasyMessage"
+      "sResponse.Message\022\032\n\022num_total_messages\030"
+      "\003 \001(\r\032W\n\007Message\022\022\n\nmessage_id\030\001 \001(\r\022\017\n\007"
+      "message\030\002 \001(\t\022\031\n\021author_account_id\030\003 \001(\r"
+      "\022\014\n\004time\030\004 \001(\r\"F\n\007EResult\022\013\n\007SUCCESS\020\000\022\025"
+      "\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023ERROR_NO_PERMIS"
+      "SION\020\002\"e\n\032CMsgDOTAFantasyRemoveOwner\022\031\n\021"
+      "fantasy_league_id\030\001 \001(\r\022\030\n\020owner_account"
+      "_id\030\002 \001(\r\022\022\n\nteam_index\030\003 \001(\r\"\356\001\n\"CMsgDO"
+      "TAFantasyRemoveOwnerResponse\022O\n\006result\030\001"
+      " \001(\01626.proto.dota.CMsgDOTAFantasyRemoveO"
+      "wnerResponse.EResult:\007SUCCESS\"w\n\007EResult"
+      "\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\027\n\023"
+      "ERROR_NO_PERMISSION\020\002\022\027\n\023ERROR_LEAGUE_LO"
+      "CKED\020\003\022\026\n\022ERROR_NOT_A_MEMBER\020\004\"C\n&CMsgDO"
+      "TAFantasyScheduledMatchesRequest\022\031\n\021fant"
+      "asy_league_id\030\001 \001(\r\"\343\002\n\'CMsgDOTAFantasyS"
+      "cheduledMatchesResponse\022T\n\006result\030\001 \001(\0162"
+      ";.proto.dota.CMsgDOTAFantasyScheduledMat"
+      "chesResponse.EResult:\007SUCCESS\022d\n\024schedul"
+      "ed_match_days\030\002 \003(\0132F.proto.dota.CMsgDOT"
+      "AFantasyScheduledMatchesResponse.Schedul"
+      "edMatchDays\032M\n\022ScheduledMatchDays\022\021\n\ttim"
+      "estamp\030\001 \001(\r\022\020\n\010team_ids\030\002 \003(\r\022\022\n\nleague"
+      "_ids\030\003 \003(\r\"-\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ER"
+      "ROR_UNSPECIFIED\020\001\"Z\n!CMsgDOTAFantasyLeav"
+      "eLeagueRequest\022\031\n\021fantasy_league_id\030\001 \001("
+      "\r\022\032\n\022fantasy_team_index\030\002 \001(\r\"\356\001\n\"CMsgDO"
+      "TAFantasyLeaveLeagueResponse\022O\n\006result\030\001"
+      " \001(\01626.proto.dota.CMsgDOTAFantasyLeaveLe"
+      "agueResponse.EResult:\007SUCCESS\"w\n\007EResult"
+      "\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\024\n\020"
+      "ERROR_NOT_MEMBER\020\002\022\032\n\026ERROR_LEAGUE_NOT_F"
+      "OUND\020\003\022\026\n\022ERROR_DRAFT_ACTIVE\020\004\"\206\001\n(CMsgD"
+      "OTAFantasyPlayerScoreDetailsRequest\022\031\n\021f"
+      "antasy_league_id\030\001 \001(\r\022\031\n\021player_account"
+      "_id\030\002 \001(\r\022\022\n\nstart_time\030\003 \001(\r\022\020\n\010end_tim"
+      "e\030\004 \001(\r\"\234\004\n)CMsgDOTAFantasyPlayerScoreDe"
+      "tailsResponse\022V\n\006result\030\001 \001(\0162=.proto.do"
+      "ta.CMsgDOTAFantasyPlayerScoreDetailsResp"
+      "onse.EResult:\007SUCCESS\022S\n\004data\030\002 \003(\0132E.pr"
+      "oto.dota.CMsgDOTAFantasyPlayerScoreDetai"
+      "lsResponse.PlayerMatchData\032\374\001\n\017PlayerMat"
+      "chData\022\020\n\010match_id\030\001 \001(\004\022\021\n\tseries_id\030\002 "
+      "\001(\r\022\022\n\nseries_num\030\003 \001(\r\022\023\n\013series_type\030\004"
+      " \001(\r\022\023\n\013league_tier\030\005 \001(\r\022\021\n\tleague_id\030\006"
+      " \001(\r\022\030\n\020opposing_team_id\030\007 \001(\r\022\032\n\022opposi"
+      "ng_team_logo\030\010 \001(\004\022\032\n\022opposing_team_name"
+      "\030\t \001(\t\022\020\n\010owned_by\030\013 \001(\r\022\017\n\007benched\030\014 \001("
+      "\010\"C\n\007EResult\022\013\n\007SUCCESS\020\000\022\025\n\021ERROR_UNSPE"
+      "CIFIED\020\001\022\024\n\020ERROR_NOT_MEMBER\020\002\"Z\n\035CMsgDO"
+      "TAPassportVoteTeamGuess\022\021\n\tleague_id\030\001 \001"
+      "(\r\022\021\n\twinner_id\030\002 \001(\r\022\023\n\013runnerup_id\030\003 \001"
+      "(\r\"\234\001\n$CMsgDOTAPassportVoteGenericSelect"
+      "ion\022a\n\017selection_index\030\001 \001(\0162-.proto.dot"
+      "a.DOTA_2013PassportSelectionIndices:\031PP1"
+      "3_SEL_ALLSTAR_PLAYER_0\022\021\n\tselection\030\002 \001("
+      "\r\"F\n\035CMsgDOTAPassportStampedPlayer\022\020\n\010st"
+      "eam_id\030\001 \001(\004\022\023\n\013stamp_level\030\002 \001(\r\";\n#CMs"
+      "gDOTAPassportPlayerCardChallenge\022\024\n\014chal"
+      "lenge_id\030\001 \001(\r\"\270\002\n\024CMsgDOTAPassportVote\022"
+      "=\n\nteam_votes\030\001 \003(\0132).proto.dota.CMsgDOT"
+      "APassportVoteTeamGuess\022L\n\022generic_select"
+      "ions\030\002 \003(\01320.proto.dota.CMsgDOTAPassport"
+      "VoteGenericSelection\022B\n\017stamped_players\030"
+      "\003 \003(\0132).proto.dota.CMsgDOTAPassportStamp"
+      "edPlayer\022O\n\026player_card_challenges\030\004 \003(\013"
+      "2/.proto.dota.CMsgDOTAPassportPlayerCard"
+      "Challenge\"P\n(CMsgClientToGCGetPlayerCard"
+      "RosterRequest\022\021\n\tleague_id\030\001 \001(\r\022\021\n\ttime"
+      "stamp\030\002 \001(\r\"\275\002\n)CMsgClientToGCGetPlayerC"
+      "ardRosterResponse\022U\n\006result\030\001 \001(\0162<.prot"
+      "o.dota.CMsgClientToGCGetPlayerCardRoster"
+      "Response.Result:\007SUCCESS\022\033\n\023player_card_"
+      "item_id\030\002 \003(\004\022\r\n\005score\030\003 \001(\002\022\021\n\tfinalize"
+      "d\030\004 \001(\010\022\022\n\npercentile\030\005 \001(\002\"f\n\006Result\022\013\n"
+      "\007SUCCESS\020\000\022\025\n\021ERROR_UNSPECIFIED\020\001\022\033\n\027ERR"
+      "OR_INVALID_LEAGUE_ID\020\002\022\033\n\027ERROR_INVALID_"
+      "TIMESTAMP\020\003\"\215\001\n(CMsgClientToGCSetPlayerC"
+      "ardRosterRequest\022\021\n\tleague_id\030\001 \001(\r\022\021\n\tt"
+      "imestamp\030\002 \001(\r\022\014\n\004slot\030\003 \001(\r\022\033\n\023player_c"
+      "ard_item_id\030\004 \001(\004\022\020\n\010event_id\030\005 \001(\r\"\371\002\n)"
+      "CMsgClientToGCSetPlayerCardRosterRespons"
+      "e\022U\n\006result\030\001 \001(\0162<.proto.dota.CMsgClien"
+      "tToGCSetPlayerCardRosterResponse.Result:"
+      "\007SUCCESS\"\364\001\n\006Result\022\013\n\007SUCCESS\020\000\022\025\n\021ERRO"
+      "R_UNSPECIFIED\020\001\022\033\n\027ERROR_INVALID_LEAGUE_"
+      "ID\020\002\022\033\n\027ERROR_INVALID_TIMESTAMP\020\003\022\037\n\033ERR"
+      "OR_PLAYER_CARD_NOT_OWNED\020\004\022\026\n\022ERROR_INVA"
+      "LID_SLOT\020\005\022\032\n\026ERROR_FAILED_CARD_INFO\020\006\022\033"
+      "\n\027ERROR_ACCOUNT_DUPLICATE\020\007\022\032\n\026ERROR_LOC"
+      "KED_TIMESTAMP\020\010*\243\025\n!DOTA_2013PassportSel"
+      "ectionIndices\022\035\n\031PP13_SEL_ALLSTAR_PLAYER"
+      "_0\020\000\022\035\n\031PP13_SEL_ALLSTAR_PLAYER_1\020\001\022\035\n\031P"
+      "P13_SEL_ALLSTAR_PLAYER_2\020\002\022\035\n\031PP13_SEL_A"
+      "LLSTAR_PLAYER_3\020\003\022\035\n\031PP13_SEL_ALLSTAR_PL"
+      "AYER_4\020\004\022\035\n\031PP13_SEL_ALLSTAR_PLAYER_5\020\005\022"
+      "\035\n\031PP13_SEL_ALLSTAR_PLAYER_6\020\006\022\035\n\031PP13_S"
+      "EL_ALLSTAR_PLAYER_7\020\007\022\035\n\031PP13_SEL_ALLSTA"
+      "R_PLAYER_8\020\010\022\035\n\031PP13_SEL_ALLSTAR_PLAYER_"
+      "9\020\t\022\034\n\030PP13_SEL_QUALPRED_WEST_0\020\n\022\034\n\030PP1"
+      "3_SEL_QUALPRED_WEST_1\020\013\022\034\n\030PP13_SEL_QUAL"
+      "PRED_WEST_2\020\014\022\034\n\030PP13_SEL_QUALPRED_WEST_"
+      "3\020\r\022\034\n\030PP13_SEL_QUALPRED_WEST_4\020\016\022\034\n\030PP1"
+      "3_SEL_QUALPRED_WEST_5\020\017\022\034\n\030PP13_SEL_QUAL"
+      "PRED_WEST_6\020\020\022\034\n\030PP13_SEL_QUALPRED_WEST_"
+      "7\020\021\022\034\n\030PP13_SEL_QUALPRED_WEST_8\020\022\022\034\n\030PP1"
+      "3_SEL_QUALPRED_WEST_9\020\023\022\035\n\031PP13_SEL_QUAL"
+      "PRED_WEST_10\020\024\022\035\n\031PP13_SEL_QUALPRED_WEST"
+      "_11\020\025\022\035\n\031PP13_SEL_QUALPRED_WEST_12\020\026\022\035\n\031"
+      "PP13_SEL_QUALPRED_WEST_13\020\027\022\035\n\031PP13_SEL_"
+      "QUALPRED_WEST_14\020\030\022\034\n\030PP13_SEL_QUALPRED_"
+      "EAST_0\020\031\022\034\n\030PP13_SEL_QUALPRED_EAST_1\020\032\022\034"
+      "\n\030PP13_SEL_QUALPRED_EAST_2\020\033\022\034\n\030PP13_SEL"
+      "_QUALPRED_EAST_3\020\034\022\034\n\030PP13_SEL_QUALPRED_"
+      "EAST_4\020\035\022\034\n\030PP13_SEL_QUALPRED_EAST_5\020\036\022\034"
+      "\n\030PP13_SEL_QUALPRED_EAST_6\020\037\022\034\n\030PP13_SEL"
+      "_QUALPRED_EAST_7\020 \022\034\n\030PP13_SEL_QUALPRED_"
+      "EAST_8\020!\022\034\n\030PP13_SEL_QUALPRED_EAST_9\020\"\022\035"
+      "\n\031PP13_SEL_QUALPRED_EAST_10\020#\022\035\n\031PP13_SE"
+      "L_QUALPRED_EAST_11\020$\022\035\n\031PP13_SEL_QUALPRE"
+      "D_EAST_12\020%\022\035\n\031PP13_SEL_QUALPRED_EAST_13"
+      "\020&\022\035\n\031PP13_SEL_QUALPRED_EAST_14\020\'\022\031\n\025PP1"
+      "3_SEL_TEAMCUP_TEAM\020(\022\033\n\027PP13_SEL_TEAMCUP"
+      "_PLAYER\020)\022\036\n\032PP13_SEL_TEAMCUP_TEAM_LOCK\020"
+      "*\022 \n\034PP13_SEL_TEAMCUP_PLAYER_LOCK\020+\022\030\n\024P"
+      "P13_SEL_EVENTPRED_0\020,\022\030\n\024PP13_SEL_EVENTP"
+      "RED_1\020-\022\030\n\024PP13_SEL_EVENTPRED_2\020.\022\030\n\024PP1"
+      "3_SEL_EVENTPRED_3\020/\022\030\n\024PP13_SEL_EVENTPRE"
+      "D_4\0200\022\030\n\024PP13_SEL_EVENTPRED_5\0201\022\030\n\024PP13_"
+      "SEL_EVENTPRED_6\0202\022\030\n\024PP13_SEL_EVENTPRED_"
+      "7\0203\022\030\n\024PP13_SEL_EVENTPRED_8\0204\022\030\n\024PP13_SE"
+      "L_EVENTPRED_9\0205\022\031\n\025PP13_SEL_EVENTPRED_10"
+      "\0206\022\031\n\025PP13_SEL_EVENTPRED_11\0207\022\031\n\025PP13_SE"
+      "L_EVENTPRED_12\0208\022\031\n\025PP13_SEL_EVENTPRED_1"
+      "3\0209\022\031\n\025PP13_SEL_EVENTPRED_14\020:\022\031\n\025PP13_S"
+      "EL_EVENTPRED_15\020;\022\031\n\025PP13_SEL_EVENTPRED_"
+      "16\020<\022\031\n\025PP13_SEL_EVENTPRED_17\020=\022\031\n\025PP13_"
+      "SEL_EVENTPRED_18\020>\022\031\n\025PP13_SEL_EVENTPRED"
+      "_19\020\?\022\031\n\025PP13_SEL_EVENTPRED_20\020@\022\031\n\025PP13"
+      "_SEL_EVENTPRED_21\020A\022\031\n\025PP13_SEL_EVENTPRE"
+      "D_22\020B\022\031\n\025PP13_SEL_EVENTPRED_23\020C\022\031\n\025PP1"
+      "3_SEL_EVENTPRED_24\020D\022\031\n\025PP13_SEL_EVENTPR"
+      "ED_25\020E\022\031\n\025PP13_SEL_EVENTPRED_26\020F\022\031\n\025PP"
+      "13_SEL_EVENTPRED_27\020G\022\031\n\025PP13_SEL_EVENTP"
+      "RED_28\020H\022\031\n\025PP13_SEL_EVENTPRED_29\020I\022\031\n\025P"
+      "P13_SEL_EVENTPRED_30\020J\022\031\n\025PP13_SEL_EVENT"
+      "PRED_31\020K\022\031\n\025PP13_SEL_EVENTPRED_32\020L\022\031\n\025"
+      "PP13_SEL_EVENTPRED_33\020M\022\031\n\025PP13_SEL_EVEN"
+      "TPRED_34\020N\022\031\n\025PP13_SEL_EVENTPRED_35\020O\022\031\n"
+      "\025PP13_SEL_EVENTPRED_36\020P\022\031\n\025PP13_SEL_EVE"
+      "NTPRED_37\020Q\022\031\n\025PP13_SEL_EVENTPRED_38\020R\022\031"
+      "\n\025PP13_SEL_EVENTPRED_39\020S\022\031\n\025PP13_SEL_EV"
+      "ENTPRED_40\020T\022\031\n\025PP13_SEL_EVENTPRED_41\020U\022"
+      "\031\n\025PP13_SEL_EVENTPRED_42\020V\022\031\n\025PP13_SEL_E"
+      "VENTPRED_43\020W\022\023\n\017PP13_SEL_SOLO_0\020X\022\023\n\017PP"
+      "13_SEL_SOLO_1\020Y\022\023\n\017PP13_SEL_SOLO_2\020Z\022\023\n\017"
+      "PP13_SEL_SOLO_3\020[\022\023\n\017PP13_SEL_SOLO_4\020\\\022\023"
+      "\n\017PP13_SEL_SOLO_5\020]\022\023\n\017PP13_SEL_SOLO_6\020^"
+      "\022\023\n\017PP13_SEL_SOLO_7\020_B\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 18960);
+      descriptor, 18988);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dota_gcmessages_client_fantasy.proto", &protobuf_RegisterTypes);
   ::proto::dota::protobuf_dota_5fshared_5fenums_2eproto::AddDescriptors();
@@ -3171,6 +3174,7 @@ const int CMsgGCPlayerInfo_PlayerInfo::kIsLockedFieldNumber;
 const int CMsgGCPlayerInfo_PlayerInfo::kIsProFieldNumber;
 const int CMsgGCPlayerInfo_PlayerInfo::kLockedUntilFieldNumber;
 const int CMsgGCPlayerInfo_PlayerInfo::kTimestampFieldNumber;
+const int CMsgGCPlayerInfo_PlayerInfo::kRegisteredTeamIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CMsgGCPlayerInfo_PlayerInfo::CMsgGCPlayerInfo_PlayerInfo()
@@ -3208,8 +3212,8 @@ CMsgGCPlayerInfo_PlayerInfo::CMsgGCPlayerInfo_PlayerInfo(const CMsgGCPlayerInfo_
     sponsor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.sponsor_);
   }
   ::memcpy(&account_id_, &from.account_id_,
-    reinterpret_cast<char*>(&timestamp_) -
-    reinterpret_cast<char*>(&account_id_) + sizeof(timestamp_));
+    reinterpret_cast<char*>(&registered_team_id_) -
+    reinterpret_cast<char*>(&account_id_) + sizeof(registered_team_id_));
   // @@protoc_insertion_point(copy_constructor:proto.dota.CMsgGCPlayerInfo.PlayerInfo)
 }
 
@@ -3220,8 +3224,8 @@ void CMsgGCPlayerInfo_PlayerInfo::SharedCtor() {
   team_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   team_tag_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   sponsor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&account_id_, 0, reinterpret_cast<char*>(&timestamp_) -
-    reinterpret_cast<char*>(&account_id_) + sizeof(timestamp_));
+  ::memset(&account_id_, 0, reinterpret_cast<char*>(&registered_team_id_) -
+    reinterpret_cast<char*>(&account_id_) + sizeof(registered_team_id_));
 }
 
 CMsgGCPlayerInfo_PlayerInfo::~CMsgGCPlayerInfo_PlayerInfo() {
@@ -3288,9 +3292,9 @@ void CMsgGCPlayerInfo_PlayerInfo::Clear() {
     ::memset(&account_id_, 0, reinterpret_cast<char*>(&team_id_) -
       reinterpret_cast<char*>(&account_id_) + sizeof(team_id_));
   }
-  if (_has_bits_[8 / 32] & 3840u) {
-    ::memset(&is_locked_, 0, reinterpret_cast<char*>(&timestamp_) -
-      reinterpret_cast<char*>(&is_locked_) + sizeof(timestamp_));
+  if (_has_bits_[8 / 32] & 7936u) {
+    ::memset(&is_locked_, 0, reinterpret_cast<char*>(&registered_team_id_) -
+      reinterpret_cast<char*>(&is_locked_) + sizeof(registered_team_id_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -3484,6 +3488,20 @@ bool CMsgGCPlayerInfo_PlayerInfo::MergePartialFromCodedStream(
         break;
       }
 
+      // optional uint32 registered_team_id = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(104u)) {
+          set_has_registered_team_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &registered_team_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -3598,6 +3616,11 @@ void CMsgGCPlayerInfo_PlayerInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(12, this->timestamp(), output);
   }
 
+  // optional uint32 registered_team_id = 13;
+  if (cached_has_bits & 0x00001000u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(13, this->registered_team_id(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -3702,6 +3725,11 @@ void CMsgGCPlayerInfo_PlayerInfo::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(12, this->timestamp(), target);
   }
 
+  // optional uint32 registered_team_id = 13;
+  if (cached_has_bits & 0x00001000u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(13, this->registered_team_id(), target);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -3777,7 +3805,7 @@ size_t CMsgGCPlayerInfo_PlayerInfo::ByteSizeLong() const {
     }
 
   }
-  if (_has_bits_[8 / 32] & 3840u) {
+  if (_has_bits_[8 / 32] & 7936u) {
     // optional bool is_locked = 9;
     if (has_is_locked()) {
       total_size += 1 + 1;
@@ -3800,6 +3828,13 @@ size_t CMsgGCPlayerInfo_PlayerInfo::ByteSizeLong() const {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
           this->timestamp());
+    }
+
+    // optional uint32 registered_team_id = 13;
+    if (has_registered_team_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->registered_team_id());
     }
 
   }
@@ -3865,7 +3900,7 @@ void CMsgGCPlayerInfo_PlayerInfo::MergeFrom(const CMsgGCPlayerInfo_PlayerInfo& f
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 3840u) {
+  if (cached_has_bits & 7936u) {
     if (cached_has_bits & 0x00000100u) {
       is_locked_ = from.is_locked_;
     }
@@ -3877,6 +3912,9 @@ void CMsgGCPlayerInfo_PlayerInfo::MergeFrom(const CMsgGCPlayerInfo_PlayerInfo& f
     }
     if (cached_has_bits & 0x00000800u) {
       timestamp_ = from.timestamp_;
+    }
+    if (cached_has_bits & 0x00001000u) {
+      registered_team_id_ = from.registered_team_id_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -3917,6 +3955,7 @@ void CMsgGCPlayerInfo_PlayerInfo::InternalSwap(CMsgGCPlayerInfo_PlayerInfo* othe
   std::swap(is_pro_, other->is_pro_);
   std::swap(locked_until_, other->locked_until_);
   std::swap(timestamp_, other->timestamp_);
+  std::swap(registered_team_id_, other->registered_team_id_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -4411,6 +4450,30 @@ void CMsgGCPlayerInfo_PlayerInfo::set_timestamp(::google::protobuf::uint32 value
   set_has_timestamp();
   timestamp_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgGCPlayerInfo.PlayerInfo.timestamp)
+}
+
+// optional uint32 registered_team_id = 13;
+bool CMsgGCPlayerInfo_PlayerInfo::has_registered_team_id() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+void CMsgGCPlayerInfo_PlayerInfo::set_has_registered_team_id() {
+  _has_bits_[0] |= 0x00001000u;
+}
+void CMsgGCPlayerInfo_PlayerInfo::clear_has_registered_team_id() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+void CMsgGCPlayerInfo_PlayerInfo::clear_registered_team_id() {
+  registered_team_id_ = 0u;
+  clear_has_registered_team_id();
+}
+::google::protobuf::uint32 CMsgGCPlayerInfo_PlayerInfo::registered_team_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCPlayerInfo.PlayerInfo.registered_team_id)
+  return registered_team_id_;
+}
+void CMsgGCPlayerInfo_PlayerInfo::set_registered_team_id(::google::protobuf::uint32 value) {
+  set_has_registered_team_id();
+  registered_team_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCPlayerInfo.PlayerInfo.registered_team_id)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

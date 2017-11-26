@@ -33,6 +33,14 @@ class CPartnerApps_FinishUploadLegacyDRM_ResponseDefaultTypeInternal : public ::
 } _CPartnerApps_FinishUploadLegacyDRM_Response_default_instance_;
 class CPartnerApps_FinishUpload_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPartnerApps_FinishUpload_Response> {
 } _CPartnerApps_FinishUpload_Response_default_instance_;
+class CPartnerApps_FinishUploadDepot_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPartnerApps_FinishUploadDepot_Request> {
+} _CPartnerApps_FinishUploadDepot_Request_default_instance_;
+class CPartnerApps_FinishUploadDepot_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPartnerApps_FinishUploadDepot_Response> {
+} _CPartnerApps_FinishUploadDepot_Response_default_instance_;
+class CPartnerApps_GetDepotBuildResult_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPartnerApps_GetDepotBuildResult_Request> {
+} _CPartnerApps_GetDepotBuildResult_Request_default_instance_;
+class CPartnerApps_GetDepotBuildResult_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPartnerApps_GetDepotBuildResult_Response> {
+} _CPartnerApps_GetDepotBuildResult_Response_default_instance_;
 class CPartnerApps_FindDRMUploads_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPartnerApps_FindDRMUploads_Request> {
 } _CPartnerApps_FindDRMUploads_Request_default_instance_;
 class CPartnerApps_ExistingDRMUploadDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPartnerApps_ExistingDRMUpload> {
@@ -49,7 +57,7 @@ namespace protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto {
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[12];
+::google::protobuf::Metadata file_level_metadata[16];
 const ::google::protobuf::ServiceDescriptor* file_level_service_descriptors[1];
 
 }  // namespace
@@ -65,6 +73,10 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
     TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
@@ -145,6 +157,44 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FinishUploadDepot_Request, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FinishUploadDepot_Request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FinishUploadDepot_Request, upload_token_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FinishUploadDepot_Request, routing_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FinishUploadDepot_Request, app_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FinishUploadDepot_Request, depot_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FinishUploadDepot_Request, build_flags_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FinishUploadDepot_Response, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FinishUploadDepot_Response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_GetDepotBuildResult_Request, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_GetDepotBuildResult_Request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_GetDepotBuildResult_Request, upload_token_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_GetDepotBuildResult_Request, routing_id_),
+  0,
+  1,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_GetDepotBuildResult_Response, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_GetDepotBuildResult_Response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_GetDepotBuildResult_Response, manifest_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_GetDepotBuildResult_Response, error_msg_),
+  1,
+  0,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FindDRMUploads_Request, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPartnerApps_FindDRMUploads_Request, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -208,11 +258,15 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 38, 48, sizeof(CPartnerApps_FinishUploadLegacyDRM_Request)},
   { 53, 59, sizeof(CPartnerApps_FinishUploadLegacyDRM_Response)},
   { 60, 65, sizeof(CPartnerApps_FinishUpload_Response)},
-  { 65, 71, sizeof(CPartnerApps_FindDRMUploads_Request)},
-  { 72, 85, sizeof(CPartnerApps_ExistingDRMUpload)},
-  { 93, 99, sizeof(CPartnerApps_FindDRMUploads_Response)},
-  { 100, 107, sizeof(CPartnerApps_Download_Request)},
-  { 109, 116, sizeof(CPartnerApps_Download_Response)},
+  { 65, 75, sizeof(CPartnerApps_FinishUploadDepot_Request)},
+  { 80, 85, sizeof(CPartnerApps_FinishUploadDepot_Response)},
+  { 85, 92, sizeof(CPartnerApps_GetDepotBuildResult_Request)},
+  { 94, 101, sizeof(CPartnerApps_GetDepotBuildResult_Response)},
+  { 103, 109, sizeof(CPartnerApps_FindDRMUploads_Request)},
+  { 110, 123, sizeof(CPartnerApps_ExistingDRMUpload)},
+  { 131, 137, sizeof(CPartnerApps_FindDRMUploads_Response)},
+  { 138, 145, sizeof(CPartnerApps_Download_Request)},
+  { 147, 154, sizeof(CPartnerApps_Download_Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -223,6 +277,10 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPartnerApps_FinishUploadLegacyDRM_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPartnerApps_FinishUploadLegacyDRM_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPartnerApps_FinishUpload_Response_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPartnerApps_FinishUploadDepot_Request_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPartnerApps_FinishUploadDepot_Response_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPartnerApps_GetDepotBuildResult_Request_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPartnerApps_GetDepotBuildResult_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPartnerApps_FindDRMUploads_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPartnerApps_ExistingDRMUpload_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPartnerApps_FindDRMUploads_Response_default_instance_),
@@ -248,7 +306,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 12);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 16);
 }
 
 }  // namespace
@@ -268,16 +326,24 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[5].reflection;
   _CPartnerApps_FinishUpload_Response_default_instance_.Shutdown();
   delete file_level_metadata[6].reflection;
-  _CPartnerApps_FindDRMUploads_Request_default_instance_.Shutdown();
+  _CPartnerApps_FinishUploadDepot_Request_default_instance_.Shutdown();
   delete file_level_metadata[7].reflection;
-  _CPartnerApps_ExistingDRMUpload_default_instance_.Shutdown();
+  _CPartnerApps_FinishUploadDepot_Response_default_instance_.Shutdown();
   delete file_level_metadata[8].reflection;
-  _CPartnerApps_FindDRMUploads_Response_default_instance_.Shutdown();
+  _CPartnerApps_GetDepotBuildResult_Request_default_instance_.Shutdown();
   delete file_level_metadata[9].reflection;
-  _CPartnerApps_Download_Request_default_instance_.Shutdown();
+  _CPartnerApps_GetDepotBuildResult_Response_default_instance_.Shutdown();
   delete file_level_metadata[10].reflection;
-  _CPartnerApps_Download_Response_default_instance_.Shutdown();
+  _CPartnerApps_FindDRMUploads_Request_default_instance_.Shutdown();
   delete file_level_metadata[11].reflection;
+  _CPartnerApps_ExistingDRMUpload_default_instance_.Shutdown();
+  delete file_level_metadata[12].reflection;
+  _CPartnerApps_FindDRMUploads_Response_default_instance_.Shutdown();
+  delete file_level_metadata[13].reflection;
+  _CPartnerApps_Download_Request_default_instance_.Shutdown();
+  delete file_level_metadata[14].reflection;
+  _CPartnerApps_Download_Response_default_instance_.Shutdown();
+  delete file_level_metadata[15].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -292,6 +358,10 @@ void TableStruct::InitDefaultsImpl() {
   _CPartnerApps_FinishUploadLegacyDRM_Request_default_instance_.DefaultConstruct();
   _CPartnerApps_FinishUploadLegacyDRM_Response_default_instance_.DefaultConstruct();
   _CPartnerApps_FinishUpload_Response_default_instance_.DefaultConstruct();
+  _CPartnerApps_FinishUploadDepot_Request_default_instance_.DefaultConstruct();
+  _CPartnerApps_FinishUploadDepot_Response_default_instance_.DefaultConstruct();
+  _CPartnerApps_GetDepotBuildResult_Request_default_instance_.DefaultConstruct();
+  _CPartnerApps_GetDepotBuildResult_Response_default_instance_.DefaultConstruct();
   _CPartnerApps_FindDRMUploads_Request_default_instance_.DefaultConstruct();
   _CPartnerApps_ExistingDRMUpload_default_instance_.DefaultConstruct();
   _CPartnerApps_FindDRMUploads_Response_default_instance_.DefaultConstruct();
@@ -323,60 +393,83 @@ void AddDescriptorsImpl() {
       "\n\005flags\030\004 \001(\r\022\021\n\ttool_name\030\005 \001(\t\">\n+CPar"
       "tnerApps_FinishUploadLegacyDRM_Response\022"
       "\017\n\007file_id\030\001 \001(\t\"$\n\"CPartnerApps_FinishU"
-      "pload_Response\"5\n#CPartnerApps_FindDRMUp"
-      "loads_Request\022\016\n\006app_id\030\001 \001(\005\"\264\001\n\036CPartn"
-      "erApps_ExistingDRMUpload\022\017\n\007file_id\030\001 \001("
-      "\t\022\016\n\006app_id\030\002 \001(\r\022\020\n\010actor_id\030\003 \001(\005\022\025\n\rs"
-      "upplied_name\030\005 \001(\t\022\r\n\005flags\030\006 \001(\r\022\020\n\010mod"
-      "_type\030\007 \001(\t\022\021\n\ttimestamp\030\010 \001(\007\022\024\n\014orig_f"
-      "ile_id\030\t \001(\t\"d\n$CPartnerApps_FindDRMUplo"
-      "ads_Response\022<\n\007uploads\030\001 \003(\0132+.proto.st"
-      "eam.CPartnerApps_ExistingDRMUpload\"@\n\035CP"
-      "artnerApps_Download_Request\022\017\n\007file_id\030\001"
-      " \001(\t\022\016\n\006app_id\030\002 \001(\005\"F\n\036CPartnerApps_Dow"
-      "nload_Response\022\024\n\014download_url\030\001 \001(\t\022\016\n\006"
-      "app_id\030\002 \001(\0052\354\013\n\013PartnerApps\022\311\001\n\030Request"
-      "KVSignUploadToken\0224.proto.steam.CPartner"
-      "Apps_RequestUploadToken_Request\0325.proto."
-      "steam.CPartnerApps_RequestUploadToken_Re"
-      "sponse\"@\202\265\030<Request upload token for ins"
-      "tallscript file upload / signing\022\306\001\n\025Req"
-      "uestDRMUploadToken\0224.proto.steam.CPartne"
-      "rApps_RequestUploadToken_Request\0325.proto"
-      ".steam.CPartnerApps_RequestUploadToken_R"
-      "esponse\"@\202\265\030<Request upload token for ex"
-      "ecutable file upload / processing\022\315\001\n\025Re"
-      "questCEGUploadToken\0224.proto.steam.CPartn"
-      "erApps_RequestUploadToken_Request\0325.prot"
-      "o.steam.CPartnerApps_RequestUploadToken_"
-      "Response\"G\202\265\030CRequest upload token for c"
-      "ustom executable file upload / processin"
-      "g\022\303\001\n\022FinishUploadKVSign\022..proto.steam.C"
-      "PartnerApps_FinishUpload_Request\0325.proto"
-      ".steam.CPartnerApps_FinishUploadKVSign_R"
-      "esponse\"F\202\265\030BCommit method to sign an in"
-      "stallscript after an upload is complete\022"
-      "\274\001\n\025FinishUploadDRMUpload\0227.proto.steam."
-      "CPartnerApps_FinishUploadLegacyDRM_Reque"
-      "st\0328.proto.steam.CPartnerApps_FinishUplo"
-      "adLegacyDRM_Response\"0\202\265\030,Commit method "
-      "for executable file processing\022\261\001\n\025Finis"
-      "hUploadCEGUpload\022..proto.steam.CPartnerA"
-      "pps_FinishUpload_Request\032/.proto.steam.C"
-      "PartnerApps_FinishUpload_Response\"7\202\265\0303C"
-      "ommit method for custom executable file "
-      "processing\022\245\001\n\016FindDRMUploads\0220.proto.st"
-      "eam.CPartnerApps_FindDRMUploads_Request\032"
-      "1.proto.steam.CPartnerApps_FindDRMUpload"
-      "s_Response\".\202\265\030*Finds N most recent prio"
-      "r uploads by appid\022c\n\010Download\022*.proto.s"
-      "team.CPartnerApps_Download_Request\032+.pro"
-      "to.steam.CPartnerApps_Download_Response\032"
-      "2\202\265\030.Service methods for app management "
-      "by partnersB\003\200\001\001"
+      "pload_Response\"\211\001\n&CPartnerApps_FinishUp"
+      "loadDepot_Request\022\024\n\014upload_token\030\001 \001(\004\022"
+      "\022\n\nrouting_id\030\002 \001(\004\022\016\n\006app_id\030\003 \001(\r\022\020\n\010d"
+      "epot_id\030\004 \001(\r\022\023\n\013build_flags\030\005 \001(\r\")\n\'CP"
+      "artnerApps_FinishUploadDepot_Response\"T\n"
+      "(CPartnerApps_GetDepotBuildResult_Reques"
+      "t\022\024\n\014upload_token\030\001 \001(\004\022\022\n\nrouting_id\030\002 "
+      "\001(\004\"S\n)CPartnerApps_GetDepotBuildResult_"
+      "Response\022\023\n\013manifest_id\030\001 \001(\004\022\021\n\terror_m"
+      "sg\030\002 \001(\t\"5\n#CPartnerApps_FindDRMUploads_"
+      "Request\022\016\n\006app_id\030\001 \001(\005\"\264\001\n\036CPartnerApps"
+      "_ExistingDRMUpload\022\017\n\007file_id\030\001 \001(\t\022\016\n\006a"
+      "pp_id\030\002 \001(\r\022\020\n\010actor_id\030\003 \001(\005\022\025\n\rsupplie"
+      "d_name\030\005 \001(\t\022\r\n\005flags\030\006 \001(\r\022\020\n\010mod_type\030"
+      "\007 \001(\t\022\021\n\ttimestamp\030\010 \001(\007\022\024\n\014orig_file_id"
+      "\030\t \001(\t\"d\n$CPartnerApps_FindDRMUploads_Re"
+      "sponse\022<\n\007uploads\030\001 \003(\0132+.proto.steam.CP"
+      "artnerApps_ExistingDRMUpload\"@\n\035CPartner"
+      "Apps_Download_Request\022\017\n\007file_id\030\001 \001(\t\022\016"
+      "\n\006app_id\030\002 \001(\005\"F\n\036CPartnerApps_Download_"
+      "Response\022\024\n\014download_url\030\001 \001(\t\022\016\n\006app_id"
+      "\030\002 \001(\0052\251\020\n\013PartnerApps\022\311\001\n\030RequestKVSign"
+      "UploadToken\0224.proto.steam.CPartnerApps_R"
+      "equestUploadToken_Request\0325.proto.steam."
+      "CPartnerApps_RequestUploadToken_Response"
+      "\"@\202\265\030<Request upload token for installsc"
+      "ript file upload / signing\022\306\001\n\025RequestDR"
+      "MUploadToken\0224.proto.steam.CPartnerApps_"
+      "RequestUploadToken_Request\0325.proto.steam"
+      ".CPartnerApps_RequestUploadToken_Respons"
+      "e\"@\202\265\030<Request upload token for executab"
+      "le file upload / processing\022\315\001\n\025RequestC"
+      "EGUploadToken\0224.proto.steam.CPartnerApps"
+      "_RequestUploadToken_Request\0325.proto.stea"
+      "m.CPartnerApps_RequestUploadToken_Respon"
+      "se\"G\202\265\030CRequest upload token for custom "
+      "executable file upload / processing\022\273\001\n\027"
+      "RequestDepotUploadToken\0224.proto.steam.CP"
+      "artnerApps_RequestUploadToken_Request\0325."
+      "proto.steam.CPartnerApps_RequestUploadTo"
+      "ken_Response\"3\202\265\030/Request upload token f"
+      "or steampipe depot upload\022\303\001\n\022FinishUplo"
+      "adKVSign\022..proto.steam.CPartnerApps_Fini"
+      "shUpload_Request\0325.proto.steam.CPartnerA"
+      "pps_FinishUploadKVSign_Response\"F\202\265\030BCom"
+      "mit method to sign an installscript afte"
+      "r an upload is complete\022\274\001\n\025FinishUpload"
+      "DRMUpload\0227.proto.steam.CPartnerApps_Fin"
+      "ishUploadLegacyDRM_Request\0328.proto.steam"
+      ".CPartnerApps_FinishUploadLegacyDRM_Resp"
+      "onse\"0\202\265\030,Commit method for executable f"
+      "ile processing\022\261\001\n\025FinishUploadCEGUpload"
+      "\022..proto.steam.CPartnerApps_FinishUpload"
+      "_Request\032/.proto.steam.CPartnerApps_Fini"
+      "shUpload_Response\"7\202\265\0303Commit method for"
+      " custom executable file processing\022\275\001\n\027F"
+      "inishUploadDepotUpload\0223.proto.steam.CPa"
+      "rtnerApps_FinishUploadDepot_Request\0324.pr"
+      "oto.steam.CPartnerApps_FinishUploadDepot"
+      "_Response\"7\202\265\0303Commit method for custom "
+      "executable file processing\022\274\001\n\023GetDepotB"
+      "uildResult\0225.proto.steam.CPartnerApps_Ge"
+      "tDepotBuildResult_Request\0326.proto.steam."
+      "CPartnerApps_GetDepotBuildResult_Respons"
+      "e\"6\202\265\0302Get build status for previously u"
+      "ploaded depot ZIP\022\245\001\n\016FindDRMUploads\0220.p"
+      "roto.steam.CPartnerApps_FindDRMUploads_R"
+      "equest\0321.proto.steam.CPartnerApps_FindDR"
+      "MUploads_Response\".\202\265\030*Finds N most rece"
+      "nt prior uploads by appid\022c\n\010Download\022*."
+      "proto.steam.CPartnerApps_Download_Reques"
+      "t\032+.proto.steam.CPartnerApps_Download_Re"
+      "sponse\0322\202\265\030.Service methods for app mana"
+      "gement by partnersB\003\200\001\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2696);
+      descriptor, 3623);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "steammessages_partnerapps.steamclient.proto", &protobuf_RegisterTypes);
   ::proto::steam::protobuf_steammessages_5funified_5fbase_2esteamclient_2eproto::AddDescriptors();
@@ -3076,6 +3169,1449 @@ void CPartnerApps_FinishUpload_Response::InternalSwap(CPartnerApps_FinishUpload_
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPartnerApps_FinishUploadDepot_Request::kUploadTokenFieldNumber;
+const int CPartnerApps_FinishUploadDepot_Request::kRoutingIdFieldNumber;
+const int CPartnerApps_FinishUploadDepot_Request::kAppIdFieldNumber;
+const int CPartnerApps_FinishUploadDepot_Request::kDepotIdFieldNumber;
+const int CPartnerApps_FinishUploadDepot_Request::kBuildFlagsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPartnerApps_FinishUploadDepot_Request::CPartnerApps_FinishUploadDepot_Request()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+}
+CPartnerApps_FinishUploadDepot_Request::CPartnerApps_FinishUploadDepot_Request(const CPartnerApps_FinishUploadDepot_Request& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&upload_token_, &from.upload_token_,
+    reinterpret_cast<char*>(&build_flags_) -
+    reinterpret_cast<char*>(&upload_token_) + sizeof(build_flags_));
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+}
+
+void CPartnerApps_FinishUploadDepot_Request::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&upload_token_, 0, reinterpret_cast<char*>(&build_flags_) -
+    reinterpret_cast<char*>(&upload_token_) + sizeof(build_flags_));
+}
+
+CPartnerApps_FinishUploadDepot_Request::~CPartnerApps_FinishUploadDepot_Request() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  SharedDtor();
+}
+
+void CPartnerApps_FinishUploadDepot_Request::SharedDtor() {
+}
+
+void CPartnerApps_FinishUploadDepot_Request::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPartnerApps_FinishUploadDepot_Request::descriptor() {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPartnerApps_FinishUploadDepot_Request& CPartnerApps_FinishUploadDepot_Request::default_instance() {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPartnerApps_FinishUploadDepot_Request* CPartnerApps_FinishUploadDepot_Request::New(::google::protobuf::Arena* arena) const {
+  CPartnerApps_FinishUploadDepot_Request* n = new CPartnerApps_FinishUploadDepot_Request;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPartnerApps_FinishUploadDepot_Request::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  if (_has_bits_[0 / 32] & 31u) {
+    ::memset(&upload_token_, 0, reinterpret_cast<char*>(&build_flags_) -
+      reinterpret_cast<char*>(&upload_token_) + sizeof(build_flags_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPartnerApps_FinishUploadDepot_Request::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint64 upload_token = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_upload_token();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &upload_token_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint64 routing_id = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
+          set_has_routing_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &routing_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 app_id = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
+          set_has_app_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &app_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 depot_id = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
+          set_has_depot_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &depot_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 build_flags = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
+          set_has_build_flags();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &build_flags_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  return false;
+#undef DO_
+}
+
+void CPartnerApps_FinishUploadDepot_Request::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 upload_token = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->upload_token(), output);
+  }
+
+  // optional uint64 routing_id = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->routing_id(), output);
+  }
+
+  // optional uint32 app_id = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->app_id(), output);
+  }
+
+  // optional uint32 depot_id = 4;
+  if (cached_has_bits & 0x00000008u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->depot_id(), output);
+  }
+
+  // optional uint32 build_flags = 5;
+  if (cached_has_bits & 0x00000010u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->build_flags(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+}
+
+::google::protobuf::uint8* CPartnerApps_FinishUploadDepot_Request::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 upload_token = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->upload_token(), target);
+  }
+
+  // optional uint64 routing_id = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->routing_id(), target);
+  }
+
+  // optional uint32 app_id = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->app_id(), target);
+  }
+
+  // optional uint32 depot_id = 4;
+  if (cached_has_bits & 0x00000008u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->depot_id(), target);
+  }
+
+  // optional uint32 build_flags = 5;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->build_flags(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  return target;
+}
+
+size_t CPartnerApps_FinishUploadDepot_Request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 31u) {
+    // optional uint64 upload_token = 1;
+    if (has_upload_token()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->upload_token());
+    }
+
+    // optional uint64 routing_id = 2;
+    if (has_routing_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->routing_id());
+    }
+
+    // optional uint32 app_id = 3;
+    if (has_app_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->app_id());
+    }
+
+    // optional uint32 depot_id = 4;
+    if (has_depot_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->depot_id());
+    }
+
+    // optional uint32 build_flags = 5;
+    if (has_build_flags()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->build_flags());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPartnerApps_FinishUploadDepot_Request::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPartnerApps_FinishUploadDepot_Request* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPartnerApps_FinishUploadDepot_Request>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+    MergeFrom(*source);
+  }
+}
+
+void CPartnerApps_FinishUploadDepot_Request::MergeFrom(const CPartnerApps_FinishUploadDepot_Request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 31u) {
+    if (cached_has_bits & 0x00000001u) {
+      upload_token_ = from.upload_token_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      routing_id_ = from.routing_id_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      app_id_ = from.app_id_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      depot_id_ = from.depot_id_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      build_flags_ = from.build_flags_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CPartnerApps_FinishUploadDepot_Request::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPartnerApps_FinishUploadDepot_Request::CopyFrom(const CPartnerApps_FinishUploadDepot_Request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPartnerApps_FinishUploadDepot_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPartnerApps_FinishUploadDepot_Request::IsInitialized() const {
+  return true;
+}
+
+void CPartnerApps_FinishUploadDepot_Request::Swap(CPartnerApps_FinishUploadDepot_Request* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPartnerApps_FinishUploadDepot_Request::InternalSwap(CPartnerApps_FinishUploadDepot_Request* other) {
+  std::swap(upload_token_, other->upload_token_);
+  std::swap(routing_id_, other->routing_id_);
+  std::swap(app_id_, other->app_id_);
+  std::swap(depot_id_, other->depot_id_);
+  std::swap(build_flags_, other->build_flags_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPartnerApps_FinishUploadDepot_Request::GetMetadata() const {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPartnerApps_FinishUploadDepot_Request
+
+// optional uint64 upload_token = 1;
+bool CPartnerApps_FinishUploadDepot_Request::has_upload_token() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CPartnerApps_FinishUploadDepot_Request::set_has_upload_token() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CPartnerApps_FinishUploadDepot_Request::clear_has_upload_token() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CPartnerApps_FinishUploadDepot_Request::clear_upload_token() {
+  upload_token_ = GOOGLE_ULONGLONG(0);
+  clear_has_upload_token();
+}
+::google::protobuf::uint64 CPartnerApps_FinishUploadDepot_Request::upload_token() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_FinishUploadDepot_Request.upload_token)
+  return upload_token_;
+}
+void CPartnerApps_FinishUploadDepot_Request::set_upload_token(::google::protobuf::uint64 value) {
+  set_has_upload_token();
+  upload_token_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_FinishUploadDepot_Request.upload_token)
+}
+
+// optional uint64 routing_id = 2;
+bool CPartnerApps_FinishUploadDepot_Request::has_routing_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CPartnerApps_FinishUploadDepot_Request::set_has_routing_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CPartnerApps_FinishUploadDepot_Request::clear_has_routing_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CPartnerApps_FinishUploadDepot_Request::clear_routing_id() {
+  routing_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_routing_id();
+}
+::google::protobuf::uint64 CPartnerApps_FinishUploadDepot_Request::routing_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_FinishUploadDepot_Request.routing_id)
+  return routing_id_;
+}
+void CPartnerApps_FinishUploadDepot_Request::set_routing_id(::google::protobuf::uint64 value) {
+  set_has_routing_id();
+  routing_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_FinishUploadDepot_Request.routing_id)
+}
+
+// optional uint32 app_id = 3;
+bool CPartnerApps_FinishUploadDepot_Request::has_app_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CPartnerApps_FinishUploadDepot_Request::set_has_app_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CPartnerApps_FinishUploadDepot_Request::clear_has_app_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CPartnerApps_FinishUploadDepot_Request::clear_app_id() {
+  app_id_ = 0u;
+  clear_has_app_id();
+}
+::google::protobuf::uint32 CPartnerApps_FinishUploadDepot_Request::app_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_FinishUploadDepot_Request.app_id)
+  return app_id_;
+}
+void CPartnerApps_FinishUploadDepot_Request::set_app_id(::google::protobuf::uint32 value) {
+  set_has_app_id();
+  app_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_FinishUploadDepot_Request.app_id)
+}
+
+// optional uint32 depot_id = 4;
+bool CPartnerApps_FinishUploadDepot_Request::has_depot_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void CPartnerApps_FinishUploadDepot_Request::set_has_depot_id() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void CPartnerApps_FinishUploadDepot_Request::clear_has_depot_id() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void CPartnerApps_FinishUploadDepot_Request::clear_depot_id() {
+  depot_id_ = 0u;
+  clear_has_depot_id();
+}
+::google::protobuf::uint32 CPartnerApps_FinishUploadDepot_Request::depot_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_FinishUploadDepot_Request.depot_id)
+  return depot_id_;
+}
+void CPartnerApps_FinishUploadDepot_Request::set_depot_id(::google::protobuf::uint32 value) {
+  set_has_depot_id();
+  depot_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_FinishUploadDepot_Request.depot_id)
+}
+
+// optional uint32 build_flags = 5;
+bool CPartnerApps_FinishUploadDepot_Request::has_build_flags() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void CPartnerApps_FinishUploadDepot_Request::set_has_build_flags() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void CPartnerApps_FinishUploadDepot_Request::clear_has_build_flags() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void CPartnerApps_FinishUploadDepot_Request::clear_build_flags() {
+  build_flags_ = 0u;
+  clear_has_build_flags();
+}
+::google::protobuf::uint32 CPartnerApps_FinishUploadDepot_Request::build_flags() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_FinishUploadDepot_Request.build_flags)
+  return build_flags_;
+}
+void CPartnerApps_FinishUploadDepot_Request::set_build_flags(::google::protobuf::uint32 value) {
+  set_has_build_flags();
+  build_flags_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_FinishUploadDepot_Request.build_flags)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPartnerApps_FinishUploadDepot_Response::CPartnerApps_FinishUploadDepot_Response()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+}
+CPartnerApps_FinishUploadDepot_Response::CPartnerApps_FinishUploadDepot_Response(const CPartnerApps_FinishUploadDepot_Response& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+}
+
+void CPartnerApps_FinishUploadDepot_Response::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+CPartnerApps_FinishUploadDepot_Response::~CPartnerApps_FinishUploadDepot_Response() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  SharedDtor();
+}
+
+void CPartnerApps_FinishUploadDepot_Response::SharedDtor() {
+}
+
+void CPartnerApps_FinishUploadDepot_Response::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPartnerApps_FinishUploadDepot_Response::descriptor() {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPartnerApps_FinishUploadDepot_Response& CPartnerApps_FinishUploadDepot_Response::default_instance() {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPartnerApps_FinishUploadDepot_Response* CPartnerApps_FinishUploadDepot_Response::New(::google::protobuf::Arena* arena) const {
+  CPartnerApps_FinishUploadDepot_Response* n = new CPartnerApps_FinishUploadDepot_Response;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPartnerApps_FinishUploadDepot_Response::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPartnerApps_FinishUploadDepot_Response::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0 ||
+        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, mutable_unknown_fields()));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  return false;
+#undef DO_
+}
+
+void CPartnerApps_FinishUploadDepot_Response::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+}
+
+::google::protobuf::uint8* CPartnerApps_FinishUploadDepot_Response::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  return target;
+}
+
+size_t CPartnerApps_FinishUploadDepot_Response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPartnerApps_FinishUploadDepot_Response::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPartnerApps_FinishUploadDepot_Response* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPartnerApps_FinishUploadDepot_Response>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+    MergeFrom(*source);
+  }
+}
+
+void CPartnerApps_FinishUploadDepot_Response::MergeFrom(const CPartnerApps_FinishUploadDepot_Response& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void CPartnerApps_FinishUploadDepot_Response::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPartnerApps_FinishUploadDepot_Response::CopyFrom(const CPartnerApps_FinishUploadDepot_Response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPartnerApps_FinishUploadDepot_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPartnerApps_FinishUploadDepot_Response::IsInitialized() const {
+  return true;
+}
+
+void CPartnerApps_FinishUploadDepot_Response::Swap(CPartnerApps_FinishUploadDepot_Response* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPartnerApps_FinishUploadDepot_Response::InternalSwap(CPartnerApps_FinishUploadDepot_Response* other) {
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPartnerApps_FinishUploadDepot_Response::GetMetadata() const {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPartnerApps_FinishUploadDepot_Response
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPartnerApps_GetDepotBuildResult_Request::kUploadTokenFieldNumber;
+const int CPartnerApps_GetDepotBuildResult_Request::kRoutingIdFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPartnerApps_GetDepotBuildResult_Request::CPartnerApps_GetDepotBuildResult_Request()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+}
+CPartnerApps_GetDepotBuildResult_Request::CPartnerApps_GetDepotBuildResult_Request(const CPartnerApps_GetDepotBuildResult_Request& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&upload_token_, &from.upload_token_,
+    reinterpret_cast<char*>(&routing_id_) -
+    reinterpret_cast<char*>(&upload_token_) + sizeof(routing_id_));
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+}
+
+void CPartnerApps_GetDepotBuildResult_Request::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&upload_token_, 0, reinterpret_cast<char*>(&routing_id_) -
+    reinterpret_cast<char*>(&upload_token_) + sizeof(routing_id_));
+}
+
+CPartnerApps_GetDepotBuildResult_Request::~CPartnerApps_GetDepotBuildResult_Request() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  SharedDtor();
+}
+
+void CPartnerApps_GetDepotBuildResult_Request::SharedDtor() {
+}
+
+void CPartnerApps_GetDepotBuildResult_Request::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPartnerApps_GetDepotBuildResult_Request::descriptor() {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPartnerApps_GetDepotBuildResult_Request& CPartnerApps_GetDepotBuildResult_Request::default_instance() {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPartnerApps_GetDepotBuildResult_Request* CPartnerApps_GetDepotBuildResult_Request::New(::google::protobuf::Arena* arena) const {
+  CPartnerApps_GetDepotBuildResult_Request* n = new CPartnerApps_GetDepotBuildResult_Request;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPartnerApps_GetDepotBuildResult_Request::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  if (_has_bits_[0 / 32] & 3u) {
+    ::memset(&upload_token_, 0, reinterpret_cast<char*>(&routing_id_) -
+      reinterpret_cast<char*>(&upload_token_) + sizeof(routing_id_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPartnerApps_GetDepotBuildResult_Request::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint64 upload_token = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_upload_token();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &upload_token_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint64 routing_id = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
+          set_has_routing_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &routing_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  return false;
+#undef DO_
+}
+
+void CPartnerApps_GetDepotBuildResult_Request::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 upload_token = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->upload_token(), output);
+  }
+
+  // optional uint64 routing_id = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->routing_id(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+}
+
+::google::protobuf::uint8* CPartnerApps_GetDepotBuildResult_Request::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 upload_token = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->upload_token(), target);
+  }
+
+  // optional uint64 routing_id = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->routing_id(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  return target;
+}
+
+size_t CPartnerApps_GetDepotBuildResult_Request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 3u) {
+    // optional uint64 upload_token = 1;
+    if (has_upload_token()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->upload_token());
+    }
+
+    // optional uint64 routing_id = 2;
+    if (has_routing_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->routing_id());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPartnerApps_GetDepotBuildResult_Request::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPartnerApps_GetDepotBuildResult_Request* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPartnerApps_GetDepotBuildResult_Request>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+    MergeFrom(*source);
+  }
+}
+
+void CPartnerApps_GetDepotBuildResult_Request::MergeFrom(const CPartnerApps_GetDepotBuildResult_Request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      upload_token_ = from.upload_token_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      routing_id_ = from.routing_id_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CPartnerApps_GetDepotBuildResult_Request::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPartnerApps_GetDepotBuildResult_Request::CopyFrom(const CPartnerApps_GetDepotBuildResult_Request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPartnerApps_GetDepotBuildResult_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPartnerApps_GetDepotBuildResult_Request::IsInitialized() const {
+  return true;
+}
+
+void CPartnerApps_GetDepotBuildResult_Request::Swap(CPartnerApps_GetDepotBuildResult_Request* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPartnerApps_GetDepotBuildResult_Request::InternalSwap(CPartnerApps_GetDepotBuildResult_Request* other) {
+  std::swap(upload_token_, other->upload_token_);
+  std::swap(routing_id_, other->routing_id_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPartnerApps_GetDepotBuildResult_Request::GetMetadata() const {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPartnerApps_GetDepotBuildResult_Request
+
+// optional uint64 upload_token = 1;
+bool CPartnerApps_GetDepotBuildResult_Request::has_upload_token() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CPartnerApps_GetDepotBuildResult_Request::set_has_upload_token() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CPartnerApps_GetDepotBuildResult_Request::clear_has_upload_token() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CPartnerApps_GetDepotBuildResult_Request::clear_upload_token() {
+  upload_token_ = GOOGLE_ULONGLONG(0);
+  clear_has_upload_token();
+}
+::google::protobuf::uint64 CPartnerApps_GetDepotBuildResult_Request::upload_token() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_GetDepotBuildResult_Request.upload_token)
+  return upload_token_;
+}
+void CPartnerApps_GetDepotBuildResult_Request::set_upload_token(::google::protobuf::uint64 value) {
+  set_has_upload_token();
+  upload_token_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_GetDepotBuildResult_Request.upload_token)
+}
+
+// optional uint64 routing_id = 2;
+bool CPartnerApps_GetDepotBuildResult_Request::has_routing_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CPartnerApps_GetDepotBuildResult_Request::set_has_routing_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CPartnerApps_GetDepotBuildResult_Request::clear_has_routing_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CPartnerApps_GetDepotBuildResult_Request::clear_routing_id() {
+  routing_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_routing_id();
+}
+::google::protobuf::uint64 CPartnerApps_GetDepotBuildResult_Request::routing_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_GetDepotBuildResult_Request.routing_id)
+  return routing_id_;
+}
+void CPartnerApps_GetDepotBuildResult_Request::set_routing_id(::google::protobuf::uint64 value) {
+  set_has_routing_id();
+  routing_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_GetDepotBuildResult_Request.routing_id)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPartnerApps_GetDepotBuildResult_Response::kManifestIdFieldNumber;
+const int CPartnerApps_GetDepotBuildResult_Response::kErrorMsgFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPartnerApps_GetDepotBuildResult_Response::CPartnerApps_GetDepotBuildResult_Response()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+}
+CPartnerApps_GetDepotBuildResult_Response::CPartnerApps_GetDepotBuildResult_Response(const CPartnerApps_GetDepotBuildResult_Response& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  error_msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_error_msg()) {
+    error_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.error_msg_);
+  }
+  manifest_id_ = from.manifest_id_;
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+}
+
+void CPartnerApps_GetDepotBuildResult_Response::SharedCtor() {
+  _cached_size_ = 0;
+  error_msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  manifest_id_ = GOOGLE_ULONGLONG(0);
+}
+
+CPartnerApps_GetDepotBuildResult_Response::~CPartnerApps_GetDepotBuildResult_Response() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  SharedDtor();
+}
+
+void CPartnerApps_GetDepotBuildResult_Response::SharedDtor() {
+  error_msg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void CPartnerApps_GetDepotBuildResult_Response::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPartnerApps_GetDepotBuildResult_Response::descriptor() {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPartnerApps_GetDepotBuildResult_Response& CPartnerApps_GetDepotBuildResult_Response::default_instance() {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPartnerApps_GetDepotBuildResult_Response* CPartnerApps_GetDepotBuildResult_Response::New(::google::protobuf::Arena* arena) const {
+  CPartnerApps_GetDepotBuildResult_Response* n = new CPartnerApps_GetDepotBuildResult_Response;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPartnerApps_GetDepotBuildResult_Response::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  if (has_error_msg()) {
+    GOOGLE_DCHECK(!error_msg_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+    (*error_msg_.UnsafeRawStringPointer())->clear();
+  }
+  manifest_id_ = GOOGLE_ULONGLONG(0);
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPartnerApps_GetDepotBuildResult_Response::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint64 manifest_id = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_manifest_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &manifest_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional string error_msg = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_error_msg()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->error_msg().data(), this->error_msg().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  return false;
+#undef DO_
+}
+
+void CPartnerApps_GetDepotBuildResult_Response::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 manifest_id = 1;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->manifest_id(), output);
+  }
+
+  // optional string error_msg = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->error_msg().data(), this->error_msg().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->error_msg(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+}
+
+::google::protobuf::uint8* CPartnerApps_GetDepotBuildResult_Response::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint64 manifest_id = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->manifest_id(), target);
+  }
+
+  // optional string error_msg = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->error_msg().data(), this->error_msg().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->error_msg(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  return target;
+}
+
+size_t CPartnerApps_GetDepotBuildResult_Response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 3u) {
+    // optional string error_msg = 2;
+    if (has_error_msg()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->error_msg());
+    }
+
+    // optional uint64 manifest_id = 1;
+    if (has_manifest_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->manifest_id());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPartnerApps_GetDepotBuildResult_Response::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPartnerApps_GetDepotBuildResult_Response* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPartnerApps_GetDepotBuildResult_Response>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+    MergeFrom(*source);
+  }
+}
+
+void CPartnerApps_GetDepotBuildResult_Response::MergeFrom(const CPartnerApps_GetDepotBuildResult_Response& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_error_msg();
+      error_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.error_msg_);
+    }
+    if (cached_has_bits & 0x00000002u) {
+      manifest_id_ = from.manifest_id_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CPartnerApps_GetDepotBuildResult_Response::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPartnerApps_GetDepotBuildResult_Response::CopyFrom(const CPartnerApps_GetDepotBuildResult_Response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPartnerApps_GetDepotBuildResult_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPartnerApps_GetDepotBuildResult_Response::IsInitialized() const {
+  return true;
+}
+
+void CPartnerApps_GetDepotBuildResult_Response::Swap(CPartnerApps_GetDepotBuildResult_Response* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPartnerApps_GetDepotBuildResult_Response::InternalSwap(CPartnerApps_GetDepotBuildResult_Response* other) {
+  error_msg_.Swap(&other->error_msg_);
+  std::swap(manifest_id_, other->manifest_id_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPartnerApps_GetDepotBuildResult_Response::GetMetadata() const {
+  protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fpartnerapps_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPartnerApps_GetDepotBuildResult_Response
+
+// optional uint64 manifest_id = 1;
+bool CPartnerApps_GetDepotBuildResult_Response::has_manifest_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CPartnerApps_GetDepotBuildResult_Response::set_has_manifest_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CPartnerApps_GetDepotBuildResult_Response::clear_has_manifest_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CPartnerApps_GetDepotBuildResult_Response::clear_manifest_id() {
+  manifest_id_ = GOOGLE_ULONGLONG(0);
+  clear_has_manifest_id();
+}
+::google::protobuf::uint64 CPartnerApps_GetDepotBuildResult_Response::manifest_id() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_GetDepotBuildResult_Response.manifest_id)
+  return manifest_id_;
+}
+void CPartnerApps_GetDepotBuildResult_Response::set_manifest_id(::google::protobuf::uint64 value) {
+  set_has_manifest_id();
+  manifest_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_GetDepotBuildResult_Response.manifest_id)
+}
+
+// optional string error_msg = 2;
+bool CPartnerApps_GetDepotBuildResult_Response::has_error_msg() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CPartnerApps_GetDepotBuildResult_Response::set_has_error_msg() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CPartnerApps_GetDepotBuildResult_Response::clear_has_error_msg() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CPartnerApps_GetDepotBuildResult_Response::clear_error_msg() {
+  error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_error_msg();
+}
+const ::std::string& CPartnerApps_GetDepotBuildResult_Response::error_msg() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+  return error_msg_.GetNoArena();
+}
+void CPartnerApps_GetDepotBuildResult_Response::set_error_msg(const ::std::string& value) {
+  set_has_error_msg();
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+}
+#if LANG_CXX11
+void CPartnerApps_GetDepotBuildResult_Response::set_error_msg(::std::string&& value) {
+  set_has_error_msg();
+  error_msg_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+}
+#endif
+void CPartnerApps_GetDepotBuildResult_Response::set_error_msg(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_error_msg();
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+}
+void CPartnerApps_GetDepotBuildResult_Response::set_error_msg(const char* value, size_t size) {
+  set_has_error_msg();
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+}
+::std::string* CPartnerApps_GetDepotBuildResult_Response::mutable_error_msg() {
+  set_has_error_msg();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+  return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* CPartnerApps_GetDepotBuildResult_Response::release_error_msg() {
+  // @@protoc_insertion_point(field_release:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+  clear_has_error_msg();
+  return error_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void CPartnerApps_GetDepotBuildResult_Response::set_allocated_error_msg(::std::string* error_msg) {
+  if (error_msg != NULL) {
+    set_has_error_msg();
+  } else {
+    clear_has_error_msg();
+  }
+  error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CPartnerApps_GetDepotBuildResult_Response.error_msg)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CPartnerApps_FindDRMUploads_Request::kAppIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -5383,6 +6919,14 @@ void PartnerApps::RequestCEGUploadToken(::google::protobuf::RpcController* contr
   done->Run();
 }
 
+void PartnerApps::RequestDepotUploadToken(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CPartnerApps_RequestUploadToken_Request*,
+                         ::proto::steam::CPartnerApps_RequestUploadToken_Response*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method RequestDepotUploadToken() not implemented.");
+  done->Run();
+}
+
 void PartnerApps::FinishUploadKVSign(::google::protobuf::RpcController* controller,
                          const ::proto::steam::CPartnerApps_FinishUpload_Request*,
                          ::proto::steam::CPartnerApps_FinishUploadKVSign_Response*,
@@ -5404,6 +6948,22 @@ void PartnerApps::FinishUploadCEGUpload(::google::protobuf::RpcController* contr
                          ::proto::steam::CPartnerApps_FinishUpload_Response*,
                          ::google::protobuf::Closure* done) {
   controller->SetFailed("Method FinishUploadCEGUpload() not implemented.");
+  done->Run();
+}
+
+void PartnerApps::FinishUploadDepotUpload(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CPartnerApps_FinishUploadDepot_Request*,
+                         ::proto::steam::CPartnerApps_FinishUploadDepot_Response*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method FinishUploadDepotUpload() not implemented.");
+  done->Run();
+}
+
+void PartnerApps::GetDepotBuildResult(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CPartnerApps_GetDepotBuildResult_Request*,
+                         ::proto::steam::CPartnerApps_GetDepotBuildResult_Response*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method GetDepotBuildResult() not implemented.");
   done->Run();
 }
 
@@ -5449,30 +7009,48 @@ void PartnerApps::CallMethod(const ::google::protobuf::MethodDescriptor* method,
              done);
       break;
     case 3:
+      RequestDepotUploadToken(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CPartnerApps_RequestUploadToken_Request*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::CPartnerApps_RequestUploadToken_Response*>(response),
+             done);
+      break;
+    case 4:
       FinishUploadKVSign(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPartnerApps_FinishUpload_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPartnerApps_FinishUploadKVSign_Response*>(response),
              done);
       break;
-    case 4:
+    case 5:
       FinishUploadDRMUpload(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPartnerApps_FinishUploadLegacyDRM_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPartnerApps_FinishUploadLegacyDRM_Response*>(response),
              done);
       break;
-    case 5:
+    case 6:
       FinishUploadCEGUpload(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPartnerApps_FinishUpload_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPartnerApps_FinishUpload_Response*>(response),
              done);
       break;
-    case 6:
+    case 7:
+      FinishUploadDepotUpload(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CPartnerApps_FinishUploadDepot_Request*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::CPartnerApps_FinishUploadDepot_Response*>(response),
+             done);
+      break;
+    case 8:
+      GetDepotBuildResult(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CPartnerApps_GetDepotBuildResult_Request*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::CPartnerApps_GetDepotBuildResult_Response*>(response),
+             done);
+      break;
+    case 9:
       FindDRMUploads(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPartnerApps_FindDRMUploads_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPartnerApps_FindDRMUploads_Response*>(response),
              done);
       break;
-    case 7:
+    case 10:
       Download(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPartnerApps_Download_Request*>(request),
              ::google::protobuf::down_cast< ::proto::steam::CPartnerApps_Download_Response*>(response),
@@ -5495,14 +7073,20 @@ const ::google::protobuf::Message& PartnerApps::GetRequestPrototype(
     case 2:
       return ::proto::steam::CPartnerApps_RequestUploadToken_Request::default_instance();
     case 3:
-      return ::proto::steam::CPartnerApps_FinishUpload_Request::default_instance();
+      return ::proto::steam::CPartnerApps_RequestUploadToken_Request::default_instance();
     case 4:
-      return ::proto::steam::CPartnerApps_FinishUploadLegacyDRM_Request::default_instance();
-    case 5:
       return ::proto::steam::CPartnerApps_FinishUpload_Request::default_instance();
+    case 5:
+      return ::proto::steam::CPartnerApps_FinishUploadLegacyDRM_Request::default_instance();
     case 6:
-      return ::proto::steam::CPartnerApps_FindDRMUploads_Request::default_instance();
+      return ::proto::steam::CPartnerApps_FinishUpload_Request::default_instance();
     case 7:
+      return ::proto::steam::CPartnerApps_FinishUploadDepot_Request::default_instance();
+    case 8:
+      return ::proto::steam::CPartnerApps_GetDepotBuildResult_Request::default_instance();
+    case 9:
+      return ::proto::steam::CPartnerApps_FindDRMUploads_Request::default_instance();
+    case 10:
       return ::proto::steam::CPartnerApps_Download_Request::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
@@ -5522,14 +7106,20 @@ const ::google::protobuf::Message& PartnerApps::GetResponsePrototype(
     case 2:
       return ::proto::steam::CPartnerApps_RequestUploadToken_Response::default_instance();
     case 3:
-      return ::proto::steam::CPartnerApps_FinishUploadKVSign_Response::default_instance();
+      return ::proto::steam::CPartnerApps_RequestUploadToken_Response::default_instance();
     case 4:
-      return ::proto::steam::CPartnerApps_FinishUploadLegacyDRM_Response::default_instance();
+      return ::proto::steam::CPartnerApps_FinishUploadKVSign_Response::default_instance();
     case 5:
-      return ::proto::steam::CPartnerApps_FinishUpload_Response::default_instance();
+      return ::proto::steam::CPartnerApps_FinishUploadLegacyDRM_Response::default_instance();
     case 6:
-      return ::proto::steam::CPartnerApps_FindDRMUploads_Response::default_instance();
+      return ::proto::steam::CPartnerApps_FinishUpload_Response::default_instance();
     case 7:
+      return ::proto::steam::CPartnerApps_FinishUploadDepot_Response::default_instance();
+    case 8:
+      return ::proto::steam::CPartnerApps_GetDepotBuildResult_Response::default_instance();
+    case 9:
+      return ::proto::steam::CPartnerApps_FindDRMUploads_Response::default_instance();
+    case 10:
       return ::proto::steam::CPartnerApps_Download_Response::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
@@ -5570,39 +7160,60 @@ void PartnerApps_Stub::RequestCEGUploadToken(::google::protobuf::RpcController* 
   channel_->CallMethod(descriptor()->method(2),
                        controller, request, response, done);
 }
+void PartnerApps_Stub::RequestDepotUploadToken(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CPartnerApps_RequestUploadToken_Request* request,
+                              ::proto::steam::CPartnerApps_RequestUploadToken_Response* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(3),
+                       controller, request, response, done);
+}
 void PartnerApps_Stub::FinishUploadKVSign(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPartnerApps_FinishUpload_Request* request,
                               ::proto::steam::CPartnerApps_FinishUploadKVSign_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(3),
+  channel_->CallMethod(descriptor()->method(4),
                        controller, request, response, done);
 }
 void PartnerApps_Stub::FinishUploadDRMUpload(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPartnerApps_FinishUploadLegacyDRM_Request* request,
                               ::proto::steam::CPartnerApps_FinishUploadLegacyDRM_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(4),
+  channel_->CallMethod(descriptor()->method(5),
                        controller, request, response, done);
 }
 void PartnerApps_Stub::FinishUploadCEGUpload(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPartnerApps_FinishUpload_Request* request,
                               ::proto::steam::CPartnerApps_FinishUpload_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(5),
+  channel_->CallMethod(descriptor()->method(6),
+                       controller, request, response, done);
+}
+void PartnerApps_Stub::FinishUploadDepotUpload(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CPartnerApps_FinishUploadDepot_Request* request,
+                              ::proto::steam::CPartnerApps_FinishUploadDepot_Response* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(7),
+                       controller, request, response, done);
+}
+void PartnerApps_Stub::GetDepotBuildResult(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CPartnerApps_GetDepotBuildResult_Request* request,
+                              ::proto::steam::CPartnerApps_GetDepotBuildResult_Response* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(8),
                        controller, request, response, done);
 }
 void PartnerApps_Stub::FindDRMUploads(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPartnerApps_FindDRMUploads_Request* request,
                               ::proto::steam::CPartnerApps_FindDRMUploads_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(6),
+  channel_->CallMethod(descriptor()->method(9),
                        controller, request, response, done);
 }
 void PartnerApps_Stub::Download(::google::protobuf::RpcController* controller,
                               const ::proto::steam::CPartnerApps_Download_Request* request,
                               ::proto::steam::CPartnerApps_Download_Response* response,
                               ::google::protobuf::Closure* done) {
-  channel_->CallMethod(descriptor()->method(7),
+  channel_->CallMethod(descriptor()->method(10),
                        controller, request, response, done);
 }
 

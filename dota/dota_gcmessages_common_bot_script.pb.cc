@@ -354,6 +354,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, level_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, location_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, is_alive_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, player_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, bounding_radius_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, facing_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, ground_height_),
@@ -413,7 +414,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, respawn_time_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, buyback_cost_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, buyback_cooldown_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, spell_amplifiction_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, spell_amplification_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, armor_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, magic_resist_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, evasion_),
@@ -423,6 +424,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, unreliable_gold_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, last_hits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, denies_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, net_worth_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, strength_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, agility_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, intelligence_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, remaining_lifespan_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, flying_courier_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState_Unit, shrine_cooldown_),
@@ -433,7 +438,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   4,
   5,
   1,
-  31,
+  32,
   6,
   7,
   8,
@@ -459,14 +464,14 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   28,
   29,
   30,
-  35,
+  31,
   36,
   37,
-  32,
   38,
   33,
-  34,
   39,
+  34,
+  35,
   40,
   41,
   42,
@@ -474,6 +479,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   44,
   45,
   46,
+  47,
   48,
   49,
   50,
@@ -489,7 +495,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   56,
   57,
   58,
-  73,
+  77,
   59,
   60,
   61,
@@ -504,9 +510,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   70,
   71,
   72,
+  73,
   74,
-  47,
   75,
+  76,
+  78,
+  80,
+  79,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgBotWorldState, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -570,8 +580,8 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 210, 219, sizeof(CMsgBotWorldState_EventCourierKilled)},
   { 223, 230, sizeof(CMsgBotWorldState_EventRoshanKilled)},
   { 232, 242, sizeof(CMsgBotWorldState_EventTree)},
-  { 247, 332, sizeof(CMsgBotWorldState_Unit)},
-  { 412, 437, sizeof(CMsgBotWorldState)},
+  { 247, 337, sizeof(CMsgBotWorldState_Unit)},
+  { 422, 447, sizeof(CMsgBotWorldState)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -705,9 +715,9 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\'dota_gcmessages_common_bot_script.prot"
-      "o\022\nproto.dota\"\234,\n\021CMsgBotWorldState\022\017\n\007t"
-      "eam_id\030\001 \001(\r\022\021\n\tgame_time\030\002 \001(\r\022\021\n\tdota_"
-      "time\030\003 \001(\r\022\022\n\ngame_state\030\004 \001(\r\022\027\n\017hero_p"
+      "o\022\nproto.dota\"\376,\n\021CMsgBotWorldState\022\017\n\007t"
+      "eam_id\030\001 \001(\r\022\021\n\tgame_time\030\002 \001(\002\022\021\n\tdota_"
+      "time\030\003 \001(\002\022\022\n\ngame_state\030\004 \001(\r\022\027\n\017hero_p"
       "ick_state\030\005 \001(\r\022\023\n\013time_of_day\030\006 \001(\002\022\026\n\016"
       "glyph_cooldown\030\007 \001(\002\022\034\n\024glyph_cooldown_e"
       "nemy\030\010 \001(\r\0225\n\007players\030\n \003(\0132$.proto.dota"
@@ -730,9 +740,9 @@ void AddDescriptorsImpl() {
       "oshan_killed_events\030\027 \003(\0132/.proto.dota.C"
       "MsgBotWorldState.EventRoshanKilled\022<\n\013tr"
       "ee_events\030\030 \003(\0132\'.proto.dota.CMsgBotWorl"
-      "dState.EventTree\032)\n\006Vector\022\t\n\001x\030\001 \002(\005\022\t\n"
-      "\001y\030\002 \002(\005\022\t\n\001z\030\003 \002(\005\032\204\001\n\006Player\022\021\n\tplayer"
-      "_id\030\001 \001(\r\022\017\n\007hero_id\030\002 \001(\r\022\020\n\010is_alive\030\003"
+      "dState.EventTree\032)\n\006Vector\022\t\n\001x\030\001 \002(\002\022\t\n"
+      "\001y\030\002 \002(\002\022\t\n\001z\030\003 \002(\002\032\204\001\n\006Player\022\021\n\tplayer"
+      "_id\030\001 \001(\005\022\017\n\007hero_id\030\002 \001(\r\022\020\n\010is_alive\030\003"
       " \001(\010\022\024\n\014respawn_time\030\004 \001(\002\022\r\n\005kills\030\005 \001("
       "\r\022\016\n\006deaths\030\006 \001(\r\022\017\n\007assists\030\007 \001(\r\032\373\002\n\007A"
       "bility\022\016\n\006handle\030\001 \001(\r\022\022\n\nability_id\030\002 \001"
@@ -750,7 +760,7 @@ void AddDescriptorsImpl() {
       "type\030\001 \001(\005\0226\n\010location\030\002 \001(\0132$.proto.dot"
       "a.CMsgBotWorldState.Vector\022\016\n\006status\030\003 \001"
       "(\r\022\027\n\017time_since_seen\030\004 \001(\002\032p\n\014TeleportI"
-      "nfo\022\021\n\tplayer_id\030\001 \001(\r\0226\n\010location\030\002 \001(\013"
+      "nfo\022\021\n\tplayer_id\030\001 \001(\005\0226\n\010location\030\002 \001(\013"
       "2$.proto.dota.CMsgBotWorldState.Vector\022\025"
       "\n\rtime_remaning\030\003 \001(\002\032\226\001\n\010Modifier\022\014\n\004na"
       "me\030\001 \001(\t\022\023\n\013stack_count\030\002 \001(\r\022\026\n\016ability"
@@ -774,83 +784,85 @@ void AddDescriptorsImpl() {
       "\022\030\n\020caster_player_id\030\003 \001(\005\022\026\n\016ability_ha"
       "ndle\030\004 \001(\r\022\022\n\nability_id\030\005 \001(\r\022\016\n\006radius"
       "\030\006 \001(\r\032\234\001\n\014EventAbility\022\022\n\nability_id\030\001 "
-      "\001(\r\022\021\n\tplayer_id\030\002 \001(\r\022\023\n\013unit_handle\030\003 "
+      "\001(\r\022\021\n\tplayer_id\030\002 \001(\005\022\023\n\013unit_handle\030\003 "
       "\001(\r\0226\n\010location\030\004 \001(\0132$.proto.dota.CMsgB"
       "otWorldState.Vector\022\030\n\020is_channel_start\030"
       "\005 \001(\010\032\241\001\n\013EventDamage\022\016\n\006damage\030\001 \001(\r\022\030\n"
-      "\020victim_player_id\030\002 \001(\r\022\032\n\022victim_unit_h"
-      "andle\030\003 \001(\r\022\032\n\022attacker_player_id\030\004 \001(\r\022"
+      "\020victim_player_id\030\002 \001(\005\022\032\n\022victim_unit_h"
+      "andle\030\003 \001(\r\022\032\n\022attacker_player_id\030\004 \001(\005\022"
       "\034\n\024attacker_unit_handle\030\005 \001(\r\022\022\n\nability"
       "_id\030\006 \001(\r\032x\n\022EventCourierKilled\022\017\n\007team_"
       "id\030\001 \001(\r\022\033\n\023courier_unit_handle\030\002 \001(\r\022\030\n"
-      "\020killer_player_id\030\003 \001(\r\022\032\n\022killer_unit_h"
+      "\020killer_player_id\030\003 \001(\005\022\032\n\022killer_unit_h"
       "andle\030\004 \001(\r\032I\n\021EventRoshanKilled\022\030\n\020kill"
-      "er_player_id\030\001 \001(\r\022\032\n\022killer_unit_handle"
+      "er_player_id\030\001 \001(\005\022\032\n\022killer_unit_handle"
       "\030\002 \001(\r\032\213\001\n\tEventTree\022\017\n\007tree_id\030\001 \001(\r\022\021\n"
       "\tdestroyed\030\002 \001(\010\022\021\n\trespawned\030\003 \001(\010\0226\n\010l"
       "ocation\030\004 \001(\0132$.proto.dota.CMsgBotWorldS"
-      "tate.Vector\022\017\n\007delayed\030\005 \001(\010\032\267\020\n\004Unit\022\016\n"
+      "tate.Vector\022\017\n\007delayed\030\005 \001(\010\032\231\021\n\004Unit\022\016\n"
       "\006handle\030\001 \001(\r\022B\n\tunit_type\030\002 \001(\0162&.proto"
       ".dota.CMsgBotWorldState.UnitType:\007INVALI"
       "D\022\014\n\004name\030\003 \001(\t\022\017\n\007team_id\030\004 \001(\r\022\r\n\005leve"
       "l\030\005 \001(\r\0226\n\010location\030\006 \001(\0132$.proto.dota.C"
       "MsgBotWorldState.Vector\022\020\n\010is_alive\030\007 \001("
-      "\010\022\027\n\017bounding_radius\030\n \001(\r\022\016\n\006facing\030\013 \001"
-      "(\r\022\025\n\rground_height\030\014 \001(\r\022\034\n\024vision_rang"
-      "e_daytime\030\017 \001(\r\022\036\n\026vision_range_nighttim"
-      "e\030\020 \001(\r\022\016\n\006health\030\024 \001(\r\022\022\n\nhealth_max\030\025 "
-      "\001(\r\022\024\n\014health_regen\030\026 \001(\002\022\014\n\004mana\030\031 \001(\r\022"
-      "\020\n\010mana_max\030\032 \001(\r\022\022\n\nmana_regen\030\033 \001(\002\022\033\n"
-      "\023base_movement_speed\030\036 \001(\r\022\036\n\026current_mo"
-      "vement_speed\030\037 \001(\r\022\025\n\ranim_activity\030# \001("
-      "\005\022\022\n\nanim_cycle\030$ \001(\002\022\023\n\013base_damage\030( \001"
-      "(\r\022\034\n\024base_damage_variance\030) \001(\r\022\024\n\014bonu"
-      "s_damage\030* \001(\r\022\025\n\rattack_damage\030+ \001(\r\022\024\n"
-      "\014attack_range\030, \001(\r\022\024\n\014attack_speed\030- \001("
-      "\r\022\031\n\021attack_anim_point\030. \001(\002\022 \n\030attack_a"
-      "cquisition_range\030/ \001(\r\022\037\n\027attack_project"
-      "ile_speed\0300 \001(\r\022\034\n\024attack_target_handle\030"
-      "1 \001(\r\022\021\n\tbounty_xp\030< \001(\r\022\027\n\017bounty_gold_"
-      "min\030= \001(\r\022\027\n\017bounty_gold_max\030> \001(\r\022\025\n\ris"
-      "_channeling\030A \001(\010\022\035\n\025active_ability_hand"
-      "le\030B \001(\r\022\030\n\020is_attack_immune\030F \001(\010\022\020\n\010is"
-      "_blind\030G \001(\010\022\031\n\021is_block_disabled\030H \001(\010\022"
-      "\023\n\013is_disarmed\030I \001(\010\022\024\n\014is_dominated\030J \001"
-      "(\010\022\031\n\021is_evade_disabled\030K \001(\010\022\020\n\010is_hexe"
-      "d\030L \001(\010\022\024\n\014is_invisible\030M \001(\010\022\027\n\017is_invu"
-      "lnerable\030N \001(\010\022\027\n\017is_magic_immune\030O \001(\010\022"
-      "\020\n\010is_muted\030P \001(\010\022\025\n\ris_nightmared\030R \001(\010"
-      "\022\021\n\tis_rooted\030S \001(\010\022\023\n\013is_silenced\030T \001(\010"
-      "\022\035\n\025is_specially_deniable\030U \001(\010\022\022\n\nis_st"
-      "unned\030V \001(\010\022\031\n\021is_unable_to_miss\030W \001(\010\022\023"
-      "\n\013has_scepter\030X \001(\010\0228\n\tabilities\030Z \003(\0132%"
-      ".proto.dota.CMsgBotWorldState.Ability\0224\n"
-      "\005items\030[ \003(\0132%.proto.dota.CMsgBotWorldSt"
-      "ate.Ability\0229\n\tmodifiers\030\\ \003(\0132&.proto.d"
-      "ota.CMsgBotWorldState.Modifier\022W\n\035incomi"
-      "ng_tracking_projectiles\030] \003(\01320.proto.do"
-      "ta.CMsgBotWorldState.TrackingProjectile\022"
-      "\023\n\013action_type\030d \001(\r\022\035\n\025ability_target_h"
-      "andle\030e \001(\r\022\031\n\021primary_attribute\030n \001(\r\022\023"
-      "\n\013is_illusion\030o \001(\010\022\024\n\014respawn_time\030p \001("
-      "\r\022\024\n\014buyback_cost\030q \001(\r\022\030\n\020buyback_coold"
-      "own\030r \001(\r\022\032\n\022spell_amplifiction\030s \001(\002\022\r\n"
-      "\005armor\030t \001(\r\022\024\n\014magic_resist\030u \001(\r\022\017\n\007ev"
-      "asion\030v \001(\002\022\032\n\022xp_needed_to_level\030x \001(\r\022"
-      "\026\n\016ability_points\030y \001(\r\022\025\n\rreliable_gold"
-      "\030z \001(\r\022\027\n\017unreliable_gold\030{ \001(\r\022\021\n\tlast_"
-      "hits\030| \001(\r\022\016\n\006denies\030} \001(\r\022\033\n\022remaining_"
-      "lifespan\030\202\001 \001(\002\022\027\n\016flying_courier\030\214\001 \001(\010"
-      "\022\030\n\017shrine_cooldown\030\226\001 \001(\002\022\032\n\021is_shrine_"
-      "healing\030\227\001 \001(\010\"\263\001\n\010UnitType\022\013\n\007INVALID\020\000"
-      "\022\010\n\004HERO\020\001\022\016\n\nCREEP_HERO\020\002\022\016\n\nLANE_CREEP"
-      "\020\003\022\020\n\014JUNGLE_CREEP\020\004\022\n\n\006ROSHAN\020\005\022\t\n\005TOWE"
-      "R\020\006\022\014\n\010BARRACKS\020\007\022\n\n\006SHRINE\020\010\022\010\n\004FORT\020\t\022"
-      "\014\n\010BUILDING\020\n\022\013\n\007COURIER\020\013\022\010\n\004WARD\020\014B\005H\001"
-      "\200\001\000"
+      "\010\022\021\n\tplayer_id\030\010 \001(\005\022\027\n\017bounding_radius\030"
+      "\n \001(\r\022\016\n\006facing\030\013 \001(\r\022\025\n\rground_height\030\014"
+      " \001(\r\022\034\n\024vision_range_daytime\030\017 \001(\r\022\036\n\026vi"
+      "sion_range_nighttime\030\020 \001(\r\022\016\n\006health\030\024 \001"
+      "(\r\022\022\n\nhealth_max\030\025 \001(\r\022\024\n\014health_regen\030\026"
+      " \001(\002\022\014\n\004mana\030\031 \001(\r\022\020\n\010mana_max\030\032 \001(\r\022\022\n\n"
+      "mana_regen\030\033 \001(\002\022\033\n\023base_movement_speed\030"
+      "\036 \001(\r\022\036\n\026current_movement_speed\030\037 \001(\r\022\025\n"
+      "\ranim_activity\030# \001(\005\022\022\n\nanim_cycle\030$ \001(\002"
+      "\022\023\n\013base_damage\030( \001(\r\022\034\n\024base_damage_var"
+      "iance\030) \001(\r\022\024\n\014bonus_damage\030* \001(\r\022\025\n\ratt"
+      "ack_damage\030+ \001(\r\022\024\n\014attack_range\030, \001(\r\022\024"
+      "\n\014attack_speed\030- \001(\002\022\031\n\021attack_anim_poin"
+      "t\030. \001(\002\022 \n\030attack_acquisition_range\030/ \001("
+      "\r\022\037\n\027attack_projectile_speed\0300 \001(\r\022\034\n\024at"
+      "tack_target_handle\0301 \001(\r\022\021\n\tbounty_xp\030< "
+      "\001(\r\022\027\n\017bounty_gold_min\030= \001(\r\022\027\n\017bounty_g"
+      "old_max\030> \001(\r\022\025\n\ris_channeling\030A \001(\010\022\035\n\025"
+      "active_ability_handle\030B \001(\r\022\030\n\020is_attack"
+      "_immune\030F \001(\010\022\020\n\010is_blind\030G \001(\010\022\031\n\021is_bl"
+      "ock_disabled\030H \001(\010\022\023\n\013is_disarmed\030I \001(\010\022"
+      "\024\n\014is_dominated\030J \001(\010\022\031\n\021is_evade_disabl"
+      "ed\030K \001(\010\022\020\n\010is_hexed\030L \001(\010\022\024\n\014is_invisib"
+      "le\030M \001(\010\022\027\n\017is_invulnerable\030N \001(\010\022\027\n\017is_"
+      "magic_immune\030O \001(\010\022\020\n\010is_muted\030P \001(\010\022\025\n\r"
+      "is_nightmared\030R \001(\010\022\021\n\tis_rooted\030S \001(\010\022\023"
+      "\n\013is_silenced\030T \001(\010\022\035\n\025is_specially_deni"
+      "able\030U \001(\010\022\022\n\nis_stunned\030V \001(\010\022\031\n\021is_una"
+      "ble_to_miss\030W \001(\010\022\023\n\013has_scepter\030X \001(\010\0228"
+      "\n\tabilities\030Z \003(\0132%.proto.dota.CMsgBotWo"
+      "rldState.Ability\0224\n\005items\030[ \003(\0132%.proto."
+      "dota.CMsgBotWorldState.Ability\0229\n\tmodifi"
+      "ers\030\\ \003(\0132&.proto.dota.CMsgBotWorldState"
+      ".Modifier\022W\n\035incoming_tracking_projectil"
+      "es\030] \003(\01320.proto.dota.CMsgBotWorldState."
+      "TrackingProjectile\022\023\n\013action_type\030d \001(\r\022"
+      "\035\n\025ability_target_handle\030e \001(\r\022\031\n\021primar"
+      "y_attribute\030n \001(\r\022\023\n\013is_illusion\030o \001(\010\022\024"
+      "\n\014respawn_time\030p \001(\r\022\024\n\014buyback_cost\030q \001"
+      "(\r\022\030\n\020buyback_cooldown\030r \001(\002\022\033\n\023spell_am"
+      "plification\030s \001(\002\022\r\n\005armor\030t \001(\002\022\024\n\014magi"
+      "c_resist\030u \001(\002\022\017\n\007evasion\030v \001(\002\022\032\n\022xp_ne"
+      "eded_to_level\030x \001(\r\022\026\n\016ability_points\030y "
+      "\001(\r\022\025\n\rreliable_gold\030z \001(\r\022\027\n\017unreliable"
+      "_gold\030{ \001(\r\022\021\n\tlast_hits\030| \001(\r\022\016\n\006denies"
+      "\030} \001(\r\022\021\n\tnet_worth\030~ \001(\r\022\020\n\010strength\030\177 "
+      "\001(\r\022\020\n\007agility\030\200\001 \001(\r\022\025\n\014intelligence\030\201\001"
+      " \001(\r\022\033\n\022remaining_lifespan\030\202\001 \001(\002\022\027\n\016fly"
+      "ing_courier\030\214\001 \001(\010\022\030\n\017shrine_cooldown\030\226\001"
+      " \001(\002\022\032\n\021is_shrine_healing\030\227\001 \001(\010\"\263\001\n\010Uni"
+      "tType\022\013\n\007INVALID\020\000\022\010\n\004HERO\020\001\022\016\n\nCREEP_HE"
+      "RO\020\002\022\016\n\nLANE_CREEP\020\003\022\020\n\014JUNGLE_CREEP\020\004\022\n"
+      "\n\006ROSHAN\020\005\022\t\n\005TOWER\020\006\022\014\n\010BARRACKS\020\007\022\n\n\006S"
+      "HRINE\020\010\022\010\n\004FORT\020\t\022\014\n\010BUILDING\020\n\022\013\n\007COURI"
+      "ER\020\013\022\010\n\004WARD\020\014B\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 5723);
+      descriptor, 5821);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dota_gcmessages_common_bot_script.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -998,13 +1010,13 @@ bool CMsgBotWorldState_Vector::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 x = 1;
+      // required float x = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(13u)) {
           set_has_x();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &x_)));
         } else {
           goto handle_unusual;
@@ -1012,13 +1024,13 @@ bool CMsgBotWorldState_Vector::MergePartialFromCodedStream(
         break;
       }
 
-      // required int32 y = 2;
+      // required float y = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+            static_cast< ::google::protobuf::uint8>(21u)) {
           set_has_y();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &y_)));
         } else {
           goto handle_unusual;
@@ -1026,13 +1038,13 @@ bool CMsgBotWorldState_Vector::MergePartialFromCodedStream(
         break;
       }
 
-      // required int32 z = 3;
+      // required float z = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
+            static_cast< ::google::protobuf::uint8>(29u)) {
           set_has_z();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &z_)));
         } else {
           goto handle_unusual;
@@ -1069,19 +1081,19 @@ void CMsgBotWorldState_Vector::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // required int32 x = 1;
+  // required float x = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->x(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(1, this->x(), output);
   }
 
-  // required int32 y = 2;
+  // required float y = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->y(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->y(), output);
   }
 
-  // required int32 z = 3;
+  // required float z = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->z(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->z(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1098,19 +1110,19 @@ void CMsgBotWorldState_Vector::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // required int32 x = 1;
+  // required float x = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->x(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(1, this->x(), target);
   }
 
-  // required int32 y = 2;
+  // required float y = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->y(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->y(), target);
   }
 
-  // required int32 z = 3;
+  // required float z = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->z(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->z(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1126,24 +1138,18 @@ size_t CMsgBotWorldState_Vector::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (has_x()) {
-    // required int32 x = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->x());
+    // required float x = 1;
+    total_size += 1 + 4;
   }
 
   if (has_y()) {
-    // required int32 y = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->y());
+    // required float y = 2;
+    total_size += 1 + 4;
   }
 
   if (has_z()) {
-    // required int32 z = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->z());
+    // required float z = 3;
+    total_size += 1 + 4;
   }
 
   return total_size;
@@ -1158,20 +1164,14 @@ size_t CMsgBotWorldState_Vector::ByteSizeLong() const {
         unknown_fields());
   }
   if (((_has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required int32 x = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->x());
+    // required float x = 1;
+    total_size += 1 + 4;
 
-    // required int32 y = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->y());
+    // required float y = 2;
+    total_size += 1 + 4;
 
-    // required int32 z = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->z());
+    // required float z = 3;
+    total_size += 1 + 4;
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1260,7 +1260,7 @@ void CMsgBotWorldState_Vector::InternalSwap(CMsgBotWorldState_Vector* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CMsgBotWorldState_Vector
 
-// required int32 x = 1;
+// required float x = 1;
 bool CMsgBotWorldState_Vector::has_x() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -1274,17 +1274,17 @@ void CMsgBotWorldState_Vector::clear_x() {
   x_ = 0;
   clear_has_x();
 }
-::google::protobuf::int32 CMsgBotWorldState_Vector::x() const {
+float CMsgBotWorldState_Vector::x() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Vector.x)
   return x_;
 }
-void CMsgBotWorldState_Vector::set_x(::google::protobuf::int32 value) {
+void CMsgBotWorldState_Vector::set_x(float value) {
   set_has_x();
   x_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Vector.x)
 }
 
-// required int32 y = 2;
+// required float y = 2;
 bool CMsgBotWorldState_Vector::has_y() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -1298,17 +1298,17 @@ void CMsgBotWorldState_Vector::clear_y() {
   y_ = 0;
   clear_has_y();
 }
-::google::protobuf::int32 CMsgBotWorldState_Vector::y() const {
+float CMsgBotWorldState_Vector::y() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Vector.y)
   return y_;
 }
-void CMsgBotWorldState_Vector::set_y(::google::protobuf::int32 value) {
+void CMsgBotWorldState_Vector::set_y(float value) {
   set_has_y();
   y_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Vector.y)
 }
 
-// required int32 z = 3;
+// required float z = 3;
 bool CMsgBotWorldState_Vector::has_z() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -1322,11 +1322,11 @@ void CMsgBotWorldState_Vector::clear_z() {
   z_ = 0;
   clear_has_z();
 }
-::google::protobuf::int32 CMsgBotWorldState_Vector::z() const {
+float CMsgBotWorldState_Vector::z() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Vector.z)
   return z_;
 }
-void CMsgBotWorldState_Vector::set_z(::google::protobuf::int32 value) {
+void CMsgBotWorldState_Vector::set_z(float value) {
   set_has_z();
   z_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Vector.z)
@@ -1423,13 +1423,13 @@ bool CMsgBotWorldState_Player::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional uint32 player_id = 1;
+      // optional int32 player_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u)) {
           set_has_player_id();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &player_id_)));
         } else {
           goto handle_unusual;
@@ -1550,9 +1550,9 @@ void CMsgBotWorldState_Player::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional uint32 player_id = 1;
+  // optional int32 player_id = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->player_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->player_id(), output);
   }
 
   // optional uint32 hero_id = 2;
@@ -1599,9 +1599,9 @@ void CMsgBotWorldState_Player::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional uint32 player_id = 1;
+  // optional int32 player_id = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->player_id(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->player_id(), target);
   }
 
   // optional uint32 hero_id = 2;
@@ -1652,10 +1652,10 @@ size_t CMsgBotWorldState_Player::ByteSizeLong() const {
         unknown_fields());
   }
   if (_has_bits_[0 / 32] & 127u) {
-    // optional uint32 player_id = 1;
+    // optional int32 player_id = 1;
     if (has_player_id()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
           this->player_id());
     }
 
@@ -1797,7 +1797,7 @@ void CMsgBotWorldState_Player::InternalSwap(CMsgBotWorldState_Player* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CMsgBotWorldState_Player
 
-// optional uint32 player_id = 1;
+// optional int32 player_id = 1;
 bool CMsgBotWorldState_Player::has_player_id() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -1808,14 +1808,14 @@ void CMsgBotWorldState_Player::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000001u;
 }
 void CMsgBotWorldState_Player::clear_player_id() {
-  player_id_ = 0u;
+  player_id_ = 0;
   clear_has_player_id();
 }
-::google::protobuf::uint32 CMsgBotWorldState_Player::player_id() const {
+::google::protobuf::int32 CMsgBotWorldState_Player::player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Player.player_id)
   return player_id_;
 }
-void CMsgBotWorldState_Player::set_player_id(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_Player::set_player_id(::google::protobuf::int32 value) {
   set_has_player_id();
   player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Player.player_id)
@@ -4156,13 +4156,13 @@ bool CMsgBotWorldState_TeleportInfo::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional uint32 player_id = 1;
+      // optional int32 player_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u)) {
           set_has_player_id();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &player_id_)));
         } else {
           goto handle_unusual;
@@ -4225,9 +4225,9 @@ void CMsgBotWorldState_TeleportInfo::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional uint32 player_id = 1;
+  // optional int32 player_id = 1;
   if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->player_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->player_id(), output);
   }
 
   // optional .proto.dota.CMsgBotWorldState.Vector location = 2;
@@ -4255,9 +4255,9 @@ void CMsgBotWorldState_TeleportInfo::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional uint32 player_id = 1;
+  // optional int32 player_id = 1;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->player_id(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->player_id(), target);
   }
 
   // optional .proto.dota.CMsgBotWorldState.Vector location = 2;
@@ -4297,10 +4297,10 @@ size_t CMsgBotWorldState_TeleportInfo::ByteSizeLong() const {
           *this->location_);
     }
 
-    // optional uint32 player_id = 1;
+    // optional int32 player_id = 1;
     if (has_player_id()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
           this->player_id());
     }
 
@@ -4396,7 +4396,7 @@ void CMsgBotWorldState_TeleportInfo::InternalSwap(CMsgBotWorldState_TeleportInfo
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CMsgBotWorldState_TeleportInfo
 
-// optional uint32 player_id = 1;
+// optional int32 player_id = 1;
 bool CMsgBotWorldState_TeleportInfo::has_player_id() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -4407,14 +4407,14 @@ void CMsgBotWorldState_TeleportInfo::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000002u;
 }
 void CMsgBotWorldState_TeleportInfo::clear_player_id() {
-  player_id_ = 0u;
+  player_id_ = 0;
   clear_has_player_id();
 }
-::google::protobuf::uint32 CMsgBotWorldState_TeleportInfo::player_id() const {
+::google::protobuf::int32 CMsgBotWorldState_TeleportInfo::player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.TeleportInfo.player_id)
   return player_id_;
 }
-void CMsgBotWorldState_TeleportInfo::set_player_id(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_TeleportInfo::set_player_id(::google::protobuf::int32 value) {
   set_has_player_id();
   player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.TeleportInfo.player_id)
@@ -7371,13 +7371,13 @@ bool CMsgBotWorldState_EventAbility::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 player_id = 2;
+      // optional int32 player_id = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u)) {
           set_has_player_id();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &player_id_)));
         } else {
           goto handle_unusual;
@@ -7459,9 +7459,9 @@ void CMsgBotWorldState_EventAbility::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->ability_id(), output);
   }
 
-  // optional uint32 player_id = 2;
+  // optional int32 player_id = 2;
   if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->player_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->player_id(), output);
   }
 
   // optional uint32 unit_handle = 3;
@@ -7499,9 +7499,9 @@ void CMsgBotWorldState_EventAbility::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->ability_id(), target);
   }
 
-  // optional uint32 player_id = 2;
+  // optional int32 player_id = 2;
   if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->player_id(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->player_id(), target);
   }
 
   // optional uint32 unit_handle = 3;
@@ -7553,10 +7553,10 @@ size_t CMsgBotWorldState_EventAbility::ByteSizeLong() const {
           this->ability_id());
     }
 
-    // optional uint32 player_id = 2;
+    // optional int32 player_id = 2;
     if (has_player_id()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
           this->player_id());
     }
 
@@ -7691,7 +7691,7 @@ void CMsgBotWorldState_EventAbility::set_ability_id(::google::protobuf::uint32 v
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventAbility.ability_id)
 }
 
-// optional uint32 player_id = 2;
+// optional int32 player_id = 2;
 bool CMsgBotWorldState_EventAbility::has_player_id() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -7702,14 +7702,14 @@ void CMsgBotWorldState_EventAbility::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000004u;
 }
 void CMsgBotWorldState_EventAbility::clear_player_id() {
-  player_id_ = 0u;
+  player_id_ = 0;
   clear_has_player_id();
 }
-::google::protobuf::uint32 CMsgBotWorldState_EventAbility::player_id() const {
+::google::protobuf::int32 CMsgBotWorldState_EventAbility::player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.EventAbility.player_id)
   return player_id_;
 }
-void CMsgBotWorldState_EventAbility::set_player_id(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_EventAbility::set_player_id(::google::protobuf::int32 value) {
   set_has_player_id();
   player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventAbility.player_id)
@@ -7912,13 +7912,13 @@ bool CMsgBotWorldState_EventDamage::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 victim_player_id = 2;
+      // optional int32 victim_player_id = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u)) {
           set_has_victim_player_id();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &victim_player_id_)));
         } else {
           goto handle_unusual;
@@ -7940,13 +7940,13 @@ bool CMsgBotWorldState_EventDamage::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 attacker_player_id = 4;
+      // optional int32 attacker_player_id = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(32u)) {
           set_has_attacker_player_id();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &attacker_player_id_)));
         } else {
           goto handle_unusual;
@@ -8016,9 +8016,9 @@ void CMsgBotWorldState_EventDamage::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->damage(), output);
   }
 
-  // optional uint32 victim_player_id = 2;
+  // optional int32 victim_player_id = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->victim_player_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->victim_player_id(), output);
   }
 
   // optional uint32 victim_unit_handle = 3;
@@ -8026,9 +8026,9 @@ void CMsgBotWorldState_EventDamage::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->victim_unit_handle(), output);
   }
 
-  // optional uint32 attacker_player_id = 4;
+  // optional int32 attacker_player_id = 4;
   if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->attacker_player_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->attacker_player_id(), output);
   }
 
   // optional uint32 attacker_unit_handle = 5;
@@ -8060,9 +8060,9 @@ void CMsgBotWorldState_EventDamage::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->damage(), target);
   }
 
-  // optional uint32 victim_player_id = 2;
+  // optional int32 victim_player_id = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->victim_player_id(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->victim_player_id(), target);
   }
 
   // optional uint32 victim_unit_handle = 3;
@@ -8070,9 +8070,9 @@ void CMsgBotWorldState_EventDamage::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->victim_unit_handle(), target);
   }
 
-  // optional uint32 attacker_player_id = 4;
+  // optional int32 attacker_player_id = 4;
   if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->attacker_player_id(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->attacker_player_id(), target);
   }
 
   // optional uint32 attacker_unit_handle = 5;
@@ -8110,10 +8110,10 @@ size_t CMsgBotWorldState_EventDamage::ByteSizeLong() const {
           this->damage());
     }
 
-    // optional uint32 victim_player_id = 2;
+    // optional int32 victim_player_id = 2;
     if (has_victim_player_id()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
           this->victim_player_id());
     }
 
@@ -8124,10 +8124,10 @@ size_t CMsgBotWorldState_EventDamage::ByteSizeLong() const {
           this->victim_unit_handle());
     }
 
-    // optional uint32 attacker_player_id = 4;
+    // optional int32 attacker_player_id = 4;
     if (has_attacker_player_id()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
           this->attacker_player_id());
     }
 
@@ -8265,7 +8265,7 @@ void CMsgBotWorldState_EventDamage::set_damage(::google::protobuf::uint32 value)
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventDamage.damage)
 }
 
-// optional uint32 victim_player_id = 2;
+// optional int32 victim_player_id = 2;
 bool CMsgBotWorldState_EventDamage::has_victim_player_id() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -8276,14 +8276,14 @@ void CMsgBotWorldState_EventDamage::clear_has_victim_player_id() {
   _has_bits_[0] &= ~0x00000002u;
 }
 void CMsgBotWorldState_EventDamage::clear_victim_player_id() {
-  victim_player_id_ = 0u;
+  victim_player_id_ = 0;
   clear_has_victim_player_id();
 }
-::google::protobuf::uint32 CMsgBotWorldState_EventDamage::victim_player_id() const {
+::google::protobuf::int32 CMsgBotWorldState_EventDamage::victim_player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.EventDamage.victim_player_id)
   return victim_player_id_;
 }
-void CMsgBotWorldState_EventDamage::set_victim_player_id(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_EventDamage::set_victim_player_id(::google::protobuf::int32 value) {
   set_has_victim_player_id();
   victim_player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventDamage.victim_player_id)
@@ -8313,7 +8313,7 @@ void CMsgBotWorldState_EventDamage::set_victim_unit_handle(::google::protobuf::u
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventDamage.victim_unit_handle)
 }
 
-// optional uint32 attacker_player_id = 4;
+// optional int32 attacker_player_id = 4;
 bool CMsgBotWorldState_EventDamage::has_attacker_player_id() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
@@ -8324,14 +8324,14 @@ void CMsgBotWorldState_EventDamage::clear_has_attacker_player_id() {
   _has_bits_[0] &= ~0x00000008u;
 }
 void CMsgBotWorldState_EventDamage::clear_attacker_player_id() {
-  attacker_player_id_ = 0u;
+  attacker_player_id_ = 0;
   clear_has_attacker_player_id();
 }
-::google::protobuf::uint32 CMsgBotWorldState_EventDamage::attacker_player_id() const {
+::google::protobuf::int32 CMsgBotWorldState_EventDamage::attacker_player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.EventDamage.attacker_player_id)
   return attacker_player_id_;
 }
-void CMsgBotWorldState_EventDamage::set_attacker_player_id(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_EventDamage::set_attacker_player_id(::google::protobuf::int32 value) {
   set_has_attacker_player_id();
   attacker_player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventDamage.attacker_player_id)
@@ -8501,13 +8501,13 @@ bool CMsgBotWorldState_EventCourierKilled::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 killer_player_id = 3;
+      // optional int32 killer_player_id = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u)) {
           set_has_killer_player_id();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &killer_player_id_)));
         } else {
           goto handle_unusual;
@@ -8568,9 +8568,9 @@ void CMsgBotWorldState_EventCourierKilled::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->courier_unit_handle(), output);
   }
 
-  // optional uint32 killer_player_id = 3;
+  // optional int32 killer_player_id = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->killer_player_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->killer_player_id(), output);
   }
 
   // optional uint32 killer_unit_handle = 4;
@@ -8602,9 +8602,9 @@ void CMsgBotWorldState_EventCourierKilled::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->courier_unit_handle(), target);
   }
 
-  // optional uint32 killer_player_id = 3;
+  // optional int32 killer_player_id = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->killer_player_id(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->killer_player_id(), target);
   }
 
   // optional uint32 killer_unit_handle = 4;
@@ -8644,10 +8644,10 @@ size_t CMsgBotWorldState_EventCourierKilled::ByteSizeLong() const {
           this->courier_unit_handle());
     }
 
-    // optional uint32 killer_player_id = 3;
+    // optional int32 killer_player_id = 3;
     if (has_killer_player_id()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
           this->killer_player_id());
     }
 
@@ -8794,7 +8794,7 @@ void CMsgBotWorldState_EventCourierKilled::set_courier_unit_handle(::google::pro
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventCourierKilled.courier_unit_handle)
 }
 
-// optional uint32 killer_player_id = 3;
+// optional int32 killer_player_id = 3;
 bool CMsgBotWorldState_EventCourierKilled::has_killer_player_id() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -8805,14 +8805,14 @@ void CMsgBotWorldState_EventCourierKilled::clear_has_killer_player_id() {
   _has_bits_[0] &= ~0x00000004u;
 }
 void CMsgBotWorldState_EventCourierKilled::clear_killer_player_id() {
-  killer_player_id_ = 0u;
+  killer_player_id_ = 0;
   clear_has_killer_player_id();
 }
-::google::protobuf::uint32 CMsgBotWorldState_EventCourierKilled::killer_player_id() const {
+::google::protobuf::int32 CMsgBotWorldState_EventCourierKilled::killer_player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.EventCourierKilled.killer_player_id)
   return killer_player_id_;
 }
-void CMsgBotWorldState_EventCourierKilled::set_killer_player_id(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_EventCourierKilled::set_killer_player_id(::google::protobuf::int32 value) {
   set_has_killer_player_id();
   killer_player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventCourierKilled.killer_player_id)
@@ -8928,13 +8928,13 @@ bool CMsgBotWorldState_EventRoshanKilled::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional uint32 killer_player_id = 1;
+      // optional int32 killer_player_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u)) {
           set_has_killer_player_id();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &killer_player_id_)));
         } else {
           goto handle_unusual;
@@ -8985,9 +8985,9 @@ void CMsgBotWorldState_EventRoshanKilled::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional uint32 killer_player_id = 1;
+  // optional int32 killer_player_id = 1;
   if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->killer_player_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->killer_player_id(), output);
   }
 
   // optional uint32 killer_unit_handle = 2;
@@ -9009,9 +9009,9 @@ void CMsgBotWorldState_EventRoshanKilled::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional uint32 killer_player_id = 1;
+  // optional int32 killer_player_id = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->killer_player_id(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->killer_player_id(), target);
   }
 
   // optional uint32 killer_unit_handle = 2;
@@ -9037,10 +9037,10 @@ size_t CMsgBotWorldState_EventRoshanKilled::ByteSizeLong() const {
         unknown_fields());
   }
   if (_has_bits_[0 / 32] & 3u) {
-    // optional uint32 killer_player_id = 1;
+    // optional int32 killer_player_id = 1;
     if (has_killer_player_id()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
           this->killer_player_id());
     }
 
@@ -9131,7 +9131,7 @@ void CMsgBotWorldState_EventRoshanKilled::InternalSwap(CMsgBotWorldState_EventRo
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CMsgBotWorldState_EventRoshanKilled
 
-// optional uint32 killer_player_id = 1;
+// optional int32 killer_player_id = 1;
 bool CMsgBotWorldState_EventRoshanKilled::has_killer_player_id() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -9142,14 +9142,14 @@ void CMsgBotWorldState_EventRoshanKilled::clear_has_killer_player_id() {
   _has_bits_[0] &= ~0x00000001u;
 }
 void CMsgBotWorldState_EventRoshanKilled::clear_killer_player_id() {
-  killer_player_id_ = 0u;
+  killer_player_id_ = 0;
   clear_has_killer_player_id();
 }
-::google::protobuf::uint32 CMsgBotWorldState_EventRoshanKilled::killer_player_id() const {
+::google::protobuf::int32 CMsgBotWorldState_EventRoshanKilled::killer_player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.EventRoshanKilled.killer_player_id)
   return killer_player_id_;
 }
-void CMsgBotWorldState_EventRoshanKilled::set_killer_player_id(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_EventRoshanKilled::set_killer_player_id(::google::protobuf::int32 value) {
   set_has_killer_player_id();
   killer_player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventRoshanKilled.killer_player_id)
@@ -9739,6 +9739,7 @@ const int CMsgBotWorldState_Unit::kTeamIdFieldNumber;
 const int CMsgBotWorldState_Unit::kLevelFieldNumber;
 const int CMsgBotWorldState_Unit::kLocationFieldNumber;
 const int CMsgBotWorldState_Unit::kIsAliveFieldNumber;
+const int CMsgBotWorldState_Unit::kPlayerIdFieldNumber;
 const int CMsgBotWorldState_Unit::kBoundingRadiusFieldNumber;
 const int CMsgBotWorldState_Unit::kFacingFieldNumber;
 const int CMsgBotWorldState_Unit::kGroundHeightFieldNumber;
@@ -9798,7 +9799,7 @@ const int CMsgBotWorldState_Unit::kIsIllusionFieldNumber;
 const int CMsgBotWorldState_Unit::kRespawnTimeFieldNumber;
 const int CMsgBotWorldState_Unit::kBuybackCostFieldNumber;
 const int CMsgBotWorldState_Unit::kBuybackCooldownFieldNumber;
-const int CMsgBotWorldState_Unit::kSpellAmplifictionFieldNumber;
+const int CMsgBotWorldState_Unit::kSpellAmplificationFieldNumber;
 const int CMsgBotWorldState_Unit::kArmorFieldNumber;
 const int CMsgBotWorldState_Unit::kMagicResistFieldNumber;
 const int CMsgBotWorldState_Unit::kEvasionFieldNumber;
@@ -9808,6 +9809,10 @@ const int CMsgBotWorldState_Unit::kReliableGoldFieldNumber;
 const int CMsgBotWorldState_Unit::kUnreliableGoldFieldNumber;
 const int CMsgBotWorldState_Unit::kLastHitsFieldNumber;
 const int CMsgBotWorldState_Unit::kDeniesFieldNumber;
+const int CMsgBotWorldState_Unit::kNetWorthFieldNumber;
+const int CMsgBotWorldState_Unit::kStrengthFieldNumber;
+const int CMsgBotWorldState_Unit::kAgilityFieldNumber;
+const int CMsgBotWorldState_Unit::kIntelligenceFieldNumber;
 const int CMsgBotWorldState_Unit::kRemainingLifespanFieldNumber;
 const int CMsgBotWorldState_Unit::kFlyingCourierFieldNumber;
 const int CMsgBotWorldState_Unit::kShrineCooldownFieldNumber;
@@ -9842,16 +9847,16 @@ CMsgBotWorldState_Unit::CMsgBotWorldState_Unit(const CMsgBotWorldState_Unit& fro
     location_ = NULL;
   }
   ::memcpy(&handle_, &from.handle_,
-    reinterpret_cast<char*>(&is_shrine_healing_) -
-    reinterpret_cast<char*>(&handle_) + sizeof(is_shrine_healing_));
+    reinterpret_cast<char*>(&shrine_cooldown_) -
+    reinterpret_cast<char*>(&handle_) + sizeof(shrine_cooldown_));
   // @@protoc_insertion_point(copy_constructor:proto.dota.CMsgBotWorldState.Unit)
 }
 
 void CMsgBotWorldState_Unit::SharedCtor() {
   _cached_size_ = 0;
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&location_, 0, reinterpret_cast<char*>(&is_shrine_healing_) -
-    reinterpret_cast<char*>(&location_) + sizeof(is_shrine_healing_));
+  ::memset(&location_, 0, reinterpret_cast<char*>(&shrine_cooldown_) -
+    reinterpret_cast<char*>(&location_) + sizeof(shrine_cooldown_));
 }
 
 CMsgBotWorldState_Unit::~CMsgBotWorldState_Unit() {
@@ -9906,28 +9911,28 @@ void CMsgBotWorldState_Unit::Clear() {
     }
   }
   if (_has_bits_[0 / 32] & 252u) {
-    ::memset(&handle_, 0, reinterpret_cast<char*>(&facing_) -
-      reinterpret_cast<char*>(&handle_) + sizeof(facing_));
+    ::memset(&handle_, 0, reinterpret_cast<char*>(&bounding_radius_) -
+      reinterpret_cast<char*>(&handle_) + sizeof(bounding_radius_));
   }
   if (_has_bits_[8 / 32] & 65280u) {
-    ::memset(&ground_height_, 0, reinterpret_cast<char*>(&mana_max_) -
-      reinterpret_cast<char*>(&ground_height_) + sizeof(mana_max_));
+    ::memset(&facing_, 0, reinterpret_cast<char*>(&mana_) -
+      reinterpret_cast<char*>(&facing_) + sizeof(mana_));
   }
   if (_has_bits_[16 / 32] & 16711680u) {
-    ::memset(&mana_regen_, 0, reinterpret_cast<char*>(&bonus_damage_) -
-      reinterpret_cast<char*>(&mana_regen_) + sizeof(bonus_damage_));
+    ::memset(&mana_max_, 0, reinterpret_cast<char*>(&base_damage_variance_) -
+      reinterpret_cast<char*>(&mana_max_) + sizeof(base_damage_variance_));
   }
   if (_has_bits_[24 / 32] & 4278190080u) {
-    ::memset(&attack_damage_, 0, reinterpret_cast<char*>(&is_alive_) -
-      reinterpret_cast<char*>(&attack_damage_) + sizeof(is_alive_));
+    ::memset(&bonus_damage_, 0, reinterpret_cast<char*>(&attack_target_handle_) -
+      reinterpret_cast<char*>(&bonus_damage_) + sizeof(attack_target_handle_));
   }
   if (_has_bits_[32 / 32] & 255u) {
-    ::memset(&is_channeling_, 0, reinterpret_cast<char*>(&is_block_disabled_) -
-      reinterpret_cast<char*>(&is_channeling_) + sizeof(is_block_disabled_));
+    ::memset(&is_alive_, 0, reinterpret_cast<char*>(&active_ability_handle_) -
+      reinterpret_cast<char*>(&is_alive_) + sizeof(active_ability_handle_));
   }
   if (_has_bits_[40 / 32] & 65280u) {
-    ::memset(&is_disarmed_, 0, reinterpret_cast<char*>(&shrine_cooldown_) -
-      reinterpret_cast<char*>(&is_disarmed_) + sizeof(shrine_cooldown_));
+    ::memset(&is_block_disabled_, 0, reinterpret_cast<char*>(&is_magic_immune_) -
+      reinterpret_cast<char*>(&is_block_disabled_) + sizeof(is_magic_immune_));
   }
   if (_has_bits_[48 / 32] & 16711680u) {
     ::memset(&is_muted_, 0, reinterpret_cast<char*>(&has_scepter_) -
@@ -9941,10 +9946,11 @@ void CMsgBotWorldState_Unit::Clear() {
     ::memset(&magic_resist_, 0, reinterpret_cast<char*>(&denies_) -
       reinterpret_cast<char*>(&magic_resist_) + sizeof(denies_));
   }
-  if (_has_bits_[72 / 32] & 3840u) {
-    ::memset(&remaining_lifespan_, 0, reinterpret_cast<char*>(&is_shrine_healing_) -
-      reinterpret_cast<char*>(&remaining_lifespan_) + sizeof(is_shrine_healing_));
+  if (_has_bits_[72 / 32] & 65280u) {
+    ::memset(&net_worth_, 0, reinterpret_cast<char*>(&is_shrine_healing_) -
+      reinterpret_cast<char*>(&net_worth_) + sizeof(is_shrine_healing_));
   }
+  shrine_cooldown_ = 0;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -10056,6 +10062,20 @@ bool CMsgBotWorldState_Unit::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
                  input, &is_alive_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional int32 player_id = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(64u)) {
+          set_has_player_id();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &player_id_)));
         } else {
           goto handle_unusual;
         }
@@ -10342,13 +10362,13 @@ bool CMsgBotWorldState_Unit::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 attack_speed = 45;
+      // optional float attack_speed = 45;
       case 45: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(360u)) {
+            static_cast< ::google::protobuf::uint8>(365u)) {
           set_has_attack_speed();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &attack_speed_)));
         } else {
           goto handle_unusual;
@@ -10866,13 +10886,13 @@ bool CMsgBotWorldState_Unit::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 buyback_cooldown = 114;
+      // optional float buyback_cooldown = 114;
       case 114: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(912u)) {
+            static_cast< ::google::protobuf::uint8>(917u)) {
           set_has_buyback_cooldown();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &buyback_cooldown_)));
         } else {
           goto handle_unusual;
@@ -10880,27 +10900,27 @@ bool CMsgBotWorldState_Unit::MergePartialFromCodedStream(
         break;
       }
 
-      // optional float spell_amplifiction = 115;
+      // optional float spell_amplification = 115;
       case 115: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(925u)) {
-          set_has_spell_amplifiction();
+          set_has_spell_amplification();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &spell_amplifiction_)));
+                 input, &spell_amplification_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // optional uint32 armor = 116;
+      // optional float armor = 116;
       case 116: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(928u)) {
+            static_cast< ::google::protobuf::uint8>(933u)) {
           set_has_armor();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &armor_)));
         } else {
           goto handle_unusual;
@@ -10908,13 +10928,13 @@ bool CMsgBotWorldState_Unit::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 magic_resist = 117;
+      // optional float magic_resist = 117;
       case 117: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(936u)) {
+            static_cast< ::google::protobuf::uint8>(941u)) {
           set_has_magic_resist();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &magic_resist_)));
         } else {
           goto handle_unusual;
@@ -11014,6 +11034,62 @@ bool CMsgBotWorldState_Unit::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &denies_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 net_worth = 126;
+      case 126: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(1008u)) {
+          set_has_net_worth();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &net_worth_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 strength = 127;
+      case 127: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(1016u)) {
+          set_has_strength();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &strength_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 agility = 128;
+      case 128: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(1024u)) {
+          set_has_agility();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &agility_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 intelligence = 129;
+      case 129: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(1032u)) {
+          set_has_intelligence();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &intelligence_)));
         } else {
           goto handle_unusual;
         }
@@ -11142,209 +11218,216 @@ void CMsgBotWorldState_Unit::SerializeWithCachedSizes(
       6, *this->location_, output);
   }
 
+  cached_has_bits = _has_bits_[1];
   // optional bool is_alive = 7;
-  if (cached_has_bits & 0x80000000u) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(7, this->is_alive(), output);
   }
 
-  // optional uint32 bounding_radius = 10;
+  cached_has_bits = _has_bits_[0];
+  // optional int32 player_id = 8;
   if (cached_has_bits & 0x00000040u) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->player_id(), output);
+  }
+
+  // optional uint32 bounding_radius = 10;
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(10, this->bounding_radius(), output);
   }
 
   // optional uint32 facing = 11;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000100u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(11, this->facing(), output);
   }
 
   // optional uint32 ground_height = 12;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000200u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(12, this->ground_height(), output);
   }
 
   // optional uint32 vision_range_daytime = 15;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000400u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(15, this->vision_range_daytime(), output);
   }
 
   // optional uint32 vision_range_nighttime = 16;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000800u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(16, this->vision_range_nighttime(), output);
   }
 
   // optional uint32 health = 20;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00001000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(20, this->health(), output);
   }
 
   // optional uint32 health_max = 21;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00002000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(21, this->health_max(), output);
   }
 
   // optional float health_regen = 22;
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00004000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(22, this->health_regen(), output);
   }
 
   // optional uint32 mana = 25;
-  if (cached_has_bits & 0x00004000u) {
+  if (cached_has_bits & 0x00008000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(25, this->mana(), output);
   }
 
   // optional uint32 mana_max = 26;
-  if (cached_has_bits & 0x00008000u) {
+  if (cached_has_bits & 0x00010000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(26, this->mana_max(), output);
   }
 
   // optional float mana_regen = 27;
-  if (cached_has_bits & 0x00010000u) {
+  if (cached_has_bits & 0x00020000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(27, this->mana_regen(), output);
   }
 
   // optional uint32 base_movement_speed = 30;
-  if (cached_has_bits & 0x00020000u) {
+  if (cached_has_bits & 0x00040000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(30, this->base_movement_speed(), output);
   }
 
   // optional uint32 current_movement_speed = 31;
-  if (cached_has_bits & 0x00040000u) {
+  if (cached_has_bits & 0x00080000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(31, this->current_movement_speed(), output);
   }
 
   // optional int32 anim_activity = 35;
-  if (cached_has_bits & 0x00080000u) {
+  if (cached_has_bits & 0x00100000u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(35, this->anim_activity(), output);
   }
 
   // optional float anim_cycle = 36;
-  if (cached_has_bits & 0x00100000u) {
+  if (cached_has_bits & 0x00200000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(36, this->anim_cycle(), output);
   }
 
   // optional uint32 base_damage = 40;
-  if (cached_has_bits & 0x00200000u) {
+  if (cached_has_bits & 0x00400000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(40, this->base_damage(), output);
   }
 
   // optional uint32 base_damage_variance = 41;
-  if (cached_has_bits & 0x00400000u) {
+  if (cached_has_bits & 0x00800000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(41, this->base_damage_variance(), output);
   }
 
   // optional uint32 bonus_damage = 42;
-  if (cached_has_bits & 0x00800000u) {
+  if (cached_has_bits & 0x01000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(42, this->bonus_damage(), output);
   }
 
   // optional uint32 attack_damage = 43;
-  if (cached_has_bits & 0x01000000u) {
+  if (cached_has_bits & 0x02000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(43, this->attack_damage(), output);
   }
 
   // optional uint32 attack_range = 44;
-  if (cached_has_bits & 0x02000000u) {
+  if (cached_has_bits & 0x04000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(44, this->attack_range(), output);
   }
 
-  // optional uint32 attack_speed = 45;
-  if (cached_has_bits & 0x04000000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(45, this->attack_speed(), output);
+  // optional float attack_speed = 45;
+  if (cached_has_bits & 0x08000000u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(45, this->attack_speed(), output);
   }
 
   // optional float attack_anim_point = 46;
-  if (cached_has_bits & 0x08000000u) {
+  if (cached_has_bits & 0x10000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(46, this->attack_anim_point(), output);
   }
 
   // optional uint32 attack_acquisition_range = 47;
-  if (cached_has_bits & 0x10000000u) {
+  if (cached_has_bits & 0x20000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(47, this->attack_acquisition_range(), output);
   }
 
   // optional uint32 attack_projectile_speed = 48;
-  if (cached_has_bits & 0x20000000u) {
+  if (cached_has_bits & 0x40000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(48, this->attack_projectile_speed(), output);
   }
 
   // optional uint32 attack_target_handle = 49;
-  if (cached_has_bits & 0x40000000u) {
+  if (cached_has_bits & 0x80000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(49, this->attack_target_handle(), output);
   }
 
   cached_has_bits = _has_bits_[1];
   // optional uint32 bounty_xp = 60;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(60, this->bounty_xp(), output);
   }
 
   // optional uint32 bounty_gold_min = 61;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(61, this->bounty_gold_min(), output);
   }
 
   // optional uint32 bounty_gold_max = 62;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000040u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(62, this->bounty_gold_max(), output);
   }
 
   // optional bool is_channeling = 65;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(65, this->is_channeling(), output);
   }
 
   // optional uint32 active_ability_handle = 66;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(66, this->active_ability_handle(), output);
   }
 
   // optional bool is_attack_immune = 70;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(70, this->is_attack_immune(), output);
   }
 
   // optional bool is_blind = 71;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(71, this->is_blind(), output);
   }
 
   // optional bool is_block_disabled = 72;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000100u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(72, this->is_block_disabled(), output);
   }
 
   // optional bool is_disarmed = 73;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000200u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(73, this->is_disarmed(), output);
   }
 
   // optional bool is_dominated = 74;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000400u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(74, this->is_dominated(), output);
   }
 
   // optional bool is_evade_disabled = 75;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000800u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(75, this->is_evade_disabled(), output);
   }
 
   // optional bool is_hexed = 76;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00001000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(76, this->is_hexed(), output);
   }
 
   // optional bool is_invisible = 77;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00002000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(77, this->is_invisible(), output);
   }
 
   // optional bool is_invulnerable = 78;
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00004000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(78, this->is_invulnerable(), output);
   }
 
   // optional bool is_magic_immune = 79;
-  if (cached_has_bits & 0x00004000u) {
+  if (cached_has_bits & 0x00008000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(79, this->is_magic_immune(), output);
   }
 
@@ -11429,7 +11512,7 @@ void CMsgBotWorldState_Unit::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[2];
   // optional bool is_illusion = 111;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00002000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(111, this->is_illusion(), output);
   }
 
@@ -11444,25 +11527,25 @@ void CMsgBotWorldState_Unit::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(113, this->buyback_cost(), output);
   }
 
-  // optional uint32 buyback_cooldown = 114;
+  // optional float buyback_cooldown = 114;
   if (cached_has_bits & 0x20000000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(114, this->buyback_cooldown(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(114, this->buyback_cooldown(), output);
   }
 
-  // optional float spell_amplifiction = 115;
+  // optional float spell_amplification = 115;
   if (cached_has_bits & 0x40000000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(115, this->spell_amplifiction(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(115, this->spell_amplification(), output);
   }
 
-  // optional uint32 armor = 116;
+  // optional float armor = 116;
   if (cached_has_bits & 0x80000000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(116, this->armor(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(116, this->armor(), output);
   }
 
   cached_has_bits = _has_bits_[2];
-  // optional uint32 magic_resist = 117;
+  // optional float magic_resist = 117;
   if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(117, this->magic_resist(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(117, this->magic_resist(), output);
   }
 
   // optional float evasion = 118;
@@ -11500,25 +11583,43 @@ void CMsgBotWorldState_Unit::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(125, this->denies(), output);
   }
 
-  // optional float remaining_lifespan = 130;
+  // optional uint32 net_worth = 126;
   if (cached_has_bits & 0x00000100u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(126, this->net_worth(), output);
+  }
+
+  // optional uint32 strength = 127;
+  if (cached_has_bits & 0x00000200u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(127, this->strength(), output);
+  }
+
+  // optional uint32 agility = 128;
+  if (cached_has_bits & 0x00000400u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(128, this->agility(), output);
+  }
+
+  // optional uint32 intelligence = 129;
+  if (cached_has_bits & 0x00000800u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(129, this->intelligence(), output);
+  }
+
+  // optional float remaining_lifespan = 130;
+  if (cached_has_bits & 0x00001000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(130, this->remaining_lifespan(), output);
   }
 
   // optional bool flying_courier = 140;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00004000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(140, this->flying_courier(), output);
   }
 
-  cached_has_bits = _has_bits_[1];
   // optional float shrine_cooldown = 150;
-  if (cached_has_bits & 0x00008000u) {
+  if (cached_has_bits & 0x00010000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(150, this->shrine_cooldown(), output);
   }
 
-  cached_has_bits = _has_bits_[2];
   // optional bool is_shrine_healing = 151;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00008000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(151, this->is_shrine_healing(), output);
   }
 
@@ -11575,209 +11676,216 @@ void CMsgBotWorldState_Unit::SerializeWithCachedSizes(
         6, *this->location_, deterministic, target);
   }
 
+  cached_has_bits = _has_bits_[1];
   // optional bool is_alive = 7;
-  if (cached_has_bits & 0x80000000u) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(7, this->is_alive(), target);
   }
 
-  // optional uint32 bounding_radius = 10;
+  cached_has_bits = _has_bits_[0];
+  // optional int32 player_id = 8;
   if (cached_has_bits & 0x00000040u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->player_id(), target);
+  }
+
+  // optional uint32 bounding_radius = 10;
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(10, this->bounding_radius(), target);
   }
 
   // optional uint32 facing = 11;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000100u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(11, this->facing(), target);
   }
 
   // optional uint32 ground_height = 12;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000200u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(12, this->ground_height(), target);
   }
 
   // optional uint32 vision_range_daytime = 15;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000400u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(15, this->vision_range_daytime(), target);
   }
 
   // optional uint32 vision_range_nighttime = 16;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000800u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(16, this->vision_range_nighttime(), target);
   }
 
   // optional uint32 health = 20;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00001000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(20, this->health(), target);
   }
 
   // optional uint32 health_max = 21;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00002000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(21, this->health_max(), target);
   }
 
   // optional float health_regen = 22;
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00004000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(22, this->health_regen(), target);
   }
 
   // optional uint32 mana = 25;
-  if (cached_has_bits & 0x00004000u) {
+  if (cached_has_bits & 0x00008000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(25, this->mana(), target);
   }
 
   // optional uint32 mana_max = 26;
-  if (cached_has_bits & 0x00008000u) {
+  if (cached_has_bits & 0x00010000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(26, this->mana_max(), target);
   }
 
   // optional float mana_regen = 27;
-  if (cached_has_bits & 0x00010000u) {
+  if (cached_has_bits & 0x00020000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(27, this->mana_regen(), target);
   }
 
   // optional uint32 base_movement_speed = 30;
-  if (cached_has_bits & 0x00020000u) {
+  if (cached_has_bits & 0x00040000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(30, this->base_movement_speed(), target);
   }
 
   // optional uint32 current_movement_speed = 31;
-  if (cached_has_bits & 0x00040000u) {
+  if (cached_has_bits & 0x00080000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(31, this->current_movement_speed(), target);
   }
 
   // optional int32 anim_activity = 35;
-  if (cached_has_bits & 0x00080000u) {
+  if (cached_has_bits & 0x00100000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(35, this->anim_activity(), target);
   }
 
   // optional float anim_cycle = 36;
-  if (cached_has_bits & 0x00100000u) {
+  if (cached_has_bits & 0x00200000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(36, this->anim_cycle(), target);
   }
 
   // optional uint32 base_damage = 40;
-  if (cached_has_bits & 0x00200000u) {
+  if (cached_has_bits & 0x00400000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(40, this->base_damage(), target);
   }
 
   // optional uint32 base_damage_variance = 41;
-  if (cached_has_bits & 0x00400000u) {
+  if (cached_has_bits & 0x00800000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(41, this->base_damage_variance(), target);
   }
 
   // optional uint32 bonus_damage = 42;
-  if (cached_has_bits & 0x00800000u) {
+  if (cached_has_bits & 0x01000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(42, this->bonus_damage(), target);
   }
 
   // optional uint32 attack_damage = 43;
-  if (cached_has_bits & 0x01000000u) {
+  if (cached_has_bits & 0x02000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(43, this->attack_damage(), target);
   }
 
   // optional uint32 attack_range = 44;
-  if (cached_has_bits & 0x02000000u) {
+  if (cached_has_bits & 0x04000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(44, this->attack_range(), target);
   }
 
-  // optional uint32 attack_speed = 45;
-  if (cached_has_bits & 0x04000000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(45, this->attack_speed(), target);
+  // optional float attack_speed = 45;
+  if (cached_has_bits & 0x08000000u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(45, this->attack_speed(), target);
   }
 
   // optional float attack_anim_point = 46;
-  if (cached_has_bits & 0x08000000u) {
+  if (cached_has_bits & 0x10000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(46, this->attack_anim_point(), target);
   }
 
   // optional uint32 attack_acquisition_range = 47;
-  if (cached_has_bits & 0x10000000u) {
+  if (cached_has_bits & 0x20000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(47, this->attack_acquisition_range(), target);
   }
 
   // optional uint32 attack_projectile_speed = 48;
-  if (cached_has_bits & 0x20000000u) {
+  if (cached_has_bits & 0x40000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(48, this->attack_projectile_speed(), target);
   }
 
   // optional uint32 attack_target_handle = 49;
-  if (cached_has_bits & 0x40000000u) {
+  if (cached_has_bits & 0x80000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(49, this->attack_target_handle(), target);
   }
 
   cached_has_bits = _has_bits_[1];
   // optional uint32 bounty_xp = 60;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(60, this->bounty_xp(), target);
   }
 
   // optional uint32 bounty_gold_min = 61;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000020u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(61, this->bounty_gold_min(), target);
   }
 
   // optional uint32 bounty_gold_max = 62;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000040u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(62, this->bounty_gold_max(), target);
   }
 
   // optional bool is_channeling = 65;
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(65, this->is_channeling(), target);
   }
 
   // optional uint32 active_ability_handle = 66;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(66, this->active_ability_handle(), target);
   }
 
   // optional bool is_attack_immune = 70;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(70, this->is_attack_immune(), target);
   }
 
   // optional bool is_blind = 71;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(71, this->is_blind(), target);
   }
 
   // optional bool is_block_disabled = 72;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000100u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(72, this->is_block_disabled(), target);
   }
 
   // optional bool is_disarmed = 73;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000200u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(73, this->is_disarmed(), target);
   }
 
   // optional bool is_dominated = 74;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000400u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(74, this->is_dominated(), target);
   }
 
   // optional bool is_evade_disabled = 75;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000800u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(75, this->is_evade_disabled(), target);
   }
 
   // optional bool is_hexed = 76;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00001000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(76, this->is_hexed(), target);
   }
 
   // optional bool is_invisible = 77;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00002000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(77, this->is_invisible(), target);
   }
 
   // optional bool is_invulnerable = 78;
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00004000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(78, this->is_invulnerable(), target);
   }
 
   // optional bool is_magic_immune = 79;
-  if (cached_has_bits & 0x00004000u) {
+  if (cached_has_bits & 0x00008000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(79, this->is_magic_immune(), target);
   }
 
@@ -11866,7 +11974,7 @@ void CMsgBotWorldState_Unit::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[2];
   // optional bool is_illusion = 111;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00002000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(111, this->is_illusion(), target);
   }
 
@@ -11881,25 +11989,25 @@ void CMsgBotWorldState_Unit::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(113, this->buyback_cost(), target);
   }
 
-  // optional uint32 buyback_cooldown = 114;
+  // optional float buyback_cooldown = 114;
   if (cached_has_bits & 0x20000000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(114, this->buyback_cooldown(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(114, this->buyback_cooldown(), target);
   }
 
-  // optional float spell_amplifiction = 115;
+  // optional float spell_amplification = 115;
   if (cached_has_bits & 0x40000000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(115, this->spell_amplifiction(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(115, this->spell_amplification(), target);
   }
 
-  // optional uint32 armor = 116;
+  // optional float armor = 116;
   if (cached_has_bits & 0x80000000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(116, this->armor(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(116, this->armor(), target);
   }
 
   cached_has_bits = _has_bits_[2];
-  // optional uint32 magic_resist = 117;
+  // optional float magic_resist = 117;
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(117, this->magic_resist(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(117, this->magic_resist(), target);
   }
 
   // optional float evasion = 118;
@@ -11937,25 +12045,43 @@ void CMsgBotWorldState_Unit::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(125, this->denies(), target);
   }
 
-  // optional float remaining_lifespan = 130;
+  // optional uint32 net_worth = 126;
   if (cached_has_bits & 0x00000100u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(126, this->net_worth(), target);
+  }
+
+  // optional uint32 strength = 127;
+  if (cached_has_bits & 0x00000200u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(127, this->strength(), target);
+  }
+
+  // optional uint32 agility = 128;
+  if (cached_has_bits & 0x00000400u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(128, this->agility(), target);
+  }
+
+  // optional uint32 intelligence = 129;
+  if (cached_has_bits & 0x00000800u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(129, this->intelligence(), target);
+  }
+
+  // optional float remaining_lifespan = 130;
+  if (cached_has_bits & 0x00001000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(130, this->remaining_lifespan(), target);
   }
 
   // optional bool flying_courier = 140;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00004000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(140, this->flying_courier(), target);
   }
 
-  cached_has_bits = _has_bits_[1];
   // optional float shrine_cooldown = 150;
-  if (cached_has_bits & 0x00008000u) {
+  if (cached_has_bits & 0x00010000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(150, this->shrine_cooldown(), target);
   }
 
-  cached_has_bits = _has_bits_[2];
   // optional bool is_shrine_healing = 151;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00008000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(151, this->is_shrine_healing(), target);
   }
 
@@ -12062,6 +12188,13 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->level());
     }
 
+    // optional int32 player_id = 8;
+    if (has_player_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->player_id());
+    }
+
     // optional uint32 bounding_radius = 10;
     if (has_bounding_radius()) {
       total_size += 1 +
@@ -12069,6 +12202,8 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->bounding_radius());
     }
 
+  }
+  if (_has_bits_[8 / 32] & 65280u) {
     // optional uint32 facing = 11;
     if (has_facing()) {
       total_size += 1 +
@@ -12076,8 +12211,6 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->facing());
     }
 
-  }
-  if (_has_bits_[8 / 32] & 65280u) {
     // optional uint32 ground_height = 12;
     if (has_ground_height()) {
       total_size += 1 +
@@ -12125,6 +12258,8 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->mana());
     }
 
+  }
+  if (_has_bits_[16 / 32] & 16711680u) {
     // optional uint32 mana_max = 26;
     if (has_mana_max()) {
       total_size += 2 +
@@ -12132,8 +12267,6 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->mana_max());
     }
 
-  }
-  if (_has_bits_[16 / 32] & 16711680u) {
     // optional float mana_regen = 27;
     if (has_mana_regen()) {
       total_size += 2 + 4;
@@ -12179,6 +12312,8 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->base_damage_variance());
     }
 
+  }
+  if (_has_bits_[24 / 32] & 4278190080u) {
     // optional uint32 bonus_damage = 42;
     if (has_bonus_damage()) {
       total_size += 2 +
@@ -12186,8 +12321,6 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->bonus_damage());
     }
 
-  }
-  if (_has_bits_[24 / 32] & 4278190080u) {
     // optional uint32 attack_damage = 43;
     if (has_attack_damage()) {
       total_size += 2 +
@@ -12202,11 +12335,9 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->attack_range());
     }
 
-    // optional uint32 attack_speed = 45;
+    // optional float attack_speed = 45;
     if (has_attack_speed()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->attack_speed());
+      total_size += 2 + 4;
     }
 
     // optional float attack_anim_point = 46;
@@ -12235,13 +12366,13 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->attack_target_handle());
     }
 
+  }
+  if (_has_bits_[32 / 32] & 255u) {
     // optional bool is_alive = 7;
     if (has_is_alive()) {
       total_size += 1 + 1;
     }
 
-  }
-  if (_has_bits_[32 / 32] & 255u) {
     // optional bool is_channeling = 65;
     if (has_is_channeling()) {
       total_size += 2 + 1;
@@ -12285,13 +12416,13 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->active_ability_handle());
     }
 
+  }
+  if (_has_bits_[40 / 32] & 65280u) {
     // optional bool is_block_disabled = 72;
     if (has_is_block_disabled()) {
       total_size += 2 + 1;
     }
 
-  }
-  if (_has_bits_[40 / 32] & 65280u) {
     // optional bool is_disarmed = 73;
     if (has_is_disarmed()) {
       total_size += 2 + 1;
@@ -12325,11 +12456,6 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
     // optional bool is_magic_immune = 79;
     if (has_is_magic_immune()) {
       total_size += 2 + 1;
-    }
-
-    // optional float shrine_cooldown = 150;
-    if (has_shrine_cooldown()) {
-      total_size += 2 + 4;
     }
 
   }
@@ -12411,32 +12537,26 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
           this->buyback_cost());
     }
 
-    // optional uint32 buyback_cooldown = 114;
+    // optional float buyback_cooldown = 114;
     if (has_buyback_cooldown()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->buyback_cooldown());
-    }
-
-    // optional float spell_amplifiction = 115;
-    if (has_spell_amplifiction()) {
       total_size += 2 + 4;
     }
 
-    // optional uint32 armor = 116;
+    // optional float spell_amplification = 115;
+    if (has_spell_amplification()) {
+      total_size += 2 + 4;
+    }
+
+    // optional float armor = 116;
     if (has_armor()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->armor());
+      total_size += 2 + 4;
     }
 
   }
   if (_has_bits_[64 / 32] & 255u) {
-    // optional uint32 magic_resist = 117;
+    // optional float magic_resist = 117;
     if (has_magic_resist()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->magic_resist());
+      total_size += 2 + 4;
     }
 
     // optional float evasion = 118;
@@ -12487,7 +12607,35 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
     }
 
   }
-  if (_has_bits_[72 / 32] & 3840u) {
+  if (_has_bits_[72 / 32] & 65280u) {
+    // optional uint32 net_worth = 126;
+    if (has_net_worth()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->net_worth());
+    }
+
+    // optional uint32 strength = 127;
+    if (has_strength()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->strength());
+    }
+
+    // optional uint32 agility = 128;
+    if (has_agility()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->agility());
+    }
+
+    // optional uint32 intelligence = 129;
+    if (has_intelligence()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->intelligence());
+    }
+
     // optional float remaining_lifespan = 130;
     if (has_remaining_lifespan()) {
       total_size += 2 + 4;
@@ -12509,6 +12657,11 @@ size_t CMsgBotWorldState_Unit::ByteSizeLong() const {
     }
 
   }
+  // optional float shrine_cooldown = 150;
+  if (has_shrine_cooldown()) {
+    total_size += 2 + 4;
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -12564,146 +12717,146 @@ void CMsgBotWorldState_Unit::MergeFrom(const CMsgBotWorldState_Unit& from) {
       level_ = from.level_;
     }
     if (cached_has_bits & 0x00000040u) {
-      bounding_radius_ = from.bounding_radius_;
+      player_id_ = from.player_id_;
     }
     if (cached_has_bits & 0x00000080u) {
-      facing_ = from.facing_;
+      bounding_radius_ = from.bounding_radius_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
   if (cached_has_bits & 65280u) {
     if (cached_has_bits & 0x00000100u) {
-      ground_height_ = from.ground_height_;
+      facing_ = from.facing_;
     }
     if (cached_has_bits & 0x00000200u) {
-      vision_range_daytime_ = from.vision_range_daytime_;
+      ground_height_ = from.ground_height_;
     }
     if (cached_has_bits & 0x00000400u) {
-      vision_range_nighttime_ = from.vision_range_nighttime_;
+      vision_range_daytime_ = from.vision_range_daytime_;
     }
     if (cached_has_bits & 0x00000800u) {
-      health_ = from.health_;
+      vision_range_nighttime_ = from.vision_range_nighttime_;
     }
     if (cached_has_bits & 0x00001000u) {
-      health_max_ = from.health_max_;
+      health_ = from.health_;
     }
     if (cached_has_bits & 0x00002000u) {
-      health_regen_ = from.health_regen_;
+      health_max_ = from.health_max_;
     }
     if (cached_has_bits & 0x00004000u) {
-      mana_ = from.mana_;
+      health_regen_ = from.health_regen_;
     }
     if (cached_has_bits & 0x00008000u) {
-      mana_max_ = from.mana_max_;
+      mana_ = from.mana_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
   if (cached_has_bits & 16711680u) {
     if (cached_has_bits & 0x00010000u) {
-      mana_regen_ = from.mana_regen_;
+      mana_max_ = from.mana_max_;
     }
     if (cached_has_bits & 0x00020000u) {
-      base_movement_speed_ = from.base_movement_speed_;
+      mana_regen_ = from.mana_regen_;
     }
     if (cached_has_bits & 0x00040000u) {
-      current_movement_speed_ = from.current_movement_speed_;
+      base_movement_speed_ = from.base_movement_speed_;
     }
     if (cached_has_bits & 0x00080000u) {
-      anim_activity_ = from.anim_activity_;
+      current_movement_speed_ = from.current_movement_speed_;
     }
     if (cached_has_bits & 0x00100000u) {
-      anim_cycle_ = from.anim_cycle_;
+      anim_activity_ = from.anim_activity_;
     }
     if (cached_has_bits & 0x00200000u) {
-      base_damage_ = from.base_damage_;
+      anim_cycle_ = from.anim_cycle_;
     }
     if (cached_has_bits & 0x00400000u) {
-      base_damage_variance_ = from.base_damage_variance_;
+      base_damage_ = from.base_damage_;
     }
     if (cached_has_bits & 0x00800000u) {
-      bonus_damage_ = from.bonus_damage_;
+      base_damage_variance_ = from.base_damage_variance_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
   if (cached_has_bits & 4278190080u) {
     if (cached_has_bits & 0x01000000u) {
-      attack_damage_ = from.attack_damage_;
+      bonus_damage_ = from.bonus_damage_;
     }
     if (cached_has_bits & 0x02000000u) {
-      attack_range_ = from.attack_range_;
+      attack_damage_ = from.attack_damage_;
     }
     if (cached_has_bits & 0x04000000u) {
-      attack_speed_ = from.attack_speed_;
+      attack_range_ = from.attack_range_;
     }
     if (cached_has_bits & 0x08000000u) {
-      attack_anim_point_ = from.attack_anim_point_;
+      attack_speed_ = from.attack_speed_;
     }
     if (cached_has_bits & 0x10000000u) {
-      attack_acquisition_range_ = from.attack_acquisition_range_;
+      attack_anim_point_ = from.attack_anim_point_;
     }
     if (cached_has_bits & 0x20000000u) {
-      attack_projectile_speed_ = from.attack_projectile_speed_;
+      attack_acquisition_range_ = from.attack_acquisition_range_;
     }
     if (cached_has_bits & 0x40000000u) {
-      attack_target_handle_ = from.attack_target_handle_;
+      attack_projectile_speed_ = from.attack_projectile_speed_;
     }
     if (cached_has_bits & 0x80000000u) {
-      is_alive_ = from.is_alive_;
+      attack_target_handle_ = from.attack_target_handle_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
   cached_has_bits = from._has_bits_[1];
   if (cached_has_bits & 255u) {
     if (cached_has_bits & 0x00000001u) {
-      is_channeling_ = from.is_channeling_;
+      is_alive_ = from.is_alive_;
     }
     if (cached_has_bits & 0x00000002u) {
-      is_attack_immune_ = from.is_attack_immune_;
+      is_channeling_ = from.is_channeling_;
     }
     if (cached_has_bits & 0x00000004u) {
-      is_blind_ = from.is_blind_;
+      is_attack_immune_ = from.is_attack_immune_;
     }
     if (cached_has_bits & 0x00000008u) {
-      bounty_xp_ = from.bounty_xp_;
+      is_blind_ = from.is_blind_;
     }
     if (cached_has_bits & 0x00000010u) {
-      bounty_gold_min_ = from.bounty_gold_min_;
+      bounty_xp_ = from.bounty_xp_;
     }
     if (cached_has_bits & 0x00000020u) {
-      bounty_gold_max_ = from.bounty_gold_max_;
+      bounty_gold_min_ = from.bounty_gold_min_;
     }
     if (cached_has_bits & 0x00000040u) {
-      active_ability_handle_ = from.active_ability_handle_;
+      bounty_gold_max_ = from.bounty_gold_max_;
     }
     if (cached_has_bits & 0x00000080u) {
-      is_block_disabled_ = from.is_block_disabled_;
+      active_ability_handle_ = from.active_ability_handle_;
     }
     _has_bits_[1] |= cached_has_bits;
   }
   if (cached_has_bits & 65280u) {
     if (cached_has_bits & 0x00000100u) {
-      is_disarmed_ = from.is_disarmed_;
+      is_block_disabled_ = from.is_block_disabled_;
     }
     if (cached_has_bits & 0x00000200u) {
-      is_dominated_ = from.is_dominated_;
+      is_disarmed_ = from.is_disarmed_;
     }
     if (cached_has_bits & 0x00000400u) {
-      is_evade_disabled_ = from.is_evade_disabled_;
+      is_dominated_ = from.is_dominated_;
     }
     if (cached_has_bits & 0x00000800u) {
-      is_hexed_ = from.is_hexed_;
+      is_evade_disabled_ = from.is_evade_disabled_;
     }
     if (cached_has_bits & 0x00001000u) {
-      is_invisible_ = from.is_invisible_;
+      is_hexed_ = from.is_hexed_;
     }
     if (cached_has_bits & 0x00002000u) {
-      is_invulnerable_ = from.is_invulnerable_;
+      is_invisible_ = from.is_invisible_;
     }
     if (cached_has_bits & 0x00004000u) {
-      is_magic_immune_ = from.is_magic_immune_;
+      is_invulnerable_ = from.is_invulnerable_;
     }
     if (cached_has_bits & 0x00008000u) {
-      shrine_cooldown_ = from.shrine_cooldown_;
+      is_magic_immune_ = from.is_magic_immune_;
     }
     _has_bits_[1] |= cached_has_bits;
   }
@@ -12754,7 +12907,7 @@ void CMsgBotWorldState_Unit::MergeFrom(const CMsgBotWorldState_Unit& from) {
       buyback_cooldown_ = from.buyback_cooldown_;
     }
     if (cached_has_bits & 0x40000000u) {
-      spell_amplifiction_ = from.spell_amplifiction_;
+      spell_amplification_ = from.spell_amplification_;
     }
     if (cached_has_bits & 0x80000000u) {
       armor_ = from.armor_;
@@ -12789,20 +12942,35 @@ void CMsgBotWorldState_Unit::MergeFrom(const CMsgBotWorldState_Unit& from) {
     }
     _has_bits_[2] |= cached_has_bits;
   }
-  if (cached_has_bits & 3840u) {
+  if (cached_has_bits & 65280u) {
     if (cached_has_bits & 0x00000100u) {
-      remaining_lifespan_ = from.remaining_lifespan_;
+      net_worth_ = from.net_worth_;
     }
     if (cached_has_bits & 0x00000200u) {
-      is_illusion_ = from.is_illusion_;
+      strength_ = from.strength_;
     }
     if (cached_has_bits & 0x00000400u) {
-      flying_courier_ = from.flying_courier_;
+      agility_ = from.agility_;
     }
     if (cached_has_bits & 0x00000800u) {
+      intelligence_ = from.intelligence_;
+    }
+    if (cached_has_bits & 0x00001000u) {
+      remaining_lifespan_ = from.remaining_lifespan_;
+    }
+    if (cached_has_bits & 0x00002000u) {
+      is_illusion_ = from.is_illusion_;
+    }
+    if (cached_has_bits & 0x00004000u) {
+      flying_courier_ = from.flying_courier_;
+    }
+    if (cached_has_bits & 0x00008000u) {
       is_shrine_healing_ = from.is_shrine_healing_;
     }
     _has_bits_[2] |= cached_has_bits;
+  }
+  if (cached_has_bits & 0x00010000u) {
+    set_shrine_cooldown(from.shrine_cooldown());
   }
 }
 
@@ -12843,6 +13011,7 @@ void CMsgBotWorldState_Unit::InternalSwap(CMsgBotWorldState_Unit* other) {
   std::swap(unit_type_, other->unit_type_);
   std::swap(team_id_, other->team_id_);
   std::swap(level_, other->level_);
+  std::swap(player_id_, other->player_id_);
   std::swap(bounding_radius_, other->bounding_radius_);
   std::swap(facing_, other->facing_);
   std::swap(ground_height_, other->ground_height_);
@@ -12884,7 +13053,6 @@ void CMsgBotWorldState_Unit::InternalSwap(CMsgBotWorldState_Unit* other) {
   std::swap(is_invisible_, other->is_invisible_);
   std::swap(is_invulnerable_, other->is_invulnerable_);
   std::swap(is_magic_immune_, other->is_magic_immune_);
-  std::swap(shrine_cooldown_, other->shrine_cooldown_);
   std::swap(is_muted_, other->is_muted_);
   std::swap(is_nightmared_, other->is_nightmared_);
   std::swap(is_rooted_, other->is_rooted_);
@@ -12899,7 +13067,7 @@ void CMsgBotWorldState_Unit::InternalSwap(CMsgBotWorldState_Unit* other) {
   std::swap(respawn_time_, other->respawn_time_);
   std::swap(buyback_cost_, other->buyback_cost_);
   std::swap(buyback_cooldown_, other->buyback_cooldown_);
-  std::swap(spell_amplifiction_, other->spell_amplifiction_);
+  std::swap(spell_amplification_, other->spell_amplification_);
   std::swap(armor_, other->armor_);
   std::swap(magic_resist_, other->magic_resist_);
   std::swap(evasion_, other->evasion_);
@@ -12909,10 +13077,15 @@ void CMsgBotWorldState_Unit::InternalSwap(CMsgBotWorldState_Unit* other) {
   std::swap(unreliable_gold_, other->unreliable_gold_);
   std::swap(last_hits_, other->last_hits_);
   std::swap(denies_, other->denies_);
+  std::swap(net_worth_, other->net_worth_);
+  std::swap(strength_, other->strength_);
+  std::swap(agility_, other->agility_);
+  std::swap(intelligence_, other->intelligence_);
   std::swap(remaining_lifespan_, other->remaining_lifespan_);
   std::swap(is_illusion_, other->is_illusion_);
   std::swap(flying_courier_, other->flying_courier_);
   std::swap(is_shrine_healing_, other->is_shrine_healing_);
+  std::swap(shrine_cooldown_, other->shrine_cooldown_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   std::swap(_has_bits_[1], other->_has_bits_[1]);
   std::swap(_has_bits_[2], other->_has_bits_[2]);
@@ -13135,13 +13308,13 @@ void CMsgBotWorldState_Unit::set_allocated_location(::proto::dota::CMsgBotWorldS
 
 // optional bool is_alive = 7;
 bool CMsgBotWorldState_Unit::has_is_alive() const {
-  return (_has_bits_[0] & 0x80000000u) != 0;
+  return (_has_bits_[1] & 0x00000001u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_alive() {
-  _has_bits_[0] |= 0x80000000u;
+  _has_bits_[1] |= 0x00000001u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_alive() {
-  _has_bits_[0] &= ~0x80000000u;
+  _has_bits_[1] &= ~0x00000001u;
 }
 void CMsgBotWorldState_Unit::clear_is_alive() {
   is_alive_ = false;
@@ -13157,15 +13330,39 @@ void CMsgBotWorldState_Unit::set_is_alive(bool value) {
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.is_alive)
 }
 
-// optional uint32 bounding_radius = 10;
-bool CMsgBotWorldState_Unit::has_bounding_radius() const {
+// optional int32 player_id = 8;
+bool CMsgBotWorldState_Unit::has_player_id() const {
   return (_has_bits_[0] & 0x00000040u) != 0;
 }
-void CMsgBotWorldState_Unit::set_has_bounding_radius() {
+void CMsgBotWorldState_Unit::set_has_player_id() {
   _has_bits_[0] |= 0x00000040u;
 }
-void CMsgBotWorldState_Unit::clear_has_bounding_radius() {
+void CMsgBotWorldState_Unit::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000040u;
+}
+void CMsgBotWorldState_Unit::clear_player_id() {
+  player_id_ = 0;
+  clear_has_player_id();
+}
+::google::protobuf::int32 CMsgBotWorldState_Unit::player_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.player_id)
+  return player_id_;
+}
+void CMsgBotWorldState_Unit::set_player_id(::google::protobuf::int32 value) {
+  set_has_player_id();
+  player_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.player_id)
+}
+
+// optional uint32 bounding_radius = 10;
+bool CMsgBotWorldState_Unit::has_bounding_radius() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+void CMsgBotWorldState_Unit::set_has_bounding_radius() {
+  _has_bits_[0] |= 0x00000080u;
+}
+void CMsgBotWorldState_Unit::clear_has_bounding_radius() {
+  _has_bits_[0] &= ~0x00000080u;
 }
 void CMsgBotWorldState_Unit::clear_bounding_radius() {
   bounding_radius_ = 0u;
@@ -13183,13 +13380,13 @@ void CMsgBotWorldState_Unit::set_bounding_radius(::google::protobuf::uint32 valu
 
 // optional uint32 facing = 11;
 bool CMsgBotWorldState_Unit::has_facing() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_facing() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
 }
 void CMsgBotWorldState_Unit::clear_has_facing() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 void CMsgBotWorldState_Unit::clear_facing() {
   facing_ = 0u;
@@ -13207,13 +13404,13 @@ void CMsgBotWorldState_Unit::set_facing(::google::protobuf::uint32 value) {
 
 // optional uint32 ground_height = 12;
 bool CMsgBotWorldState_Unit::has_ground_height() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_ground_height() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
 }
 void CMsgBotWorldState_Unit::clear_has_ground_height() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 void CMsgBotWorldState_Unit::clear_ground_height() {
   ground_height_ = 0u;
@@ -13231,13 +13428,13 @@ void CMsgBotWorldState_Unit::set_ground_height(::google::protobuf::uint32 value)
 
 // optional uint32 vision_range_daytime = 15;
 bool CMsgBotWorldState_Unit::has_vision_range_daytime() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_vision_range_daytime() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
 }
 void CMsgBotWorldState_Unit::clear_has_vision_range_daytime() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 void CMsgBotWorldState_Unit::clear_vision_range_daytime() {
   vision_range_daytime_ = 0u;
@@ -13255,13 +13452,13 @@ void CMsgBotWorldState_Unit::set_vision_range_daytime(::google::protobuf::uint32
 
 // optional uint32 vision_range_nighttime = 16;
 bool CMsgBotWorldState_Unit::has_vision_range_nighttime() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_vision_range_nighttime() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
 }
 void CMsgBotWorldState_Unit::clear_has_vision_range_nighttime() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 void CMsgBotWorldState_Unit::clear_vision_range_nighttime() {
   vision_range_nighttime_ = 0u;
@@ -13279,13 +13476,13 @@ void CMsgBotWorldState_Unit::set_vision_range_nighttime(::google::protobuf::uint
 
 // optional uint32 health = 20;
 bool CMsgBotWorldState_Unit::has_health() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_health() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 void CMsgBotWorldState_Unit::clear_has_health() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 void CMsgBotWorldState_Unit::clear_health() {
   health_ = 0u;
@@ -13303,13 +13500,13 @@ void CMsgBotWorldState_Unit::set_health(::google::protobuf::uint32 value) {
 
 // optional uint32 health_max = 21;
 bool CMsgBotWorldState_Unit::has_health_max() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_health_max() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 void CMsgBotWorldState_Unit::clear_has_health_max() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 void CMsgBotWorldState_Unit::clear_health_max() {
   health_max_ = 0u;
@@ -13327,13 +13524,13 @@ void CMsgBotWorldState_Unit::set_health_max(::google::protobuf::uint32 value) {
 
 // optional float health_regen = 22;
 bool CMsgBotWorldState_Unit::has_health_regen() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_health_regen() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
 }
 void CMsgBotWorldState_Unit::clear_has_health_regen() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 void CMsgBotWorldState_Unit::clear_health_regen() {
   health_regen_ = 0;
@@ -13351,13 +13548,13 @@ void CMsgBotWorldState_Unit::set_health_regen(float value) {
 
 // optional uint32 mana = 25;
 bool CMsgBotWorldState_Unit::has_mana() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00008000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_mana() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
 }
 void CMsgBotWorldState_Unit::clear_has_mana() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 void CMsgBotWorldState_Unit::clear_mana() {
   mana_ = 0u;
@@ -13375,13 +13572,13 @@ void CMsgBotWorldState_Unit::set_mana(::google::protobuf::uint32 value) {
 
 // optional uint32 mana_max = 26;
 bool CMsgBotWorldState_Unit::has_mana_max() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
+  return (_has_bits_[0] & 0x00010000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_mana_max() {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00010000u;
 }
 void CMsgBotWorldState_Unit::clear_has_mana_max() {
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 void CMsgBotWorldState_Unit::clear_mana_max() {
   mana_max_ = 0u;
@@ -13399,13 +13596,13 @@ void CMsgBotWorldState_Unit::set_mana_max(::google::protobuf::uint32 value) {
 
 // optional float mana_regen = 27;
 bool CMsgBotWorldState_Unit::has_mana_regen() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
+  return (_has_bits_[0] & 0x00020000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_mana_regen() {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00020000u;
 }
 void CMsgBotWorldState_Unit::clear_has_mana_regen() {
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 void CMsgBotWorldState_Unit::clear_mana_regen() {
   mana_regen_ = 0;
@@ -13423,13 +13620,13 @@ void CMsgBotWorldState_Unit::set_mana_regen(float value) {
 
 // optional uint32 base_movement_speed = 30;
 bool CMsgBotWorldState_Unit::has_base_movement_speed() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
+  return (_has_bits_[0] & 0x00040000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_base_movement_speed() {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00040000u;
 }
 void CMsgBotWorldState_Unit::clear_has_base_movement_speed() {
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 void CMsgBotWorldState_Unit::clear_base_movement_speed() {
   base_movement_speed_ = 0u;
@@ -13447,13 +13644,13 @@ void CMsgBotWorldState_Unit::set_base_movement_speed(::google::protobuf::uint32 
 
 // optional uint32 current_movement_speed = 31;
 bool CMsgBotWorldState_Unit::has_current_movement_speed() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
+  return (_has_bits_[0] & 0x00080000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_current_movement_speed() {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00080000u;
 }
 void CMsgBotWorldState_Unit::clear_has_current_movement_speed() {
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 void CMsgBotWorldState_Unit::clear_current_movement_speed() {
   current_movement_speed_ = 0u;
@@ -13471,13 +13668,13 @@ void CMsgBotWorldState_Unit::set_current_movement_speed(::google::protobuf::uint
 
 // optional int32 anim_activity = 35;
 bool CMsgBotWorldState_Unit::has_anim_activity() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
+  return (_has_bits_[0] & 0x00100000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_anim_activity() {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00100000u;
 }
 void CMsgBotWorldState_Unit::clear_has_anim_activity() {
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 void CMsgBotWorldState_Unit::clear_anim_activity() {
   anim_activity_ = 0;
@@ -13495,13 +13692,13 @@ void CMsgBotWorldState_Unit::set_anim_activity(::google::protobuf::int32 value) 
 
 // optional float anim_cycle = 36;
 bool CMsgBotWorldState_Unit::has_anim_cycle() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
+  return (_has_bits_[0] & 0x00200000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_anim_cycle() {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00200000u;
 }
 void CMsgBotWorldState_Unit::clear_has_anim_cycle() {
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 void CMsgBotWorldState_Unit::clear_anim_cycle() {
   anim_cycle_ = 0;
@@ -13519,13 +13716,13 @@ void CMsgBotWorldState_Unit::set_anim_cycle(float value) {
 
 // optional uint32 base_damage = 40;
 bool CMsgBotWorldState_Unit::has_base_damage() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
+  return (_has_bits_[0] & 0x00400000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_base_damage() {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00400000u;
 }
 void CMsgBotWorldState_Unit::clear_has_base_damage() {
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 void CMsgBotWorldState_Unit::clear_base_damage() {
   base_damage_ = 0u;
@@ -13543,13 +13740,13 @@ void CMsgBotWorldState_Unit::set_base_damage(::google::protobuf::uint32 value) {
 
 // optional uint32 base_damage_variance = 41;
 bool CMsgBotWorldState_Unit::has_base_damage_variance() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
+  return (_has_bits_[0] & 0x00800000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_base_damage_variance() {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x00800000u;
 }
 void CMsgBotWorldState_Unit::clear_has_base_damage_variance() {
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 void CMsgBotWorldState_Unit::clear_base_damage_variance() {
   base_damage_variance_ = 0u;
@@ -13567,13 +13764,13 @@ void CMsgBotWorldState_Unit::set_base_damage_variance(::google::protobuf::uint32
 
 // optional uint32 bonus_damage = 42;
 bool CMsgBotWorldState_Unit::has_bonus_damage() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
+  return (_has_bits_[0] & 0x01000000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_bonus_damage() {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x01000000u;
 }
 void CMsgBotWorldState_Unit::clear_has_bonus_damage() {
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x01000000u;
 }
 void CMsgBotWorldState_Unit::clear_bonus_damage() {
   bonus_damage_ = 0u;
@@ -13591,13 +13788,13 @@ void CMsgBotWorldState_Unit::set_bonus_damage(::google::protobuf::uint32 value) 
 
 // optional uint32 attack_damage = 43;
 bool CMsgBotWorldState_Unit::has_attack_damage() const {
-  return (_has_bits_[0] & 0x01000000u) != 0;
+  return (_has_bits_[0] & 0x02000000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_attack_damage() {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x02000000u;
 }
 void CMsgBotWorldState_Unit::clear_has_attack_damage() {
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 void CMsgBotWorldState_Unit::clear_attack_damage() {
   attack_damage_ = 0u;
@@ -13615,13 +13812,13 @@ void CMsgBotWorldState_Unit::set_attack_damage(::google::protobuf::uint32 value)
 
 // optional uint32 attack_range = 44;
 bool CMsgBotWorldState_Unit::has_attack_range() const {
-  return (_has_bits_[0] & 0x02000000u) != 0;
+  return (_has_bits_[0] & 0x04000000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_attack_range() {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x04000000u;
 }
 void CMsgBotWorldState_Unit::clear_has_attack_range() {
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 void CMsgBotWorldState_Unit::clear_attack_range() {
   attack_range_ = 0u;
@@ -13637,25 +13834,25 @@ void CMsgBotWorldState_Unit::set_attack_range(::google::protobuf::uint32 value) 
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.attack_range)
 }
 
-// optional uint32 attack_speed = 45;
+// optional float attack_speed = 45;
 bool CMsgBotWorldState_Unit::has_attack_speed() const {
-  return (_has_bits_[0] & 0x04000000u) != 0;
+  return (_has_bits_[0] & 0x08000000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_attack_speed() {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x08000000u;
 }
 void CMsgBotWorldState_Unit::clear_has_attack_speed() {
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 void CMsgBotWorldState_Unit::clear_attack_speed() {
-  attack_speed_ = 0u;
+  attack_speed_ = 0;
   clear_has_attack_speed();
 }
-::google::protobuf::uint32 CMsgBotWorldState_Unit::attack_speed() const {
+float CMsgBotWorldState_Unit::attack_speed() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.attack_speed)
   return attack_speed_;
 }
-void CMsgBotWorldState_Unit::set_attack_speed(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_Unit::set_attack_speed(float value) {
   set_has_attack_speed();
   attack_speed_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.attack_speed)
@@ -13663,13 +13860,13 @@ void CMsgBotWorldState_Unit::set_attack_speed(::google::protobuf::uint32 value) 
 
 // optional float attack_anim_point = 46;
 bool CMsgBotWorldState_Unit::has_attack_anim_point() const {
-  return (_has_bits_[0] & 0x08000000u) != 0;
+  return (_has_bits_[0] & 0x10000000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_attack_anim_point() {
-  _has_bits_[0] |= 0x08000000u;
+  _has_bits_[0] |= 0x10000000u;
 }
 void CMsgBotWorldState_Unit::clear_has_attack_anim_point() {
-  _has_bits_[0] &= ~0x08000000u;
+  _has_bits_[0] &= ~0x10000000u;
 }
 void CMsgBotWorldState_Unit::clear_attack_anim_point() {
   attack_anim_point_ = 0;
@@ -13687,13 +13884,13 @@ void CMsgBotWorldState_Unit::set_attack_anim_point(float value) {
 
 // optional uint32 attack_acquisition_range = 47;
 bool CMsgBotWorldState_Unit::has_attack_acquisition_range() const {
-  return (_has_bits_[0] & 0x10000000u) != 0;
+  return (_has_bits_[0] & 0x20000000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_attack_acquisition_range() {
-  _has_bits_[0] |= 0x10000000u;
+  _has_bits_[0] |= 0x20000000u;
 }
 void CMsgBotWorldState_Unit::clear_has_attack_acquisition_range() {
-  _has_bits_[0] &= ~0x10000000u;
+  _has_bits_[0] &= ~0x20000000u;
 }
 void CMsgBotWorldState_Unit::clear_attack_acquisition_range() {
   attack_acquisition_range_ = 0u;
@@ -13711,13 +13908,13 @@ void CMsgBotWorldState_Unit::set_attack_acquisition_range(::google::protobuf::ui
 
 // optional uint32 attack_projectile_speed = 48;
 bool CMsgBotWorldState_Unit::has_attack_projectile_speed() const {
-  return (_has_bits_[0] & 0x20000000u) != 0;
+  return (_has_bits_[0] & 0x40000000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_attack_projectile_speed() {
-  _has_bits_[0] |= 0x20000000u;
+  _has_bits_[0] |= 0x40000000u;
 }
 void CMsgBotWorldState_Unit::clear_has_attack_projectile_speed() {
-  _has_bits_[0] &= ~0x20000000u;
+  _has_bits_[0] &= ~0x40000000u;
 }
 void CMsgBotWorldState_Unit::clear_attack_projectile_speed() {
   attack_projectile_speed_ = 0u;
@@ -13735,13 +13932,13 @@ void CMsgBotWorldState_Unit::set_attack_projectile_speed(::google::protobuf::uin
 
 // optional uint32 attack_target_handle = 49;
 bool CMsgBotWorldState_Unit::has_attack_target_handle() const {
-  return (_has_bits_[0] & 0x40000000u) != 0;
+  return (_has_bits_[0] & 0x80000000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_attack_target_handle() {
-  _has_bits_[0] |= 0x40000000u;
+  _has_bits_[0] |= 0x80000000u;
 }
 void CMsgBotWorldState_Unit::clear_has_attack_target_handle() {
-  _has_bits_[0] &= ~0x40000000u;
+  _has_bits_[0] &= ~0x80000000u;
 }
 void CMsgBotWorldState_Unit::clear_attack_target_handle() {
   attack_target_handle_ = 0u;
@@ -13759,13 +13956,13 @@ void CMsgBotWorldState_Unit::set_attack_target_handle(::google::protobuf::uint32
 
 // optional uint32 bounty_xp = 60;
 bool CMsgBotWorldState_Unit::has_bounty_xp() const {
-  return (_has_bits_[1] & 0x00000008u) != 0;
+  return (_has_bits_[1] & 0x00000010u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_bounty_xp() {
-  _has_bits_[1] |= 0x00000008u;
+  _has_bits_[1] |= 0x00000010u;
 }
 void CMsgBotWorldState_Unit::clear_has_bounty_xp() {
-  _has_bits_[1] &= ~0x00000008u;
+  _has_bits_[1] &= ~0x00000010u;
 }
 void CMsgBotWorldState_Unit::clear_bounty_xp() {
   bounty_xp_ = 0u;
@@ -13783,13 +13980,13 @@ void CMsgBotWorldState_Unit::set_bounty_xp(::google::protobuf::uint32 value) {
 
 // optional uint32 bounty_gold_min = 61;
 bool CMsgBotWorldState_Unit::has_bounty_gold_min() const {
-  return (_has_bits_[1] & 0x00000010u) != 0;
+  return (_has_bits_[1] & 0x00000020u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_bounty_gold_min() {
-  _has_bits_[1] |= 0x00000010u;
+  _has_bits_[1] |= 0x00000020u;
 }
 void CMsgBotWorldState_Unit::clear_has_bounty_gold_min() {
-  _has_bits_[1] &= ~0x00000010u;
+  _has_bits_[1] &= ~0x00000020u;
 }
 void CMsgBotWorldState_Unit::clear_bounty_gold_min() {
   bounty_gold_min_ = 0u;
@@ -13807,13 +14004,13 @@ void CMsgBotWorldState_Unit::set_bounty_gold_min(::google::protobuf::uint32 valu
 
 // optional uint32 bounty_gold_max = 62;
 bool CMsgBotWorldState_Unit::has_bounty_gold_max() const {
-  return (_has_bits_[1] & 0x00000020u) != 0;
+  return (_has_bits_[1] & 0x00000040u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_bounty_gold_max() {
-  _has_bits_[1] |= 0x00000020u;
+  _has_bits_[1] |= 0x00000040u;
 }
 void CMsgBotWorldState_Unit::clear_has_bounty_gold_max() {
-  _has_bits_[1] &= ~0x00000020u;
+  _has_bits_[1] &= ~0x00000040u;
 }
 void CMsgBotWorldState_Unit::clear_bounty_gold_max() {
   bounty_gold_max_ = 0u;
@@ -13831,13 +14028,13 @@ void CMsgBotWorldState_Unit::set_bounty_gold_max(::google::protobuf::uint32 valu
 
 // optional bool is_channeling = 65;
 bool CMsgBotWorldState_Unit::has_is_channeling() const {
-  return (_has_bits_[1] & 0x00000001u) != 0;
+  return (_has_bits_[1] & 0x00000002u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_channeling() {
-  _has_bits_[1] |= 0x00000001u;
+  _has_bits_[1] |= 0x00000002u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_channeling() {
-  _has_bits_[1] &= ~0x00000001u;
+  _has_bits_[1] &= ~0x00000002u;
 }
 void CMsgBotWorldState_Unit::clear_is_channeling() {
   is_channeling_ = false;
@@ -13855,13 +14052,13 @@ void CMsgBotWorldState_Unit::set_is_channeling(bool value) {
 
 // optional uint32 active_ability_handle = 66;
 bool CMsgBotWorldState_Unit::has_active_ability_handle() const {
-  return (_has_bits_[1] & 0x00000040u) != 0;
+  return (_has_bits_[1] & 0x00000080u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_active_ability_handle() {
-  _has_bits_[1] |= 0x00000040u;
+  _has_bits_[1] |= 0x00000080u;
 }
 void CMsgBotWorldState_Unit::clear_has_active_ability_handle() {
-  _has_bits_[1] &= ~0x00000040u;
+  _has_bits_[1] &= ~0x00000080u;
 }
 void CMsgBotWorldState_Unit::clear_active_ability_handle() {
   active_ability_handle_ = 0u;
@@ -13879,13 +14076,13 @@ void CMsgBotWorldState_Unit::set_active_ability_handle(::google::protobuf::uint3
 
 // optional bool is_attack_immune = 70;
 bool CMsgBotWorldState_Unit::has_is_attack_immune() const {
-  return (_has_bits_[1] & 0x00000002u) != 0;
+  return (_has_bits_[1] & 0x00000004u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_attack_immune() {
-  _has_bits_[1] |= 0x00000002u;
+  _has_bits_[1] |= 0x00000004u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_attack_immune() {
-  _has_bits_[1] &= ~0x00000002u;
+  _has_bits_[1] &= ~0x00000004u;
 }
 void CMsgBotWorldState_Unit::clear_is_attack_immune() {
   is_attack_immune_ = false;
@@ -13903,13 +14100,13 @@ void CMsgBotWorldState_Unit::set_is_attack_immune(bool value) {
 
 // optional bool is_blind = 71;
 bool CMsgBotWorldState_Unit::has_is_blind() const {
-  return (_has_bits_[1] & 0x00000004u) != 0;
+  return (_has_bits_[1] & 0x00000008u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_blind() {
-  _has_bits_[1] |= 0x00000004u;
+  _has_bits_[1] |= 0x00000008u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_blind() {
-  _has_bits_[1] &= ~0x00000004u;
+  _has_bits_[1] &= ~0x00000008u;
 }
 void CMsgBotWorldState_Unit::clear_is_blind() {
   is_blind_ = false;
@@ -13927,13 +14124,13 @@ void CMsgBotWorldState_Unit::set_is_blind(bool value) {
 
 // optional bool is_block_disabled = 72;
 bool CMsgBotWorldState_Unit::has_is_block_disabled() const {
-  return (_has_bits_[1] & 0x00000080u) != 0;
+  return (_has_bits_[1] & 0x00000100u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_block_disabled() {
-  _has_bits_[1] |= 0x00000080u;
+  _has_bits_[1] |= 0x00000100u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_block_disabled() {
-  _has_bits_[1] &= ~0x00000080u;
+  _has_bits_[1] &= ~0x00000100u;
 }
 void CMsgBotWorldState_Unit::clear_is_block_disabled() {
   is_block_disabled_ = false;
@@ -13951,13 +14148,13 @@ void CMsgBotWorldState_Unit::set_is_block_disabled(bool value) {
 
 // optional bool is_disarmed = 73;
 bool CMsgBotWorldState_Unit::has_is_disarmed() const {
-  return (_has_bits_[1] & 0x00000100u) != 0;
+  return (_has_bits_[1] & 0x00000200u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_disarmed() {
-  _has_bits_[1] |= 0x00000100u;
+  _has_bits_[1] |= 0x00000200u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_disarmed() {
-  _has_bits_[1] &= ~0x00000100u;
+  _has_bits_[1] &= ~0x00000200u;
 }
 void CMsgBotWorldState_Unit::clear_is_disarmed() {
   is_disarmed_ = false;
@@ -13975,13 +14172,13 @@ void CMsgBotWorldState_Unit::set_is_disarmed(bool value) {
 
 // optional bool is_dominated = 74;
 bool CMsgBotWorldState_Unit::has_is_dominated() const {
-  return (_has_bits_[1] & 0x00000200u) != 0;
+  return (_has_bits_[1] & 0x00000400u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_dominated() {
-  _has_bits_[1] |= 0x00000200u;
+  _has_bits_[1] |= 0x00000400u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_dominated() {
-  _has_bits_[1] &= ~0x00000200u;
+  _has_bits_[1] &= ~0x00000400u;
 }
 void CMsgBotWorldState_Unit::clear_is_dominated() {
   is_dominated_ = false;
@@ -13999,13 +14196,13 @@ void CMsgBotWorldState_Unit::set_is_dominated(bool value) {
 
 // optional bool is_evade_disabled = 75;
 bool CMsgBotWorldState_Unit::has_is_evade_disabled() const {
-  return (_has_bits_[1] & 0x00000400u) != 0;
+  return (_has_bits_[1] & 0x00000800u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_evade_disabled() {
-  _has_bits_[1] |= 0x00000400u;
+  _has_bits_[1] |= 0x00000800u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_evade_disabled() {
-  _has_bits_[1] &= ~0x00000400u;
+  _has_bits_[1] &= ~0x00000800u;
 }
 void CMsgBotWorldState_Unit::clear_is_evade_disabled() {
   is_evade_disabled_ = false;
@@ -14023,13 +14220,13 @@ void CMsgBotWorldState_Unit::set_is_evade_disabled(bool value) {
 
 // optional bool is_hexed = 76;
 bool CMsgBotWorldState_Unit::has_is_hexed() const {
-  return (_has_bits_[1] & 0x00000800u) != 0;
+  return (_has_bits_[1] & 0x00001000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_hexed() {
-  _has_bits_[1] |= 0x00000800u;
+  _has_bits_[1] |= 0x00001000u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_hexed() {
-  _has_bits_[1] &= ~0x00000800u;
+  _has_bits_[1] &= ~0x00001000u;
 }
 void CMsgBotWorldState_Unit::clear_is_hexed() {
   is_hexed_ = false;
@@ -14047,13 +14244,13 @@ void CMsgBotWorldState_Unit::set_is_hexed(bool value) {
 
 // optional bool is_invisible = 77;
 bool CMsgBotWorldState_Unit::has_is_invisible() const {
-  return (_has_bits_[1] & 0x00001000u) != 0;
+  return (_has_bits_[1] & 0x00002000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_invisible() {
-  _has_bits_[1] |= 0x00001000u;
+  _has_bits_[1] |= 0x00002000u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_invisible() {
-  _has_bits_[1] &= ~0x00001000u;
+  _has_bits_[1] &= ~0x00002000u;
 }
 void CMsgBotWorldState_Unit::clear_is_invisible() {
   is_invisible_ = false;
@@ -14071,13 +14268,13 @@ void CMsgBotWorldState_Unit::set_is_invisible(bool value) {
 
 // optional bool is_invulnerable = 78;
 bool CMsgBotWorldState_Unit::has_is_invulnerable() const {
-  return (_has_bits_[1] & 0x00002000u) != 0;
+  return (_has_bits_[1] & 0x00004000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_invulnerable() {
-  _has_bits_[1] |= 0x00002000u;
+  _has_bits_[1] |= 0x00004000u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_invulnerable() {
-  _has_bits_[1] &= ~0x00002000u;
+  _has_bits_[1] &= ~0x00004000u;
 }
 void CMsgBotWorldState_Unit::clear_is_invulnerable() {
   is_invulnerable_ = false;
@@ -14095,13 +14292,13 @@ void CMsgBotWorldState_Unit::set_is_invulnerable(bool value) {
 
 // optional bool is_magic_immune = 79;
 bool CMsgBotWorldState_Unit::has_is_magic_immune() const {
-  return (_has_bits_[1] & 0x00004000u) != 0;
+  return (_has_bits_[1] & 0x00008000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_magic_immune() {
-  _has_bits_[1] |= 0x00004000u;
+  _has_bits_[1] |= 0x00008000u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_magic_immune() {
-  _has_bits_[1] &= ~0x00004000u;
+  _has_bits_[1] &= ~0x00008000u;
 }
 void CMsgBotWorldState_Unit::clear_is_magic_immune() {
   is_magic_immune_ = false;
@@ -14503,13 +14700,13 @@ void CMsgBotWorldState_Unit::set_primary_attribute(::google::protobuf::uint32 va
 
 // optional bool is_illusion = 111;
 bool CMsgBotWorldState_Unit::has_is_illusion() const {
-  return (_has_bits_[2] & 0x00000200u) != 0;
+  return (_has_bits_[2] & 0x00002000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_illusion() {
-  _has_bits_[2] |= 0x00000200u;
+  _has_bits_[2] |= 0x00002000u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_illusion() {
-  _has_bits_[2] &= ~0x00000200u;
+  _has_bits_[2] &= ~0x00002000u;
 }
 void CMsgBotWorldState_Unit::clear_is_illusion() {
   is_illusion_ = false;
@@ -14573,7 +14770,7 @@ void CMsgBotWorldState_Unit::set_buyback_cost(::google::protobuf::uint32 value) 
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.buyback_cost)
 }
 
-// optional uint32 buyback_cooldown = 114;
+// optional float buyback_cooldown = 114;
 bool CMsgBotWorldState_Unit::has_buyback_cooldown() const {
   return (_has_bits_[1] & 0x20000000u) != 0;
 }
@@ -14584,44 +14781,44 @@ void CMsgBotWorldState_Unit::clear_has_buyback_cooldown() {
   _has_bits_[1] &= ~0x20000000u;
 }
 void CMsgBotWorldState_Unit::clear_buyback_cooldown() {
-  buyback_cooldown_ = 0u;
+  buyback_cooldown_ = 0;
   clear_has_buyback_cooldown();
 }
-::google::protobuf::uint32 CMsgBotWorldState_Unit::buyback_cooldown() const {
+float CMsgBotWorldState_Unit::buyback_cooldown() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.buyback_cooldown)
   return buyback_cooldown_;
 }
-void CMsgBotWorldState_Unit::set_buyback_cooldown(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_Unit::set_buyback_cooldown(float value) {
   set_has_buyback_cooldown();
   buyback_cooldown_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.buyback_cooldown)
 }
 
-// optional float spell_amplifiction = 115;
-bool CMsgBotWorldState_Unit::has_spell_amplifiction() const {
+// optional float spell_amplification = 115;
+bool CMsgBotWorldState_Unit::has_spell_amplification() const {
   return (_has_bits_[1] & 0x40000000u) != 0;
 }
-void CMsgBotWorldState_Unit::set_has_spell_amplifiction() {
+void CMsgBotWorldState_Unit::set_has_spell_amplification() {
   _has_bits_[1] |= 0x40000000u;
 }
-void CMsgBotWorldState_Unit::clear_has_spell_amplifiction() {
+void CMsgBotWorldState_Unit::clear_has_spell_amplification() {
   _has_bits_[1] &= ~0x40000000u;
 }
-void CMsgBotWorldState_Unit::clear_spell_amplifiction() {
-  spell_amplifiction_ = 0;
-  clear_has_spell_amplifiction();
+void CMsgBotWorldState_Unit::clear_spell_amplification() {
+  spell_amplification_ = 0;
+  clear_has_spell_amplification();
 }
-float CMsgBotWorldState_Unit::spell_amplifiction() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.spell_amplifiction)
-  return spell_amplifiction_;
+float CMsgBotWorldState_Unit::spell_amplification() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.spell_amplification)
+  return spell_amplification_;
 }
-void CMsgBotWorldState_Unit::set_spell_amplifiction(float value) {
-  set_has_spell_amplifiction();
-  spell_amplifiction_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.spell_amplifiction)
+void CMsgBotWorldState_Unit::set_spell_amplification(float value) {
+  set_has_spell_amplification();
+  spell_amplification_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.spell_amplification)
 }
 
-// optional uint32 armor = 116;
+// optional float armor = 116;
 bool CMsgBotWorldState_Unit::has_armor() const {
   return (_has_bits_[1] & 0x80000000u) != 0;
 }
@@ -14632,20 +14829,20 @@ void CMsgBotWorldState_Unit::clear_has_armor() {
   _has_bits_[1] &= ~0x80000000u;
 }
 void CMsgBotWorldState_Unit::clear_armor() {
-  armor_ = 0u;
+  armor_ = 0;
   clear_has_armor();
 }
-::google::protobuf::uint32 CMsgBotWorldState_Unit::armor() const {
+float CMsgBotWorldState_Unit::armor() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.armor)
   return armor_;
 }
-void CMsgBotWorldState_Unit::set_armor(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_Unit::set_armor(float value) {
   set_has_armor();
   armor_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.armor)
 }
 
-// optional uint32 magic_resist = 117;
+// optional float magic_resist = 117;
 bool CMsgBotWorldState_Unit::has_magic_resist() const {
   return (_has_bits_[2] & 0x00000001u) != 0;
 }
@@ -14656,14 +14853,14 @@ void CMsgBotWorldState_Unit::clear_has_magic_resist() {
   _has_bits_[2] &= ~0x00000001u;
 }
 void CMsgBotWorldState_Unit::clear_magic_resist() {
-  magic_resist_ = 0u;
+  magic_resist_ = 0;
   clear_has_magic_resist();
 }
-::google::protobuf::uint32 CMsgBotWorldState_Unit::magic_resist() const {
+float CMsgBotWorldState_Unit::magic_resist() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.magic_resist)
   return magic_resist_;
 }
-void CMsgBotWorldState_Unit::set_magic_resist(::google::protobuf::uint32 value) {
+void CMsgBotWorldState_Unit::set_magic_resist(float value) {
   set_has_magic_resist();
   magic_resist_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.magic_resist)
@@ -14837,15 +15034,111 @@ void CMsgBotWorldState_Unit::set_denies(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.denies)
 }
 
-// optional float remaining_lifespan = 130;
-bool CMsgBotWorldState_Unit::has_remaining_lifespan() const {
+// optional uint32 net_worth = 126;
+bool CMsgBotWorldState_Unit::has_net_worth() const {
   return (_has_bits_[2] & 0x00000100u) != 0;
 }
-void CMsgBotWorldState_Unit::set_has_remaining_lifespan() {
+void CMsgBotWorldState_Unit::set_has_net_worth() {
   _has_bits_[2] |= 0x00000100u;
 }
-void CMsgBotWorldState_Unit::clear_has_remaining_lifespan() {
+void CMsgBotWorldState_Unit::clear_has_net_worth() {
   _has_bits_[2] &= ~0x00000100u;
+}
+void CMsgBotWorldState_Unit::clear_net_worth() {
+  net_worth_ = 0u;
+  clear_has_net_worth();
+}
+::google::protobuf::uint32 CMsgBotWorldState_Unit::net_worth() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.net_worth)
+  return net_worth_;
+}
+void CMsgBotWorldState_Unit::set_net_worth(::google::protobuf::uint32 value) {
+  set_has_net_worth();
+  net_worth_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.net_worth)
+}
+
+// optional uint32 strength = 127;
+bool CMsgBotWorldState_Unit::has_strength() const {
+  return (_has_bits_[2] & 0x00000200u) != 0;
+}
+void CMsgBotWorldState_Unit::set_has_strength() {
+  _has_bits_[2] |= 0x00000200u;
+}
+void CMsgBotWorldState_Unit::clear_has_strength() {
+  _has_bits_[2] &= ~0x00000200u;
+}
+void CMsgBotWorldState_Unit::clear_strength() {
+  strength_ = 0u;
+  clear_has_strength();
+}
+::google::protobuf::uint32 CMsgBotWorldState_Unit::strength() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.strength)
+  return strength_;
+}
+void CMsgBotWorldState_Unit::set_strength(::google::protobuf::uint32 value) {
+  set_has_strength();
+  strength_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.strength)
+}
+
+// optional uint32 agility = 128;
+bool CMsgBotWorldState_Unit::has_agility() const {
+  return (_has_bits_[2] & 0x00000400u) != 0;
+}
+void CMsgBotWorldState_Unit::set_has_agility() {
+  _has_bits_[2] |= 0x00000400u;
+}
+void CMsgBotWorldState_Unit::clear_has_agility() {
+  _has_bits_[2] &= ~0x00000400u;
+}
+void CMsgBotWorldState_Unit::clear_agility() {
+  agility_ = 0u;
+  clear_has_agility();
+}
+::google::protobuf::uint32 CMsgBotWorldState_Unit::agility() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.agility)
+  return agility_;
+}
+void CMsgBotWorldState_Unit::set_agility(::google::protobuf::uint32 value) {
+  set_has_agility();
+  agility_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.agility)
+}
+
+// optional uint32 intelligence = 129;
+bool CMsgBotWorldState_Unit::has_intelligence() const {
+  return (_has_bits_[2] & 0x00000800u) != 0;
+}
+void CMsgBotWorldState_Unit::set_has_intelligence() {
+  _has_bits_[2] |= 0x00000800u;
+}
+void CMsgBotWorldState_Unit::clear_has_intelligence() {
+  _has_bits_[2] &= ~0x00000800u;
+}
+void CMsgBotWorldState_Unit::clear_intelligence() {
+  intelligence_ = 0u;
+  clear_has_intelligence();
+}
+::google::protobuf::uint32 CMsgBotWorldState_Unit::intelligence() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.intelligence)
+  return intelligence_;
+}
+void CMsgBotWorldState_Unit::set_intelligence(::google::protobuf::uint32 value) {
+  set_has_intelligence();
+  intelligence_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.intelligence)
+}
+
+// optional float remaining_lifespan = 130;
+bool CMsgBotWorldState_Unit::has_remaining_lifespan() const {
+  return (_has_bits_[2] & 0x00001000u) != 0;
+}
+void CMsgBotWorldState_Unit::set_has_remaining_lifespan() {
+  _has_bits_[2] |= 0x00001000u;
+}
+void CMsgBotWorldState_Unit::clear_has_remaining_lifespan() {
+  _has_bits_[2] &= ~0x00001000u;
 }
 void CMsgBotWorldState_Unit::clear_remaining_lifespan() {
   remaining_lifespan_ = 0;
@@ -14863,13 +15156,13 @@ void CMsgBotWorldState_Unit::set_remaining_lifespan(float value) {
 
 // optional bool flying_courier = 140;
 bool CMsgBotWorldState_Unit::has_flying_courier() const {
-  return (_has_bits_[2] & 0x00000400u) != 0;
+  return (_has_bits_[2] & 0x00004000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_flying_courier() {
-  _has_bits_[2] |= 0x00000400u;
+  _has_bits_[2] |= 0x00004000u;
 }
 void CMsgBotWorldState_Unit::clear_has_flying_courier() {
-  _has_bits_[2] &= ~0x00000400u;
+  _has_bits_[2] &= ~0x00004000u;
 }
 void CMsgBotWorldState_Unit::clear_flying_courier() {
   flying_courier_ = false;
@@ -14887,13 +15180,13 @@ void CMsgBotWorldState_Unit::set_flying_courier(bool value) {
 
 // optional float shrine_cooldown = 150;
 bool CMsgBotWorldState_Unit::has_shrine_cooldown() const {
-  return (_has_bits_[1] & 0x00008000u) != 0;
+  return (_has_bits_[2] & 0x00010000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_shrine_cooldown() {
-  _has_bits_[1] |= 0x00008000u;
+  _has_bits_[2] |= 0x00010000u;
 }
 void CMsgBotWorldState_Unit::clear_has_shrine_cooldown() {
-  _has_bits_[1] &= ~0x00008000u;
+  _has_bits_[2] &= ~0x00010000u;
 }
 void CMsgBotWorldState_Unit::clear_shrine_cooldown() {
   shrine_cooldown_ = 0;
@@ -14911,13 +15204,13 @@ void CMsgBotWorldState_Unit::set_shrine_cooldown(float value) {
 
 // optional bool is_shrine_healing = 151;
 bool CMsgBotWorldState_Unit::has_is_shrine_healing() const {
-  return (_has_bits_[2] & 0x00000800u) != 0;
+  return (_has_bits_[2] & 0x00008000u) != 0;
 }
 void CMsgBotWorldState_Unit::set_has_is_shrine_healing() {
-  _has_bits_[2] |= 0x00000800u;
+  _has_bits_[2] |= 0x00008000u;
 }
 void CMsgBotWorldState_Unit::clear_has_is_shrine_healing() {
-  _has_bits_[2] &= ~0x00000800u;
+  _has_bits_[2] &= ~0x00008000u;
 }
 void CMsgBotWorldState_Unit::clear_is_shrine_healing() {
   is_shrine_healing_ = false;
@@ -15075,13 +15368,13 @@ bool CMsgBotWorldState::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 game_time = 2;
+      // optional float game_time = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+            static_cast< ::google::protobuf::uint8>(21u)) {
           set_has_game_time();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &game_time_)));
         } else {
           goto handle_unusual;
@@ -15089,13 +15382,13 @@ bool CMsgBotWorldState::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 dota_time = 3;
+      // optional float dota_time = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
+            static_cast< ::google::protobuf::uint8>(29u)) {
           set_has_dota_time();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &dota_time_)));
         } else {
           goto handle_unusual;
@@ -15351,14 +15644,14 @@ void CMsgBotWorldState::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->team_id(), output);
   }
 
-  // optional uint32 game_time = 2;
+  // optional float game_time = 2;
   if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->game_time(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->game_time(), output);
   }
 
-  // optional uint32 dota_time = 3;
+  // optional float dota_time = 3;
   if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->dota_time(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->dota_time(), output);
   }
 
   // optional uint32 game_state = 4;
@@ -15477,14 +15770,14 @@ void CMsgBotWorldState::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->team_id(), target);
   }
 
-  // optional uint32 game_time = 2;
+  // optional float game_time = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->game_time(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->game_time(), target);
   }
 
-  // optional uint32 dota_time = 3;
+  // optional float dota_time = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->dota_time(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->dota_time(), target);
   }
 
   // optional uint32 game_state = 4;
@@ -15753,18 +16046,14 @@ size_t CMsgBotWorldState::ByteSizeLong() const {
           this->team_id());
     }
 
-    // optional uint32 game_time = 2;
+    // optional float game_time = 2;
     if (has_game_time()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->game_time());
+      total_size += 1 + 4;
     }
 
-    // optional uint32 dota_time = 3;
+    // optional float dota_time = 3;
     if (has_dota_time()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->dota_time());
+      total_size += 1 + 4;
     }
 
     // optional uint32 game_state = 4;
@@ -15958,7 +16247,7 @@ void CMsgBotWorldState::set_team_id(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.team_id)
 }
 
-// optional uint32 game_time = 2;
+// optional float game_time = 2;
 bool CMsgBotWorldState::has_game_time() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -15969,20 +16258,20 @@ void CMsgBotWorldState::clear_has_game_time() {
   _has_bits_[0] &= ~0x00000002u;
 }
 void CMsgBotWorldState::clear_game_time() {
-  game_time_ = 0u;
+  game_time_ = 0;
   clear_has_game_time();
 }
-::google::protobuf::uint32 CMsgBotWorldState::game_time() const {
+float CMsgBotWorldState::game_time() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.game_time)
   return game_time_;
 }
-void CMsgBotWorldState::set_game_time(::google::protobuf::uint32 value) {
+void CMsgBotWorldState::set_game_time(float value) {
   set_has_game_time();
   game_time_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.game_time)
 }
 
-// optional uint32 dota_time = 3;
+// optional float dota_time = 3;
 bool CMsgBotWorldState::has_dota_time() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -15993,14 +16282,14 @@ void CMsgBotWorldState::clear_has_dota_time() {
   _has_bits_[0] &= ~0x00000004u;
 }
 void CMsgBotWorldState::clear_dota_time() {
-  dota_time_ = 0u;
+  dota_time_ = 0;
   clear_has_dota_time();
 }
-::google::protobuf::uint32 CMsgBotWorldState::dota_time() const {
+float CMsgBotWorldState::dota_time() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.dota_time)
   return dota_time_;
 }
-void CMsgBotWorldState::set_dota_time(::google::protobuf::uint32 value) {
+void CMsgBotWorldState::set_dota_time(float value) {
   set_has_dota_time();
   dota_time_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.dota_time)

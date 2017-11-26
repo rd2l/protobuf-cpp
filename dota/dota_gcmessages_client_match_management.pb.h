@@ -236,9 +236,6 @@ extern CMsgClientToGCRequestSteamDatagramTicketResponseDefaultTypeInternal _CMsg
 class CMsgConVarValue;
 class CMsgConVarValueDefaultTypeInternal;
 extern CMsgConVarValueDefaultTypeInternal _CMsgConVarValue_default_instance_;
-class CMsgConsumableExhausted;
-class CMsgConsumableExhaustedDefaultTypeInternal;
-extern CMsgConsumableExhaustedDefaultTypeInternal _CMsgConsumableExhausted_default_instance_;
 class CMsgCreateSpectatorLobby;
 class CMsgCreateSpectatorLobbyDefaultTypeInternal;
 extern CMsgCreateSpectatorLobbyDefaultTypeInternal _CMsgCreateSpectatorLobby_default_instance_;
@@ -308,6 +305,12 @@ extern CMsgGCBannedWordListRequestDefaultTypeInternal _CMsgGCBannedWordListReque
 class CMsgGCBannedWordListResponse;
 class CMsgGCBannedWordListResponseDefaultTypeInternal;
 extern CMsgGCBannedWordListResponseDefaultTypeInternal _CMsgGCBannedWordListResponse_default_instance_;
+class CMsgGCCheckClanMembership;
+class CMsgGCCheckClanMembershipDefaultTypeInternal;
+extern CMsgGCCheckClanMembershipDefaultTypeInternal _CMsgGCCheckClanMembership_default_instance_;
+class CMsgGCCheckClanMembership_Response;
+class CMsgGCCheckClanMembership_ResponseDefaultTypeInternal;
+extern CMsgGCCheckClanMembership_ResponseDefaultTypeInternal _CMsgGCCheckClanMembership_Response_default_instance_;
 class CMsgGCCheckFriendship;
 class CMsgGCCheckFriendshipDefaultTypeInternal;
 extern CMsgGCCheckFriendshipDefaultTypeInternal _CMsgGCCheckFriendship_default_instance_;
@@ -368,6 +371,9 @@ extern CMsgGCGetPersonaNames_ResponseDefaultTypeInternal _CMsgGCGetPersonaNames_
 class CMsgGCGetPersonaNames_Response_PersonaName;
 class CMsgGCGetPersonaNames_Response_PersonaNameDefaultTypeInternal;
 extern CMsgGCGetPersonaNames_Response_PersonaNameDefaultTypeInternal _CMsgGCGetPersonaNames_Response_PersonaName_default_instance_;
+class CMsgGCHAccountTwoFactorChange;
+class CMsgGCHAccountTwoFactorChangeDefaultTypeInternal;
+extern CMsgGCHAccountTwoFactorChangeDefaultTypeInternal _CMsgGCHAccountTwoFactorChange_default_instance_;
 class CMsgGCHAccountVacStatusChange;
 class CMsgGCHAccountVacStatusChangeDefaultTypeInternal;
 extern CMsgGCHAccountVacStatusChangeDefaultTypeInternal _CMsgGCHAccountVacStatusChange_default_instance_;
@@ -827,11 +833,12 @@ enum EStartFindingMatchResult {
   k_EStartFindingMatchResult_MemberMissingEventOwnership = 118,
   k_EStartFindingMatchResult_WeekendTourneyNotUnlocked = 119,
   k_EStartFindingMatchResult_WeekendTourneyRecentParticipation = 120,
-  k_EStartFindingMatchResult_MemberMissingAnchoredPhoneNumber = 121
+  k_EStartFindingMatchResult_MemberMissingAnchoredPhoneNumber = 121,
+  k_EStartFindingMatchResult_NotMemberOfClan = 122
 };
 bool EStartFindingMatchResult_IsValid(int value);
 const EStartFindingMatchResult EStartFindingMatchResult_MIN = k_EStartFindingMatchResult_Invalid;
-const EStartFindingMatchResult EStartFindingMatchResult_MAX = k_EStartFindingMatchResult_MemberMissingAnchoredPhoneNumber;
+const EStartFindingMatchResult EStartFindingMatchResult_MAX = k_EStartFindingMatchResult_NotMemberOfClan;
 const int EStartFindingMatchResult_ARRAYSIZE = EStartFindingMatchResult_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* EStartFindingMatchResult_descriptor();
@@ -978,13 +985,6 @@ class CMsgStartFindingMatch : public ::google::protobuf::Message /* @@protoc_ins
   ::google::protobuf::uint32 team_id() const;
   void set_team_id(::google::protobuf::uint32 value);
 
-  // optional uint32 map_preference = 9;
-  bool has_map_preference() const;
-  void clear_map_preference();
-  static const int kMapPreferenceFieldNumber = 9;
-  ::google::protobuf::uint32 map_preference() const;
-  void set_map_preference(::google::protobuf::uint32 value);
-
   // optional .proto.dota.MatchLanguages game_language_enum = 10 [default = MATCH_LANGUAGE_INVALID];
   bool has_game_language_enum() const;
   void clear_game_language_enum();
@@ -1012,6 +1012,13 @@ class CMsgStartFindingMatch : public ::google::protobuf::Message /* @@protoc_ins
   static const int kBotScriptIndexFieldNumber = 15;
   ::google::protobuf::uint32 bot_script_index() const;
   void set_bot_script_index(::google::protobuf::uint32 value);
+
+  // optional uint32 steam_clan_account_id = 16;
+  bool has_steam_clan_account_id() const;
+  void clear_steam_clan_account_id();
+  static const int kSteamClanAccountIdFieldNumber = 16;
+  ::google::protobuf::uint32 steam_clan_account_id() const;
+  void set_steam_clan_account_id(::google::protobuf::uint32 value);
 
   // optional uint32 matchgroups = 2 [default = 4294967295];
   bool has_matchgroups() const;
@@ -1057,8 +1064,6 @@ class CMsgStartFindingMatch : public ::google::protobuf::Message /* @@protoc_ins
   void clear_has_match_type();
   void set_has_matchlanguages();
   void clear_has_matchlanguages();
-  void set_has_map_preference();
-  void clear_has_map_preference();
   void set_has_team_id();
   void clear_has_team_id();
   void set_has_game_language_enum();
@@ -1073,6 +1078,8 @@ class CMsgStartFindingMatch : public ::google::protobuf::Message /* @@protoc_ins
   void clear_has_solo_queue();
   void set_has_bot_script_index();
   void clear_has_bot_script_index();
+  void set_has_steam_clan_account_id();
+  void clear_has_steam_clan_account_id();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -1083,11 +1090,11 @@ class CMsgStartFindingMatch : public ::google::protobuf::Message /* @@protoc_ins
   ::google::protobuf::uint32 client_version_;
   int match_type_;
   ::google::protobuf::uint32 team_id_;
-  ::google::protobuf::uint32 map_preference_;
   int game_language_enum_;
   ::google::protobuf::uint32 region_select_flags_;
   bool solo_queue_;
   ::google::protobuf::uint32 bot_script_index_;
+  ::google::protobuf::uint32 steam_clan_account_id_;
   ::google::protobuf::uint32 matchgroups_;
   ::google::protobuf::uint32 game_modes_;
   int bot_difficulty_;
@@ -8841,30 +8848,6 @@ inline void CMsgStartFindingMatch::set_matchlanguages(::google::protobuf::uint32
   // @@protoc_insertion_point(field_set:proto.dota.CMsgStartFindingMatch.matchlanguages)
 }
 
-// optional uint32 map_preference = 9;
-inline bool CMsgStartFindingMatch::has_map_preference() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void CMsgStartFindingMatch::set_has_map_preference() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void CMsgStartFindingMatch::clear_has_map_preference() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline void CMsgStartFindingMatch::clear_map_preference() {
-  map_preference_ = 0u;
-  clear_has_map_preference();
-}
-inline ::google::protobuf::uint32 CMsgStartFindingMatch::map_preference() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgStartFindingMatch.map_preference)
-  return map_preference_;
-}
-inline void CMsgStartFindingMatch::set_map_preference(::google::protobuf::uint32 value) {
-  set_has_map_preference();
-  map_preference_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgStartFindingMatch.map_preference)
-}
-
 // optional uint32 team_id = 8;
 inline bool CMsgStartFindingMatch::has_team_id() const {
   return (_has_bits_[0] & 0x00000020u) != 0;
@@ -8891,13 +8874,13 @@ inline void CMsgStartFindingMatch::set_team_id(::google::protobuf::uint32 value)
 
 // optional .proto.dota.MatchLanguages game_language_enum = 10 [default = MATCH_LANGUAGE_INVALID];
 inline bool CMsgStartFindingMatch::has_game_language_enum() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 inline void CMsgStartFindingMatch::set_has_game_language_enum() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000040u;
 }
 inline void CMsgStartFindingMatch::clear_has_game_language_enum() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline void CMsgStartFindingMatch::clear_game_language_enum() {
   game_language_enum_ = 0;
@@ -9024,13 +9007,13 @@ inline void CMsgStartFindingMatch::set_allocated_ping_data(::proto::dota::CMsgCl
 
 // optional uint32 region_select_flags = 13;
 inline bool CMsgStartFindingMatch::has_region_select_flags() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void CMsgStartFindingMatch::set_has_region_select_flags() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void CMsgStartFindingMatch::clear_has_region_select_flags() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void CMsgStartFindingMatch::clear_region_select_flags() {
   region_select_flags_ = 0u;
@@ -9048,13 +9031,13 @@ inline void CMsgStartFindingMatch::set_region_select_flags(::google::protobuf::u
 
 // optional bool solo_queue = 14;
 inline bool CMsgStartFindingMatch::has_solo_queue() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void CMsgStartFindingMatch::set_has_solo_queue() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void CMsgStartFindingMatch::clear_has_solo_queue() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void CMsgStartFindingMatch::clear_solo_queue() {
   solo_queue_ = false;
@@ -9072,13 +9055,13 @@ inline void CMsgStartFindingMatch::set_solo_queue(bool value) {
 
 // optional uint32 bot_script_index = 15;
 inline bool CMsgStartFindingMatch::has_bot_script_index() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 inline void CMsgStartFindingMatch::set_has_bot_script_index() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000200u;
 }
 inline void CMsgStartFindingMatch::clear_has_bot_script_index() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline void CMsgStartFindingMatch::clear_bot_script_index() {
   bot_script_index_ = 0u;
@@ -9092,6 +9075,30 @@ inline void CMsgStartFindingMatch::set_bot_script_index(::google::protobuf::uint
   set_has_bot_script_index();
   bot_script_index_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgStartFindingMatch.bot_script_index)
+}
+
+// optional uint32 steam_clan_account_id = 16;
+inline bool CMsgStartFindingMatch::has_steam_clan_account_id() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void CMsgStartFindingMatch::set_has_steam_clan_account_id() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void CMsgStartFindingMatch::clear_has_steam_clan_account_id() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void CMsgStartFindingMatch::clear_steam_clan_account_id() {
+  steam_clan_account_id_ = 0u;
+  clear_has_steam_clan_account_id();
+}
+inline ::google::protobuf::uint32 CMsgStartFindingMatch::steam_clan_account_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgStartFindingMatch.steam_clan_account_id)
+  return steam_clan_account_id_;
+}
+inline void CMsgStartFindingMatch::set_steam_clan_account_id(::google::protobuf::uint32 value) {
+  set_has_steam_clan_account_id();
+  steam_clan_account_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgStartFindingMatch.steam_clan_account_id)
 }
 
 // -------------------------------------------------------------------

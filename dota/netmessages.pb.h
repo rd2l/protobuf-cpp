@@ -838,35 +838,35 @@ class CCLCMsg_Move : public ::google::protobuf::Message /* @@protoc_insertion_po
   ::std::string* release_data();
   void set_allocated_data(::std::string* data);
 
-  // optional uint32 num_backup_commands = 1;
-  bool has_num_backup_commands() const;
-  void clear_num_backup_commands();
-  static const int kNumBackupCommandsFieldNumber = 1;
-  ::google::protobuf::uint32 num_backup_commands() const;
-  void set_num_backup_commands(::google::protobuf::uint32 value);
+  // optional uint32 command_number = 4;
+  bool has_command_number() const;
+  void clear_command_number();
+  static const int kCommandNumberFieldNumber = 4;
+  ::google::protobuf::uint32 command_number() const;
+  void set_command_number(::google::protobuf::uint32 value);
 
-  // optional uint32 num_new_commands = 2;
-  bool has_num_new_commands() const;
-  void clear_num_new_commands();
-  static const int kNumNewCommandsFieldNumber = 2;
-  ::google::protobuf::uint32 num_new_commands() const;
-  void set_num_new_commands(::google::protobuf::uint32 value);
+  // optional uint32 num_commands = 5;
+  bool has_num_commands() const;
+  void clear_num_commands();
+  static const int kNumCommandsFieldNumber = 5;
+  ::google::protobuf::uint32 num_commands() const;
+  void set_num_commands(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:proto.dota.CCLCMsg_Move)
  private:
-  void set_has_num_backup_commands();
-  void clear_has_num_backup_commands();
-  void set_has_num_new_commands();
-  void clear_has_num_new_commands();
   void set_has_data();
   void clear_has_data();
+  void set_has_command_number();
+  void clear_has_command_number();
+  void set_has_num_commands();
+  void clear_has_num_commands();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr data_;
-  ::google::protobuf::uint32 num_backup_commands_;
-  ::google::protobuf::uint32 num_new_commands_;
+  ::google::protobuf::uint32 command_number_;
+  ::google::protobuf::uint32 num_commands_;
   friend struct protobuf_netmessages_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -5288,6 +5288,13 @@ class CSVCMsg_PacketEntities : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::uint32 max_spawngroup_creationsequence() const;
   void set_max_spawngroup_creationsequence(::google::protobuf::uint32 value);
 
+  // optional uint32 last_cmd_number = 11;
+  bool has_last_cmd_number() const;
+  void clear_last_cmd_number();
+  static const int kLastCmdNumberFieldNumber = 11;
+  ::google::protobuf::uint32 last_cmd_number() const;
+  void set_last_cmd_number(::google::protobuf::uint32 value);
+
   // @@protoc_insertion_point(class_scope:proto.dota.CSVCMsg_PacketEntities)
  private:
   void set_has_max_entries();
@@ -5310,6 +5317,8 @@ class CSVCMsg_PacketEntities : public ::google::protobuf::Message /* @@protoc_in
   void clear_has_active_spawngroup_handle();
   void set_has_max_spawngroup_creationsequence();
   void clear_has_max_spawngroup_creationsequence();
+  void set_has_last_cmd_number();
+  void clear_has_last_cmd_number();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -5324,6 +5333,7 @@ class CSVCMsg_PacketEntities : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::int32 delta_from_;
   ::google::protobuf::uint32 active_spawngroup_handle_;
   ::google::protobuf::uint32 max_spawngroup_creationsequence_;
+  ::google::protobuf::uint32 last_cmd_number_;
   friend struct protobuf_netmessages_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -9061,54 +9071,6 @@ inline void CCLCMsg_ClientInfo::set_allocated_friends_name(::std::string* friend
 
 // CCLCMsg_Move
 
-// optional uint32 num_backup_commands = 1;
-inline bool CCLCMsg_Move::has_num_backup_commands() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void CCLCMsg_Move::set_has_num_backup_commands() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void CCLCMsg_Move::clear_has_num_backup_commands() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void CCLCMsg_Move::clear_num_backup_commands() {
-  num_backup_commands_ = 0u;
-  clear_has_num_backup_commands();
-}
-inline ::google::protobuf::uint32 CCLCMsg_Move::num_backup_commands() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CCLCMsg_Move.num_backup_commands)
-  return num_backup_commands_;
-}
-inline void CCLCMsg_Move::set_num_backup_commands(::google::protobuf::uint32 value) {
-  set_has_num_backup_commands();
-  num_backup_commands_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CCLCMsg_Move.num_backup_commands)
-}
-
-// optional uint32 num_new_commands = 2;
-inline bool CCLCMsg_Move::has_num_new_commands() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void CCLCMsg_Move::set_has_num_new_commands() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void CCLCMsg_Move::clear_has_num_new_commands() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void CCLCMsg_Move::clear_num_new_commands() {
-  num_new_commands_ = 0u;
-  clear_has_num_new_commands();
-}
-inline ::google::protobuf::uint32 CCLCMsg_Move::num_new_commands() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CCLCMsg_Move.num_new_commands)
-  return num_new_commands_;
-}
-inline void CCLCMsg_Move::set_num_new_commands(::google::protobuf::uint32 value) {
-  set_has_num_new_commands();
-  num_new_commands_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CCLCMsg_Move.num_new_commands)
-}
-
 // optional bytes data = 3;
 inline bool CCLCMsg_Move::has_data() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
@@ -9170,6 +9132,54 @@ inline void CCLCMsg_Move::set_allocated_data(::std::string* data) {
   }
   data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
   // @@protoc_insertion_point(field_set_allocated:proto.dota.CCLCMsg_Move.data)
+}
+
+// optional uint32 command_number = 4;
+inline bool CCLCMsg_Move::has_command_number() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CCLCMsg_Move::set_has_command_number() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CCLCMsg_Move::clear_has_command_number() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CCLCMsg_Move::clear_command_number() {
+  command_number_ = 0u;
+  clear_has_command_number();
+}
+inline ::google::protobuf::uint32 CCLCMsg_Move::command_number() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CCLCMsg_Move.command_number)
+  return command_number_;
+}
+inline void CCLCMsg_Move::set_command_number(::google::protobuf::uint32 value) {
+  set_has_command_number();
+  command_number_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CCLCMsg_Move.command_number)
+}
+
+// optional uint32 num_commands = 5;
+inline bool CCLCMsg_Move::has_num_commands() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CCLCMsg_Move::set_has_num_commands() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CCLCMsg_Move::clear_has_num_commands() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CCLCMsg_Move::clear_num_commands() {
+  num_commands_ = 0u;
+  clear_has_num_commands();
+}
+inline ::google::protobuf::uint32 CCLCMsg_Move::num_commands() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CCLCMsg_Move.num_commands)
+  return num_commands_;
+}
+inline void CCLCMsg_Move::set_num_commands(::google::protobuf::uint32 value) {
+  set_has_num_commands();
+  num_commands_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CCLCMsg_Move.num_commands)
 }
 
 // -------------------------------------------------------------------
@@ -13497,6 +13507,30 @@ inline void CSVCMsg_PacketEntities::set_max_spawngroup_creationsequence(::google
   set_has_max_spawngroup_creationsequence();
   max_spawngroup_creationsequence_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CSVCMsg_PacketEntities.max_spawngroup_creationsequence)
+}
+
+// optional uint32 last_cmd_number = 11;
+inline bool CSVCMsg_PacketEntities::has_last_cmd_number() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void CSVCMsg_PacketEntities::set_has_last_cmd_number() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void CSVCMsg_PacketEntities::clear_has_last_cmd_number() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void CSVCMsg_PacketEntities::clear_last_cmd_number() {
+  last_cmd_number_ = 0u;
+  clear_has_last_cmd_number();
+}
+inline ::google::protobuf::uint32 CSVCMsg_PacketEntities::last_cmd_number() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSVCMsg_PacketEntities.last_cmd_number)
+  return last_cmd_number_;
+}
+inline void CSVCMsg_PacketEntities::set_last_cmd_number(::google::protobuf::uint32 value) {
+  set_has_last_cmd_number();
+  last_cmd_number_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSVCMsg_PacketEntities.last_cmd_number)
 }
 
 // -------------------------------------------------------------------

@@ -61,6 +61,9 @@ extern CDOTAClientMsg_ChallengeRerollDefaultTypeInternal _CDOTAClientMsg_Challen
 class CDOTAClientMsg_ChallengeSelect;
 class CDOTAClientMsg_ChallengeSelectDefaultTypeInternal;
 extern CDOTAClientMsg_ChallengeSelectDefaultTypeInternal _CDOTAClientMsg_ChallengeSelect_default_instance_;
+class CDOTAClientMsg_ChannelRequiresHalt;
+class CDOTAClientMsg_ChannelRequiresHaltDefaultTypeInternal;
+extern CDOTAClientMsg_ChannelRequiresHaltDefaultTypeInternal _CDOTAClientMsg_ChannelRequiresHalt_default_instance_;
 class CDOTAClientMsg_ChatWheel;
 class CDOTAClientMsg_ChatWheelDefaultTypeInternal;
 extern CDOTAClientMsg_ChatWheelDefaultTypeInternal _CDOTAClientMsg_ChatWheel_default_instance_;
@@ -106,6 +109,9 @@ extern CDOTAClientMsg_GlyphAlertDefaultTypeInternal _CDOTAClientMsg_GlyphAlert_d
 class CDOTAClientMsg_HPManaAlert;
 class CDOTAClientMsg_HPManaAlertDefaultTypeInternal;
 extern CDOTAClientMsg_HPManaAlertDefaultTypeInternal _CDOTAClientMsg_HPManaAlert_default_instance_;
+class CDOTAClientMsg_HelpTipSystemStateChanged;
+class CDOTAClientMsg_HelpTipSystemStateChangedDefaultTypeInternal;
+extern CDOTAClientMsg_HelpTipSystemStateChangedDefaultTypeInternal _CDOTAClientMsg_HelpTipSystemStateChanged_default_instance_;
 class CDOTAClientMsg_HeroStatueLike;
 class CDOTAClientMsg_HeroStatueLikeDefaultTypeInternal;
 extern CDOTAClientMsg_HeroStatueLikeDefaultTypeInternal _CDOTAClientMsg_HeroStatueLike_default_instance_;
@@ -363,11 +369,13 @@ enum EDotaClientMessages {
   DOTA_CM_MakeTeamCaptain = 365,
   DOTA_CM_CoinWagerToken = 366,
   DOTA_CM_RankWager = 367,
-  DOTA_CM_DismissAllStatPopups = 368
+  DOTA_CM_DismissAllStatPopups = 368,
+  DOTA_CM_HelpTipSystemStateChanged = 369,
+  DOTA_CM_ChannelRequiresHalt = 370
 };
 bool EDotaClientMessages_IsValid(int value);
 const EDotaClientMessages EDotaClientMessages_MIN = DOTA_CM_MapLine;
-const EDotaClientMessages EDotaClientMessages_MAX = DOTA_CM_DismissAllStatPopups;
+const EDotaClientMessages EDotaClientMessages_MAX = DOTA_CM_ChannelRequiresHalt;
 const int EDotaClientMessages_ARRAYSIZE = EDotaClientMessages_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* EDotaClientMessages_descriptor();
@@ -1578,6 +1586,98 @@ class CDOTAClientMsg_TeleportRequiresHalt : public ::google::protobuf::Message /
 };
 // -------------------------------------------------------------------
 
+class CDOTAClientMsg_ChannelRequiresHalt : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAClientMsg_ChannelRequiresHalt) */ {
+ public:
+  CDOTAClientMsg_ChannelRequiresHalt();
+  virtual ~CDOTAClientMsg_ChannelRequiresHalt();
+
+  CDOTAClientMsg_ChannelRequiresHalt(const CDOTAClientMsg_ChannelRequiresHalt& from);
+
+  inline CDOTAClientMsg_ChannelRequiresHalt& operator=(const CDOTAClientMsg_ChannelRequiresHalt& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CDOTAClientMsg_ChannelRequiresHalt& default_instance();
+
+  static inline const CDOTAClientMsg_ChannelRequiresHalt* internal_default_instance() {
+    return reinterpret_cast<const CDOTAClientMsg_ChannelRequiresHalt*>(
+               &_CDOTAClientMsg_ChannelRequiresHalt_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    12;
+
+  void Swap(CDOTAClientMsg_ChannelRequiresHalt* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CDOTAClientMsg_ChannelRequiresHalt* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CDOTAClientMsg_ChannelRequiresHalt* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CDOTAClientMsg_ChannelRequiresHalt& from);
+  void MergeFrom(const CDOTAClientMsg_ChannelRequiresHalt& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CDOTAClientMsg_ChannelRequiresHalt* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bool enabled = 1;
+  bool has_enabled() const;
+  void clear_enabled();
+  static const int kEnabledFieldNumber = 1;
+  bool enabled() const;
+  void set_enabled(bool value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+ private:
+  void set_has_enabled();
+  void clear_has_enabled();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  bool enabled_;
+  friend struct protobuf_dota_5fclientmessages_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class CDOTAClientMsg_SearchString : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAClientMsg_SearchString) */ {
  public:
   CDOTAClientMsg_SearchString();
@@ -1606,7 +1706,7 @@ class CDOTAClientMsg_SearchString : public ::google::protobuf::Message /* @@prot
                &_CDOTAClientMsg_SearchString_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    12;
+    13;
 
   void Swap(CDOTAClientMsg_SearchString* other);
 
@@ -1706,7 +1806,7 @@ class CDOTAClientMsg_Pause : public ::google::protobuf::Message /* @@protoc_inse
                &_CDOTAClientMsg_Pause_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    13;
+    14;
 
   void Swap(CDOTAClientMsg_Pause* other);
 
@@ -1788,7 +1888,7 @@ class CDOTAClientMsg_ShopViewMode : public ::google::protobuf::Message /* @@prot
                &_CDOTAClientMsg_ShopViewMode_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    14;
+    15;
 
   void Swap(CDOTAClientMsg_ShopViewMode* other);
 
@@ -1880,7 +1980,7 @@ class CDOTAClientMsg_SetUnitShareFlag : public ::google::protobuf::Message /* @@
                &_CDOTAClientMsg_SetUnitShareFlag_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    15;
+    16;
 
   void Swap(CDOTAClientMsg_SetUnitShareFlag* other);
 
@@ -1992,7 +2092,7 @@ class CDOTAClientMsg_SwapRequest : public ::google::protobuf::Message /* @@proto
                &_CDOTAClientMsg_SwapRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    16;
+    17;
 
   void Swap(CDOTAClientMsg_SwapRequest* other);
 
@@ -2084,7 +2184,7 @@ class CDOTAClientMsg_SwapAccept : public ::google::protobuf::Message /* @@protoc
                &_CDOTAClientMsg_SwapAccept_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    17;
+    18;
 
   void Swap(CDOTAClientMsg_SwapAccept* other);
 
@@ -2176,7 +2276,7 @@ class CDOTAClientMsg_WorldLine : public ::google::protobuf::Message /* @@protoc_
                &_CDOTAClientMsg_WorldLine_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    18;
+    19;
 
   void Swap(CDOTAClientMsg_WorldLine* other);
 
@@ -2270,7 +2370,7 @@ class CDOTAClientMsg_RequestGraphUpdate : public ::google::protobuf::Message /* 
                &_CDOTAClientMsg_RequestGraphUpdate_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    19;
+    20;
 
   void Swap(CDOTAClientMsg_RequestGraphUpdate* other);
 
@@ -2352,7 +2452,7 @@ class CDOTAClientMsg_ChatWheel : public ::google::protobuf::Message /* @@protoc_
                &_CDOTAClientMsg_ChatWheel_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    20;
+    21;
 
   void Swap(CDOTAClientMsg_ChatWheel* other);
 
@@ -2454,7 +2554,7 @@ class CDOTAClientMsg_SendStatPopup : public ::google::protobuf::Message /* @@pro
                &_CDOTAClientMsg_SendStatPopup_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    21;
+    22;
 
   void Swap(CDOTAClientMsg_SendStatPopup* other);
 
@@ -2548,7 +2648,7 @@ class CDOTAClientMsg_DismissAllStatPopups : public ::google::protobuf::Message /
                &_CDOTAClientMsg_DismissAllStatPopups_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    22;
+    23;
 
   void Swap(CDOTAClientMsg_DismissAllStatPopups* other);
 
@@ -2642,7 +2742,7 @@ class CDOTAClientMsg_BeginLastHitChallenge : public ::google::protobuf::Message 
                &_CDOTAClientMsg_BeginLastHitChallenge_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    23;
+    24;
 
   void Swap(CDOTAClientMsg_BeginLastHitChallenge* other);
 
@@ -2744,7 +2844,7 @@ class CDOTAClientMsg_UpdateQuickBuyItem : public ::google::protobuf::Message /* 
                &_CDOTAClientMsg_UpdateQuickBuyItem_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    24;
+    25;
 
   void Swap(CDOTAClientMsg_UpdateQuickBuyItem* other);
 
@@ -2846,7 +2946,7 @@ class CDOTAClientMsg_UpdateQuickBuy : public ::google::protobuf::Message /* @@pr
                &_CDOTAClientMsg_UpdateQuickBuy_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    25;
+    26;
 
   void Swap(CDOTAClientMsg_UpdateQuickBuy* other);
 
@@ -2941,7 +3041,7 @@ class CDOTAClientMsg_RecordVote : public ::google::protobuf::Message /* @@protoc
                &_CDOTAClientMsg_RecordVote_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    26;
+    27;
 
   void Swap(CDOTAClientMsg_RecordVote* other);
 
@@ -3033,7 +3133,7 @@ class CDOTAClientMsg_WillPurchaseAlert : public ::google::protobuf::Message /* @
                &_CDOTAClientMsg_WillPurchaseAlert_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    27;
+    28;
 
   void Swap(CDOTAClientMsg_WillPurchaseAlert* other);
 
@@ -3145,7 +3245,7 @@ class CDOTAClientMsg_BuyBackStateAlert : public ::google::protobuf::Message /* @
                &_CDOTAClientMsg_BuyBackStateAlert_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    28;
+    29;
 
   void Swap(CDOTAClientMsg_BuyBackStateAlert* other);
 
@@ -3227,7 +3327,7 @@ class CDOTAClientMsg_QuickBuyAlert : public ::google::protobuf::Message /* @@pro
                &_CDOTAClientMsg_QuickBuyAlert_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    29;
+    30;
 
   void Swap(CDOTAClientMsg_QuickBuyAlert* other);
 
@@ -3329,7 +3429,7 @@ class CDOTAClientMsg_PlayerShowCase : public ::google::protobuf::Message /* @@pr
                &_CDOTAClientMsg_PlayerShowCase_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    30;
+    31;
 
   void Swap(CDOTAClientMsg_PlayerShowCase* other);
 
@@ -3421,7 +3521,7 @@ class CDOTAClientMsg_CameraZoomAmount : public ::google::protobuf::Message /* @@
                &_CDOTAClientMsg_CameraZoomAmount_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    31;
+    32;
 
   void Swap(CDOTAClientMsg_CameraZoomAmount* other);
 
@@ -3513,7 +3613,7 @@ class CDOTAClientMsg_BroadcasterUsingCameraman : public ::google::protobuf::Mess
                &_CDOTAClientMsg_BroadcasterUsingCameraman_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    32;
+    33;
 
   void Swap(CDOTAClientMsg_BroadcasterUsingCameraman* other);
 
@@ -3605,7 +3705,7 @@ class CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator : public ::google::p
                &_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    33;
+    34;
 
   void Swap(CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator* other);
 
@@ -3697,7 +3797,7 @@ class CAdditionalEquipSlotClientMsg : public ::google::protobuf::Message /* @@pr
                &_CAdditionalEquipSlotClientMsg_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    34;
+    35;
 
   void Swap(CAdditionalEquipSlotClientMsg* other);
 
@@ -3809,7 +3909,7 @@ class CDOTAClientMsg_FreeInventory : public ::google::protobuf::Message /* @@pro
                &_CDOTAClientMsg_FreeInventory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    35;
+    36;
 
   void Swap(CDOTAClientMsg_FreeInventory* other);
 
@@ -3904,7 +4004,7 @@ class CDOTAClientMsg_FillEmptySlotsWithBots : public ::google::protobuf::Message
                &_CDOTAClientMsg_FillEmptySlotsWithBots_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    36;
+    37;
 
   void Swap(CDOTAClientMsg_FillEmptySlotsWithBots* other);
 
@@ -3996,7 +4096,7 @@ class CDOTAClientMsg_HeroStatueLike : public ::google::protobuf::Message /* @@pr
                &_CDOTAClientMsg_HeroStatueLike_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    37;
+    38;
 
   void Swap(CDOTAClientMsg_HeroStatueLike* other);
 
@@ -4088,7 +4188,7 @@ class CDOTAClientMsg_EventCNY2015Cmd : public ::google::protobuf::Message /* @@p
                &_CDOTAClientMsg_EventCNY2015Cmd_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    38;
+    39;
 
   void Swap(CDOTAClientMsg_EventCNY2015Cmd* other);
 
@@ -4188,7 +4288,7 @@ class CDOTAClientMsg_DemoHero : public ::google::protobuf::Message /* @@protoc_i
                &_CDOTAClientMsg_DemoHero_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    39;
+    40;
 
   void Swap(CDOTAClientMsg_DemoHero* other);
 
@@ -4336,7 +4436,7 @@ class CDOTAClientMsg_ChallengeSelect : public ::google::protobuf::Message /* @@p
                &_CDOTAClientMsg_ChallengeSelect_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    40;
+    41;
 
   void Swap(CDOTAClientMsg_ChallengeSelect* other);
 
@@ -4448,7 +4548,7 @@ class CDOTAClientMsg_ChallengeReroll : public ::google::protobuf::Message /* @@p
                &_CDOTAClientMsg_ChallengeReroll_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    41;
+    42;
 
   void Swap(CDOTAClientMsg_ChallengeReroll* other);
 
@@ -4560,7 +4660,7 @@ class CDOTAClientMsg_CoinWager : public ::google::protobuf::Message /* @@protoc_
                &_CDOTAClientMsg_CoinWager_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    42;
+    43;
 
   void Swap(CDOTAClientMsg_CoinWager* other);
 
@@ -4652,7 +4752,7 @@ class CDOTAClientMsg_CoinWagerToken : public ::google::protobuf::Message /* @@pr
                &_CDOTAClientMsg_CoinWagerToken_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    43;
+    44;
 
   void Swap(CDOTAClientMsg_CoinWagerToken* other);
 
@@ -4744,7 +4844,7 @@ class CDOTAClientMsg_RankWager : public ::google::protobuf::Message /* @@protoc_
                &_CDOTAClientMsg_RankWager_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    44;
+    45;
 
   void Swap(CDOTAClientMsg_RankWager* other);
 
@@ -4836,7 +4936,7 @@ class CDOTAClientMsg_EventPointsTip : public ::google::protobuf::Message /* @@pr
                &_CDOTAClientMsg_EventPointsTip_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    45;
+    46;
 
   void Swap(CDOTAClientMsg_EventPointsTip* other);
 
@@ -4928,7 +5028,7 @@ class CDOTAClientMsg_ExecuteOrders : public ::google::protobuf::Message /* @@pro
                &_CDOTAClientMsg_ExecuteOrders_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    46;
+    47;
 
   void Swap(CDOTAClientMsg_ExecuteOrders* other);
 
@@ -5023,7 +5123,7 @@ class CDOTAClientMsg_XPAlert : public ::google::protobuf::Message /* @@protoc_in
                &_CDOTAClientMsg_XPAlert_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    47;
+    48;
 
   void Swap(CDOTAClientMsg_XPAlert* other);
 
@@ -5125,7 +5225,7 @@ class CDOTAClientMsg_KillcamDamageTaken : public ::google::protobuf::Message /* 
                &_CDOTAClientMsg_KillcamDamageTaken_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    48;
+    49;
 
   void Swap(CDOTAClientMsg_KillcamDamageTaken* other);
 
@@ -5283,7 +5383,7 @@ class CDOTAClientMsg_MatchMetadata : public ::google::protobuf::Message /* @@pro
                &_CDOTAClientMsg_MatchMetadata_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    49;
+    50;
 
   void Swap(CDOTAClientMsg_MatchMetadata* other);
 
@@ -5393,7 +5493,7 @@ class CDOTAClientMsg_KillMyHero : public ::google::protobuf::Message /* @@protoc
                &_CDOTAClientMsg_KillMyHero_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    50;
+    51;
 
   void Swap(CDOTAClientMsg_KillMyHero* other);
 
@@ -5475,7 +5575,7 @@ class CDOTAClientMsg_QuestStatus : public ::google::protobuf::Message /* @@proto
                &_CDOTAClientMsg_QuestStatus_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    51;
+    52;
 
   void Swap(CDOTAClientMsg_QuestStatus* other);
 
@@ -5627,7 +5727,7 @@ class CDOTAClientMsg_ToggleAutoattack : public ::google::protobuf::Message /* @@
                &_CDOTAClientMsg_ToggleAutoattack_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    52;
+    53;
 
   void Swap(CDOTAClientMsg_ToggleAutoattack* other);
 
@@ -5729,7 +5829,7 @@ class CDOTAClientMsg_SpecialAbility : public ::google::protobuf::Message /* @@pr
                &_CDOTAClientMsg_SpecialAbility_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    53;
+    54;
 
   void Swap(CDOTAClientMsg_SpecialAbility* other);
 
@@ -5831,7 +5931,7 @@ class CDOTAClientMsg_SetEnemyStartingPosition : public ::google::protobuf::Messa
                &_CDOTAClientMsg_SetEnemyStartingPosition_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    54;
+    55;
 
   void Swap(CDOTAClientMsg_SetEnemyStartingPosition* other);
 
@@ -5933,7 +6033,7 @@ class CDOTAClientMsg_SetDesiredWardPlacement : public ::google::protobuf::Messag
                &_CDOTAClientMsg_SetDesiredWardPlacement_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    55;
+    56;
 
   void Swap(CDOTAClientMsg_SetDesiredWardPlacement* other);
 
@@ -6045,7 +6145,7 @@ class CDOTAClientMsg_RollDice : public ::google::protobuf::Message /* @@protoc_i
                &_CDOTAClientMsg_RollDice_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    56;
+    57;
 
   void Swap(CDOTAClientMsg_RollDice* other);
 
@@ -6157,7 +6257,7 @@ class CDOTAClientMsg_FlipCoin : public ::google::protobuf::Message /* @@protoc_i
                &_CDOTAClientMsg_FlipCoin_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    57;
+    58;
 
   void Swap(CDOTAClientMsg_FlipCoin* other);
 
@@ -6249,7 +6349,7 @@ class CDOTAClientMsg_RequestItemSuggestions : public ::google::protobuf::Message
                &_CDOTAClientMsg_RequestItemSuggestions_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    58;
+    59;
 
   void Swap(CDOTAClientMsg_RequestItemSuggestions* other);
 
@@ -6331,7 +6431,7 @@ class CDOTAClientMsg_MakeTeamCaptain : public ::google::protobuf::Message /* @@p
                &_CDOTAClientMsg_MakeTeamCaptain_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    59;
+    60;
 
   void Swap(CDOTAClientMsg_MakeTeamCaptain* other);
 
@@ -6391,6 +6491,98 @@ class CDOTAClientMsg_MakeTeamCaptain : public ::google::protobuf::Message /* @@p
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::uint32 player_id_;
+  friend struct protobuf_dota_5fclientmessages_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CDOTAClientMsg_HelpTipSystemStateChanged : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged) */ {
+ public:
+  CDOTAClientMsg_HelpTipSystemStateChanged();
+  virtual ~CDOTAClientMsg_HelpTipSystemStateChanged();
+
+  CDOTAClientMsg_HelpTipSystemStateChanged(const CDOTAClientMsg_HelpTipSystemStateChanged& from);
+
+  inline CDOTAClientMsg_HelpTipSystemStateChanged& operator=(const CDOTAClientMsg_HelpTipSystemStateChanged& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CDOTAClientMsg_HelpTipSystemStateChanged& default_instance();
+
+  static inline const CDOTAClientMsg_HelpTipSystemStateChanged* internal_default_instance() {
+    return reinterpret_cast<const CDOTAClientMsg_HelpTipSystemStateChanged*>(
+               &_CDOTAClientMsg_HelpTipSystemStateChanged_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    61;
+
+  void Swap(CDOTAClientMsg_HelpTipSystemStateChanged* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CDOTAClientMsg_HelpTipSystemStateChanged* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CDOTAClientMsg_HelpTipSystemStateChanged* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CDOTAClientMsg_HelpTipSystemStateChanged& from);
+  void MergeFrom(const CDOTAClientMsg_HelpTipSystemStateChanged& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CDOTAClientMsg_HelpTipSystemStateChanged* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bool tip_displayed = 1;
+  bool has_tip_displayed() const;
+  void clear_tip_displayed();
+  static const int kTipDisplayedFieldNumber = 1;
+  bool tip_displayed() const;
+  void set_tip_displayed(bool value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+ private:
+  void set_has_tip_displayed();
+  void clear_has_tip_displayed();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  bool tip_displayed_;
   friend struct protobuf_dota_5fclientmessages_2eproto::TableStruct;
 };
 // ===================================================================
@@ -6868,6 +7060,34 @@ inline void CDOTAClientMsg_TeleportRequiresHalt::set_enabled(bool value) {
   set_has_enabled();
   enabled_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CDOTAClientMsg_TeleportRequiresHalt.enabled)
+}
+
+// -------------------------------------------------------------------
+
+// CDOTAClientMsg_ChannelRequiresHalt
+
+// optional bool enabled = 1;
+inline bool CDOTAClientMsg_ChannelRequiresHalt::has_enabled() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CDOTAClientMsg_ChannelRequiresHalt::set_has_enabled() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CDOTAClientMsg_ChannelRequiresHalt::clear_has_enabled() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CDOTAClientMsg_ChannelRequiresHalt::clear_enabled() {
+  enabled_ = false;
+  clear_has_enabled();
+}
+inline bool CDOTAClientMsg_ChannelRequiresHalt::enabled() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAClientMsg_ChannelRequiresHalt.enabled)
+  return enabled_;
+}
+inline void CDOTAClientMsg_ChannelRequiresHalt::set_enabled(bool value) {
+  set_has_enabled();
+  enabled_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAClientMsg_ChannelRequiresHalt.enabled)
 }
 
 // -------------------------------------------------------------------
@@ -9318,7 +9538,39 @@ inline void CDOTAClientMsg_MakeTeamCaptain::set_player_id(::google::protobuf::ui
   // @@protoc_insertion_point(field_set:proto.dota.CDOTAClientMsg_MakeTeamCaptain.player_id)
 }
 
+// -------------------------------------------------------------------
+
+// CDOTAClientMsg_HelpTipSystemStateChanged
+
+// optional bool tip_displayed = 1;
+inline bool CDOTAClientMsg_HelpTipSystemStateChanged::has_tip_displayed() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CDOTAClientMsg_HelpTipSystemStateChanged::set_has_tip_displayed() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CDOTAClientMsg_HelpTipSystemStateChanged::clear_has_tip_displayed() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CDOTAClientMsg_HelpTipSystemStateChanged::clear_tip_displayed() {
+  tip_displayed_ = false;
+  clear_has_tip_displayed();
+}
+inline bool CDOTAClientMsg_HelpTipSystemStateChanged::tip_displayed() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged.tip_displayed)
+  return tip_displayed_;
+}
+inline void CDOTAClientMsg_HelpTipSystemStateChanged::set_tip_displayed(bool value) {
+  set_has_tip_displayed();
+  tip_displayed_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged.tip_displayed)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

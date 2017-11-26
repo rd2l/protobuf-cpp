@@ -139,11 +139,14 @@ enum EGCSystemMsg {
   k_EGCMsgGetAppFriendsList = 516,
   k_EGCMsgGetAppFriendsListResponse = 517,
   k_EGCMsgVacVerificationChange = 518,
-  k_EGCMsgAccountPhoneNumberChange = 519
+  k_EGCMsgAccountPhoneNumberChange = 519,
+  k_EGCMsgAccountTwoFactorChange = 520,
+  k_EGCMsgCheckClanMembership = 521,
+  k_EGCMsgCheckClanMembershipResponse = 522
 };
 bool EGCSystemMsg_IsValid(int value);
 const EGCSystemMsg EGCSystemMsg_MIN = k_EGCMsgInvalid;
-const EGCSystemMsg EGCSystemMsg_MAX = k_EGCMsgAccountPhoneNumberChange;
+const EGCSystemMsg EGCSystemMsg_MAX = k_EGCMsgCheckClanMembershipResponse;
 const int EGCSystemMsg_ARRAYSIZE = EGCSystemMsg_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* EGCSystemMsg_descriptor();

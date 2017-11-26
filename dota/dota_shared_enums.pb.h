@@ -91,11 +91,12 @@ enum DOTA_GameMode {
   DOTA_GAMEMODE_EVENT = 19,
   DOTA_GAMEMODE_ARDM = 20,
   DOTA_GAMEMODE_1V1MID = 21,
-  DOTA_GAMEMODE_ALL_DRAFT = 22
+  DOTA_GAMEMODE_ALL_DRAFT = 22,
+  DOTA_GAMEMODE_TURBO = 23
 };
 bool DOTA_GameMode_IsValid(int value);
 const DOTA_GameMode DOTA_GameMode_MIN = DOTA_GAMEMODE_NONE;
-const DOTA_GameMode DOTA_GameMode_MAX = DOTA_GAMEMODE_ALL_DRAFT;
+const DOTA_GameMode DOTA_GameMode_MAX = DOTA_GAMEMODE_TURBO;
 const int DOTA_GameMode_ARRAYSIZE = DOTA_GameMode_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* DOTA_GameMode_descriptor();
@@ -180,7 +181,9 @@ enum EEvent {
   EVENT_ID_WINTER_MAJOR_2017 = 16,
   EVENT_ID_NEW_BLOOM_2017 = 17,
   EVENT_ID_INTERNATIONAL_2017 = 18,
-  EVENT_ID_COUNT = 19
+  EVENT_ID_BATTLE_PASS_REWORK = 19,
+  EVENT_ID_SINGLES_DAY_2017 = 20,
+  EVENT_ID_COUNT = 21
 };
 bool EEvent_IsValid(int value);
 const EEvent EEvent_MIN = EVENT_ID_NONE;
@@ -646,11 +649,13 @@ enum MatchType {
   MATCH_TYPE_WEEKEND_TOURNEY = 5,
   MATCH_TYPE_CASUAL_1V1 = 6,
   MATCH_TYPE_EVENT = 7,
-  MATCH_TYPE_SEASONAL_RANKED = 8
+  MATCH_TYPE_SEASONAL_RANKED = 8,
+  MATCH_TYPE_LOWPRI_DEPRECATED = 9,
+  MATCH_TYPE_LOWPRI_DEPRECATED2 = 10
 };
 bool MatchType_IsValid(int value);
 const MatchType MatchType_MIN = MATCH_TYPE_CASUAL;
-const MatchType MatchType_MAX = MATCH_TYPE_SEASONAL_RANKED;
+const MatchType MatchType_MAX = MATCH_TYPE_LOWPRI_DEPRECATED2;
 const int MatchType_ARRAYSIZE = MatchType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MatchType_descriptor();

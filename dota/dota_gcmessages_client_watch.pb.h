@@ -149,6 +149,18 @@ extern CMsgDOTAHasItemQueryDefaultTypeInternal _CMsgDOTAHasItemQuery_default_ins
 class CMsgDOTAHasItemResponse;
 class CMsgDOTAHasItemResponseDefaultTypeInternal;
 extern CMsgDOTAHasItemResponseDefaultTypeInternal _CMsgDOTAHasItemResponse_default_instance_;
+class CMsgDOTALeagueTournament;
+class CMsgDOTALeagueTournamentDefaultTypeInternal;
+extern CMsgDOTALeagueTournamentDefaultTypeInternal _CMsgDOTALeagueTournament_default_instance_;
+class CMsgDOTALeagueTournament_Node;
+class CMsgDOTALeagueTournament_NodeDefaultTypeInternal;
+extern CMsgDOTALeagueTournament_NodeDefaultTypeInternal _CMsgDOTALeagueTournament_Node_default_instance_;
+class CMsgDOTALeagueTournament_NodeGroup;
+class CMsgDOTALeagueTournament_NodeGroupDefaultTypeInternal;
+extern CMsgDOTALeagueTournament_NodeGroupDefaultTypeInternal _CMsgDOTALeagueTournament_NodeGroup_default_instance_;
+class CMsgDOTALeagueTournament_TeamStanding;
+class CMsgDOTALeagueTournament_TeamStandingDefaultTypeInternal;
+extern CMsgDOTALeagueTournament_TeamStandingDefaultTypeInternal _CMsgDOTALeagueTournament_TeamStanding_default_instance_;
 class CMsgDOTAMatch;
 class CMsgDOTAMatchDefaultTypeInternal;
 extern CMsgDOTAMatchDefaultTypeInternal _CMsgDOTAMatch_default_instance_;
@@ -356,6 +368,9 @@ extern CMsgLobbyEventPoints_AccountPointsDefaultTypeInternal _CMsgLobbyEventPoin
 class CMsgLobbyEventPoints_ChatWheelMessageRange;
 class CMsgLobbyEventPoints_ChatWheelMessageRangeDefaultTypeInternal;
 extern CMsgLobbyEventPoints_ChatWheelMessageRangeDefaultTypeInternal _CMsgLobbyEventPoints_ChatWheelMessageRange_default_instance_;
+class CMsgLocalServerFakeLobbyData;
+class CMsgLocalServerFakeLobbyDataDefaultTypeInternal;
+extern CMsgLocalServerFakeLobbyDataDefaultTypeInternal _CMsgLocalServerFakeLobbyData_default_instance_;
 class CMsgPartyLeaderWatchGamePrompt;
 class CMsgPartyLeaderWatchGamePromptDefaultTypeInternal;
 extern CMsgPartyLeaderWatchGamePromptDefaultTypeInternal _CMsgPartyLeaderWatchGamePrompt_default_instance_;
@@ -386,6 +401,9 @@ extern CProtoItemTeamShowcaseDefaultTypeInternal _CProtoItemTeamShowcase_default
 class CSODOTAGameAccountClient;
 class CSODOTAGameAccountClientDefaultTypeInternal;
 extern CSODOTAGameAccountClientDefaultTypeInternal _CSODOTAGameAccountClient_default_instance_;
+class CSODOTAGameAccountPrime;
+class CSODOTAGameAccountPrimeDefaultTypeInternal;
+extern CSODOTAGameAccountPrimeDefaultTypeInternal _CSODOTAGameAccountPrime_default_instance_;
 class CSODOTAMapLocationState;
 class CSODOTAMapLocationStateDefaultTypeInternal;
 extern CSODOTAMapLocationStateDefaultTypeInternal _CSODOTAMapLocationState_default_instance_;
@@ -1162,6 +1180,15 @@ class CMsgGCToClientFindTopSourceTVGamesResponse : public ::google::protobuf::Me
   ::std::string* release_search_key();
   void set_allocated_search_key(::std::string* search_key);
 
+  // optional .proto.dota.CSourceTVGameSmall bot_game = 9;
+  bool has_bot_game() const;
+  void clear_bot_game();
+  static const int kBotGameFieldNumber = 9;
+  const ::proto::dota::CSourceTVGameSmall& bot_game() const;
+  ::proto::dota::CSourceTVGameSmall* mutable_bot_game();
+  ::proto::dota::CSourceTVGameSmall* release_bot_game();
+  void set_allocated_bot_game(::proto::dota::CSourceTVGameSmall* bot_game);
+
   // optional uint32 league_id = 2;
   bool has_league_id() const;
   void clear_league_id();
@@ -1220,12 +1247,15 @@ class CMsgGCToClientFindTopSourceTVGamesResponse : public ::google::protobuf::Me
   void clear_has_game_list_index();
   void set_has_specific_games();
   void clear_has_specific_games();
+  void set_has_bot_game();
+  void clear_has_bot_game();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::RepeatedPtrField< ::proto::dota::CSourceTVGameSmall > game_list_;
   ::google::protobuf::internal::ArenaStringPtr search_key_;
+  ::proto::dota::CSourceTVGameSmall* bot_game_;
   ::google::protobuf::uint32 league_id_;
   ::google::protobuf::uint32 hero_id_;
   ::google::protobuf::uint32 start_game_;
@@ -5022,13 +5052,13 @@ inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_allocated_search_key
 
 // optional uint32 league_id = 2;
 inline bool CMsgGCToClientFindTopSourceTVGamesResponse::has_league_id() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_league_id() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_league_id() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_league_id() {
   league_id_ = 0u;
@@ -5046,13 +5076,13 @@ inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_league_id(::google::
 
 // optional uint32 hero_id = 3;
 inline bool CMsgGCToClientFindTopSourceTVGamesResponse::has_hero_id() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_hero_id() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_hero_id() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_hero_id() {
   hero_id_ = 0u;
@@ -5070,13 +5100,13 @@ inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_hero_id(::google::pr
 
 // optional uint32 start_game = 4;
 inline bool CMsgGCToClientFindTopSourceTVGamesResponse::has_start_game() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_start_game() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_start_game() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_start_game() {
   start_game_ = 0u;
@@ -5094,13 +5124,13 @@ inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_start_game(::google:
 
 // optional uint32 num_games = 5;
 inline bool CMsgGCToClientFindTopSourceTVGamesResponse::has_num_games() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_num_games() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000020u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_num_games() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_num_games() {
   num_games_ = 0u;
@@ -5118,13 +5148,13 @@ inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_num_games(::google::
 
 // optional uint32 game_list_index = 6;
 inline bool CMsgGCToClientFindTopSourceTVGamesResponse::has_game_list_index() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_game_list_index() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_game_list_index() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_game_list_index() {
   game_list_index_ = 0u;
@@ -5172,13 +5202,13 @@ CMsgGCToClientFindTopSourceTVGamesResponse::game_list() const {
 
 // optional bool specific_games = 8;
 inline bool CMsgGCToClientFindTopSourceTVGamesResponse::has_specific_games() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_specific_games() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_specific_games() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_specific_games() {
   specific_games_ = false;
@@ -5192,6 +5222,51 @@ inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_specific_games(bool 
   set_has_specific_games();
   specific_games_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse.specific_games)
+}
+
+// optional .proto.dota.CSourceTVGameSmall bot_game = 9;
+inline bool CMsgGCToClientFindTopSourceTVGamesResponse::has_bot_game() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_has_bot_game() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_has_bot_game() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToClientFindTopSourceTVGamesResponse::clear_bot_game() {
+  if (bot_game_ != NULL) bot_game_->::proto::dota::CSourceTVGameSmall::Clear();
+  clear_has_bot_game();
+}
+inline const ::proto::dota::CSourceTVGameSmall& CMsgGCToClientFindTopSourceTVGamesResponse::bot_game() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse.bot_game)
+  return bot_game_ != NULL ? *bot_game_
+                         : *::proto::dota::CSourceTVGameSmall::internal_default_instance();
+}
+inline ::proto::dota::CSourceTVGameSmall* CMsgGCToClientFindTopSourceTVGamesResponse::mutable_bot_game() {
+  set_has_bot_game();
+  if (bot_game_ == NULL) {
+    bot_game_ = new ::proto::dota::CSourceTVGameSmall;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse.bot_game)
+  return bot_game_;
+}
+inline ::proto::dota::CSourceTVGameSmall* CMsgGCToClientFindTopSourceTVGamesResponse::release_bot_game() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse.bot_game)
+  clear_has_bot_game();
+  ::proto::dota::CSourceTVGameSmall* temp = bot_game_;
+  bot_game_ = NULL;
+  return temp;
+}
+inline void CMsgGCToClientFindTopSourceTVGamesResponse::set_allocated_bot_game(::proto::dota::CSourceTVGameSmall* bot_game) {
+  delete bot_game_;
+  bot_game_ = bot_game;
+  if (bot_game) {
+    set_has_bot_game();
+  } else {
+    clear_has_bot_game();
+  }
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgGCToClientFindTopSourceTVGamesResponse.bot_game)
 }
 
 // -------------------------------------------------------------------

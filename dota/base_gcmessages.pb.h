@@ -184,9 +184,6 @@ extern CMsgClientPingDataDefaultTypeInternal _CMsgClientPingData_default_instanc
 class CMsgConVarValue;
 class CMsgConVarValueDefaultTypeInternal;
 extern CMsgConVarValueDefaultTypeInternal _CMsgConVarValue_default_instance_;
-class CMsgConsumableExhausted;
-class CMsgConsumableExhaustedDefaultTypeInternal;
-extern CMsgConsumableExhaustedDefaultTypeInternal _CMsgConsumableExhausted_default_instance_;
 class CMsgCustomGameInstallStatus;
 class CMsgCustomGameInstallStatusDefaultTypeInternal;
 extern CMsgCustomGameInstallStatusDefaultTypeInternal _CMsgCustomGameInstallStatus_default_instance_;
@@ -220,6 +217,12 @@ extern CMsgGCBannedWordListRequestDefaultTypeInternal _CMsgGCBannedWordListReque
 class CMsgGCBannedWordListResponse;
 class CMsgGCBannedWordListResponseDefaultTypeInternal;
 extern CMsgGCBannedWordListResponseDefaultTypeInternal _CMsgGCBannedWordListResponse_default_instance_;
+class CMsgGCCheckClanMembership;
+class CMsgGCCheckClanMembershipDefaultTypeInternal;
+extern CMsgGCCheckClanMembershipDefaultTypeInternal _CMsgGCCheckClanMembership_default_instance_;
+class CMsgGCCheckClanMembership_Response;
+class CMsgGCCheckClanMembership_ResponseDefaultTypeInternal;
+extern CMsgGCCheckClanMembership_ResponseDefaultTypeInternal _CMsgGCCheckClanMembership_Response_default_instance_;
 class CMsgGCCheckFriendship;
 class CMsgGCCheckFriendshipDefaultTypeInternal;
 extern CMsgGCCheckFriendshipDefaultTypeInternal _CMsgGCCheckFriendship_default_instance_;
@@ -280,6 +283,9 @@ extern CMsgGCGetPersonaNames_ResponseDefaultTypeInternal _CMsgGCGetPersonaNames_
 class CMsgGCGetPersonaNames_Response_PersonaName;
 class CMsgGCGetPersonaNames_Response_PersonaNameDefaultTypeInternal;
 extern CMsgGCGetPersonaNames_Response_PersonaNameDefaultTypeInternal _CMsgGCGetPersonaNames_Response_PersonaName_default_instance_;
+class CMsgGCHAccountTwoFactorChange;
+class CMsgGCHAccountTwoFactorChangeDefaultTypeInternal;
+extern CMsgGCHAccountTwoFactorChangeDefaultTypeInternal _CMsgGCHAccountTwoFactorChange_default_instance_;
 class CMsgGCHAccountVacStatusChange;
 class CMsgGCHAccountVacStatusChangeDefaultTypeInternal;
 extern CMsgGCHAccountVacStatusChangeDefaultTypeInternal _CMsgGCHAccountVacStatusChange_default_instance_;
@@ -5094,98 +5100,6 @@ class CMsgReplicateConVars : public ::google::protobuf::Message /* @@protoc_inse
 };
 // -------------------------------------------------------------------
 
-class CMsgConsumableExhausted : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgConsumableExhausted) */ {
- public:
-  CMsgConsumableExhausted();
-  virtual ~CMsgConsumableExhausted();
-
-  CMsgConsumableExhausted(const CMsgConsumableExhausted& from);
-
-  inline CMsgConsumableExhausted& operator=(const CMsgConsumableExhausted& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const CMsgConsumableExhausted& default_instance();
-
-  static inline const CMsgConsumableExhausted* internal_default_instance() {
-    return reinterpret_cast<const CMsgConsumableExhausted*>(
-               &_CMsgConsumableExhausted_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    34;
-
-  void Swap(CMsgConsumableExhausted* other);
-
-  // implements Message ----------------------------------------------
-
-  inline CMsgConsumableExhausted* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  CMsgConsumableExhausted* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const CMsgConsumableExhausted& from);
-  void MergeFrom(const CMsgConsumableExhausted& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(CMsgConsumableExhausted* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional int32 item_def_id = 1;
-  bool has_item_def_id() const;
-  void clear_item_def_id();
-  static const int kItemDefIdFieldNumber = 1;
-  ::google::protobuf::int32 item_def_id() const;
-  void set_item_def_id(::google::protobuf::int32 value);
-
-  // @@protoc_insertion_point(class_scope:proto.dota.CMsgConsumableExhausted)
- private:
-  void set_has_item_def_id();
-  void clear_has_item_def_id();
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::int32 item_def_id_;
-  friend struct protobuf_base_5fgcmessages_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
 class CMsgItemAcknowledged : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgItemAcknowledged) */ {
  public:
   CMsgItemAcknowledged();
@@ -5214,7 +5128,7 @@ class CMsgItemAcknowledged : public ::google::protobuf::Message /* @@protoc_inse
                &_CMsgItemAcknowledged_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    35;
+    34;
 
   void Swap(CMsgItemAcknowledged* other);
 
@@ -5356,7 +5270,7 @@ class CMsgSetItemPositions_ItemPosition : public ::google::protobuf::Message /* 
                &_CMsgSetItemPositions_ItemPosition_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    36;
+    35;
 
   void Swap(CMsgSetItemPositions_ItemPosition* other);
 
@@ -5458,7 +5372,7 @@ class CMsgSetItemPositions : public ::google::protobuf::Message /* @@protoc_inse
                &_CMsgSetItemPositions_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    37;
+    36;
 
   void Swap(CMsgSetItemPositions* other);
 
@@ -5555,7 +5469,7 @@ class CMsgGCNameItemNotification : public ::google::protobuf::Message /* @@proto
                &_CMsgGCNameItemNotification_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    38;
+    37;
 
   void Swap(CMsgGCNameItemNotification* other);
 
@@ -5675,7 +5589,7 @@ class CMsgGCClientDisplayNotification : public ::google::protobuf::Message /* @@
                &_CMsgGCClientDisplayNotification_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    39;
+    38;
 
   void Swap(CMsgGCClientDisplayNotification* other);
 
@@ -5839,7 +5753,7 @@ class CMsgGCShowItemsPickedUp : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgGCShowItemsPickedUp_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    40;
+    39;
 
   void Swap(CMsgGCShowItemsPickedUp* other);
 
@@ -5931,7 +5845,7 @@ class CMsgGCIncrementKillCountResponse : public ::google::protobuf::Message /* @
                &_CMsgGCIncrementKillCountResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    41;
+    40;
 
   void Swap(CMsgGCIncrementKillCountResponse* other);
 
@@ -6053,7 +5967,7 @@ class CSOEconItemDropRateBonus : public ::google::protobuf::Message /* @@protoc_
                &_CSOEconItemDropRateBonus_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    42;
+    41;
 
   void Swap(CSOEconItemDropRateBonus* other);
 
@@ -6215,7 +6129,7 @@ class CSOEconItemLeagueViewPass : public ::google::protobuf::Message /* @@protoc
                &_CSOEconItemLeagueViewPass_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    43;
+    42;
 
   void Swap(CSOEconItemLeagueViewPass* other);
 
@@ -6337,7 +6251,7 @@ class CSOEconItemEventTicket : public ::google::protobuf::Message /* @@protoc_in
                &_CSOEconItemEventTicket_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    44;
+    43;
 
   void Swap(CSOEconItemEventTicket* other);
 
@@ -6449,7 +6363,7 @@ class CSOEconItemTournamentPassport : public ::google::protobuf::Message /* @@pr
                &_CSOEconItemTournamentPassport_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    45;
+    44;
 
   void Swap(CSOEconItemTournamentPassport* other);
 
@@ -6611,7 +6525,7 @@ class CMsgGCStorePurchaseCancel : public ::google::protobuf::Message /* @@protoc
                &_CMsgGCStorePurchaseCancel_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    46;
+    45;
 
   void Swap(CMsgGCStorePurchaseCancel* other);
 
@@ -6703,7 +6617,7 @@ class CMsgGCStorePurchaseCancelResponse : public ::google::protobuf::Message /* 
                &_CMsgGCStorePurchaseCancelResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    47;
+    46;
 
   void Swap(CMsgGCStorePurchaseCancelResponse* other);
 
@@ -6795,7 +6709,7 @@ class CMsgGCStorePurchaseFinalize : public ::google::protobuf::Message /* @@prot
                &_CMsgGCStorePurchaseFinalize_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    48;
+    47;
 
   void Swap(CMsgGCStorePurchaseFinalize* other);
 
@@ -6887,7 +6801,7 @@ class CMsgGCStorePurchaseFinalizeResponse : public ::google::protobuf::Message /
                &_CMsgGCStorePurchaseFinalizeResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    49;
+    48;
 
   void Swap(CMsgGCStorePurchaseFinalizeResponse* other);
 
@@ -6992,7 +6906,7 @@ class CMsgGCBannedWordListRequest : public ::google::protobuf::Message /* @@prot
                &_CMsgGCBannedWordListRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    50;
+    49;
 
   void Swap(CMsgGCBannedWordListRequest* other);
 
@@ -7094,7 +7008,7 @@ class CMsgGCBannedWord : public ::google::protobuf::Message /* @@protoc_insertio
                &_CMsgGCBannedWord_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    51;
+    50;
 
   void Swap(CMsgGCBannedWord* other);
 
@@ -7214,7 +7128,7 @@ class CMsgGCBannedWordListResponse : public ::google::protobuf::Message /* @@pro
                &_CMsgGCBannedWordListResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    52;
+    51;
 
   void Swap(CMsgGCBannedWordListResponse* other);
 
@@ -7319,7 +7233,7 @@ class CMsgGCToGCBannedWordListBroadcast : public ::google::protobuf::Message /* 
                &_CMsgGCToGCBannedWordListBroadcast_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    53;
+    52;
 
   void Swap(CMsgGCToGCBannedWordListBroadcast* other);
 
@@ -7413,7 +7327,7 @@ class CMsgGCToGCBannedWordListUpdated : public ::google::protobuf::Message /* @@
                &_CMsgGCToGCBannedWordListUpdated_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    54;
+    53;
 
   void Swap(CMsgGCToGCBannedWordListUpdated* other);
 
@@ -7505,7 +7419,7 @@ class CMsgGCToGCDirtySDOCache : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgGCToGCDirtySDOCache_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    55;
+    54;
 
   void Swap(CMsgGCToGCDirtySDOCache* other);
 
@@ -7607,7 +7521,7 @@ class CMsgGCToGCDirtyMultipleSDOCache : public ::google::protobuf::Message /* @@
                &_CMsgGCToGCDirtyMultipleSDOCache_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    56;
+    55;
 
   void Swap(CMsgGCToGCDirtyMultipleSDOCache* other);
 
@@ -7712,7 +7626,7 @@ class CMsgGCToGCApplyLocalizationDiff : public ::google::protobuf::Message /* @@
                &_CMsgGCToGCApplyLocalizationDiff_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    57;
+    56;
 
   void Swap(CMsgGCToGCApplyLocalizationDiff* other);
 
@@ -7822,7 +7736,7 @@ class CMsgGCToGCApplyLocalizationDiffResponse : public ::google::protobuf::Messa
                &_CMsgGCToGCApplyLocalizationDiffResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    58;
+    57;
 
   void Swap(CMsgGCToGCApplyLocalizationDiffResponse* other);
 
@@ -7914,7 +7828,7 @@ class CMsgGCCollectItem : public ::google::protobuf::Message /* @@protoc_inserti
                &_CMsgGCCollectItem_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    59;
+    58;
 
   void Swap(CMsgGCCollectItem* other);
 
@@ -8016,7 +7930,7 @@ class CMsgSDONoMemcached : public ::google::protobuf::Message /* @@protoc_insert
                &_CMsgSDONoMemcached_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    60;
+    59;
 
   void Swap(CMsgSDONoMemcached* other);
 
@@ -8098,7 +8012,7 @@ class CMsgGCToGCUpdateSQLKeyValue : public ::google::protobuf::Message /* @@prot
                &_CMsgGCToGCUpdateSQLKeyValue_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    61;
+    60;
 
   void Swap(CMsgGCToGCUpdateSQLKeyValue* other);
 
@@ -8198,7 +8112,7 @@ class CMsgGCServerVersionUpdated : public ::google::protobuf::Message /* @@proto
                &_CMsgGCServerVersionUpdated_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    62;
+    61;
 
   void Swap(CMsgGCServerVersionUpdated* other);
 
@@ -8290,7 +8204,7 @@ class CMsgGCClientVersionUpdated : public ::google::protobuf::Message /* @@proto
                &_CMsgGCClientVersionUpdated_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    63;
+    62;
 
   void Swap(CMsgGCClientVersionUpdated* other);
 
@@ -8382,7 +8296,7 @@ class CMsgGCToGCWebAPIAccountChanged : public ::google::protobuf::Message /* @@p
                &_CMsgGCToGCWebAPIAccountChanged_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    64;
+    63;
 
   void Swap(CMsgGCToGCWebAPIAccountChanged* other);
 
@@ -8464,7 +8378,7 @@ class CMsgRecipeComponent : public ::google::protobuf::Message /* @@protoc_inser
                &_CMsgRecipeComponent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    65;
+    64;
 
   void Swap(CMsgRecipeComponent* other);
 
@@ -8566,7 +8480,7 @@ class CMsgFulfillDynamicRecipeComponent : public ::google::protobuf::Message /* 
                &_CMsgFulfillDynamicRecipeComponent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    66;
+    65;
 
   void Swap(CMsgFulfillDynamicRecipeComponent* other);
 
@@ -8671,7 +8585,7 @@ class CMsgGCClientMarketDataRequest : public ::google::protobuf::Message /* @@pr
                &_CMsgGCClientMarketDataRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    67;
+    66;
 
   void Swap(CMsgGCClientMarketDataRequest* other);
 
@@ -8763,7 +8677,7 @@ class CMsgGCClientMarketDataEntry : public ::google::protobuf::Message /* @@prot
                &_CMsgGCClientMarketDataEntry_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    68;
+    67;
 
   void Swap(CMsgGCClientMarketDataEntry* other);
 
@@ -8885,7 +8799,7 @@ class CMsgGCClientMarketData : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgGCClientMarketData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    69;
+    68;
 
   void Swap(CMsgGCClientMarketData* other);
 
@@ -8980,7 +8894,7 @@ class CMsgExtractGems : public ::google::protobuf::Message /* @@protoc_insertion
                &_CMsgExtractGems_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    70;
+    69;
 
   void Swap(CMsgExtractGems* other);
 
@@ -9092,7 +9006,7 @@ class CMsgExtractGemsResponse : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgExtractGemsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    71;
+    70;
 
   void Swap(CMsgExtractGemsResponse* other);
 
@@ -9226,7 +9140,7 @@ class CMsgAddSocket : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_CMsgAddSocket_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    72;
+    71;
 
   void Swap(CMsgAddSocket* other);
 
@@ -9338,7 +9252,7 @@ class CMsgAddSocketResponse : public ::google::protobuf::Message /* @@protoc_ins
                &_CMsgAddSocketResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    73;
+    72;
 
   void Swap(CMsgAddSocketResponse* other);
 
@@ -9483,7 +9397,7 @@ class CMsgAddItemToSocketData : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgAddItemToSocketData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    74;
+    73;
 
   void Swap(CMsgAddItemToSocketData* other);
 
@@ -9585,7 +9499,7 @@ class CMsgAddItemToSocket : public ::google::protobuf::Message /* @@protoc_inser
                &_CMsgAddItemToSocket_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    75;
+    74;
 
   void Swap(CMsgAddItemToSocket* other);
 
@@ -9690,7 +9604,7 @@ class CMsgAddItemToSocketResponse : public ::google::protobuf::Message /* @@prot
                &_CMsgAddItemToSocketResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    76;
+    75;
 
   void Swap(CMsgAddItemToSocketResponse* other);
 
@@ -9843,7 +9757,7 @@ class CMsgResetStrangeGemCount : public ::google::protobuf::Message /* @@protoc_
                &_CMsgResetStrangeGemCount_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    77;
+    76;
 
   void Swap(CMsgResetStrangeGemCount* other);
 
@@ -9945,7 +9859,7 @@ class CMsgResetStrangeGemCountResponse : public ::google::protobuf::Message /* @
                &_CMsgResetStrangeGemCountResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    78;
+    77;
 
   void Swap(CMsgResetStrangeGemCountResponse* other);
 
@@ -10069,7 +9983,7 @@ class CMsgGCToClientPollFileRequest : public ::google::protobuf::Message /* @@pr
                &_CMsgGCToClientPollFileRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    79;
+    78;
 
   void Swap(CMsgGCToClientPollFileRequest* other);
 
@@ -10189,7 +10103,7 @@ class CMsgGCToClientPollFileResponse : public ::google::protobuf::Message /* @@p
                &_CMsgGCToClientPollFileResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    80;
+    79;
 
   void Swap(CMsgGCToClientPollFileResponse* other);
 
@@ -14670,34 +14584,6 @@ CMsgReplicateConVars::convars() const {
 
 // -------------------------------------------------------------------
 
-// CMsgConsumableExhausted
-
-// optional int32 item_def_id = 1;
-inline bool CMsgConsumableExhausted::has_item_def_id() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void CMsgConsumableExhausted::set_has_item_def_id() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void CMsgConsumableExhausted::clear_has_item_def_id() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void CMsgConsumableExhausted::clear_item_def_id() {
-  item_def_id_ = 0;
-  clear_has_item_def_id();
-}
-inline ::google::protobuf::int32 CMsgConsumableExhausted::item_def_id() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgConsumableExhausted.item_def_id)
-  return item_def_id_;
-}
-inline void CMsgConsumableExhausted::set_item_def_id(::google::protobuf::int32 value) {
-  set_has_item_def_id();
-  item_def_id_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgConsumableExhausted.item_def_id)
-}
-
-// -------------------------------------------------------------------
-
 // CMsgItemAcknowledged
 
 // optional uint32 account_id = 1;
@@ -17868,8 +17754,6 @@ inline void CMsgGCToClientPollFileResponse::set_file_size(::google::protobuf::ui
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

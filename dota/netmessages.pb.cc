@@ -261,12 +261,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CCLCMsg_Move, num_backup_commands_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CCLCMsg_Move, num_new_commands_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CCLCMsg_Move, data_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CCLCMsg_Move, command_number_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CCLCMsg_Move, num_commands_),
+  0,
   1,
   2,
-  0,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgVoiceAudio, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CMsgVoiceAudio, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -689,6 +689,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSVCMsg_PacketEntities, pending_full_frame_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSVCMsg_PacketEntities, active_spawngroup_handle_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSVCMsg_PacketEntities, max_spawngroup_creationsequence_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSVCMsg_PacketEntities, last_cmd_number_),
   1,
   2,
   4,
@@ -699,6 +700,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   6,
   8,
   9,
+  10,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSVCMsg_TempEntities, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CSVCMsg_TempEntities, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1100,34 +1102,34 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 408, 415, sizeof(CSVCMsg_GameEventList_key_t)},
   { 417, 425, sizeof(CSVCMsg_GameEventList_descriptor_t)},
   { 428, 434, sizeof(CSVCMsg_GameEventList)},
-  { 435, 450, sizeof(CSVCMsg_PacketEntities)},
-  { 460, 468, sizeof(CSVCMsg_TempEntities)},
-  { 471, 485, sizeof(CSVCMsg_CreateStringTable)},
-  { 494, 502, sizeof(CSVCMsg_UpdateStringTable)},
-  { 505, 516, sizeof(CSVCMsg_VoiceData)},
-  { 522, 530, sizeof(CSVCMsg_PacketReliable)},
-  { 533, 542, sizeof(CSVCMsg_FullFrameSplit)},
-  { 546, 555, sizeof(CSVCMsg_HLTVStatus)},
-  { 559, 565, sizeof(CSVCMsg_ServerSteamID)},
-  { 566, 572, sizeof(CSVCMsg_CmdKeyValues)},
-  { 573, 580, sizeof(CMsgIPCAddress)},
-  { 582, 593, sizeof(CMsgServerPeer)},
-  { 599, 605, sizeof(CSVCMsg_PeerList)},
-  { 606, 612, sizeof(CSVCMsg_ClearAllStringTables)},
-  { 613, 628, sizeof(ProtoFlattenedSerializerField_t)},
-  { 638, 646, sizeof(ProtoFlattenedSerializer_t)},
-  { 649, 657, sizeof(CSVCMsg_FlattenedSerializer)},
-  { 660, 666, sizeof(CSVCMsg_StopSound)},
-  { 667, 676, sizeof(CBidirMsg_RebroadcastGameEvent)},
-  { 680, 686, sizeof(CBidirMsg_RebroadcastSource)},
-  { 687, 693, sizeof(SerializedNetAddress_t)},
-  { 694, 702, sizeof(CBidirMsg_RelayInfo)},
-  { 705, 713, sizeof(SignedPayload_t)},
-  { 716, 724, sizeof(CBidirMsg_RelayPacket_SignedDestinationAddress_t)},
-  { 727, 736, sizeof(CBidirMsg_RelayPacket)},
-  { 740, 747, sizeof(CMsgServerNetworkStats_Port)},
-  { 749, 760, sizeof(CMsgServerNetworkStats_Player)},
-  { 766, 796, sizeof(CMsgServerNetworkStats)},
+  { 435, 451, sizeof(CSVCMsg_PacketEntities)},
+  { 462, 470, sizeof(CSVCMsg_TempEntities)},
+  { 473, 487, sizeof(CSVCMsg_CreateStringTable)},
+  { 496, 504, sizeof(CSVCMsg_UpdateStringTable)},
+  { 507, 518, sizeof(CSVCMsg_VoiceData)},
+  { 524, 532, sizeof(CSVCMsg_PacketReliable)},
+  { 535, 544, sizeof(CSVCMsg_FullFrameSplit)},
+  { 548, 557, sizeof(CSVCMsg_HLTVStatus)},
+  { 561, 567, sizeof(CSVCMsg_ServerSteamID)},
+  { 568, 574, sizeof(CSVCMsg_CmdKeyValues)},
+  { 575, 582, sizeof(CMsgIPCAddress)},
+  { 584, 595, sizeof(CMsgServerPeer)},
+  { 601, 607, sizeof(CSVCMsg_PeerList)},
+  { 608, 614, sizeof(CSVCMsg_ClearAllStringTables)},
+  { 615, 630, sizeof(ProtoFlattenedSerializerField_t)},
+  { 640, 648, sizeof(ProtoFlattenedSerializer_t)},
+  { 651, 659, sizeof(CSVCMsg_FlattenedSerializer)},
+  { 662, 668, sizeof(CSVCMsg_StopSound)},
+  { 669, 678, sizeof(CBidirMsg_RebroadcastGameEvent)},
+  { 682, 688, sizeof(CBidirMsg_RebroadcastSource)},
+  { 689, 695, sizeof(SerializedNetAddress_t)},
+  { 696, 704, sizeof(CBidirMsg_RelayInfo)},
+  { 707, 715, sizeof(SignedPayload_t)},
+  { 718, 726, sizeof(CBidirMsg_RelayPacket_SignedDestinationAddress_t)},
+  { 729, 738, sizeof(CBidirMsg_RelayPacket)},
+  { 742, 749, sizeof(CMsgServerNetworkStats_Port)},
+  { 751, 762, sizeof(CMsgServerNetworkStats_Player)},
+  { 768, 798, sizeof(CMsgServerNetworkStats)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -1460,241 +1462,241 @@ void AddDescriptorsImpl() {
       "\n\016send_table_crc\030\001 \001(\007\022\024\n\014server_count\030\002"
       " \001(\r\022\017\n\007is_hltv\030\003 \001(\010\022\021\n\tis_replay\030\004 \001(\010"
       "\022\022\n\nfriends_id\030\005 \001(\r\022\024\n\014friends_name\030\006 \001"
-      "(\t\"S\n\014CCLCMsg_Move\022\033\n\023num_backup_command"
-      "s\030\001 \001(\r\022\030\n\020num_new_commands\030\002 \001(\r\022\014\n\004dat"
-      "a\030\003 \001(\014\"\324\001\n\016CMsgVoiceAudio\022E\n\006format\030\001 \001"
-      "(\0162\035.proto.dota.VoiceDataFormat_t:\026VOICE"
-      "DATA_FORMAT_STEAM\022\022\n\nvoice_data\030\002 \001(\014\022\026\n"
-      "\016sequence_bytes\030\003 \001(\005\022\026\n\016section_number\030"
-      "\004 \001(\r\022\023\n\013sample_rate\030\005 \001(\r\022\"\n\032uncompress"
-      "ed_sample_offset\030\006 \001(\r\"Z\n\021CCLCMsg_VoiceD"
-      "ata\022)\n\005audio\030\001 \001(\0132\032.proto.dota.CMsgVoic"
-      "eAudio\022\014\n\004xuid\030\002 \001(\006\022\014\n\004tick\030\003 \001(\r\"A\n\023CC"
-      "LCMsg_BaselineAck\022\025\n\rbaseline_tick\030\001 \001(\005"
-      "\022\023\n\013baseline_nr\030\002 \001(\005\"*\n\024CCLCMsg_ListenE"
-      "vents\022\022\n\nevent_mask\030\001 \003(\007\"\\\n\030CCLCMsg_Res"
-      "pondCvarValue\022\016\n\006cookie\030\001 \001(\005\022\023\n\013status_"
-      "code\030\002 \001(\005\022\014\n\004name\030\003 \001(\t\022\r\n\005value\030\004 \001(\t\""
-      "m\n\024CCLCMsg_FileCRCCheck\022\021\n\tcode_path\030\001 \001"
-      "(\005\022\014\n\004path\030\002 \001(\t\022\025\n\rcode_filename\030\003 \001(\005\022"
-      "\020\n\010filename\030\004 \001(\t\022\013\n\003crc\030\005 \001(\007\"+\n\027CCLCMs"
-      "g_LoadingProgress\022\020\n\010progress\030\001 \001(\005\"0\n\032C"
-      "CLCMsg_SplitPlayerConnect\022\022\n\nplayername\030"
-      "\001 \001(\t\"7\n\025CCLCMsg_ClientMessage\022\020\n\010msg_ty"
-      "pe\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"-\n\035CCLCMsg_SplitP"
-      "layerDisconnect\022\014\n\004slot\030\001 \001(\005\"*\n\024CCLCMsg"
-      "_ServerStatus\022\022\n\nsimplified\030\001 \001(\010\"\024\n\022CCL"
-      "CMsg_ServerPing\"e\n\024CCLCMsg_RequestPause\022"
-      "8\n\npause_type\030\001 \001(\0162\032.proto.dota.Request"
-      "Pause_t:\010RP_PAUSE\022\023\n\013pause_group\030\002 \001(\005\"$"
-      "\n\024CCLCMsg_CmdKeyValues\022\014\n\004data\030\001 \001(\014\"\241\003\n"
-      "\022CSVCMsg_ServerInfo\022\020\n\010protocol\030\001 \001(\005\022\024\n"
-      "\014server_count\030\002 \001(\005\022\024\n\014is_dedicated\030\003 \001("
-      "\010\022\017\n\007is_hltv\030\004 \001(\010\022\021\n\tis_replay\030\005 \001(\010\022\014\n"
-      "\004c_os\030\006 \001(\005\022\023\n\013max_clients\030\n \001(\005\022\023\n\013max_"
-      "classes\030\013 \001(\005\022\023\n\013player_slot\030\014 \001(\005\022\025\n\rti"
-      "ck_interval\030\r \001(\002\022\020\n\010game_dir\030\016 \001(\t\022\020\n\010m"
-      "ap_name\030\017 \001(\t\022\020\n\010sky_name\030\020 \001(\t\022\021\n\thost_"
-      "name\030\021 \001(\t\022\022\n\naddon_name\030\022 \001(\t\022I\n\023game_s"
-      "ession_config\030\023 \001(\0132,.proto.dota.CSVCMsg"
-      "_GameSessionConfiguration\022\035\n\025game_sessio"
-      "n_manifest\030\024 \001(\014\"\257\001\n\021CSVCMsg_ClassInfo\022\030"
-      "\n\020create_on_client\030\001 \001(\010\0226\n\007classes\030\002 \003("
-      "\0132%.proto.dota.CSVCMsg_ClassInfo.class_t"
-      "\032H\n\007class_t\022\020\n\010class_id\030\001 \001(\005\022\027\n\017data_ta"
-      "ble_name\030\002 \001(\t\022\022\n\nclass_name\030\003 \001(\t\"\"\n\020CS"
-      "VCMsg_SetPause\022\016\n\006paused\030\001 \001(\010\"G\n\021CSVCMs"
-      "g_VoiceInit\022\017\n\007quality\030\001 \001(\005\022\r\n\005codec\030\002 "
-      "\001(\t\022\022\n\007version\030\003 \001(\005:\0010\"\035\n\rCSVCMsg_Print"
-      "\022\014\n\004text\030\001 \001(\t\"\352\003\n\016CSVCMsg_Sounds\022\026\n\016rel"
-      "iable_sound\030\001 \001(\010\0226\n\006sounds\030\002 \003(\0132&.prot"
-      "o.dota.CSVCMsg_Sounds.sounddata_t\032\207\003\n\013so"
-      "unddata_t\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010origin_y\030"
-      "\002 \001(\021\022\020\n\010origin_z\030\003 \001(\021\022\016\n\006volume\030\004 \001(\r\022"
-      "\023\n\013delay_value\030\005 \001(\002\022\027\n\017sequence_number\030"
-      "\006 \001(\005\022\024\n\014entity_index\030\007 \001(\005\022\017\n\007channel\030\010"
-      " \001(\005\022\r\n\005pitch\030\t \001(\005\022\r\n\005flags\030\n \001(\005\022\021\n\tso"
-      "und_num\030\013 \001(\r\022\030\n\020sound_num_handle\030\014 \001(\007\022"
-      "\026\n\016speaker_entity\030\r \001(\005\022\023\n\013random_seed\030\016"
-      " \001(\005\022\023\n\013sound_level\030\017 \001(\005\022\023\n\013is_sentence"
-      "\030\020 \001(\010\022\022\n\nis_ambient\030\021 \001(\010\022\014\n\004guid\030\022 \001(\r"
-      "\022\031\n\021sound_resource_id\030\023 \001(\006\"c\n\020CSVCMsg_P"
-      "refetch\022\023\n\013sound_index\030\001 \001(\005\022:\n\rresource"
-      "_type\030\002 \001(\0162\030.proto.dota.PrefetchType:\tP"
-      "FT_SOUND\"5\n\017CSVCMsg_SetView\022\024\n\014entity_in"
-      "dex\030\001 \001(\005\022\014\n\004slot\030\002 \001(\005\"K\n\020CSVCMsg_FixAn"
-      "gle\022\020\n\010relative\030\001 \001(\010\022%\n\005angle\030\002 \001(\0132\026.p"
-      "roto.dota.CMsgQAngle\"\?\n\026CSVCMsg_Crosshai"
-      "rAngle\022%\n\005angle\030\001 \001(\0132\026.proto.dota.CMsgQ"
-      "Angle\"\225\001\n\020CSVCMsg_BSPDecal\022#\n\003pos\030\001 \001(\0132"
-      "\026.proto.dota.CMsgVector\022\033\n\023decal_texture"
-      "_index\030\002 \001(\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n\013mo"
-      "del_index\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010\"\205\001"
-      "\n\023CSVCMsg_SplitScreen\022J\n\004type\030\001 \001(\0162#.pr"
-      "oto.dota.ESplitScreenMessageType:\027MSG_SP"
-      "LITSCREEN_ADDUSER\022\014\n\004slot\030\002 \001(\005\022\024\n\014playe"
-      "r_index\030\003 \001(\005\"9\n\024CSVCMsg_GetCvarValue\022\016\n"
-      "\006cookie\030\001 \001(\005\022\021\n\tcvar_name\030\002 \001(\t\"<\n\014CSVC"
-      "Msg_Menu\022\023\n\013dialog_type\030\001 \001(\005\022\027\n\017menu_ke"
-      "y_values\030\002 \001(\014\"\273\002\n\021CSVCMsg_SendTable\022\016\n\006"
-      "is_end\030\001 \001(\010\022\026\n\016net_table_name\030\002 \001(\t\022\025\n\r"
-      "needs_decoder\030\003 \001(\010\0227\n\005props\030\004 \003(\0132(.pro"
-      "to.dota.CSVCMsg_SendTable.sendprop_t\032\255\001\n"
-      "\nsendprop_t\022\014\n\004type\030\001 \001(\005\022\020\n\010var_name\030\002 "
-      "\001(\t\022\r\n\005flags\030\003 \001(\005\022\020\n\010priority\030\004 \001(\005\022\017\n\007"
-      "dt_name\030\005 \001(\t\022\024\n\014num_elements\030\006 \001(\005\022\021\n\tl"
-      "ow_value\030\007 \001(\002\022\022\n\nhigh_value\030\010 \001(\002\022\020\n\010nu"
-      "m_bits\030\t \001(\005\"\347\001\n\025CSVCMsg_GameEventList\022C"
-      "\n\013descriptors\030\001 \003(\0132..proto.dota.CSVCMsg"
-      "_GameEventList.descriptor_t\032#\n\005key_t\022\014\n\004"
-      "type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032d\n\014descriptor_t"
-      "\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\0225\n\004keys\030"
-      "\003 \003(\0132\'.proto.dota.CSVCMsg_GameEventList"
-      ".key_t\"\223\002\n\026CSVCMsg_PacketEntities\022\023\n\013max"
-      "_entries\030\001 \001(\005\022\027\n\017updated_entries\030\002 \001(\005\022"
-      "\020\n\010is_delta\030\003 \001(\010\022\027\n\017update_baseline\030\004 \001"
-      "(\010\022\020\n\010baseline\030\005 \001(\005\022\022\n\ndelta_from\030\006 \001(\005"
-      "\022\023\n\013entity_data\030\007 \001(\014\022\032\n\022pending_full_fr"
-      "ame\030\010 \001(\010\022 \n\030active_spawngroup_handle\030\t "
-      "\001(\r\022\'\n\037max_spawngroup_creationsequence\030\n"
-      " \001(\r\"R\n\024CSVCMsg_TempEntities\022\020\n\010reliable"
-      "\030\001 \001(\010\022\023\n\013num_entries\030\002 \001(\005\022\023\n\013entity_da"
-      "ta\030\003 \001(\014\"\351\001\n\031CSVCMsg_CreateStringTable\022\014"
-      "\n\004name\030\001 \001(\t\022\023\n\013num_entries\030\002 \001(\005\022\034\n\024use"
-      "r_data_fixed_size\030\003 \001(\010\022\026\n\016user_data_siz"
-      "e\030\004 \001(\005\022\033\n\023user_data_size_bits\030\005 \001(\005\022\r\n\005"
-      "flags\030\006 \001(\005\022\023\n\013string_data\030\007 \001(\014\022\031\n\021unco"
-      "mpressed_size\030\010 \001(\005\022\027\n\017data_compressed\030\t"
-      " \001(\010\"_\n\031CSVCMsg_UpdateStringTable\022\020\n\010tab"
-      "le_id\030\001 \001(\005\022\033\n\023num_changed_entries\030\002 \001(\005"
-      "\022\023\n\013string_data\030\003 \001(\014\"\223\001\n\021CSVCMsg_VoiceD"
-      "ata\022)\n\005audio\030\001 \001(\0132\032.proto.dota.CMsgVoic"
-      "eAudio\022\016\n\006client\030\002 \001(\005\022\021\n\tproximity\030\003 \001("
-      "\010\022\014\n\004xuid\030\004 \001(\006\022\024\n\014audible_mask\030\005 \001(\005\022\014\n"
-      "\004tick\030\006 \001(\r\"K\n\026CSVCMsg_PacketReliable\022\014\n"
-      "\004tick\030\001 \001(\005\022\024\n\014messagessize\030\002 \001(\005\022\r\n\005sta"
-      "te\030\003 \001(\010\"T\n\026CSVCMsg_FullFrameSplit\022\014\n\004ti"
-      "ck\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005total\030\003 \001(\005"
-      "\022\014\n\004data\030\004 \001(\014\"U\n\022CSVCMsg_HLTVStatus\022\016\n\006"
-      "master\030\001 \001(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots\030\003"
-      " \001(\005\022\017\n\007proxies\030\004 \001(\005\")\n\025CSVCMsg_ServerS"
-      "teamID\022\020\n\010steam_id\030\001 \001(\004\"$\n\024CSVCMsg_CmdK"
-      "eyValues\022\014\n\004data\030\001 \001(\014\";\n\016CMsgIPCAddress"
-      "\022\025\n\rcomputer_guid\030\001 \001(\006\022\022\n\nprocess_id\030\002 "
-      "\001(\r\"\253\001\n\016CMsgServerPeer\022\023\n\013player_slot\030\001 "
-      "\001(\005\022\017\n\007steamid\030\002 \001(\006\022\'\n\003ipc\030\003 \001(\0132\032.prot"
-      "o.dota.CMsgIPCAddress\022\025\n\rthey_hear_you\030\004"
-      " \001(\010\022\025\n\ryou_hear_them\030\005 \001(\010\022\034\n\024is_listen"
-      "server_host\030\006 \001(\010\"<\n\020CSVCMsg_PeerList\022(\n"
-      "\004peer\030\001 \003(\0132\032.proto.dota.CMsgServerPeer\""
-      "/\n\034CSVCMsg_ClearAllStringTables\022\017\n\007mapna"
-      "me\030\001 \001(\t\"\222\002\n\037ProtoFlattenedSerializerFie"
-      "ld_t\022\024\n\014var_type_sym\030\001 \001(\005\022\024\n\014var_name_s"
-      "ym\030\002 \001(\005\022\021\n\tbit_count\030\003 \001(\005\022\021\n\tlow_value"
-      "\030\004 \001(\002\022\022\n\nhigh_value\030\005 \001(\002\022\024\n\014encode_fla"
-      "gs\030\006 \001(\005\022!\n\031field_serializer_name_sym\030\007 "
-      "\001(\005\022 \n\030field_serializer_version\030\010 \001(\005\022\025\n"
-      "\rsend_node_sym\030\t \001(\005\022\027\n\017var_encoder_sym\030"
-      "\n \001(\005\"k\n\032ProtoFlattenedSerializer_t\022\033\n\023s"
-      "erializer_name_sym\030\001 \001(\005\022\032\n\022serializer_v"
-      "ersion\030\002 \001(\005\022\024\n\014fields_index\030\003 \003(\005\"\250\001\n\033C"
-      "SVCMsg_FlattenedSerializer\022;\n\013serializer"
-      "s\030\001 \003(\0132&.proto.dota.ProtoFlattenedSeria"
-      "lizer_t\022\017\n\007symbols\030\002 \003(\t\022;\n\006fields\030\003 \003(\013"
-      "2+.proto.dota.ProtoFlattenedSerializerFi"
-      "eld_t\"!\n\021CSVCMsg_StopSound\022\014\n\004guid\030\001 \001(\007"
-      "\"y\n\036CBidirMsg_RebroadcastGameEvent\022\024\n\014po"
-      "sttoserver\030\001 \001(\010\022\017\n\007buftype\030\002 \001(\005\022\026\n\016cli"
-      "entbitcount\030\003 \001(\r\022\030\n\020receivingclients\030\004 "
-      "\001(\004\"2\n\033CBidirMsg_RebroadcastSource\022\023\n\013ev"
-      "entsource\030\001 \001(\005\"3\n\026SerializedNetAddress_"
-      "t\022\031\n\021serializedAddress\030\001 \002(\014\"\305\002\n\023CBidirM"
-      "sg_RelayInfo\022Q\n\toperation\030\001 \002(\0162+.proto."
-      "dota.CBidirMsg_RelayInfo.Operation_t:\021RI"
-      "O_REQUEST_RELAY\022C\n\027serializedTargetAddre"
-      "ss\030\002 \001(\0132\".proto.dota.SerializedNetAddre"
-      "ss_t\022\026\n\016additionalHops\030\003 \001(\r\"~\n\013Operatio"
-      "n_t\022\025\n\021RIO_REQUEST_RELAY\020\000\022\022\n\016RIO_WILL_R"
-      "ELAY\020\001\022\020\n\014RIO_NO_ROUTE\020\002\022\024\n\020RIO_REJECT_R"
-      "ELAY\020\003\022\034\n\030RIO_ESTABLISH_CONNECTION\020\004\"T\n\017"
-      "SignedPayload_t\022\023\n\013payloadData\030\001 \002(\014\022\021\n\t"
-      "signature\030\002 \002(\r\022\031\n\021bPayloadEncrypted\030\003 \002"
-      "(\010\"\375\002\n\025CBidirMsg_RelayPacket\022\024\n\014prevhopc"
-      "ount\030\001 \002(\r\022:\n\016originalSender\030\002 \002(\0132\".pro"
-      "to.dota.SerializedNetAddress_t\0222\n\rsigned"
-      "Payload\030\003 \002(\0132\033.proto.dota.SignedPayload"
-      "_t\022S\n\rrecipientList\030\004 \003(\0132<.proto.dota.C"
-      "BidirMsg_RelayPacket.SignedDestinationAd"
-      "dress_t\032\210\001\n\032SignedDestinationAddress_t\022:"
-      "\n\016serializedAddr\030\001 \002(\0132\".proto.dota.Seri"
-      "alizedNetAddress_t\022\021\n\tsignature\030\002 \002(\r\022\033\n"
-      "\023encryptedPayloadKey\030\003 \001(\014\"\261\006\n\026CMsgServe"
-      "rNetworkStats\022\021\n\tdedicated\030\001 \001(\010\022\021\n\tcpu_"
-      "usage\030\002 \001(\005\022\026\n\016memory_used_mb\030\003 \001(\005\022\026\n\016m"
-      "emory_free_mb\030\004 \001(\005\022\016\n\006uptime\030\005 \001(\005\022\023\n\013s"
-      "pawn_count\030\006 \001(\005\022\023\n\013num_clients\030\010 \001(\005\022\020\n"
-      "\010num_bots\030\t \001(\005\022\026\n\016num_spectators\030\n \001(\005\022"
-      "\025\n\rnum_tv_relays\030\013 \001(\005\022\013\n\003fps\030\014 \001(\002\0226\n\005p"
-      "orts\030\021 \003(\0132\'.proto.dota.CMsgServerNetwor"
-      "kStats.Port\022\027\n\017avg_latency_out\030\022 \001(\002\022\026\n\016"
-      "avg_latency_in\030\023 \001(\002\022\027\n\017avg_packets_out\030"
-      "\024 \001(\002\022\026\n\016avg_packets_in\030\025 \001(\002\022\024\n\014avg_los"
-      "s_out\030\026 \001(\002\022\023\n\013avg_loss_in\030\027 \001(\002\022\024\n\014avg_"
-      "data_out\030\030 \001(\002\022\023\n\013avg_data_in\030\031 \001(\002\022\025\n\rt"
-      "otal_data_in\030\032 \001(\004\022\030\n\020total_packets_in\030\033"
-      " \001(\004\022\026\n\016total_data_out\030\034 \001(\004\022\031\n\021total_pa"
-      "ckets_out\030\035 \001(\004\022:\n\007players\030\036 \003(\0132).proto"
-      ".dota.CMsgServerNetworkStats.Player\032\"\n\004P"
-      "ort\022\014\n\004port\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032\204\001\n\006Play"
-      "er\022\017\n\007steamid\030\001 \001(\004\022\023\n\013remote_addr\030\002 \001(\t"
-      "\022\026\n\016ping_stddev_ms\030\003 \001(\005\022\023\n\013ping_avg_ms\030"
-      "\004 \001(\005\022\027\n\017packet_loss_pct\030\005 \001(\002\022\016\n\006is_bot"
-      "\030\006 \001(\010*\337\002\n\014CLC_Messages\022\022\n\016clc_ClientInf"
-      "o\020\024\022\014\n\010clc_Move\020\025\022\021\n\rclc_VoiceData\020\026\022\023\n\017"
-      "clc_BaselineAck\020\027\022\024\n\020clc_ListenEvents\020\030\022"
-      "\030\n\024clc_RespondCvarValue\020\031\022\024\n\020clc_FileCRC"
-      "Check\020\032\022\027\n\023clc_LoadingProgress\020\033\022\032\n\026clc_"
-      "SplitPlayerConnect\020\034\022\025\n\021clc_ClientMessag"
-      "e\020\035\022\035\n\031clc_SplitPlayerDisconnect\020\036\022\024\n\020cl"
-      "c_ServerStatus\020\037\022\022\n\016clc_ServerPing\020 \022\024\n\020"
-      "clc_RequestPause\020!\022\024\n\020clc_CmdKeyValues\020\""
-      "*\231\004\n\014SVC_Messages\022\022\n\016svc_ServerInfo\020(\022\033\n"
-      "\027svc_FlattenedSerializer\020)\022\021\n\rsvc_ClassI"
-      "nfo\020*\022\020\n\014svc_SetPause\020+\022\031\n\025svc_CreateStr"
-      "ingTable\020,\022\031\n\025svc_UpdateStringTable\020-\022\021\n"
-      "\rsvc_VoiceInit\020.\022\021\n\rsvc_VoiceData\020/\022\r\n\ts"
-      "vc_Print\0200\022\016\n\nsvc_Sounds\0201\022\017\n\013svc_SetVie"
-      "w\0202\022\034\n\030svc_ClearAllStringTables\0203\022\024\n\020svc"
-      "_CmdKeyValues\0204\022\020\n\014svc_BSPDecal\0205\022\023\n\017svc"
-      "_SplitScreen\0206\022\026\n\022svc_PacketEntities\0207\022\020"
-      "\n\014svc_Prefetch\0208\022\014\n\010svc_Menu\0209\022\024\n\020svc_Ge"
-      "tCvarValue\020:\022\021\n\rsvc_StopSound\020;\022\020\n\014svc_P"
-      "eerList\020<\022\026\n\022svc_PacketReliable\020=\022\022\n\016svc"
-      "_HLTVStatus\020>\022\025\n\021svc_ServerSteamID\020\?\022\026\n\022"
-      "svc_FullFrameSplit\020F*L\n\021VoiceDataFormat_"
-      "t\022\032\n\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDA"
-      "TA_FORMAT_ENGINE\020\001*B\n\016RequestPause_t\022\014\n\010"
-      "RP_PAUSE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEP"
-      "AUSE\020\002*\035\n\014PrefetchType\022\r\n\tPFT_SOUND\020\000*V\n"
-      "\027ESplitScreenMessageType\022\033\n\027MSG_SPLITSCR"
-      "EEN_ADDUSER\020\000\022\036\n\032MSG_SPLITSCREEN_REMOVEU"
-      "SER\020\001*\263\001\n\025EQueryCvarValueStatus\022%\n!eQuer"
-      "yCvarValueStatus_ValueIntact\020\000\022&\n\"eQuery"
-      "CvarValueStatus_CvarNotFound\020\001\022\"\n\036eQuery"
-      "CvarValueStatus_NotACvar\020\002\022\'\n#eQueryCvar"
-      "ValueStatus_CvarProtected\020\003*h\n\013DIALOG_TY"
-      "PE\022\016\n\nDIALOG_MSG\020\000\022\017\n\013DIALOG_MENU\020\001\022\017\n\013D"
-      "IALOG_TEXT\020\002\022\020\n\014DIALOG_ENTRY\020\003\022\025\n\021DIALOG"
-      "_ASKCONNECT\020\004*+\n\031SVC_Messages_LowFrequen"
-      "cy\022\016\n\tsvc_dummy\020\330\004*a\n\026Bidirectional_Mess"
-      "ages\022\033\n\027bi_RebroadcastGameEvent\020\020\022\030\n\024bi_"
-      "RebroadcastSource\020\021\022\020\n\014bi_GameEvent\020\022*M\n"
-      "#Bidirectional_Messages_LowFrequency\022\021\n\014"
-      "bi_RelayInfo\020\274\005\022\023\n\016bi_RelayPacket\020\275\005B\003\200\001"
-      "\000"
+      "(\t\"J\n\014CCLCMsg_Move\022\014\n\004data\030\003 \001(\014\022\026\n\016comm"
+      "and_number\030\004 \001(\r\022\024\n\014num_commands\030\005 \001(\r\"\324"
+      "\001\n\016CMsgVoiceAudio\022E\n\006format\030\001 \001(\0162\035.prot"
+      "o.dota.VoiceDataFormat_t:\026VOICEDATA_FORM"
+      "AT_STEAM\022\022\n\nvoice_data\030\002 \001(\014\022\026\n\016sequence"
+      "_bytes\030\003 \001(\005\022\026\n\016section_number\030\004 \001(\r\022\023\n\013"
+      "sample_rate\030\005 \001(\r\022\"\n\032uncompressed_sample"
+      "_offset\030\006 \001(\r\"Z\n\021CCLCMsg_VoiceData\022)\n\005au"
+      "dio\030\001 \001(\0132\032.proto.dota.CMsgVoiceAudio\022\014\n"
+      "\004xuid\030\002 \001(\006\022\014\n\004tick\030\003 \001(\r\"A\n\023CCLCMsg_Bas"
+      "elineAck\022\025\n\rbaseline_tick\030\001 \001(\005\022\023\n\013basel"
+      "ine_nr\030\002 \001(\005\"*\n\024CCLCMsg_ListenEvents\022\022\n\n"
+      "event_mask\030\001 \003(\007\"\\\n\030CCLCMsg_RespondCvarV"
+      "alue\022\016\n\006cookie\030\001 \001(\005\022\023\n\013status_code\030\002 \001("
+      "\005\022\014\n\004name\030\003 \001(\t\022\r\n\005value\030\004 \001(\t\"m\n\024CCLCMs"
+      "g_FileCRCCheck\022\021\n\tcode_path\030\001 \001(\005\022\014\n\004pat"
+      "h\030\002 \001(\t\022\025\n\rcode_filename\030\003 \001(\005\022\020\n\010filena"
+      "me\030\004 \001(\t\022\013\n\003crc\030\005 \001(\007\"+\n\027CCLCMsg_Loading"
+      "Progress\022\020\n\010progress\030\001 \001(\005\"0\n\032CCLCMsg_Sp"
+      "litPlayerConnect\022\022\n\nplayername\030\001 \001(\t\"7\n\025"
+      "CCLCMsg_ClientMessage\022\020\n\010msg_type\030\001 \001(\005\022"
+      "\014\n\004data\030\002 \001(\014\"-\n\035CCLCMsg_SplitPlayerDisc"
+      "onnect\022\014\n\004slot\030\001 \001(\005\"*\n\024CCLCMsg_ServerSt"
+      "atus\022\022\n\nsimplified\030\001 \001(\010\"\024\n\022CCLCMsg_Serv"
+      "erPing\"e\n\024CCLCMsg_RequestPause\0228\n\npause_"
+      "type\030\001 \001(\0162\032.proto.dota.RequestPause_t:\010"
+      "RP_PAUSE\022\023\n\013pause_group\030\002 \001(\005\"$\n\024CCLCMsg"
+      "_CmdKeyValues\022\014\n\004data\030\001 \001(\014\"\241\003\n\022CSVCMsg_"
+      "ServerInfo\022\020\n\010protocol\030\001 \001(\005\022\024\n\014server_c"
+      "ount\030\002 \001(\005\022\024\n\014is_dedicated\030\003 \001(\010\022\017\n\007is_h"
+      "ltv\030\004 \001(\010\022\021\n\tis_replay\030\005 \001(\010\022\014\n\004c_os\030\006 \001"
+      "(\005\022\023\n\013max_clients\030\n \001(\005\022\023\n\013max_classes\030\013"
+      " \001(\005\022\023\n\013player_slot\030\014 \001(\005\022\025\n\rtick_interv"
+      "al\030\r \001(\002\022\020\n\010game_dir\030\016 \001(\t\022\020\n\010map_name\030\017"
+      " \001(\t\022\020\n\010sky_name\030\020 \001(\t\022\021\n\thost_name\030\021 \001("
+      "\t\022\022\n\naddon_name\030\022 \001(\t\022I\n\023game_session_co"
+      "nfig\030\023 \001(\0132,.proto.dota.CSVCMsg_GameSess"
+      "ionConfiguration\022\035\n\025game_session_manifes"
+      "t\030\024 \001(\014\"\257\001\n\021CSVCMsg_ClassInfo\022\030\n\020create_"
+      "on_client\030\001 \001(\010\0226\n\007classes\030\002 \003(\0132%.proto"
+      ".dota.CSVCMsg_ClassInfo.class_t\032H\n\007class"
+      "_t\022\020\n\010class_id\030\001 \001(\005\022\027\n\017data_table_name\030"
+      "\002 \001(\t\022\022\n\nclass_name\030\003 \001(\t\"\"\n\020CSVCMsg_Set"
+      "Pause\022\016\n\006paused\030\001 \001(\010\"G\n\021CSVCMsg_VoiceIn"
+      "it\022\017\n\007quality\030\001 \001(\005\022\r\n\005codec\030\002 \001(\t\022\022\n\007ve"
+      "rsion\030\003 \001(\005:\0010\"\035\n\rCSVCMsg_Print\022\014\n\004text\030"
+      "\001 \001(\t\"\352\003\n\016CSVCMsg_Sounds\022\026\n\016reliable_sou"
+      "nd\030\001 \001(\010\0226\n\006sounds\030\002 \003(\0132&.proto.dota.CS"
+      "VCMsg_Sounds.sounddata_t\032\207\003\n\013sounddata_t"
+      "\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010origin_y\030\002 \001(\021\022\020\n\010"
+      "origin_z\030\003 \001(\021\022\016\n\006volume\030\004 \001(\r\022\023\n\013delay_"
+      "value\030\005 \001(\002\022\027\n\017sequence_number\030\006 \001(\005\022\024\n\014"
+      "entity_index\030\007 \001(\005\022\017\n\007channel\030\010 \001(\005\022\r\n\005p"
+      "itch\030\t \001(\005\022\r\n\005flags\030\n \001(\005\022\021\n\tsound_num\030\013"
+      " \001(\r\022\030\n\020sound_num_handle\030\014 \001(\007\022\026\n\016speake"
+      "r_entity\030\r \001(\005\022\023\n\013random_seed\030\016 \001(\005\022\023\n\013s"
+      "ound_level\030\017 \001(\005\022\023\n\013is_sentence\030\020 \001(\010\022\022\n"
+      "\nis_ambient\030\021 \001(\010\022\014\n\004guid\030\022 \001(\r\022\031\n\021sound"
+      "_resource_id\030\023 \001(\006\"c\n\020CSVCMsg_Prefetch\022\023"
+      "\n\013sound_index\030\001 \001(\005\022:\n\rresource_type\030\002 \001"
+      "(\0162\030.proto.dota.PrefetchType:\tPFT_SOUND\""
+      "5\n\017CSVCMsg_SetView\022\024\n\014entity_index\030\001 \001(\005"
+      "\022\014\n\004slot\030\002 \001(\005\"K\n\020CSVCMsg_FixAngle\022\020\n\010re"
+      "lative\030\001 \001(\010\022%\n\005angle\030\002 \001(\0132\026.proto.dota"
+      ".CMsgQAngle\"\?\n\026CSVCMsg_CrosshairAngle\022%\n"
+      "\005angle\030\001 \001(\0132\026.proto.dota.CMsgQAngle\"\225\001\n"
+      "\020CSVCMsg_BSPDecal\022#\n\003pos\030\001 \001(\0132\026.proto.d"
+      "ota.CMsgVector\022\033\n\023decal_texture_index\030\002 "
+      "\001(\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n\013model_index"
+      "\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010\"\205\001\n\023CSVCMsg"
+      "_SplitScreen\022J\n\004type\030\001 \001(\0162#.proto.dota."
+      "ESplitScreenMessageType:\027MSG_SPLITSCREEN"
+      "_ADDUSER\022\014\n\004slot\030\002 \001(\005\022\024\n\014player_index\030\003"
+      " \001(\005\"9\n\024CSVCMsg_GetCvarValue\022\016\n\006cookie\030\001"
+      " \001(\005\022\021\n\tcvar_name\030\002 \001(\t\"<\n\014CSVCMsg_Menu\022"
+      "\023\n\013dialog_type\030\001 \001(\005\022\027\n\017menu_key_values\030"
+      "\002 \001(\014\"\273\002\n\021CSVCMsg_SendTable\022\016\n\006is_end\030\001 "
+      "\001(\010\022\026\n\016net_table_name\030\002 \001(\t\022\025\n\rneeds_dec"
+      "oder\030\003 \001(\010\0227\n\005props\030\004 \003(\0132(.proto.dota.C"
+      "SVCMsg_SendTable.sendprop_t\032\255\001\n\nsendprop"
+      "_t\022\014\n\004type\030\001 \001(\005\022\020\n\010var_name\030\002 \001(\t\022\r\n\005fl"
+      "ags\030\003 \001(\005\022\020\n\010priority\030\004 \001(\005\022\017\n\007dt_name\030\005"
+      " \001(\t\022\024\n\014num_elements\030\006 \001(\005\022\021\n\tlow_value\030"
+      "\007 \001(\002\022\022\n\nhigh_value\030\010 \001(\002\022\020\n\010num_bits\030\t "
+      "\001(\005\"\347\001\n\025CSVCMsg_GameEventList\022C\n\013descrip"
+      "tors\030\001 \003(\0132..proto.dota.CSVCMsg_GameEven"
+      "tList.descriptor_t\032#\n\005key_t\022\014\n\004type\030\001 \001("
+      "\005\022\014\n\004name\030\002 \001(\t\032d\n\014descriptor_t\022\017\n\007event"
+      "id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\0225\n\004keys\030\003 \003(\0132\'.p"
+      "roto.dota.CSVCMsg_GameEventList.key_t\"\254\002"
+      "\n\026CSVCMsg_PacketEntities\022\023\n\013max_entries\030"
+      "\001 \001(\005\022\027\n\017updated_entries\030\002 \001(\005\022\020\n\010is_del"
+      "ta\030\003 \001(\010\022\027\n\017update_baseline\030\004 \001(\010\022\020\n\010bas"
+      "eline\030\005 \001(\005\022\022\n\ndelta_from\030\006 \001(\005\022\023\n\013entit"
+      "y_data\030\007 \001(\014\022\032\n\022pending_full_frame\030\010 \001(\010"
+      "\022 \n\030active_spawngroup_handle\030\t \001(\r\022\'\n\037ma"
+      "x_spawngroup_creationsequence\030\n \001(\r\022\027\n\017l"
+      "ast_cmd_number\030\013 \001(\r\"R\n\024CSVCMsg_TempEnti"
+      "ties\022\020\n\010reliable\030\001 \001(\010\022\023\n\013num_entries\030\002 "
+      "\001(\005\022\023\n\013entity_data\030\003 \001(\014\"\351\001\n\031CSVCMsg_Cre"
+      "ateStringTable\022\014\n\004name\030\001 \001(\t\022\023\n\013num_entr"
+      "ies\030\002 \001(\005\022\034\n\024user_data_fixed_size\030\003 \001(\010\022"
+      "\026\n\016user_data_size\030\004 \001(\005\022\033\n\023user_data_siz"
+      "e_bits\030\005 \001(\005\022\r\n\005flags\030\006 \001(\005\022\023\n\013string_da"
+      "ta\030\007 \001(\014\022\031\n\021uncompressed_size\030\010 \001(\005\022\027\n\017d"
+      "ata_compressed\030\t \001(\010\"_\n\031CSVCMsg_UpdateSt"
+      "ringTable\022\020\n\010table_id\030\001 \001(\005\022\033\n\023num_chang"
+      "ed_entries\030\002 \001(\005\022\023\n\013string_data\030\003 \001(\014\"\223\001"
+      "\n\021CSVCMsg_VoiceData\022)\n\005audio\030\001 \001(\0132\032.pro"
+      "to.dota.CMsgVoiceAudio\022\016\n\006client\030\002 \001(\005\022\021"
+      "\n\tproximity\030\003 \001(\010\022\014\n\004xuid\030\004 \001(\006\022\024\n\014audib"
+      "le_mask\030\005 \001(\005\022\014\n\004tick\030\006 \001(\r\"K\n\026CSVCMsg_P"
+      "acketReliable\022\014\n\004tick\030\001 \001(\005\022\024\n\014messagess"
+      "ize\030\002 \001(\005\022\r\n\005state\030\003 \001(\010\"T\n\026CSVCMsg_Full"
+      "FrameSplit\022\014\n\004tick\030\001 \001(\005\022\017\n\007section\030\002 \001("
+      "\005\022\r\n\005total\030\003 \001(\005\022\014\n\004data\030\004 \001(\014\"U\n\022CSVCMs"
+      "g_HLTVStatus\022\016\n\006master\030\001 \001(\t\022\017\n\007clients\030"
+      "\002 \001(\005\022\r\n\005slots\030\003 \001(\005\022\017\n\007proxies\030\004 \001(\005\")\n"
+      "\025CSVCMsg_ServerSteamID\022\020\n\010steam_id\030\001 \001(\004"
+      "\"$\n\024CSVCMsg_CmdKeyValues\022\014\n\004data\030\001 \001(\014\";"
+      "\n\016CMsgIPCAddress\022\025\n\rcomputer_guid\030\001 \001(\006\022"
+      "\022\n\nprocess_id\030\002 \001(\r\"\253\001\n\016CMsgServerPeer\022\023"
+      "\n\013player_slot\030\001 \001(\005\022\017\n\007steamid\030\002 \001(\006\022\'\n\003"
+      "ipc\030\003 \001(\0132\032.proto.dota.CMsgIPCAddress\022\025\n"
+      "\rthey_hear_you\030\004 \001(\010\022\025\n\ryou_hear_them\030\005 "
+      "\001(\010\022\034\n\024is_listenserver_host\030\006 \001(\010\"<\n\020CSV"
+      "CMsg_PeerList\022(\n\004peer\030\001 \003(\0132\032.proto.dota"
+      ".CMsgServerPeer\"/\n\034CSVCMsg_ClearAllStrin"
+      "gTables\022\017\n\007mapname\030\001 \001(\t\"\222\002\n\037ProtoFlatte"
+      "nedSerializerField_t\022\024\n\014var_type_sym\030\001 \001"
+      "(\005\022\024\n\014var_name_sym\030\002 \001(\005\022\021\n\tbit_count\030\003 "
+      "\001(\005\022\021\n\tlow_value\030\004 \001(\002\022\022\n\nhigh_value\030\005 \001"
+      "(\002\022\024\n\014encode_flags\030\006 \001(\005\022!\n\031field_serial"
+      "izer_name_sym\030\007 \001(\005\022 \n\030field_serializer_"
+      "version\030\010 \001(\005\022\025\n\rsend_node_sym\030\t \001(\005\022\027\n\017"
+      "var_encoder_sym\030\n \001(\005\"k\n\032ProtoFlattenedS"
+      "erializer_t\022\033\n\023serializer_name_sym\030\001 \001(\005"
+      "\022\032\n\022serializer_version\030\002 \001(\005\022\024\n\014fields_i"
+      "ndex\030\003 \003(\005\"\250\001\n\033CSVCMsg_FlattenedSerializ"
+      "er\022;\n\013serializers\030\001 \003(\0132&.proto.dota.Pro"
+      "toFlattenedSerializer_t\022\017\n\007symbols\030\002 \003(\t"
+      "\022;\n\006fields\030\003 \003(\0132+.proto.dota.ProtoFlatt"
+      "enedSerializerField_t\"!\n\021CSVCMsg_StopSou"
+      "nd\022\014\n\004guid\030\001 \001(\007\"y\n\036CBidirMsg_Rebroadcas"
+      "tGameEvent\022\024\n\014posttoserver\030\001 \001(\010\022\017\n\007buft"
+      "ype\030\002 \001(\005\022\026\n\016clientbitcount\030\003 \001(\r\022\030\n\020rec"
+      "eivingclients\030\004 \001(\004\"2\n\033CBidirMsg_Rebroad"
+      "castSource\022\023\n\013eventsource\030\001 \001(\005\"3\n\026Seria"
+      "lizedNetAddress_t\022\031\n\021serializedAddress\030\001"
+      " \002(\014\"\305\002\n\023CBidirMsg_RelayInfo\022Q\n\toperatio"
+      "n\030\001 \002(\0162+.proto.dota.CBidirMsg_RelayInfo"
+      ".Operation_t:\021RIO_REQUEST_RELAY\022C\n\027seria"
+      "lizedTargetAddress\030\002 \001(\0132\".proto.dota.Se"
+      "rializedNetAddress_t\022\026\n\016additionalHops\030\003"
+      " \001(\r\"~\n\013Operation_t\022\025\n\021RIO_REQUEST_RELAY"
+      "\020\000\022\022\n\016RIO_WILL_RELAY\020\001\022\020\n\014RIO_NO_ROUTE\020\002"
+      "\022\024\n\020RIO_REJECT_RELAY\020\003\022\034\n\030RIO_ESTABLISH_"
+      "CONNECTION\020\004\"T\n\017SignedPayload_t\022\023\n\013paylo"
+      "adData\030\001 \002(\014\022\021\n\tsignature\030\002 \002(\r\022\031\n\021bPayl"
+      "oadEncrypted\030\003 \002(\010\"\375\002\n\025CBidirMsg_RelayPa"
+      "cket\022\024\n\014prevhopcount\030\001 \002(\r\022:\n\016originalSe"
+      "nder\030\002 \002(\0132\".proto.dota.SerializedNetAdd"
+      "ress_t\0222\n\rsignedPayload\030\003 \002(\0132\033.proto.do"
+      "ta.SignedPayload_t\022S\n\rrecipientList\030\004 \003("
+      "\0132<.proto.dota.CBidirMsg_RelayPacket.Sig"
+      "nedDestinationAddress_t\032\210\001\n\032SignedDestin"
+      "ationAddress_t\022:\n\016serializedAddr\030\001 \002(\0132\""
+      ".proto.dota.SerializedNetAddress_t\022\021\n\tsi"
+      "gnature\030\002 \002(\r\022\033\n\023encryptedPayloadKey\030\003 \001"
+      "(\014\"\261\006\n\026CMsgServerNetworkStats\022\021\n\tdedicat"
+      "ed\030\001 \001(\010\022\021\n\tcpu_usage\030\002 \001(\005\022\026\n\016memory_us"
+      "ed_mb\030\003 \001(\005\022\026\n\016memory_free_mb\030\004 \001(\005\022\016\n\006u"
+      "ptime\030\005 \001(\005\022\023\n\013spawn_count\030\006 \001(\005\022\023\n\013num_"
+      "clients\030\010 \001(\005\022\020\n\010num_bots\030\t \001(\005\022\026\n\016num_s"
+      "pectators\030\n \001(\005\022\025\n\rnum_tv_relays\030\013 \001(\005\022\013"
+      "\n\003fps\030\014 \001(\002\0226\n\005ports\030\021 \003(\0132\'.proto.dota."
+      "CMsgServerNetworkStats.Port\022\027\n\017avg_laten"
+      "cy_out\030\022 \001(\002\022\026\n\016avg_latency_in\030\023 \001(\002\022\027\n\017"
+      "avg_packets_out\030\024 \001(\002\022\026\n\016avg_packets_in\030"
+      "\025 \001(\002\022\024\n\014avg_loss_out\030\026 \001(\002\022\023\n\013avg_loss_"
+      "in\030\027 \001(\002\022\024\n\014avg_data_out\030\030 \001(\002\022\023\n\013avg_da"
+      "ta_in\030\031 \001(\002\022\025\n\rtotal_data_in\030\032 \001(\004\022\030\n\020to"
+      "tal_packets_in\030\033 \001(\004\022\026\n\016total_data_out\030\034"
+      " \001(\004\022\031\n\021total_packets_out\030\035 \001(\004\022:\n\007playe"
+      "rs\030\036 \003(\0132).proto.dota.CMsgServerNetworkS"
+      "tats.Player\032\"\n\004Port\022\014\n\004port\030\001 \001(\005\022\014\n\004nam"
+      "e\030\002 \001(\t\032\204\001\n\006Player\022\017\n\007steamid\030\001 \001(\004\022\023\n\013r"
+      "emote_addr\030\002 \001(\t\022\026\n\016ping_stddev_ms\030\003 \001(\005"
+      "\022\023\n\013ping_avg_ms\030\004 \001(\005\022\027\n\017packet_loss_pct"
+      "\030\005 \001(\002\022\016\n\006is_bot\030\006 \001(\010*\337\002\n\014CLC_Messages\022"
+      "\022\n\016clc_ClientInfo\020\024\022\014\n\010clc_Move\020\025\022\021\n\rclc"
+      "_VoiceData\020\026\022\023\n\017clc_BaselineAck\020\027\022\024\n\020clc"
+      "_ListenEvents\020\030\022\030\n\024clc_RespondCvarValue\020"
+      "\031\022\024\n\020clc_FileCRCCheck\020\032\022\027\n\023clc_LoadingPr"
+      "ogress\020\033\022\032\n\026clc_SplitPlayerConnect\020\034\022\025\n\021"
+      "clc_ClientMessage\020\035\022\035\n\031clc_SplitPlayerDi"
+      "sconnect\020\036\022\024\n\020clc_ServerStatus\020\037\022\022\n\016clc_"
+      "ServerPing\020 \022\024\n\020clc_RequestPause\020!\022\024\n\020cl"
+      "c_CmdKeyValues\020\"*\231\004\n\014SVC_Messages\022\022\n\016svc"
+      "_ServerInfo\020(\022\033\n\027svc_FlattenedSerializer"
+      "\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPause\020+\022"
+      "\031\n\025svc_CreateStringTable\020,\022\031\n\025svc_Update"
+      "StringTable\020-\022\021\n\rsvc_VoiceInit\020.\022\021\n\rsvc_"
+      "VoiceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_Sounds"
+      "\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAllStrin"
+      "gTables\0203\022\024\n\020svc_CmdKeyValues\0204\022\020\n\014svc_B"
+      "SPDecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n\022svc_Pa"
+      "cketEntities\0207\022\020\n\014svc_Prefetch\0208\022\014\n\010svc_"
+      "Menu\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rsvc_Stop"
+      "Sound\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_PacketR"
+      "eliable\020=\022\022\n\016svc_HLTVStatus\020>\022\025\n\021svc_Ser"
+      "verSteamID\020\?\022\026\n\022svc_FullFrameSplit\020F*L\n\021"
+      "VoiceDataFormat_t\022\032\n\026VOICEDATA_FORMAT_ST"
+      "EAM\020\000\022\033\n\027VOICEDATA_FORMAT_ENGINE\020\001*B\n\016Re"
+      "questPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n\nRP_UNPAUSE"
+      "\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002*\035\n\014PrefetchType\022\r"
+      "\n\tPFT_SOUND\020\000*V\n\027ESplitScreenMessageType"
+      "\022\033\n\027MSG_SPLITSCREEN_ADDUSER\020\000\022\036\n\032MSG_SPL"
+      "ITSCREEN_REMOVEUSER\020\001*\263\001\n\025EQueryCvarValu"
+      "eStatus\022%\n!eQueryCvarValueStatus_ValueIn"
+      "tact\020\000\022&\n\"eQueryCvarValueStatus_CvarNotF"
+      "ound\020\001\022\"\n\036eQueryCvarValueStatus_NotACvar"
+      "\020\002\022\'\n#eQueryCvarValueStatus_CvarProtecte"
+      "d\020\003*h\n\013DIALOG_TYPE\022\016\n\nDIALOG_MSG\020\000\022\017\n\013DI"
+      "ALOG_MENU\020\001\022\017\n\013DIALOG_TEXT\020\002\022\020\n\014DIALOG_E"
+      "NTRY\020\003\022\025\n\021DIALOG_ASKCONNECT\020\004*+\n\031SVC_Mes"
+      "sages_LowFrequency\022\016\n\tsvc_dummy\020\330\004*a\n\026Bi"
+      "directional_Messages\022\033\n\027bi_RebroadcastGa"
+      "meEvent\020\020\022\030\n\024bi_RebroadcastSource\020\021\022\020\n\014b"
+      "i_GameEvent\020\022*M\n#Bidirectional_Messages_"
+      "LowFrequency\022\021\n\014bi_RelayInfo\020\274\005\022\023\n\016bi_Re"
+      "layPacket\020\275\005B\003\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 9441);
+      descriptor, 9457);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "netmessages.proto", &protobuf_RegisterTypes);
   ::proto::dota::protobuf_networkbasetypes_2eproto::AddDescriptors();
@@ -2574,9 +2576,9 @@ void CCLCMsg_ClientInfo::set_allocated_friends_name(::std::string* friends_name)
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CCLCMsg_Move::kNumBackupCommandsFieldNumber;
-const int CCLCMsg_Move::kNumNewCommandsFieldNumber;
 const int CCLCMsg_Move::kDataFieldNumber;
+const int CCLCMsg_Move::kCommandNumberFieldNumber;
+const int CCLCMsg_Move::kNumCommandsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CCLCMsg_Move::CCLCMsg_Move()
@@ -2597,17 +2599,17 @@ CCLCMsg_Move::CCLCMsg_Move(const CCLCMsg_Move& from)
   if (from.has_data()) {
     data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
-  ::memcpy(&num_backup_commands_, &from.num_backup_commands_,
-    reinterpret_cast<char*>(&num_new_commands_) -
-    reinterpret_cast<char*>(&num_backup_commands_) + sizeof(num_new_commands_));
+  ::memcpy(&command_number_, &from.command_number_,
+    reinterpret_cast<char*>(&num_commands_) -
+    reinterpret_cast<char*>(&command_number_) + sizeof(num_commands_));
   // @@protoc_insertion_point(copy_constructor:proto.dota.CCLCMsg_Move)
 }
 
 void CCLCMsg_Move::SharedCtor() {
   _cached_size_ = 0;
   data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&num_backup_commands_, 0, reinterpret_cast<char*>(&num_new_commands_) -
-    reinterpret_cast<char*>(&num_backup_commands_) + sizeof(num_new_commands_));
+  ::memset(&command_number_, 0, reinterpret_cast<char*>(&num_commands_) -
+    reinterpret_cast<char*>(&command_number_) + sizeof(num_commands_));
 }
 
 CCLCMsg_Move::~CCLCMsg_Move() {
@@ -2649,8 +2651,8 @@ void CCLCMsg_Move::Clear() {
     (*data_.UnsafeRawStringPointer())->clear();
   }
   if (_has_bits_[0 / 32] & 6u) {
-    ::memset(&num_backup_commands_, 0, reinterpret_cast<char*>(&num_new_commands_) -
-      reinterpret_cast<char*>(&num_backup_commands_) + sizeof(num_new_commands_));
+    ::memset(&command_number_, 0, reinterpret_cast<char*>(&num_commands_) -
+      reinterpret_cast<char*>(&command_number_) + sizeof(num_commands_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -2666,40 +2668,40 @@ bool CCLCMsg_Move::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional uint32 num_backup_commands = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
-          set_has_num_backup_commands();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &num_backup_commands_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional uint32 num_new_commands = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
-          set_has_num_new_commands();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &num_new_commands_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       // optional bytes data = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_data()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 command_number = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
+          set_has_command_number();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &command_number_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 num_commands = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
+          set_has_num_commands();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &num_commands_)));
         } else {
           goto handle_unusual;
         }
@@ -2735,20 +2737,20 @@ void CCLCMsg_Move::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional uint32 num_backup_commands = 1;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->num_backup_commands(), output);
-  }
-
-  // optional uint32 num_new_commands = 2;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->num_new_commands(), output);
-  }
-
   // optional bytes data = 3;
   if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
       3, this->data(), output);
+  }
+
+  // optional uint32 command_number = 4;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->command_number(), output);
+  }
+
+  // optional uint32 num_commands = 5;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->num_commands(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2765,21 +2767,21 @@ void CCLCMsg_Move::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional uint32 num_backup_commands = 1;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->num_backup_commands(), target);
-  }
-
-  // optional uint32 num_new_commands = 2;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->num_new_commands(), target);
-  }
-
   // optional bytes data = 3;
   if (cached_has_bits & 0x00000001u) {
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
         3, this->data(), target);
+  }
+
+  // optional uint32 command_number = 4;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->command_number(), target);
+  }
+
+  // optional uint32 num_commands = 5;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->num_commands(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2807,18 +2809,18 @@ size_t CCLCMsg_Move::ByteSizeLong() const {
           this->data());
     }
 
-    // optional uint32 num_backup_commands = 1;
-    if (has_num_backup_commands()) {
+    // optional uint32 command_number = 4;
+    if (has_command_number()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->num_backup_commands());
+          this->command_number());
     }
 
-    // optional uint32 num_new_commands = 2;
-    if (has_num_new_commands()) {
+    // optional uint32 num_commands = 5;
+    if (has_num_commands()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->num_new_commands());
+          this->num_commands());
     }
 
   }
@@ -2858,10 +2860,10 @@ void CCLCMsg_Move::MergeFrom(const CCLCMsg_Move& from) {
       data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
     }
     if (cached_has_bits & 0x00000002u) {
-      num_backup_commands_ = from.num_backup_commands_;
+      command_number_ = from.command_number_;
     }
     if (cached_has_bits & 0x00000004u) {
-      num_new_commands_ = from.num_new_commands_;
+      num_commands_ = from.num_commands_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -2891,8 +2893,8 @@ void CCLCMsg_Move::Swap(CCLCMsg_Move* other) {
 }
 void CCLCMsg_Move::InternalSwap(CCLCMsg_Move* other) {
   data_.Swap(&other->data_);
-  std::swap(num_backup_commands_, other->num_backup_commands_);
-  std::swap(num_new_commands_, other->num_new_commands_);
+  std::swap(command_number_, other->command_number_);
+  std::swap(num_commands_, other->num_commands_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -2905,54 +2907,6 @@ void CCLCMsg_Move::InternalSwap(CCLCMsg_Move* other) {
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CCLCMsg_Move
-
-// optional uint32 num_backup_commands = 1;
-bool CCLCMsg_Move::has_num_backup_commands() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-void CCLCMsg_Move::set_has_num_backup_commands() {
-  _has_bits_[0] |= 0x00000002u;
-}
-void CCLCMsg_Move::clear_has_num_backup_commands() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-void CCLCMsg_Move::clear_num_backup_commands() {
-  num_backup_commands_ = 0u;
-  clear_has_num_backup_commands();
-}
-::google::protobuf::uint32 CCLCMsg_Move::num_backup_commands() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CCLCMsg_Move.num_backup_commands)
-  return num_backup_commands_;
-}
-void CCLCMsg_Move::set_num_backup_commands(::google::protobuf::uint32 value) {
-  set_has_num_backup_commands();
-  num_backup_commands_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CCLCMsg_Move.num_backup_commands)
-}
-
-// optional uint32 num_new_commands = 2;
-bool CCLCMsg_Move::has_num_new_commands() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-void CCLCMsg_Move::set_has_num_new_commands() {
-  _has_bits_[0] |= 0x00000004u;
-}
-void CCLCMsg_Move::clear_has_num_new_commands() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-void CCLCMsg_Move::clear_num_new_commands() {
-  num_new_commands_ = 0u;
-  clear_has_num_new_commands();
-}
-::google::protobuf::uint32 CCLCMsg_Move::num_new_commands() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CCLCMsg_Move.num_new_commands)
-  return num_new_commands_;
-}
-void CCLCMsg_Move::set_num_new_commands(::google::protobuf::uint32 value) {
-  set_has_num_new_commands();
-  num_new_commands_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CCLCMsg_Move.num_new_commands)
-}
 
 // optional bytes data = 3;
 bool CCLCMsg_Move::has_data() const {
@@ -3015,6 +2969,54 @@ void CCLCMsg_Move::set_allocated_data(::std::string* data) {
   }
   data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
   // @@protoc_insertion_point(field_set_allocated:proto.dota.CCLCMsg_Move.data)
+}
+
+// optional uint32 command_number = 4;
+bool CCLCMsg_Move::has_command_number() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CCLCMsg_Move::set_has_command_number() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CCLCMsg_Move::clear_has_command_number() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CCLCMsg_Move::clear_command_number() {
+  command_number_ = 0u;
+  clear_has_command_number();
+}
+::google::protobuf::uint32 CCLCMsg_Move::command_number() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CCLCMsg_Move.command_number)
+  return command_number_;
+}
+void CCLCMsg_Move::set_command_number(::google::protobuf::uint32 value) {
+  set_has_command_number();
+  command_number_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CCLCMsg_Move.command_number)
+}
+
+// optional uint32 num_commands = 5;
+bool CCLCMsg_Move::has_num_commands() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void CCLCMsg_Move::set_has_num_commands() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void CCLCMsg_Move::clear_has_num_commands() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void CCLCMsg_Move::clear_num_commands() {
+  num_commands_ = 0u;
+  clear_has_num_commands();
+}
+::google::protobuf::uint32 CCLCMsg_Move::num_commands() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CCLCMsg_Move.num_commands)
+  return num_commands_;
+}
+void CCLCMsg_Move::set_num_commands(::google::protobuf::uint32 value) {
+  set_has_num_commands();
+  num_commands_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CCLCMsg_Move.num_commands)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -19133,6 +19135,7 @@ const int CSVCMsg_PacketEntities::kEntityDataFieldNumber;
 const int CSVCMsg_PacketEntities::kPendingFullFrameFieldNumber;
 const int CSVCMsg_PacketEntities::kActiveSpawngroupHandleFieldNumber;
 const int CSVCMsg_PacketEntities::kMaxSpawngroupCreationsequenceFieldNumber;
+const int CSVCMsg_PacketEntities::kLastCmdNumberFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CSVCMsg_PacketEntities::CSVCMsg_PacketEntities()
@@ -19154,16 +19157,16 @@ CSVCMsg_PacketEntities::CSVCMsg_PacketEntities(const CSVCMsg_PacketEntities& fro
     entity_data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.entity_data_);
   }
   ::memcpy(&max_entries_, &from.max_entries_,
-    reinterpret_cast<char*>(&max_spawngroup_creationsequence_) -
-    reinterpret_cast<char*>(&max_entries_) + sizeof(max_spawngroup_creationsequence_));
+    reinterpret_cast<char*>(&last_cmd_number_) -
+    reinterpret_cast<char*>(&max_entries_) + sizeof(last_cmd_number_));
   // @@protoc_insertion_point(copy_constructor:proto.dota.CSVCMsg_PacketEntities)
 }
 
 void CSVCMsg_PacketEntities::SharedCtor() {
   _cached_size_ = 0;
   entity_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&max_entries_, 0, reinterpret_cast<char*>(&max_spawngroup_creationsequence_) -
-    reinterpret_cast<char*>(&max_entries_) + sizeof(max_spawngroup_creationsequence_));
+  ::memset(&max_entries_, 0, reinterpret_cast<char*>(&last_cmd_number_) -
+    reinterpret_cast<char*>(&max_entries_) + sizeof(last_cmd_number_));
 }
 
 CSVCMsg_PacketEntities::~CSVCMsg_PacketEntities() {
@@ -19208,9 +19211,9 @@ void CSVCMsg_PacketEntities::Clear() {
     ::memset(&max_entries_, 0, reinterpret_cast<char*>(&delta_from_) -
       reinterpret_cast<char*>(&max_entries_) + sizeof(delta_from_));
   }
-  if (_has_bits_[8 / 32] & 768u) {
-    ::memset(&active_spawngroup_handle_, 0, reinterpret_cast<char*>(&max_spawngroup_creationsequence_) -
-      reinterpret_cast<char*>(&active_spawngroup_handle_) + sizeof(max_spawngroup_creationsequence_));
+  if (_has_bits_[8 / 32] & 1792u) {
+    ::memset(&active_spawngroup_handle_, 0, reinterpret_cast<char*>(&last_cmd_number_) -
+      reinterpret_cast<char*>(&active_spawngroup_handle_) + sizeof(last_cmd_number_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -19364,6 +19367,20 @@ bool CSVCMsg_PacketEntities::MergePartialFromCodedStream(
         break;
       }
 
+      // optional uint32 last_cmd_number = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(88u)) {
+          set_has_last_cmd_number();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &last_cmd_number_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -19444,6 +19461,11 @@ void CSVCMsg_PacketEntities::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(10, this->max_spawngroup_creationsequence(), output);
   }
 
+  // optional uint32 last_cmd_number = 11;
+  if (cached_has_bits & 0x00000400u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(11, this->last_cmd_number(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -19508,6 +19530,11 @@ void CSVCMsg_PacketEntities::SerializeWithCachedSizes(
   // optional uint32 max_spawngroup_creationsequence = 10;
   if (cached_has_bits & 0x00000200u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(10, this->max_spawngroup_creationsequence(), target);
+  }
+
+  // optional uint32 last_cmd_number = 11;
+  if (cached_has_bits & 0x00000400u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(11, this->last_cmd_number(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -19579,7 +19606,7 @@ size_t CSVCMsg_PacketEntities::ByteSizeLong() const {
     }
 
   }
-  if (_has_bits_[8 / 32] & 768u) {
+  if (_has_bits_[8 / 32] & 1792u) {
     // optional uint32 active_spawngroup_handle = 9;
     if (has_active_spawngroup_handle()) {
       total_size += 1 +
@@ -19592,6 +19619,13 @@ size_t CSVCMsg_PacketEntities::ByteSizeLong() const {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
           this->max_spawngroup_creationsequence());
+    }
+
+    // optional uint32 last_cmd_number = 11;
+    if (has_last_cmd_number()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->last_cmd_number());
     }
 
   }
@@ -19653,12 +19687,15 @@ void CSVCMsg_PacketEntities::MergeFrom(const CSVCMsg_PacketEntities& from) {
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 768u) {
+  if (cached_has_bits & 1792u) {
     if (cached_has_bits & 0x00000100u) {
       active_spawngroup_handle_ = from.active_spawngroup_handle_;
     }
     if (cached_has_bits & 0x00000200u) {
       max_spawngroup_creationsequence_ = from.max_spawngroup_creationsequence_;
+    }
+    if (cached_has_bits & 0x00000400u) {
+      last_cmd_number_ = from.last_cmd_number_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -19697,6 +19734,7 @@ void CSVCMsg_PacketEntities::InternalSwap(CSVCMsg_PacketEntities* other) {
   std::swap(delta_from_, other->delta_from_);
   std::swap(active_spawngroup_handle_, other->active_spawngroup_handle_);
   std::swap(max_spawngroup_creationsequence_, other->max_spawngroup_creationsequence_);
+  std::swap(last_cmd_number_, other->last_cmd_number_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -19987,6 +20025,30 @@ void CSVCMsg_PacketEntities::set_max_spawngroup_creationsequence(::google::proto
   set_has_max_spawngroup_creationsequence();
   max_spawngroup_creationsequence_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CSVCMsg_PacketEntities.max_spawngroup_creationsequence)
+}
+
+// optional uint32 last_cmd_number = 11;
+bool CSVCMsg_PacketEntities::has_last_cmd_number() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+void CSVCMsg_PacketEntities::set_has_last_cmd_number() {
+  _has_bits_[0] |= 0x00000400u;
+}
+void CSVCMsg_PacketEntities::clear_has_last_cmd_number() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+void CSVCMsg_PacketEntities::clear_last_cmd_number() {
+  last_cmd_number_ = 0u;
+  clear_has_last_cmd_number();
+}
+::google::protobuf::uint32 CSVCMsg_PacketEntities::last_cmd_number() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSVCMsg_PacketEntities.last_cmd_number)
+  return last_cmd_number_;
+}
+void CSVCMsg_PacketEntities::set_last_cmd_number(::google::protobuf::uint32 value) {
+  set_has_last_cmd_number();
+  last_cmd_number_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSVCMsg_PacketEntities.last_cmd_number)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

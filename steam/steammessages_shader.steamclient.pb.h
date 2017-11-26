@@ -34,6 +34,12 @@
 // @@protoc_insertion_point(includes)
 namespace proto {
 namespace steam {
+class CShader_GetBucketManifest_Request;
+class CShader_GetBucketManifest_RequestDefaultTypeInternal;
+extern CShader_GetBucketManifest_RequestDefaultTypeInternal _CShader_GetBucketManifest_Request_default_instance_;
+class CShader_GetBucketManifest_Response;
+class CShader_GetBucketManifest_ResponseDefaultTypeInternal;
+extern CShader_GetBucketManifest_ResponseDefaultTypeInternal _CShader_GetBucketManifest_Response_default_instance_;
 class CShader_RegisterShader_Request;
 class CShader_RegisterShader_RequestDefaultTypeInternal;
 extern CShader_RegisterShader_RequestDefaultTypeInternal _CShader_RegisterShader_Request_default_instance_;
@@ -738,6 +744,226 @@ class CShader_SendShader_Response : public ::google::protobuf::Message /* @@prot
   mutable int _cached_size_;
   friend struct protobuf_steammessages_5fshader_2esteamclient_2eproto::TableStruct;
 };
+// -------------------------------------------------------------------
+
+class CShader_GetBucketManifest_Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CShader_GetBucketManifest_Request) */ {
+ public:
+  CShader_GetBucketManifest_Request();
+  virtual ~CShader_GetBucketManifest_Request();
+
+  CShader_GetBucketManifest_Request(const CShader_GetBucketManifest_Request& from);
+
+  inline CShader_GetBucketManifest_Request& operator=(const CShader_GetBucketManifest_Request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CShader_GetBucketManifest_Request& default_instance();
+
+  static inline const CShader_GetBucketManifest_Request* internal_default_instance() {
+    return reinterpret_cast<const CShader_GetBucketManifest_Request*>(
+               &_CShader_GetBucketManifest_Request_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    6;
+
+  void Swap(CShader_GetBucketManifest_Request* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CShader_GetBucketManifest_Request* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CShader_GetBucketManifest_Request* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CShader_GetBucketManifest_Request& from);
+  void MergeFrom(const CShader_GetBucketManifest_Request& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CShader_GetBucketManifest_Request* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string gpu_desc = 2;
+  bool has_gpu_desc() const;
+  void clear_gpu_desc();
+  static const int kGpuDescFieldNumber = 2;
+  const ::std::string& gpu_desc() const;
+  void set_gpu_desc(const ::std::string& value);
+  #if LANG_CXX11
+  void set_gpu_desc(::std::string&& value);
+  #endif
+  void set_gpu_desc(const char* value);
+  void set_gpu_desc(const char* value, size_t size);
+  ::std::string* mutable_gpu_desc();
+  ::std::string* release_gpu_desc();
+  void set_allocated_gpu_desc(::std::string* gpu_desc);
+
+  // optional string driver_desc = 3;
+  bool has_driver_desc() const;
+  void clear_driver_desc();
+  static const int kDriverDescFieldNumber = 3;
+  const ::std::string& driver_desc() const;
+  void set_driver_desc(const ::std::string& value);
+  #if LANG_CXX11
+  void set_driver_desc(::std::string&& value);
+  #endif
+  void set_driver_desc(const char* value);
+  void set_driver_desc(const char* value, size_t size);
+  ::std::string* mutable_driver_desc();
+  ::std::string* release_driver_desc();
+  void set_allocated_driver_desc(::std::string* driver_desc);
+
+  // optional uint32 appid = 1;
+  bool has_appid() const;
+  void clear_appid();
+  static const int kAppidFieldNumber = 1;
+  ::google::protobuf::uint32 appid() const;
+  void set_appid(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CShader_GetBucketManifest_Request)
+ private:
+  void set_has_appid();
+  void clear_has_appid();
+  void set_has_gpu_desc();
+  void clear_has_gpu_desc();
+  void set_has_driver_desc();
+  void clear_has_driver_desc();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr gpu_desc_;
+  ::google::protobuf::internal::ArenaStringPtr driver_desc_;
+  ::google::protobuf::uint32 appid_;
+  friend struct protobuf_steammessages_5fshader_2esteamclient_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CShader_GetBucketManifest_Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.steam.CShader_GetBucketManifest_Response) */ {
+ public:
+  CShader_GetBucketManifest_Response();
+  virtual ~CShader_GetBucketManifest_Response();
+
+  CShader_GetBucketManifest_Response(const CShader_GetBucketManifest_Response& from);
+
+  inline CShader_GetBucketManifest_Response& operator=(const CShader_GetBucketManifest_Response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CShader_GetBucketManifest_Response& default_instance();
+
+  static inline const CShader_GetBucketManifest_Response* internal_default_instance() {
+    return reinterpret_cast<const CShader_GetBucketManifest_Response*>(
+               &_CShader_GetBucketManifest_Response_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    7;
+
+  void Swap(CShader_GetBucketManifest_Response* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CShader_GetBucketManifest_Response* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CShader_GetBucketManifest_Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CShader_GetBucketManifest_Response& from);
+  void MergeFrom(const CShader_GetBucketManifest_Response& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CShader_GetBucketManifest_Response* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 manifestid = 1;
+  bool has_manifestid() const;
+  void clear_manifestid();
+  static const int kManifestidFieldNumber = 1;
+  ::google::protobuf::uint64 manifestid() const;
+  void set_manifestid(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:proto.steam.CShader_GetBucketManifest_Response)
+ private:
+  void set_has_manifestid();
+  void clear_has_manifestid();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint64 manifestid_;
+  friend struct protobuf_steammessages_5fshader_2esteamclient_2eproto::TableStruct;
+};
 // ===================================================================
 
 class Shader_Stub;
@@ -760,6 +986,10 @@ class Shader : public ::google::protobuf::Service {
   virtual void SendShader(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CShader_SendShader_Request* request,
                        ::proto::steam::CShader_SendShader_Response* response,
+                       ::google::protobuf::Closure* done);
+  virtual void GetBucketManifest(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CShader_GetBucketManifest_Request* request,
+                       ::proto::steam::CShader_GetBucketManifest_Response* response,
                        ::google::protobuf::Closure* done);
 
   // implements Service ----------------------------------------------
@@ -797,6 +1027,10 @@ class Shader_Stub : public Shader {
   void SendShader(::google::protobuf::RpcController* controller,
                        const ::proto::steam::CShader_SendShader_Request* request,
                        ::proto::steam::CShader_SendShader_Response* response,
+                       ::google::protobuf::Closure* done);
+  void GetBucketManifest(::google::protobuf::RpcController* controller,
+                       const ::proto::steam::CShader_GetBucketManifest_Request* request,
+                       ::proto::steam::CShader_GetBucketManifest_Response* response,
                        ::google::protobuf::Closure* done);
  private:
   ::google::protobuf::RpcChannel* channel_;
@@ -1349,7 +1583,193 @@ CShader_SendShader_Request::shaders() const {
 
 // CShader_SendShader_Response
 
+// -------------------------------------------------------------------
+
+// CShader_GetBucketManifest_Request
+
+// optional uint32 appid = 1;
+inline bool CShader_GetBucketManifest_Request::has_appid() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CShader_GetBucketManifest_Request::set_has_appid() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CShader_GetBucketManifest_Request::clear_has_appid() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CShader_GetBucketManifest_Request::clear_appid() {
+  appid_ = 0u;
+  clear_has_appid();
+}
+inline ::google::protobuf::uint32 CShader_GetBucketManifest_Request::appid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CShader_GetBucketManifest_Request.appid)
+  return appid_;
+}
+inline void CShader_GetBucketManifest_Request::set_appid(::google::protobuf::uint32 value) {
+  set_has_appid();
+  appid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CShader_GetBucketManifest_Request.appid)
+}
+
+// optional string gpu_desc = 2;
+inline bool CShader_GetBucketManifest_Request::has_gpu_desc() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CShader_GetBucketManifest_Request::set_has_gpu_desc() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CShader_GetBucketManifest_Request::clear_has_gpu_desc() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CShader_GetBucketManifest_Request::clear_gpu_desc() {
+  gpu_desc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_gpu_desc();
+}
+inline const ::std::string& CShader_GetBucketManifest_Request::gpu_desc() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+  return gpu_desc_.GetNoArena();
+}
+inline void CShader_GetBucketManifest_Request::set_gpu_desc(const ::std::string& value) {
+  set_has_gpu_desc();
+  gpu_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+}
+#if LANG_CXX11
+inline void CShader_GetBucketManifest_Request::set_gpu_desc(::std::string&& value) {
+  set_has_gpu_desc();
+  gpu_desc_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+}
+#endif
+inline void CShader_GetBucketManifest_Request::set_gpu_desc(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_gpu_desc();
+  gpu_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+}
+inline void CShader_GetBucketManifest_Request::set_gpu_desc(const char* value, size_t size) {
+  set_has_gpu_desc();
+  gpu_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+}
+inline ::std::string* CShader_GetBucketManifest_Request::mutable_gpu_desc() {
+  set_has_gpu_desc();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+  return gpu_desc_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CShader_GetBucketManifest_Request::release_gpu_desc() {
+  // @@protoc_insertion_point(field_release:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+  clear_has_gpu_desc();
+  return gpu_desc_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CShader_GetBucketManifest_Request::set_allocated_gpu_desc(::std::string* gpu_desc) {
+  if (gpu_desc != NULL) {
+    set_has_gpu_desc();
+  } else {
+    clear_has_gpu_desc();
+  }
+  gpu_desc_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), gpu_desc);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CShader_GetBucketManifest_Request.gpu_desc)
+}
+
+// optional string driver_desc = 3;
+inline bool CShader_GetBucketManifest_Request::has_driver_desc() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CShader_GetBucketManifest_Request::set_has_driver_desc() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CShader_GetBucketManifest_Request::clear_has_driver_desc() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CShader_GetBucketManifest_Request::clear_driver_desc() {
+  driver_desc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_driver_desc();
+}
+inline const ::std::string& CShader_GetBucketManifest_Request::driver_desc() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+  return driver_desc_.GetNoArena();
+}
+inline void CShader_GetBucketManifest_Request::set_driver_desc(const ::std::string& value) {
+  set_has_driver_desc();
+  driver_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+}
+#if LANG_CXX11
+inline void CShader_GetBucketManifest_Request::set_driver_desc(::std::string&& value) {
+  set_has_driver_desc();
+  driver_desc_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+}
+#endif
+inline void CShader_GetBucketManifest_Request::set_driver_desc(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_driver_desc();
+  driver_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+}
+inline void CShader_GetBucketManifest_Request::set_driver_desc(const char* value, size_t size) {
+  set_has_driver_desc();
+  driver_desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+}
+inline ::std::string* CShader_GetBucketManifest_Request::mutable_driver_desc() {
+  set_has_driver_desc();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+  return driver_desc_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CShader_GetBucketManifest_Request::release_driver_desc() {
+  // @@protoc_insertion_point(field_release:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+  clear_has_driver_desc();
+  return driver_desc_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CShader_GetBucketManifest_Request::set_allocated_driver_desc(::std::string* driver_desc) {
+  if (driver_desc != NULL) {
+    set_has_driver_desc();
+  } else {
+    clear_has_driver_desc();
+  }
+  driver_desc_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), driver_desc);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CShader_GetBucketManifest_Request.driver_desc)
+}
+
+// -------------------------------------------------------------------
+
+// CShader_GetBucketManifest_Response
+
+// optional uint64 manifestid = 1;
+inline bool CShader_GetBucketManifest_Response::has_manifestid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CShader_GetBucketManifest_Response::set_has_manifestid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CShader_GetBucketManifest_Response::clear_has_manifestid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CShader_GetBucketManifest_Response::clear_manifestid() {
+  manifestid_ = GOOGLE_ULONGLONG(0);
+  clear_has_manifestid();
+}
+inline ::google::protobuf::uint64 CShader_GetBucketManifest_Response::manifestid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CShader_GetBucketManifest_Response.manifestid)
+  return manifestid_;
+}
+inline void CShader_GetBucketManifest_Response::set_manifestid(::google::protobuf::uint64 value) {
+  set_has_manifestid();
+  manifestid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CShader_GetBucketManifest_Response.manifestid)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

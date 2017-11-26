@@ -35,15 +35,23 @@ class CPlayer_AcceptSSA_RequestDefaultTypeInternal : public ::google::protobuf::
 } _CPlayer_AcceptSSA_Request_default_instance_;
 class CPlayer_AcceptSSA_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPlayer_AcceptSSA_Response> {
 } _CPlayer_AcceptSSA_Response_default_instance_;
+class CPlayer_GetNicknameList_RequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPlayer_GetNicknameList_Request> {
+} _CPlayer_GetNicknameList_Request_default_instance_;
+class CPlayer_GetNicknameList_Response_PlayerNicknameDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPlayer_GetNicknameList_Response_PlayerNickname> {
+} _CPlayer_GetNicknameList_Response_PlayerNickname_default_instance_;
+class CPlayer_GetNicknameList_ResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPlayer_GetNicknameList_Response> {
+} _CPlayer_GetNicknameList_Response_default_instance_;
 class CPlayer_LastPlayedTimes_NotificationDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPlayer_LastPlayedTimes_Notification> {
 } _CPlayer_LastPlayedTimes_Notification_default_instance_;
+class CPlayer_FriendNicknameChanged_NotificationDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CPlayer_FriendNicknameChanged_Notification> {
+} _CPlayer_FriendNicknameChanged_Notification_default_instance_;
 
 namespace protobuf_steammessages_5fplayer_2esteamclient_2eproto {
 
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[9];
+::google::protobuf::Metadata file_level_metadata[13];
 const ::google::protobuf::ServiceDescriptor* file_level_service_descriptors[2];
 
 }  // namespace
@@ -59,6 +67,10 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
     TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
@@ -135,6 +147,27 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_GetNicknameList_Request, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_GetNicknameList_Request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_GetNicknameList_Response_PlayerNickname, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_GetNicknameList_Response_PlayerNickname, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_GetNicknameList_Response_PlayerNickname, accountid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_GetNicknameList_Response_PlayerNickname, nickname_),
+  1,
+  0,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_GetNicknameList_Response, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_GetNicknameList_Response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_GetNicknameList_Response, nicknames_),
+  ~0u,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_LastPlayedTimes_Notification, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_LastPlayedTimes_Notification, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -142,6 +175,15 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_LastPlayedTimes_Notification, games_),
   ~0u,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_FriendNicknameChanged_Notification, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_FriendNicknameChanged_Notification, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_FriendNicknameChanged_Notification, accountid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CPlayer_FriendNicknameChanged_Notification, nickname_),
+  1,
+  0,
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
@@ -153,7 +195,11 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 47, 53, sizeof(CPlayer_GetLastPlayedTimes_Response)},
   { 54, 59, sizeof(CPlayer_AcceptSSA_Request)},
   { 59, 64, sizeof(CPlayer_AcceptSSA_Response)},
-  { 64, 70, sizeof(CPlayer_LastPlayedTimes_Notification)},
+  { 64, 69, sizeof(CPlayer_GetNicknameList_Request)},
+  { 69, 76, sizeof(CPlayer_GetNicknameList_Response_PlayerNickname)},
+  { 78, 84, sizeof(CPlayer_GetNicknameList_Response)},
+  { 85, 91, sizeof(CPlayer_LastPlayedTimes_Notification)},
+  { 92, 99, sizeof(CPlayer_FriendNicknameChanged_Notification)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -165,7 +211,11 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPlayer_GetLastPlayedTimes_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPlayer_AcceptSSA_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPlayer_AcceptSSA_Response_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPlayer_GetNicknameList_Request_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPlayer_GetNicknameList_Response_PlayerNickname_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPlayer_GetNicknameList_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CPlayer_LastPlayedTimes_Notification_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CPlayer_FriendNicknameChanged_Notification_default_instance_),
 };
 
 namespace {
@@ -186,7 +236,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 9);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 13);
 }
 
 }  // namespace
@@ -208,8 +258,16 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[6].reflection;
   _CPlayer_AcceptSSA_Response_default_instance_.Shutdown();
   delete file_level_metadata[7].reflection;
-  _CPlayer_LastPlayedTimes_Notification_default_instance_.Shutdown();
+  _CPlayer_GetNicknameList_Request_default_instance_.Shutdown();
   delete file_level_metadata[8].reflection;
+  _CPlayer_GetNicknameList_Response_PlayerNickname_default_instance_.Shutdown();
+  delete file_level_metadata[9].reflection;
+  _CPlayer_GetNicknameList_Response_default_instance_.Shutdown();
+  delete file_level_metadata[10].reflection;
+  _CPlayer_LastPlayedTimes_Notification_default_instance_.Shutdown();
+  delete file_level_metadata[11].reflection;
+  _CPlayer_FriendNicknameChanged_Notification_default_instance_.Shutdown();
+  delete file_level_metadata[12].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -225,7 +283,11 @@ void TableStruct::InitDefaultsImpl() {
   _CPlayer_GetLastPlayedTimes_Response_default_instance_.DefaultConstruct();
   _CPlayer_AcceptSSA_Request_default_instance_.DefaultConstruct();
   _CPlayer_AcceptSSA_Response_default_instance_.DefaultConstruct();
+  _CPlayer_GetNicknameList_Request_default_instance_.DefaultConstruct();
+  _CPlayer_GetNicknameList_Response_PlayerNickname_default_instance_.DefaultConstruct();
+  _CPlayer_GetNicknameList_Response_default_instance_.DefaultConstruct();
   _CPlayer_LastPlayedTimes_Notification_default_instance_.DefaultConstruct();
+  _CPlayer_FriendNicknameChanged_Notification_default_instance_.DefaultConstruct();
 }
 
 void InitDefaults() {
@@ -253,33 +315,49 @@ void AddDescriptorsImpl() {
       "\r\n\005appid\030\001 \001(\005\022\025\n\rlast_playtime\030\002 \001(\r\022\027\n"
       "\017playtime_2weeks\030\003 \001(\005\022\030\n\020playtime_forev"
       "er\030\004 \001(\005\"\033\n\031CPlayer_AcceptSSA_Request\"\034\n"
-      "\032CPlayer_AcceptSSA_Response\"l\n$CPlayer_L"
-      "astPlayedTimes_Notification\022D\n\005games\030\001 \003"
-      "(\01325.proto.steam.CPlayer_GetLastPlayedTi"
-      "mes_Response.Game2\265\004\n\006Player\022\316\001\n\022GetGame"
-      "BadgeLevels\022/.proto.steam.CPlayer_GetGam"
-      "eBadgeLevels_Request\0320.proto.steam.CPlay"
-      "er_GetGameBadgeLevels_Response\"U\202\265\030QRetu"
-      "rns the Steam Level of a user, the Badge"
-      " level for the game, and if it\'s foil\022\255\001"
-      "\n\030ClientGetLastPlayedTimes\022/.proto.steam"
-      ".CPlayer_GetLastPlayedTimes_Request\0320.pr"
-      "oto.steam.CPlayer_GetLastPlayedTimes_Res"
-      "ponse\".\202\265\030*Gets the last-played times fo"
-      "r the account\022{\n\tAcceptSSA\022&.proto.steam"
-      ".CPlayer_AcceptSSA_Request\032\'.proto.steam"
-      ".CPlayer_AcceptSSA_Response\"\035\202\265\030\031User is"
-      " accepting the SSA\032-\202\265\030)A service for ac"
-      "cessing Steam player data2\345\001\n\014PlayerClie"
-      "nt\022\244\001\n\025NotifyLastPlayedTimes\0221.proto.ste"
-      "am.CPlayer_LastPlayedTimes_Notification\032"
-      "\027.proto.steam.NoResponse\"\?\202\265\030;Notificati"
-      "on from server to client of more recent "
-      "play time\032.\202\265\030&Steam player data client "
-      "notifications\300\265\030\002B\003\200\001\001"
+      "\032CPlayer_AcceptSSA_Response\"!\n\037CPlayer_G"
+      "etNicknameList_Request\"\252\001\n CPlayer_GetNi"
+      "cknameList_Response\022O\n\tnicknames\030\001 \003(\0132<"
+      ".proto.steam.CPlayer_GetNicknameList_Res"
+      "ponse.PlayerNickname\0325\n\016PlayerNickname\022\021"
+      "\n\taccountid\030\001 \001(\007\022\020\n\010nickname\030\002 \001(\t\"l\n$C"
+      "Player_LastPlayedTimes_Notification\022D\n\005g"
+      "ames\030\001 \003(\01325.proto.steam.CPlayer_GetLast"
+      "PlayedTimes_Response.Game\"Q\n*CPlayer_Fri"
+      "endNicknameChanged_Notification\022\021\n\taccou"
+      "ntid\030\001 \001(\007\022\020\n\010nickname\030\002 \001(\t2\344\005\n\006Player\022"
+      "\316\001\n\022GetGameBadgeLevels\022/.proto.steam.CPl"
+      "ayer_GetGameBadgeLevels_Request\0320.proto."
+      "steam.CPlayer_GetGameBadgeLevels_Respons"
+      "e\"U\202\265\030QReturns the Steam Level of a user"
+      ", the Badge level for the game, and if i"
+      "t\'s foil\022\255\001\n\030ClientGetLastPlayedTimes\022/."
+      "proto.steam.CPlayer_GetLastPlayedTimes_R"
+      "equest\0320.proto.steam.CPlayer_GetLastPlay"
+      "edTimes_Response\".\202\265\030*Gets the last-play"
+      "ed times for the account\022{\n\tAcceptSSA\022&."
+      "proto.steam.CPlayer_AcceptSSA_Request\032\'."
+      "proto.steam.CPlayer_AcceptSSA_Response\"\035"
+      "\202\265\030\031User is accepting the SSA\022\254\001\n\017GetNic"
+      "knameList\022,.proto.steam.CPlayer_GetNickn"
+      "ameList_Request\032-.proto.steam.CPlayer_Ge"
+      "tNicknameList_Response\"<\202\265\0308Gets the lis"
+      "t of nicknames this user has for other u"
+      "sers\032-\202\265\030)A service for accessing Steam "
+      "player data2\244\003\n\014PlayerClient\022\244\001\n\025NotifyL"
+      "astPlayedTimes\0221.proto.steam.CPlayer_Las"
+      "tPlayedTimes_Notification\032\027.proto.steam."
+      "NoResponse\"\?\202\265\030;Notification from server"
+      " to client of more recent play time\022\274\001\n\033"
+      "NotifyFriendNicknameChanged\0227.proto.stea"
+      "m.CPlayer_FriendNicknameChanged_Notifica"
+      "tion\032\027.proto.steam.NoResponse\"K\202\265\030GNotif"
+      "ication from server to client that a fri"
+      "end\'s nickname has changed\032.\202\265\030&Steam pl"
+      "ayer data client notifications\300\265\030\002B\003\200\001\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1662);
+      descriptor, 2319);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "steammessages_player.steamclient.proto", &protobuf_RegisterTypes);
   ::proto::steam::protobuf_steammessages_5funified_5fbase_2esteamclient_2eproto::AddDescriptors();
@@ -2684,6 +2762,864 @@ void CPlayer_AcceptSSA_Response::InternalSwap(CPlayer_AcceptSSA_Response* other)
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPlayer_GetNicknameList_Request::CPlayer_GetNicknameList_Request()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fplayer_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPlayer_GetNicknameList_Request)
+}
+CPlayer_GetNicknameList_Request::CPlayer_GetNicknameList_Request(const CPlayer_GetNicknameList_Request& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPlayer_GetNicknameList_Request)
+}
+
+void CPlayer_GetNicknameList_Request::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+CPlayer_GetNicknameList_Request::~CPlayer_GetNicknameList_Request() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPlayer_GetNicknameList_Request)
+  SharedDtor();
+}
+
+void CPlayer_GetNicknameList_Request::SharedDtor() {
+}
+
+void CPlayer_GetNicknameList_Request::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPlayer_GetNicknameList_Request::descriptor() {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fplayer_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPlayer_GetNicknameList_Request& CPlayer_GetNicknameList_Request::default_instance() {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPlayer_GetNicknameList_Request* CPlayer_GetNicknameList_Request::New(::google::protobuf::Arena* arena) const {
+  CPlayer_GetNicknameList_Request* n = new CPlayer_GetNicknameList_Request;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPlayer_GetNicknameList_Request::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPlayer_GetNicknameList_Request)
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPlayer_GetNicknameList_Request::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPlayer_GetNicknameList_Request)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0 ||
+        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, mutable_unknown_fields()));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPlayer_GetNicknameList_Request)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPlayer_GetNicknameList_Request)
+  return false;
+#undef DO_
+}
+
+void CPlayer_GetNicknameList_Request::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPlayer_GetNicknameList_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPlayer_GetNicknameList_Request)
+}
+
+::google::protobuf::uint8* CPlayer_GetNicknameList_Request::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPlayer_GetNicknameList_Request)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPlayer_GetNicknameList_Request)
+  return target;
+}
+
+size_t CPlayer_GetNicknameList_Request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPlayer_GetNicknameList_Request)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPlayer_GetNicknameList_Request::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPlayer_GetNicknameList_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPlayer_GetNicknameList_Request* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPlayer_GetNicknameList_Request>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPlayer_GetNicknameList_Request)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPlayer_GetNicknameList_Request)
+    MergeFrom(*source);
+  }
+}
+
+void CPlayer_GetNicknameList_Request::MergeFrom(const CPlayer_GetNicknameList_Request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPlayer_GetNicknameList_Request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void CPlayer_GetNicknameList_Request::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPlayer_GetNicknameList_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPlayer_GetNicknameList_Request::CopyFrom(const CPlayer_GetNicknameList_Request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPlayer_GetNicknameList_Request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPlayer_GetNicknameList_Request::IsInitialized() const {
+  return true;
+}
+
+void CPlayer_GetNicknameList_Request::Swap(CPlayer_GetNicknameList_Request* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPlayer_GetNicknameList_Request::InternalSwap(CPlayer_GetNicknameList_Request* other) {
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPlayer_GetNicknameList_Request::GetMetadata() const {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fplayer_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPlayer_GetNicknameList_Request
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPlayer_GetNicknameList_Response_PlayerNickname::kAccountidFieldNumber;
+const int CPlayer_GetNicknameList_Response_PlayerNickname::kNicknameFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPlayer_GetNicknameList_Response_PlayerNickname::CPlayer_GetNicknameList_Response_PlayerNickname()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fplayer_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+}
+CPlayer_GetNicknameList_Response_PlayerNickname::CPlayer_GetNicknameList_Response_PlayerNickname(const CPlayer_GetNicknameList_Response_PlayerNickname& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  nickname_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_nickname()) {
+    nickname_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.nickname_);
+  }
+  accountid_ = from.accountid_;
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+}
+
+void CPlayer_GetNicknameList_Response_PlayerNickname::SharedCtor() {
+  _cached_size_ = 0;
+  nickname_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  accountid_ = 0u;
+}
+
+CPlayer_GetNicknameList_Response_PlayerNickname::~CPlayer_GetNicknameList_Response_PlayerNickname() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  SharedDtor();
+}
+
+void CPlayer_GetNicknameList_Response_PlayerNickname::SharedDtor() {
+  nickname_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void CPlayer_GetNicknameList_Response_PlayerNickname::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPlayer_GetNicknameList_Response_PlayerNickname::descriptor() {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fplayer_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPlayer_GetNicknameList_Response_PlayerNickname& CPlayer_GetNicknameList_Response_PlayerNickname::default_instance() {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPlayer_GetNicknameList_Response_PlayerNickname* CPlayer_GetNicknameList_Response_PlayerNickname::New(::google::protobuf::Arena* arena) const {
+  CPlayer_GetNicknameList_Response_PlayerNickname* n = new CPlayer_GetNicknameList_Response_PlayerNickname;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPlayer_GetNicknameList_Response_PlayerNickname::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  if (has_nickname()) {
+    GOOGLE_DCHECK(!nickname_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+    (*nickname_.UnsafeRawStringPointer())->clear();
+  }
+  accountid_ = 0u;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPlayer_GetNicknameList_Response_PlayerNickname::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional fixed32 accountid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(13u)) {
+          set_has_accountid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
+                 input, &accountid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional string nickname = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_nickname()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->nickname().data(), this->nickname().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  return false;
+#undef DO_
+}
+
+void CPlayer_GetNicknameList_Response_PlayerNickname::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional fixed32 accountid = 1;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFixed32(1, this->accountid(), output);
+  }
+
+  // optional string nickname = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->nickname().data(), this->nickname().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->nickname(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+}
+
+::google::protobuf::uint8* CPlayer_GetNicknameList_Response_PlayerNickname::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional fixed32 accountid = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(1, this->accountid(), target);
+  }
+
+  // optional string nickname = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->nickname().data(), this->nickname().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->nickname(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  return target;
+}
+
+size_t CPlayer_GetNicknameList_Response_PlayerNickname::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 3u) {
+    // optional string nickname = 2;
+    if (has_nickname()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->nickname());
+    }
+
+    // optional fixed32 accountid = 1;
+    if (has_accountid()) {
+      total_size += 1 + 4;
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPlayer_GetNicknameList_Response_PlayerNickname::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPlayer_GetNicknameList_Response_PlayerNickname* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPlayer_GetNicknameList_Response_PlayerNickname>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+    MergeFrom(*source);
+  }
+}
+
+void CPlayer_GetNicknameList_Response_PlayerNickname::MergeFrom(const CPlayer_GetNicknameList_Response_PlayerNickname& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_nickname();
+      nickname_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.nickname_);
+    }
+    if (cached_has_bits & 0x00000002u) {
+      accountid_ = from.accountid_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CPlayer_GetNicknameList_Response_PlayerNickname::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPlayer_GetNicknameList_Response_PlayerNickname::CopyFrom(const CPlayer_GetNicknameList_Response_PlayerNickname& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPlayer_GetNicknameList_Response_PlayerNickname::IsInitialized() const {
+  return true;
+}
+
+void CPlayer_GetNicknameList_Response_PlayerNickname::Swap(CPlayer_GetNicknameList_Response_PlayerNickname* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::InternalSwap(CPlayer_GetNicknameList_Response_PlayerNickname* other) {
+  nickname_.Swap(&other->nickname_);
+  std::swap(accountid_, other->accountid_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPlayer_GetNicknameList_Response_PlayerNickname::GetMetadata() const {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fplayer_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPlayer_GetNicknameList_Response_PlayerNickname
+
+// optional fixed32 accountid = 1;
+bool CPlayer_GetNicknameList_Response_PlayerNickname::has_accountid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::set_has_accountid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::clear_has_accountid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::clear_accountid() {
+  accountid_ = 0u;
+  clear_has_accountid();
+}
+::google::protobuf::uint32 CPlayer_GetNicknameList_Response_PlayerNickname::accountid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.accountid)
+  return accountid_;
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::set_accountid(::google::protobuf::uint32 value) {
+  set_has_accountid();
+  accountid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.accountid)
+}
+
+// optional string nickname = 2;
+bool CPlayer_GetNicknameList_Response_PlayerNickname::has_nickname() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::set_has_nickname() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::clear_has_nickname() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::clear_nickname() {
+  nickname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_nickname();
+}
+const ::std::string& CPlayer_GetNicknameList_Response_PlayerNickname::nickname() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname)
+  return nickname_.GetNoArena();
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::set_nickname(const ::std::string& value) {
+  set_has_nickname();
+  nickname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname)
+}
+#if LANG_CXX11
+void CPlayer_GetNicknameList_Response_PlayerNickname::set_nickname(::std::string&& value) {
+  set_has_nickname();
+  nickname_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname)
+}
+#endif
+void CPlayer_GetNicknameList_Response_PlayerNickname::set_nickname(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_nickname();
+  nickname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname)
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::set_nickname(const char* value, size_t size) {
+  set_has_nickname();
+  nickname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname)
+}
+::std::string* CPlayer_GetNicknameList_Response_PlayerNickname::mutable_nickname() {
+  set_has_nickname();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname)
+  return nickname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* CPlayer_GetNicknameList_Response_PlayerNickname::release_nickname() {
+  // @@protoc_insertion_point(field_release:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname)
+  clear_has_nickname();
+  return nickname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void CPlayer_GetNicknameList_Response_PlayerNickname::set_allocated_nickname(::std::string* nickname) {
+  if (nickname != NULL) {
+    set_has_nickname();
+  } else {
+    clear_has_nickname();
+  }
+  nickname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), nickname);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname.nickname)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPlayer_GetNicknameList_Response::kNicknamesFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPlayer_GetNicknameList_Response::CPlayer_GetNicknameList_Response()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fplayer_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPlayer_GetNicknameList_Response)
+}
+CPlayer_GetNicknameList_Response::CPlayer_GetNicknameList_Response(const CPlayer_GetNicknameList_Response& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0),
+      nicknames_(from.nicknames_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPlayer_GetNicknameList_Response)
+}
+
+void CPlayer_GetNicknameList_Response::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+CPlayer_GetNicknameList_Response::~CPlayer_GetNicknameList_Response() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPlayer_GetNicknameList_Response)
+  SharedDtor();
+}
+
+void CPlayer_GetNicknameList_Response::SharedDtor() {
+}
+
+void CPlayer_GetNicknameList_Response::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPlayer_GetNicknameList_Response::descriptor() {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fplayer_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPlayer_GetNicknameList_Response& CPlayer_GetNicknameList_Response::default_instance() {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPlayer_GetNicknameList_Response* CPlayer_GetNicknameList_Response::New(::google::protobuf::Arena* arena) const {
+  CPlayer_GetNicknameList_Response* n = new CPlayer_GetNicknameList_Response;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPlayer_GetNicknameList_Response::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPlayer_GetNicknameList_Response)
+  nicknames_.Clear();
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPlayer_GetNicknameList_Response::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPlayer_GetNicknameList_Response)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname nicknames = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_nicknames()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPlayer_GetNicknameList_Response)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPlayer_GetNicknameList_Response)
+  return false;
+#undef DO_
+}
+
+void CPlayer_GetNicknameList_Response::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPlayer_GetNicknameList_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname nicknames = 1;
+  for (unsigned int i = 0, n = this->nicknames_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->nicknames(i), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPlayer_GetNicknameList_Response)
+}
+
+::google::protobuf::uint8* CPlayer_GetNicknameList_Response::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPlayer_GetNicknameList_Response)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname nicknames = 1;
+  for (unsigned int i = 0, n = this->nicknames_size(); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        1, this->nicknames(i), deterministic, target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPlayer_GetNicknameList_Response)
+  return target;
+}
+
+size_t CPlayer_GetNicknameList_Response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPlayer_GetNicknameList_Response)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  // repeated .proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname nicknames = 1;
+  {
+    unsigned int count = this->nicknames_size();
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->nicknames(i));
+    }
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPlayer_GetNicknameList_Response::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPlayer_GetNicknameList_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPlayer_GetNicknameList_Response* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPlayer_GetNicknameList_Response>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPlayer_GetNicknameList_Response)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPlayer_GetNicknameList_Response)
+    MergeFrom(*source);
+  }
+}
+
+void CPlayer_GetNicknameList_Response::MergeFrom(const CPlayer_GetNicknameList_Response& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPlayer_GetNicknameList_Response)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  nicknames_.MergeFrom(from.nicknames_);
+}
+
+void CPlayer_GetNicknameList_Response::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPlayer_GetNicknameList_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPlayer_GetNicknameList_Response::CopyFrom(const CPlayer_GetNicknameList_Response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPlayer_GetNicknameList_Response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPlayer_GetNicknameList_Response::IsInitialized() const {
+  return true;
+}
+
+void CPlayer_GetNicknameList_Response::Swap(CPlayer_GetNicknameList_Response* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPlayer_GetNicknameList_Response::InternalSwap(CPlayer_GetNicknameList_Response* other) {
+  nicknames_.InternalSwap(&other->nicknames_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPlayer_GetNicknameList_Response::GetMetadata() const {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fplayer_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPlayer_GetNicknameList_Response
+
+// repeated .proto.steam.CPlayer_GetNicknameList_Response.PlayerNickname nicknames = 1;
+int CPlayer_GetNicknameList_Response::nicknames_size() const {
+  return nicknames_.size();
+}
+void CPlayer_GetNicknameList_Response::clear_nicknames() {
+  nicknames_.Clear();
+}
+const ::proto::steam::CPlayer_GetNicknameList_Response_PlayerNickname& CPlayer_GetNicknameList_Response::nicknames(int index) const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPlayer_GetNicknameList_Response.nicknames)
+  return nicknames_.Get(index);
+}
+::proto::steam::CPlayer_GetNicknameList_Response_PlayerNickname* CPlayer_GetNicknameList_Response::mutable_nicknames(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.steam.CPlayer_GetNicknameList_Response.nicknames)
+  return nicknames_.Mutable(index);
+}
+::proto::steam::CPlayer_GetNicknameList_Response_PlayerNickname* CPlayer_GetNicknameList_Response::add_nicknames() {
+  // @@protoc_insertion_point(field_add:proto.steam.CPlayer_GetNicknameList_Response.nicknames)
+  return nicknames_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::proto::steam::CPlayer_GetNicknameList_Response_PlayerNickname >*
+CPlayer_GetNicknameList_Response::mutable_nicknames() {
+  // @@protoc_insertion_point(field_mutable_list:proto.steam.CPlayer_GetNicknameList_Response.nicknames)
+  return &nicknames_;
+}
+const ::google::protobuf::RepeatedPtrField< ::proto::steam::CPlayer_GetNicknameList_Response_PlayerNickname >&
+CPlayer_GetNicknameList_Response::nicknames() const {
+  // @@protoc_insertion_point(field_list:proto.steam.CPlayer_GetNicknameList_Response.nicknames)
+  return nicknames_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CPlayer_LastPlayedTimes_Notification::kGamesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -2954,6 +3890,398 @@ CPlayer_LastPlayedTimes_Notification::games() const {
 
 // ===================================================================
 
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CPlayer_FriendNicknameChanged_Notification::kAccountidFieldNumber;
+const int CPlayer_FriendNicknameChanged_Notification::kNicknameFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CPlayer_FriendNicknameChanged_Notification::CPlayer_FriendNicknameChanged_Notification()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_steammessages_5fplayer_2esteamclient_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+}
+CPlayer_FriendNicknameChanged_Notification::CPlayer_FriendNicknameChanged_Notification(const CPlayer_FriendNicknameChanged_Notification& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  nickname_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_nickname()) {
+    nickname_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.nickname_);
+  }
+  accountid_ = from.accountid_;
+  // @@protoc_insertion_point(copy_constructor:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+}
+
+void CPlayer_FriendNicknameChanged_Notification::SharedCtor() {
+  _cached_size_ = 0;
+  nickname_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  accountid_ = 0u;
+}
+
+CPlayer_FriendNicknameChanged_Notification::~CPlayer_FriendNicknameChanged_Notification() {
+  // @@protoc_insertion_point(destructor:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  SharedDtor();
+}
+
+void CPlayer_FriendNicknameChanged_Notification::SharedDtor() {
+  nickname_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void CPlayer_FriendNicknameChanged_Notification::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CPlayer_FriendNicknameChanged_Notification::descriptor() {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fplayer_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CPlayer_FriendNicknameChanged_Notification& CPlayer_FriendNicknameChanged_Notification::default_instance() {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CPlayer_FriendNicknameChanged_Notification* CPlayer_FriendNicknameChanged_Notification::New(::google::protobuf::Arena* arena) const {
+  CPlayer_FriendNicknameChanged_Notification* n = new CPlayer_FriendNicknameChanged_Notification;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CPlayer_FriendNicknameChanged_Notification::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  if (has_nickname()) {
+    GOOGLE_DCHECK(!nickname_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+    (*nickname_.UnsafeRawStringPointer())->clear();
+  }
+  accountid_ = 0u;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CPlayer_FriendNicknameChanged_Notification::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional fixed32 accountid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(13u)) {
+          set_has_accountid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
+                 input, &accountid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional string nickname = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_nickname()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->nickname().data(), this->nickname().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  return false;
+#undef DO_
+}
+
+void CPlayer_FriendNicknameChanged_Notification::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional fixed32 accountid = 1;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFixed32(1, this->accountid(), output);
+  }
+
+  // optional string nickname = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->nickname().data(), this->nickname().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->nickname(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+}
+
+::google::protobuf::uint8* CPlayer_FriendNicknameChanged_Notification::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional fixed32 accountid = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(1, this->accountid(), target);
+  }
+
+  // optional string nickname = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->nickname().data(), this->nickname().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->nickname(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  return target;
+}
+
+size_t CPlayer_FriendNicknameChanged_Notification::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 3u) {
+    // optional string nickname = 2;
+    if (has_nickname()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->nickname());
+    }
+
+    // optional fixed32 accountid = 1;
+    if (has_accountid()) {
+      total_size += 1 + 4;
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CPlayer_FriendNicknameChanged_Notification::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CPlayer_FriendNicknameChanged_Notification* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CPlayer_FriendNicknameChanged_Notification>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+    MergeFrom(*source);
+  }
+}
+
+void CPlayer_FriendNicknameChanged_Notification::MergeFrom(const CPlayer_FriendNicknameChanged_Notification& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_nickname();
+      nickname_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.nickname_);
+    }
+    if (cached_has_bits & 0x00000002u) {
+      accountid_ = from.accountid_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void CPlayer_FriendNicknameChanged_Notification::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CPlayer_FriendNicknameChanged_Notification::CopyFrom(const CPlayer_FriendNicknameChanged_Notification& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.steam.CPlayer_FriendNicknameChanged_Notification)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CPlayer_FriendNicknameChanged_Notification::IsInitialized() const {
+  return true;
+}
+
+void CPlayer_FriendNicknameChanged_Notification::Swap(CPlayer_FriendNicknameChanged_Notification* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CPlayer_FriendNicknameChanged_Notification::InternalSwap(CPlayer_FriendNicknameChanged_Notification* other) {
+  nickname_.Swap(&other->nickname_);
+  std::swap(accountid_, other->accountid_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CPlayer_FriendNicknameChanged_Notification::GetMetadata() const {
+  protobuf_steammessages_5fplayer_2esteamclient_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_steammessages_5fplayer_2esteamclient_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CPlayer_FriendNicknameChanged_Notification
+
+// optional fixed32 accountid = 1;
+bool CPlayer_FriendNicknameChanged_Notification::has_accountid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void CPlayer_FriendNicknameChanged_Notification::set_has_accountid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void CPlayer_FriendNicknameChanged_Notification::clear_has_accountid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void CPlayer_FriendNicknameChanged_Notification::clear_accountid() {
+  accountid_ = 0u;
+  clear_has_accountid();
+}
+::google::protobuf::uint32 CPlayer_FriendNicknameChanged_Notification::accountid() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPlayer_FriendNicknameChanged_Notification.accountid)
+  return accountid_;
+}
+void CPlayer_FriendNicknameChanged_Notification::set_accountid(::google::protobuf::uint32 value) {
+  set_has_accountid();
+  accountid_ = value;
+  // @@protoc_insertion_point(field_set:proto.steam.CPlayer_FriendNicknameChanged_Notification.accountid)
+}
+
+// optional string nickname = 2;
+bool CPlayer_FriendNicknameChanged_Notification::has_nickname() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CPlayer_FriendNicknameChanged_Notification::set_has_nickname() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CPlayer_FriendNicknameChanged_Notification::clear_has_nickname() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CPlayer_FriendNicknameChanged_Notification::clear_nickname() {
+  nickname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_nickname();
+}
+const ::std::string& CPlayer_FriendNicknameChanged_Notification::nickname() const {
+  // @@protoc_insertion_point(field_get:proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname)
+  return nickname_.GetNoArena();
+}
+void CPlayer_FriendNicknameChanged_Notification::set_nickname(const ::std::string& value) {
+  set_has_nickname();
+  nickname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname)
+}
+#if LANG_CXX11
+void CPlayer_FriendNicknameChanged_Notification::set_nickname(::std::string&& value) {
+  set_has_nickname();
+  nickname_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname)
+}
+#endif
+void CPlayer_FriendNicknameChanged_Notification::set_nickname(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_nickname();
+  nickname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname)
+}
+void CPlayer_FriendNicknameChanged_Notification::set_nickname(const char* value, size_t size) {
+  set_has_nickname();
+  nickname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname)
+}
+::std::string* CPlayer_FriendNicknameChanged_Notification::mutable_nickname() {
+  set_has_nickname();
+  // @@protoc_insertion_point(field_mutable:proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname)
+  return nickname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* CPlayer_FriendNicknameChanged_Notification::release_nickname() {
+  // @@protoc_insertion_point(field_release:proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname)
+  clear_has_nickname();
+  return nickname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void CPlayer_FriendNicknameChanged_Notification::set_allocated_nickname(::std::string* nickname) {
+  if (nickname != NULL) {
+    set_has_nickname();
+  } else {
+    clear_has_nickname();
+  }
+  nickname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), nickname);
+  // @@protoc_insertion_point(field_set_allocated:proto.steam.CPlayer_FriendNicknameChanged_Notification.nickname)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
 Player::~Player() {}
 
 const ::google::protobuf::ServiceDescriptor* Player::descriptor() {
@@ -2989,6 +4317,14 @@ void Player::AcceptSSA(::google::protobuf::RpcController* controller,
   done->Run();
 }
 
+void Player::GetNicknameList(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CPlayer_GetNicknameList_Request*,
+                         ::proto::steam::CPlayer_GetNicknameList_Response*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method GetNicknameList() not implemented.");
+  done->Run();
+}
+
 void Player::CallMethod(const ::google::protobuf::MethodDescriptor* method,
                              ::google::protobuf::RpcController* controller,
                              const ::google::protobuf::Message* request,
@@ -3014,6 +4350,12 @@ void Player::CallMethod(const ::google::protobuf::MethodDescriptor* method,
              ::google::protobuf::down_cast< ::proto::steam::CPlayer_AcceptSSA_Response*>(response),
              done);
       break;
+    case 3:
+      GetNicknameList(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CPlayer_GetNicknameList_Request*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::CPlayer_GetNicknameList_Response*>(response),
+             done);
+      break;
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       break;
@@ -3030,6 +4372,8 @@ const ::google::protobuf::Message& Player::GetRequestPrototype(
       return ::proto::steam::CPlayer_GetLastPlayedTimes_Request::default_instance();
     case 2:
       return ::proto::steam::CPlayer_AcceptSSA_Request::default_instance();
+    case 3:
+      return ::proto::steam::CPlayer_GetNicknameList_Request::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::google::protobuf::MessageFactory::generated_factory()
@@ -3047,6 +4391,8 @@ const ::google::protobuf::Message& Player::GetResponsePrototype(
       return ::proto::steam::CPlayer_GetLastPlayedTimes_Response::default_instance();
     case 2:
       return ::proto::steam::CPlayer_AcceptSSA_Response::default_instance();
+    case 3:
+      return ::proto::steam::CPlayer_GetNicknameList_Response::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::google::protobuf::MessageFactory::generated_factory()
@@ -3086,6 +4432,13 @@ void Player_Stub::AcceptSSA(::google::protobuf::RpcController* controller,
   channel_->CallMethod(descriptor()->method(2),
                        controller, request, response, done);
 }
+void Player_Stub::GetNicknameList(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CPlayer_GetNicknameList_Request* request,
+                              ::proto::steam::CPlayer_GetNicknameList_Response* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(3),
+                       controller, request, response, done);
+}
 // ===================================================================
 
 PlayerClient::~PlayerClient() {}
@@ -3107,6 +4460,14 @@ void PlayerClient::NotifyLastPlayedTimes(::google::protobuf::RpcController* cont
   done->Run();
 }
 
+void PlayerClient::NotifyFriendNicknameChanged(::google::protobuf::RpcController* controller,
+                         const ::proto::steam::CPlayer_FriendNicknameChanged_Notification*,
+                         ::proto::steam::NoResponse*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method NotifyFriendNicknameChanged() not implemented.");
+  done->Run();
+}
+
 void PlayerClient::CallMethod(const ::google::protobuf::MethodDescriptor* method,
                              ::google::protobuf::RpcController* controller,
                              const ::google::protobuf::Message* request,
@@ -3117,6 +4478,12 @@ void PlayerClient::CallMethod(const ::google::protobuf::MethodDescriptor* method
     case 0:
       NotifyLastPlayedTimes(controller,
              ::google::protobuf::down_cast<const ::proto::steam::CPlayer_LastPlayedTimes_Notification*>(request),
+             ::google::protobuf::down_cast< ::proto::steam::NoResponse*>(response),
+             done);
+      break;
+    case 1:
+      NotifyFriendNicknameChanged(controller,
+             ::google::protobuf::down_cast<const ::proto::steam::CPlayer_FriendNicknameChanged_Notification*>(request),
              ::google::protobuf::down_cast< ::proto::steam::NoResponse*>(response),
              done);
       break;
@@ -3132,6 +4499,8 @@ const ::google::protobuf::Message& PlayerClient::GetRequestPrototype(
   switch(method->index()) {
     case 0:
       return ::proto::steam::CPlayer_LastPlayedTimes_Notification::default_instance();
+    case 1:
+      return ::proto::steam::CPlayer_FriendNicknameChanged_Notification::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::google::protobuf::MessageFactory::generated_factory()
@@ -3144,6 +4513,8 @@ const ::google::protobuf::Message& PlayerClient::GetResponsePrototype(
   GOOGLE_DCHECK_EQ(method->service(), descriptor());
   switch(method->index()) {
     case 0:
+      return ::proto::steam::NoResponse::default_instance();
+    case 1:
       return ::proto::steam::NoResponse::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
@@ -3168,6 +4539,13 @@ void PlayerClient_Stub::NotifyLastPlayedTimes(::google::protobuf::RpcController*
                               ::proto::steam::NoResponse* response,
                               ::google::protobuf::Closure* done) {
   channel_->CallMethod(descriptor()->method(0),
+                       controller, request, response, done);
+}
+void PlayerClient_Stub::NotifyFriendNicknameChanged(::google::protobuf::RpcController* controller,
+                              const ::proto::steam::CPlayer_FriendNicknameChanged_Notification* request,
+                              ::proto::steam::NoResponse* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(1),
                        controller, request, response, done);
 }
 

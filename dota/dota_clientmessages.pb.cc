@@ -43,6 +43,8 @@ class CDOTAClientMsg_UnitsAutoAttackAfterSpellDefaultTypeInternal : public ::goo
 } _CDOTAClientMsg_UnitsAutoAttackAfterSpell_default_instance_;
 class CDOTAClientMsg_TeleportRequiresHaltDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CDOTAClientMsg_TeleportRequiresHalt> {
 } _CDOTAClientMsg_TeleportRequiresHalt_default_instance_;
+class CDOTAClientMsg_ChannelRequiresHaltDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CDOTAClientMsg_ChannelRequiresHalt> {
+} _CDOTAClientMsg_ChannelRequiresHalt_default_instance_;
 class CDOTAClientMsg_SearchStringDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CDOTAClientMsg_SearchString> {
 } _CDOTAClientMsg_SearchString_default_instance_;
 class CDOTAClientMsg_PauseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CDOTAClientMsg_Pause> {
@@ -139,13 +141,15 @@ class CDOTAClientMsg_RequestItemSuggestionsDefaultTypeInternal : public ::google
 } _CDOTAClientMsg_RequestItemSuggestions_default_instance_;
 class CDOTAClientMsg_MakeTeamCaptainDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CDOTAClientMsg_MakeTeamCaptain> {
 } _CDOTAClientMsg_MakeTeamCaptain_default_instance_;
+class CDOTAClientMsg_HelpTipSystemStateChangedDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CDOTAClientMsg_HelpTipSystemStateChanged> {
+} _CDOTAClientMsg_HelpTipSystemStateChanged_default_instance_;
 
 namespace protobuf_dota_5fclientmessages_2eproto {
 
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[60];
+::google::protobuf::Metadata file_level_metadata[62];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[3];
 
 }  // namespace
@@ -161,6 +165,8 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
     TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
@@ -313,6 +319,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAClientMsg_TeleportRequiresHalt, enabled_),
+  0,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAClientMsg_ChannelRequiresHalt, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAClientMsg_ChannelRequiresHalt, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAClientMsg_ChannelRequiresHalt, enabled_),
   0,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAClientMsg_SearchString, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAClientMsg_SearchString, _internal_metadata_),
@@ -718,6 +731,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAClientMsg_MakeTeamCaptain, player_id_),
   0,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAClientMsg_HelpTipSystemStateChanged, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAClientMsg_HelpTipSystemStateChanged, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CDOTAClientMsg_HelpTipSystemStateChanged, tip_displayed_),
+  0,
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
@@ -733,54 +753,56 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 67, 74, sizeof(CDOTAClientMsg_UnitsAutoAttackMode)},
   { 76, 82, sizeof(CDOTAClientMsg_UnitsAutoAttackAfterSpell)},
   { 83, 89, sizeof(CDOTAClientMsg_TeleportRequiresHalt)},
-  { 90, 96, sizeof(CDOTAClientMsg_SearchString)},
-  { 97, 102, sizeof(CDOTAClientMsg_Pause)},
-  { 102, 108, sizeof(CDOTAClientMsg_ShopViewMode)},
-  { 109, 117, sizeof(CDOTAClientMsg_SetUnitShareFlag)},
-  { 120, 126, sizeof(CDOTAClientMsg_SwapRequest)},
-  { 127, 133, sizeof(CDOTAClientMsg_SwapAccept)},
-  { 134, 140, sizeof(CDOTAClientMsg_WorldLine)},
-  { 141, 146, sizeof(CDOTAClientMsg_RequestGraphUpdate)},
-  { 146, 153, sizeof(CDOTAClientMsg_ChatWheel)},
-  { 155, 161, sizeof(CDOTAClientMsg_SendStatPopup)},
-  { 162, 168, sizeof(CDOTAClientMsg_DismissAllStatPopups)},
-  { 169, 176, sizeof(CDOTAClientMsg_BeginLastHitChallenge)},
-  { 178, 185, sizeof(CDOTAClientMsg_UpdateQuickBuyItem)},
-  { 187, 193, sizeof(CDOTAClientMsg_UpdateQuickBuy)},
-  { 194, 200, sizeof(CDOTAClientMsg_RecordVote)},
-  { 201, 209, sizeof(CDOTAClientMsg_WillPurchaseAlert)},
-  { 212, 217, sizeof(CDOTAClientMsg_BuyBackStateAlert)},
-  { 217, 224, sizeof(CDOTAClientMsg_QuickBuyAlert)},
-  { 226, 232, sizeof(CDOTAClientMsg_PlayerShowCase)},
-  { 233, 239, sizeof(CDOTAClientMsg_CameraZoomAmount)},
-  { 240, 246, sizeof(CDOTAClientMsg_BroadcasterUsingCameraman)},
-  { 247, 253, sizeof(CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator)},
-  { 254, 262, sizeof(CAdditionalEquipSlotClientMsg)},
-  { 265, 271, sizeof(CDOTAClientMsg_FreeInventory)},
-  { 272, 278, sizeof(CDOTAClientMsg_FillEmptySlotsWithBots)},
-  { 279, 285, sizeof(CDOTAClientMsg_HeroStatueLike)},
-  { 286, 292, sizeof(CDOTAClientMsg_EventCNY2015Cmd)},
-  { 293, 304, sizeof(CDOTAClientMsg_DemoHero)},
-  { 310, 318, sizeof(CDOTAClientMsg_ChallengeSelect)},
-  { 321, 329, sizeof(CDOTAClientMsg_ChallengeReroll)},
-  { 332, 338, sizeof(CDOTAClientMsg_CoinWager)},
-  { 339, 345, sizeof(CDOTAClientMsg_CoinWagerToken)},
-  { 346, 352, sizeof(CDOTAClientMsg_RankWager)},
-  { 353, 359, sizeof(CDOTAClientMsg_EventPointsTip)},
-  { 360, 366, sizeof(CDOTAClientMsg_ExecuteOrders)},
-  { 367, 374, sizeof(CDOTAClientMsg_XPAlert)},
-  { 376, 387, sizeof(CDOTAClientMsg_KillcamDamageTaken)},
-  { 393, 400, sizeof(CDOTAClientMsg_MatchMetadata)},
-  { 402, 407, sizeof(CDOTAClientMsg_KillMyHero)},
-  { 407, 419, sizeof(CDOTAClientMsg_QuestStatus)},
-  { 426, 433, sizeof(CDOTAClientMsg_ToggleAutoattack)},
-  { 435, 442, sizeof(CDOTAClientMsg_SpecialAbility)},
-  { 444, 451, sizeof(CDOTAClientMsg_SetEnemyStartingPosition)},
-  { 453, 461, sizeof(CDOTAClientMsg_SetDesiredWardPlacement)},
-  { 464, 472, sizeof(CDOTAClientMsg_RollDice)},
-  { 475, 481, sizeof(CDOTAClientMsg_FlipCoin)},
-  { 482, 487, sizeof(CDOTAClientMsg_RequestItemSuggestions)},
-  { 487, 493, sizeof(CDOTAClientMsg_MakeTeamCaptain)},
+  { 90, 96, sizeof(CDOTAClientMsg_ChannelRequiresHalt)},
+  { 97, 103, sizeof(CDOTAClientMsg_SearchString)},
+  { 104, 109, sizeof(CDOTAClientMsg_Pause)},
+  { 109, 115, sizeof(CDOTAClientMsg_ShopViewMode)},
+  { 116, 124, sizeof(CDOTAClientMsg_SetUnitShareFlag)},
+  { 127, 133, sizeof(CDOTAClientMsg_SwapRequest)},
+  { 134, 140, sizeof(CDOTAClientMsg_SwapAccept)},
+  { 141, 147, sizeof(CDOTAClientMsg_WorldLine)},
+  { 148, 153, sizeof(CDOTAClientMsg_RequestGraphUpdate)},
+  { 153, 160, sizeof(CDOTAClientMsg_ChatWheel)},
+  { 162, 168, sizeof(CDOTAClientMsg_SendStatPopup)},
+  { 169, 175, sizeof(CDOTAClientMsg_DismissAllStatPopups)},
+  { 176, 183, sizeof(CDOTAClientMsg_BeginLastHitChallenge)},
+  { 185, 192, sizeof(CDOTAClientMsg_UpdateQuickBuyItem)},
+  { 194, 200, sizeof(CDOTAClientMsg_UpdateQuickBuy)},
+  { 201, 207, sizeof(CDOTAClientMsg_RecordVote)},
+  { 208, 216, sizeof(CDOTAClientMsg_WillPurchaseAlert)},
+  { 219, 224, sizeof(CDOTAClientMsg_BuyBackStateAlert)},
+  { 224, 231, sizeof(CDOTAClientMsg_QuickBuyAlert)},
+  { 233, 239, sizeof(CDOTAClientMsg_PlayerShowCase)},
+  { 240, 246, sizeof(CDOTAClientMsg_CameraZoomAmount)},
+  { 247, 253, sizeof(CDOTAClientMsg_BroadcasterUsingCameraman)},
+  { 254, 260, sizeof(CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator)},
+  { 261, 269, sizeof(CAdditionalEquipSlotClientMsg)},
+  { 272, 278, sizeof(CDOTAClientMsg_FreeInventory)},
+  { 279, 285, sizeof(CDOTAClientMsg_FillEmptySlotsWithBots)},
+  { 286, 292, sizeof(CDOTAClientMsg_HeroStatueLike)},
+  { 293, 299, sizeof(CDOTAClientMsg_EventCNY2015Cmd)},
+  { 300, 311, sizeof(CDOTAClientMsg_DemoHero)},
+  { 317, 325, sizeof(CDOTAClientMsg_ChallengeSelect)},
+  { 328, 336, sizeof(CDOTAClientMsg_ChallengeReroll)},
+  { 339, 345, sizeof(CDOTAClientMsg_CoinWager)},
+  { 346, 352, sizeof(CDOTAClientMsg_CoinWagerToken)},
+  { 353, 359, sizeof(CDOTAClientMsg_RankWager)},
+  { 360, 366, sizeof(CDOTAClientMsg_EventPointsTip)},
+  { 367, 373, sizeof(CDOTAClientMsg_ExecuteOrders)},
+  { 374, 381, sizeof(CDOTAClientMsg_XPAlert)},
+  { 383, 394, sizeof(CDOTAClientMsg_KillcamDamageTaken)},
+  { 400, 407, sizeof(CDOTAClientMsg_MatchMetadata)},
+  { 409, 414, sizeof(CDOTAClientMsg_KillMyHero)},
+  { 414, 426, sizeof(CDOTAClientMsg_QuestStatus)},
+  { 433, 440, sizeof(CDOTAClientMsg_ToggleAutoattack)},
+  { 442, 449, sizeof(CDOTAClientMsg_SpecialAbility)},
+  { 451, 458, sizeof(CDOTAClientMsg_SetEnemyStartingPosition)},
+  { 460, 468, sizeof(CDOTAClientMsg_SetDesiredWardPlacement)},
+  { 471, 479, sizeof(CDOTAClientMsg_RollDice)},
+  { 482, 488, sizeof(CDOTAClientMsg_FlipCoin)},
+  { 489, 494, sizeof(CDOTAClientMsg_RequestItemSuggestions)},
+  { 494, 500, sizeof(CDOTAClientMsg_MakeTeamCaptain)},
+  { 501, 507, sizeof(CDOTAClientMsg_HelpTipSystemStateChanged)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -796,6 +818,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_UnitsAutoAttackMode_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_UnitsAutoAttackAfterSpell_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_TeleportRequiresHalt_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_ChannelRequiresHalt_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_SearchString_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_Pause_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_ShopViewMode_default_instance_),
@@ -844,6 +867,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_FlipCoin_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_RequestItemSuggestions_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_MakeTeamCaptain_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CDOTAClientMsg_HelpTipSystemStateChanged_default_instance_),
 };
 
 namespace {
@@ -864,7 +888,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 60);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 62);
 }
 
 }  // namespace
@@ -894,102 +918,106 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[10].reflection;
   _CDOTAClientMsg_TeleportRequiresHalt_default_instance_.Shutdown();
   delete file_level_metadata[11].reflection;
-  _CDOTAClientMsg_SearchString_default_instance_.Shutdown();
+  _CDOTAClientMsg_ChannelRequiresHalt_default_instance_.Shutdown();
   delete file_level_metadata[12].reflection;
-  _CDOTAClientMsg_Pause_default_instance_.Shutdown();
+  _CDOTAClientMsg_SearchString_default_instance_.Shutdown();
   delete file_level_metadata[13].reflection;
-  _CDOTAClientMsg_ShopViewMode_default_instance_.Shutdown();
+  _CDOTAClientMsg_Pause_default_instance_.Shutdown();
   delete file_level_metadata[14].reflection;
-  _CDOTAClientMsg_SetUnitShareFlag_default_instance_.Shutdown();
+  _CDOTAClientMsg_ShopViewMode_default_instance_.Shutdown();
   delete file_level_metadata[15].reflection;
-  _CDOTAClientMsg_SwapRequest_default_instance_.Shutdown();
+  _CDOTAClientMsg_SetUnitShareFlag_default_instance_.Shutdown();
   delete file_level_metadata[16].reflection;
-  _CDOTAClientMsg_SwapAccept_default_instance_.Shutdown();
+  _CDOTAClientMsg_SwapRequest_default_instance_.Shutdown();
   delete file_level_metadata[17].reflection;
-  _CDOTAClientMsg_WorldLine_default_instance_.Shutdown();
+  _CDOTAClientMsg_SwapAccept_default_instance_.Shutdown();
   delete file_level_metadata[18].reflection;
-  _CDOTAClientMsg_RequestGraphUpdate_default_instance_.Shutdown();
+  _CDOTAClientMsg_WorldLine_default_instance_.Shutdown();
   delete file_level_metadata[19].reflection;
-  _CDOTAClientMsg_ChatWheel_default_instance_.Shutdown();
+  _CDOTAClientMsg_RequestGraphUpdate_default_instance_.Shutdown();
   delete file_level_metadata[20].reflection;
-  _CDOTAClientMsg_SendStatPopup_default_instance_.Shutdown();
+  _CDOTAClientMsg_ChatWheel_default_instance_.Shutdown();
   delete file_level_metadata[21].reflection;
-  _CDOTAClientMsg_DismissAllStatPopups_default_instance_.Shutdown();
+  _CDOTAClientMsg_SendStatPopup_default_instance_.Shutdown();
   delete file_level_metadata[22].reflection;
-  _CDOTAClientMsg_BeginLastHitChallenge_default_instance_.Shutdown();
+  _CDOTAClientMsg_DismissAllStatPopups_default_instance_.Shutdown();
   delete file_level_metadata[23].reflection;
-  _CDOTAClientMsg_UpdateQuickBuyItem_default_instance_.Shutdown();
+  _CDOTAClientMsg_BeginLastHitChallenge_default_instance_.Shutdown();
   delete file_level_metadata[24].reflection;
-  _CDOTAClientMsg_UpdateQuickBuy_default_instance_.Shutdown();
+  _CDOTAClientMsg_UpdateQuickBuyItem_default_instance_.Shutdown();
   delete file_level_metadata[25].reflection;
-  _CDOTAClientMsg_RecordVote_default_instance_.Shutdown();
+  _CDOTAClientMsg_UpdateQuickBuy_default_instance_.Shutdown();
   delete file_level_metadata[26].reflection;
-  _CDOTAClientMsg_WillPurchaseAlert_default_instance_.Shutdown();
+  _CDOTAClientMsg_RecordVote_default_instance_.Shutdown();
   delete file_level_metadata[27].reflection;
-  _CDOTAClientMsg_BuyBackStateAlert_default_instance_.Shutdown();
+  _CDOTAClientMsg_WillPurchaseAlert_default_instance_.Shutdown();
   delete file_level_metadata[28].reflection;
-  _CDOTAClientMsg_QuickBuyAlert_default_instance_.Shutdown();
+  _CDOTAClientMsg_BuyBackStateAlert_default_instance_.Shutdown();
   delete file_level_metadata[29].reflection;
-  _CDOTAClientMsg_PlayerShowCase_default_instance_.Shutdown();
+  _CDOTAClientMsg_QuickBuyAlert_default_instance_.Shutdown();
   delete file_level_metadata[30].reflection;
-  _CDOTAClientMsg_CameraZoomAmount_default_instance_.Shutdown();
+  _CDOTAClientMsg_PlayerShowCase_default_instance_.Shutdown();
   delete file_level_metadata[31].reflection;
-  _CDOTAClientMsg_BroadcasterUsingCameraman_default_instance_.Shutdown();
+  _CDOTAClientMsg_CameraZoomAmount_default_instance_.Shutdown();
   delete file_level_metadata[32].reflection;
-  _CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_default_instance_.Shutdown();
+  _CDOTAClientMsg_BroadcasterUsingCameraman_default_instance_.Shutdown();
   delete file_level_metadata[33].reflection;
-  _CAdditionalEquipSlotClientMsg_default_instance_.Shutdown();
+  _CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_default_instance_.Shutdown();
   delete file_level_metadata[34].reflection;
-  _CDOTAClientMsg_FreeInventory_default_instance_.Shutdown();
+  _CAdditionalEquipSlotClientMsg_default_instance_.Shutdown();
   delete file_level_metadata[35].reflection;
-  _CDOTAClientMsg_FillEmptySlotsWithBots_default_instance_.Shutdown();
+  _CDOTAClientMsg_FreeInventory_default_instance_.Shutdown();
   delete file_level_metadata[36].reflection;
-  _CDOTAClientMsg_HeroStatueLike_default_instance_.Shutdown();
+  _CDOTAClientMsg_FillEmptySlotsWithBots_default_instance_.Shutdown();
   delete file_level_metadata[37].reflection;
-  _CDOTAClientMsg_EventCNY2015Cmd_default_instance_.Shutdown();
+  _CDOTAClientMsg_HeroStatueLike_default_instance_.Shutdown();
   delete file_level_metadata[38].reflection;
-  _CDOTAClientMsg_DemoHero_default_instance_.Shutdown();
+  _CDOTAClientMsg_EventCNY2015Cmd_default_instance_.Shutdown();
   delete file_level_metadata[39].reflection;
-  _CDOTAClientMsg_ChallengeSelect_default_instance_.Shutdown();
+  _CDOTAClientMsg_DemoHero_default_instance_.Shutdown();
   delete file_level_metadata[40].reflection;
-  _CDOTAClientMsg_ChallengeReroll_default_instance_.Shutdown();
+  _CDOTAClientMsg_ChallengeSelect_default_instance_.Shutdown();
   delete file_level_metadata[41].reflection;
-  _CDOTAClientMsg_CoinWager_default_instance_.Shutdown();
+  _CDOTAClientMsg_ChallengeReroll_default_instance_.Shutdown();
   delete file_level_metadata[42].reflection;
-  _CDOTAClientMsg_CoinWagerToken_default_instance_.Shutdown();
+  _CDOTAClientMsg_CoinWager_default_instance_.Shutdown();
   delete file_level_metadata[43].reflection;
-  _CDOTAClientMsg_RankWager_default_instance_.Shutdown();
+  _CDOTAClientMsg_CoinWagerToken_default_instance_.Shutdown();
   delete file_level_metadata[44].reflection;
-  _CDOTAClientMsg_EventPointsTip_default_instance_.Shutdown();
+  _CDOTAClientMsg_RankWager_default_instance_.Shutdown();
   delete file_level_metadata[45].reflection;
-  _CDOTAClientMsg_ExecuteOrders_default_instance_.Shutdown();
+  _CDOTAClientMsg_EventPointsTip_default_instance_.Shutdown();
   delete file_level_metadata[46].reflection;
-  _CDOTAClientMsg_XPAlert_default_instance_.Shutdown();
+  _CDOTAClientMsg_ExecuteOrders_default_instance_.Shutdown();
   delete file_level_metadata[47].reflection;
-  _CDOTAClientMsg_KillcamDamageTaken_default_instance_.Shutdown();
+  _CDOTAClientMsg_XPAlert_default_instance_.Shutdown();
   delete file_level_metadata[48].reflection;
-  _CDOTAClientMsg_MatchMetadata_default_instance_.Shutdown();
+  _CDOTAClientMsg_KillcamDamageTaken_default_instance_.Shutdown();
   delete file_level_metadata[49].reflection;
-  _CDOTAClientMsg_KillMyHero_default_instance_.Shutdown();
+  _CDOTAClientMsg_MatchMetadata_default_instance_.Shutdown();
   delete file_level_metadata[50].reflection;
-  _CDOTAClientMsg_QuestStatus_default_instance_.Shutdown();
+  _CDOTAClientMsg_KillMyHero_default_instance_.Shutdown();
   delete file_level_metadata[51].reflection;
-  _CDOTAClientMsg_ToggleAutoattack_default_instance_.Shutdown();
+  _CDOTAClientMsg_QuestStatus_default_instance_.Shutdown();
   delete file_level_metadata[52].reflection;
-  _CDOTAClientMsg_SpecialAbility_default_instance_.Shutdown();
+  _CDOTAClientMsg_ToggleAutoattack_default_instance_.Shutdown();
   delete file_level_metadata[53].reflection;
-  _CDOTAClientMsg_SetEnemyStartingPosition_default_instance_.Shutdown();
+  _CDOTAClientMsg_SpecialAbility_default_instance_.Shutdown();
   delete file_level_metadata[54].reflection;
-  _CDOTAClientMsg_SetDesiredWardPlacement_default_instance_.Shutdown();
+  _CDOTAClientMsg_SetEnemyStartingPosition_default_instance_.Shutdown();
   delete file_level_metadata[55].reflection;
-  _CDOTAClientMsg_RollDice_default_instance_.Shutdown();
+  _CDOTAClientMsg_SetDesiredWardPlacement_default_instance_.Shutdown();
   delete file_level_metadata[56].reflection;
-  _CDOTAClientMsg_FlipCoin_default_instance_.Shutdown();
+  _CDOTAClientMsg_RollDice_default_instance_.Shutdown();
   delete file_level_metadata[57].reflection;
-  _CDOTAClientMsg_RequestItemSuggestions_default_instance_.Shutdown();
+  _CDOTAClientMsg_FlipCoin_default_instance_.Shutdown();
   delete file_level_metadata[58].reflection;
-  _CDOTAClientMsg_MakeTeamCaptain_default_instance_.Shutdown();
+  _CDOTAClientMsg_RequestItemSuggestions_default_instance_.Shutdown();
   delete file_level_metadata[59].reflection;
+  _CDOTAClientMsg_MakeTeamCaptain_default_instance_.Shutdown();
+  delete file_level_metadata[60].reflection;
+  _CDOTAClientMsg_HelpTipSystemStateChanged_default_instance_.Shutdown();
+  delete file_level_metadata[61].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -1009,6 +1037,7 @@ void TableStruct::InitDefaultsImpl() {
   _CDOTAClientMsg_UnitsAutoAttackMode_default_instance_.DefaultConstruct();
   _CDOTAClientMsg_UnitsAutoAttackAfterSpell_default_instance_.DefaultConstruct();
   _CDOTAClientMsg_TeleportRequiresHalt_default_instance_.DefaultConstruct();
+  _CDOTAClientMsg_ChannelRequiresHalt_default_instance_.DefaultConstruct();
   _CDOTAClientMsg_SearchString_default_instance_.DefaultConstruct();
   _CDOTAClientMsg_Pause_default_instance_.DefaultConstruct();
   _CDOTAClientMsg_ShopViewMode_default_instance_.DefaultConstruct();
@@ -1057,6 +1086,7 @@ void TableStruct::InitDefaultsImpl() {
   _CDOTAClientMsg_FlipCoin_default_instance_.DefaultConstruct();
   _CDOTAClientMsg_RequestItemSuggestions_default_instance_.DefaultConstruct();
   _CDOTAClientMsg_MakeTeamCaptain_default_instance_.DefaultConstruct();
+  _CDOTAClientMsg_HelpTipSystemStateChanged_default_instance_.DefaultConstruct();
   _CDOTAClientMsg_MapPing_default_instance_.get_mutable()->location_ping_ = const_cast< ::proto::dota::CDOTAMsg_LocationPing*>(
       ::proto::dota::CDOTAMsg_LocationPing::internal_default_instance());
   _CDOTAClientMsg_ItemAlert_default_instance_.get_mutable()->item_alert_ = const_cast< ::proto::dota::CDOTAMsg_ItemAlert*>(
@@ -1105,147 +1135,151 @@ void AddDescriptorsImpl() {
       "tType\022\n\n\006NORMAL\020\000\022\014\n\010SUMMONED\020\001\";\n(CDOTA"
       "ClientMsg_UnitsAutoAttackAfterSpell\022\017\n\007e"
       "nabled\030\001 \001(\010\"6\n#CDOTAClientMsg_TeleportR"
-      "equiresHalt\022\017\n\007enabled\030\001 \001(\010\"-\n\033CDOTACli"
-      "entMsg_SearchString\022\016\n\006search\030\001 \001(\t\"\026\n\024C"
-      "DOTAClientMsg_Pause\"+\n\033CDOTAClientMsg_Sh"
-      "opViewMode\022\014\n\004mode\030\001 \001(\r\"P\n\037CDOTAClientM"
-      "sg_SetUnitShareFlag\022\020\n\010playerID\030\001 \001(\r\022\014\n"
-      "\004flag\030\002 \001(\r\022\r\n\005state\030\003 \001(\010\"/\n\032CDOTAClien"
-      "tMsg_SwapRequest\022\021\n\tplayer_id\030\001 \001(\r\".\n\031C"
-      "DOTAClientMsg_SwapAccept\022\021\n\tplayer_id\030\001 "
-      "\001(\r\"M\n\030CDOTAClientMsg_WorldLine\0221\n\tworld"
-      "line\030\001 \001(\0132\036.proto.dota.CDOTAMsg_WorldLi"
-      "ne\"#\n!CDOTAClientMsg_RequestGraphUpdate\""
-      "J\n\030CDOTAClientMsg_ChatWheel\022\027\n\017chat_mess"
-      "age_id\030\001 \001(\r\022\025\n\rparam_hero_id\030\002 \001(\r\"U\n\034C"
-      "DOTAClientMsg_SendStatPopup\0225\n\tstatpopup"
-      "\030\001 \001(\0132\".proto.dota.CDOTAMsg_SendStatPop"
-      "up\"g\n#CDOTAClientMsg_DismissAllStatPopup"
-      "s\022@\n\rdismissallmsg\030\001 \001(\0132).proto.dota.CD"
-      "OTAMsg_DismissAllStatPopups\"S\n$CDOTAClie"
-      "ntMsg_BeginLastHitChallenge\022\023\n\013chosen_la"
-      "ne\030\001 \001(\r\022\026\n\016helper_enabled\030\002 \001(\010\"K\n!CDOT"
-      "AClientMsg_UpdateQuickBuyItem\022\021\n\titem_ty"
-      "pe\030\001 \001(\005\022\023\n\013purchasable\030\002 \001(\010\"]\n\035CDOTACl"
-      "ientMsg_UpdateQuickBuy\022<\n\005items\030\001 \003(\0132-."
-      "proto.dota.CDOTAClientMsg_UpdateQuickBuy"
-      "Item\"1\n\031CDOTAClientMsg_RecordVote\022\024\n\014cho"
-      "ice_index\030\001 \001(\005\"h\n CDOTAClientMsg_WillPu"
-      "rchaseAlert\022\016\n\006itemid\030\001 \001(\005\022\026\n\016gold_rema"
-      "ining\030\002 \001(\r\022\034\n\024suggestion_player_id\030\003 \001("
-      "\005\"\"\n CDOTAClientMsg_BuyBackStateAlert\"E\n"
-      "\034CDOTAClientMsg_QuickBuyAlert\022\016\n\006itemid\030"
-      "\001 \001(\005\022\025\n\rgold_required\030\002 \001(\005\"1\n\035CDOTACli"
-      "entMsg_PlayerShowCase\022\020\n\010showcase\030\001 \001(\010\""
-      "6\n\037CDOTAClientMsg_CameraZoomAmount\022\023\n\013zo"
-      "om_amount\030\001 \001(\002\"=\n(CDOTAClientMsg_Broadc"
-      "asterUsingCameraman\022\021\n\tcameraman\030\001 \001(\010\"H"
-      "\n5CDOTAClientMsg_BroadcasterUsingAssiste"
-      "dCameraOperator\022\017\n\007enabled\030\001 \001(\010\"U\n\035CAdd"
-      "itionalEquipSlotClientMsg\022\020\n\010class_id\030\001 "
-      "\001(\r\022\017\n\007slot_id\030\002 \001(\r\022\021\n\tdef_index\030\003 \001(\r\""
-      "Y\n\034CDOTAClientMsg_FreeInventory\0229\n\006equip"
-      "s\030\001 \003(\0132).proto.dota.CAdditionalEquipSlo"
-      "tClientMsg\"=\n%CDOTAClientMsg_FillEmptySl"
-      "otsWithBots\022\024\n\014fillwithbots\030\001 \001(\010\"8\n\035CDO"
-      "TAClientMsg_HeroStatueLike\022\027\n\017owner_play"
-      "er_id\030\001 \001(\r\".\n\036CDOTAClientMsg_EventCNY20"
-      "15Cmd\022\014\n\004data\030\001 \001(\014\"\236\001\n\027CDOTAClientMsg_D"
-      "emoHero\022\017\n\007hero_id\030\001 \001(\005\022\030\n\020hero_id_to_s"
-      "pawn\030\002 \001(\005\022\021\n\titem_defs\030\003 \003(\r\022\020\n\010item_id"
-      "s\030\004 \003(\004\022\023\n\013style_index\030\005 \001(\r\022\036\n\026keep_exi"
-      "sting_demohero\030\006 \001(\010\"X\n\036CDOTAClientMsg_C"
-      "hallengeSelect\022\020\n\010event_id\030\001 \001(\r\022\017\n\007slot"
-      "_id\030\002 \001(\r\022\023\n\013sequence_id\030\003 \001(\r\"X\n\036CDOTAC"
-      "lientMsg_ChallengeReroll\022\020\n\010event_id\030\001 \001"
-      "(\r\022\017\n\007slot_id\030\002 \001(\r\022\023\n\013sequence_id\030\003 \001(\r"
-      "\"0\n\030CDOTAClientMsg_CoinWager\022\024\n\014wager_am"
-      "ount\030\001 \001(\r\"<\n\035CDOTAClientMsg_CoinWagerTo"
-      "ken\022\033\n\023wager_token_item_id\030\001 \001(\004\"2\n\030CDOT"
-      "AClientMsg_RankWager\022\026\n\016announce_wager\030\001"
-      " \001(\010\"<\n\035CDOTAClientMsg_EventPointsTip\022\033\n"
-      "\023recipient_player_id\030\001 \001(\r\"N\n\034CDOTAClien"
-      "tMsg_ExecuteOrders\022.\n\006orders\030\001 \003(\0132\036.pro"
-      "to.dota.CDOTAMsg_UnitOrder\"G\n\026CDOTAClien"
-      "tMsg_XPAlert\022\027\n\017target_entindex\030\001 \001(\r\022\024\n"
-      "\014damage_taken\030\002 \001(\r\"\237\001\n!CDOTAClientMsg_K"
-      "illcamDamageTaken\022\027\n\017target_entindex\030\001 \001"
-      "(\r\022\024\n\014damage_taken\030\002 \001(\r\022\021\n\titem_type\030\003 "
-      "\001(\r\022\017\n\007item_id\030\004 \001(\r\022\021\n\thero_name\030\005 \001(\t\022"
-      "\024\n\014damage_color\030\006 \001(\t\"B\n\034CDOTAClientMsg_"
-      "MatchMetadata\022\020\n\010match_id\030\001 \001(\004\022\020\n\010metad"
-      "ata\030\002 \001(\014\"\033\n\031CDOTAClientMsg_KillMyHero\"\233"
-      "\001\n\032CDOTAClientMsg_QuestStatus\022\020\n\010quest_i"
-      "d\030\001 \001(\r\022\024\n\014challenge_id\030\002 \001(\r\022\020\n\010progres"
-      "s\030\003 \001(\r\022\014\n\004goal\030\004 \001(\r\022\r\n\005query\030\005 \001(\r\022\025\n\r"
-      "fail_gametime\030\006 \001(\002\022\017\n\007item_id\030\007 \001(\r\"E\n\037"
-      "CDOTAClientMsg_ToggleAutoattack\022\014\n\004mode\030"
-      "\001 \001(\005\022\024\n\014show_message\030\002 \001(\010\"O\n\035CDOTAClie"
-      "ntMsg_SpecialAbility\022\025\n\rability_index\030\001 "
-      "\001(\r\022\027\n\017target_entindex\030\002 \001(\r\"c\n\'CDOTACli"
-      "entMsg_SetEnemyStartingPosition\022\027\n\017enemy"
-      "_player_id\030\001 \001(\r\022\037\n\027enemy_starting_posit"
-      "ion\030\002 \001(\r\"\\\n&CDOTAClientMsg_SetDesiredWa"
-      "rdPlacement\022\022\n\nward_index\030\001 \001(\r\022\016\n\006ward_"
-      "x\030\002 \001(\002\022\016\n\006ward_y\030\003 \001(\002\"S\n\027CDOTAClientMs"
-      "g_RollDice\022\024\n\014channel_type\030\001 \001(\r\022\020\n\010roll"
-      "_min\030\002 \001(\r\022\020\n\010roll_max\030\003 \001(\r\"/\n\027CDOTACli"
-      "entMsg_FlipCoin\022\024\n\014channel_type\030\001 \001(\r\"\'\n"
-      "%CDOTAClientMsg_RequestItemSuggestions\"3"
-      "\n\036CDOTAClientMsg_MakeTeamCaptain\022\021\n\tplay"
-      "er_id\030\001 \001(\r*\225\017\n\023EDotaClientMessages\022\024\n\017D"
-      "OTA_CM_MapLine\020\255\002\022\030\n\023DOTA_CM_AspectRatio"
-      "\020\256\002\022\024\n\017DOTA_CM_MapPing\020\257\002\022\034\n\027DOTA_CM_Uni"
-      "tsAutoAttack\020\260\002\022\031\n\024DOTA_CM_SearchString\020"
-      "\263\002\022\022\n\rDOTA_CM_Pause\020\264\002\022\031\n\024DOTA_CM_ShopVi"
-      "ewMode\020\265\002\022\035\n\030DOTA_CM_SetUnitShareFlag\020\266\002"
-      "\022\030\n\023DOTA_CM_SwapRequest\020\267\002\022\027\n\022DOTA_CM_Sw"
-      "apAccept\020\270\002\022\026\n\021DOTA_CM_WorldLine\020\271\002\022\037\n\032D"
-      "OTA_CM_RequestGraphUpdate\020\272\002\022\026\n\021DOTA_CM_"
-      "ItemAlert\020\273\002\022\026\n\021DOTA_CM_ChatWheel\020\274\002\022\032\n\025"
-      "DOTA_CM_SendStatPopup\020\275\002\022\"\n\035DOTA_CM_Begi"
-      "nLastHitChallenge\020\276\002\022\033\n\026DOTA_CM_UpdateQu"
-      "ickBuy\020\277\002\022\036\n\031DOTA_CM_UpdateCoachListen\020\300"
-      "\002\022\031\n\024DOTA_CM_CoachHUDPing\020\301\002\022\027\n\022DOTA_CM_"
-      "RecordVote\020\302\002\022&\n!DOTA_CM_UnitsAutoAttack"
-      "AfterSpell\020\303\002\022\036\n\031DOTA_CM_WillPurchaseAle"
-      "rt\020\304\002\022\033\n\026DOTA_CM_PlayerShowCase\020\305\002\022!\n\034DO"
-      "TA_CM_TeleportRequiresHalt\020\306\002\022\035\n\030DOTA_CM"
-      "_CameraZoomAmount\020\307\002\022%\n DOTA_CM_Broadcas"
-      "terUsingCamerman\020\310\002\0223\n.DOTA_CM_Broadcast"
-      "erUsingAssistedCameraOperator\020\311\002\022\033\n\026DOTA"
-      "_CM_EnemyItemAlert\020\312\002\022\032\n\025DOTA_CM_FreeInv"
-      "entory\020\313\002\022\036\n\031DOTA_CM_BuyBackStateAlert\020\314"
-      "\002\022\032\n\025DOTA_CM_QuickBuyAlert\020\315\002\022\033\n\026DOTA_CM"
-      "_HeroStatueLike\020\316\002\022\032\n\025DOTA_CM_ModifierAl"
-      "ert\020\317\002\022\037\n\032DOTA_CM_TeamShowcaseEditor\020\320\002\022"
-      "\030\n\023DOTA_CM_HPManaAlert\020\321\002\022\027\n\022DOTA_CM_Gly"
-      "phAlert\020\322\002\022#\n\036DOTA_CM_TeamShowcaseClient"
-      "Data\020\323\002\022\035\n\030DOTA_CM_PlayTeamShowcase\020\324\002\022\034"
-      "\n\027DOTA_CM_EventCNY2015Cmd\020\325\002\022#\n\036DOTA_CM_"
-      "FillEmptySlotsWithBots\020\326\002\022\025\n\020DOTA_CM_Dem"
-      "oHero\020\327\002\022$\n\037DOTA_CM_AbilityLearnModeTogg"
-      "led\020\330\002\022\034\n\027DOTA_CM_AbilityStartUse\020\331\002\022\034\n\027"
-      "DOTA_CM_ChallengeSelect\020\332\002\022\034\n\027DOTA_CM_Ch"
-      "allengeReroll\020\333\002\022\030\n\023DOTA_CM_ClickedBuff\020"
-      "\334\002\022\026\n\021DOTA_CM_CoinWager\020\335\002\022\032\n\025DOTA_CM_Ex"
-      "ecuteOrders\020\336\002\022\024\n\017DOTA_CM_XPAlert\020\337\002\022\033\n\026"
-      "DOTA_CM_EventPointsTip\020\341\002\022\032\n\025DOTA_CM_Mat"
-      "chMetadata\020\342\002\022\027\n\022DOTA_CM_KillMyHero\020\343\002\022\030"
-      "\n\023DOTA_CM_QuestStatus\020\344\002\022\035\n\030DOTA_CM_Togg"
-      "leAutoattack\020\345\002\022\033\n\026DOTA_CM_SpecialAbilit"
-      "y\020\346\002\022\037\n\032DOTA_CM_KillcamDamageTaken\020\347\002\022%\n"
-      " DOTA_CM_SetEnemyStartingPosition\020\350\002\022$\n\037"
-      "DOTA_CM_SetDesiredWardPlacement\020\351\002\022\025\n\020DO"
-      "TA_CM_RollDice\020\352\002\022\025\n\020DOTA_CM_FlipCoin\020\353\002"
-      "\022#\n\036DOTA_CM_RequestItemSuggestions\020\354\002\022\034\n"
-      "\027DOTA_CM_MakeTeamCaptain\020\355\002\022\033\n\026DOTA_CM_C"
-      "oinWagerToken\020\356\002\022\026\n\021DOTA_CM_RankWager\020\357\002"
-      "\022!\n\034DOTA_CM_DismissAllStatPopups\020\360\002B\005H\001\200"
-      "\001\000"
+      "equiresHalt\022\017\n\007enabled\030\001 \001(\010\"5\n\"CDOTACli"
+      "entMsg_ChannelRequiresHalt\022\017\n\007enabled\030\001 "
+      "\001(\010\"-\n\033CDOTAClientMsg_SearchString\022\016\n\006se"
+      "arch\030\001 \001(\t\"\026\n\024CDOTAClientMsg_Pause\"+\n\033CD"
+      "OTAClientMsg_ShopViewMode\022\014\n\004mode\030\001 \001(\r\""
+      "P\n\037CDOTAClientMsg_SetUnitShareFlag\022\020\n\010pl"
+      "ayerID\030\001 \001(\r\022\014\n\004flag\030\002 \001(\r\022\r\n\005state\030\003 \001("
+      "\010\"/\n\032CDOTAClientMsg_SwapRequest\022\021\n\tplaye"
+      "r_id\030\001 \001(\r\".\n\031CDOTAClientMsg_SwapAccept\022"
+      "\021\n\tplayer_id\030\001 \001(\r\"M\n\030CDOTAClientMsg_Wor"
+      "ldLine\0221\n\tworldline\030\001 \001(\0132\036.proto.dota.C"
+      "DOTAMsg_WorldLine\"#\n!CDOTAClientMsg_Requ"
+      "estGraphUpdate\"J\n\030CDOTAClientMsg_ChatWhe"
+      "el\022\027\n\017chat_message_id\030\001 \001(\r\022\025\n\rparam_her"
+      "o_id\030\002 \001(\r\"U\n\034CDOTAClientMsg_SendStatPop"
+      "up\0225\n\tstatpopup\030\001 \001(\0132\".proto.dota.CDOTA"
+      "Msg_SendStatPopup\"g\n#CDOTAClientMsg_Dism"
+      "issAllStatPopups\022@\n\rdismissallmsg\030\001 \001(\0132"
+      ").proto.dota.CDOTAMsg_DismissAllStatPopu"
+      "ps\"S\n$CDOTAClientMsg_BeginLastHitChallen"
+      "ge\022\023\n\013chosen_lane\030\001 \001(\r\022\026\n\016helper_enable"
+      "d\030\002 \001(\010\"K\n!CDOTAClientMsg_UpdateQuickBuy"
+      "Item\022\021\n\titem_type\030\001 \001(\005\022\023\n\013purchasable\030\002"
+      " \001(\010\"]\n\035CDOTAClientMsg_UpdateQuickBuy\022<\n"
+      "\005items\030\001 \003(\0132-.proto.dota.CDOTAClientMsg"
+      "_UpdateQuickBuyItem\"1\n\031CDOTAClientMsg_Re"
+      "cordVote\022\024\n\014choice_index\030\001 \001(\005\"h\n CDOTAC"
+      "lientMsg_WillPurchaseAlert\022\016\n\006itemid\030\001 \001"
+      "(\005\022\026\n\016gold_remaining\030\002 \001(\r\022\034\n\024suggestion"
+      "_player_id\030\003 \001(\005\"\"\n CDOTAClientMsg_BuyBa"
+      "ckStateAlert\"E\n\034CDOTAClientMsg_QuickBuyA"
+      "lert\022\016\n\006itemid\030\001 \001(\005\022\025\n\rgold_required\030\002 "
+      "\001(\005\"1\n\035CDOTAClientMsg_PlayerShowCase\022\020\n\010"
+      "showcase\030\001 \001(\010\"6\n\037CDOTAClientMsg_CameraZ"
+      "oomAmount\022\023\n\013zoom_amount\030\001 \001(\002\"=\n(CDOTAC"
+      "lientMsg_BroadcasterUsingCameraman\022\021\n\tca"
+      "meraman\030\001 \001(\010\"H\n5CDOTAClientMsg_Broadcas"
+      "terUsingAssistedCameraOperator\022\017\n\007enable"
+      "d\030\001 \001(\010\"U\n\035CAdditionalEquipSlotClientMsg"
+      "\022\020\n\010class_id\030\001 \001(\r\022\017\n\007slot_id\030\002 \001(\r\022\021\n\td"
+      "ef_index\030\003 \001(\r\"Y\n\034CDOTAClientMsg_FreeInv"
+      "entory\0229\n\006equips\030\001 \003(\0132).proto.dota.CAdd"
+      "itionalEquipSlotClientMsg\"=\n%CDOTAClient"
+      "Msg_FillEmptySlotsWithBots\022\024\n\014fillwithbo"
+      "ts\030\001 \001(\010\"8\n\035CDOTAClientMsg_HeroStatueLik"
+      "e\022\027\n\017owner_player_id\030\001 \001(\r\".\n\036CDOTAClien"
+      "tMsg_EventCNY2015Cmd\022\014\n\004data\030\001 \001(\014\"\236\001\n\027C"
+      "DOTAClientMsg_DemoHero\022\017\n\007hero_id\030\001 \001(\005\022"
+      "\030\n\020hero_id_to_spawn\030\002 \001(\005\022\021\n\titem_defs\030\003"
+      " \003(\r\022\020\n\010item_ids\030\004 \003(\004\022\023\n\013style_index\030\005 "
+      "\001(\r\022\036\n\026keep_existing_demohero\030\006 \001(\010\"X\n\036C"
+      "DOTAClientMsg_ChallengeSelect\022\020\n\010event_i"
+      "d\030\001 \001(\r\022\017\n\007slot_id\030\002 \001(\r\022\023\n\013sequence_id\030"
+      "\003 \001(\r\"X\n\036CDOTAClientMsg_ChallengeReroll\022"
+      "\020\n\010event_id\030\001 \001(\r\022\017\n\007slot_id\030\002 \001(\r\022\023\n\013se"
+      "quence_id\030\003 \001(\r\"0\n\030CDOTAClientMsg_CoinWa"
+      "ger\022\024\n\014wager_amount\030\001 \001(\r\"<\n\035CDOTAClient"
+      "Msg_CoinWagerToken\022\033\n\023wager_token_item_i"
+      "d\030\001 \001(\004\"2\n\030CDOTAClientMsg_RankWager\022\026\n\016a"
+      "nnounce_wager\030\001 \001(\010\"<\n\035CDOTAClientMsg_Ev"
+      "entPointsTip\022\033\n\023recipient_player_id\030\001 \001("
+      "\r\"N\n\034CDOTAClientMsg_ExecuteOrders\022.\n\006ord"
+      "ers\030\001 \003(\0132\036.proto.dota.CDOTAMsg_UnitOrde"
+      "r\"G\n\026CDOTAClientMsg_XPAlert\022\027\n\017target_en"
+      "tindex\030\001 \001(\r\022\024\n\014damage_taken\030\002 \001(\r\"\237\001\n!C"
+      "DOTAClientMsg_KillcamDamageTaken\022\027\n\017targ"
+      "et_entindex\030\001 \001(\r\022\024\n\014damage_taken\030\002 \001(\r\022"
+      "\021\n\titem_type\030\003 \001(\r\022\017\n\007item_id\030\004 \001(\r\022\021\n\th"
+      "ero_name\030\005 \001(\t\022\024\n\014damage_color\030\006 \001(\t\"B\n\034"
+      "CDOTAClientMsg_MatchMetadata\022\020\n\010match_id"
+      "\030\001 \001(\004\022\020\n\010metadata\030\002 \001(\014\"\033\n\031CDOTAClientM"
+      "sg_KillMyHero\"\233\001\n\032CDOTAClientMsg_QuestSt"
+      "atus\022\020\n\010quest_id\030\001 \001(\r\022\024\n\014challenge_id\030\002"
+      " \001(\r\022\020\n\010progress\030\003 \001(\r\022\014\n\004goal\030\004 \001(\r\022\r\n\005"
+      "query\030\005 \001(\r\022\025\n\rfail_gametime\030\006 \001(\002\022\017\n\007it"
+      "em_id\030\007 \001(\r\"E\n\037CDOTAClientMsg_ToggleAuto"
+      "attack\022\014\n\004mode\030\001 \001(\005\022\024\n\014show_message\030\002 \001"
+      "(\010\"O\n\035CDOTAClientMsg_SpecialAbility\022\025\n\ra"
+      "bility_index\030\001 \001(\r\022\027\n\017target_entindex\030\002 "
+      "\001(\r\"c\n\'CDOTAClientMsg_SetEnemyStartingPo"
+      "sition\022\027\n\017enemy_player_id\030\001 \001(\r\022\037\n\027enemy"
+      "_starting_position\030\002 \001(\r\"\\\n&CDOTAClientM"
+      "sg_SetDesiredWardPlacement\022\022\n\nward_index"
+      "\030\001 \001(\r\022\016\n\006ward_x\030\002 \001(\002\022\016\n\006ward_y\030\003 \001(\002\"S"
+      "\n\027CDOTAClientMsg_RollDice\022\024\n\014channel_typ"
+      "e\030\001 \001(\r\022\020\n\010roll_min\030\002 \001(\r\022\020\n\010roll_max\030\003 "
+      "\001(\r\"/\n\027CDOTAClientMsg_FlipCoin\022\024\n\014channe"
+      "l_type\030\001 \001(\r\"\'\n%CDOTAClientMsg_RequestIt"
+      "emSuggestions\"3\n\036CDOTAClientMsg_MakeTeam"
+      "Captain\022\021\n\tplayer_id\030\001 \001(\r\"A\n(CDOTAClien"
+      "tMsg_HelpTipSystemStateChanged\022\025\n\rtip_di"
+      "splayed\030\001 \001(\010*\337\017\n\023EDotaClientMessages\022\024\n"
+      "\017DOTA_CM_MapLine\020\255\002\022\030\n\023DOTA_CM_AspectRat"
+      "io\020\256\002\022\024\n\017DOTA_CM_MapPing\020\257\002\022\034\n\027DOTA_CM_U"
+      "nitsAutoAttack\020\260\002\022\031\n\024DOTA_CM_SearchStrin"
+      "g\020\263\002\022\022\n\rDOTA_CM_Pause\020\264\002\022\031\n\024DOTA_CM_Shop"
+      "ViewMode\020\265\002\022\035\n\030DOTA_CM_SetUnitShareFlag\020"
+      "\266\002\022\030\n\023DOTA_CM_SwapRequest\020\267\002\022\027\n\022DOTA_CM_"
+      "SwapAccept\020\270\002\022\026\n\021DOTA_CM_WorldLine\020\271\002\022\037\n"
+      "\032DOTA_CM_RequestGraphUpdate\020\272\002\022\026\n\021DOTA_C"
+      "M_ItemAlert\020\273\002\022\026\n\021DOTA_CM_ChatWheel\020\274\002\022\032"
+      "\n\025DOTA_CM_SendStatPopup\020\275\002\022\"\n\035DOTA_CM_Be"
+      "ginLastHitChallenge\020\276\002\022\033\n\026DOTA_CM_Update"
+      "QuickBuy\020\277\002\022\036\n\031DOTA_CM_UpdateCoachListen"
+      "\020\300\002\022\031\n\024DOTA_CM_CoachHUDPing\020\301\002\022\027\n\022DOTA_C"
+      "M_RecordVote\020\302\002\022&\n!DOTA_CM_UnitsAutoAtta"
+      "ckAfterSpell\020\303\002\022\036\n\031DOTA_CM_WillPurchaseA"
+      "lert\020\304\002\022\033\n\026DOTA_CM_PlayerShowCase\020\305\002\022!\n\034"
+      "DOTA_CM_TeleportRequiresHalt\020\306\002\022\035\n\030DOTA_"
+      "CM_CameraZoomAmount\020\307\002\022%\n DOTA_CM_Broadc"
+      "asterUsingCamerman\020\310\002\0223\n.DOTA_CM_Broadca"
+      "sterUsingAssistedCameraOperator\020\311\002\022\033\n\026DO"
+      "TA_CM_EnemyItemAlert\020\312\002\022\032\n\025DOTA_CM_FreeI"
+      "nventory\020\313\002\022\036\n\031DOTA_CM_BuyBackStateAlert"
+      "\020\314\002\022\032\n\025DOTA_CM_QuickBuyAlert\020\315\002\022\033\n\026DOTA_"
+      "CM_HeroStatueLike\020\316\002\022\032\n\025DOTA_CM_Modifier"
+      "Alert\020\317\002\022\037\n\032DOTA_CM_TeamShowcaseEditor\020\320"
+      "\002\022\030\n\023DOTA_CM_HPManaAlert\020\321\002\022\027\n\022DOTA_CM_G"
+      "lyphAlert\020\322\002\022#\n\036DOTA_CM_TeamShowcaseClie"
+      "ntData\020\323\002\022\035\n\030DOTA_CM_PlayTeamShowcase\020\324\002"
+      "\022\034\n\027DOTA_CM_EventCNY2015Cmd\020\325\002\022#\n\036DOTA_C"
+      "M_FillEmptySlotsWithBots\020\326\002\022\025\n\020DOTA_CM_D"
+      "emoHero\020\327\002\022$\n\037DOTA_CM_AbilityLearnModeTo"
+      "ggled\020\330\002\022\034\n\027DOTA_CM_AbilityStartUse\020\331\002\022\034"
+      "\n\027DOTA_CM_ChallengeSelect\020\332\002\022\034\n\027DOTA_CM_"
+      "ChallengeReroll\020\333\002\022\030\n\023DOTA_CM_ClickedBuf"
+      "f\020\334\002\022\026\n\021DOTA_CM_CoinWager\020\335\002\022\032\n\025DOTA_CM_"
+      "ExecuteOrders\020\336\002\022\024\n\017DOTA_CM_XPAlert\020\337\002\022\033"
+      "\n\026DOTA_CM_EventPointsTip\020\341\002\022\032\n\025DOTA_CM_M"
+      "atchMetadata\020\342\002\022\027\n\022DOTA_CM_KillMyHero\020\343\002"
+      "\022\030\n\023DOTA_CM_QuestStatus\020\344\002\022\035\n\030DOTA_CM_To"
+      "ggleAutoattack\020\345\002\022\033\n\026DOTA_CM_SpecialAbil"
+      "ity\020\346\002\022\037\n\032DOTA_CM_KillcamDamageTaken\020\347\002\022"
+      "%\n DOTA_CM_SetEnemyStartingPosition\020\350\002\022$"
+      "\n\037DOTA_CM_SetDesiredWardPlacement\020\351\002\022\025\n\020"
+      "DOTA_CM_RollDice\020\352\002\022\025\n\020DOTA_CM_FlipCoin\020"
+      "\353\002\022#\n\036DOTA_CM_RequestItemSuggestions\020\354\002\022"
+      "\034\n\027DOTA_CM_MakeTeamCaptain\020\355\002\022\033\n\026DOTA_CM"
+      "_CoinWagerToken\020\356\002\022\026\n\021DOTA_CM_RankWager\020"
+      "\357\002\022!\n\034DOTA_CM_DismissAllStatPopups\020\360\002\022&\n"
+      "!DOTA_CM_HelpTipSystemStateChanged\020\361\002\022 \n"
+      "\033DOTA_CM_ChannelRequiresHalt\020\362\002B\005H\001\200\001\000"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 6562);
+      descriptor, 6758);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "dota_clientmessages.proto", &protobuf_RegisterTypes);
   ::proto::dota::protobuf_dota_5fcommonmessages_2eproto::AddDescriptors();
@@ -1382,6 +1416,8 @@ bool EDotaClientMessages_IsValid(int value) {
     case 366:
     case 367:
     case 368:
+    case 369:
+    case 370:
       return true;
     default:
       return false;
@@ -4883,6 +4919,269 @@ void CDOTAClientMsg_TeleportRequiresHalt::set_enabled(bool value) {
   set_has_enabled();
   enabled_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CDOTAClientMsg_TeleportRequiresHalt.enabled)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CDOTAClientMsg_ChannelRequiresHalt::kEnabledFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CDOTAClientMsg_ChannelRequiresHalt::CDOTAClientMsg_ChannelRequiresHalt()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_dota_5fclientmessages_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+}
+CDOTAClientMsg_ChannelRequiresHalt::CDOTAClientMsg_ChannelRequiresHalt(const CDOTAClientMsg_ChannelRequiresHalt& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  enabled_ = from.enabled_;
+  // @@protoc_insertion_point(copy_constructor:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+}
+
+void CDOTAClientMsg_ChannelRequiresHalt::SharedCtor() {
+  _cached_size_ = 0;
+  enabled_ = false;
+}
+
+CDOTAClientMsg_ChannelRequiresHalt::~CDOTAClientMsg_ChannelRequiresHalt() {
+  // @@protoc_insertion_point(destructor:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  SharedDtor();
+}
+
+void CDOTAClientMsg_ChannelRequiresHalt::SharedDtor() {
+}
+
+void CDOTAClientMsg_ChannelRequiresHalt::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CDOTAClientMsg_ChannelRequiresHalt::descriptor() {
+  protobuf_dota_5fclientmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_dota_5fclientmessages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CDOTAClientMsg_ChannelRequiresHalt& CDOTAClientMsg_ChannelRequiresHalt::default_instance() {
+  protobuf_dota_5fclientmessages_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CDOTAClientMsg_ChannelRequiresHalt* CDOTAClientMsg_ChannelRequiresHalt::New(::google::protobuf::Arena* arena) const {
+  CDOTAClientMsg_ChannelRequiresHalt* n = new CDOTAClientMsg_ChannelRequiresHalt;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CDOTAClientMsg_ChannelRequiresHalt::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  enabled_ = false;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CDOTAClientMsg_ChannelRequiresHalt::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional bool enabled = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_enabled();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &enabled_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  return false;
+#undef DO_
+}
+
+void CDOTAClientMsg_ChannelRequiresHalt::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional bool enabled = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->enabled(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+}
+
+::google::protobuf::uint8* CDOTAClientMsg_ChannelRequiresHalt::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional bool enabled = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->enabled(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  return target;
+}
+
+size_t CDOTAClientMsg_ChannelRequiresHalt::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  // optional bool enabled = 1;
+  if (has_enabled()) {
+    total_size += 1 + 1;
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CDOTAClientMsg_ChannelRequiresHalt::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CDOTAClientMsg_ChannelRequiresHalt* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CDOTAClientMsg_ChannelRequiresHalt>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+    MergeFrom(*source);
+  }
+}
+
+void CDOTAClientMsg_ChannelRequiresHalt::MergeFrom(const CDOTAClientMsg_ChannelRequiresHalt& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_enabled()) {
+    set_enabled(from.enabled());
+  }
+}
+
+void CDOTAClientMsg_ChannelRequiresHalt::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CDOTAClientMsg_ChannelRequiresHalt::CopyFrom(const CDOTAClientMsg_ChannelRequiresHalt& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.dota.CDOTAClientMsg_ChannelRequiresHalt)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CDOTAClientMsg_ChannelRequiresHalt::IsInitialized() const {
+  return true;
+}
+
+void CDOTAClientMsg_ChannelRequiresHalt::Swap(CDOTAClientMsg_ChannelRequiresHalt* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CDOTAClientMsg_ChannelRequiresHalt::InternalSwap(CDOTAClientMsg_ChannelRequiresHalt* other) {
+  std::swap(enabled_, other->enabled_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CDOTAClientMsg_ChannelRequiresHalt::GetMetadata() const {
+  protobuf_dota_5fclientmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_dota_5fclientmessages_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CDOTAClientMsg_ChannelRequiresHalt
+
+// optional bool enabled = 1;
+bool CDOTAClientMsg_ChannelRequiresHalt::has_enabled() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CDOTAClientMsg_ChannelRequiresHalt::set_has_enabled() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CDOTAClientMsg_ChannelRequiresHalt::clear_has_enabled() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CDOTAClientMsg_ChannelRequiresHalt::clear_enabled() {
+  enabled_ = false;
+  clear_has_enabled();
+}
+bool CDOTAClientMsg_ChannelRequiresHalt::enabled() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAClientMsg_ChannelRequiresHalt.enabled)
+  return enabled_;
+}
+void CDOTAClientMsg_ChannelRequiresHalt::set_enabled(bool value) {
+  set_has_enabled();
+  enabled_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAClientMsg_ChannelRequiresHalt.enabled)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -20212,6 +20511,269 @@ void CDOTAClientMsg_MakeTeamCaptain::set_player_id(::google::protobuf::uint32 va
   set_has_player_id();
   player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CDOTAClientMsg_MakeTeamCaptain.player_id)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CDOTAClientMsg_HelpTipSystemStateChanged::kTipDisplayedFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CDOTAClientMsg_HelpTipSystemStateChanged::CDOTAClientMsg_HelpTipSystemStateChanged()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_dota_5fclientmessages_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+}
+CDOTAClientMsg_HelpTipSystemStateChanged::CDOTAClientMsg_HelpTipSystemStateChanged(const CDOTAClientMsg_HelpTipSystemStateChanged& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  tip_displayed_ = from.tip_displayed_;
+  // @@protoc_insertion_point(copy_constructor:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+}
+
+void CDOTAClientMsg_HelpTipSystemStateChanged::SharedCtor() {
+  _cached_size_ = 0;
+  tip_displayed_ = false;
+}
+
+CDOTAClientMsg_HelpTipSystemStateChanged::~CDOTAClientMsg_HelpTipSystemStateChanged() {
+  // @@protoc_insertion_point(destructor:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  SharedDtor();
+}
+
+void CDOTAClientMsg_HelpTipSystemStateChanged::SharedDtor() {
+}
+
+void CDOTAClientMsg_HelpTipSystemStateChanged::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CDOTAClientMsg_HelpTipSystemStateChanged::descriptor() {
+  protobuf_dota_5fclientmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_dota_5fclientmessages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CDOTAClientMsg_HelpTipSystemStateChanged& CDOTAClientMsg_HelpTipSystemStateChanged::default_instance() {
+  protobuf_dota_5fclientmessages_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CDOTAClientMsg_HelpTipSystemStateChanged* CDOTAClientMsg_HelpTipSystemStateChanged::New(::google::protobuf::Arena* arena) const {
+  CDOTAClientMsg_HelpTipSystemStateChanged* n = new CDOTAClientMsg_HelpTipSystemStateChanged;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CDOTAClientMsg_HelpTipSystemStateChanged::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  tip_displayed_ = false;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CDOTAClientMsg_HelpTipSystemStateChanged::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional bool tip_displayed = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
+          set_has_tip_displayed();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tip_displayed_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  return false;
+#undef DO_
+}
+
+void CDOTAClientMsg_HelpTipSystemStateChanged::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional bool tip_displayed = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->tip_displayed(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+}
+
+::google::protobuf::uint8* CDOTAClientMsg_HelpTipSystemStateChanged::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional bool tip_displayed = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->tip_displayed(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  return target;
+}
+
+size_t CDOTAClientMsg_HelpTipSystemStateChanged::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  // optional bool tip_displayed = 1;
+  if (has_tip_displayed()) {
+    total_size += 1 + 1;
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CDOTAClientMsg_HelpTipSystemStateChanged::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CDOTAClientMsg_HelpTipSystemStateChanged* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CDOTAClientMsg_HelpTipSystemStateChanged>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+    MergeFrom(*source);
+  }
+}
+
+void CDOTAClientMsg_HelpTipSystemStateChanged::MergeFrom(const CDOTAClientMsg_HelpTipSystemStateChanged& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_tip_displayed()) {
+    set_tip_displayed(from.tip_displayed());
+  }
+}
+
+void CDOTAClientMsg_HelpTipSystemStateChanged::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CDOTAClientMsg_HelpTipSystemStateChanged::CopyFrom(const CDOTAClientMsg_HelpTipSystemStateChanged& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CDOTAClientMsg_HelpTipSystemStateChanged::IsInitialized() const {
+  return true;
+}
+
+void CDOTAClientMsg_HelpTipSystemStateChanged::Swap(CDOTAClientMsg_HelpTipSystemStateChanged* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CDOTAClientMsg_HelpTipSystemStateChanged::InternalSwap(CDOTAClientMsg_HelpTipSystemStateChanged* other) {
+  std::swap(tip_displayed_, other->tip_displayed_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CDOTAClientMsg_HelpTipSystemStateChanged::GetMetadata() const {
+  protobuf_dota_5fclientmessages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_dota_5fclientmessages_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CDOTAClientMsg_HelpTipSystemStateChanged
+
+// optional bool tip_displayed = 1;
+bool CDOTAClientMsg_HelpTipSystemStateChanged::has_tip_displayed() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void CDOTAClientMsg_HelpTipSystemStateChanged::set_has_tip_displayed() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void CDOTAClientMsg_HelpTipSystemStateChanged::clear_has_tip_displayed() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void CDOTAClientMsg_HelpTipSystemStateChanged::clear_tip_displayed() {
+  tip_displayed_ = false;
+  clear_has_tip_displayed();
+}
+bool CDOTAClientMsg_HelpTipSystemStateChanged::tip_displayed() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged.tip_displayed)
+  return tip_displayed_;
+}
+void CDOTAClientMsg_HelpTipSystemStateChanged::set_tip_displayed(bool value) {
+  set_has_tip_displayed();
+  tip_displayed_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CDOTAClientMsg_HelpTipSystemStateChanged.tip_displayed)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

@@ -296,6 +296,12 @@ extern CMsgGCCheckAccountSubscriptionDefaultTypeInternal _CMsgGCCheckAccountSubs
 class CMsgGCCheckAccountSubscriptionResponse;
 class CMsgGCCheckAccountSubscriptionResponseDefaultTypeInternal;
 extern CMsgGCCheckAccountSubscriptionResponseDefaultTypeInternal _CMsgGCCheckAccountSubscriptionResponse_default_instance_;
+class CMsgGCCheckClanMembership;
+class CMsgGCCheckClanMembershipDefaultTypeInternal;
+extern CMsgGCCheckClanMembershipDefaultTypeInternal _CMsgGCCheckClanMembership_default_instance_;
+class CMsgGCCheckClanMembership_Response;
+class CMsgGCCheckClanMembership_ResponseDefaultTypeInternal;
+extern CMsgGCCheckClanMembership_ResponseDefaultTypeInternal _CMsgGCCheckClanMembership_Response_default_instance_;
 class CMsgGCCheckFriendship;
 class CMsgGCCheckFriendshipDefaultTypeInternal;
 extern CMsgGCCheckFriendshipDefaultTypeInternal _CMsgGCCheckFriendship_default_instance_;
@@ -338,6 +344,9 @@ extern CMsgGCGetPersonaNames_ResponseDefaultTypeInternal _CMsgGCGetPersonaNames_
 class CMsgGCGetPersonaNames_Response_PersonaName;
 class CMsgGCGetPersonaNames_Response_PersonaNameDefaultTypeInternal;
 extern CMsgGCGetPersonaNames_Response_PersonaNameDefaultTypeInternal _CMsgGCGetPersonaNames_Response_PersonaName_default_instance_;
+class CMsgGCHAccountTwoFactorChange;
+class CMsgGCHAccountTwoFactorChangeDefaultTypeInternal;
+extern CMsgGCHAccountTwoFactorChangeDefaultTypeInternal _CMsgGCHAccountTwoFactorChange_default_instance_;
 class CMsgGCHAccountVacStatusChange;
 class CMsgGCHAccountVacStatusChangeDefaultTypeInternal;
 extern CMsgGCHAccountVacStatusChangeDefaultTypeInternal _CMsgGCHAccountVacStatusChange_default_instance_;
@@ -419,6 +428,9 @@ extern CMsgGCSetItemPositionDefaultTypeInternal _CMsgGCSetItemPosition_default_i
 class CMsgGCToClientStoreTransactionCompleted;
 class CMsgGCToClientStoreTransactionCompletedDefaultTypeInternal;
 extern CMsgGCToClientStoreTransactionCompletedDefaultTypeInternal _CMsgGCToClientStoreTransactionCompleted_default_instance_;
+class CMsgGCToGCAccountSubscriptionChange;
+class CMsgGCToGCAccountSubscriptionChangeDefaultTypeInternal;
+extern CMsgGCToGCAccountSubscriptionChangeDefaultTypeInternal _CMsgGCToGCAccountSubscriptionChange_default_instance_;
 class CMsgGCToGCBroadcastConsoleCommand;
 class CMsgGCToGCBroadcastConsoleCommandDefaultTypeInternal;
 extern CMsgGCToGCBroadcastConsoleCommandDefaultTypeInternal _CMsgGCToGCBroadcastConsoleCommand_default_instance_;
@@ -916,7 +928,6 @@ enum EGCItemMsg {
   k_EMsgGCPresets_SelectPresetForClassReply = 1067,
   k_EMsgClientToGCNameItemResponse = 1068,
   k_EMsgGCApplyConsumableEffects = 1069,
-  k_EMsgGCConsumableExhausted = 1070,
   k_EMsgGCShowItemsPickedUp = 1071,
   k_EMsgGCClientDisplayNotification = 1072,
   k_EMsgGCApplyStrangePart = 1073,
@@ -1044,11 +1055,12 @@ enum EGCItemMsg {
   k_EMsgGCToGCClientServerVersionsUpdated = 2593,
   k_EMsgGCUseMultipleItemsRequest = 2594,
   k_EMsgGCCheckAccountSubscription = 2595,
-  k_EMsgGCCheckAccountSubscriptionResponse = 2596
+  k_EMsgGCCheckAccountSubscriptionResponse = 2596,
+  k_EMsgGCToGCAccountSubscriptionChange = 2597
 };
 bool EGCItemMsg_IsValid(int value);
 const EGCItemMsg EGCItemMsg_MIN = k_EMsgGCBase;
-const EGCItemMsg EGCItemMsg_MAX = k_EMsgGCCheckAccountSubscriptionResponse;
+const EGCItemMsg EGCItemMsg_MAX = k_EMsgGCToGCAccountSubscriptionChange;
 const int EGCItemMsg_ARRAYSIZE = EGCItemMsg_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* EGCItemMsg_descriptor();
@@ -6936,6 +6948,118 @@ class CMsgGCCheckAccountSubscriptionResponse : public ::google::protobuf::Messag
 };
 // -------------------------------------------------------------------
 
+class CMsgGCToGCAccountSubscriptionChange : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCToGCAccountSubscriptionChange) */ {
+ public:
+  CMsgGCToGCAccountSubscriptionChange();
+  virtual ~CMsgGCToGCAccountSubscriptionChange();
+
+  CMsgGCToGCAccountSubscriptionChange(const CMsgGCToGCAccountSubscriptionChange& from);
+
+  inline CMsgGCToGCAccountSubscriptionChange& operator=(const CMsgGCToGCAccountSubscriptionChange& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgGCToGCAccountSubscriptionChange& default_instance();
+
+  static inline const CMsgGCToGCAccountSubscriptionChange* internal_default_instance() {
+    return reinterpret_cast<const CMsgGCToGCAccountSubscriptionChange*>(
+               &_CMsgGCToGCAccountSubscriptionChange_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    53;
+
+  void Swap(CMsgGCToGCAccountSubscriptionChange* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgGCToGCAccountSubscriptionChange* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgGCToGCAccountSubscriptionChange* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgGCToGCAccountSubscriptionChange& from);
+  void MergeFrom(const CMsgGCToGCAccountSubscriptionChange& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgGCToGCAccountSubscriptionChange* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 account_id = 1;
+  bool has_account_id() const;
+  void clear_account_id();
+  static const int kAccountIdFieldNumber = 1;
+  ::google::protobuf::uint32 account_id() const;
+  void set_account_id(::google::protobuf::uint32 value);
+
+  // optional uint32 item_definition_index = 2;
+  bool has_item_definition_index() const;
+  void clear_item_definition_index();
+  static const int kItemDefinitionIndexFieldNumber = 2;
+  ::google::protobuf::uint32 item_definition_index() const;
+  void set_item_definition_index(::google::protobuf::uint32 value);
+
+  // optional bool is_subscription_active = 3;
+  bool has_is_subscription_active() const;
+  void clear_is_subscription_active();
+  static const int kIsSubscriptionActiveFieldNumber = 3;
+  bool is_subscription_active() const;
+  void set_is_subscription_active(bool value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgGCToGCAccountSubscriptionChange)
+ private:
+  void set_has_account_id();
+  void clear_has_account_id();
+  void set_has_item_definition_index();
+  void clear_has_item_definition_index();
+  void set_has_is_subscription_active();
+  void clear_has_is_subscription_active();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 account_id_;
+  ::google::protobuf::uint32 item_definition_index_;
+  bool is_subscription_active_;
+  friend struct protobuf_econ_5fgcmessages_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class CMsgGCAddGiftItem : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgGCAddGiftItem) */ {
  public:
   CMsgGCAddGiftItem();
@@ -6964,7 +7088,7 @@ class CMsgGCAddGiftItem : public ::google::protobuf::Message /* @@protoc_inserti
                &_CMsgGCAddGiftItem_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    53;
+    54;
 
   void Swap(CMsgGCAddGiftItem* other);
 
@@ -7066,7 +7190,7 @@ class CMsgClientToGCWrapAndDeliverGift : public ::google::protobuf::Message /* @
                &_CMsgClientToGCWrapAndDeliverGift_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    54;
+    55;
 
   void Swap(CMsgClientToGCWrapAndDeliverGift* other);
 
@@ -7186,7 +7310,7 @@ class CMsgClientToGCWrapAndDeliverGiftResponse : public ::google::protobuf::Mess
                &_CMsgClientToGCWrapAndDeliverGiftResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    55;
+    56;
 
   void Swap(CMsgClientToGCWrapAndDeliverGiftResponse* other);
 
@@ -7338,7 +7462,7 @@ class CMsgClientToGCUnwrapGift : public ::google::protobuf::Message /* @@protoc_
                &_CMsgClientToGCUnwrapGift_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    56;
+    57;
 
   void Swap(CMsgClientToGCUnwrapGift* other);
 
@@ -7430,7 +7554,7 @@ class CMsgClientToGCGetGiftPermissions : public ::google::protobuf::Message /* @
                &_CMsgClientToGCGetGiftPermissions_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    57;
+    58;
 
   void Swap(CMsgClientToGCGetGiftPermissions* other);
 
@@ -7512,7 +7636,7 @@ class CMsgClientToGCGetGiftPermissionsResponse_FriendPermission : public ::googl
                &_CMsgClientToGCGetGiftPermissionsResponse_FriendPermission_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    58;
+    59;
 
   void Swap(CMsgClientToGCGetGiftPermissionsResponse_FriendPermission* other);
 
@@ -7614,7 +7738,7 @@ class CMsgClientToGCGetGiftPermissionsResponse : public ::google::protobuf::Mess
                &_CMsgClientToGCGetGiftPermissionsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    59;
+    60;
 
   void Swap(CMsgClientToGCGetGiftPermissionsResponse* other);
 
@@ -7761,7 +7885,7 @@ class CMsgClientToGCUnpackBundle : public ::google::protobuf::Message /* @@proto
                &_CMsgClientToGCUnpackBundle_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    60;
+    61;
 
   void Swap(CMsgClientToGCUnpackBundle* other);
 
@@ -7853,7 +7977,7 @@ class CMsgClientToGCUnpackBundleResponse : public ::google::protobuf::Message /*
                &_CMsgClientToGCUnpackBundleResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    61;
+    62;
 
   void Swap(CMsgClientToGCUnpackBundleResponse* other);
 
@@ -7994,7 +8118,7 @@ class CMsgGCToClientStoreTransactionCompleted : public ::google::protobuf::Messa
                &_CMsgGCToClientStoreTransactionCompleted_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    62;
+    63;
 
   void Swap(CMsgGCToClientStoreTransactionCompleted* other);
 
@@ -8099,7 +8223,7 @@ class CMsgClientToGCEquipItems : public ::google::protobuf::Message /* @@protoc_
                &_CMsgClientToGCEquipItems_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    63;
+    64;
 
   void Swap(CMsgClientToGCEquipItems* other);
 
@@ -8194,7 +8318,7 @@ class CMsgClientToGCEquipItemsResponse : public ::google::protobuf::Message /* @
                &_CMsgClientToGCEquipItemsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    64;
+    65;
 
   void Swap(CMsgClientToGCEquipItemsResponse* other);
 
@@ -8286,7 +8410,7 @@ class CMsgClientToGCSetItemStyle : public ::google::protobuf::Message /* @@proto
                &_CMsgClientToGCSetItemStyle_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    65;
+    66;
 
   void Swap(CMsgClientToGCSetItemStyle* other);
 
@@ -8388,7 +8512,7 @@ class CMsgClientToGCSetItemStyleResponse : public ::google::protobuf::Message /*
                &_CMsgClientToGCSetItemStyleResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    66;
+    67;
 
   void Swap(CMsgClientToGCSetItemStyleResponse* other);
 
@@ -8508,7 +8632,7 @@ class CMsgClientToGCUnlockItemStyle : public ::google::protobuf::Message /* @@pr
                &_CMsgClientToGCUnlockItemStyle_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    67;
+    68;
 
   void Swap(CMsgClientToGCUnlockItemStyle* other);
 
@@ -8623,7 +8747,7 @@ class CMsgClientToGCUnlockItemStyleResponse : public ::google::protobuf::Message
                &_CMsgClientToGCUnlockItemStyleResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    68;
+    69;
 
   void Swap(CMsgClientToGCUnlockItemStyleResponse* other);
 
@@ -8791,7 +8915,7 @@ class CMsgClientToGCSetItemInventoryCategory : public ::google::protobuf::Messag
                &_CMsgClientToGCSetItemInventoryCategory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    69;
+    70;
 
   void Swap(CMsgClientToGCSetItemInventoryCategory* other);
 
@@ -8916,7 +9040,7 @@ class CMsgClientToGCUnlockCrate : public ::google::protobuf::Message /* @@protoc
                &_CMsgClientToGCUnlockCrate_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    70;
+    71;
 
   void Swap(CMsgClientToGCUnlockCrate* other);
 
@@ -9018,7 +9142,7 @@ class CMsgClientToGCUnlockCrateResponse_Item : public ::google::protobuf::Messag
                &_CMsgClientToGCUnlockCrateResponse_Item_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    71;
+    72;
 
   void Swap(CMsgClientToGCUnlockCrateResponse_Item* other);
 
@@ -9120,7 +9244,7 @@ class CMsgClientToGCUnlockCrateResponse : public ::google::protobuf::Message /* 
                &_CMsgClientToGCUnlockCrateResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    72;
+    73;
 
   void Swap(CMsgClientToGCUnlockCrateResponse* other);
 
@@ -9227,7 +9351,7 @@ class CMsgClientToGCRemoveItemAttribute : public ::google::protobuf::Message /* 
                &_CMsgClientToGCRemoveItemAttribute_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    73;
+    74;
 
   void Swap(CMsgClientToGCRemoveItemAttribute* other);
 
@@ -9319,7 +9443,7 @@ class CMsgClientToGCRemoveItemAttributeResponse : public ::google::protobuf::Mes
                &_CMsgClientToGCRemoveItemAttributeResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    74;
+    75;
 
   void Swap(CMsgClientToGCRemoveItemAttributeResponse* other);
 
@@ -9453,7 +9577,7 @@ class CMsgClientToGCNameItem : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgClientToGCNameItem_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    75;
+    76;
 
   void Swap(CMsgClientToGCNameItem* other);
 
@@ -9573,7 +9697,7 @@ class CMsgClientToGCNameItemResponse : public ::google::protobuf::Message /* @@p
                &_CMsgClientToGCNameItemResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    76;
+    77;
 
   void Swap(CMsgClientToGCNameItemResponse* other);
 
@@ -9707,7 +9831,7 @@ class CMsgGCSetItemPosition : public ::google::protobuf::Message /* @@protoc_ins
                &_CMsgGCSetItemPosition_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    77;
+    78;
 
   void Swap(CMsgGCSetItemPosition* other);
 
@@ -9809,7 +9933,7 @@ class CAttribute_ItemDynamicRecipeComponent : public ::google::protobuf::Message
                &_CAttribute_ItemDynamicRecipeComponent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    78;
+    79;
 
   void Swap(CAttribute_ItemDynamicRecipeComponent* other);
 
@@ -9997,7 +10121,7 @@ class CProtoItemSocket : public ::google::protobuf::Message /* @@protoc_insertio
                &_CProtoItemSocket_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    79;
+    80;
 
   void Swap(CProtoItemSocket* other);
 
@@ -10165,7 +10289,7 @@ class CProtoItemSocket_Empty : public ::google::protobuf::Message /* @@protoc_in
                &_CProtoItemSocket_Empty_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    80;
+    81;
 
   void Swap(CProtoItemSocket_Empty* other);
 
@@ -10259,7 +10383,7 @@ class CProtoItemSocket_Effect : public ::google::protobuf::Message /* @@protoc_i
                &_CProtoItemSocket_Effect_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    81;
+    82;
 
   void Swap(CProtoItemSocket_Effect* other);
 
@@ -10363,7 +10487,7 @@ class CProtoItemSocket_Color : public ::google::protobuf::Message /* @@protoc_in
                &_CProtoItemSocket_Color_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    82;
+    83;
 
   void Swap(CProtoItemSocket_Color* other);
 
@@ -10487,7 +10611,7 @@ class CProtoItemSocket_Strange : public ::google::protobuf::Message /* @@protoc_
                &_CProtoItemSocket_Strange_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    83;
+    84;
 
   void Swap(CProtoItemSocket_Strange* other);
 
@@ -10601,7 +10725,7 @@ class CProtoItemSocket_Spectator : public ::google::protobuf::Message /* @@proto
                &_CProtoItemSocket_Spectator_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    84;
+    85;
 
   void Swap(CProtoItemSocket_Spectator* other);
 
@@ -10735,7 +10859,7 @@ class CProtoItemSocket_AssetModifier : public ::google::protobuf::Message /* @@p
                &_CProtoItemSocket_AssetModifier_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    85;
+    86;
 
   void Swap(CProtoItemSocket_AssetModifier* other);
 
@@ -10839,7 +10963,7 @@ class CProtoItemSocket_AssetModifier_DESERIALIZE_FROM_STRING_ONLY : public ::goo
                &_CProtoItemSocket_AssetModifier_DESERIALIZE_FROM_STRING_ONLY_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    86;
+    87;
 
   void Swap(CProtoItemSocket_AssetModifier_DESERIALIZE_FROM_STRING_ONLY* other);
 
@@ -10963,7 +11087,7 @@ class CProtoItemSocket_Autograph : public ::google::protobuf::Message /* @@proto
                &_CProtoItemSocket_Autograph_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    87;
+    88;
 
   void Swap(CProtoItemSocket_Autograph* other);
 
@@ -11095,7 +11219,7 @@ class CProtoItemSocket_StaticVisuals : public ::google::protobuf::Message /* @@p
                &_CProtoItemSocket_StaticVisuals_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    88;
+    89;
 
   void Swap(CProtoItemSocket_StaticVisuals* other);
 
@@ -11189,7 +11313,7 @@ class CAttribute_String : public ::google::protobuf::Message /* @@protoc_inserti
                &_CAttribute_String_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    89;
+    90;
 
   void Swap(CAttribute_String* other);
 
@@ -11289,7 +11413,7 @@ class CWorkshop_GetItemDailyRevenue_Request : public ::google::protobuf::Message
                &_CWorkshop_GetItemDailyRevenue_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    90;
+    91;
 
   void Swap(CWorkshop_GetItemDailyRevenue_Request* other);
 
@@ -11411,7 +11535,7 @@ class CWorkshop_GetItemDailyRevenue_Response_CountryDailyRevenue : public ::goog
                &_CWorkshop_GetItemDailyRevenue_Response_CountryDailyRevenue_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    91;
+    92;
 
   void Swap(CWorkshop_GetItemDailyRevenue_Response_CountryDailyRevenue* other);
 
@@ -11541,7 +11665,7 @@ class CWorkshop_GetItemDailyRevenue_Response : public ::google::protobuf::Messag
                &_CWorkshop_GetItemDailyRevenue_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    92;
+    93;
 
   void Swap(CWorkshop_GetItemDailyRevenue_Response* other);
 
@@ -11638,7 +11762,7 @@ class CWorkshop_GetPackageDailyRevenue_Request : public ::google::protobuf::Mess
                &_CWorkshop_GetPackageDailyRevenue_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    93;
+    94;
 
   void Swap(CWorkshop_GetPackageDailyRevenue_Request* other);
 
@@ -11750,7 +11874,7 @@ class CWorkshop_GetPackageDailyRevenue_Response_CountryDailyRevenue : public ::g
                &_CWorkshop_GetPackageDailyRevenue_Response_CountryDailyRevenue_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    94;
+    95;
 
   void Swap(CWorkshop_GetPackageDailyRevenue_Response_CountryDailyRevenue* other);
 
@@ -11880,7 +12004,7 @@ class CWorkshop_GetPackageDailyRevenue_Response : public ::google::protobuf::Mes
                &_CWorkshop_GetPackageDailyRevenue_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    95;
+    96;
 
   void Swap(CWorkshop_GetPackageDailyRevenue_Response* other);
 
@@ -11977,7 +12101,7 @@ class CMsgSQLGCToGCGrantBackpackSlots : public ::google::protobuf::Message /* @@
                &_CMsgSQLGCToGCGrantBackpackSlots_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    96;
+    97;
 
   void Swap(CMsgSQLGCToGCGrantBackpackSlots* other);
 
@@ -12079,7 +12203,7 @@ class CMsgClientToGCLookupAccountName : public ::google::protobuf::Message /* @@
                &_CMsgClientToGCLookupAccountName_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    97;
+    98;
 
   void Swap(CMsgClientToGCLookupAccountName* other);
 
@@ -12171,7 +12295,7 @@ class CMsgClientToGCLookupAccountNameResponse : public ::google::protobuf::Messa
                &_CMsgClientToGCLookupAccountNameResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    98;
+    99;
 
   void Swap(CMsgClientToGCLookupAccountNameResponse* other);
 
@@ -12281,7 +12405,7 @@ class CMsgClientToGCCreateStaticRecipe_Item : public ::google::protobuf::Message
                &_CMsgClientToGCCreateStaticRecipe_Item_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    99;
+    100;
 
   void Swap(CMsgClientToGCCreateStaticRecipe_Item* other);
 
@@ -12383,7 +12507,7 @@ class CMsgClientToGCCreateStaticRecipe : public ::google::protobuf::Message /* @
                &_CMsgClientToGCCreateStaticRecipe_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    100;
+    101;
 
   void Swap(CMsgClientToGCCreateStaticRecipe* other);
 
@@ -12490,7 +12614,7 @@ class CMsgClientToGCCreateStaticRecipeResponse_OutputItem : public ::google::pro
                &_CMsgClientToGCCreateStaticRecipeResponse_OutputItem_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    101;
+    102;
 
   void Swap(CMsgClientToGCCreateStaticRecipeResponse_OutputItem* other);
 
@@ -12602,7 +12726,7 @@ class CMsgClientToGCCreateStaticRecipeResponse_InputError : public ::google::pro
                &_CMsgClientToGCCreateStaticRecipeResponse_InputError_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    102;
+    103;
 
   void Swap(CMsgClientToGCCreateStaticRecipeResponse_InputError* other);
 
@@ -12704,7 +12828,7 @@ class CMsgClientToGCCreateStaticRecipeResponse_AdditionalOutput : public ::googl
                &_CMsgClientToGCCreateStaticRecipeResponse_AdditionalOutput_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    103;
+    104;
 
   void Swap(CMsgClientToGCCreateStaticRecipeResponse_AdditionalOutput* other);
 
@@ -12806,7 +12930,7 @@ class CMsgClientToGCCreateStaticRecipeResponse : public ::google::protobuf::Mess
                &_CMsgClientToGCCreateStaticRecipeResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    104;
+    105;
 
   void Swap(CMsgClientToGCCreateStaticRecipeResponse* other);
 
@@ -12973,7 +13097,7 @@ class CMsgProcessTransactionOrder_Item : public ::google::protobuf::Message /* @
                &_CMsgProcessTransactionOrder_Item_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    105;
+    106;
 
   void Swap(CMsgProcessTransactionOrder_Item* other);
 
@@ -13153,7 +13277,7 @@ class CMsgProcessTransactionOrder : public ::google::protobuf::Message /* @@prot
                &_CMsgProcessTransactionOrder_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    106;
+    107;
 
   void Swap(CMsgProcessTransactionOrder* other);
 
@@ -13330,7 +13454,7 @@ class CMsgGCToGCStoreProcessCDKeyTransaction : public ::google::protobuf::Messag
                &_CMsgGCToGCStoreProcessCDKeyTransaction_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    107;
+    108;
 
   void Swap(CMsgGCToGCStoreProcessCDKeyTransaction* other);
 
@@ -13434,7 +13558,7 @@ class CMsgGCToGCStoreProcessCDKeyTransactionResponse : public ::google::protobuf
                &_CMsgGCToGCStoreProcessCDKeyTransactionResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    108;
+    109;
 
   void Swap(CMsgGCToGCStoreProcessCDKeyTransactionResponse* other);
 
@@ -13526,7 +13650,7 @@ class CMsgGCToGCStoreProcessSettlement : public ::google::protobuf::Message /* @
                &_CMsgGCToGCStoreProcessSettlement_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    109;
+    110;
 
   void Swap(CMsgGCToGCStoreProcessSettlement* other);
 
@@ -13630,7 +13754,7 @@ class CMsgGCToGCStoreProcessSettlementResponse : public ::google::protobuf::Mess
                &_CMsgGCToGCStoreProcessSettlementResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    110;
+    111;
 
   void Swap(CMsgGCToGCStoreProcessSettlementResponse* other);
 
@@ -13722,7 +13846,7 @@ class CMsgGCToGCBroadcastConsoleCommand : public ::google::protobuf::Message /* 
                &_CMsgGCToGCBroadcastConsoleCommand_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    111;
+    112;
 
   void Swap(CMsgGCToGCBroadcastConsoleCommand* other);
 
@@ -13860,7 +13984,7 @@ class CMsgGCToGCConsoleOutput_OutputLine : public ::google::protobuf::Message /*
                &_CMsgGCToGCConsoleOutput_OutputLine_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    112;
+    113;
 
   void Swap(CMsgGCToGCConsoleOutput_OutputLine* other);
 
@@ -13970,7 +14094,7 @@ class CMsgGCToGCConsoleOutput : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgGCToGCConsoleOutput_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    113;
+    114;
 
   void Swap(CMsgGCToGCConsoleOutput* other);
 
@@ -14095,7 +14219,7 @@ class CMsgItemAges_MaxItemIDTimestamp : public ::google::protobuf::Message /* @@
                &_CMsgItemAges_MaxItemIDTimestamp_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    114;
+    115;
 
   void Swap(CMsgItemAges_MaxItemIDTimestamp* other);
 
@@ -14197,7 +14321,7 @@ class CMsgItemAges : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_CMsgItemAges_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    115;
+    116;
 
   void Swap(CMsgItemAges* other);
 
@@ -14294,7 +14418,7 @@ class CMsgGCToGCInternalTestMsg : public ::google::protobuf::Message /* @@protoc
                &_CMsgGCToGCInternalTestMsg_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    116;
+    117;
 
   void Swap(CMsgGCToGCInternalTestMsg* other);
 
@@ -14454,7 +14578,7 @@ class CMsgGCToGCClientServerVersionsUpdated : public ::google::protobuf::Message
                &_CMsgGCToGCClientServerVersionsUpdated_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    117;
+    118;
 
   void Swap(CMsgGCToGCClientServerVersionsUpdated* other);
 
@@ -18183,6 +18307,82 @@ inline void CMsgGCCheckAccountSubscriptionResponse::set_cache_until(::google::pr
   set_has_cache_until();
   cache_until_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgGCCheckAccountSubscriptionResponse.cache_until)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgGCToGCAccountSubscriptionChange
+
+// optional uint32 account_id = 1;
+inline bool CMsgGCToGCAccountSubscriptionChange::has_account_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::set_has_account_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::clear_has_account_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::clear_account_id() {
+  account_id_ = 0u;
+  clear_has_account_id();
+}
+inline ::google::protobuf::uint32 CMsgGCToGCAccountSubscriptionChange::account_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToGCAccountSubscriptionChange.account_id)
+  return account_id_;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::set_account_id(::google::protobuf::uint32 value) {
+  set_has_account_id();
+  account_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToGCAccountSubscriptionChange.account_id)
+}
+
+// optional uint32 item_definition_index = 2;
+inline bool CMsgGCToGCAccountSubscriptionChange::has_item_definition_index() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::set_has_item_definition_index() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::clear_has_item_definition_index() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::clear_item_definition_index() {
+  item_definition_index_ = 0u;
+  clear_has_item_definition_index();
+}
+inline ::google::protobuf::uint32 CMsgGCToGCAccountSubscriptionChange::item_definition_index() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToGCAccountSubscriptionChange.item_definition_index)
+  return item_definition_index_;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::set_item_definition_index(::google::protobuf::uint32 value) {
+  set_has_item_definition_index();
+  item_definition_index_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToGCAccountSubscriptionChange.item_definition_index)
+}
+
+// optional bool is_subscription_active = 3;
+inline bool CMsgGCToGCAccountSubscriptionChange::has_is_subscription_active() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::set_has_is_subscription_active() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::clear_has_is_subscription_active() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::clear_is_subscription_active() {
+  is_subscription_active_ = false;
+  clear_has_is_subscription_active();
+}
+inline bool CMsgGCToGCAccountSubscriptionChange::is_subscription_active() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgGCToGCAccountSubscriptionChange.is_subscription_active)
+  return is_subscription_active_;
+}
+inline void CMsgGCToGCAccountSubscriptionChange::set_is_subscription_active(bool value) {
+  set_has_is_subscription_active();
+  is_subscription_active_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgGCToGCAccountSubscriptionChange.is_subscription_active)
 }
 
 // -------------------------------------------------------------------
@@ -23888,6 +24088,8 @@ inline void CMsgGCToGCClientServerVersionsUpdated::set_server_deployed_version(:
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

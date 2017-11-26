@@ -208,26 +208,26 @@ class CMsgBotWorldState_Vector : public ::google::protobuf::Message /* @@protoc_
 
   // accessors -------------------------------------------------------
 
-  // required int32 x = 1;
+  // required float x = 1;
   bool has_x() const;
   void clear_x();
   static const int kXFieldNumber = 1;
-  ::google::protobuf::int32 x() const;
-  void set_x(::google::protobuf::int32 value);
+  float x() const;
+  void set_x(float value);
 
-  // required int32 y = 2;
+  // required float y = 2;
   bool has_y() const;
   void clear_y();
   static const int kYFieldNumber = 2;
-  ::google::protobuf::int32 y() const;
-  void set_y(::google::protobuf::int32 value);
+  float y() const;
+  void set_y(float value);
 
-  // required int32 z = 3;
+  // required float z = 3;
   bool has_z() const;
   void clear_z();
   static const int kZFieldNumber = 3;
-  ::google::protobuf::int32 z() const;
-  void set_z(::google::protobuf::int32 value);
+  float z() const;
+  void set_z(float value);
 
   // @@protoc_insertion_point(class_scope:proto.dota.CMsgBotWorldState.Vector)
  private:
@@ -244,9 +244,9 @@ class CMsgBotWorldState_Vector : public ::google::protobuf::Message /* @@protoc_
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::int32 x_;
-  ::google::protobuf::int32 y_;
-  ::google::protobuf::int32 z_;
+  float x_;
+  float y_;
+  float z_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_5fbot_5fscript_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -323,12 +323,12 @@ class CMsgBotWorldState_Player : public ::google::protobuf::Message /* @@protoc_
 
   // accessors -------------------------------------------------------
 
-  // optional uint32 player_id = 1;
+  // optional int32 player_id = 1;
   bool has_player_id() const;
   void clear_player_id();
   static const int kPlayerIdFieldNumber = 1;
-  ::google::protobuf::uint32 player_id() const;
-  void set_player_id(::google::protobuf::uint32 value);
+  ::google::protobuf::int32 player_id() const;
+  void set_player_id(::google::protobuf::int32 value);
 
   // optional uint32 hero_id = 2;
   bool has_hero_id() const;
@@ -392,7 +392,7 @@ class CMsgBotWorldState_Player : public ::google::protobuf::Message /* @@protoc_
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::uint32 player_id_;
+  ::google::protobuf::int32 player_id_;
   ::google::protobuf::uint32 hero_id_;
   bool is_alive_;
   float respawn_time_;
@@ -964,12 +964,12 @@ class CMsgBotWorldState_TeleportInfo : public ::google::protobuf::Message /* @@p
   ::proto::dota::CMsgBotWorldState_Vector* release_location();
   void set_allocated_location(::proto::dota::CMsgBotWorldState_Vector* location);
 
-  // optional uint32 player_id = 1;
+  // optional int32 player_id = 1;
   bool has_player_id() const;
   void clear_player_id();
   static const int kPlayerIdFieldNumber = 1;
-  ::google::protobuf::uint32 player_id() const;
-  void set_player_id(::google::protobuf::uint32 value);
+  ::google::protobuf::int32 player_id() const;
+  void set_player_id(::google::protobuf::int32 value);
 
   // optional float time_remaning = 3;
   bool has_time_remaning() const;
@@ -991,7 +991,7 @@ class CMsgBotWorldState_TeleportInfo : public ::google::protobuf::Message /* @@p
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::proto::dota::CMsgBotWorldState_Vector* location_;
-  ::google::protobuf::uint32 player_id_;
+  ::google::protobuf::int32 player_id_;
   float time_remaning_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_5fbot_5fscript_2eproto::TableStruct;
 };
@@ -1712,12 +1712,12 @@ class CMsgBotWorldState_EventAbility : public ::google::protobuf::Message /* @@p
   ::google::protobuf::uint32 ability_id() const;
   void set_ability_id(::google::protobuf::uint32 value);
 
-  // optional uint32 player_id = 2;
+  // optional int32 player_id = 2;
   bool has_player_id() const;
   void clear_player_id();
   static const int kPlayerIdFieldNumber = 2;
-  ::google::protobuf::uint32 player_id() const;
-  void set_player_id(::google::protobuf::uint32 value);
+  ::google::protobuf::int32 player_id() const;
+  void set_player_id(::google::protobuf::int32 value);
 
   // optional uint32 unit_handle = 3;
   bool has_unit_handle() const;
@@ -1751,7 +1751,7 @@ class CMsgBotWorldState_EventAbility : public ::google::protobuf::Message /* @@p
   mutable int _cached_size_;
   ::proto::dota::CMsgBotWorldState_Vector* location_;
   ::google::protobuf::uint32 ability_id_;
-  ::google::protobuf::uint32 player_id_;
+  ::google::protobuf::int32 player_id_;
   ::google::protobuf::uint32 unit_handle_;
   bool is_channel_start_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_5fbot_5fscript_2eproto::TableStruct;
@@ -1837,12 +1837,12 @@ class CMsgBotWorldState_EventDamage : public ::google::protobuf::Message /* @@pr
   ::google::protobuf::uint32 damage() const;
   void set_damage(::google::protobuf::uint32 value);
 
-  // optional uint32 victim_player_id = 2;
+  // optional int32 victim_player_id = 2;
   bool has_victim_player_id() const;
   void clear_victim_player_id();
   static const int kVictimPlayerIdFieldNumber = 2;
-  ::google::protobuf::uint32 victim_player_id() const;
-  void set_victim_player_id(::google::protobuf::uint32 value);
+  ::google::protobuf::int32 victim_player_id() const;
+  void set_victim_player_id(::google::protobuf::int32 value);
 
   // optional uint32 victim_unit_handle = 3;
   bool has_victim_unit_handle() const;
@@ -1851,12 +1851,12 @@ class CMsgBotWorldState_EventDamage : public ::google::protobuf::Message /* @@pr
   ::google::protobuf::uint32 victim_unit_handle() const;
   void set_victim_unit_handle(::google::protobuf::uint32 value);
 
-  // optional uint32 attacker_player_id = 4;
+  // optional int32 attacker_player_id = 4;
   bool has_attacker_player_id() const;
   void clear_attacker_player_id();
   static const int kAttackerPlayerIdFieldNumber = 4;
-  ::google::protobuf::uint32 attacker_player_id() const;
-  void set_attacker_player_id(::google::protobuf::uint32 value);
+  ::google::protobuf::int32 attacker_player_id() const;
+  void set_attacker_player_id(::google::protobuf::int32 value);
 
   // optional uint32 attacker_unit_handle = 5;
   bool has_attacker_unit_handle() const;
@@ -1891,9 +1891,9 @@ class CMsgBotWorldState_EventDamage : public ::google::protobuf::Message /* @@pr
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::uint32 damage_;
-  ::google::protobuf::uint32 victim_player_id_;
+  ::google::protobuf::int32 victim_player_id_;
   ::google::protobuf::uint32 victim_unit_handle_;
-  ::google::protobuf::uint32 attacker_player_id_;
+  ::google::protobuf::int32 attacker_player_id_;
   ::google::protobuf::uint32 attacker_unit_handle_;
   ::google::protobuf::uint32 ability_id_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_5fbot_5fscript_2eproto::TableStruct;
@@ -1986,12 +1986,12 @@ class CMsgBotWorldState_EventCourierKilled : public ::google::protobuf::Message 
   ::google::protobuf::uint32 courier_unit_handle() const;
   void set_courier_unit_handle(::google::protobuf::uint32 value);
 
-  // optional uint32 killer_player_id = 3;
+  // optional int32 killer_player_id = 3;
   bool has_killer_player_id() const;
   void clear_killer_player_id();
   static const int kKillerPlayerIdFieldNumber = 3;
-  ::google::protobuf::uint32 killer_player_id() const;
-  void set_killer_player_id(::google::protobuf::uint32 value);
+  ::google::protobuf::int32 killer_player_id() const;
+  void set_killer_player_id(::google::protobuf::int32 value);
 
   // optional uint32 killer_unit_handle = 4;
   bool has_killer_unit_handle() const;
@@ -2016,7 +2016,7 @@ class CMsgBotWorldState_EventCourierKilled : public ::google::protobuf::Message 
   mutable int _cached_size_;
   ::google::protobuf::uint32 team_id_;
   ::google::protobuf::uint32 courier_unit_handle_;
-  ::google::protobuf::uint32 killer_player_id_;
+  ::google::protobuf::int32 killer_player_id_;
   ::google::protobuf::uint32 killer_unit_handle_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_5fbot_5fscript_2eproto::TableStruct;
 };
@@ -2094,12 +2094,12 @@ class CMsgBotWorldState_EventRoshanKilled : public ::google::protobuf::Message /
 
   // accessors -------------------------------------------------------
 
-  // optional uint32 killer_player_id = 1;
+  // optional int32 killer_player_id = 1;
   bool has_killer_player_id() const;
   void clear_killer_player_id();
   static const int kKillerPlayerIdFieldNumber = 1;
-  ::google::protobuf::uint32 killer_player_id() const;
-  void set_killer_player_id(::google::protobuf::uint32 value);
+  ::google::protobuf::int32 killer_player_id() const;
+  void set_killer_player_id(::google::protobuf::int32 value);
 
   // optional uint32 killer_unit_handle = 2;
   bool has_killer_unit_handle() const;
@@ -2118,7 +2118,7 @@ class CMsgBotWorldState_EventRoshanKilled : public ::google::protobuf::Message /
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::uint32 killer_player_id_;
+  ::google::protobuf::int32 killer_player_id_;
   ::google::protobuf::uint32 killer_unit_handle_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_5fbot_5fscript_2eproto::TableStruct;
 };
@@ -2430,6 +2430,13 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::uint32 level() const;
   void set_level(::google::protobuf::uint32 value);
 
+  // optional int32 player_id = 8;
+  bool has_player_id() const;
+  void clear_player_id();
+  static const int kPlayerIdFieldNumber = 8;
+  ::google::protobuf::int32 player_id() const;
+  void set_player_id(::google::protobuf::int32 value);
+
   // optional uint32 bounding_radius = 10;
   bool has_bounding_radius() const;
   void clear_bounding_radius();
@@ -2570,12 +2577,12 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::uint32 attack_range() const;
   void set_attack_range(::google::protobuf::uint32 value);
 
-  // optional uint32 attack_speed = 45;
+  // optional float attack_speed = 45;
   bool has_attack_speed() const;
   void clear_attack_speed();
   static const int kAttackSpeedFieldNumber = 45;
-  ::google::protobuf::uint32 attack_speed() const;
-  void set_attack_speed(::google::protobuf::uint32 value);
+  float attack_speed() const;
+  void set_attack_speed(float value);
 
   // optional float attack_anim_point = 46;
   bool has_attack_anim_point() const;
@@ -2717,13 +2724,6 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   bool is_magic_immune() const;
   void set_is_magic_immune(bool value);
 
-  // optional float shrine_cooldown = 150;
-  bool has_shrine_cooldown() const;
-  void clear_shrine_cooldown();
-  static const int kShrineCooldownFieldNumber = 150;
-  float shrine_cooldown() const;
-  void set_shrine_cooldown(float value);
-
   // optional bool is_muted = 80;
   bool has_is_muted() const;
   void clear_is_muted();
@@ -2815,33 +2815,33 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::uint32 buyback_cost() const;
   void set_buyback_cost(::google::protobuf::uint32 value);
 
-  // optional uint32 buyback_cooldown = 114;
+  // optional float buyback_cooldown = 114;
   bool has_buyback_cooldown() const;
   void clear_buyback_cooldown();
   static const int kBuybackCooldownFieldNumber = 114;
-  ::google::protobuf::uint32 buyback_cooldown() const;
-  void set_buyback_cooldown(::google::protobuf::uint32 value);
+  float buyback_cooldown() const;
+  void set_buyback_cooldown(float value);
 
-  // optional float spell_amplifiction = 115;
-  bool has_spell_amplifiction() const;
-  void clear_spell_amplifiction();
-  static const int kSpellAmplifictionFieldNumber = 115;
-  float spell_amplifiction() const;
-  void set_spell_amplifiction(float value);
+  // optional float spell_amplification = 115;
+  bool has_spell_amplification() const;
+  void clear_spell_amplification();
+  static const int kSpellAmplificationFieldNumber = 115;
+  float spell_amplification() const;
+  void set_spell_amplification(float value);
 
-  // optional uint32 armor = 116;
+  // optional float armor = 116;
   bool has_armor() const;
   void clear_armor();
   static const int kArmorFieldNumber = 116;
-  ::google::protobuf::uint32 armor() const;
-  void set_armor(::google::protobuf::uint32 value);
+  float armor() const;
+  void set_armor(float value);
 
-  // optional uint32 magic_resist = 117;
+  // optional float magic_resist = 117;
   bool has_magic_resist() const;
   void clear_magic_resist();
   static const int kMagicResistFieldNumber = 117;
-  ::google::protobuf::uint32 magic_resist() const;
-  void set_magic_resist(::google::protobuf::uint32 value);
+  float magic_resist() const;
+  void set_magic_resist(float value);
 
   // optional float evasion = 118;
   bool has_evasion() const;
@@ -2892,6 +2892,34 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::uint32 denies() const;
   void set_denies(::google::protobuf::uint32 value);
 
+  // optional uint32 net_worth = 126;
+  bool has_net_worth() const;
+  void clear_net_worth();
+  static const int kNetWorthFieldNumber = 126;
+  ::google::protobuf::uint32 net_worth() const;
+  void set_net_worth(::google::protobuf::uint32 value);
+
+  // optional uint32 strength = 127;
+  bool has_strength() const;
+  void clear_strength();
+  static const int kStrengthFieldNumber = 127;
+  ::google::protobuf::uint32 strength() const;
+  void set_strength(::google::protobuf::uint32 value);
+
+  // optional uint32 agility = 128;
+  bool has_agility() const;
+  void clear_agility();
+  static const int kAgilityFieldNumber = 128;
+  ::google::protobuf::uint32 agility() const;
+  void set_agility(::google::protobuf::uint32 value);
+
+  // optional uint32 intelligence = 129;
+  bool has_intelligence() const;
+  void clear_intelligence();
+  static const int kIntelligenceFieldNumber = 129;
+  ::google::protobuf::uint32 intelligence() const;
+  void set_intelligence(::google::protobuf::uint32 value);
+
   // optional float remaining_lifespan = 130;
   bool has_remaining_lifespan() const;
   void clear_remaining_lifespan();
@@ -2920,6 +2948,13 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   bool is_shrine_healing() const;
   void set_is_shrine_healing(bool value);
 
+  // optional float shrine_cooldown = 150;
+  bool has_shrine_cooldown() const;
+  void clear_shrine_cooldown();
+  static const int kShrineCooldownFieldNumber = 150;
+  float shrine_cooldown() const;
+  void set_shrine_cooldown(float value);
+
   // @@protoc_insertion_point(class_scope:proto.dota.CMsgBotWorldState.Unit)
  private:
   void set_has_handle();
@@ -2936,6 +2971,8 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   void clear_has_location();
   void set_has_is_alive();
   void clear_has_is_alive();
+  void set_has_player_id();
+  void clear_has_player_id();
   void set_has_bounding_radius();
   void clear_has_bounding_radius();
   void set_has_facing();
@@ -3046,8 +3083,8 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   void clear_has_buyback_cost();
   void set_has_buyback_cooldown();
   void clear_has_buyback_cooldown();
-  void set_has_spell_amplifiction();
-  void clear_has_spell_amplifiction();
+  void set_has_spell_amplification();
+  void clear_has_spell_amplification();
   void set_has_armor();
   void clear_has_armor();
   void set_has_magic_resist();
@@ -3066,6 +3103,14 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   void clear_has_last_hits();
   void set_has_denies();
   void clear_has_denies();
+  void set_has_net_worth();
+  void clear_has_net_worth();
+  void set_has_strength();
+  void clear_has_strength();
+  void set_has_agility();
+  void clear_has_agility();
+  void set_has_intelligence();
+  void clear_has_intelligence();
   void set_has_remaining_lifespan();
   void clear_has_remaining_lifespan();
   void set_has_flying_courier();
@@ -3088,6 +3133,7 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   int unit_type_;
   ::google::protobuf::uint32 team_id_;
   ::google::protobuf::uint32 level_;
+  ::google::protobuf::int32 player_id_;
   ::google::protobuf::uint32 bounding_radius_;
   ::google::protobuf::uint32 facing_;
   ::google::protobuf::uint32 ground_height_;
@@ -3108,7 +3154,7 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::uint32 bonus_damage_;
   ::google::protobuf::uint32 attack_damage_;
   ::google::protobuf::uint32 attack_range_;
-  ::google::protobuf::uint32 attack_speed_;
+  float attack_speed_;
   float attack_anim_point_;
   ::google::protobuf::uint32 attack_acquisition_range_;
   ::google::protobuf::uint32 attack_projectile_speed_;
@@ -3129,7 +3175,6 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   bool is_invisible_;
   bool is_invulnerable_;
   bool is_magic_immune_;
-  float shrine_cooldown_;
   bool is_muted_;
   bool is_nightmared_;
   bool is_rooted_;
@@ -3143,10 +3188,10 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::uint32 primary_attribute_;
   ::google::protobuf::uint32 respawn_time_;
   ::google::protobuf::uint32 buyback_cost_;
-  ::google::protobuf::uint32 buyback_cooldown_;
-  float spell_amplifiction_;
-  ::google::protobuf::uint32 armor_;
-  ::google::protobuf::uint32 magic_resist_;
+  float buyback_cooldown_;
+  float spell_amplification_;
+  float armor_;
+  float magic_resist_;
   float evasion_;
   ::google::protobuf::uint32 xp_needed_to_level_;
   ::google::protobuf::uint32 ability_points_;
@@ -3154,10 +3199,15 @@ class CMsgBotWorldState_Unit : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::uint32 unreliable_gold_;
   ::google::protobuf::uint32 last_hits_;
   ::google::protobuf::uint32 denies_;
+  ::google::protobuf::uint32 net_worth_;
+  ::google::protobuf::uint32 strength_;
+  ::google::protobuf::uint32 agility_;
+  ::google::protobuf::uint32 intelligence_;
   float remaining_lifespan_;
   bool is_illusion_;
   bool flying_courier_;
   bool is_shrine_healing_;
+  float shrine_cooldown_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_5fbot_5fscript_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -3450,19 +3500,19 @@ class CMsgBotWorldState : public ::google::protobuf::Message /* @@protoc_inserti
   ::google::protobuf::uint32 team_id() const;
   void set_team_id(::google::protobuf::uint32 value);
 
-  // optional uint32 game_time = 2;
+  // optional float game_time = 2;
   bool has_game_time() const;
   void clear_game_time();
   static const int kGameTimeFieldNumber = 2;
-  ::google::protobuf::uint32 game_time() const;
-  void set_game_time(::google::protobuf::uint32 value);
+  float game_time() const;
+  void set_game_time(float value);
 
-  // optional uint32 dota_time = 3;
+  // optional float dota_time = 3;
   bool has_dota_time() const;
   void clear_dota_time();
   static const int kDotaTimeFieldNumber = 3;
-  ::google::protobuf::uint32 dota_time() const;
-  void set_dota_time(::google::protobuf::uint32 value);
+  float dota_time() const;
+  void set_dota_time(float value);
 
   // optional uint32 game_state = 4;
   bool has_game_state() const;
@@ -3534,8 +3584,8 @@ class CMsgBotWorldState : public ::google::protobuf::Message /* @@protoc_inserti
   ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgBotWorldState_EventRoshanKilled > roshan_killed_events_;
   ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgBotWorldState_EventTree > tree_events_;
   ::google::protobuf::uint32 team_id_;
-  ::google::protobuf::uint32 game_time_;
-  ::google::protobuf::uint32 dota_time_;
+  float game_time_;
+  float dota_time_;
   ::google::protobuf::uint32 game_state_;
   ::google::protobuf::uint32 hero_pick_state_;
   float time_of_day_;
@@ -3551,7 +3601,7 @@ class CMsgBotWorldState : public ::google::protobuf::Message /* @@protoc_inserti
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
 // CMsgBotWorldState_Vector
 
-// required int32 x = 1;
+// required float x = 1;
 inline bool CMsgBotWorldState_Vector::has_x() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -3565,17 +3615,17 @@ inline void CMsgBotWorldState_Vector::clear_x() {
   x_ = 0;
   clear_has_x();
 }
-inline ::google::protobuf::int32 CMsgBotWorldState_Vector::x() const {
+inline float CMsgBotWorldState_Vector::x() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Vector.x)
   return x_;
 }
-inline void CMsgBotWorldState_Vector::set_x(::google::protobuf::int32 value) {
+inline void CMsgBotWorldState_Vector::set_x(float value) {
   set_has_x();
   x_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Vector.x)
 }
 
-// required int32 y = 2;
+// required float y = 2;
 inline bool CMsgBotWorldState_Vector::has_y() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -3589,17 +3639,17 @@ inline void CMsgBotWorldState_Vector::clear_y() {
   y_ = 0;
   clear_has_y();
 }
-inline ::google::protobuf::int32 CMsgBotWorldState_Vector::y() const {
+inline float CMsgBotWorldState_Vector::y() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Vector.y)
   return y_;
 }
-inline void CMsgBotWorldState_Vector::set_y(::google::protobuf::int32 value) {
+inline void CMsgBotWorldState_Vector::set_y(float value) {
   set_has_y();
   y_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Vector.y)
 }
 
-// required int32 z = 3;
+// required float z = 3;
 inline bool CMsgBotWorldState_Vector::has_z() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -3613,11 +3663,11 @@ inline void CMsgBotWorldState_Vector::clear_z() {
   z_ = 0;
   clear_has_z();
 }
-inline ::google::protobuf::int32 CMsgBotWorldState_Vector::z() const {
+inline float CMsgBotWorldState_Vector::z() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Vector.z)
   return z_;
 }
-inline void CMsgBotWorldState_Vector::set_z(::google::protobuf::int32 value) {
+inline void CMsgBotWorldState_Vector::set_z(float value) {
   set_has_z();
   z_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Vector.z)
@@ -3627,7 +3677,7 @@ inline void CMsgBotWorldState_Vector::set_z(::google::protobuf::int32 value) {
 
 // CMsgBotWorldState_Player
 
-// optional uint32 player_id = 1;
+// optional int32 player_id = 1;
 inline bool CMsgBotWorldState_Player::has_player_id() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -3638,14 +3688,14 @@ inline void CMsgBotWorldState_Player::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000001u;
 }
 inline void CMsgBotWorldState_Player::clear_player_id() {
-  player_id_ = 0u;
+  player_id_ = 0;
   clear_has_player_id();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_Player::player_id() const {
+inline ::google::protobuf::int32 CMsgBotWorldState_Player::player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Player.player_id)
   return player_id_;
 }
-inline void CMsgBotWorldState_Player::set_player_id(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_Player::set_player_id(::google::protobuf::int32 value) {
   set_has_player_id();
   player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Player.player_id)
@@ -4405,7 +4455,7 @@ inline void CMsgBotWorldState_RuneInfo::set_time_since_seen(float value) {
 
 // CMsgBotWorldState_TeleportInfo
 
-// optional uint32 player_id = 1;
+// optional int32 player_id = 1;
 inline bool CMsgBotWorldState_TeleportInfo::has_player_id() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -4416,14 +4466,14 @@ inline void CMsgBotWorldState_TeleportInfo::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000002u;
 }
 inline void CMsgBotWorldState_TeleportInfo::clear_player_id() {
-  player_id_ = 0u;
+  player_id_ = 0;
   clear_has_player_id();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_TeleportInfo::player_id() const {
+inline ::google::protobuf::int32 CMsgBotWorldState_TeleportInfo::player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.TeleportInfo.player_id)
   return player_id_;
 }
-inline void CMsgBotWorldState_TeleportInfo::set_player_id(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_TeleportInfo::set_player_id(::google::protobuf::int32 value) {
   set_has_player_id();
   player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.TeleportInfo.player_id)
@@ -5343,7 +5393,7 @@ inline void CMsgBotWorldState_EventAbility::set_ability_id(::google::protobuf::u
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventAbility.ability_id)
 }
 
-// optional uint32 player_id = 2;
+// optional int32 player_id = 2;
 inline bool CMsgBotWorldState_EventAbility::has_player_id() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -5354,14 +5404,14 @@ inline void CMsgBotWorldState_EventAbility::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000004u;
 }
 inline void CMsgBotWorldState_EventAbility::clear_player_id() {
-  player_id_ = 0u;
+  player_id_ = 0;
   clear_has_player_id();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_EventAbility::player_id() const {
+inline ::google::protobuf::int32 CMsgBotWorldState_EventAbility::player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.EventAbility.player_id)
   return player_id_;
 }
-inline void CMsgBotWorldState_EventAbility::set_player_id(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_EventAbility::set_player_id(::google::protobuf::int32 value) {
   set_has_player_id();
   player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventAbility.player_id)
@@ -5488,7 +5538,7 @@ inline void CMsgBotWorldState_EventDamage::set_damage(::google::protobuf::uint32
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventDamage.damage)
 }
 
-// optional uint32 victim_player_id = 2;
+// optional int32 victim_player_id = 2;
 inline bool CMsgBotWorldState_EventDamage::has_victim_player_id() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -5499,14 +5549,14 @@ inline void CMsgBotWorldState_EventDamage::clear_has_victim_player_id() {
   _has_bits_[0] &= ~0x00000002u;
 }
 inline void CMsgBotWorldState_EventDamage::clear_victim_player_id() {
-  victim_player_id_ = 0u;
+  victim_player_id_ = 0;
   clear_has_victim_player_id();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_EventDamage::victim_player_id() const {
+inline ::google::protobuf::int32 CMsgBotWorldState_EventDamage::victim_player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.EventDamage.victim_player_id)
   return victim_player_id_;
 }
-inline void CMsgBotWorldState_EventDamage::set_victim_player_id(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_EventDamage::set_victim_player_id(::google::protobuf::int32 value) {
   set_has_victim_player_id();
   victim_player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventDamage.victim_player_id)
@@ -5536,7 +5586,7 @@ inline void CMsgBotWorldState_EventDamage::set_victim_unit_handle(::google::prot
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventDamage.victim_unit_handle)
 }
 
-// optional uint32 attacker_player_id = 4;
+// optional int32 attacker_player_id = 4;
 inline bool CMsgBotWorldState_EventDamage::has_attacker_player_id() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
@@ -5547,14 +5597,14 @@ inline void CMsgBotWorldState_EventDamage::clear_has_attacker_player_id() {
   _has_bits_[0] &= ~0x00000008u;
 }
 inline void CMsgBotWorldState_EventDamage::clear_attacker_player_id() {
-  attacker_player_id_ = 0u;
+  attacker_player_id_ = 0;
   clear_has_attacker_player_id();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_EventDamage::attacker_player_id() const {
+inline ::google::protobuf::int32 CMsgBotWorldState_EventDamage::attacker_player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.EventDamage.attacker_player_id)
   return attacker_player_id_;
 }
-inline void CMsgBotWorldState_EventDamage::set_attacker_player_id(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_EventDamage::set_attacker_player_id(::google::protobuf::int32 value) {
   set_has_attacker_player_id();
   attacker_player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventDamage.attacker_player_id)
@@ -5660,7 +5710,7 @@ inline void CMsgBotWorldState_EventCourierKilled::set_courier_unit_handle(::goog
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventCourierKilled.courier_unit_handle)
 }
 
-// optional uint32 killer_player_id = 3;
+// optional int32 killer_player_id = 3;
 inline bool CMsgBotWorldState_EventCourierKilled::has_killer_player_id() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -5671,14 +5721,14 @@ inline void CMsgBotWorldState_EventCourierKilled::clear_has_killer_player_id() {
   _has_bits_[0] &= ~0x00000004u;
 }
 inline void CMsgBotWorldState_EventCourierKilled::clear_killer_player_id() {
-  killer_player_id_ = 0u;
+  killer_player_id_ = 0;
   clear_has_killer_player_id();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_EventCourierKilled::killer_player_id() const {
+inline ::google::protobuf::int32 CMsgBotWorldState_EventCourierKilled::killer_player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.EventCourierKilled.killer_player_id)
   return killer_player_id_;
 }
-inline void CMsgBotWorldState_EventCourierKilled::set_killer_player_id(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_EventCourierKilled::set_killer_player_id(::google::protobuf::int32 value) {
   set_has_killer_player_id();
   killer_player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventCourierKilled.killer_player_id)
@@ -5712,7 +5762,7 @@ inline void CMsgBotWorldState_EventCourierKilled::set_killer_unit_handle(::googl
 
 // CMsgBotWorldState_EventRoshanKilled
 
-// optional uint32 killer_player_id = 1;
+// optional int32 killer_player_id = 1;
 inline bool CMsgBotWorldState_EventRoshanKilled::has_killer_player_id() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -5723,14 +5773,14 @@ inline void CMsgBotWorldState_EventRoshanKilled::clear_has_killer_player_id() {
   _has_bits_[0] &= ~0x00000001u;
 }
 inline void CMsgBotWorldState_EventRoshanKilled::clear_killer_player_id() {
-  killer_player_id_ = 0u;
+  killer_player_id_ = 0;
   clear_has_killer_player_id();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_EventRoshanKilled::killer_player_id() const {
+inline ::google::protobuf::int32 CMsgBotWorldState_EventRoshanKilled::killer_player_id() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.EventRoshanKilled.killer_player_id)
   return killer_player_id_;
 }
-inline void CMsgBotWorldState_EventRoshanKilled::set_killer_player_id(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_EventRoshanKilled::set_killer_player_id(::google::protobuf::int32 value) {
   set_has_killer_player_id();
   killer_player_id_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.EventRoshanKilled.killer_player_id)
@@ -6116,13 +6166,13 @@ inline void CMsgBotWorldState_Unit::set_allocated_location(::proto::dota::CMsgBo
 
 // optional bool is_alive = 7;
 inline bool CMsgBotWorldState_Unit::has_is_alive() const {
-  return (_has_bits_[0] & 0x80000000u) != 0;
+  return (_has_bits_[1] & 0x00000001u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_alive() {
-  _has_bits_[0] |= 0x80000000u;
+  _has_bits_[1] |= 0x00000001u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_alive() {
-  _has_bits_[0] &= ~0x80000000u;
+  _has_bits_[1] &= ~0x00000001u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_alive() {
   is_alive_ = false;
@@ -6138,15 +6188,39 @@ inline void CMsgBotWorldState_Unit::set_is_alive(bool value) {
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.is_alive)
 }
 
-// optional uint32 bounding_radius = 10;
-inline bool CMsgBotWorldState_Unit::has_bounding_radius() const {
+// optional int32 player_id = 8;
+inline bool CMsgBotWorldState_Unit::has_player_id() const {
   return (_has_bits_[0] & 0x00000040u) != 0;
 }
-inline void CMsgBotWorldState_Unit::set_has_bounding_radius() {
+inline void CMsgBotWorldState_Unit::set_has_player_id() {
   _has_bits_[0] |= 0x00000040u;
 }
-inline void CMsgBotWorldState_Unit::clear_has_bounding_radius() {
+inline void CMsgBotWorldState_Unit::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000040u;
+}
+inline void CMsgBotWorldState_Unit::clear_player_id() {
+  player_id_ = 0;
+  clear_has_player_id();
+}
+inline ::google::protobuf::int32 CMsgBotWorldState_Unit::player_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.player_id)
+  return player_id_;
+}
+inline void CMsgBotWorldState_Unit::set_player_id(::google::protobuf::int32 value) {
+  set_has_player_id();
+  player_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.player_id)
+}
+
+// optional uint32 bounding_radius = 10;
+inline bool CMsgBotWorldState_Unit::has_bounding_radius() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void CMsgBotWorldState_Unit::set_has_bounding_radius() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void CMsgBotWorldState_Unit::clear_has_bounding_radius() {
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void CMsgBotWorldState_Unit::clear_bounding_radius() {
   bounding_radius_ = 0u;
@@ -6164,13 +6238,13 @@ inline void CMsgBotWorldState_Unit::set_bounding_radius(::google::protobuf::uint
 
 // optional uint32 facing = 11;
 inline bool CMsgBotWorldState_Unit::has_facing() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_facing() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_facing() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void CMsgBotWorldState_Unit::clear_facing() {
   facing_ = 0u;
@@ -6188,13 +6262,13 @@ inline void CMsgBotWorldState_Unit::set_facing(::google::protobuf::uint32 value)
 
 // optional uint32 ground_height = 12;
 inline bool CMsgBotWorldState_Unit::has_ground_height() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_ground_height() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_ground_height() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline void CMsgBotWorldState_Unit::clear_ground_height() {
   ground_height_ = 0u;
@@ -6212,13 +6286,13 @@ inline void CMsgBotWorldState_Unit::set_ground_height(::google::protobuf::uint32
 
 // optional uint32 vision_range_daytime = 15;
 inline bool CMsgBotWorldState_Unit::has_vision_range_daytime() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_vision_range_daytime() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_vision_range_daytime() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline void CMsgBotWorldState_Unit::clear_vision_range_daytime() {
   vision_range_daytime_ = 0u;
@@ -6236,13 +6310,13 @@ inline void CMsgBotWorldState_Unit::set_vision_range_daytime(::google::protobuf:
 
 // optional uint32 vision_range_nighttime = 16;
 inline bool CMsgBotWorldState_Unit::has_vision_range_nighttime() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_vision_range_nighttime() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_vision_range_nighttime() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void CMsgBotWorldState_Unit::clear_vision_range_nighttime() {
   vision_range_nighttime_ = 0u;
@@ -6260,13 +6334,13 @@ inline void CMsgBotWorldState_Unit::set_vision_range_nighttime(::google::protobu
 
 // optional uint32 health = 20;
 inline bool CMsgBotWorldState_Unit::has_health() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_health() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_health() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void CMsgBotWorldState_Unit::clear_health() {
   health_ = 0u;
@@ -6284,13 +6358,13 @@ inline void CMsgBotWorldState_Unit::set_health(::google::protobuf::uint32 value)
 
 // optional uint32 health_max = 21;
 inline bool CMsgBotWorldState_Unit::has_health_max() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_health_max() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_health_max() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline void CMsgBotWorldState_Unit::clear_health_max() {
   health_max_ = 0u;
@@ -6308,13 +6382,13 @@ inline void CMsgBotWorldState_Unit::set_health_max(::google::protobuf::uint32 va
 
 // optional float health_regen = 22;
 inline bool CMsgBotWorldState_Unit::has_health_regen() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_health_regen() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_health_regen() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline void CMsgBotWorldState_Unit::clear_health_regen() {
   health_regen_ = 0;
@@ -6332,13 +6406,13 @@ inline void CMsgBotWorldState_Unit::set_health_regen(float value) {
 
 // optional uint32 mana = 25;
 inline bool CMsgBotWorldState_Unit::has_mana() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00008000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_mana() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_mana() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline void CMsgBotWorldState_Unit::clear_mana() {
   mana_ = 0u;
@@ -6356,13 +6430,13 @@ inline void CMsgBotWorldState_Unit::set_mana(::google::protobuf::uint32 value) {
 
 // optional uint32 mana_max = 26;
 inline bool CMsgBotWorldState_Unit::has_mana_max() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
+  return (_has_bits_[0] & 0x00010000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_mana_max() {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00010000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_mana_max() {
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline void CMsgBotWorldState_Unit::clear_mana_max() {
   mana_max_ = 0u;
@@ -6380,13 +6454,13 @@ inline void CMsgBotWorldState_Unit::set_mana_max(::google::protobuf::uint32 valu
 
 // optional float mana_regen = 27;
 inline bool CMsgBotWorldState_Unit::has_mana_regen() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
+  return (_has_bits_[0] & 0x00020000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_mana_regen() {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00020000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_mana_regen() {
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline void CMsgBotWorldState_Unit::clear_mana_regen() {
   mana_regen_ = 0;
@@ -6404,13 +6478,13 @@ inline void CMsgBotWorldState_Unit::set_mana_regen(float value) {
 
 // optional uint32 base_movement_speed = 30;
 inline bool CMsgBotWorldState_Unit::has_base_movement_speed() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
+  return (_has_bits_[0] & 0x00040000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_base_movement_speed() {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00040000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_base_movement_speed() {
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline void CMsgBotWorldState_Unit::clear_base_movement_speed() {
   base_movement_speed_ = 0u;
@@ -6428,13 +6502,13 @@ inline void CMsgBotWorldState_Unit::set_base_movement_speed(::google::protobuf::
 
 // optional uint32 current_movement_speed = 31;
 inline bool CMsgBotWorldState_Unit::has_current_movement_speed() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
+  return (_has_bits_[0] & 0x00080000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_current_movement_speed() {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00080000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_current_movement_speed() {
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline void CMsgBotWorldState_Unit::clear_current_movement_speed() {
   current_movement_speed_ = 0u;
@@ -6452,13 +6526,13 @@ inline void CMsgBotWorldState_Unit::set_current_movement_speed(::google::protobu
 
 // optional int32 anim_activity = 35;
 inline bool CMsgBotWorldState_Unit::has_anim_activity() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
+  return (_has_bits_[0] & 0x00100000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_anim_activity() {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00100000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_anim_activity() {
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline void CMsgBotWorldState_Unit::clear_anim_activity() {
   anim_activity_ = 0;
@@ -6476,13 +6550,13 @@ inline void CMsgBotWorldState_Unit::set_anim_activity(::google::protobuf::int32 
 
 // optional float anim_cycle = 36;
 inline bool CMsgBotWorldState_Unit::has_anim_cycle() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
+  return (_has_bits_[0] & 0x00200000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_anim_cycle() {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00200000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_anim_cycle() {
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline void CMsgBotWorldState_Unit::clear_anim_cycle() {
   anim_cycle_ = 0;
@@ -6500,13 +6574,13 @@ inline void CMsgBotWorldState_Unit::set_anim_cycle(float value) {
 
 // optional uint32 base_damage = 40;
 inline bool CMsgBotWorldState_Unit::has_base_damage() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
+  return (_has_bits_[0] & 0x00400000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_base_damage() {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00400000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_base_damage() {
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline void CMsgBotWorldState_Unit::clear_base_damage() {
   base_damage_ = 0u;
@@ -6524,13 +6598,13 @@ inline void CMsgBotWorldState_Unit::set_base_damage(::google::protobuf::uint32 v
 
 // optional uint32 base_damage_variance = 41;
 inline bool CMsgBotWorldState_Unit::has_base_damage_variance() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
+  return (_has_bits_[0] & 0x00800000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_base_damage_variance() {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x00800000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_base_damage_variance() {
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline void CMsgBotWorldState_Unit::clear_base_damage_variance() {
   base_damage_variance_ = 0u;
@@ -6548,13 +6622,13 @@ inline void CMsgBotWorldState_Unit::set_base_damage_variance(::google::protobuf:
 
 // optional uint32 bonus_damage = 42;
 inline bool CMsgBotWorldState_Unit::has_bonus_damage() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
+  return (_has_bits_[0] & 0x01000000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_bonus_damage() {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x01000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_bonus_damage() {
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x01000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_bonus_damage() {
   bonus_damage_ = 0u;
@@ -6572,13 +6646,13 @@ inline void CMsgBotWorldState_Unit::set_bonus_damage(::google::protobuf::uint32 
 
 // optional uint32 attack_damage = 43;
 inline bool CMsgBotWorldState_Unit::has_attack_damage() const {
-  return (_has_bits_[0] & 0x01000000u) != 0;
+  return (_has_bits_[0] & 0x02000000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_attack_damage() {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x02000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_attack_damage() {
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_attack_damage() {
   attack_damage_ = 0u;
@@ -6596,13 +6670,13 @@ inline void CMsgBotWorldState_Unit::set_attack_damage(::google::protobuf::uint32
 
 // optional uint32 attack_range = 44;
 inline bool CMsgBotWorldState_Unit::has_attack_range() const {
-  return (_has_bits_[0] & 0x02000000u) != 0;
+  return (_has_bits_[0] & 0x04000000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_attack_range() {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x04000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_attack_range() {
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_attack_range() {
   attack_range_ = 0u;
@@ -6618,25 +6692,25 @@ inline void CMsgBotWorldState_Unit::set_attack_range(::google::protobuf::uint32 
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.attack_range)
 }
 
-// optional uint32 attack_speed = 45;
+// optional float attack_speed = 45;
 inline bool CMsgBotWorldState_Unit::has_attack_speed() const {
-  return (_has_bits_[0] & 0x04000000u) != 0;
+  return (_has_bits_[0] & 0x08000000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_attack_speed() {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x08000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_attack_speed() {
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_attack_speed() {
-  attack_speed_ = 0u;
+  attack_speed_ = 0;
   clear_has_attack_speed();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_Unit::attack_speed() const {
+inline float CMsgBotWorldState_Unit::attack_speed() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.attack_speed)
   return attack_speed_;
 }
-inline void CMsgBotWorldState_Unit::set_attack_speed(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_Unit::set_attack_speed(float value) {
   set_has_attack_speed();
   attack_speed_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.attack_speed)
@@ -6644,13 +6718,13 @@ inline void CMsgBotWorldState_Unit::set_attack_speed(::google::protobuf::uint32 
 
 // optional float attack_anim_point = 46;
 inline bool CMsgBotWorldState_Unit::has_attack_anim_point() const {
-  return (_has_bits_[0] & 0x08000000u) != 0;
+  return (_has_bits_[0] & 0x10000000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_attack_anim_point() {
-  _has_bits_[0] |= 0x08000000u;
+  _has_bits_[0] |= 0x10000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_attack_anim_point() {
-  _has_bits_[0] &= ~0x08000000u;
+  _has_bits_[0] &= ~0x10000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_attack_anim_point() {
   attack_anim_point_ = 0;
@@ -6668,13 +6742,13 @@ inline void CMsgBotWorldState_Unit::set_attack_anim_point(float value) {
 
 // optional uint32 attack_acquisition_range = 47;
 inline bool CMsgBotWorldState_Unit::has_attack_acquisition_range() const {
-  return (_has_bits_[0] & 0x10000000u) != 0;
+  return (_has_bits_[0] & 0x20000000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_attack_acquisition_range() {
-  _has_bits_[0] |= 0x10000000u;
+  _has_bits_[0] |= 0x20000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_attack_acquisition_range() {
-  _has_bits_[0] &= ~0x10000000u;
+  _has_bits_[0] &= ~0x20000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_attack_acquisition_range() {
   attack_acquisition_range_ = 0u;
@@ -6692,13 +6766,13 @@ inline void CMsgBotWorldState_Unit::set_attack_acquisition_range(::google::proto
 
 // optional uint32 attack_projectile_speed = 48;
 inline bool CMsgBotWorldState_Unit::has_attack_projectile_speed() const {
-  return (_has_bits_[0] & 0x20000000u) != 0;
+  return (_has_bits_[0] & 0x40000000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_attack_projectile_speed() {
-  _has_bits_[0] |= 0x20000000u;
+  _has_bits_[0] |= 0x40000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_attack_projectile_speed() {
-  _has_bits_[0] &= ~0x20000000u;
+  _has_bits_[0] &= ~0x40000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_attack_projectile_speed() {
   attack_projectile_speed_ = 0u;
@@ -6716,13 +6790,13 @@ inline void CMsgBotWorldState_Unit::set_attack_projectile_speed(::google::protob
 
 // optional uint32 attack_target_handle = 49;
 inline bool CMsgBotWorldState_Unit::has_attack_target_handle() const {
-  return (_has_bits_[0] & 0x40000000u) != 0;
+  return (_has_bits_[0] & 0x80000000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_attack_target_handle() {
-  _has_bits_[0] |= 0x40000000u;
+  _has_bits_[0] |= 0x80000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_attack_target_handle() {
-  _has_bits_[0] &= ~0x40000000u;
+  _has_bits_[0] &= ~0x80000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_attack_target_handle() {
   attack_target_handle_ = 0u;
@@ -6740,13 +6814,13 @@ inline void CMsgBotWorldState_Unit::set_attack_target_handle(::google::protobuf:
 
 // optional uint32 bounty_xp = 60;
 inline bool CMsgBotWorldState_Unit::has_bounty_xp() const {
-  return (_has_bits_[1] & 0x00000008u) != 0;
+  return (_has_bits_[1] & 0x00000010u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_bounty_xp() {
-  _has_bits_[1] |= 0x00000008u;
+  _has_bits_[1] |= 0x00000010u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_bounty_xp() {
-  _has_bits_[1] &= ~0x00000008u;
+  _has_bits_[1] &= ~0x00000010u;
 }
 inline void CMsgBotWorldState_Unit::clear_bounty_xp() {
   bounty_xp_ = 0u;
@@ -6764,13 +6838,13 @@ inline void CMsgBotWorldState_Unit::set_bounty_xp(::google::protobuf::uint32 val
 
 // optional uint32 bounty_gold_min = 61;
 inline bool CMsgBotWorldState_Unit::has_bounty_gold_min() const {
-  return (_has_bits_[1] & 0x00000010u) != 0;
+  return (_has_bits_[1] & 0x00000020u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_bounty_gold_min() {
-  _has_bits_[1] |= 0x00000010u;
+  _has_bits_[1] |= 0x00000020u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_bounty_gold_min() {
-  _has_bits_[1] &= ~0x00000010u;
+  _has_bits_[1] &= ~0x00000020u;
 }
 inline void CMsgBotWorldState_Unit::clear_bounty_gold_min() {
   bounty_gold_min_ = 0u;
@@ -6788,13 +6862,13 @@ inline void CMsgBotWorldState_Unit::set_bounty_gold_min(::google::protobuf::uint
 
 // optional uint32 bounty_gold_max = 62;
 inline bool CMsgBotWorldState_Unit::has_bounty_gold_max() const {
-  return (_has_bits_[1] & 0x00000020u) != 0;
+  return (_has_bits_[1] & 0x00000040u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_bounty_gold_max() {
-  _has_bits_[1] |= 0x00000020u;
+  _has_bits_[1] |= 0x00000040u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_bounty_gold_max() {
-  _has_bits_[1] &= ~0x00000020u;
+  _has_bits_[1] &= ~0x00000040u;
 }
 inline void CMsgBotWorldState_Unit::clear_bounty_gold_max() {
   bounty_gold_max_ = 0u;
@@ -6812,13 +6886,13 @@ inline void CMsgBotWorldState_Unit::set_bounty_gold_max(::google::protobuf::uint
 
 // optional bool is_channeling = 65;
 inline bool CMsgBotWorldState_Unit::has_is_channeling() const {
-  return (_has_bits_[1] & 0x00000001u) != 0;
+  return (_has_bits_[1] & 0x00000002u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_channeling() {
-  _has_bits_[1] |= 0x00000001u;
+  _has_bits_[1] |= 0x00000002u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_channeling() {
-  _has_bits_[1] &= ~0x00000001u;
+  _has_bits_[1] &= ~0x00000002u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_channeling() {
   is_channeling_ = false;
@@ -6836,13 +6910,13 @@ inline void CMsgBotWorldState_Unit::set_is_channeling(bool value) {
 
 // optional uint32 active_ability_handle = 66;
 inline bool CMsgBotWorldState_Unit::has_active_ability_handle() const {
-  return (_has_bits_[1] & 0x00000040u) != 0;
+  return (_has_bits_[1] & 0x00000080u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_active_ability_handle() {
-  _has_bits_[1] |= 0x00000040u;
+  _has_bits_[1] |= 0x00000080u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_active_ability_handle() {
-  _has_bits_[1] &= ~0x00000040u;
+  _has_bits_[1] &= ~0x00000080u;
 }
 inline void CMsgBotWorldState_Unit::clear_active_ability_handle() {
   active_ability_handle_ = 0u;
@@ -6860,13 +6934,13 @@ inline void CMsgBotWorldState_Unit::set_active_ability_handle(::google::protobuf
 
 // optional bool is_attack_immune = 70;
 inline bool CMsgBotWorldState_Unit::has_is_attack_immune() const {
-  return (_has_bits_[1] & 0x00000002u) != 0;
+  return (_has_bits_[1] & 0x00000004u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_attack_immune() {
-  _has_bits_[1] |= 0x00000002u;
+  _has_bits_[1] |= 0x00000004u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_attack_immune() {
-  _has_bits_[1] &= ~0x00000002u;
+  _has_bits_[1] &= ~0x00000004u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_attack_immune() {
   is_attack_immune_ = false;
@@ -6884,13 +6958,13 @@ inline void CMsgBotWorldState_Unit::set_is_attack_immune(bool value) {
 
 // optional bool is_blind = 71;
 inline bool CMsgBotWorldState_Unit::has_is_blind() const {
-  return (_has_bits_[1] & 0x00000004u) != 0;
+  return (_has_bits_[1] & 0x00000008u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_blind() {
-  _has_bits_[1] |= 0x00000004u;
+  _has_bits_[1] |= 0x00000008u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_blind() {
-  _has_bits_[1] &= ~0x00000004u;
+  _has_bits_[1] &= ~0x00000008u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_blind() {
   is_blind_ = false;
@@ -6908,13 +6982,13 @@ inline void CMsgBotWorldState_Unit::set_is_blind(bool value) {
 
 // optional bool is_block_disabled = 72;
 inline bool CMsgBotWorldState_Unit::has_is_block_disabled() const {
-  return (_has_bits_[1] & 0x00000080u) != 0;
+  return (_has_bits_[1] & 0x00000100u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_block_disabled() {
-  _has_bits_[1] |= 0x00000080u;
+  _has_bits_[1] |= 0x00000100u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_block_disabled() {
-  _has_bits_[1] &= ~0x00000080u;
+  _has_bits_[1] &= ~0x00000100u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_block_disabled() {
   is_block_disabled_ = false;
@@ -6932,13 +7006,13 @@ inline void CMsgBotWorldState_Unit::set_is_block_disabled(bool value) {
 
 // optional bool is_disarmed = 73;
 inline bool CMsgBotWorldState_Unit::has_is_disarmed() const {
-  return (_has_bits_[1] & 0x00000100u) != 0;
+  return (_has_bits_[1] & 0x00000200u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_disarmed() {
-  _has_bits_[1] |= 0x00000100u;
+  _has_bits_[1] |= 0x00000200u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_disarmed() {
-  _has_bits_[1] &= ~0x00000100u;
+  _has_bits_[1] &= ~0x00000200u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_disarmed() {
   is_disarmed_ = false;
@@ -6956,13 +7030,13 @@ inline void CMsgBotWorldState_Unit::set_is_disarmed(bool value) {
 
 // optional bool is_dominated = 74;
 inline bool CMsgBotWorldState_Unit::has_is_dominated() const {
-  return (_has_bits_[1] & 0x00000200u) != 0;
+  return (_has_bits_[1] & 0x00000400u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_dominated() {
-  _has_bits_[1] |= 0x00000200u;
+  _has_bits_[1] |= 0x00000400u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_dominated() {
-  _has_bits_[1] &= ~0x00000200u;
+  _has_bits_[1] &= ~0x00000400u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_dominated() {
   is_dominated_ = false;
@@ -6980,13 +7054,13 @@ inline void CMsgBotWorldState_Unit::set_is_dominated(bool value) {
 
 // optional bool is_evade_disabled = 75;
 inline bool CMsgBotWorldState_Unit::has_is_evade_disabled() const {
-  return (_has_bits_[1] & 0x00000400u) != 0;
+  return (_has_bits_[1] & 0x00000800u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_evade_disabled() {
-  _has_bits_[1] |= 0x00000400u;
+  _has_bits_[1] |= 0x00000800u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_evade_disabled() {
-  _has_bits_[1] &= ~0x00000400u;
+  _has_bits_[1] &= ~0x00000800u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_evade_disabled() {
   is_evade_disabled_ = false;
@@ -7004,13 +7078,13 @@ inline void CMsgBotWorldState_Unit::set_is_evade_disabled(bool value) {
 
 // optional bool is_hexed = 76;
 inline bool CMsgBotWorldState_Unit::has_is_hexed() const {
-  return (_has_bits_[1] & 0x00000800u) != 0;
+  return (_has_bits_[1] & 0x00001000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_hexed() {
-  _has_bits_[1] |= 0x00000800u;
+  _has_bits_[1] |= 0x00001000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_hexed() {
-  _has_bits_[1] &= ~0x00000800u;
+  _has_bits_[1] &= ~0x00001000u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_hexed() {
   is_hexed_ = false;
@@ -7028,13 +7102,13 @@ inline void CMsgBotWorldState_Unit::set_is_hexed(bool value) {
 
 // optional bool is_invisible = 77;
 inline bool CMsgBotWorldState_Unit::has_is_invisible() const {
-  return (_has_bits_[1] & 0x00001000u) != 0;
+  return (_has_bits_[1] & 0x00002000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_invisible() {
-  _has_bits_[1] |= 0x00001000u;
+  _has_bits_[1] |= 0x00002000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_invisible() {
-  _has_bits_[1] &= ~0x00001000u;
+  _has_bits_[1] &= ~0x00002000u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_invisible() {
   is_invisible_ = false;
@@ -7052,13 +7126,13 @@ inline void CMsgBotWorldState_Unit::set_is_invisible(bool value) {
 
 // optional bool is_invulnerable = 78;
 inline bool CMsgBotWorldState_Unit::has_is_invulnerable() const {
-  return (_has_bits_[1] & 0x00002000u) != 0;
+  return (_has_bits_[1] & 0x00004000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_invulnerable() {
-  _has_bits_[1] |= 0x00002000u;
+  _has_bits_[1] |= 0x00004000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_invulnerable() {
-  _has_bits_[1] &= ~0x00002000u;
+  _has_bits_[1] &= ~0x00004000u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_invulnerable() {
   is_invulnerable_ = false;
@@ -7076,13 +7150,13 @@ inline void CMsgBotWorldState_Unit::set_is_invulnerable(bool value) {
 
 // optional bool is_magic_immune = 79;
 inline bool CMsgBotWorldState_Unit::has_is_magic_immune() const {
-  return (_has_bits_[1] & 0x00004000u) != 0;
+  return (_has_bits_[1] & 0x00008000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_magic_immune() {
-  _has_bits_[1] |= 0x00004000u;
+  _has_bits_[1] |= 0x00008000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_magic_immune() {
-  _has_bits_[1] &= ~0x00004000u;
+  _has_bits_[1] &= ~0x00008000u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_magic_immune() {
   is_magic_immune_ = false;
@@ -7484,13 +7558,13 @@ inline void CMsgBotWorldState_Unit::set_primary_attribute(::google::protobuf::ui
 
 // optional bool is_illusion = 111;
 inline bool CMsgBotWorldState_Unit::has_is_illusion() const {
-  return (_has_bits_[2] & 0x00000200u) != 0;
+  return (_has_bits_[2] & 0x00002000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_illusion() {
-  _has_bits_[2] |= 0x00000200u;
+  _has_bits_[2] |= 0x00002000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_illusion() {
-  _has_bits_[2] &= ~0x00000200u;
+  _has_bits_[2] &= ~0x00002000u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_illusion() {
   is_illusion_ = false;
@@ -7554,7 +7628,7 @@ inline void CMsgBotWorldState_Unit::set_buyback_cost(::google::protobuf::uint32 
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.buyback_cost)
 }
 
-// optional uint32 buyback_cooldown = 114;
+// optional float buyback_cooldown = 114;
 inline bool CMsgBotWorldState_Unit::has_buyback_cooldown() const {
   return (_has_bits_[1] & 0x20000000u) != 0;
 }
@@ -7565,44 +7639,44 @@ inline void CMsgBotWorldState_Unit::clear_has_buyback_cooldown() {
   _has_bits_[1] &= ~0x20000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_buyback_cooldown() {
-  buyback_cooldown_ = 0u;
+  buyback_cooldown_ = 0;
   clear_has_buyback_cooldown();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_Unit::buyback_cooldown() const {
+inline float CMsgBotWorldState_Unit::buyback_cooldown() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.buyback_cooldown)
   return buyback_cooldown_;
 }
-inline void CMsgBotWorldState_Unit::set_buyback_cooldown(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_Unit::set_buyback_cooldown(float value) {
   set_has_buyback_cooldown();
   buyback_cooldown_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.buyback_cooldown)
 }
 
-// optional float spell_amplifiction = 115;
-inline bool CMsgBotWorldState_Unit::has_spell_amplifiction() const {
+// optional float spell_amplification = 115;
+inline bool CMsgBotWorldState_Unit::has_spell_amplification() const {
   return (_has_bits_[1] & 0x40000000u) != 0;
 }
-inline void CMsgBotWorldState_Unit::set_has_spell_amplifiction() {
+inline void CMsgBotWorldState_Unit::set_has_spell_amplification() {
   _has_bits_[1] |= 0x40000000u;
 }
-inline void CMsgBotWorldState_Unit::clear_has_spell_amplifiction() {
+inline void CMsgBotWorldState_Unit::clear_has_spell_amplification() {
   _has_bits_[1] &= ~0x40000000u;
 }
-inline void CMsgBotWorldState_Unit::clear_spell_amplifiction() {
-  spell_amplifiction_ = 0;
-  clear_has_spell_amplifiction();
+inline void CMsgBotWorldState_Unit::clear_spell_amplification() {
+  spell_amplification_ = 0;
+  clear_has_spell_amplification();
 }
-inline float CMsgBotWorldState_Unit::spell_amplifiction() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.spell_amplifiction)
-  return spell_amplifiction_;
+inline float CMsgBotWorldState_Unit::spell_amplification() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.spell_amplification)
+  return spell_amplification_;
 }
-inline void CMsgBotWorldState_Unit::set_spell_amplifiction(float value) {
-  set_has_spell_amplifiction();
-  spell_amplifiction_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.spell_amplifiction)
+inline void CMsgBotWorldState_Unit::set_spell_amplification(float value) {
+  set_has_spell_amplification();
+  spell_amplification_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.spell_amplification)
 }
 
-// optional uint32 armor = 116;
+// optional float armor = 116;
 inline bool CMsgBotWorldState_Unit::has_armor() const {
   return (_has_bits_[1] & 0x80000000u) != 0;
 }
@@ -7613,20 +7687,20 @@ inline void CMsgBotWorldState_Unit::clear_has_armor() {
   _has_bits_[1] &= ~0x80000000u;
 }
 inline void CMsgBotWorldState_Unit::clear_armor() {
-  armor_ = 0u;
+  armor_ = 0;
   clear_has_armor();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_Unit::armor() const {
+inline float CMsgBotWorldState_Unit::armor() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.armor)
   return armor_;
 }
-inline void CMsgBotWorldState_Unit::set_armor(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_Unit::set_armor(float value) {
   set_has_armor();
   armor_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.armor)
 }
 
-// optional uint32 magic_resist = 117;
+// optional float magic_resist = 117;
 inline bool CMsgBotWorldState_Unit::has_magic_resist() const {
   return (_has_bits_[2] & 0x00000001u) != 0;
 }
@@ -7637,14 +7711,14 @@ inline void CMsgBotWorldState_Unit::clear_has_magic_resist() {
   _has_bits_[2] &= ~0x00000001u;
 }
 inline void CMsgBotWorldState_Unit::clear_magic_resist() {
-  magic_resist_ = 0u;
+  magic_resist_ = 0;
   clear_has_magic_resist();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState_Unit::magic_resist() const {
+inline float CMsgBotWorldState_Unit::magic_resist() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.magic_resist)
   return magic_resist_;
 }
-inline void CMsgBotWorldState_Unit::set_magic_resist(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState_Unit::set_magic_resist(float value) {
   set_has_magic_resist();
   magic_resist_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.magic_resist)
@@ -7818,15 +7892,111 @@ inline void CMsgBotWorldState_Unit::set_denies(::google::protobuf::uint32 value)
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.denies)
 }
 
-// optional float remaining_lifespan = 130;
-inline bool CMsgBotWorldState_Unit::has_remaining_lifespan() const {
+// optional uint32 net_worth = 126;
+inline bool CMsgBotWorldState_Unit::has_net_worth() const {
   return (_has_bits_[2] & 0x00000100u) != 0;
 }
-inline void CMsgBotWorldState_Unit::set_has_remaining_lifespan() {
+inline void CMsgBotWorldState_Unit::set_has_net_worth() {
   _has_bits_[2] |= 0x00000100u;
 }
-inline void CMsgBotWorldState_Unit::clear_has_remaining_lifespan() {
+inline void CMsgBotWorldState_Unit::clear_has_net_worth() {
   _has_bits_[2] &= ~0x00000100u;
+}
+inline void CMsgBotWorldState_Unit::clear_net_worth() {
+  net_worth_ = 0u;
+  clear_has_net_worth();
+}
+inline ::google::protobuf::uint32 CMsgBotWorldState_Unit::net_worth() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.net_worth)
+  return net_worth_;
+}
+inline void CMsgBotWorldState_Unit::set_net_worth(::google::protobuf::uint32 value) {
+  set_has_net_worth();
+  net_worth_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.net_worth)
+}
+
+// optional uint32 strength = 127;
+inline bool CMsgBotWorldState_Unit::has_strength() const {
+  return (_has_bits_[2] & 0x00000200u) != 0;
+}
+inline void CMsgBotWorldState_Unit::set_has_strength() {
+  _has_bits_[2] |= 0x00000200u;
+}
+inline void CMsgBotWorldState_Unit::clear_has_strength() {
+  _has_bits_[2] &= ~0x00000200u;
+}
+inline void CMsgBotWorldState_Unit::clear_strength() {
+  strength_ = 0u;
+  clear_has_strength();
+}
+inline ::google::protobuf::uint32 CMsgBotWorldState_Unit::strength() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.strength)
+  return strength_;
+}
+inline void CMsgBotWorldState_Unit::set_strength(::google::protobuf::uint32 value) {
+  set_has_strength();
+  strength_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.strength)
+}
+
+// optional uint32 agility = 128;
+inline bool CMsgBotWorldState_Unit::has_agility() const {
+  return (_has_bits_[2] & 0x00000400u) != 0;
+}
+inline void CMsgBotWorldState_Unit::set_has_agility() {
+  _has_bits_[2] |= 0x00000400u;
+}
+inline void CMsgBotWorldState_Unit::clear_has_agility() {
+  _has_bits_[2] &= ~0x00000400u;
+}
+inline void CMsgBotWorldState_Unit::clear_agility() {
+  agility_ = 0u;
+  clear_has_agility();
+}
+inline ::google::protobuf::uint32 CMsgBotWorldState_Unit::agility() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.agility)
+  return agility_;
+}
+inline void CMsgBotWorldState_Unit::set_agility(::google::protobuf::uint32 value) {
+  set_has_agility();
+  agility_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.agility)
+}
+
+// optional uint32 intelligence = 129;
+inline bool CMsgBotWorldState_Unit::has_intelligence() const {
+  return (_has_bits_[2] & 0x00000800u) != 0;
+}
+inline void CMsgBotWorldState_Unit::set_has_intelligence() {
+  _has_bits_[2] |= 0x00000800u;
+}
+inline void CMsgBotWorldState_Unit::clear_has_intelligence() {
+  _has_bits_[2] &= ~0x00000800u;
+}
+inline void CMsgBotWorldState_Unit::clear_intelligence() {
+  intelligence_ = 0u;
+  clear_has_intelligence();
+}
+inline ::google::protobuf::uint32 CMsgBotWorldState_Unit::intelligence() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.Unit.intelligence)
+  return intelligence_;
+}
+inline void CMsgBotWorldState_Unit::set_intelligence(::google::protobuf::uint32 value) {
+  set_has_intelligence();
+  intelligence_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.Unit.intelligence)
+}
+
+// optional float remaining_lifespan = 130;
+inline bool CMsgBotWorldState_Unit::has_remaining_lifespan() const {
+  return (_has_bits_[2] & 0x00001000u) != 0;
+}
+inline void CMsgBotWorldState_Unit::set_has_remaining_lifespan() {
+  _has_bits_[2] |= 0x00001000u;
+}
+inline void CMsgBotWorldState_Unit::clear_has_remaining_lifespan() {
+  _has_bits_[2] &= ~0x00001000u;
 }
 inline void CMsgBotWorldState_Unit::clear_remaining_lifespan() {
   remaining_lifespan_ = 0;
@@ -7844,13 +8014,13 @@ inline void CMsgBotWorldState_Unit::set_remaining_lifespan(float value) {
 
 // optional bool flying_courier = 140;
 inline bool CMsgBotWorldState_Unit::has_flying_courier() const {
-  return (_has_bits_[2] & 0x00000400u) != 0;
+  return (_has_bits_[2] & 0x00004000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_flying_courier() {
-  _has_bits_[2] |= 0x00000400u;
+  _has_bits_[2] |= 0x00004000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_flying_courier() {
-  _has_bits_[2] &= ~0x00000400u;
+  _has_bits_[2] &= ~0x00004000u;
 }
 inline void CMsgBotWorldState_Unit::clear_flying_courier() {
   flying_courier_ = false;
@@ -7868,13 +8038,13 @@ inline void CMsgBotWorldState_Unit::set_flying_courier(bool value) {
 
 // optional float shrine_cooldown = 150;
 inline bool CMsgBotWorldState_Unit::has_shrine_cooldown() const {
-  return (_has_bits_[1] & 0x00008000u) != 0;
+  return (_has_bits_[2] & 0x00010000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_shrine_cooldown() {
-  _has_bits_[1] |= 0x00008000u;
+  _has_bits_[2] |= 0x00010000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_shrine_cooldown() {
-  _has_bits_[1] &= ~0x00008000u;
+  _has_bits_[2] &= ~0x00010000u;
 }
 inline void CMsgBotWorldState_Unit::clear_shrine_cooldown() {
   shrine_cooldown_ = 0;
@@ -7892,13 +8062,13 @@ inline void CMsgBotWorldState_Unit::set_shrine_cooldown(float value) {
 
 // optional bool is_shrine_healing = 151;
 inline bool CMsgBotWorldState_Unit::has_is_shrine_healing() const {
-  return (_has_bits_[2] & 0x00000800u) != 0;
+  return (_has_bits_[2] & 0x00008000u) != 0;
 }
 inline void CMsgBotWorldState_Unit::set_has_is_shrine_healing() {
-  _has_bits_[2] |= 0x00000800u;
+  _has_bits_[2] |= 0x00008000u;
 }
 inline void CMsgBotWorldState_Unit::clear_has_is_shrine_healing() {
-  _has_bits_[2] &= ~0x00000800u;
+  _has_bits_[2] &= ~0x00008000u;
 }
 inline void CMsgBotWorldState_Unit::clear_is_shrine_healing() {
   is_shrine_healing_ = false;
@@ -7942,7 +8112,7 @@ inline void CMsgBotWorldState::set_team_id(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.team_id)
 }
 
-// optional uint32 game_time = 2;
+// optional float game_time = 2;
 inline bool CMsgBotWorldState::has_game_time() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -7953,20 +8123,20 @@ inline void CMsgBotWorldState::clear_has_game_time() {
   _has_bits_[0] &= ~0x00000002u;
 }
 inline void CMsgBotWorldState::clear_game_time() {
-  game_time_ = 0u;
+  game_time_ = 0;
   clear_has_game_time();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState::game_time() const {
+inline float CMsgBotWorldState::game_time() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.game_time)
   return game_time_;
 }
-inline void CMsgBotWorldState::set_game_time(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState::set_game_time(float value) {
   set_has_game_time();
   game_time_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.game_time)
 }
 
-// optional uint32 dota_time = 3;
+// optional float dota_time = 3;
 inline bool CMsgBotWorldState::has_dota_time() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -7977,14 +8147,14 @@ inline void CMsgBotWorldState::clear_has_dota_time() {
   _has_bits_[0] &= ~0x00000004u;
 }
 inline void CMsgBotWorldState::clear_dota_time() {
-  dota_time_ = 0u;
+  dota_time_ = 0;
   clear_has_dota_time();
 }
-inline ::google::protobuf::uint32 CMsgBotWorldState::dota_time() const {
+inline float CMsgBotWorldState::dota_time() const {
   // @@protoc_insertion_point(field_get:proto.dota.CMsgBotWorldState.dota_time)
   return dota_time_;
 }
-inline void CMsgBotWorldState::set_dota_time(::google::protobuf::uint32 value) {
+inline void CMsgBotWorldState::set_dota_time(float value) {
   set_has_dota_time();
   dota_time_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgBotWorldState.dota_time)

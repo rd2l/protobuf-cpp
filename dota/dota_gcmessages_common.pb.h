@@ -270,6 +270,18 @@ extern CMsgDOTAHasItemQueryDefaultTypeInternal _CMsgDOTAHasItemQuery_default_ins
 class CMsgDOTAHasItemResponse;
 class CMsgDOTAHasItemResponseDefaultTypeInternal;
 extern CMsgDOTAHasItemResponseDefaultTypeInternal _CMsgDOTAHasItemResponse_default_instance_;
+class CMsgDOTALeagueTournament;
+class CMsgDOTALeagueTournamentDefaultTypeInternal;
+extern CMsgDOTALeagueTournamentDefaultTypeInternal _CMsgDOTALeagueTournament_default_instance_;
+class CMsgDOTALeagueTournament_Node;
+class CMsgDOTALeagueTournament_NodeDefaultTypeInternal;
+extern CMsgDOTALeagueTournament_NodeDefaultTypeInternal _CMsgDOTALeagueTournament_Node_default_instance_;
+class CMsgDOTALeagueTournament_NodeGroup;
+class CMsgDOTALeagueTournament_NodeGroupDefaultTypeInternal;
+extern CMsgDOTALeagueTournament_NodeGroupDefaultTypeInternal _CMsgDOTALeagueTournament_NodeGroup_default_instance_;
+class CMsgDOTALeagueTournament_TeamStanding;
+class CMsgDOTALeagueTournament_TeamStandingDefaultTypeInternal;
+extern CMsgDOTALeagueTournament_TeamStandingDefaultTypeInternal _CMsgDOTALeagueTournament_TeamStanding_default_instance_;
 class CMsgDOTAMatch;
 class CMsgDOTAMatchDefaultTypeInternal;
 extern CMsgDOTAMatchDefaultTypeInternal _CMsgDOTAMatch_default_instance_;
@@ -423,6 +435,12 @@ extern CMsgDPPartnerMicroTxns_PartnerInfoDefaultTypeInternal _CMsgDPPartnerMicro
 class CMsgDPPartnerMicroTxns_PartnerMicroTxn;
 class CMsgDPPartnerMicroTxns_PartnerMicroTxnDefaultTypeInternal;
 extern CMsgDPPartnerMicroTxns_PartnerMicroTxnDefaultTypeInternal _CMsgDPPartnerMicroTxns_PartnerMicroTxn_default_instance_;
+class CMsgGCCheckClanMembership;
+class CMsgGCCheckClanMembershipDefaultTypeInternal;
+extern CMsgGCCheckClanMembershipDefaultTypeInternal _CMsgGCCheckClanMembership_default_instance_;
+class CMsgGCCheckClanMembership_Response;
+class CMsgGCCheckClanMembership_ResponseDefaultTypeInternal;
+extern CMsgGCCheckClanMembership_ResponseDefaultTypeInternal _CMsgGCCheckClanMembership_Response_default_instance_;
 class CMsgGCCheckFriendship;
 class CMsgGCCheckFriendshipDefaultTypeInternal;
 extern CMsgGCCheckFriendshipDefaultTypeInternal _CMsgGCCheckFriendship_default_instance_;
@@ -474,6 +492,9 @@ extern CMsgGCGetPlayerCardItemInfoResponseDefaultTypeInternal _CMsgGCGetPlayerCa
 class CMsgGCGetPlayerCardItemInfoResponse_PlayerCardInfo;
 class CMsgGCGetPlayerCardItemInfoResponse_PlayerCardInfoDefaultTypeInternal;
 extern CMsgGCGetPlayerCardItemInfoResponse_PlayerCardInfoDefaultTypeInternal _CMsgGCGetPlayerCardItemInfoResponse_PlayerCardInfo_default_instance_;
+class CMsgGCHAccountTwoFactorChange;
+class CMsgGCHAccountTwoFactorChangeDefaultTypeInternal;
+extern CMsgGCHAccountTwoFactorChangeDefaultTypeInternal _CMsgGCHAccountTwoFactorChange_default_instance_;
 class CMsgGCHAccountVacStatusChange;
 class CMsgGCHAccountVacStatusChangeDefaultTypeInternal;
 extern CMsgGCHAccountVacStatusChangeDefaultTypeInternal _CMsgGCHAccountVacStatusChange_default_instance_;
@@ -621,6 +642,9 @@ extern CMsgLobbyEventPoints_AccountPointsDefaultTypeInternal _CMsgLobbyEventPoin
 class CMsgLobbyEventPoints_ChatWheelMessageRange;
 class CMsgLobbyEventPoints_ChatWheelMessageRangeDefaultTypeInternal;
 extern CMsgLobbyEventPoints_ChatWheelMessageRangeDefaultTypeInternal _CMsgLobbyEventPoints_ChatWheelMessageRange_default_instance_;
+class CMsgLocalServerFakeLobbyData;
+class CMsgLocalServerFakeLobbyDataDefaultTypeInternal;
+extern CMsgLocalServerFakeLobbyDataDefaultTypeInternal _CMsgLocalServerFakeLobbyData_default_instance_;
 class CMsgNotificationOfSuspiciousActivity;
 class CMsgNotificationOfSuspiciousActivityDefaultTypeInternal;
 extern CMsgNotificationOfSuspiciousActivityDefaultTypeInternal _CMsgNotificationOfSuspiciousActivity_default_instance_;
@@ -708,6 +732,9 @@ extern CProtoItemTeamShowcaseDefaultTypeInternal _CProtoItemTeamShowcase_default
 class CSODOTAGameAccountClient;
 class CSODOTAGameAccountClientDefaultTypeInternal;
 extern CSODOTAGameAccountClientDefaultTypeInternal _CSODOTAGameAccountClient_default_instance_;
+class CSODOTAGameAccountPrime;
+class CSODOTAGameAccountPrimeDefaultTypeInternal;
+extern CSODOTAGameAccountPrimeDefaultTypeInternal _CSODOTAGameAccountPrime_default_instance_;
 class CSODOTAMapLocationState;
 class CSODOTAMapLocationStateDefaultTypeInternal;
 extern CSODOTAMapLocationStateDefaultTypeInternal _CSODOTAMapLocationState_default_instance_;
@@ -786,11 +813,12 @@ inline bool CMsgDOTAProfileCard_EStatID_Parse(
 }
 enum CSODOTAPlayerChallenge_EFlags {
   CSODOTAPlayerChallenge_EFlags_eFlag_InstantRerollUncompleted = 1,
-  CSODOTAPlayerChallenge_EFlags_eFlag_QuestChallenge = 2
+  CSODOTAPlayerChallenge_EFlags_eFlag_QuestChallenge = 2,
+  CSODOTAPlayerChallenge_EFlags_eFlag_MultiMatch = 3
 };
 bool CSODOTAPlayerChallenge_EFlags_IsValid(int value);
 const CSODOTAPlayerChallenge_EFlags CSODOTAPlayerChallenge_EFlags_EFlags_MIN = CSODOTAPlayerChallenge_EFlags_eFlag_InstantRerollUncompleted;
-const CSODOTAPlayerChallenge_EFlags CSODOTAPlayerChallenge_EFlags_EFlags_MAX = CSODOTAPlayerChallenge_EFlags_eFlag_QuestChallenge;
+const CSODOTAPlayerChallenge_EFlags CSODOTAPlayerChallenge_EFlags_EFlags_MAX = CSODOTAPlayerChallenge_EFlags_eFlag_MultiMatch;
 const int CSODOTAPlayerChallenge_EFlags_EFlags_ARRAYSIZE = CSODOTAPlayerChallenge_EFlags_EFlags_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* CSODOTAPlayerChallenge_EFlags_descriptor();
@@ -1024,6 +1052,53 @@ inline bool CMsgDOTAMatch_ReplayState_Parse(
     const ::std::string& name, CMsgDOTAMatch_ReplayState* value) {
   return ::google::protobuf::internal::ParseNamedEnum<CMsgDOTAMatch_ReplayState>(
     CMsgDOTAMatch_ReplayState_descriptor(), name, value);
+}
+enum CMsgDOTALeagueTournament_ENodeGroupType {
+  CMsgDOTALeagueTournament_ENodeGroupType_INVALID_GROUP_TYPE = 0,
+  CMsgDOTALeagueTournament_ENodeGroupType_ORGANIZATIONAL = 1,
+  CMsgDOTALeagueTournament_ENodeGroupType_ROUND_ROBIN = 2,
+  CMsgDOTALeagueTournament_ENodeGroupType_SWISS = 3,
+  CMsgDOTALeagueTournament_ENodeGroupType_BRACKET_SINGLE = 4,
+  CMsgDOTALeagueTournament_ENodeGroupType_BRACKET_DOUBLE_SEED_LOSER = 5,
+  CMsgDOTALeagueTournament_ENodeGroupType_BRACKET_DOUBLE_ALL_WINNER = 6,
+  CMsgDOTALeagueTournament_ENodeGroupType_BRACKET_SHOWMATCH = 7
+};
+bool CMsgDOTALeagueTournament_ENodeGroupType_IsValid(int value);
+const CMsgDOTALeagueTournament_ENodeGroupType CMsgDOTALeagueTournament_ENodeGroupType_ENodeGroupType_MIN = CMsgDOTALeagueTournament_ENodeGroupType_INVALID_GROUP_TYPE;
+const CMsgDOTALeagueTournament_ENodeGroupType CMsgDOTALeagueTournament_ENodeGroupType_ENodeGroupType_MAX = CMsgDOTALeagueTournament_ENodeGroupType_BRACKET_SHOWMATCH;
+const int CMsgDOTALeagueTournament_ENodeGroupType_ENodeGroupType_ARRAYSIZE = CMsgDOTALeagueTournament_ENodeGroupType_ENodeGroupType_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* CMsgDOTALeagueTournament_ENodeGroupType_descriptor();
+inline const ::std::string& CMsgDOTALeagueTournament_ENodeGroupType_Name(CMsgDOTALeagueTournament_ENodeGroupType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    CMsgDOTALeagueTournament_ENodeGroupType_descriptor(), value);
+}
+inline bool CMsgDOTALeagueTournament_ENodeGroupType_Parse(
+    const ::std::string& name, CMsgDOTALeagueTournament_ENodeGroupType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<CMsgDOTALeagueTournament_ENodeGroupType>(
+    CMsgDOTALeagueTournament_ENodeGroupType_descriptor(), name, value);
+}
+enum CMsgDOTALeagueTournament_ENodeType {
+  CMsgDOTALeagueTournament_ENodeType_INVALID_NODE_TYPE = 0,
+  CMsgDOTALeagueTournament_ENodeType_BEST_OF_ONE = 1,
+  CMsgDOTALeagueTournament_ENodeType_BEST_OF_THREE = 2,
+  CMsgDOTALeagueTournament_ENodeType_BEST_OF_FIVE = 3,
+  CMsgDOTALeagueTournament_ENodeType_BEST_OF_TWO = 4
+};
+bool CMsgDOTALeagueTournament_ENodeType_IsValid(int value);
+const CMsgDOTALeagueTournament_ENodeType CMsgDOTALeagueTournament_ENodeType_ENodeType_MIN = CMsgDOTALeagueTournament_ENodeType_INVALID_NODE_TYPE;
+const CMsgDOTALeagueTournament_ENodeType CMsgDOTALeagueTournament_ENodeType_ENodeType_MAX = CMsgDOTALeagueTournament_ENodeType_BEST_OF_TWO;
+const int CMsgDOTALeagueTournament_ENodeType_ENodeType_ARRAYSIZE = CMsgDOTALeagueTournament_ENodeType_ENodeType_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* CMsgDOTALeagueTournament_ENodeType_descriptor();
+inline const ::std::string& CMsgDOTALeagueTournament_ENodeType_Name(CMsgDOTALeagueTournament_ENodeType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    CMsgDOTALeagueTournament_ENodeType_descriptor(), value);
+}
+inline bool CMsgDOTALeagueTournament_ENodeType_Parse(
+    const ::std::string& name, CMsgDOTALeagueTournament_ENodeType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<CMsgDOTALeagueTournament_ENodeType>(
+    CMsgDOTALeagueTournament_ENodeType_descriptor(), name, value);
 }
 enum ESpecialPingValue {
   k_ESpecialPingValue_NoData = 16382,
@@ -1927,6 +2002,118 @@ class CSODOTAGameAccountClient : public ::google::protobuf::Message /* @@protoc_
 };
 // -------------------------------------------------------------------
 
+class CSODOTAGameAccountPrime : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CSODOTAGameAccountPrime) */ {
+ public:
+  CSODOTAGameAccountPrime();
+  virtual ~CSODOTAGameAccountPrime();
+
+  CSODOTAGameAccountPrime(const CSODOTAGameAccountPrime& from);
+
+  inline CSODOTAGameAccountPrime& operator=(const CSODOTAGameAccountPrime& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CSODOTAGameAccountPrime& default_instance();
+
+  static inline const CSODOTAGameAccountPrime* internal_default_instance() {
+    return reinterpret_cast<const CSODOTAGameAccountPrime*>(
+               &_CSODOTAGameAccountPrime_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    1;
+
+  void Swap(CSODOTAGameAccountPrime* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CSODOTAGameAccountPrime* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CSODOTAGameAccountPrime* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CSODOTAGameAccountPrime& from);
+  void MergeFrom(const CSODOTAGameAccountPrime& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CSODOTAGameAccountPrime* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 account_id = 1 [(.proto.dota.key_field) = true];
+  bool has_account_id() const;
+  void clear_account_id();
+  static const int kAccountIdFieldNumber = 1;
+  ::google::protobuf::uint32 account_id() const;
+  void set_account_id(::google::protobuf::uint32 value);
+
+  // optional uint32 original_start_date = 2;
+  bool has_original_start_date() const;
+  void clear_original_start_date();
+  static const int kOriginalStartDateFieldNumber = 2;
+  ::google::protobuf::uint32 original_start_date() const;
+  void set_original_start_date(::google::protobuf::uint32 value);
+
+  // optional uint32 prime_flags = 3;
+  bool has_prime_flags() const;
+  void clear_prime_flags();
+  static const int kPrimeFlagsFieldNumber = 3;
+  ::google::protobuf::uint32 prime_flags() const;
+  void set_prime_flags(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CSODOTAGameAccountPrime)
+ private:
+  void set_has_account_id();
+  void clear_has_account_id();
+  void set_has_original_start_date();
+  void clear_has_original_start_date();
+  void set_has_prime_flags();
+  void clear_has_prime_flags();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 account_id_;
+  ::google::protobuf::uint32 original_start_date_;
+  ::google::protobuf::uint32 prime_flags_;
+  friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class CMsgLobbyEventPoints_ChatWheelMessageRange : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgLobbyEventPoints.ChatWheelMessageRange) */ {
  public:
   CMsgLobbyEventPoints_ChatWheelMessageRange();
@@ -1955,7 +2142,7 @@ class CMsgLobbyEventPoints_ChatWheelMessageRange : public ::google::protobuf::Me
                &_CMsgLobbyEventPoints_ChatWheelMessageRange_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    1;
+    2;
 
   void Swap(CMsgLobbyEventPoints_ChatWheelMessageRange* other);
 
@@ -2057,7 +2244,7 @@ class CMsgLobbyEventPoints_AccountPoints : public ::google::protobuf::Message /*
                &_CMsgLobbyEventPoints_AccountPoints_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    2;
+    3;
 
   void Swap(CMsgLobbyEventPoints_AccountPoints* other);
 
@@ -2292,7 +2479,7 @@ class CMsgLobbyEventPoints : public ::google::protobuf::Message /* @@protoc_inse
                &_CMsgLobbyEventPoints_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    3;
+    4;
 
   void Swap(CMsgLobbyEventPoints* other);
 
@@ -2372,6 +2559,131 @@ class CMsgLobbyEventPoints : public ::google::protobuf::Message /* @@protoc_inse
 };
 // -------------------------------------------------------------------
 
+class CMsgLocalServerFakeLobbyData : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgLocalServerFakeLobbyData) */ {
+ public:
+  CMsgLocalServerFakeLobbyData();
+  virtual ~CMsgLocalServerFakeLobbyData();
+
+  CMsgLocalServerFakeLobbyData(const CMsgLocalServerFakeLobbyData& from);
+
+  inline CMsgLocalServerFakeLobbyData& operator=(const CMsgLocalServerFakeLobbyData& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgLocalServerFakeLobbyData& default_instance();
+
+  static inline const CMsgLocalServerFakeLobbyData* internal_default_instance() {
+    return reinterpret_cast<const CMsgLocalServerFakeLobbyData*>(
+               &_CMsgLocalServerFakeLobbyData_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    5;
+
+  void Swap(CMsgLocalServerFakeLobbyData* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgLocalServerFakeLobbyData* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgLocalServerFakeLobbyData* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgLocalServerFakeLobbyData& from);
+  void MergeFrom(const CMsgLocalServerFakeLobbyData& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgLocalServerFakeLobbyData* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .proto.dota.CMsgLobbyEventPoints event_points = 2;
+  int event_points_size() const;
+  void clear_event_points();
+  static const int kEventPointsFieldNumber = 2;
+  const ::proto::dota::CMsgLobbyEventPoints& event_points(int index) const;
+  ::proto::dota::CMsgLobbyEventPoints* mutable_event_points(int index);
+  ::proto::dota::CMsgLobbyEventPoints* add_event_points();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgLobbyEventPoints >*
+      mutable_event_points();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgLobbyEventPoints >&
+      event_points() const;
+
+  // optional uint32 account_id = 1;
+  bool has_account_id() const;
+  void clear_account_id();
+  static const int kAccountIdFieldNumber = 1;
+  ::google::protobuf::uint32 account_id() const;
+  void set_account_id(::google::protobuf::uint32 value);
+
+  // optional bool is_prime_subscriber = 3;
+  bool has_is_prime_subscriber() const;
+  void clear_is_prime_subscriber();
+  static const int kIsPrimeSubscriberFieldNumber = 3;
+  bool is_prime_subscriber() const;
+  void set_is_prime_subscriber(bool value);
+
+  // optional uint32 primary_event_id = 4;
+  bool has_primary_event_id() const;
+  void clear_primary_event_id();
+  static const int kPrimaryEventIdFieldNumber = 4;
+  ::google::protobuf::uint32 primary_event_id() const;
+  void set_primary_event_id(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgLocalServerFakeLobbyData)
+ private:
+  void set_has_account_id();
+  void clear_has_account_id();
+  void set_has_is_prime_subscriber();
+  void clear_has_is_prime_subscriber();
+  void set_has_primary_event_id();
+  void clear_has_primary_event_id();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgLobbyEventPoints > event_points_;
+  ::google::protobuf::uint32 account_id_;
+  bool is_prime_subscriber_;
+  ::google::protobuf::uint32 primary_event_id_;
+  friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class CMsgBattleCupVictory : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgBattleCupVictory) */ {
  public:
   CMsgBattleCupVictory();
@@ -2400,7 +2712,7 @@ class CMsgBattleCupVictory : public ::google::protobuf::Message /* @@protoc_inse
                &_CMsgBattleCupVictory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    4;
+    6;
 
   void Swap(CMsgBattleCupVictory* other);
 
@@ -2572,7 +2884,7 @@ class CMsgLobbyBattleCupVictoryList : public ::google::protobuf::Message /* @@pr
                &_CMsgLobbyBattleCupVictoryList_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
+    7;
 
   void Swap(CMsgLobbyBattleCupVictoryList* other);
 
@@ -2667,7 +2979,7 @@ class CMsgDOTABroadcastNotification : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTABroadcastNotification_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    6;
+    8;
 
   void Swap(CMsgDOTABroadcastNotification* other);
 
@@ -2767,7 +3079,7 @@ class CProtoItemHeroStatue : public ::google::protobuf::Message /* @@protoc_inse
                &_CProtoItemHeroStatue_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    7;
+    9;
 
   void Swap(CProtoItemHeroStatue* other);
 
@@ -2951,7 +3263,7 @@ class CProtoItemTeamShowcase : public ::google::protobuf::Message /* @@protoc_in
                &_CProtoItemTeamShowcase_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    10;
 
   void Swap(CProtoItemTeamShowcase* other);
 
@@ -3125,7 +3437,7 @@ class CMatchPlayerAbilityUpgrade : public ::google::protobuf::Message /* @@proto
                &_CMatchPlayerAbilityUpgrade_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    9;
+    11;
 
   void Swap(CMatchPlayerAbilityUpgrade* other);
 
@@ -3227,7 +3539,7 @@ class CMatchAdditionalUnitInventory : public ::google::protobuf::Message /* @@pr
                &_CMatchAdditionalUnitInventory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    10;
+    12;
 
   void Swap(CMatchAdditionalUnitInventory* other);
 
@@ -3340,7 +3652,7 @@ class CMatchPlayerPermanentBuff : public ::google::protobuf::Message /* @@protoc
                &_CMatchPlayerPermanentBuff_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    11;
+    13;
 
   void Swap(CMatchPlayerPermanentBuff* other);
 
@@ -3442,7 +3754,7 @@ class CMatchHeroSelectEvent : public ::google::protobuf::Message /* @@protoc_ins
                &_CMatchHeroSelectEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    12;
+    14;
 
   void Swap(CMatchHeroSelectEvent* other);
 
@@ -3554,7 +3866,7 @@ class CMsgDOTAProcessFantasyScheduledEvent : public ::google::protobuf::Message 
                &_CMsgDOTAProcessFantasyScheduledEvent_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    13;
+    15;
 
   void Swap(CMsgDOTAProcessFantasyScheduledEvent* other);
 
@@ -3686,7 +3998,7 @@ class CMsgDOTAHasItemQuery : public ::google::protobuf::Message /* @@protoc_inse
                &_CMsgDOTAHasItemQuery_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    14;
+    16;
 
   void Swap(CMsgDOTAHasItemQuery* other);
 
@@ -3788,7 +4100,7 @@ class CMsgDOTAHasItemResponse : public ::google::protobuf::Message /* @@protoc_i
                &_CMsgDOTAHasItemResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    15;
+    17;
 
   void Swap(CMsgDOTAHasItemResponse* other);
 
@@ -3880,7 +4192,7 @@ class CMsgGCIsProQuery : public ::google::protobuf::Message /* @@protoc_insertio
                &_CMsgGCIsProQuery_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    16;
+    18;
 
   void Swap(CMsgGCIsProQuery* other);
 
@@ -3972,7 +4284,7 @@ class CMsgGCIsProResponse : public ::google::protobuf::Message /* @@protoc_inser
                &_CMsgGCIsProResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    17;
+    19;
 
   void Swap(CMsgGCIsProResponse* other);
 
@@ -4064,7 +4376,7 @@ class CMsgDOTAHasItemDefsQuery : public ::google::protobuf::Message /* @@protoc_
                &_CMsgDOTAHasItemDefsQuery_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    18;
+    20;
 
   void Swap(CMsgDOTAHasItemDefsQuery* other);
 
@@ -4169,7 +4481,7 @@ class CMsgDOTAHasItemDefsResponse : public ::google::protobuf::Message /* @@prot
                &_CMsgDOTAHasItemDefsResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    19;
+    21;
 
   void Swap(CMsgDOTAHasItemDefsResponse* other);
 
@@ -4261,7 +4573,7 @@ class CMsgGCGetPlayerCardItemInfo : public ::google::protobuf::Message /* @@prot
                &_CMsgGCGetPlayerCardItemInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    20;
+    22;
 
   void Swap(CMsgGCGetPlayerCardItemInfo* other);
 
@@ -4366,7 +4678,7 @@ class CMsgGCGetPlayerCardItemInfoResponse_PlayerCardInfo : public ::google::prot
                &_CMsgGCGetPlayerCardItemInfoResponse_PlayerCardInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    21;
+    23;
 
   void Swap(CMsgGCGetPlayerCardItemInfoResponse_PlayerCardInfo* other);
 
@@ -4478,7 +4790,7 @@ class CMsgGCGetPlayerCardItemInfoResponse : public ::google::protobuf::Message /
                &_CMsgGCGetPlayerCardItemInfoResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    22;
+    24;
 
   void Swap(CMsgGCGetPlayerCardItemInfoResponse* other);
 
@@ -4575,7 +4887,7 @@ class CMsgGCToGCFantasySetMatchLeague : public ::google::protobuf::Message /* @@
                &_CMsgGCToGCFantasySetMatchLeague_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    23;
+    25;
 
   void Swap(CMsgGCToGCFantasySetMatchLeague* other);
 
@@ -4677,7 +4989,7 @@ class CSODOTAMapLocationState : public ::google::protobuf::Message /* @@protoc_i
                &_CSODOTAMapLocationState_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    24;
+    26;
 
   void Swap(CSODOTAMapLocationState* other);
 
@@ -4789,7 +5101,7 @@ class CMsgLeagueAdminList : public ::google::protobuf::Message /* @@protoc_inser
                &_CMsgLeagueAdminList_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    25;
+    27;
 
   void Swap(CMsgLeagueAdminList* other);
 
@@ -4884,7 +5196,7 @@ class CCompendiumTimestampedData : public ::google::protobuf::Message /* @@proto
                &_CCompendiumTimestampedData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    26;
+    28;
 
   void Swap(CCompendiumTimestampedData* other);
 
@@ -5029,7 +5341,7 @@ class CCompendiumGameTimeline : public ::google::protobuf::Message /* @@protoc_i
                &_CCompendiumGameTimeline_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    27;
+    29;
 
   void Swap(CCompendiumGameTimeline* other);
 
@@ -5147,7 +5459,7 @@ class CCompendiumGameList : public ::google::protobuf::Message /* @@protoc_inser
                &_CCompendiumGameList_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    28;
+    30;
 
   void Swap(CCompendiumGameList* other);
 
@@ -5242,7 +5554,7 @@ class CAdditionalEquipSlot : public ::google::protobuf::Message /* @@protoc_inse
                &_CAdditionalEquipSlot_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    29;
+    31;
 
   void Swap(CAdditionalEquipSlot* other);
 
@@ -5354,7 +5666,7 @@ class CMsgDOTACombatLogEntry : public ::google::protobuf::Message /* @@protoc_in
                &_CMsgDOTACombatLogEntry_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    30;
+    32;
 
   void Swap(CMsgDOTACombatLogEntry* other);
 
@@ -5865,6 +6177,20 @@ class CMsgDOTACombatLogEntry : public ::google::protobuf::Message /* @@protoc_in
   bool no_physical_damage_modifier() const;
   void set_no_physical_damage_modifier(bool value);
 
+  // optional uint32 modifier_ability = 68;
+  bool has_modifier_ability() const;
+  void clear_modifier_ability();
+  static const int kModifierAbilityFieldNumber = 68;
+  ::google::protobuf::uint32 modifier_ability() const;
+  void set_modifier_ability(::google::protobuf::uint32 value);
+
+  // optional bool modifier_hidden = 69;
+  bool has_modifier_hidden() const;
+  void clear_modifier_hidden();
+  static const int kModifierHiddenFieldNumber = 69;
+  bool modifier_hidden() const;
+  void set_modifier_hidden(bool value);
+
   // optional .proto.dota.DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];
   bool has_type() const;
   void clear_type();
@@ -6006,6 +6332,10 @@ class CMsgDOTACombatLogEntry : public ::google::protobuf::Message /* @@protoc_in
   void clear_has_armor_debuff_modifier();
   void set_has_no_physical_damage_modifier();
   void clear_has_no_physical_damage_modifier();
+  void set_has_modifier_ability();
+  void clear_has_modifier_ability();
+  void set_has_modifier_hidden();
+  void clear_has_modifier_hidden();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<3> _has_bits_;
@@ -6076,6 +6406,8 @@ class CMsgDOTACombatLogEntry : public ::google::protobuf::Message /* @@protoc_in
   bool aura_modifier_;
   bool armor_debuff_modifier_;
   bool no_physical_damage_modifier_;
+  ::google::protobuf::uint32 modifier_ability_;
+  bool modifier_hidden_;
   int type_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
 };
@@ -6109,7 +6441,7 @@ class CMsgDOTAProfileCard_Slot_Trophy : public ::google::protobuf::Message /* @@
                &_CMsgDOTAProfileCard_Slot_Trophy_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    31;
+    33;
 
   void Swap(CMsgDOTAProfileCard_Slot_Trophy* other);
 
@@ -6211,7 +6543,7 @@ class CMsgDOTAProfileCard_Slot_Stat : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTAProfileCard_Slot_Stat_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    32;
+    34;
 
   void Swap(CMsgDOTAProfileCard_Slot_Stat* other);
 
@@ -6313,7 +6645,7 @@ class CMsgDOTAProfileCard_Slot_Item : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTAProfileCard_Slot_Item_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    33;
+    35;
 
   void Swap(CMsgDOTAProfileCard_Slot_Item* other);
 
@@ -6423,7 +6755,7 @@ class CMsgDOTAProfileCard_Slot_Hero : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTAProfileCard_Slot_Hero_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    34;
+    36;
 
   void Swap(CMsgDOTAProfileCard_Slot_Hero* other);
 
@@ -6535,7 +6867,7 @@ class CMsgDOTAProfileCard_Slot_Emoticon : public ::google::protobuf::Message /* 
                &_CMsgDOTAProfileCard_Slot_Emoticon_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    35;
+    37;
 
   void Swap(CMsgDOTAProfileCard_Slot_Emoticon* other);
 
@@ -6627,7 +6959,7 @@ class CMsgDOTAProfileCard_Slot_Team : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTAProfileCard_Slot_Team_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    36;
+    38;
 
   void Swap(CMsgDOTAProfileCard_Slot_Team* other);
 
@@ -6719,7 +7051,7 @@ class CMsgDOTAProfileCard_Slot : public ::google::protobuf::Message /* @@protoc_
                &_CMsgDOTAProfileCard_Slot_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    37;
+    39;
 
   void Swap(CMsgDOTAProfileCard_Slot* other);
 
@@ -6890,7 +7222,7 @@ class CMsgDOTAProfileCard : public ::google::protobuf::Message /* @@protoc_inser
                &_CMsgDOTAProfileCard_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    38;
+    40;
 
   void Swap(CMsgDOTAProfileCard* other);
 
@@ -7026,6 +7358,20 @@ class CMsgDOTAProfileCard : public ::google::protobuf::Message /* @@protoc_inser
   ::google::protobuf::uint32 event_id() const;
   void set_event_id(::google::protobuf::uint32 value);
 
+  // optional uint32 rank_tier = 8;
+  bool has_rank_tier() const;
+  void clear_rank_tier();
+  static const int kRankTierFieldNumber = 8;
+  ::google::protobuf::uint32 rank_tier() const;
+  void set_rank_tier(::google::protobuf::uint32 value);
+
+  // optional uint32 leaderboard_rank = 9;
+  bool has_leaderboard_rank() const;
+  void clear_leaderboard_rank();
+  static const int kLeaderboardRankFieldNumber = 9;
+  ::google::protobuf::uint32 leaderboard_rank() const;
+  void set_leaderboard_rank(::google::protobuf::uint32 value);
+
   // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTAProfileCard)
  private:
   void set_has_account_id();
@@ -7040,6 +7386,10 @@ class CMsgDOTAProfileCard : public ::google::protobuf::Message /* @@protoc_inser
   void clear_has_event_id();
   void set_has_recent_battle_cup_victory();
   void clear_has_recent_battle_cup_victory();
+  void set_has_rank_tier();
+  void clear_has_rank_tier();
+  void set_has_leaderboard_rank();
+  void clear_has_leaderboard_rank();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -7051,6 +7401,8 @@ class CMsgDOTAProfileCard : public ::google::protobuf::Message /* @@protoc_inser
   ::google::protobuf::uint32 badge_points_;
   ::google::protobuf::uint32 event_points_;
   ::google::protobuf::uint32 event_id_;
+  ::google::protobuf::uint32 rank_tier_;
+  ::google::protobuf::uint32 leaderboard_rank_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -7083,7 +7435,7 @@ class CSODOTAPlayerChallenge : public ::google::protobuf::Message /* @@protoc_in
                &_CSODOTAPlayerChallenge_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    39;
+    41;
 
   void Swap(CSODOTAPlayerChallenge* other);
 
@@ -7130,6 +7482,8 @@ class CSODOTAPlayerChallenge : public ::google::protobuf::Message /* @@protoc_in
     CSODOTAPlayerChallenge_EFlags_eFlag_InstantRerollUncompleted;
   static const EFlags eFlag_QuestChallenge =
     CSODOTAPlayerChallenge_EFlags_eFlag_QuestChallenge;
+  static const EFlags eFlag_MultiMatch =
+    CSODOTAPlayerChallenge_EFlags_eFlag_MultiMatch;
   static inline bool EFlags_IsValid(int value) {
     return CSODOTAPlayerChallenge_EFlags_IsValid(value);
   }
@@ -7251,6 +7605,27 @@ class CSODOTAPlayerChallenge : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::uint32 quest_rank() const;
   void set_quest_rank(::google::protobuf::uint32 value);
 
+  // optional uint32 max_quest_rank = 15;
+  bool has_max_quest_rank() const;
+  void clear_max_quest_rank();
+  static const int kMaxQuestRankFieldNumber = 15;
+  ::google::protobuf::uint32 max_quest_rank() const;
+  void set_max_quest_rank(::google::protobuf::uint32 value);
+
+  // optional uint32 instance_id = 16;
+  bool has_instance_id() const;
+  void clear_instance_id();
+  static const int kInstanceIdFieldNumber = 16;
+  ::google::protobuf::uint32 instance_id() const;
+  void set_instance_id(::google::protobuf::uint32 value);
+
+  // optional uint32 hero_id = 17;
+  bool has_hero_id() const;
+  void clear_hero_id();
+  static const int kHeroIdFieldNumber = 17;
+  ::google::protobuf::uint32 hero_id() const;
+  void set_hero_id(::google::protobuf::uint32 value);
+
   // @@protoc_insertion_point(class_scope:proto.dota.CSODOTAPlayerChallenge)
  private:
   void set_has_account_id();
@@ -7281,6 +7656,12 @@ class CSODOTAPlayerChallenge : public ::google::protobuf::Message /* @@protoc_in
   void clear_has_complete_limit();
   void set_has_quest_rank();
   void clear_has_quest_rank();
+  void set_has_max_quest_rank();
+  void clear_has_max_quest_rank();
+  void set_has_instance_id();
+  void clear_has_instance_id();
+  void set_has_hero_id();
+  void clear_has_hero_id();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -7299,6 +7680,9 @@ class CSODOTAPlayerChallenge : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::uint32 attempts_;
   ::google::protobuf::uint32 complete_limit_;
   ::google::protobuf::uint32 quest_rank_;
+  ::google::protobuf::uint32 max_quest_rank_;
+  ::google::protobuf::uint32 instance_id_;
+  ::google::protobuf::uint32 hero_id_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -7331,7 +7715,7 @@ class CMsgClientToGCRerollPlayerChallenge : public ::google::protobuf::Message /
                &_CMsgClientToGCRerollPlayerChallenge_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    40;
+    42;
 
   void Swap(CMsgClientToGCRerollPlayerChallenge* other);
 
@@ -7433,7 +7817,7 @@ class CMsgGCRerollPlayerChallengeResponse : public ::google::protobuf::Message /
                &_CMsgGCRerollPlayerChallengeResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    41;
+    43;
 
   void Swap(CMsgGCRerollPlayerChallengeResponse* other);
 
@@ -7557,7 +7941,7 @@ class CMsgGCTopCustomGamesList : public ::google::protobuf::Message /* @@protoc_
                &_CMsgGCTopCustomGamesList_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    42;
+    44;
 
   void Swap(CMsgGCTopCustomGamesList* other);
 
@@ -7662,7 +8046,7 @@ class CMsgDOTARealtimeGameStats_TeamDetails : public ::google::protobuf::Message
                &_CMsgDOTARealtimeGameStats_TeamDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    43;
+    45;
 
   void Swap(CMsgDOTARealtimeGameStats_TeamDetails* other);
 
@@ -7835,7 +8219,7 @@ class CMsgDOTARealtimeGameStats_ItemDetails : public ::google::protobuf::Message
                &_CMsgDOTARealtimeGameStats_ItemDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    44;
+    46;
 
   void Swap(CMsgDOTARealtimeGameStats_ItemDetails* other);
 
@@ -7975,7 +8359,7 @@ class CMsgDOTARealtimeGameStats_AbilityDetails : public ::google::protobuf::Mess
                &_CMsgDOTARealtimeGameStats_AbilityDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    45;
+    47;
 
   void Swap(CMsgDOTARealtimeGameStats_AbilityDetails* other);
 
@@ -8115,7 +8499,7 @@ class CMsgDOTARealtimeGameStats_HeroToHeroStats : public ::google::protobuf::Mes
                &_CMsgDOTARealtimeGameStats_HeroToHeroStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    46;
+    48;
 
   void Swap(CMsgDOTARealtimeGameStats_HeroToHeroStats* other);
 
@@ -8227,7 +8611,7 @@ class CMsgDOTARealtimeGameStats_AbilityList : public ::google::protobuf::Message
                &_CMsgDOTARealtimeGameStats_AbilityList_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    47;
+    49;
 
   void Swap(CMsgDOTARealtimeGameStats_AbilityList* other);
 
@@ -8322,7 +8706,7 @@ class CMsgDOTARealtimeGameStats_PlayerDetails : public ::google::protobuf::Messa
                &_CMsgDOTARealtimeGameStats_PlayerDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    48;
+    50;
 
   void Swap(CMsgDOTARealtimeGameStats_PlayerDetails* other);
 
@@ -8920,7 +9304,7 @@ class CMsgDOTARealtimeGameStats_BuildingDetails : public ::google::protobuf::Mes
                &_CMsgDOTARealtimeGameStats_BuildingDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    49;
+    51;
 
   void Swap(CMsgDOTARealtimeGameStats_BuildingDetails* other);
 
@@ -9082,7 +9466,7 @@ class CMsgDOTARealtimeGameStats_KillDetails : public ::google::protobuf::Message
                &_CMsgDOTARealtimeGameStats_KillDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    50;
+    52;
 
   void Swap(CMsgDOTARealtimeGameStats_KillDetails* other);
 
@@ -9194,7 +9578,7 @@ class CMsgDOTARealtimeGameStats_BroadcasterDetails : public ::google::protobuf::
                &_CMsgDOTARealtimeGameStats_BroadcasterDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    51;
+    53;
 
   void Swap(CMsgDOTARealtimeGameStats_BroadcasterDetails* other);
 
@@ -9306,7 +9690,7 @@ class CMsgDOTARealtimeGameStats_PickBanDetails : public ::google::protobuf::Mess
                &_CMsgDOTARealtimeGameStats_PickBanDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    52;
+    54;
 
   void Swap(CMsgDOTARealtimeGameStats_PickBanDetails* other);
 
@@ -9408,7 +9792,7 @@ class CMsgDOTARealtimeGameStats_MatchDetails : public ::google::protobuf::Messag
                &_CMsgDOTARealtimeGameStats_MatchDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    53;
+    55;
 
   void Swap(CMsgDOTARealtimeGameStats_MatchDetails* other);
 
@@ -9662,7 +10046,7 @@ class CMsgDOTARealtimeGameStats_GraphData_LocationStats : public ::google::proto
                &_CMsgDOTARealtimeGameStats_GraphData_LocationStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    54;
+    56;
 
   void Swap(CMsgDOTARealtimeGameStats_GraphData_LocationStats* other);
 
@@ -9757,7 +10141,7 @@ class CMsgDOTARealtimeGameStats_GraphData_TeamLocationStats : public ::google::p
                &_CMsgDOTARealtimeGameStats_GraphData_TeamLocationStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    55;
+    57;
 
   void Swap(CMsgDOTARealtimeGameStats_GraphData_TeamLocationStats* other);
 
@@ -9852,7 +10236,7 @@ class CMsgDOTARealtimeGameStats_GraphData : public ::google::protobuf::Message /
                &_CMsgDOTARealtimeGameStats_GraphData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    56;
+    58;
 
   void Swap(CMsgDOTARealtimeGameStats_GraphData* other);
 
@@ -10079,7 +10463,7 @@ class CMsgDOTARealtimeGameStats : public ::google::protobuf::Message /* @@protoc
                &_CMsgDOTARealtimeGameStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    57;
+    59;
 
   void Swap(CMsgDOTARealtimeGameStats* other);
 
@@ -10234,7 +10618,7 @@ class CMsgDOTARealtimeGameStatsTerse_TeamDetails : public ::google::protobuf::Me
                &_CMsgDOTARealtimeGameStatsTerse_TeamDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    58;
+    60;
 
   void Swap(CMsgDOTARealtimeGameStatsTerse_TeamDetails* other);
 
@@ -10387,7 +10771,7 @@ class CMsgDOTARealtimeGameStatsTerse_PlayerDetails : public ::google::protobuf::
                &_CMsgDOTARealtimeGameStatsTerse_PlayerDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    59;
+    61;
 
   void Swap(CMsgDOTARealtimeGameStatsTerse_PlayerDetails* other);
 
@@ -10617,7 +11001,7 @@ class CMsgDOTARealtimeGameStatsTerse_BuildingDetails : public ::google::protobuf
                &_CMsgDOTARealtimeGameStatsTerse_BuildingDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    60;
+    62;
 
   void Swap(CMsgDOTARealtimeGameStatsTerse_BuildingDetails* other);
 
@@ -10779,7 +11163,7 @@ class CMsgDOTARealtimeGameStatsTerse_MatchDetails : public ::google::protobuf::M
                &_CMsgDOTARealtimeGameStatsTerse_MatchDetails_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    61;
+    63;
 
   void Swap(CMsgDOTARealtimeGameStatsTerse_MatchDetails* other);
 
@@ -10934,7 +11318,7 @@ class CMsgDOTARealtimeGameStatsTerse_GraphData : public ::google::protobuf::Mess
                &_CMsgDOTARealtimeGameStatsTerse_GraphData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    62;
+    64;
 
   void Swap(CMsgDOTARealtimeGameStatsTerse_GraphData* other);
 
@@ -11029,7 +11413,7 @@ class CMsgDOTARealtimeGameStatsTerse : public ::google::protobuf::Message /* @@p
                &_CMsgDOTARealtimeGameStatsTerse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    63;
+    65;
 
   void Swap(CMsgDOTARealtimeGameStatsTerse* other);
 
@@ -11177,7 +11561,7 @@ class CMsgGCToClientMatchGroupsVersion : public ::google::protobuf::Message /* @
                &_CMsgGCToClientMatchGroupsVersion_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    64;
+    66;
 
   void Swap(CMsgGCToClientMatchGroupsVersion* other);
 
@@ -11269,7 +11653,7 @@ class CMsgDOTASDOHeroStatsHistory : public ::google::protobuf::Message /* @@prot
                &_CMsgDOTASDOHeroStatsHistory_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    65;
+    67;
 
   void Swap(CMsgDOTASDOHeroStatsHistory* other);
 
@@ -11451,7 +11835,7 @@ class CMsgDOTASeasonRewards_Reward : public ::google::protobuf::Message /* @@pro
                &_CMsgDOTASeasonRewards_Reward_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    66;
+    68;
 
   void Swap(CMsgDOTASeasonRewards_Reward* other);
 
@@ -11639,7 +12023,7 @@ class CMsgDOTASeasonRewards : public ::google::protobuf::Message /* @@protoc_ins
                &_CMsgDOTASeasonRewards_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    67;
+    69;
 
   void Swap(CMsgDOTASeasonRewards* other);
 
@@ -11768,7 +12152,7 @@ class CMsgDOTASeasonAchievements_Achievement : public ::google::protobuf::Messag
                &_CMsgDOTASeasonAchievements_Achievement_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    68;
+    70;
 
   void Swap(CMsgDOTASeasonAchievements_Achievement* other);
 
@@ -11964,7 +12348,7 @@ class CMsgDOTASeasonAchievements : public ::google::protobuf::Message /* @@proto
                &_CMsgDOTASeasonAchievements_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    69;
+    71;
 
   void Swap(CMsgDOTASeasonAchievements* other);
 
@@ -12061,7 +12445,7 @@ class CMsgDOTASeasonPredictions_Choice : public ::google::protobuf::Message /* @
                &_CMsgDOTASeasonPredictions_Choice_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    70;
+    72;
 
   void Swap(CMsgDOTASeasonPredictions_Choice* other);
 
@@ -12191,7 +12575,7 @@ class CMsgDOTASeasonPredictions_Answers : public ::google::protobuf::Message /* 
                &_CMsgDOTASeasonPredictions_Answers_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    71;
+    73;
 
   void Swap(CMsgDOTASeasonPredictions_Answers* other);
 
@@ -12283,7 +12667,7 @@ class CMsgDOTASeasonPredictions_QueryKeyValues : public ::google::protobuf::Mess
                &_CMsgDOTASeasonPredictions_QueryKeyValues_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    72;
+    74;
 
   void Swap(CMsgDOTASeasonPredictions_QueryKeyValues* other);
 
@@ -12401,7 +12785,7 @@ class CMsgDOTASeasonPredictions_Prediction : public ::google::protobuf::Message 
                &_CMsgDOTASeasonPredictions_Prediction_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    73;
+    75;
 
   void Swap(CMsgDOTASeasonPredictions_Prediction* other);
 
@@ -12668,7 +13052,7 @@ class CMsgDOTASeasonPredictions_InGamePrediction : public ::google::protobuf::Me
                &_CMsgDOTASeasonPredictions_InGamePrediction_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    74;
+    76;
 
   void Swap(CMsgDOTASeasonPredictions_InGamePrediction* other);
 
@@ -12933,7 +13317,7 @@ class CMsgDOTASeasonPredictions : public ::google::protobuf::Message /* @@protoc
                &_CMsgDOTASeasonPredictions_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    75;
+    77;
 
   void Swap(CMsgDOTASeasonPredictions* other);
 
@@ -13235,7 +13619,7 @@ class CMsgDOTAMatch_Player_CustomGameData : public ::google::protobuf::Message /
                &_CMsgDOTAMatch_Player_CustomGameData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    76;
+    78;
 
   void Swap(CMsgDOTAMatch_Player_CustomGameData* other);
 
@@ -13337,7 +13721,7 @@ class CMsgDOTAMatch_Player : public ::google::protobuf::Message /* @@protoc_inse
                &_CMsgDOTAMatch_Player_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    77;
+    79;
 
   void Swap(CMsgDOTAMatch_Player* other);
 
@@ -13751,19 +14135,19 @@ class CMsgDOTAMatch_Player : public ::google::protobuf::Message /* @@protoc_inse
   bool seasonal_rank() const;
   void set_seasonal_rank(bool value);
 
+  // optional bool rank_tier_updated = 66;
+  bool has_rank_tier_updated() const;
+  void clear_rank_tier_updated();
+  static const int kRankTierUpdatedFieldNumber = 66;
+  bool rank_tier_updated() const;
+  void set_rank_tier_updated(bool value);
+
   // optional bool feeding_detected = 32;
   bool has_feeding_detected() const;
   void clear_feeding_detected();
   static const int kFeedingDetectedFieldNumber = 32;
   bool feeding_detected() const;
   void set_feeding_detected(bool value);
-
-  // optional bool active_battle_pass = 51;
-  bool has_active_battle_pass() const;
-  void clear_active_battle_pass();
-  static const int kActiveBattlePassFieldNumber = 51;
-  bool active_battle_pass() const;
-  void set_active_battle_pass(bool value);
 
   // optional uint32 net_worth = 52;
   bool has_net_worth() const;
@@ -13814,12 +14198,40 @@ class CMsgDOTAMatch_Player : public ::google::protobuf::Message /* @@protoc_inse
   ::google::protobuf::uint32 item_7() const;
   void set_item_7(::google::protobuf::uint32 value);
 
+  // optional bool active_prime_subscription = 51;
+  bool has_active_prime_subscription() const;
+  void clear_active_prime_subscription();
+  static const int kActivePrimeSubscriptionFieldNumber = 51;
+  bool active_prime_subscription() const;
+  void set_active_prime_subscription(bool value);
+
+  // optional bool hero_was_randomed = 64;
+  bool has_hero_was_randomed() const;
+  void clear_hero_was_randomed();
+  static const int kHeroWasRandomedFieldNumber = 64;
+  bool hero_was_randomed() const;
+  void set_hero_was_randomed(bool value);
+
+  // optional bool hero_was_bonus = 65;
+  bool has_hero_was_bonus() const;
+  void clear_hero_was_bonus();
+  static const int kHeroWasBonusFieldNumber = 65;
+  bool hero_was_bonus() const;
+  void set_hero_was_bonus(bool value);
+
   // optional uint32 item_8 = 61;
   bool has_item_8() const;
   void clear_item_8();
   static const int kItem8FieldNumber = 61;
   ::google::protobuf::uint32 item_8() const;
   void set_item_8(::google::protobuf::uint32 value);
+
+  // optional uint32 hero_pick_order = 63;
+  bool has_hero_pick_order() const;
+  void clear_hero_pick_order();
+  static const int kHeroPickOrderFieldNumber = 63;
+  ::google::protobuf::uint32 hero_pick_order() const;
+  void set_hero_pick_order(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTAMatch.Player)
  private:
@@ -13859,6 +14271,8 @@ class CMsgDOTAMatch_Player : public ::google::protobuf::Message /* @@protoc_inse
   void clear_has_solo_rank();
   void set_has_seasonal_rank();
   void clear_has_seasonal_rank();
+  void set_has_rank_tier_updated();
+  void clear_has_rank_tier_updated();
   void set_has_kills();
   void clear_has_kills();
   void set_has_deaths();
@@ -13929,12 +14343,18 @@ class CMsgDOTAMatch_Player : public ::google::protobuf::Message /* @@protoc_inse
   void clear_has_misses();
   void set_has_custom_game_data();
   void clear_has_custom_game_data();
-  void set_has_active_battle_pass();
-  void clear_has_active_battle_pass();
+  void set_has_active_prime_subscription();
+  void clear_has_active_prime_subscription();
   void set_has_net_worth();
   void clear_has_net_worth();
   void set_has_bot_difficulty();
   void clear_has_bot_difficulty();
+  void set_has_hero_pick_order();
+  void clear_has_hero_pick_order();
+  void set_has_hero_was_randomed();
+  void clear_has_hero_was_randomed();
+  void set_has_hero_was_bonus();
+  void clear_has_hero_was_bonus();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<2> _has_bits_;
@@ -13987,8 +14407,8 @@ class CMsgDOTAMatch_Player : public ::google::protobuf::Message /* @@protoc_inse
   ::google::protobuf::uint32 misses_;
   bool solo_rank_;
   bool seasonal_rank_;
+  bool rank_tier_updated_;
   bool feeding_detected_;
-  bool active_battle_pass_;
   ::google::protobuf::uint32 net_worth_;
   ::google::protobuf::uint32 scaled_hero_damage_;
   ::google::protobuf::uint32 scaled_tower_damage_;
@@ -13996,7 +14416,11 @@ class CMsgDOTAMatch_Player : public ::google::protobuf::Message /* @@protoc_inse
   ::google::protobuf::uint32 bot_difficulty_;
   ::google::protobuf::uint32 item_6_;
   ::google::protobuf::uint32 item_7_;
+  bool active_prime_subscription_;
+  bool hero_was_randomed_;
+  bool hero_was_bonus_;
   ::google::protobuf::uint32 item_8_;
+  ::google::protobuf::uint32 hero_pick_order_;
   mutable int _cached_size_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
 };
@@ -14030,7 +14454,7 @@ class CMsgDOTAMatch_BroadcasterInfo : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTAMatch_BroadcasterInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    78;
+    80;
 
   void Swap(CMsgDOTAMatch_BroadcasterInfo* other);
 
@@ -14140,7 +14564,7 @@ class CMsgDOTAMatch_BroadcasterChannel : public ::google::protobuf::Message /* @
                &_CMsgDOTAMatch_BroadcasterChannel_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    79;
+    81;
 
   void Swap(CMsgDOTAMatch_BroadcasterChannel* other);
 
@@ -14289,7 +14713,7 @@ class CMsgDOTAMatch_CustomGameData : public ::google::protobuf::Message /* @@pro
                &_CMsgDOTAMatch_CustomGameData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    80;
+    82;
 
   void Swap(CMsgDOTAMatch_CustomGameData* other);
 
@@ -14399,7 +14823,7 @@ class CMsgDOTAMatch : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_CMsgDOTAMatch_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    81;
+    83;
 
   void Swap(CMsgDOTAMatch* other);
 
@@ -15033,7 +15457,7 @@ class CMsgPlayerCard_StatModifier : public ::google::protobuf::Message /* @@prot
                &_CMsgPlayerCard_StatModifier_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    82;
+    84;
 
   void Swap(CMsgPlayerCard_StatModifier* other);
 
@@ -15135,7 +15559,7 @@ class CMsgPlayerCard : public ::google::protobuf::Message /* @@protoc_insertion_
                &_CMsgPlayerCard_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    83;
+    85;
 
   void Swap(CMsgPlayerCard* other);
 
@@ -15242,7 +15666,7 @@ class CMsgDOTAFantasyPlayerStats : public ::google::protobuf::Message /* @@proto
                &_CMsgDOTAFantasyPlayerStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    84;
+    86;
 
   void Swap(CMsgDOTAFantasyPlayerStats* other);
 
@@ -15524,7 +15948,7 @@ class CMsgDOTAFantasyPlayerMatchStats : public ::google::protobuf::Message /* @@
                &_CMsgDOTAFantasyPlayerMatchStats_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    85;
+    87;
 
   void Swap(CMsgDOTAFantasyPlayerMatchStats* other);
 
@@ -15619,7 +16043,7 @@ class CMsgDOTABotDebugInfo_Bot_Mode : public ::google::protobuf::Message /* @@pr
                &_CMsgDOTABotDebugInfo_Bot_Mode_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    86;
+    88;
 
   void Swap(CMsgDOTABotDebugInfo_Bot_Mode* other);
 
@@ -15761,7 +16185,7 @@ class CMsgDOTABotDebugInfo_Bot_Action : public ::google::protobuf::Message /* @@
                &_CMsgDOTABotDebugInfo_Bot_Action_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    87;
+    89;
 
   void Swap(CMsgDOTABotDebugInfo_Bot_Action* other);
 
@@ -15871,7 +16295,7 @@ class CMsgDOTABotDebugInfo_Bot : public ::google::protobuf::Message /* @@protoc_
                &_CMsgDOTABotDebugInfo_Bot_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    88;
+    90;
 
   void Swap(CMsgDOTABotDebugInfo_Bot* other);
 
@@ -16081,7 +16505,7 @@ class CMsgDOTABotDebugInfo : public ::google::protobuf::Message /* @@protoc_inse
                &_CMsgDOTABotDebugInfo_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    89;
+    91;
 
   void Swap(CMsgDOTABotDebugInfo* other);
 
@@ -16269,6 +16693,819 @@ class CMsgDOTABotDebugInfo : public ::google::protobuf::Message /* @@protoc_inse
   float desire_farm_lane_bot_;
   float desire_farm_roshan_;
   float execution_time_;
+  friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTALeagueTournament_NodeGroup : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTALeagueTournament.NodeGroup) */ {
+ public:
+  CMsgDOTALeagueTournament_NodeGroup();
+  virtual ~CMsgDOTALeagueTournament_NodeGroup();
+
+  CMsgDOTALeagueTournament_NodeGroup(const CMsgDOTALeagueTournament_NodeGroup& from);
+
+  inline CMsgDOTALeagueTournament_NodeGroup& operator=(const CMsgDOTALeagueTournament_NodeGroup& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTALeagueTournament_NodeGroup& default_instance();
+
+  static inline const CMsgDOTALeagueTournament_NodeGroup* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTALeagueTournament_NodeGroup*>(
+               &_CMsgDOTALeagueTournament_NodeGroup_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    92;
+
+  void Swap(CMsgDOTALeagueTournament_NodeGroup* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTALeagueTournament_NodeGroup* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTALeagueTournament_NodeGroup* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTALeagueTournament_NodeGroup& from);
+  void MergeFrom(const CMsgDOTALeagueTournament_NodeGroup& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTALeagueTournament_NodeGroup* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .proto.dota.CMsgDOTALeagueTournament.TeamStanding team_standings = 14;
+  int team_standings_size() const;
+  void clear_team_standings();
+  static const int kTeamStandingsFieldNumber = 14;
+  const ::proto::dota::CMsgDOTALeagueTournament_TeamStanding& team_standings(int index) const;
+  ::proto::dota::CMsgDOTALeagueTournament_TeamStanding* mutable_team_standings(int index);
+  ::proto::dota::CMsgDOTALeagueTournament_TeamStanding* add_team_standings();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_TeamStanding >*
+      mutable_team_standings();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_TeamStanding >&
+      team_standings() const;
+
+  // repeated .proto.dota.CMsgDOTALeagueTournament.Node nodes = 15;
+  int nodes_size() const;
+  void clear_nodes();
+  static const int kNodesFieldNumber = 15;
+  const ::proto::dota::CMsgDOTALeagueTournament_Node& nodes(int index) const;
+  ::proto::dota::CMsgDOTALeagueTournament_Node* mutable_nodes(int index);
+  ::proto::dota::CMsgDOTALeagueTournament_Node* add_nodes();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_Node >*
+      mutable_nodes();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_Node >&
+      nodes() const;
+
+  // repeated .proto.dota.CMsgDOTALeagueTournament.NodeGroup node_groups = 16;
+  int node_groups_size() const;
+  void clear_node_groups();
+  static const int kNodeGroupsFieldNumber = 16;
+  const ::proto::dota::CMsgDOTALeagueTournament_NodeGroup& node_groups(int index) const;
+  ::proto::dota::CMsgDOTALeagueTournament_NodeGroup* mutable_node_groups(int index);
+  ::proto::dota::CMsgDOTALeagueTournament_NodeGroup* add_node_groups();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_NodeGroup >*
+      mutable_node_groups();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_NodeGroup >&
+      node_groups() const;
+
+  // optional string name = 1;
+  bool has_name() const;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // optional uint32 node_group_id = 2;
+  bool has_node_group_id() const;
+  void clear_node_group_id();
+  static const int kNodeGroupIdFieldNumber = 2;
+  ::google::protobuf::uint32 node_group_id() const;
+  void set_node_group_id(::google::protobuf::uint32 value);
+
+  // optional uint32 parent_node_group_id = 3;
+  bool has_parent_node_group_id() const;
+  void clear_parent_node_group_id();
+  static const int kParentNodeGroupIdFieldNumber = 3;
+  ::google::protobuf::uint32 parent_node_group_id() const;
+  void set_parent_node_group_id(::google::protobuf::uint32 value);
+
+  // optional uint32 advancing_node_group_id = 4;
+  bool has_advancing_node_group_id() const;
+  void clear_advancing_node_group_id();
+  static const int kAdvancingNodeGroupIdFieldNumber = 4;
+  ::google::protobuf::uint32 advancing_node_group_id() const;
+  void set_advancing_node_group_id(::google::protobuf::uint32 value);
+
+  // optional uint32 advancing_team_count = 5;
+  bool has_advancing_team_count() const;
+  void clear_advancing_team_count();
+  static const int kAdvancingTeamCountFieldNumber = 5;
+  ::google::protobuf::uint32 advancing_team_count() const;
+  void set_advancing_team_count(::google::protobuf::uint32 value);
+
+  // optional uint32 team_count = 6;
+  bool has_team_count() const;
+  void clear_team_count();
+  static const int kTeamCountFieldNumber = 6;
+  ::google::protobuf::uint32 team_count() const;
+  void set_team_count(::google::protobuf::uint32 value);
+
+  // optional .proto.dota.CMsgDOTALeagueTournament.ENodeGroupType node_group_type = 7 [default = INVALID_GROUP_TYPE];
+  bool has_node_group_type() const;
+  void clear_node_group_type();
+  static const int kNodeGroupTypeFieldNumber = 7;
+  ::proto::dota::CMsgDOTALeagueTournament_ENodeGroupType node_group_type() const;
+  void set_node_group_type(::proto::dota::CMsgDOTALeagueTournament_ENodeGroupType value);
+
+  // optional .proto.dota.CMsgDOTALeagueTournament.ENodeType default_node_type = 8 [default = INVALID_NODE_TYPE];
+  bool has_default_node_type() const;
+  void clear_default_node_type();
+  static const int kDefaultNodeTypeFieldNumber = 8;
+  ::proto::dota::CMsgDOTALeagueTournament_ENodeType default_node_type() const;
+  void set_default_node_type(::proto::dota::CMsgDOTALeagueTournament_ENodeType value);
+
+  // optional uint32 round = 9;
+  bool has_round() const;
+  void clear_round();
+  static const int kRoundFieldNumber = 9;
+  ::google::protobuf::uint32 round() const;
+  void set_round(::google::protobuf::uint32 value);
+
+  // optional uint32 max_rounds = 10;
+  bool has_max_rounds() const;
+  void clear_max_rounds();
+  static const int kMaxRoundsFieldNumber = 10;
+  ::google::protobuf::uint32 max_rounds() const;
+  void set_max_rounds(::google::protobuf::uint32 value);
+
+  // optional bool is_tiebreaker = 11;
+  bool has_is_tiebreaker() const;
+  void clear_is_tiebreaker();
+  static const int kIsTiebreakerFieldNumber = 11;
+  bool is_tiebreaker() const;
+  void set_is_tiebreaker(bool value);
+
+  // optional bool is_final_group = 12;
+  bool has_is_final_group() const;
+  void clear_is_final_group();
+  static const int kIsFinalGroupFieldNumber = 12;
+  bool is_final_group() const;
+  void set_is_final_group(bool value);
+
+  // optional bool is_completed = 13;
+  bool has_is_completed() const;
+  void clear_is_completed();
+  static const int kIsCompletedFieldNumber = 13;
+  bool is_completed() const;
+  void set_is_completed(bool value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTALeagueTournament.NodeGroup)
+ private:
+  void set_has_name();
+  void clear_has_name();
+  void set_has_node_group_id();
+  void clear_has_node_group_id();
+  void set_has_parent_node_group_id();
+  void clear_has_parent_node_group_id();
+  void set_has_advancing_node_group_id();
+  void clear_has_advancing_node_group_id();
+  void set_has_advancing_team_count();
+  void clear_has_advancing_team_count();
+  void set_has_team_count();
+  void clear_has_team_count();
+  void set_has_node_group_type();
+  void clear_has_node_group_type();
+  void set_has_default_node_type();
+  void clear_has_default_node_type();
+  void set_has_round();
+  void clear_has_round();
+  void set_has_max_rounds();
+  void clear_has_max_rounds();
+  void set_has_is_tiebreaker();
+  void clear_has_is_tiebreaker();
+  void set_has_is_final_group();
+  void clear_has_is_final_group();
+  void set_has_is_completed();
+  void clear_has_is_completed();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_TeamStanding > team_standings_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_Node > nodes_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_NodeGroup > node_groups_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::uint32 node_group_id_;
+  ::google::protobuf::uint32 parent_node_group_id_;
+  ::google::protobuf::uint32 advancing_node_group_id_;
+  ::google::protobuf::uint32 advancing_team_count_;
+  ::google::protobuf::uint32 team_count_;
+  int node_group_type_;
+  int default_node_type_;
+  ::google::protobuf::uint32 round_;
+  ::google::protobuf::uint32 max_rounds_;
+  bool is_tiebreaker_;
+  bool is_final_group_;
+  bool is_completed_;
+  friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTALeagueTournament_Node : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTALeagueTournament.Node) */ {
+ public:
+  CMsgDOTALeagueTournament_Node();
+  virtual ~CMsgDOTALeagueTournament_Node();
+
+  CMsgDOTALeagueTournament_Node(const CMsgDOTALeagueTournament_Node& from);
+
+  inline CMsgDOTALeagueTournament_Node& operator=(const CMsgDOTALeagueTournament_Node& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTALeagueTournament_Node& default_instance();
+
+  static inline const CMsgDOTALeagueTournament_Node* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTALeagueTournament_Node*>(
+               &_CMsgDOTALeagueTournament_Node_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    93;
+
+  void Swap(CMsgDOTALeagueTournament_Node* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTALeagueTournament_Node* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTALeagueTournament_Node* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTALeagueTournament_Node& from);
+  void MergeFrom(const CMsgDOTALeagueTournament_Node& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTALeagueTournament_Node* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated uint64 matches = 21;
+  int matches_size() const;
+  void clear_matches();
+  static const int kMatchesFieldNumber = 21;
+  ::google::protobuf::uint64 matches(int index) const;
+  void set_matches(int index, ::google::protobuf::uint64 value);
+  void add_matches(::google::protobuf::uint64 value);
+  const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
+      matches() const;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+      mutable_matches();
+
+  // optional string name = 1;
+  bool has_name() const;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // optional uint32 node_id = 2;
+  bool has_node_id() const;
+  void clear_node_id();
+  static const int kNodeIdFieldNumber = 2;
+  ::google::protobuf::uint32 node_id() const;
+  void set_node_id(::google::protobuf::uint32 value);
+
+  // optional uint32 node_group_id = 3;
+  bool has_node_group_id() const;
+  void clear_node_group_id();
+  static const int kNodeGroupIdFieldNumber = 3;
+  ::google::protobuf::uint32 node_group_id() const;
+  void set_node_group_id(::google::protobuf::uint32 value);
+
+  // optional uint32 winning_node_id = 4;
+  bool has_winning_node_id() const;
+  void clear_winning_node_id();
+  static const int kWinningNodeIdFieldNumber = 4;
+  ::google::protobuf::uint32 winning_node_id() const;
+  void set_winning_node_id(::google::protobuf::uint32 value);
+
+  // optional uint32 losing_node_id = 5;
+  bool has_losing_node_id() const;
+  void clear_losing_node_id();
+  static const int kLosingNodeIdFieldNumber = 5;
+  ::google::protobuf::uint32 losing_node_id() const;
+  void set_losing_node_id(::google::protobuf::uint32 value);
+
+  // optional .proto.dota.CMsgDOTALeagueTournament.ENodeType node_type = 6 [default = INVALID_NODE_TYPE];
+  bool has_node_type() const;
+  void clear_node_type();
+  static const int kNodeTypeFieldNumber = 6;
+  ::proto::dota::CMsgDOTALeagueTournament_ENodeType node_type() const;
+  void set_node_type(::proto::dota::CMsgDOTALeagueTournament_ENodeType value);
+
+  // optional uint32 scheduled_time = 7;
+  bool has_scheduled_time() const;
+  void clear_scheduled_time();
+  static const int kScheduledTimeFieldNumber = 7;
+  ::google::protobuf::uint32 scheduled_time() const;
+  void set_scheduled_time(::google::protobuf::uint32 value);
+
+  // optional uint32 team_id_1 = 10;
+  bool has_team_id_1() const;
+  void clear_team_id_1();
+  static const int kTeamId1FieldNumber = 10;
+  ::google::protobuf::uint32 team_id_1() const;
+  void set_team_id_1(::google::protobuf::uint32 value);
+
+  // optional uint32 team_id_2 = 11;
+  bool has_team_id_2() const;
+  void clear_team_id_2();
+  static const int kTeamId2FieldNumber = 11;
+  ::google::protobuf::uint32 team_id_2() const;
+  void set_team_id_2(::google::protobuf::uint32 value);
+
+  // optional uint32 series_id = 20;
+  bool has_series_id() const;
+  void clear_series_id();
+  static const int kSeriesIdFieldNumber = 20;
+  ::google::protobuf::uint32 series_id() const;
+  void set_series_id(::google::protobuf::uint32 value);
+
+  // optional uint32 team_1_wins = 22;
+  bool has_team_1_wins() const;
+  void clear_team_1_wins();
+  static const int kTeam1WinsFieldNumber = 22;
+  ::google::protobuf::uint32 team_1_wins() const;
+  void set_team_1_wins(::google::protobuf::uint32 value);
+
+  // optional uint32 team_2_wins = 23;
+  bool has_team_2_wins() const;
+  void clear_team_2_wins();
+  static const int kTeam2WinsFieldNumber = 23;
+  ::google::protobuf::uint32 team_2_wins() const;
+  void set_team_2_wins(::google::protobuf::uint32 value);
+
+  // optional bool is_completed = 24;
+  bool has_is_completed() const;
+  void clear_is_completed();
+  static const int kIsCompletedFieldNumber = 24;
+  bool is_completed() const;
+  void set_is_completed(bool value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTALeagueTournament.Node)
+ private:
+  void set_has_name();
+  void clear_has_name();
+  void set_has_node_id();
+  void clear_has_node_id();
+  void set_has_node_group_id();
+  void clear_has_node_group_id();
+  void set_has_winning_node_id();
+  void clear_has_winning_node_id();
+  void set_has_losing_node_id();
+  void clear_has_losing_node_id();
+  void set_has_node_type();
+  void clear_has_node_type();
+  void set_has_scheduled_time();
+  void clear_has_scheduled_time();
+  void set_has_team_id_1();
+  void clear_has_team_id_1();
+  void set_has_team_id_2();
+  void clear_has_team_id_2();
+  void set_has_series_id();
+  void clear_has_series_id();
+  void set_has_team_1_wins();
+  void clear_has_team_1_wins();
+  void set_has_team_2_wins();
+  void clear_has_team_2_wins();
+  void set_has_is_completed();
+  void clear_has_is_completed();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint64 > matches_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::uint32 node_id_;
+  ::google::protobuf::uint32 node_group_id_;
+  ::google::protobuf::uint32 winning_node_id_;
+  ::google::protobuf::uint32 losing_node_id_;
+  int node_type_;
+  ::google::protobuf::uint32 scheduled_time_;
+  ::google::protobuf::uint32 team_id_1_;
+  ::google::protobuf::uint32 team_id_2_;
+  ::google::protobuf::uint32 series_id_;
+  ::google::protobuf::uint32 team_1_wins_;
+  ::google::protobuf::uint32 team_2_wins_;
+  bool is_completed_;
+  friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTALeagueTournament_TeamStanding : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTALeagueTournament.TeamStanding) */ {
+ public:
+  CMsgDOTALeagueTournament_TeamStanding();
+  virtual ~CMsgDOTALeagueTournament_TeamStanding();
+
+  CMsgDOTALeagueTournament_TeamStanding(const CMsgDOTALeagueTournament_TeamStanding& from);
+
+  inline CMsgDOTALeagueTournament_TeamStanding& operator=(const CMsgDOTALeagueTournament_TeamStanding& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTALeagueTournament_TeamStanding& default_instance();
+
+  static inline const CMsgDOTALeagueTournament_TeamStanding* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTALeagueTournament_TeamStanding*>(
+               &_CMsgDOTALeagueTournament_TeamStanding_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    94;
+
+  void Swap(CMsgDOTALeagueTournament_TeamStanding* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTALeagueTournament_TeamStanding* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTALeagueTournament_TeamStanding* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTALeagueTournament_TeamStanding& from);
+  void MergeFrom(const CMsgDOTALeagueTournament_TeamStanding& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTALeagueTournament_TeamStanding* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 team_id = 1;
+  bool has_team_id() const;
+  void clear_team_id();
+  static const int kTeamIdFieldNumber = 1;
+  ::google::protobuf::uint32 team_id() const;
+  void set_team_id(::google::protobuf::uint32 value);
+
+  // optional uint32 node_wins = 2;
+  bool has_node_wins() const;
+  void clear_node_wins();
+  static const int kNodeWinsFieldNumber = 2;
+  ::google::protobuf::uint32 node_wins() const;
+  void set_node_wins(::google::protobuf::uint32 value);
+
+  // optional uint32 node_losses = 3;
+  bool has_node_losses() const;
+  void clear_node_losses();
+  static const int kNodeLossesFieldNumber = 3;
+  ::google::protobuf::uint32 node_losses() const;
+  void set_node_losses(::google::protobuf::uint32 value);
+
+  // optional uint32 match_wins = 4;
+  bool has_match_wins() const;
+  void clear_match_wins();
+  static const int kMatchWinsFieldNumber = 4;
+  ::google::protobuf::uint32 match_wins() const;
+  void set_match_wins(::google::protobuf::uint32 value);
+
+  // optional uint32 match_losses = 5;
+  bool has_match_losses() const;
+  void clear_match_losses();
+  static const int kMatchLossesFieldNumber = 5;
+  ::google::protobuf::uint32 match_losses() const;
+  void set_match_losses(::google::protobuf::uint32 value);
+
+  // optional uint32 score = 6;
+  bool has_score() const;
+  void clear_score();
+  static const int kScoreFieldNumber = 6;
+  ::google::protobuf::uint32 score() const;
+  void set_score(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTALeagueTournament.TeamStanding)
+ private:
+  void set_has_team_id();
+  void clear_has_team_id();
+  void set_has_node_wins();
+  void clear_has_node_wins();
+  void set_has_node_losses();
+  void clear_has_node_losses();
+  void set_has_match_wins();
+  void clear_has_match_wins();
+  void set_has_match_losses();
+  void clear_has_match_losses();
+  void set_has_score();
+  void clear_has_score();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 team_id_;
+  ::google::protobuf::uint32 node_wins_;
+  ::google::protobuf::uint32 node_losses_;
+  ::google::protobuf::uint32 match_wins_;
+  ::google::protobuf::uint32 match_losses_;
+  ::google::protobuf::uint32 score_;
+  friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CMsgDOTALeagueTournament : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:proto.dota.CMsgDOTALeagueTournament) */ {
+ public:
+  CMsgDOTALeagueTournament();
+  virtual ~CMsgDOTALeagueTournament();
+
+  CMsgDOTALeagueTournament(const CMsgDOTALeagueTournament& from);
+
+  inline CMsgDOTALeagueTournament& operator=(const CMsgDOTALeagueTournament& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CMsgDOTALeagueTournament& default_instance();
+
+  static inline const CMsgDOTALeagueTournament* internal_default_instance() {
+    return reinterpret_cast<const CMsgDOTALeagueTournament*>(
+               &_CMsgDOTALeagueTournament_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    95;
+
+  void Swap(CMsgDOTALeagueTournament* other);
+
+  // implements Message ----------------------------------------------
+
+  inline CMsgDOTALeagueTournament* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CMsgDOTALeagueTournament* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CMsgDOTALeagueTournament& from);
+  void MergeFrom(const CMsgDOTALeagueTournament& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CMsgDOTALeagueTournament* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef CMsgDOTALeagueTournament_NodeGroup NodeGroup;
+  typedef CMsgDOTALeagueTournament_Node Node;
+  typedef CMsgDOTALeagueTournament_TeamStanding TeamStanding;
+
+  typedef CMsgDOTALeagueTournament_ENodeGroupType ENodeGroupType;
+  static const ENodeGroupType INVALID_GROUP_TYPE =
+    CMsgDOTALeagueTournament_ENodeGroupType_INVALID_GROUP_TYPE;
+  static const ENodeGroupType ORGANIZATIONAL =
+    CMsgDOTALeagueTournament_ENodeGroupType_ORGANIZATIONAL;
+  static const ENodeGroupType ROUND_ROBIN =
+    CMsgDOTALeagueTournament_ENodeGroupType_ROUND_ROBIN;
+  static const ENodeGroupType SWISS =
+    CMsgDOTALeagueTournament_ENodeGroupType_SWISS;
+  static const ENodeGroupType BRACKET_SINGLE =
+    CMsgDOTALeagueTournament_ENodeGroupType_BRACKET_SINGLE;
+  static const ENodeGroupType BRACKET_DOUBLE_SEED_LOSER =
+    CMsgDOTALeagueTournament_ENodeGroupType_BRACKET_DOUBLE_SEED_LOSER;
+  static const ENodeGroupType BRACKET_DOUBLE_ALL_WINNER =
+    CMsgDOTALeagueTournament_ENodeGroupType_BRACKET_DOUBLE_ALL_WINNER;
+  static const ENodeGroupType BRACKET_SHOWMATCH =
+    CMsgDOTALeagueTournament_ENodeGroupType_BRACKET_SHOWMATCH;
+  static inline bool ENodeGroupType_IsValid(int value) {
+    return CMsgDOTALeagueTournament_ENodeGroupType_IsValid(value);
+  }
+  static const ENodeGroupType ENodeGroupType_MIN =
+    CMsgDOTALeagueTournament_ENodeGroupType_ENodeGroupType_MIN;
+  static const ENodeGroupType ENodeGroupType_MAX =
+    CMsgDOTALeagueTournament_ENodeGroupType_ENodeGroupType_MAX;
+  static const int ENodeGroupType_ARRAYSIZE =
+    CMsgDOTALeagueTournament_ENodeGroupType_ENodeGroupType_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  ENodeGroupType_descriptor() {
+    return CMsgDOTALeagueTournament_ENodeGroupType_descriptor();
+  }
+  static inline const ::std::string& ENodeGroupType_Name(ENodeGroupType value) {
+    return CMsgDOTALeagueTournament_ENodeGroupType_Name(value);
+  }
+  static inline bool ENodeGroupType_Parse(const ::std::string& name,
+      ENodeGroupType* value) {
+    return CMsgDOTALeagueTournament_ENodeGroupType_Parse(name, value);
+  }
+
+  typedef CMsgDOTALeagueTournament_ENodeType ENodeType;
+  static const ENodeType INVALID_NODE_TYPE =
+    CMsgDOTALeagueTournament_ENodeType_INVALID_NODE_TYPE;
+  static const ENodeType BEST_OF_ONE =
+    CMsgDOTALeagueTournament_ENodeType_BEST_OF_ONE;
+  static const ENodeType BEST_OF_THREE =
+    CMsgDOTALeagueTournament_ENodeType_BEST_OF_THREE;
+  static const ENodeType BEST_OF_FIVE =
+    CMsgDOTALeagueTournament_ENodeType_BEST_OF_FIVE;
+  static const ENodeType BEST_OF_TWO =
+    CMsgDOTALeagueTournament_ENodeType_BEST_OF_TWO;
+  static inline bool ENodeType_IsValid(int value) {
+    return CMsgDOTALeagueTournament_ENodeType_IsValid(value);
+  }
+  static const ENodeType ENodeType_MIN =
+    CMsgDOTALeagueTournament_ENodeType_ENodeType_MIN;
+  static const ENodeType ENodeType_MAX =
+    CMsgDOTALeagueTournament_ENodeType_ENodeType_MAX;
+  static const int ENodeType_ARRAYSIZE =
+    CMsgDOTALeagueTournament_ENodeType_ENodeType_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  ENodeType_descriptor() {
+    return CMsgDOTALeagueTournament_ENodeType_descriptor();
+  }
+  static inline const ::std::string& ENodeType_Name(ENodeType value) {
+    return CMsgDOTALeagueTournament_ENodeType_Name(value);
+  }
+  static inline bool ENodeType_Parse(const ::std::string& name,
+      ENodeType* value) {
+    return CMsgDOTALeagueTournament_ENodeType_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // repeated .proto.dota.CMsgDOTALeagueTournament.NodeGroup node_groups = 2;
+  int node_groups_size() const;
+  void clear_node_groups();
+  static const int kNodeGroupsFieldNumber = 2;
+  const ::proto::dota::CMsgDOTALeagueTournament_NodeGroup& node_groups(int index) const;
+  ::proto::dota::CMsgDOTALeagueTournament_NodeGroup* mutable_node_groups(int index);
+  ::proto::dota::CMsgDOTALeagueTournament_NodeGroup* add_node_groups();
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_NodeGroup >*
+      mutable_node_groups();
+  const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_NodeGroup >&
+      node_groups() const;
+
+  // optional uint32 league_id = 1;
+  bool has_league_id() const;
+  void clear_league_id();
+  static const int kLeagueIdFieldNumber = 1;
+  ::google::protobuf::uint32 league_id() const;
+  void set_league_id(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.dota.CMsgDOTALeagueTournament)
+ private:
+  void set_has_league_id();
+  void clear_has_league_id();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_NodeGroup > node_groups_;
+  ::google::protobuf::uint32 league_id_;
   friend struct protobuf_dota_5fgcmessages_5fcommon_2eproto::TableStruct;
 };
 // ===================================================================
@@ -17914,6 +19151,82 @@ inline void CSODOTAGameAccountClient::set_recent_report_time(::google::protobuf:
 
 // -------------------------------------------------------------------
 
+// CSODOTAGameAccountPrime
+
+// optional uint32 account_id = 1 [(.proto.dota.key_field) = true];
+inline bool CSODOTAGameAccountPrime::has_account_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CSODOTAGameAccountPrime::set_has_account_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CSODOTAGameAccountPrime::clear_has_account_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CSODOTAGameAccountPrime::clear_account_id() {
+  account_id_ = 0u;
+  clear_has_account_id();
+}
+inline ::google::protobuf::uint32 CSODOTAGameAccountPrime::account_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTAGameAccountPrime.account_id)
+  return account_id_;
+}
+inline void CSODOTAGameAccountPrime::set_account_id(::google::protobuf::uint32 value) {
+  set_has_account_id();
+  account_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTAGameAccountPrime.account_id)
+}
+
+// optional uint32 original_start_date = 2;
+inline bool CSODOTAGameAccountPrime::has_original_start_date() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CSODOTAGameAccountPrime::set_has_original_start_date() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CSODOTAGameAccountPrime::clear_has_original_start_date() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CSODOTAGameAccountPrime::clear_original_start_date() {
+  original_start_date_ = 0u;
+  clear_has_original_start_date();
+}
+inline ::google::protobuf::uint32 CSODOTAGameAccountPrime::original_start_date() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTAGameAccountPrime.original_start_date)
+  return original_start_date_;
+}
+inline void CSODOTAGameAccountPrime::set_original_start_date(::google::protobuf::uint32 value) {
+  set_has_original_start_date();
+  original_start_date_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTAGameAccountPrime.original_start_date)
+}
+
+// optional uint32 prime_flags = 3;
+inline bool CSODOTAGameAccountPrime::has_prime_flags() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CSODOTAGameAccountPrime::set_has_prime_flags() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CSODOTAGameAccountPrime::clear_has_prime_flags() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CSODOTAGameAccountPrime::clear_prime_flags() {
+  prime_flags_ = 0u;
+  clear_has_prime_flags();
+}
+inline ::google::protobuf::uint32 CSODOTAGameAccountPrime::prime_flags() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTAGameAccountPrime.prime_flags)
+  return prime_flags_;
+}
+inline void CSODOTAGameAccountPrime::set_prime_flags(::google::protobuf::uint32 value) {
+  set_has_prime_flags();
+  prime_flags_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTAGameAccountPrime.prime_flags)
+}
+
+// -------------------------------------------------------------------
+
 // CMsgLobbyEventPoints_ChatWheelMessageRange
 
 // optional uint32 message_id_start = 1;
@@ -18390,6 +19703,112 @@ inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgLobbyEvent
 CMsgLobbyEventPoints::account_points() const {
   // @@protoc_insertion_point(field_list:proto.dota.CMsgLobbyEventPoints.account_points)
   return account_points_;
+}
+
+// -------------------------------------------------------------------
+
+// CMsgLocalServerFakeLobbyData
+
+// optional uint32 account_id = 1;
+inline bool CMsgLocalServerFakeLobbyData::has_account_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgLocalServerFakeLobbyData::set_has_account_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgLocalServerFakeLobbyData::clear_has_account_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgLocalServerFakeLobbyData::clear_account_id() {
+  account_id_ = 0u;
+  clear_has_account_id();
+}
+inline ::google::protobuf::uint32 CMsgLocalServerFakeLobbyData::account_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgLocalServerFakeLobbyData.account_id)
+  return account_id_;
+}
+inline void CMsgLocalServerFakeLobbyData::set_account_id(::google::protobuf::uint32 value) {
+  set_has_account_id();
+  account_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgLocalServerFakeLobbyData.account_id)
+}
+
+// repeated .proto.dota.CMsgLobbyEventPoints event_points = 2;
+inline int CMsgLocalServerFakeLobbyData::event_points_size() const {
+  return event_points_.size();
+}
+inline void CMsgLocalServerFakeLobbyData::clear_event_points() {
+  event_points_.Clear();
+}
+inline const ::proto::dota::CMsgLobbyEventPoints& CMsgLocalServerFakeLobbyData::event_points(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgLocalServerFakeLobbyData.event_points)
+  return event_points_.Get(index);
+}
+inline ::proto::dota::CMsgLobbyEventPoints* CMsgLocalServerFakeLobbyData::mutable_event_points(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgLocalServerFakeLobbyData.event_points)
+  return event_points_.Mutable(index);
+}
+inline ::proto::dota::CMsgLobbyEventPoints* CMsgLocalServerFakeLobbyData::add_event_points() {
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgLocalServerFakeLobbyData.event_points)
+  return event_points_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgLobbyEventPoints >*
+CMsgLocalServerFakeLobbyData::mutable_event_points() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgLocalServerFakeLobbyData.event_points)
+  return &event_points_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgLobbyEventPoints >&
+CMsgLocalServerFakeLobbyData::event_points() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgLocalServerFakeLobbyData.event_points)
+  return event_points_;
+}
+
+// optional bool is_prime_subscriber = 3;
+inline bool CMsgLocalServerFakeLobbyData::has_is_prime_subscriber() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgLocalServerFakeLobbyData::set_has_is_prime_subscriber() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgLocalServerFakeLobbyData::clear_has_is_prime_subscriber() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgLocalServerFakeLobbyData::clear_is_prime_subscriber() {
+  is_prime_subscriber_ = false;
+  clear_has_is_prime_subscriber();
+}
+inline bool CMsgLocalServerFakeLobbyData::is_prime_subscriber() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgLocalServerFakeLobbyData.is_prime_subscriber)
+  return is_prime_subscriber_;
+}
+inline void CMsgLocalServerFakeLobbyData::set_is_prime_subscriber(bool value) {
+  set_has_is_prime_subscriber();
+  is_prime_subscriber_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgLocalServerFakeLobbyData.is_prime_subscriber)
+}
+
+// optional uint32 primary_event_id = 4;
+inline bool CMsgLocalServerFakeLobbyData::has_primary_event_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgLocalServerFakeLobbyData::set_has_primary_event_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgLocalServerFakeLobbyData::clear_has_primary_event_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgLocalServerFakeLobbyData::clear_primary_event_id() {
+  primary_event_id_ = 0u;
+  clear_has_primary_event_id();
+}
+inline ::google::protobuf::uint32 CMsgLocalServerFakeLobbyData::primary_event_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgLocalServerFakeLobbyData.primary_event_id)
+  return primary_event_id_;
+}
+inline void CMsgLocalServerFakeLobbyData::set_primary_event_id(::google::protobuf::uint32 value) {
+  set_has_primary_event_id();
+  primary_event_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgLocalServerFakeLobbyData.primary_event_id)
 }
 
 // -------------------------------------------------------------------
@@ -20587,13 +22006,13 @@ inline void CAdditionalEquipSlot::set_def_index(::google::protobuf::uint32 value
 
 // optional .proto.dota.DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];
 inline bool CMsgDOTACombatLogEntry::has_type() const {
-  return (_has_bits_[2] & 0x00000002u) != 0;
+  return (_has_bits_[2] & 0x00000008u) != 0;
 }
 inline void CMsgDOTACombatLogEntry::set_has_type() {
-  _has_bits_[2] |= 0x00000002u;
+  _has_bits_[2] |= 0x00000008u;
 }
 inline void CMsgDOTACombatLogEntry::clear_has_type() {
-  _has_bits_[2] &= ~0x00000002u;
+  _has_bits_[2] &= ~0x00000008u;
 }
 inline void CMsgDOTACombatLogEntry::clear_type() {
   type_ = -1;
@@ -22200,6 +23619,54 @@ inline void CMsgDOTACombatLogEntry::set_no_physical_damage_modifier(bool value) 
   // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTACombatLogEntry.no_physical_damage_modifier)
 }
 
+// optional uint32 modifier_ability = 68;
+inline bool CMsgDOTACombatLogEntry::has_modifier_ability() const {
+  return (_has_bits_[2] & 0x00000002u) != 0;
+}
+inline void CMsgDOTACombatLogEntry::set_has_modifier_ability() {
+  _has_bits_[2] |= 0x00000002u;
+}
+inline void CMsgDOTACombatLogEntry::clear_has_modifier_ability() {
+  _has_bits_[2] &= ~0x00000002u;
+}
+inline void CMsgDOTACombatLogEntry::clear_modifier_ability() {
+  modifier_ability_ = 0u;
+  clear_has_modifier_ability();
+}
+inline ::google::protobuf::uint32 CMsgDOTACombatLogEntry::modifier_ability() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTACombatLogEntry.modifier_ability)
+  return modifier_ability_;
+}
+inline void CMsgDOTACombatLogEntry::set_modifier_ability(::google::protobuf::uint32 value) {
+  set_has_modifier_ability();
+  modifier_ability_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTACombatLogEntry.modifier_ability)
+}
+
+// optional bool modifier_hidden = 69;
+inline bool CMsgDOTACombatLogEntry::has_modifier_hidden() const {
+  return (_has_bits_[2] & 0x00000004u) != 0;
+}
+inline void CMsgDOTACombatLogEntry::set_has_modifier_hidden() {
+  _has_bits_[2] |= 0x00000004u;
+}
+inline void CMsgDOTACombatLogEntry::clear_has_modifier_hidden() {
+  _has_bits_[2] &= ~0x00000004u;
+}
+inline void CMsgDOTACombatLogEntry::clear_modifier_hidden() {
+  modifier_hidden_ = false;
+  clear_has_modifier_hidden();
+}
+inline bool CMsgDOTACombatLogEntry::modifier_hidden() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTACombatLogEntry.modifier_hidden)
+  return modifier_hidden_;
+}
+inline void CMsgDOTACombatLogEntry::set_modifier_hidden(bool value) {
+  set_has_modifier_hidden();
+  modifier_hidden_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTACombatLogEntry.modifier_hidden)
+}
+
 // -------------------------------------------------------------------
 
 // CMsgDOTAProfileCard_Slot_Trophy
@@ -23025,6 +24492,54 @@ inline void CMsgDOTAProfileCard::set_allocated_recent_battle_cup_victory(::proto
   // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTAProfileCard.recent_battle_cup_victory)
 }
 
+// optional uint32 rank_tier = 8;
+inline bool CMsgDOTAProfileCard::has_rank_tier() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void CMsgDOTAProfileCard::set_has_rank_tier() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void CMsgDOTAProfileCard::clear_has_rank_tier() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void CMsgDOTAProfileCard::clear_rank_tier() {
+  rank_tier_ = 0u;
+  clear_has_rank_tier();
+}
+inline ::google::protobuf::uint32 CMsgDOTAProfileCard::rank_tier() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAProfileCard.rank_tier)
+  return rank_tier_;
+}
+inline void CMsgDOTAProfileCard::set_rank_tier(::google::protobuf::uint32 value) {
+  set_has_rank_tier();
+  rank_tier_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAProfileCard.rank_tier)
+}
+
+// optional uint32 leaderboard_rank = 9;
+inline bool CMsgDOTAProfileCard::has_leaderboard_rank() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void CMsgDOTAProfileCard::set_has_leaderboard_rank() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void CMsgDOTAProfileCard::clear_has_leaderboard_rank() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void CMsgDOTAProfileCard::clear_leaderboard_rank() {
+  leaderboard_rank_ = 0u;
+  clear_has_leaderboard_rank();
+}
+inline ::google::protobuf::uint32 CMsgDOTAProfileCard::leaderboard_rank() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAProfileCard.leaderboard_rank)
+  return leaderboard_rank_;
+}
+inline void CMsgDOTAProfileCard::set_leaderboard_rank(::google::protobuf::uint32 value) {
+  set_has_leaderboard_rank();
+  leaderboard_rank_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAProfileCard.leaderboard_rank)
+}
+
 // -------------------------------------------------------------------
 
 // CSODOTAPlayerChallenge
@@ -23363,6 +24878,78 @@ inline void CSODOTAPlayerChallenge::set_quest_rank(::google::protobuf::uint32 va
   set_has_quest_rank();
   quest_rank_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CSODOTAPlayerChallenge.quest_rank)
+}
+
+// optional uint32 max_quest_rank = 15;
+inline bool CSODOTAPlayerChallenge::has_max_quest_rank() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+inline void CSODOTAPlayerChallenge::set_has_max_quest_rank() {
+  _has_bits_[0] |= 0x00004000u;
+}
+inline void CSODOTAPlayerChallenge::clear_has_max_quest_rank() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline void CSODOTAPlayerChallenge::clear_max_quest_rank() {
+  max_quest_rank_ = 0u;
+  clear_has_max_quest_rank();
+}
+inline ::google::protobuf::uint32 CSODOTAPlayerChallenge::max_quest_rank() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTAPlayerChallenge.max_quest_rank)
+  return max_quest_rank_;
+}
+inline void CSODOTAPlayerChallenge::set_max_quest_rank(::google::protobuf::uint32 value) {
+  set_has_max_quest_rank();
+  max_quest_rank_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTAPlayerChallenge.max_quest_rank)
+}
+
+// optional uint32 instance_id = 16;
+inline bool CSODOTAPlayerChallenge::has_instance_id() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void CSODOTAPlayerChallenge::set_has_instance_id() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void CSODOTAPlayerChallenge::clear_has_instance_id() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void CSODOTAPlayerChallenge::clear_instance_id() {
+  instance_id_ = 0u;
+  clear_has_instance_id();
+}
+inline ::google::protobuf::uint32 CSODOTAPlayerChallenge::instance_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTAPlayerChallenge.instance_id)
+  return instance_id_;
+}
+inline void CSODOTAPlayerChallenge::set_instance_id(::google::protobuf::uint32 value) {
+  set_has_instance_id();
+  instance_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTAPlayerChallenge.instance_id)
+}
+
+// optional uint32 hero_id = 17;
+inline bool CSODOTAPlayerChallenge::has_hero_id() const {
+  return (_has_bits_[0] & 0x00010000u) != 0;
+}
+inline void CSODOTAPlayerChallenge::set_has_hero_id() {
+  _has_bits_[0] |= 0x00010000u;
+}
+inline void CSODOTAPlayerChallenge::clear_has_hero_id() {
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline void CSODOTAPlayerChallenge::clear_hero_id() {
+  hero_id_ = 0u;
+  clear_has_hero_id();
+}
+inline ::google::protobuf::uint32 CSODOTAPlayerChallenge::hero_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CSODOTAPlayerChallenge.hero_id)
+  return hero_id_;
+}
+inline void CSODOTAPlayerChallenge::set_hero_id(::google::protobuf::uint32 value) {
+  set_has_hero_id();
+  hero_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CSODOTAPlayerChallenge.hero_id)
 }
 
 // -------------------------------------------------------------------
@@ -30547,13 +32134,13 @@ inline void CMsgDOTAMatch_Player::set_item_7(::google::protobuf::uint32 value) {
 
 // optional uint32 item_8 = 61;
 inline bool CMsgDOTAMatch_Player::has_item_8() const {
-  return (_has_bits_[1] & 0x00800000u) != 0;
+  return (_has_bits_[1] & 0x04000000u) != 0;
 }
 inline void CMsgDOTAMatch_Player::set_has_item_8() {
-  _has_bits_[1] |= 0x00800000u;
+  _has_bits_[1] |= 0x04000000u;
 }
 inline void CMsgDOTAMatch_Player::clear_has_item_8() {
-  _has_bits_[1] &= ~0x00800000u;
+  _has_bits_[1] &= ~0x04000000u;
 }
 inline void CMsgDOTAMatch_Player::clear_item_8() {
   item_8_ = 0u;
@@ -30711,6 +32298,30 @@ inline void CMsgDOTAMatch_Player::set_seasonal_rank(bool value) {
   set_has_seasonal_rank();
   seasonal_rank_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAMatch.Player.seasonal_rank)
+}
+
+// optional bool rank_tier_updated = 66;
+inline bool CMsgDOTAMatch_Player::has_rank_tier_updated() const {
+  return (_has_bits_[1] & 0x00004000u) != 0;
+}
+inline void CMsgDOTAMatch_Player::set_has_rank_tier_updated() {
+  _has_bits_[1] |= 0x00004000u;
+}
+inline void CMsgDOTAMatch_Player::clear_has_rank_tier_updated() {
+  _has_bits_[1] &= ~0x00004000u;
+}
+inline void CMsgDOTAMatch_Player::clear_rank_tier_updated() {
+  rank_tier_updated_ = false;
+  clear_has_rank_tier_updated();
+}
+inline bool CMsgDOTAMatch_Player::rank_tier_updated() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAMatch.Player.rank_tier_updated)
+  return rank_tier_updated_;
+}
+inline void CMsgDOTAMatch_Player::set_rank_tier_updated(bool value) {
+  set_has_rank_tier_updated();
+  rank_tier_updated_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAMatch.Player.rank_tier_updated)
 }
 
 // optional uint32 kills = 14;
@@ -31162,13 +32773,13 @@ inline void CMsgDOTAMatch_Player::set_support_ability_value(::google::protobuf::
 
 // optional bool feeding_detected = 32;
 inline bool CMsgDOTAMatch_Player::has_feeding_detected() const {
-  return (_has_bits_[1] & 0x00004000u) != 0;
+  return (_has_bits_[1] & 0x00008000u) != 0;
 }
 inline void CMsgDOTAMatch_Player::set_has_feeding_detected() {
-  _has_bits_[1] |= 0x00004000u;
+  _has_bits_[1] |= 0x00008000u;
 }
 inline void CMsgDOTAMatch_Player::clear_has_feeding_detected() {
-  _has_bits_[1] &= ~0x00004000u;
+  _has_bits_[1] &= ~0x00008000u;
 }
 inline void CMsgDOTAMatch_Player::clear_feeding_detected() {
   feeding_detected_ = false;
@@ -31703,28 +33314,28 @@ inline void CMsgDOTAMatch_Player::set_allocated_custom_game_data(::proto::dota::
   // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTAMatch.Player.custom_game_data)
 }
 
-// optional bool active_battle_pass = 51;
-inline bool CMsgDOTAMatch_Player::has_active_battle_pass() const {
-  return (_has_bits_[1] & 0x00008000u) != 0;
+// optional bool active_prime_subscription = 51;
+inline bool CMsgDOTAMatch_Player::has_active_prime_subscription() const {
+  return (_has_bits_[1] & 0x00800000u) != 0;
 }
-inline void CMsgDOTAMatch_Player::set_has_active_battle_pass() {
-  _has_bits_[1] |= 0x00008000u;
+inline void CMsgDOTAMatch_Player::set_has_active_prime_subscription() {
+  _has_bits_[1] |= 0x00800000u;
 }
-inline void CMsgDOTAMatch_Player::clear_has_active_battle_pass() {
-  _has_bits_[1] &= ~0x00008000u;
+inline void CMsgDOTAMatch_Player::clear_has_active_prime_subscription() {
+  _has_bits_[1] &= ~0x00800000u;
 }
-inline void CMsgDOTAMatch_Player::clear_active_battle_pass() {
-  active_battle_pass_ = false;
-  clear_has_active_battle_pass();
+inline void CMsgDOTAMatch_Player::clear_active_prime_subscription() {
+  active_prime_subscription_ = false;
+  clear_has_active_prime_subscription();
 }
-inline bool CMsgDOTAMatch_Player::active_battle_pass() const {
-  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAMatch.Player.active_battle_pass)
-  return active_battle_pass_;
+inline bool CMsgDOTAMatch_Player::active_prime_subscription() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAMatch.Player.active_prime_subscription)
+  return active_prime_subscription_;
 }
-inline void CMsgDOTAMatch_Player::set_active_battle_pass(bool value) {
-  set_has_active_battle_pass();
-  active_battle_pass_ = value;
-  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAMatch.Player.active_battle_pass)
+inline void CMsgDOTAMatch_Player::set_active_prime_subscription(bool value) {
+  set_has_active_prime_subscription();
+  active_prime_subscription_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAMatch.Player.active_prime_subscription)
 }
 
 // optional uint32 net_worth = 52;
@@ -31773,6 +33384,78 @@ inline void CMsgDOTAMatch_Player::set_bot_difficulty(::google::protobuf::uint32 
   set_has_bot_difficulty();
   bot_difficulty_ = value;
   // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAMatch.Player.bot_difficulty)
+}
+
+// optional uint32 hero_pick_order = 63;
+inline bool CMsgDOTAMatch_Player::has_hero_pick_order() const {
+  return (_has_bits_[1] & 0x08000000u) != 0;
+}
+inline void CMsgDOTAMatch_Player::set_has_hero_pick_order() {
+  _has_bits_[1] |= 0x08000000u;
+}
+inline void CMsgDOTAMatch_Player::clear_has_hero_pick_order() {
+  _has_bits_[1] &= ~0x08000000u;
+}
+inline void CMsgDOTAMatch_Player::clear_hero_pick_order() {
+  hero_pick_order_ = 0u;
+  clear_has_hero_pick_order();
+}
+inline ::google::protobuf::uint32 CMsgDOTAMatch_Player::hero_pick_order() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAMatch.Player.hero_pick_order)
+  return hero_pick_order_;
+}
+inline void CMsgDOTAMatch_Player::set_hero_pick_order(::google::protobuf::uint32 value) {
+  set_has_hero_pick_order();
+  hero_pick_order_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAMatch.Player.hero_pick_order)
+}
+
+// optional bool hero_was_randomed = 64;
+inline bool CMsgDOTAMatch_Player::has_hero_was_randomed() const {
+  return (_has_bits_[1] & 0x01000000u) != 0;
+}
+inline void CMsgDOTAMatch_Player::set_has_hero_was_randomed() {
+  _has_bits_[1] |= 0x01000000u;
+}
+inline void CMsgDOTAMatch_Player::clear_has_hero_was_randomed() {
+  _has_bits_[1] &= ~0x01000000u;
+}
+inline void CMsgDOTAMatch_Player::clear_hero_was_randomed() {
+  hero_was_randomed_ = false;
+  clear_has_hero_was_randomed();
+}
+inline bool CMsgDOTAMatch_Player::hero_was_randomed() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAMatch.Player.hero_was_randomed)
+  return hero_was_randomed_;
+}
+inline void CMsgDOTAMatch_Player::set_hero_was_randomed(bool value) {
+  set_has_hero_was_randomed();
+  hero_was_randomed_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAMatch.Player.hero_was_randomed)
+}
+
+// optional bool hero_was_bonus = 65;
+inline bool CMsgDOTAMatch_Player::has_hero_was_bonus() const {
+  return (_has_bits_[1] & 0x02000000u) != 0;
+}
+inline void CMsgDOTAMatch_Player::set_has_hero_was_bonus() {
+  _has_bits_[1] |= 0x02000000u;
+}
+inline void CMsgDOTAMatch_Player::clear_has_hero_was_bonus() {
+  _has_bits_[1] &= ~0x02000000u;
+}
+inline void CMsgDOTAMatch_Player::clear_hero_was_bonus() {
+  hero_was_bonus_ = false;
+  clear_has_hero_was_bonus();
+}
+inline bool CMsgDOTAMatch_Player::hero_was_bonus() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTAMatch.Player.hero_was_bonus)
+  return hero_was_bonus_;
+}
+inline void CMsgDOTAMatch_Player::set_hero_was_bonus(bool value) {
+  set_has_hero_was_bonus();
+  hero_was_bonus_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTAMatch.Player.hero_was_bonus)
 }
 
 // -------------------------------------------------------------------
@@ -35036,7 +36719,1058 @@ CMsgDOTABotDebugInfo::mutable_rune_status() {
   return &rune_status_;
 }
 
+// -------------------------------------------------------------------
+
+// CMsgDOTALeagueTournament_NodeGroup
+
+// optional string name = 1;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_name() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_name() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_name() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_name();
+}
+inline const ::std::string& CMsgDOTALeagueTournament_NodeGroup::name() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.name)
+  return name_.GetNoArena();
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_name(const ::std::string& value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.name)
+}
+#if LANG_CXX11
+inline void CMsgDOTALeagueTournament_NodeGroup::set_name(::std::string&& value) {
+  set_has_name();
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.dota.CMsgDOTALeagueTournament.NodeGroup.name)
+}
+#endif
+inline void CMsgDOTALeagueTournament_NodeGroup::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.dota.CMsgDOTALeagueTournament.NodeGroup.name)
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_name(const char* value, size_t size) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.dota.CMsgDOTALeagueTournament.NodeGroup.name)
+}
+inline ::std::string* CMsgDOTALeagueTournament_NodeGroup::mutable_name() {
+  set_has_name();
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTALeagueTournament.NodeGroup.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CMsgDOTALeagueTournament_NodeGroup::release_name() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgDOTALeagueTournament.NodeGroup.name)
+  clear_has_name();
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    set_has_name();
+  } else {
+    clear_has_name();
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTALeagueTournament.NodeGroup.name)
+}
+
+// optional uint32 node_group_id = 2;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_node_group_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_node_group_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_node_group_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_node_group_id() {
+  node_group_id_ = 0u;
+  clear_has_node_group_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_NodeGroup::node_group_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.node_group_id)
+  return node_group_id_;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_node_group_id(::google::protobuf::uint32 value) {
+  set_has_node_group_id();
+  node_group_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.node_group_id)
+}
+
+// optional uint32 parent_node_group_id = 3;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_parent_node_group_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_parent_node_group_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_parent_node_group_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_parent_node_group_id() {
+  parent_node_group_id_ = 0u;
+  clear_has_parent_node_group_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_NodeGroup::parent_node_group_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.parent_node_group_id)
+  return parent_node_group_id_;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_parent_node_group_id(::google::protobuf::uint32 value) {
+  set_has_parent_node_group_id();
+  parent_node_group_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.parent_node_group_id)
+}
+
+// optional uint32 advancing_node_group_id = 4;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_advancing_node_group_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_advancing_node_group_id() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_advancing_node_group_id() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_advancing_node_group_id() {
+  advancing_node_group_id_ = 0u;
+  clear_has_advancing_node_group_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_NodeGroup::advancing_node_group_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.advancing_node_group_id)
+  return advancing_node_group_id_;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_advancing_node_group_id(::google::protobuf::uint32 value) {
+  set_has_advancing_node_group_id();
+  advancing_node_group_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.advancing_node_group_id)
+}
+
+// optional uint32 advancing_team_count = 5;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_advancing_team_count() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_advancing_team_count() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_advancing_team_count() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_advancing_team_count() {
+  advancing_team_count_ = 0u;
+  clear_has_advancing_team_count();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_NodeGroup::advancing_team_count() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.advancing_team_count)
+  return advancing_team_count_;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_advancing_team_count(::google::protobuf::uint32 value) {
+  set_has_advancing_team_count();
+  advancing_team_count_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.advancing_team_count)
+}
+
+// optional uint32 team_count = 6;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_team_count() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_team_count() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_team_count() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_team_count() {
+  team_count_ = 0u;
+  clear_has_team_count();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_NodeGroup::team_count() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.team_count)
+  return team_count_;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_team_count(::google::protobuf::uint32 value) {
+  set_has_team_count();
+  team_count_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.team_count)
+}
+
+// optional .proto.dota.CMsgDOTALeagueTournament.ENodeGroupType node_group_type = 7 [default = INVALID_GROUP_TYPE];
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_node_group_type() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_node_group_type() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_node_group_type() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_node_group_type() {
+  node_group_type_ = 0;
+  clear_has_node_group_type();
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_ENodeGroupType CMsgDOTALeagueTournament_NodeGroup::node_group_type() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.node_group_type)
+  return static_cast< ::proto::dota::CMsgDOTALeagueTournament_ENodeGroupType >(node_group_type_);
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_node_group_type(::proto::dota::CMsgDOTALeagueTournament_ENodeGroupType value) {
+  assert(::proto::dota::CMsgDOTALeagueTournament_ENodeGroupType_IsValid(value));
+  set_has_node_group_type();
+  node_group_type_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.node_group_type)
+}
+
+// optional .proto.dota.CMsgDOTALeagueTournament.ENodeType default_node_type = 8 [default = INVALID_NODE_TYPE];
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_default_node_type() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_default_node_type() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_default_node_type() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_default_node_type() {
+  default_node_type_ = 0;
+  clear_has_default_node_type();
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_ENodeType CMsgDOTALeagueTournament_NodeGroup::default_node_type() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.default_node_type)
+  return static_cast< ::proto::dota::CMsgDOTALeagueTournament_ENodeType >(default_node_type_);
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_default_node_type(::proto::dota::CMsgDOTALeagueTournament_ENodeType value) {
+  assert(::proto::dota::CMsgDOTALeagueTournament_ENodeType_IsValid(value));
+  set_has_default_node_type();
+  default_node_type_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.default_node_type)
+}
+
+// optional uint32 round = 9;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_round() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_round() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_round() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_round() {
+  round_ = 0u;
+  clear_has_round();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_NodeGroup::round() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.round)
+  return round_;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_round(::google::protobuf::uint32 value) {
+  set_has_round();
+  round_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.round)
+}
+
+// optional uint32 max_rounds = 10;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_max_rounds() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_max_rounds() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_max_rounds() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_max_rounds() {
+  max_rounds_ = 0u;
+  clear_has_max_rounds();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_NodeGroup::max_rounds() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.max_rounds)
+  return max_rounds_;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_max_rounds(::google::protobuf::uint32 value) {
+  set_has_max_rounds();
+  max_rounds_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.max_rounds)
+}
+
+// optional bool is_tiebreaker = 11;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_is_tiebreaker() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_is_tiebreaker() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_is_tiebreaker() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_is_tiebreaker() {
+  is_tiebreaker_ = false;
+  clear_has_is_tiebreaker();
+}
+inline bool CMsgDOTALeagueTournament_NodeGroup::is_tiebreaker() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.is_tiebreaker)
+  return is_tiebreaker_;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_is_tiebreaker(bool value) {
+  set_has_is_tiebreaker();
+  is_tiebreaker_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.is_tiebreaker)
+}
+
+// optional bool is_final_group = 12;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_is_final_group() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_is_final_group() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_is_final_group() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_is_final_group() {
+  is_final_group_ = false;
+  clear_has_is_final_group();
+}
+inline bool CMsgDOTALeagueTournament_NodeGroup::is_final_group() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.is_final_group)
+  return is_final_group_;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_is_final_group(bool value) {
+  set_has_is_final_group();
+  is_final_group_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.is_final_group)
+}
+
+// optional bool is_completed = 13;
+inline bool CMsgDOTALeagueTournament_NodeGroup::has_is_completed() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_has_is_completed() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_has_is_completed() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_is_completed() {
+  is_completed_ = false;
+  clear_has_is_completed();
+}
+inline bool CMsgDOTALeagueTournament_NodeGroup::is_completed() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.is_completed)
+  return is_completed_;
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::set_is_completed(bool value) {
+  set_has_is_completed();
+  is_completed_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.NodeGroup.is_completed)
+}
+
+// repeated .proto.dota.CMsgDOTALeagueTournament.TeamStanding team_standings = 14;
+inline int CMsgDOTALeagueTournament_NodeGroup::team_standings_size() const {
+  return team_standings_.size();
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_team_standings() {
+  team_standings_.Clear();
+}
+inline const ::proto::dota::CMsgDOTALeagueTournament_TeamStanding& CMsgDOTALeagueTournament_NodeGroup::team_standings(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.team_standings)
+  return team_standings_.Get(index);
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_TeamStanding* CMsgDOTALeagueTournament_NodeGroup::mutable_team_standings(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTALeagueTournament.NodeGroup.team_standings)
+  return team_standings_.Mutable(index);
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_TeamStanding* CMsgDOTALeagueTournament_NodeGroup::add_team_standings() {
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgDOTALeagueTournament.NodeGroup.team_standings)
+  return team_standings_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_TeamStanding >*
+CMsgDOTALeagueTournament_NodeGroup::mutable_team_standings() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgDOTALeagueTournament.NodeGroup.team_standings)
+  return &team_standings_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_TeamStanding >&
+CMsgDOTALeagueTournament_NodeGroup::team_standings() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgDOTALeagueTournament.NodeGroup.team_standings)
+  return team_standings_;
+}
+
+// repeated .proto.dota.CMsgDOTALeagueTournament.Node nodes = 15;
+inline int CMsgDOTALeagueTournament_NodeGroup::nodes_size() const {
+  return nodes_.size();
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_nodes() {
+  nodes_.Clear();
+}
+inline const ::proto::dota::CMsgDOTALeagueTournament_Node& CMsgDOTALeagueTournament_NodeGroup::nodes(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.nodes)
+  return nodes_.Get(index);
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_Node* CMsgDOTALeagueTournament_NodeGroup::mutable_nodes(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTALeagueTournament.NodeGroup.nodes)
+  return nodes_.Mutable(index);
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_Node* CMsgDOTALeagueTournament_NodeGroup::add_nodes() {
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgDOTALeagueTournament.NodeGroup.nodes)
+  return nodes_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_Node >*
+CMsgDOTALeagueTournament_NodeGroup::mutable_nodes() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgDOTALeagueTournament.NodeGroup.nodes)
+  return &nodes_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_Node >&
+CMsgDOTALeagueTournament_NodeGroup::nodes() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgDOTALeagueTournament.NodeGroup.nodes)
+  return nodes_;
+}
+
+// repeated .proto.dota.CMsgDOTALeagueTournament.NodeGroup node_groups = 16;
+inline int CMsgDOTALeagueTournament_NodeGroup::node_groups_size() const {
+  return node_groups_.size();
+}
+inline void CMsgDOTALeagueTournament_NodeGroup::clear_node_groups() {
+  node_groups_.Clear();
+}
+inline const ::proto::dota::CMsgDOTALeagueTournament_NodeGroup& CMsgDOTALeagueTournament_NodeGroup::node_groups(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.NodeGroup.node_groups)
+  return node_groups_.Get(index);
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_NodeGroup* CMsgDOTALeagueTournament_NodeGroup::mutable_node_groups(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTALeagueTournament.NodeGroup.node_groups)
+  return node_groups_.Mutable(index);
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_NodeGroup* CMsgDOTALeagueTournament_NodeGroup::add_node_groups() {
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgDOTALeagueTournament.NodeGroup.node_groups)
+  return node_groups_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_NodeGroup >*
+CMsgDOTALeagueTournament_NodeGroup::mutable_node_groups() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgDOTALeagueTournament.NodeGroup.node_groups)
+  return &node_groups_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_NodeGroup >&
+CMsgDOTALeagueTournament_NodeGroup::node_groups() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgDOTALeagueTournament.NodeGroup.node_groups)
+  return node_groups_;
+}
+
+// -------------------------------------------------------------------
+
+// CMsgDOTALeagueTournament_Node
+
+// optional string name = 1;
+inline bool CMsgDOTALeagueTournament_Node::has_name() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_name() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_name() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_name();
+}
+inline const ::std::string& CMsgDOTALeagueTournament_Node::name() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.name)
+  return name_.GetNoArena();
+}
+inline void CMsgDOTALeagueTournament_Node::set_name(const ::std::string& value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.name)
+}
+#if LANG_CXX11
+inline void CMsgDOTALeagueTournament_Node::set_name(::std::string&& value) {
+  set_has_name();
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.dota.CMsgDOTALeagueTournament.Node.name)
+}
+#endif
+inline void CMsgDOTALeagueTournament_Node::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.dota.CMsgDOTALeagueTournament.Node.name)
+}
+inline void CMsgDOTALeagueTournament_Node::set_name(const char* value, size_t size) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.dota.CMsgDOTALeagueTournament.Node.name)
+}
+inline ::std::string* CMsgDOTALeagueTournament_Node::mutable_name() {
+  set_has_name();
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTALeagueTournament.Node.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* CMsgDOTALeagueTournament_Node::release_name() {
+  // @@protoc_insertion_point(field_release:proto.dota.CMsgDOTALeagueTournament.Node.name)
+  clear_has_name();
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CMsgDOTALeagueTournament_Node::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    set_has_name();
+  } else {
+    clear_has_name();
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:proto.dota.CMsgDOTALeagueTournament.Node.name)
+}
+
+// optional uint32 node_id = 2;
+inline bool CMsgDOTALeagueTournament_Node::has_node_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_node_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_node_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_node_id() {
+  node_id_ = 0u;
+  clear_has_node_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_Node::node_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.node_id)
+  return node_id_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_node_id(::google::protobuf::uint32 value) {
+  set_has_node_id();
+  node_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.node_id)
+}
+
+// optional uint32 node_group_id = 3;
+inline bool CMsgDOTALeagueTournament_Node::has_node_group_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_node_group_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_node_group_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_node_group_id() {
+  node_group_id_ = 0u;
+  clear_has_node_group_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_Node::node_group_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.node_group_id)
+  return node_group_id_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_node_group_id(::google::protobuf::uint32 value) {
+  set_has_node_group_id();
+  node_group_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.node_group_id)
+}
+
+// optional uint32 winning_node_id = 4;
+inline bool CMsgDOTALeagueTournament_Node::has_winning_node_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_winning_node_id() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_winning_node_id() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_winning_node_id() {
+  winning_node_id_ = 0u;
+  clear_has_winning_node_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_Node::winning_node_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.winning_node_id)
+  return winning_node_id_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_winning_node_id(::google::protobuf::uint32 value) {
+  set_has_winning_node_id();
+  winning_node_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.winning_node_id)
+}
+
+// optional uint32 losing_node_id = 5;
+inline bool CMsgDOTALeagueTournament_Node::has_losing_node_id() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_losing_node_id() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_losing_node_id() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_losing_node_id() {
+  losing_node_id_ = 0u;
+  clear_has_losing_node_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_Node::losing_node_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.losing_node_id)
+  return losing_node_id_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_losing_node_id(::google::protobuf::uint32 value) {
+  set_has_losing_node_id();
+  losing_node_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.losing_node_id)
+}
+
+// optional .proto.dota.CMsgDOTALeagueTournament.ENodeType node_type = 6 [default = INVALID_NODE_TYPE];
+inline bool CMsgDOTALeagueTournament_Node::has_node_type() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_node_type() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_node_type() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_node_type() {
+  node_type_ = 0;
+  clear_has_node_type();
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_ENodeType CMsgDOTALeagueTournament_Node::node_type() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.node_type)
+  return static_cast< ::proto::dota::CMsgDOTALeagueTournament_ENodeType >(node_type_);
+}
+inline void CMsgDOTALeagueTournament_Node::set_node_type(::proto::dota::CMsgDOTALeagueTournament_ENodeType value) {
+  assert(::proto::dota::CMsgDOTALeagueTournament_ENodeType_IsValid(value));
+  set_has_node_type();
+  node_type_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.node_type)
+}
+
+// optional uint32 scheduled_time = 7;
+inline bool CMsgDOTALeagueTournament_Node::has_scheduled_time() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_scheduled_time() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_scheduled_time() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_scheduled_time() {
+  scheduled_time_ = 0u;
+  clear_has_scheduled_time();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_Node::scheduled_time() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.scheduled_time)
+  return scheduled_time_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_scheduled_time(::google::protobuf::uint32 value) {
+  set_has_scheduled_time();
+  scheduled_time_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.scheduled_time)
+}
+
+// optional uint32 team_id_1 = 10;
+inline bool CMsgDOTALeagueTournament_Node::has_team_id_1() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_team_id_1() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_team_id_1() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_team_id_1() {
+  team_id_1_ = 0u;
+  clear_has_team_id_1();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_Node::team_id_1() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.team_id_1)
+  return team_id_1_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_team_id_1(::google::protobuf::uint32 value) {
+  set_has_team_id_1();
+  team_id_1_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.team_id_1)
+}
+
+// optional uint32 team_id_2 = 11;
+inline bool CMsgDOTALeagueTournament_Node::has_team_id_2() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_team_id_2() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_team_id_2() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_team_id_2() {
+  team_id_2_ = 0u;
+  clear_has_team_id_2();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_Node::team_id_2() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.team_id_2)
+  return team_id_2_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_team_id_2(::google::protobuf::uint32 value) {
+  set_has_team_id_2();
+  team_id_2_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.team_id_2)
+}
+
+// optional uint32 series_id = 20;
+inline bool CMsgDOTALeagueTournament_Node::has_series_id() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_series_id() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_series_id() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_series_id() {
+  series_id_ = 0u;
+  clear_has_series_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_Node::series_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.series_id)
+  return series_id_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_series_id(::google::protobuf::uint32 value) {
+  set_has_series_id();
+  series_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.series_id)
+}
+
+// repeated uint64 matches = 21;
+inline int CMsgDOTALeagueTournament_Node::matches_size() const {
+  return matches_.size();
+}
+inline void CMsgDOTALeagueTournament_Node::clear_matches() {
+  matches_.Clear();
+}
+inline ::google::protobuf::uint64 CMsgDOTALeagueTournament_Node::matches(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.matches)
+  return matches_.Get(index);
+}
+inline void CMsgDOTALeagueTournament_Node::set_matches(int index, ::google::protobuf::uint64 value) {
+  matches_.Set(index, value);
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.matches)
+}
+inline void CMsgDOTALeagueTournament_Node::add_matches(::google::protobuf::uint64 value) {
+  matches_.Add(value);
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgDOTALeagueTournament.Node.matches)
+}
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
+CMsgDOTALeagueTournament_Node::matches() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgDOTALeagueTournament.Node.matches)
+  return matches_;
+}
+inline ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+CMsgDOTALeagueTournament_Node::mutable_matches() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgDOTALeagueTournament.Node.matches)
+  return &matches_;
+}
+
+// optional uint32 team_1_wins = 22;
+inline bool CMsgDOTALeagueTournament_Node::has_team_1_wins() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_team_1_wins() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_team_1_wins() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_team_1_wins() {
+  team_1_wins_ = 0u;
+  clear_has_team_1_wins();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_Node::team_1_wins() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.team_1_wins)
+  return team_1_wins_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_team_1_wins(::google::protobuf::uint32 value) {
+  set_has_team_1_wins();
+  team_1_wins_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.team_1_wins)
+}
+
+// optional uint32 team_2_wins = 23;
+inline bool CMsgDOTALeagueTournament_Node::has_team_2_wins() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_team_2_wins() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_team_2_wins() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_team_2_wins() {
+  team_2_wins_ = 0u;
+  clear_has_team_2_wins();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_Node::team_2_wins() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.team_2_wins)
+  return team_2_wins_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_team_2_wins(::google::protobuf::uint32 value) {
+  set_has_team_2_wins();
+  team_2_wins_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.team_2_wins)
+}
+
+// optional bool is_completed = 24;
+inline bool CMsgDOTALeagueTournament_Node::has_is_completed() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void CMsgDOTALeagueTournament_Node::set_has_is_completed() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_has_is_completed() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void CMsgDOTALeagueTournament_Node::clear_is_completed() {
+  is_completed_ = false;
+  clear_has_is_completed();
+}
+inline bool CMsgDOTALeagueTournament_Node::is_completed() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.Node.is_completed)
+  return is_completed_;
+}
+inline void CMsgDOTALeagueTournament_Node::set_is_completed(bool value) {
+  set_has_is_completed();
+  is_completed_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.Node.is_completed)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgDOTALeagueTournament_TeamStanding
+
+// optional uint32 team_id = 1;
+inline bool CMsgDOTALeagueTournament_TeamStanding::has_team_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_has_team_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_has_team_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_team_id() {
+  team_id_ = 0u;
+  clear_has_team_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_TeamStanding::team_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.TeamStanding.team_id)
+  return team_id_;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_team_id(::google::protobuf::uint32 value) {
+  set_has_team_id();
+  team_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.TeamStanding.team_id)
+}
+
+// optional uint32 node_wins = 2;
+inline bool CMsgDOTALeagueTournament_TeamStanding::has_node_wins() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_has_node_wins() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_has_node_wins() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_node_wins() {
+  node_wins_ = 0u;
+  clear_has_node_wins();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_TeamStanding::node_wins() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.TeamStanding.node_wins)
+  return node_wins_;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_node_wins(::google::protobuf::uint32 value) {
+  set_has_node_wins();
+  node_wins_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.TeamStanding.node_wins)
+}
+
+// optional uint32 node_losses = 3;
+inline bool CMsgDOTALeagueTournament_TeamStanding::has_node_losses() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_has_node_losses() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_has_node_losses() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_node_losses() {
+  node_losses_ = 0u;
+  clear_has_node_losses();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_TeamStanding::node_losses() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.TeamStanding.node_losses)
+  return node_losses_;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_node_losses(::google::protobuf::uint32 value) {
+  set_has_node_losses();
+  node_losses_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.TeamStanding.node_losses)
+}
+
+// optional uint32 match_wins = 4;
+inline bool CMsgDOTALeagueTournament_TeamStanding::has_match_wins() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_has_match_wins() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_has_match_wins() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_match_wins() {
+  match_wins_ = 0u;
+  clear_has_match_wins();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_TeamStanding::match_wins() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.TeamStanding.match_wins)
+  return match_wins_;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_match_wins(::google::protobuf::uint32 value) {
+  set_has_match_wins();
+  match_wins_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.TeamStanding.match_wins)
+}
+
+// optional uint32 match_losses = 5;
+inline bool CMsgDOTALeagueTournament_TeamStanding::has_match_losses() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_has_match_losses() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_has_match_losses() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_match_losses() {
+  match_losses_ = 0u;
+  clear_has_match_losses();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_TeamStanding::match_losses() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.TeamStanding.match_losses)
+  return match_losses_;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_match_losses(::google::protobuf::uint32 value) {
+  set_has_match_losses();
+  match_losses_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.TeamStanding.match_losses)
+}
+
+// optional uint32 score = 6;
+inline bool CMsgDOTALeagueTournament_TeamStanding::has_score() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_has_score() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_has_score() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::clear_score() {
+  score_ = 0u;
+  clear_has_score();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament_TeamStanding::score() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.TeamStanding.score)
+  return score_;
+}
+inline void CMsgDOTALeagueTournament_TeamStanding::set_score(::google::protobuf::uint32 value) {
+  set_has_score();
+  score_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.TeamStanding.score)
+}
+
+// -------------------------------------------------------------------
+
+// CMsgDOTALeagueTournament
+
+// optional uint32 league_id = 1;
+inline bool CMsgDOTALeagueTournament::has_league_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CMsgDOTALeagueTournament::set_has_league_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CMsgDOTALeagueTournament::clear_has_league_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CMsgDOTALeagueTournament::clear_league_id() {
+  league_id_ = 0u;
+  clear_has_league_id();
+}
+inline ::google::protobuf::uint32 CMsgDOTALeagueTournament::league_id() const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.league_id)
+  return league_id_;
+}
+inline void CMsgDOTALeagueTournament::set_league_id(::google::protobuf::uint32 value) {
+  set_has_league_id();
+  league_id_ = value;
+  // @@protoc_insertion_point(field_set:proto.dota.CMsgDOTALeagueTournament.league_id)
+}
+
+// repeated .proto.dota.CMsgDOTALeagueTournament.NodeGroup node_groups = 2;
+inline int CMsgDOTALeagueTournament::node_groups_size() const {
+  return node_groups_.size();
+}
+inline void CMsgDOTALeagueTournament::clear_node_groups() {
+  node_groups_.Clear();
+}
+inline const ::proto::dota::CMsgDOTALeagueTournament_NodeGroup& CMsgDOTALeagueTournament::node_groups(int index) const {
+  // @@protoc_insertion_point(field_get:proto.dota.CMsgDOTALeagueTournament.node_groups)
+  return node_groups_.Get(index);
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_NodeGroup* CMsgDOTALeagueTournament::mutable_node_groups(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.dota.CMsgDOTALeagueTournament.node_groups)
+  return node_groups_.Mutable(index);
+}
+inline ::proto::dota::CMsgDOTALeagueTournament_NodeGroup* CMsgDOTALeagueTournament::add_node_groups() {
+  // @@protoc_insertion_point(field_add:proto.dota.CMsgDOTALeagueTournament.node_groups)
+  return node_groups_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_NodeGroup >*
+CMsgDOTALeagueTournament::mutable_node_groups() {
+  // @@protoc_insertion_point(field_mutable_list:proto.dota.CMsgDOTALeagueTournament.node_groups)
+  return &node_groups_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::proto::dota::CMsgDOTALeagueTournament_NodeGroup >&
+CMsgDOTALeagueTournament::node_groups() const {
+  // @@protoc_insertion_point(field_list:proto.dota.CMsgDOTALeagueTournament.node_groups)
+  return node_groups_;
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -35285,6 +38019,16 @@ template <> struct is_proto_enum< ::proto::dota::CMsgDOTAMatch_ReplayState> : ::
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::CMsgDOTAMatch_ReplayState>() {
   return ::proto::dota::CMsgDOTAMatch_ReplayState_descriptor();
+}
+template <> struct is_proto_enum< ::proto::dota::CMsgDOTALeagueTournament_ENodeGroupType> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::CMsgDOTALeagueTournament_ENodeGroupType>() {
+  return ::proto::dota::CMsgDOTALeagueTournament_ENodeGroupType_descriptor();
+}
+template <> struct is_proto_enum< ::proto::dota::CMsgDOTALeagueTournament_ENodeType> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::dota::CMsgDOTALeagueTournament_ENodeType>() {
+  return ::proto::dota::CMsgDOTALeagueTournament_ENodeType_descriptor();
 }
 template <> struct is_proto_enum< ::proto::dota::ESpecialPingValue> : ::google::protobuf::internal::true_type {};
 template <>
